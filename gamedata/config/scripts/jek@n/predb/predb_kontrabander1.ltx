@@ -1,0 +1,101 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_kontrabander1_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kontrabander1_walk1
+path_look = predb_kontrabander1_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = predb_kontrabander1_walk1
+path_look = predb_kontrabander1_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=predb_kontrab1see_actor} %=predb_kontrab1actor_radhit%
+on_info2 = {+predb_kpp_kontrab_atacked} %=die%
+on_info3 = {+predb_kontrab_wakeup2} walker@4
+on_timer = 25000 | walker@2 %=play_snd_from_obj(8620:characters_voice\human_01\newbie\help\wounded_heavy\help_10)%
+
+[walker@2]
+path_walk = predb_kontrabander1_walk1
+path_look = predb_kontrabander1_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=predb_kontrab1see_actor} %=predb_kontrab1actor_radhit%
+on_info2 = {+predb_kpp_kontrab_atacked} %=die%
+on_info3 = {+predb_kontrab_wakeup2} walker@4
+on_timer = 27000 | walker@3 %=play_snd_from_obj(8620:characters_voice\human_01\newbie\help\wounded_heavy\help_11)%
+
+[walker@3]
+path_walk = predb_kontrabander1_walk1
+path_look = predb_kontrabander1_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=predb_kontrab1see_actor} %=predb_kontrab1actor_radhit%
+on_info2 = {+predb_kpp_kontrab_atacked} %=die%
+on_info3 = {+predb_kontrab_wakeup2} walker@4
+on_timer = 20000 | walker@1 %=play_snd_from_obj(8620:characters_voice\human_01\newbie\help\wounded_heavy\help_12)%
+
+
+; Очнулись:
+[walker@4]
+path_walk = predb_kontrabander1_walk1
+path_look = predb_kontrabander1_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@kontrab1
+on_info = {=predb_kontrab1see_actor} %=predb_kontrab1actor_radhit%
+on_info2 = {+predb_kontrab_habar_info} walker@5
+
+; Снова в обмороке:
+[walker@5]
+path_walk = predb_kontrabander1_walk1
+path_look = predb_kontrabander1_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=predb_kontrab1see_actor} %=predb_kontrab1actor_radhit%
+
+
+
+[meet@kontrab1]
+meet_state = 5|wounded_heavy_3@help_thanx
+meet_state_wpn = 5|wounded_heavy_3@help_thanx
+victim = 5|actor
+victim_wpn = 5|actor
+use = true
+use_wpn = true
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_kontrabander1_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_kontrabander1_dead =predb_kontrabander1spawn_in%
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+[logic]
+active = ph_car@idle1
+
+[ph_car@idle1]
+path_walk       = nil
+path_fire       = nil
+usable = {+predb_btr_acess}
+show_tips = true
+tip_use = predb_kpp_btr_use
+invulnerable = true
+headlights = off
+auto_fire = true
+target          =  nil
+;on_death_info   = garb_btr_dead
+;on_info = {+predb_btr_acess} ph_car@idle2
+
+[ph_car@idle2]
+path_walk       = nil
+path_fire       = nil
+;usable = {+777}
+show_tips = true
+invulnerable = false
+headlights = off
+auto_fire = true
+target          =  nil
+;on_death_info   = garb_btr_dead

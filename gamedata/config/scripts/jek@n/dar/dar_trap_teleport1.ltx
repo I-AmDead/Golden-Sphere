@@ -1,0 +1,18 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+on_death = mob_death
+
+
+[mob_home]
+path_home = dar_trap_teleport_point0
+home_min_radius = 6
+home_max_radius = 10
+on_actor_dist_le_nvis = 2 | %=dar_teleport_trap_atack%
+on_timer = 5800 | %-dar_trap_teleports_spawn =delme%
+
+
+[mob_death]
+on_info = %+dar_trap_teleport1_dead =remove_with_teleport2%

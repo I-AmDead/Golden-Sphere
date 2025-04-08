@@ -1,0 +1,137 @@
+<game_task id="tm_find_item_1">
+        	<title>Заказ от Хью:</title>
+        	<objective>
+            		<text>Заказ от Хью</text>
+            		<icon>ui_iconsHue_icon</icon>
+		<article>notebook_client1task1</article>
+		<infoportion_complete>notebook_client1task1_reward</infoportion_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Добыть артефакт "Чёрные брызги"</text> 
+		<function_complete>addon_dialogs.black_splash_have</function_complete>
+		<infoportion_complete>client1_art1_have</infoportion_complete>
+        	</objective>
+        	<objective>
+            		<text>Сдать артефакт заказчику</text> 
+		<infoportion_complete>notebook_client1task1_reward</infoportion_complete>
+        	</objective>
+</game_task>
+
+<game_task id="tm_find_item_2">
+        	<title>Заказ от Хью:</title>
+        	<objective>
+            		<text>Заказ от Хью</text>
+            		<icon>ui_iconsHue_icon</icon>
+		<article>notebook_client1task2</article>
+		<infoportion_complete>notebook_client1task2_reward</infoportion_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Добыть артефакт "Гремучая салфетка"</text> 
+		<function_complete>addon_dialogs.fulminating_napkin_have</function_complete>
+		<infoportion_complete>client1_art2_have</infoportion_complete>
+        	</objective>
+        	<objective>
+            		<text>Сдать артефакт заказчику</text> 
+		<infoportion_complete>notebook_client1task2_reward</infoportion_complete>
+        	</objective>
+</game_task>
+
+<game_task id="tm_find_item_3">
+        	<title>Заказ от Хью</title>
+        	<objective>
+            		<text>Заказ от Хью:</text>
+            		<icon>ui_iconsHue_icon</icon>
+		<article>notebook_client1task3</article>
+		<infoportion_complete>notebook_client1task3_reward</infoportion_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Добыть артефакт "Рачий глаз"</text> 
+		<function_complete>addon_dialogs.cancer_eye_have</function_complete>
+		<infoportion_complete>client1_art3_have</infoportion_complete>
+        	</objective>
+        	<objective>
+            		<text>Сдать артефакт заказчику</text> 
+		<infoportion_complete>notebook_client1task3_reward</infoportion_complete>
+        	</objective>
+</game_task>
+
+
+<game_task id="defend_lager_1">
+        	<title>Защитить убежище: Свалка</title>
+        	<objective>
+            		<text>Защитить убежище: Свалка</text>
+            		<icon>ui_iconsTotal_mutant</icon>
+            		<function_complete>addon_dialogs.garb_stalker_vagon_zone_clear</function_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Уничтожить мутантов</text> 
+		<map_location_type hint="Убежище">green_location</map_location_type>
+		<object_story_id>garb_stalker_vagon_zone_big</object_story_id>
+		<function_complete>addon_dialogs.garb_stalker_vagon_zone_clear</function_complete>
+        	</objective>
+</game_task>
+
+
+<game_task id="tm_find_item_6">
+        	<title>Заказ от Ричарда Нунана</title>
+        	<objective>
+            		<text>Заказ от Ричарда Нунана:</text>
+            		<icon>ui_iconsNunan_icon</icon>
+		<article>notebook_client2task1</article>
+		<infoportion_complete>notebook_client2task1_reward</infoportion_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Добыть три артефакта "Уголёк"</text> 
+		<function_complete>addon_dialogs.three_coals_have</function_complete>
+		<infoportion_complete>client2_arts1_have</infoportion_complete>
+        	</objective>
+        	<objective>
+            		<text>Сдать артефакты заказчику</text> 
+		<infoportion_complete>notebook_client2task1_reward</infoportion_complete>
+        	</objective>
+</game_task>
+
+<game_task id="tm_find_item_7">
+        	<title>Заказ от Ричарда Нунана</title>
+        	<objective>
+            		<text>Заказ от Ричарда Нунана:</text>
+            		<icon>ui_iconsNunan_icon</icon>
+		<article>notebook_client2task2</article>
+		<infoportion_complete>notebook_client2task2_reward</infoportion_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Добыть два артефакта "Кольцо"</text> 
+		<function_complete>addon_dialogs.two_rings_have</function_complete>
+		<infoportion_complete>client2_arts2_have</infoportion_complete>
+        	</objective>
+        	<objective>
+            		<text>Сдать артефакты заказчику</text> 
+		<infoportion_complete>notebook_client2task2_reward</infoportion_complete>
+        	</objective>
+</game_task>
+
+<game_task id="tm_find_item_8">
+        	<title>Заказ от Ричарда Нунана</title>
+        	<objective>
+            		<text>Заказ от Ричарда Нунана:</text>
+            		<icon>ui_iconsNunan_icon</icon>
+		<article>notebook_client2task3</article>
+		<infoportion_complete>notebook_client2task3_reward</infoportion_complete>
+		<infoportion_fail>222</infoportion_fail>
+	</objective>
+        	<objective>
+            		<text>Добыть три артефакта "Жаба"</text> 
+		<function_complete>addon_dialogs.three_frogs_have</function_complete>
+		<infoportion_complete>client2_arts3_have</infoportion_complete>
+        	</objective>
+        	<objective>
+            		<text>Сдать артефакты заказчику</text> 
+		<infoportion_complete>notebook_client2task3_reward</infoportion_complete>
+        	</objective>
+</game_task>

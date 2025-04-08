@@ -1,0 +1,154 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+x16_burers_visit} mob_camp@11, {+x16_adviser_walk2} mob_camp@8, mob_camp@0
+on_death = mob_death
+
+
+[mob_camp@0]
+path_home = x16_burer_adviser_walk0
+path_look = x16_burer_adviser_look0
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_timer = 1 | mob_camp@1 %=make_invulnerable%
+
+
+; Сначала стоим на входе:
+[mob_camp@1]
+path_home = x16_burer_adviser_walk0
+path_look = x16_burer_adviser_look0
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_adviser_walk1} mob_camp@4 %=add_self_spot(green_location:x16_burer_adviser_mark_text)%
+on_actor_dist_le = 2 | mob_camp@2 %=start_burer_adviser_dialog =play_snd_from_obj(8722:monsters\burer2\burer_attack_3)%
+
+[mob_camp@2]
+path_home = x16_burer_adviser_walk0
+path_look = x16_burer_adviser_look0
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_adviser_walk1} mob_camp@4 %=add_self_spot(green_location:x16_burer_adviser_mark_text)%
+on_actor_dist_ge = 3 | mob_camp@3 %=close_dialog%
+
+[mob_camp@3]
+path_home = x16_burer_adviser_walk0
+path_look = x16_burer_adviser_look0
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_adviser_walk1} mob_camp@4 %=add_self_spot(green_location:x16_burer_adviser_mark_text)%
+on_timer = 1000 | mob_camp@1
+
+
+
+; Идём к залу с мозгом:
+[mob_camp@4]
+path_home = x16_burer_adviser_walk1
+path_look = x16_burer_adviser_look1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=x16adviser_on_point1} mob_camp@5
+
+[mob_camp@5]
+path_home = x16_burer_adviser_walk2
+path_look = x16_burer_adviser_look2
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=x16adviser_on_point2} mob_camp@6
+
+[mob_camp@6]
+path_home = x16_burer_adviser_walk3
+path_look = x16_burer_adviser_look3
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=x16adviser_on_point3} mob_camp@7
+
+[mob_camp@7]
+path_home = x16_burer_adviser_walk4
+path_look = x16_burer_adviser_look4
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=x16adviser_on_point4} mob_camp@8 %+x16_adviser_walk2%
+
+
+
+; Возле второй решетки(у главного зала):
+[mob_camp@8]
+path_home = x16_burer_adviser_walk4
+path_look = x16_burer_adviser_look4
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_actor_dist_le = 3 | mob_camp@9 %=start_burer_adviser_dialog =play_snd_from_obj(8722:monsters\burer2\burer_attack_3) =remowe_self_spot(green_location:x16_burer_adviser_mark_text)%
+
+[mob_camp@9]
+path_home = x16_burer_adviser_walk4
+path_look = x16_burer_adviser_look4
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_actor_dist_ge = 3 | mob_camp@10 %=close_dialog%
+
+[mob_camp@10]
+path_home = x16_burer_adviser_walk4
+path_look = x16_burer_adviser_look4
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_timer = 1000 | mob_camp@8
+
+
+
+; Идём на разборки к Мозгу:
+[mob_camp@11]
+path_home = x16_burer_adviser_walk5
+path_look = x16_burer_adviser_look5
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=x16adviser_on_point5} mob_camp@12_1
+
+[mob_camp@12_1]
+path_home = x16_burer_adviser_walk5
+path_look = x16_burer_adviser_look5
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_timer = 5 | mob_camp@12
+
+[mob_camp@12]
+path_home = x16_burer_adviser_walk5
+path_look = x16_burer_adviser_look5
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_burers_atack} mob_home@13 %=x16burers_hit_from_saharov%
+
+
+; Атакуем ГГ:
+[mob_home@13]
+path_home = x16_burer_adviser_walk5
+home_min_radius = 1
+home_max_radius = 3
+;braindead = false
+
+
+
+
+
+
+
+
+[mob_death]
+on_info = %+yan_burer_adviser_dead%
+
+
+

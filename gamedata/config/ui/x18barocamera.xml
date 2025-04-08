@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<x18barocamera>	
+	<ramka x="220" y="170" width="900" height="700" stretch="1">
+		<texture x="0" y="0" width="1020" height="626">ui\bowler_intrface</texture>
+	</ramka>
+	<name x="280" y="185" width="370" height="35">
+		<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Барокамера ГД-411</text>
+	</name>
+	<text1 x="300" y="240" width="380" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Перед началом процесса убедитесь в наличии трех каспул с реагентами в специальных слотах: №1 - зеленая(дигидропептин); №2 - красная(креатин); №3 - синяя(тинин). После окончания процесса образец вынимать после полного остывания камеры.</text>
+	</text1>
+
+
+
+	<btn_1 x="330" y="360" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Капсула 1</text>
+	</btn_1>
+	<btn_2 x="330" y="400" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Капсула 2</text>
+	</btn_2>
+	<btn_3 x="330" y="440" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Капсула 3</text>
+	</btn_3>
+
+	<btn_4 x="510" y="400" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Старт</text>
+	</btn_4>
+
+
+
+	<btn_quit x="310" y="600" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Откл</text>
+	</btn_quit>
+
+
+</x18barocamera>
+

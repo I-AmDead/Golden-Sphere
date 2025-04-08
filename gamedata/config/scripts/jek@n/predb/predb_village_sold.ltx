@@ -1,0 +1,53 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_vilg_sold_end} walker@2, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_village_sold_threshold
+
+[walker@start]
+path_walk = predb_village_sold_walk1
+path_look = predb_village_sold_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 9000|walker@1
+
+[walker@1]
+path_walk = predb_village_sold_walk1
+path_look = predb_village_sold_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_vilg_sold_end} walker@2
+
+
+; Пришли на КПП:
+[walker@2]
+path_walk = predb_village_sold_walk2
+path_look = predb_village_sold_look2
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_village_sold_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_village_sold_dead%
+

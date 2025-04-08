@@ -1,0 +1,28 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+
+
+[walker@start]
+path_walk = garb_assistant_walk1
+path_look = garb_assistant_look1
+on_timer = 1 | walker@1 %=killactor%
+
+[walker@1]
+path_walk = garb_assistant_walk1
+path_look = garb_assistant_look1
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+
+

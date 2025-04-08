@@ -1,0 +1,15 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips      = mil_lutz_kolonka_use
+on_use = {+mil_fuel_task =actor_has_item(mobile_tank_empty)} ph_idle@2 %=remove_item(mobile_tank_empty) =give_items_to_actor(mil_fuel) =play_snd(characters_voice\scenario\water_flow)%
+
+[ph_idle@2]
+on_timer = 60000|nil %=spawn_mil_aviators_mobs =send_tip(gar_mobs_atak_tip:stalker) =play_snd(characters_voice\scenario\gar_mobs_atak_request)%
+
+
+
+
+
+ 

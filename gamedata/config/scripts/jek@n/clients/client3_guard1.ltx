@@ -1,0 +1,85 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {=actor_on_level(l07_military)} walker@mil_start, {=actor_on_level(l02_garbage)} walker@garbage_start, {=actor_on_level(l03_agroprom)} walker@agr_start, {=actor_on_level(l04_darkvalley)} walker@dar_start
+threshold = threshold
+trade = misc\trade_nothing.ltx
+
+;Свалка:
+[walker@garbage_start]
+path_walk = client3_guard1_garb_walk
+path_look = client3_guard1_garb_look
+on_timer = 1 | walker@garbage_1 %=make_invulnerable =disable_trading%
+
+[walker@garbage_1]
+path_walk = client3_guard1_garb_walk
+path_look = client3_guard1_garb_look
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+
+
+;Агро:
+[walker@agr_start]
+path_walk = client3_guard1_agr_walk
+path_look = client3_guard1_agr_look
+on_timer = 1 | walker@agr_1 %=make_invulnerable =disable_trading%
+
+[walker@agr_1]
+path_walk = client3_guard1_agr_walk
+path_look = client3_guard1_agr_look
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+
+
+;Долина:
+[walker@dar_start]
+path_walk = client3_guard1_dar_walk
+path_look = client3_guard1_dar_look
+on_timer = 1 | walker@dar_1 %=make_invulnerable =disable_trading%
+
+[walker@dar_1]
+path_walk = client3_guard1_dar_walk
+path_look = client3_guard1_dar_look
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+
+
+;Склады:
+[walker@mil_start]
+path_walk = client3_guard1_mil_walk
+path_look = client3_guard1_mil_look
+on_timer = 1 | walker@mil_1 %=make_invulnerable =disable_trading%
+
+[walker@mil_1]
+path_walk = client3_guard1_mil_walk
+path_look = client3_guard1_mil_look
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+[threshold]
+max_ignore_distance = 5
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+

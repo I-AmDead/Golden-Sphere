@@ -1,0 +1,59 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_separ1_dead +mil_separ2_dead +mil_separ3_dead +mil_separ4_dead +mil_separ5_dead} walker@3, {+mil_vsu_end} walker@3, walker@1
+combat_ignore = combat_ignore
+threshold = threshold@mil_vsu_commander_threshold
+on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = mil_vsu_commander_walk1
+path_look = mil_vsu_commander_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@2 %=make_invulnerable%
+
+[walker@2]
+path_walk = mil_vsu_commander_walk1
+path_look = mil_vsu_commander_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=actor_has_item(mil_stimulator)} walker@3
+on_info2 = {+separ_war} %=delme2%
+on_info3 = {+mil_separ1_dead +mil_separ2_dead +mil_separ3_dead +mil_separ4_dead +mil_separ5_dead} walker@3
+
+[walker@3]
+path_walk = mil_vsu_commander_walk1
+path_look = mil_vsu_commander_look1
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+[threshold@mil_vsu_commander_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_vsu_commander_dead%
+
+[hit]
+;on_info = {=hit_by_actor} %+777%
+
+

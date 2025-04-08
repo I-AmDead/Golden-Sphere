@@ -1,0 +1,331 @@
+--[[------------------------------------------------------------------------------------------------------------------
+Smart Terrain (механизм, организовывающий всех сталкеров и некоторых монстров в сцены)
+Чугай Александр
+!без симуляции не работает!
+--------------------------------------------------------------------------------------------------------------------]]
+
+--function printf()
+--end
+
+local check_period
+
+if not editor() then
+
+end
+
+local monster_classes
+
+local disagreed, agreed, agreed_exclusive = 0, 1, 2
+
+local smart_section = "smart_terrains"
+
+local smart_terrains = {}
+local smart_terrains_by_name = {}
+
+exclusives = {}
+
+--[[ список всех серверных объектов смартов, которые зарегистрированы в симуляторе
+Формат:
+	smart_terrains = {
+		level_name = { id=obj, id=obj, ... },
+		level_name = { id=obj, id=obj, ... },
+		...
+	}
+]]
+
+----------------------------------------------------------------------------------------------------------------------
+-- Разные полезные функции
+----------------------------------------------------------------------------------------------------------------------
+-------------- помощники для чтения ini (custom data) -------------------
+-- TODO убрать их
+function r_str( spawn_ini, section, line, default )
+
+end
+
+function r_num( spawn_ini, section, line, default )
+
+end
+
+function r_2nums( spawn_ini, section, line, def1, def2 )
+
+end
+
+----------------------------------------------------------------------------------------------------------------------
+-- Класс "se_smart_terrain". Обеспечивает поддержку smart terrain в ОФЛАЙНЕ.
+-- Унаследован от скриптовой зоны.
+----------------------------------------------------------------------------------------------------------------------
+class "se_smart_terrain" ( cse_alife_smart_zone )
+
+function se_smart_terrain:__init( section ) super( section )
+
+end
+
+function se_smart_terrain:detect_probability()
+
+end
+
+function se_smart_terrain:print()
+
+end
+
+-- сохранение
+function se_smart_terrain:STATE_Write( packet )
+
+end
+
+-- восстановление
+function se_smart_terrain:STATE_Read( packet, size )
+
+end
+
+-- инициализировать работу смарт террейна.
+-- после этой функции смарт ПОЛНОСТЬЮ работоспособен.
+-- вызывается из всех мест, которые могут вызвать другие объекты:
+--   se_smart_terrain:enabled()
+--   se_smart_terrain:update()
+--   xr_gulag.setup_gulag_and_logic_on_spawn()
+--   xr_gulag.get_npc_gulag()
+--   xr_gulag.get_gulag_by_name()
+--   xr_gulag.get_gulag_by_sid()
+function se_smart_terrain:initialize_if_needed()
+
+end
+
+-- зарезервировать места для эксклюзивных персонажей
+function se_smart_terrain:preserve_exclusives()
+
+end
+
+-- получить серверные объекты персонажей
+function se_smart_terrain:get_se_objs()
+
+end
+
+-- заполнить информацию о персонаже
+-- у монстров нету метода profile_name()
+-- TODO передавать в предикаты не npc_info, а объект
+function se_smart_terrain:fill_npc_info( obj, npc_info )
+
+end
+
+-- возвращает:
+-- а) если сталкер: группировку сталкера и true
+-- б) если монстр:  вид монстра и false
+function se_smart_terrain:get_obj_community( obj )
+
+end
+
+-- инициализация.
+-- чтение custom data.
+function se_smart_terrain:read_params()
+
+end
+
+-- подходит ли персонаж по предустановкам.
+-- если такой предустановки нету, то он всегда подходит.
+function se_smart_terrain:check_preset( npc_community, npc_rank, preset_name )
+
+end
+
+--[[ подходит ли объект гулагу?
+1) если объект не согласен сюда идти, то smart terrain его не возьмёт
+2) если объект согласен идти куда угодно, то проверить, есть ли ещё места, подходит ли он гулагу,
+   подходит ли он хоть на одну работу
+3) если объект согласен идти только в этот смарт, то принимаем даже если нету места (он вытеснит кого-то), проверить,
+   подходит ли он гулагу, подходит ли он хоть на одну работу
+]]
+local level_groups = {
+    l01_escape = "group1",
+    l02_garbage = "group1",
+    l03_agroprom = "group1",
+    l03u_agr_underground = "group1",
+    l04_darkvalley = "group1",
+    l04u_labx18 = "group1",
+    l05_bar = "group1",
+    l06_rostok = "group1",
+    l07_military = "group1",
+    l08_yantar = "group1",
+    l08u_brainlab = "group1",
+    l10_radar = "group1",
+    l10u_bunker = "group1",
+    l11_pripyat = "group1",
+    l12_stancia = "group3",
+    l12u_sarcofag = "group3",
+    l12u_control_monolith = "group3",
+    l12_stancia_2 = "group3"
+}
+
+function se_smart_terrain:smart_terrain_accepts_obj( obj, obj_agreement )
+
+end
+
+--[[ подходит ли гулаг объекту?
+у объекта в custom data прописаны условия для некоторых smart_terrains:
+	<smart_terrain_name1> = <condlist1>
+	<smart_terrain_name2> = <condlist2>
+	...
+Если для какого-то smart_terrain условие выполнилось, он называется эксклюзивным.
+Если у объекта появился хоть один эксклюзивный smart terrain, то он будет согласен идти только в него.
+Если не появилось ни одного эксклюзивного, то он согласен идти в любой.
+]]
+-- TODO а если в начале эксклюзивный, а потом в любой?
+-- вариант: any=condlist
+function se_smart_terrain:obj_accepts_smart_terrain( obj )
+
+end
+
+local team_smtr_assigned = {}
+
+-- может ли объект быть добавлен в smart terrain?
+-- вызывается симулятором при поиске задания для объекта/группы.
+-- если объект - группа, то вернёт true только если все объекты в группе вернут true
+function se_smart_terrain:enabled(obj)
+
+end
+
+-- возвращает меру подходящести персонажа смарттерейну.
+-- вызывается для всех смарттерейнов, которые вернули true из enabled
+-- для того, чтобы выбрать тот единственный, в который персонаж всё-таки пойдёт.
+-- критерии:
+--   1) если объект уже бывал в других смартах, то чем больше свободных работ на уровне этого смарта, тем лучше
+--   2) иначе ближе - лучше
+-- TODO Оптимизировать
+function se_smart_terrain:suitable( obj )
+
+end
+
+-- добавить npc в smart terrain.
+-- если места нету или нету свободных подходящих работ, то
+-- вытолкнуть из этого smart terrain с подходящей работы объект, который попал в него не эксклюзивно.
+function se_smart_terrain:register_npc( obj )
+
+end
+
+-- отпустить npc
+-- TODO а если такого объекта уже нету?
+function se_smart_terrain:unregister_npc( obj )
+
+end
+
+-- изменть ранг сталкера при регистрации в смарт
+function se_smart_terrain:update_obj_rank( obj )
+
+end
+
+-- выгнать из-под смарттеррейна первого попавшегося неэксклюзивного персонажа,
+-- который занимает работу, подходящую новому персонажу.
+-- TODO а если я выгоню кого-то, а его работа не подойдёт по idle ?
+function se_smart_terrain:kick_someone_non_exclusive( new_npc_info )
+
+end
+
+-- выдать объекту задание.
+function se_smart_terrain:task( obj )
+
+end
+
+-- может ли данный гулаг создаться в данный момент?
+function se_smart_terrain:is_gulag_available()
+
+end
+function se_smart_terrain:show_smart_debug_spot(avail)
+
+end
+-- установка/снятие блокировки приёма персонажей
+function se_smart_terrain:lock_population( need_lock )
+
+end
+
+-- в гулаг поступил первый персонаж и он начинает работать
+function se_smart_terrain:create_gulag()
+
+end
+
+-- всех освободить, убить гулаг,
+-- создать новый нерабочий гулаг, зарезервировать в нём места для эксклюзивных
+function se_smart_terrain:remove_gulag( disable )
+
+end
+
+-- заполняет таблицу monster_classes
+function se_smart_terrain:fill_monster_classes()
+
+end
+
+-- возвращает название уровня, на котором находится smart terrain
+function se_smart_terrain:get_level_name()
+
+end
+
+-- регистрация объекта в симуляторе.
+-- вызывается симулятором.
+function se_smart_terrain:on_register()
+
+end
+
+function se_smart_terrain:register_if_needed()
+
+end
+
+
+
+-- дерегистрация объекта в симуляторе.
+-- вызывается симулятором.
+function se_smart_terrain:on_unregister()
+
+end
+
+-- вызвать спавнер, если настроен.
+function se_smart_terrain:call_respawn()
+	if self.gparams.respawn then
+		se_respawn.spawn( self.gparams.respawn )
+	end
+end
+
+-- возвращает строку с принимаемыми группировками и рангами
+function se_smart_terrain:stat_get_accepted_communities()
+
+end
+
+-- вывод статистики смарта
+function se_smart_terrain:stat()
+
+end
+
+-- Обновление.
+-- В онлайне вызывается через binder.
+-- Также может вызваться принудительно из xr_effects
+-- Если мужиков в гулаге больше не осталось или условия существования гулага не выполняются, то убрать гулаг.
+function se_smart_terrain:update()
+
+end
+
+function prot_smt_td(obj)
+
+end
+
+--------------------
+function on_death( obj_id )
+
+end
+
+-----------------------
+--' Удаляет объект из смарттеррейнов.
+function unregister_npc(npc)
+
+end
+
+
+
+--------------------
+-- прочитать секцию [smart_terrains]
+-- вызывается объектами, которые могут ходить под smart terrain
+function read_smart_terrain_conditions( self )
+
+end
+
+--------------------
+-- Вывод статистики по всем смартам в симуляции
+function stat()
+
+end

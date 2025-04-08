@@ -1,0 +1,29 @@
+; удал€тор аномалий и нейтрализатор «ахоронений
+
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer = 6000 | ph_idle@2 %=play_snd_from_obj(8354:characters_voice\scenario\dezintegrator_work1) =play_particle_on_dezintegrator =send_tip(dezintegrator_work_process_tip1:default)%
+
+[ph_idle@2]
+on_timer = 6000 | ph_idle@3 %=play_snd_from_obj(8354:characters_voice\scenario\dezintegrator_work1) =play_particle_on_dezintegrator =send_tip(dezintegrator_work_process_tip2:default)%
+
+[ph_idle@3]
+on_timer = 6000 | ph_idle@4 %=play_snd_from_obj(8354:characters_voice\scenario\dezintegrator_work1) =play_particle_on_dezintegrator =send_tip(dezintegrator_work_process_tip3:default)%
+
+[ph_idle@4]
+on_timer = 6000 | ph_idle %=play_snd_from_obj(8354:characters_voice\scenario\dezintegrator_work1) =play_particle_on_dezintegrator =del_anomalys =dezintegrator_deadzones_uncharge%
+
+[ph_idle]
+tips      = dezintegrator_use
+on_use    = %=dezintegrator_use%
+
+
+
+
+
+

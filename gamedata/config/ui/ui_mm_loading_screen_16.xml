@@ -1,0 +1,48 @@
+<w>
+	<!-- Фон экрана загрузки, может состоять из множества элементов-->
+    <background x="0" y="0" width="1024" height="768">
+        <auto_static x="102" y="0" width="819" height="768" stretch="1">
+            <texture x="0" y="0" width="1024" height="768">ui\ui_actor_loadgame_screen</texture>
+        </auto_static>
+        <auto_static x="0" y="0" width="104" height="768" stretch="1">
+            <texture x="0" y="0" width="128" height="768">ui\ui_actor_widescreen_sidepanels</texture>
+        </auto_static>
+        <auto_static x="920" y="0" width="104" height="768" stretch="1">
+            <texture x="128" y="0" width="128" height="768">ui\ui_actor_widescreen_sidepanels</texture>
+        </auto_static>
+    </background>
+
+
+    <loading_logo x="102" y="173" width="819" height="512" stretch="1"/>
+
+
+	<!-- Прогрессбар загрузки -->
+	<!-- Новые режимы: mode="from_center" - от центра к краям, mode="horz" - слева направо, mode="back" - справа налево -->
+	<!-- Так же есть и вертикальные режимы. Для лоадскрина они конечно не пригодятся, но для информации напишу здесь, есть mode="vert", mode="down", mode="vert_from_center" -->
+
+	<!-- По умолчанию ЗП-стайл прогрессбар рисуется ПОД фоном (background). Чтобы рисовать прогрессбар НАД background - надо сделать under_background="0" -->
+
+    <loading_progress x="0" y="700" width="1024" height="5" min="0" max="100" pos="0"  mode="horz" under_background="0">
+        <background> <!--Текстура фона прогрессбара-->
+
+        </background>
+        <progress> <!--Непосредственно текстура прогрессбара-->
+<texture x="0" y="772" width="1024" height="4">ui\ui_actor_loadgame_screen</texture>
+        </progress>
+
+    </loading_progress>
+
+
+	<!-- Проценты загрузки числами-->
+    <loading_progress_percent x="310" y="730" width="405" height="20" stretch="1">
+        <text align="c" font="letterica18"/>
+    </loading_progress_percent>
+
+
+	<!-- Стадия загрузки текстом-->
+    <loading_stage x="310" y="530" width="405" height="20" stretch="1">
+        <text align="c" font="letterica18"/>
+    </loading_stage>
+
+
+</w>

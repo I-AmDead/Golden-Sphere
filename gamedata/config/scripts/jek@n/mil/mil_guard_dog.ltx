@@ -1,0 +1,34 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+mil_aviators_spwn} mob_home@3, mob_home@1
+on_hit = mob_hit
+
+[mob_home@1]
+path_home = mil_guard_dog_point
+home_min_radius  = 3
+home_max_radius = 8
+braindead = true
+on_info = {+mil_aviators_spwn} mob_home@3 %=make_invulnerable%
+;on_actor_dist_le = 10|mob_home@2 %=killactor%
+
+[mob_home@2]
+path_home = mil_guard_dog_point
+home_min_radius  = 3
+home_max_radius = 8
+
+[mob_home@3]
+path_home = mil_guard_dog_point
+home_min_radius  = 3
+home_max_radius = 8
+braindead = true
+on_info = {+mil_grav_off} %=delme2%
+
+
+[mob_hit]
+on_info = {=hit_by_actor} %+mil_aviatrs_fail%
+
+
+
+

@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_outside = {+hunter2_repare_btr} sr_idle@2 %+garb_btr_task_done =hit_garb_btr =release_helicrash_survival%
+
+[sr_idle@2]
+on_timer = 15000|nil %=hit_garb_btr%

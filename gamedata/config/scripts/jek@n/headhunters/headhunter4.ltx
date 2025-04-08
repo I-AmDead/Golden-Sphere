@@ -1,0 +1,74 @@
+[smart_terrains]
+none = true
+
+;[dont_spawn_loot]
+
+[logic]
+active = nil
+;on_death = death
+
+[walker]
+path_walk = nil
+path_look = nil
+
+
+[remark@paralyze]
+anim = wounded
+target = nil
+no_move = true
+danger = danger_condition@paralyze
+combat_ignore_cond = always
+on_timer = 150000 | remark@suicide %=killactor%
+
+[remark@suicide]
+anim = suicide
+target = nil
+no_move = true
+danger = danger_condition@paralyze
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end | nil %=suicide -headhunter_suicide%
+
+[remark@delete]
+anim = wounded
+target = nil
+no_move = true
+danger = danger_condition@paralyze
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+story_task1} %=delme%
+
+
+
+[danger_condition]
+ignore_distance_corpse = 1
+ignore_distance_hit = 100
+ignore_distance_sound = 1
+danger_inertion_time_hit = 10000000
+danger_inertion_time_sound = 1
+danger_inertion_time_ricochet = 1
+
+[danger_condition@paralyze]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+
+[death]
+on_info = {=killed_by_actor} %=current_level_headhunters_respawn%
+
+
+
+
+
+
+
+
+
+
+

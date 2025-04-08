@@ -1,0 +1,18 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_actor_dist_le_nvis = 40|ph_idle@2 %=send_tip(mil_hunter_help_tip:stalker) =add_self_spot(blue_location:mil_hunter7_mark_text)%
+
+[ph_idle@2]
+tips      = hunter_7_obj_use
+on_use = {+mil_hntr_dog1 +mil_hntr_dog2 +mil_hntr_dog3} ph_idle@3 %=run_postprocess(agr_u_fade) =play_snd_on_me(characters_voice\human_02\stalker\help\wounded_thanx\thanx_1)%
+
+[ph_idle@3]
+on_timer = 3500|nil %+mil_hntr_spawn =delme2%
+
+
+
+
+
+ 

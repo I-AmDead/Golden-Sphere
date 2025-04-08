@@ -1,0 +1,18 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips     = predb_base_generator_use
+on_use = {=actor_has_item(generator_oil)} ph_sound %=remove_item(generator_oil) +predb_base_gener_on%, {!actor_has_item(generator_oil) +predb_base_docks1_info} %=predb_base_generator_use_think%
+
+[ph_sound]
+snd = diesel_generator_work
+looped = true
+
+
+
+
+

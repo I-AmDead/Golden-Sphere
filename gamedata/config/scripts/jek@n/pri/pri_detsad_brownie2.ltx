@@ -1,0 +1,27 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_camp@idle
+on_death = mob_death
+
+; Идловая секция. Как только актор ближе 6 метров и мы его видим - делаем захват:
+[mob_camp@idle]
+path_home = pri_detsad_brownie2_point
+path_look = pri_detsad_brownie2_point
+home_min_radius  = 0
+home_max_radius = 0
+on_actor_dist_le = 6 | mob_camp@agress %=pri_brownie2trap =play_snd_from_obj(8901:soundtrack\horror_time\44)%
+
+[mob_camp@agress]
+path_home = pri_detsad_brownie2_point
+path_look = pri_detsad_brownie2_point
+home_min_radius  = 2
+home_max_radius = 5
+on_actor_dist_le = 7 | %=telepatic_hit_obj(37:bip01_spine:0.01:0)%
+on_actor_dist_ge_nvis = 6 | %=pri_brownie2trap =play_snd_from_obj(8901:soundtrack\horror_time\56)%
+
+
+
+[mob_death]
+on_info = %+pri_brownie2_dead =pri_detsad_brownie2death_spawn =delme2%

@@ -1,0 +1,97 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+rad_fenix_headshot} remark@wounded1, walker@1
+on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = rad_fenix_walk1
+path_look = rad_fenix_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+meet = no_meet
+on_signal       = arrived|walker@2
+
+
+; Бегаем вокруг вертушки:
+[walker@2]
+path_walk = rad_fenix_walk1
+path_look = rad_fenix_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+meet = no_meet
+on_timer = 10000|walker@3
+
+[walker@3]
+path_walk = rad_fenix_walk2
+path_look = rad_fenix_look2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+meet = no_meet
+on_timer = 10000|walker@2
+
+
+; Словили в тыкву:
+[remark@wounded1]
+anim = wounded_heavy
+snd = help_see
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 3000|remark@wounded2 %=rad_fenix_wounded_tip =disable_trading%
+
+[remark@wounded2]
+anim = wounded_heavy
+snd = help_see
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1000|remark@wounded3 %=give_items(wpn_tt:ammo_7.62x25_p)%
+
+[remark@wounded3]
+anim = wounded_heavy
+snd = help_see
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+rad_fenix_suicide} remark@suicide %=unmake_invulnerable =play_snd_on_me(characters_voice\human_03\military\reactions\story\laughter_2)%
+
+[remark@suicide]
+no_move = true
+;no_rotate = true
+target = actor
+anim = suicide
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end|nil %=suicide%
+
+
+
+[hit]
+on_info = {=hit_by_actor +rad_fenix_headshot} remark@wounded1 %=make_invulnerable =set_neutral =clearAbuse%, {=hit_by_actor -rad_fenix_headshot} %=make_invulnerable =remove_with_teleport =spawn_rad_fenix =rad_fenix_teleport_think%
+
+[death]
+on_info = %+rad_fenix_dead%
+
+
+
+
+
+

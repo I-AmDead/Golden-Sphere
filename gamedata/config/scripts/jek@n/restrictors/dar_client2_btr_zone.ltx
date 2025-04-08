@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+client2_darkval_traveling} sr_idle@2
+
+[sr_idle@2]
+on_actor_inside = sr_idle@3 %=send_tip(client2_agent_welcome_tip:stalker)%
+
+[sr_idle@3]
+on_actor_outside = {-client2_agro_traveling -client2_garbage_traveling -client2_darkval_traveling} sr_idle@1 %=garb_client2_crew_delete -notebook_client2task1_reward -notebook_client2task2_reward -notebook_client2task3_reward%

@@ -1,0 +1,21 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+particle = anomaly2\artefact\artefact_ameba
+
+[ph_idle@1]
+on_info = {+predb_village_grass_info} ph_idle@2
+
+[ph_idle@2]
+tips      = predb_village_grass_use
+on_use = %=give_items_to_actor(village_grass) =delme%
+
+
+
+
+
+
+
+

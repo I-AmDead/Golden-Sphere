@@ -1,0 +1,21 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = agr_nii_lift_button_use1
+on_info = {+agr_nii_generator_on} ph_idle@2
+
+[ph_idle@2]
+tips     = agr_nii_lift_button_use2
+on_use    = %=play_snd(ambient\switch_1) =agr_nii_lift_button_use%
+
+
+
+[ph_button]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = agr_nii_lift_button_use2
+on_press    = nil %=play_snd(ambient\switch_1) =agr_nii_lift_button_use%

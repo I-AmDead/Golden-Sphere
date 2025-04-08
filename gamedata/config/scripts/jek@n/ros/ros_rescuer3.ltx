@@ -1,0 +1,107 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+ros_rescuers_atack} walker@3_2, {+ros_hunter_behind_rescuer} walker@3, walker@start
+;on_death = death
+threshold = threshold@ros_rescuer3_threshold
+on_combat = combat
+
+[combat]
+combat_type = {+ros_hunter_behind_rescuer} camper, {+ros_rescuers_robbery} camper
+
+
+[walker@start]
+path_walk = ros_rescuer3_walk1
+path_look = ros_rescuer3_look1
+on_timer      = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = ros_rescuer3_walk1
+path_look = ros_rescuer3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+ros_hunter_behind_rescuer} walker@2
+on_info = {+ros_hunter_behind_rescuer2} walker@2_1
+
+
+[walker@2]
+path_walk = ros_rescuer3_walk1
+path_look = ros_rescuer3_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 21000 | walker@3 %=play_snd_from_obj(8616:characters_voice\human_03\military\talk\raid\reaction\loner_3)%
+
+[walker@2_1]
+path_walk = ros_rescuer3_walk1
+path_look = ros_rescuer3_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+ros_rescuers_robbery} walker@3_1
+
+
+; В недостроенном здании(друзья):
+[walker@3]
+path_walk = ros_rescuer3_walk2
+path_look = ros_rescuer3_look2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+
+
+; В недостроенном здании(враги):
+[walker@3_1]
+path_walk = ros_rescuer3_walk2
+path_look = ros_rescuer3_look2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+on_signal       = arrived | walker@3_2 %=killactor =unmake_invulnerable%
+
+[walker@3_2]
+path_walk = ros_rescuer3_walk2
+path_look = ros_rescuer3_look2
+;danger = danger_condition
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+
+
+
+[camper]
+path_walk = ros_rescuer3_walk2
+path_look = ros_rescuer3_look2
+sniper = true
+radius = 11
+no_retreat = true
+def_state_moving = sprint
+
+
+
+
+[meet]
+meet_state = 4| hello
+meet_state = 3| hello
+victim = 3| nil
+victim_wpn = 3| nil
+use = true
+use_wpn = true
+
+
+[threshold@ros_rescuer3_threshold]
+max_ignore_distance = 50
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_sound = 1
+
+[combat_ignore]
+combat_ignore = always
+

@@ -1,0 +1,14 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer      = 2000 | ph_idle@2  %=play_snd_from_obj(8451:characters_voice\scenario\anomal_pribor_tip)%
+
+[ph_idle@2]
+on_timer      = 2000 | ph_idle@1 %=play_snd_from_obj(8451:characters_voice\scenario\anomal_pribor_tip)%
+
+
+
+[ph_sound]
+snd = radar_drone
+looped = true

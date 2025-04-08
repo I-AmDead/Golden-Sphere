@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w>
+     <speech_menu x="260" y="550" width="300" height="265" always_show_scroll="0">
+          <text font="letterica16" r="238" g="224" b="198"/>
+	</speech_menu>
+	
+	<static_health x="900" y="654" width="130" height="34" stretch="1">
+	</static_health>
+
+	<progress_bar_health x="25" y="8" width="87" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+		</progress>
+	</progress_bar_health>
+
+
+	<static_armor x="900" y="630" width="130" height="34" stretch="1">		
+	</static_armor>
+
+	<progress_bar_armor x="25" y="8" width="87" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+		</progress>
+	</progress_bar_armor>
+	
+
+	<static_weapon x="900" y="695" width="124" height="65" stretch="1">
+		<text complex_mode="0" x="17" y="5" font="letterica16" r="255" g="255" b="255" a="130"/>
+		<texture>ui_hud_frame_patron</texture>
+	</static_weapon>
+	
+	<static_ammo x="68" y="30" width="50" height="25">
+		<text align="c" complex_mode="0" font="letterica16" r="238" g="155" b="23" a="255">Ammo</text>
+	</static_ammo>
+	
+	<static_wpn_icon x="15" y="18" width="20" height="20"/>
+
+	<car_panel x="900" y="558" width="130" height="34"/>
+	
+	<static_pda_online x="0" y="203" width="131" height="27" light_anim="ui_pda_contacts" la_cyclic="0" la_texture="0" la_text="1" la_alpha="1" stretch="1">
+          <texture>ui_hud_map_counter</texture>
+          <text x="52" y="5" align="c" font="letterica18" r="238" g="155" b="23" a="255"/>
+	</static_pda_online>
+	
+	
+	<quick_info x="1" y="700" width="1022" height="50" complex_mode="1" light_anim="ui_btn_hint"  la_cyclic="0" la_texture="0" la_text="1" la_alpha="1">
+		  <text align="c" font="letterica16"/>
+	</quick_info>
+
+     <icons_scroll_view x="985" y="36" width="26" height="570" right_ident="0" always_show_scroll="0" vert_interval="0" inverse_dir="1" flip_vert="0"/>
+
+	<weapon_jammed_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture></texture>
+	</weapon_jammed_static>
+
+	<radiation_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture></texture>
+	</radiation_static>
+
+	<wound_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture></texture>
+	</wound_static>
+
+	<starvation_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture></texture>
+	</starvation_static>
+
+        <thirst_static x="0" y="0" width="0" height="0" stretch="1">
+	        <texture></texture>
+        </thirst_static>
+
+	<psy_health_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture></texture>
+	</psy_health_static>
+
+	<invincible_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture></texture>
+	</invincible_static>
+
+	<artefact_static x="0" y="0" width="0" height="0" stretch="1">
+		<texture>ui_hud_icon_artefact</texture>
+	</artefact_static>
+
+
+	<flashing_icons>
+		<flashing_icon x="30" y="220" width="48" height="29" type="pda" light_anim="ui_slow_blinking_alpha">
+			<texture></texture>
+		</flashing_icon>
+	</flashing_icons>
+
+	<pick_up_item x="437" y="400" width="150" height="100"/>
+
+	<artefact_panel x="100" y="710" width="540" height="32" cell_width="24" cell_height="32" scale="0.5"/>
+	
+	<new_contact_snd>$no_sound</new_contact_snd>	
+</w>

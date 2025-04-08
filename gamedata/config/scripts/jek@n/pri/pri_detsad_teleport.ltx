@@ -1,0 +1,20 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@1
+
+[mob_walker@1]
+path_walk = pri_detsad_moving_port_point1
+path_look = pri_detsad_moving_port_point1
+braindead = true
+on_actor_dist_le_nvis = 2 | %=pri_detsad_teleport_work%
+on_timer = 8000 | mob_walker@2
+
+[mob_walker@2]
+path_walk = pri_detsad_moving_port_point1
+path_look = pri_detsad_moving_port_point1
+braindead = true
+on_actor_dist_le_nvis = 2 | %=pri_detsad_teleport_work%
+on_timer = 8000 | mob_walker@1
+

@@ -1,0 +1,31 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@sleep
+
+[mob_walker@sleep]
+path_walk = dar_fabrik_teleport_nest_center4
+path_look = dar_fabrik_teleport_nest_center4
+braindead = true
+on_actor_in_zone = dar_anomaly_spawn_zone2 | mob_home@guard
+
+[mob_home@guard]
+path_home = dar_fabrik_teleport_nest_center1
+home_min_radius = 1
+home_max_radius = 2
+on_info = {+varg_harmonica_play} mob_walker@freeze
+on_actor_dist_le_nvis = 2 | %=dar_factory_port_actor_away%
+
+
+[mob_walker@freeze]
+path_walk = dar_fabrik_teleport_nest_center4
+path_look = dar_fabrik_teleport_nest_center4
+braindead = true
+;on_info     = {-varg_harmonica_play} mob_home@guard
+
+[mob_remark@freeze]
+anim = dea
+braindead = true
+target = actor
+on_info     = {-varg_harmonica_play} mob_home@guard

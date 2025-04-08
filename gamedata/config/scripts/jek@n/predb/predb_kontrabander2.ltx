@@ -1,0 +1,100 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_courier_goodbye} walker@7, {+predb_kontrab_wakeup2} walker@6, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_kontrabander2_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 15000 | walker@2 %=play_snd_from_obj(8621:characters_voice\human_03\stalker\help\wounded\medkit_1)%
+on_info = {+predb_kpp_kontrab_atacked} %=delme%
+on_info2 = {+predb_kontrab_wakeup1} walker@4
+
+[walker@2]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 17000 | walker@3 %=play_snd_from_obj(8621:characters_voice\human_03\stalker\help\wounded\medkit_2)%
+on_info = {+predb_kpp_kontrab_atacked} %=delme%
+on_info2 = {+predb_kontrab_wakeup1} walker@4_1
+
+[walker@3]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 17000 | walker@1 %=play_snd_from_obj(8621:characters_voice\human_03\stalker\help\wounded\medkit_3)%
+on_info = {+predb_kpp_kontrab_atacked} %=delme%
+on_info2 = {+predb_kontrab_wakeup1} walker@4
+
+
+; Даём лекарство раненому:
+[walker@4_1]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 5000|walker@4
+
+[walker@4]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|walker@5 %=play_snd_on_me(characters_voice\human_03\stalker\help\wounded\kill_wounded_2)%
+
+[walker@5]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000|walker@6 %+predb_kontrab_wakeup2%
+
+[walker@6]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look3
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_info = {+predb_courier_goodbye} walker@7
+
+[walker@7]
+path_walk = predb_kontrabander2_walk1
+path_look = predb_kontrabander2_look3_1
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_kontrabander2_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_kontrabander2_dead%
+

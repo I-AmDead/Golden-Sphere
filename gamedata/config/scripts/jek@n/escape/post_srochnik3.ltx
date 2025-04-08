@@ -1,0 +1,109 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = post_srochnik3_walk1
+path_look = post_srochnik3_look1
+on_timer = 10 | walker1 %=make_invulnerable%
+
+[walker1]
+path_walk = post_srochnik3_walk1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 8000 | walker2
+;on_actor_in_zone = kazarma_window_zone | walker@window1
+on_info = {+skidan_post_stels_task} walker@when_actor_at_bpost_again
+
+[walker2]
+path_walk = post_srochnik3_walk1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 8000 | walker1
+;on_actor_in_zone =  kazarma_window_zone | walker@window1
+
+
+[walker@window1]
+path_walk = post_srochnik3_walk2
+path_look = post_soldier10_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+sold10_goto_room} walker1
+on_actor_dist_le = 2 | walker@window2 %=srochnik3_init_dialod%
+on_actor_not_in_zone =  kazarma_window_zone | walker1
+
+[walker@window2]
+path_walk = post_srochnik3_walk2
+path_look = post_soldier10_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+srochnik_has_item} walker3
+
+[walker3]
+path_walk = post_srochnik3_walk1
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+meet = no_meet
+on_timer = 8000 | walker4
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+[walker4]
+path_walk = post_srochnik3_walk1
+path_look = post_srochnik3_look2
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+meet = no_meet
+on_timer = 8000 | walker3
+on_actor_dist_le = 11 | %=blokpost_enemy%
+on_info = {+skidan_post_stels_task} walker@when_actor_at_bpost_again
+
+
+
+
+
+; После взятия квеста "Выкрасть костюм из арсенала".
+[walker@when_actor_at_bpost_again]
+path_walk = post_srochnik3_walk1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = {-blokpost_alarm3}
+on_actor_dist_le = 25 | walker@when_actor_at_bpost_again_alarm %=blokpost_alarm3%
+on_info = {+blokpost_alarm3} walker@when_actor_at_bpost_again_alarm
+
+[walker@when_actor_at_bpost_again_alarm]
+path_walk = post_srochnik3_walk1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = {-blokpost_alarm3}
+on_timer = 20000 | walker@when_actor_at_bpost_again %-blokpost_alarm3%
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+post_srochnik3_dead%
+

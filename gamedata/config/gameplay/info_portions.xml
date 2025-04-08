@@ -1,0 +1,2443 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<game_information_portions>
+
+<info_portion id="game_start"></info_portion>
+
+<info_portion id="rad_seek"></info_portion>
+<info_portion id="rad_immunity"></info_portion>
+
+<info_portion id="rage"></info_portion>
+<info_portion id="rage2"></info_portion>
+<info_portion id="cat_effect"></info_portion>
+
+<info_portion id="sssr_sgn1"></info_portion>
+<info_portion id="sssr_sgn2"></info_portion>
+<info_portion id="sssr_sgn3"></info_portion>
+<info_portion id="sssr_sgn4"></info_portion>
+<info_portion id="sssr_sgn5"></info_portion>
+<info_portion id="sssr_sgn6"></info_portion>
+<info_portion id="sssr_sgn7"></info_portion>
+<info_portion id="sssr_sgn8"></info_portion>
+<info_portion id="sssr_sgn9"></info_portion>
+<info_portion id="sssr_sgn10"></info_portion>
+<info_portion id="sssr_sgns_bonus"><article>sssr_sgns_bonus_article</article><action>addon_dialogs.sssr_sgns_bonus_tip</action></info_portion>
+
+<info_portion id="ruin_docks_info1"><article>ruin_docks_info1</article></info_portion>
+<info_portion id="ruin_docks_info2"><article>ruin_docks_info2</article></info_portion>
+<info_portion id="ruin_docks_info3"><article>ruin_docks_info3</article></info_portion>
+<info_portion id="ruin_docks_info4"><article>ruin_docks_info4</article></info_portion>
+
+<info_portion id="af_brain_target"></info_portion>
+
+<info_portion id="wonderdoll_healing"></info_portion>
+
+<info_portion id="plague_zombies_info"><article>plague_zombies_article</article></info_portion>
+
+<info_portion id="actor_damaged_head"><action>addon.actor_damaged_head_message</action></info_portion>
+<info_portion id="actor_damaged_torso"><action>addon.actor_damaged_torso_message</action></info_portion>
+<info_portion id="actor_damaged_larm"><action>addon.actor_damaged_arm_message</action></info_portion>
+<info_portion id="actor_damaged_rarm"><action>addon.actor_damaged_arm_message</action></info_portion>
+<info_portion id="actor_damaged_arm"><action>addon.actor_damaged_arm_message</action></info_portion>
+<info_portion id="actor_damaged_lleg"><action>addon.actor_damaged_leg_message</action></info_portion>
+<info_portion id="actor_damaged_rleg"><action>addon.actor_damaged_leg_message</action></info_portion>
+<info_portion id="actor_damaged_leg"><action>addon.actor_damaged_leg_message</action></info_portion>
+<info_portion id="actor_damaged_pelvis"><action>addon.actor_damaged_pelvis_message</action></info_portion>
+
+
+<info_portion id="nightmob1_dead"></info_portion>
+<info_portion id="nightmob2_dead"></info_portion>
+<info_portion id="nightmob3_dead"></info_portion>
+<info_portion id="nightmob4_dead"></info_portion>
+<info_portion id="nightmob5_dead"></info_portion>
+
+
+<info_portion id="arts_powerup_fire"><action>addon.artefact_fire_particle</action></info_portion>
+<info_portion id="arts_powerup_stone"><action>addon.artefact_stone_particle</action></info_portion>
+<info_portion id="arts_powerup_steel"><action>addon.artefact_steel_particle</action></info_portion>
+<info_portion id="arts_powerup_veget"><action>addon.artefact_veget_particle</action></info_portion>
+<info_portion id="arts_powerup_glass"><action>addon.artefact_glass_particle</action></info_portion>
+<info_portion id="arts_powerup_neutral"><action>addon.artefact_neutral_particle</action></info_portion>
+
+
+<info_portion id="actor_psy_death"><action>addon.invisible_outfit_wear</action></info_portion>
+
+  <info_portion id="storyline_actor_start"></info_portion>
+<info_portion id="phatnom_controller"></info_portion>
+<info_portion id="block_begin_dialog"></info_portion>
+<info_portion id="hit_from_arts_story"></info_portion>
+  <info_portion id="global_dialogs">
+    <dialog>actor_break_dialog</dialog>
+<!--    <dialog>actor_help_wounded</dialog>   -->
+  </info_portion>
+<info_portion id="sleep_camp"></info_portion>
+  <info_portion id="terrain_test"></info_portion>
+<info_portion id="esc_close_door"></info_portion>
+<info_portion id="tutorial_artefact_gain"></info_portion>
+<info_portion id="horror_time_story"></info_portion>
+<info_portion id="pjaniy"></info_portion>
+<info_portion id="first_afscanner_using"><action>soundtrack.first_afscanner_using</action></info_portion>
+<info_portion id="tea_effect"></info_portion>
+<info_portion id="energy_drink"></info_portion>
+<info_portion id="sleep_recently"></info_portion>
+
+<info_portion id="dar_codelock1_unlock"></info_portion>
+<info_portion id="dar_codelock2_unlock"></info_portion>
+
+<info_portion id="af_watch_used"></info_portion>
+
+
+<info_portion id="post_heli_start_patrol"></info_portion>
+
+<info_portion id="garb_cargo_heli_goto_place"></info_portion>
+<info_portion id="agr_cargo_heli_goto_place"></info_portion>
+<info_portion id="dar_cargo_heli_goto_place"></info_portion>
+<info_portion id="mil_cargo_heli_goto_place"></info_portion>
+<info_portion id="yan_cargo_heli_goto_place"></info_portion>
+
+<info_portion id="pain"></info_portion>
+<info_portion id="sickness"></info_portion>
+<info_portion id="narko_addiction"><action>addon.start_narko_addiction_timer</action></info_portion>
+<info_portion id="zuda_work"></info_portion>
+
+
+<info_portion id="bowling1"></info_portion>
+<info_portion id="bowling2"></info_portion>
+<info_portion id="bowling3"></info_portion>
+<info_portion id="bowling4"></info_portion>
+<info_portion id="bowling5"></info_portion>
+<info_portion id="bowling6"></info_portion>
+<info_portion id="bowling7"></info_portion>
+<info_portion id="bowling8"></info_portion>
+<info_portion id="bowling9"></info_portion>
+<info_portion id="bowling10"></info_portion>
+
+<info_portion id="grave_dig"></info_portion>
+<info_portion id="grave_dig2"></info_portion>
+
+<info_portion id="actor_order_seva"></info_portion>
+<info_portion id="actor_order_berill"></info_portion>
+<info_portion id="actor_order_bronik"></info_portion>
+<info_portion id="actor_order_skafandr"></info_portion>
+<info_portion id="actor_order_ekzo"></info_portion>
+
+<info_portion id="actor_order_akm"></info_portion>
+<info_portion id="actor_order_pkm"></info_portion>
+<info_portion id="actor_order_winchester"></info_portion>
+<info_portion id="actor_order_sayga"></info_portion>
+<info_portion id="actor_order_m16"></info_portion>
+<info_portion id="actor_order_vintorez"></info_portion>
+<info_portion id="actor_order_usas"></info_portion>
+<info_portion id="actor_order_aug"></info_portion>
+<info_portion id="actor_order_wa2000"></info_portion>
+
+<info_portion id="actor_order_ammo545x39"></info_portion>
+<info_portion id="actor_order_ammo556x45"></info_portion>
+<info_portion id="actor_order_ammo_shotgun"></info_portion>
+<info_portion id="actor_order_ammo762x54"></info_portion>
+<info_portion id="actor_order_ammo762x51"></info_portion>
+<info_portion id="actor_order_ammo762x39"></info_portion>
+<info_portion id="actor_order_ammo9x18"></info_portion>
+<info_portion id="actor_order_ammo9x19"></info_portion>
+<info_portion id="actor_order_ammo_rare"></info_portion>
+<info_portion id="actor_order_explosive"></info_portion>
+<info_portion id="actor_order_fuel"></info_portion>
+<info_portion id="actor_order_repare"></info_portion>
+<info_portion id="actor_order_items"></info_portion>
+<info_portion id="actor_order_medicine"></info_portion>
+<info_portion id="actor_order_instruments"></info_portion>
+
+
+
+
+<info_portion id="garb_notebook_treasure1"></info_portion>
+<info_portion id="garb_notebook_treasure2"></info_portion>
+<info_portion id="garb_notebook_treasure3"></info_portion>
+
+<info_portion id="agr_notebook_treasure1"></info_portion>
+<info_portion id="agr_notebook_treasure2"></info_portion>
+<info_portion id="agr_notebook_treasure3"></info_portion>
+
+<info_portion id="dar_notebook_treasure1"></info_portion>
+<info_portion id="dar_notebook_treasure2"></info_portion>
+<info_portion id="dar_notebook_treasure3"></info_portion>
+
+<info_portion id="mil_treasure1"></info_portion>
+<info_portion id="mil_treasure2"></info_portion>
+
+
+<!-- Навыки -->
+
+<info_portion id="tutor_sng_scopes"><article>tutorial_sng_scopes_id_books</article></info_portion>
+<info_portion id="tutor_nato_scopes"><article>tutorial_nato_scopes_id_books</article></info_portion>
+<info_portion id="tutor_sng_sil"><article>tutorial_sng_sil_id_books</article></info_portion>
+<info_portion id="tutor_nato_sil"><article>tutorial_nato_sil_id_books</article></info_portion>
+<info_portion id="tutor_sng_grenl"><article>tutorial_sng_grenl_id_books</article></info_portion>
+<info_portion id="tutor_nato_grenl"><article>tutorial_nato_grenl_id_books</article></info_portion>
+<info_portion id="weapon_powerup"><action>achievements.achievement1tip</action><article>weapons_fast_achievement</article></info_portion>
+
+
+<info_portion id="af_1"></info_portion>
+<info_portion id="af_2"></info_portion>
+<info_portion id="af_3"></info_portion>
+<info_portion id="af_4"></info_portion>
+<info_portion id="af_5"></info_portion>
+<info_portion id="af_6"></info_portion>
+<info_portion id="af_7"></info_portion>
+<info_portion id="af_8"></info_portion>
+<info_portion id="af_9"></info_portion>
+<info_portion id="af_10"></info_portion>
+<info_portion id="af_11"></info_portion>
+<info_portion id="af_12"></info_portion>
+<info_portion id="af_13"></info_portion>
+<info_portion id="af_14"></info_portion>
+<info_portion id="af_15"></info_portion>
+<info_portion id="af_16"></info_portion>
+<info_portion id="af_17"></info_portion>
+<info_portion id="af_18"></info_portion>
+<info_portion id="af_19"></info_portion>
+<info_portion id="af_20"></info_portion>
+<info_portion id="af_21"></info_portion>
+<info_portion id="arts_powerup"><action>achievements.achievement2tip</action><article>artefacts_better_achievement</article></info_portion>
+
+<info_portion id="achievement3"><action>achievements.achievement3tip</action><article>za_rodiny_achievement</article></info_portion>
+
+<info_portion id="deadman_head_powerup"><article>deadman_head_achievement</article><action>achievements.achievement4tip</action><action>achievements.deadmans_head_exchange</action></info_portion>
+
+<info_portion id="atp_controler_knifed"></info_portion>
+<info_portion id="achievement5"><action>achievements.achievement5tip</action><article>knife_achievement</article></info_portion>
+
+<info_portion id="achievement6"><action>achievements.achievement6tip</action><article>sniper_achievement</article></info_portion>
+
+<info_portion id="achievement7"><action>achievements.achievement7tip</action><article>buckshoot_achievement</article></info_portion>
+
+<info_portion id="achievement8"><action>achievements.achievement8tip</action><article>stelth_achievement</article></info_portion>
+
+
+
+
+
+
+<!-- Гнезда монстров -->
+
+<info_portion id="nest_esc_atp_respawn"></info_portion>
+<info_portion id="esc_atp_controler_dead"></info_portion>
+<info_portion id="esc_atp_controler_agress"><action>addon_dialogs.esc_atp_controler_agress_tip</action><action>soundtrack.esc_atp_controler_agress</action></info_portion>
+<info_portion id="esc_atp_zomb1_dead"></info_portion>
+<info_portion id="esc_atp_zomb2_dead"></info_portion>
+<info_portion id="esc_atp_zomb3_dead"></info_portion>
+<info_portion id="esc_atp_zomb4_dead"></info_portion>
+<info_portion id="esc_atp_zomb5_dead"></info_portion>
+<info_portion id="esc_atp_zomb6_dead"></info_portion>
+<info_portion id="esc_atp_zomb7_dead"></info_portion>
+<info_portion id="esc_atp_zomb8_dead"></info_portion>
+
+<info_portion id="nest_garb_angar_respawn"></info_portion>
+<info_portion id="garb_angar_burer_boss_dead"></info_portion>
+<info_portion id="garb_angar_burer1_dead"></info_portion>
+<info_portion id="garb_angar_burer2_dead"></info_portion>
+<info_portion id="garb_angar_burer3_dead"></info_portion>
+<info_portion id="garb_angar_burer4_dead"></info_portion>
+
+<info_portion id="nest_bar_bunker_respawn"></info_portion>
+<info_portion id="bar_bunkerzombie_boss_dead"></info_portion>
+<info_portion id="bar_bunkerzombie1_dead"></info_portion>
+<info_portion id="bar_bunkerzombie2_dead"></info_portion>
+<info_portion id="bar_bunkerzombie3_dead"></info_portion>
+<info_portion id="bar_bunkerzombie4_dead"></info_portion>
+<info_portion id="bar_bunkerzombie5_dead"></info_portion>
+<info_portion id="bar_bunkerzombie6_dead"></info_portion>
+<info_portion id="bar_bunkerzombie7_dead"></info_portion>
+
+
+
+<!-- Собираем машины -->
+
+<info_portion id="esc_niva_empty_akum"></info_portion>
+<info_portion id="esc_niva_empty_wheel1"></info_portion>
+<info_portion id="esc_niva_empty_wheel2"></info_portion>
+<info_portion id="esc_niva_empty_wheel3"></info_portion>
+<info_portion id="esc_niva_empty_wheel4"></info_portion>
+<info_portion id="esc_niva_empty_bearing"></info_portion>
+<info_portion id="esc_niva_empty_tank"></info_portion>
+
+<info_portion id="garb_zaz_empty_akum"></info_portion>
+<info_portion id="garb_zaz_empty_wheel1"></info_portion>
+<info_portion id="garb_zaz_empty_wheel2"></info_portion>
+<info_portion id="garb_zaz_empty_wheel3"></info_portion>
+<info_portion id="garb_zaz_empty_wheel4"></info_portion>
+<info_portion id="garb_zaz_empty_bearing"></info_portion>
+<info_portion id="garb_zaz_empty_tank"></info_portion>
+
+<info_portion id="agr_uaz_empty_akum"></info_portion>
+<info_portion id="agr_uaz_empty_wheel1"></info_portion>
+<info_portion id="agr_uaz_empty_wheel2"></info_portion>
+<info_portion id="agr_uaz_empty_wheel3"></info_portion>
+<info_portion id="agr_uaz_empty_wheel4"></info_portion>
+<info_portion id="agr_uaz_empty_bearing"></info_portion>
+<info_portion id="agr_uaz_empty_tank"></info_portion>
+
+<info_portion id="dar_zil_empty_akum"></info_portion>
+<info_portion id="dar_zil_empty_wheel1"></info_portion>
+<info_portion id="dar_zil_empty_wheel2"></info_portion>
+<info_portion id="dar_zil_empty_wheel3"></info_portion>
+<info_portion id="dar_zil_empty_wheel4"></info_portion>
+<info_portion id="dar_zil_empty_bearing"></info_portion>
+<info_portion id="dar_zil_empty_tank"></info_portion>
+
+<info_portion id="predb_niva_empty_akum"></info_portion>
+<info_portion id="predb_niva_empty_wheel1"></info_portion>
+<info_portion id="predb_niva_empty_wheel2"></info_portion>
+<info_portion id="predb_niva_empty_wheel3"></info_portion>
+<info_portion id="predb_niva_empty_wheel4"></info_portion>
+<info_portion id="predb_niva_empty_bearing"></info_portion>
+<info_portion id="predb_niva_empty_tank"></info_portion>
+
+
+
+
+<!-- Сканнер и Аномальные зоны -->
+
+	<info_portion id="strange_zone1_charged"><action>addon.strange_zone1_charged_tip</action></info_portion>
+	<info_portion id="strange_zone2_charged"><action>addon.strange_zone2_charged_tip</action></info_portion>
+	<info_portion id="strange_zone3_charged"><action>addon.strange_zone3_charged_tip</action></info_portion>
+	<info_portion id="strange_zone4_charged"><action>addon.strange_zone4_charged_tip</action></info_portion>
+	<info_portion id="strange_zone5_charged"><action>addon.strange_zone5_charged_tip</action></info_portion>
+	<info_portion id="strange_zone6_charged"><action>addon.strange_zone6_charged_tip</action></info_portion>
+	<info_portion id="strange_zone7_charged"><action>addon.strange_zone7_charged_tip</action></info_portion>
+
+	<info_portion id="afscanner_on"></info_portion>
+	<info_portion id="af_invis1_1_birth"></info_portion>
+	<info_portion id="af_invis2_1_birth"></info_portion>
+	<info_portion id="af_invis3_1_birth"></info_portion>
+	<info_portion id="af_invis4_1_birth"></info_portion>
+	<info_portion id="af_invis5_1_birth"></info_portion>
+	<info_portion id="af_invis6_1_birth"></info_portion>
+	<info_portion id="af_invis7_1_birth"></info_portion>
+
+	<info_portion id="strangezone1_off"></info_portion>
+	<info_portion id="strangezone2_off"></info_portion>
+	<info_portion id="strangezone3_off"></info_portion>
+	<info_portion id="strangezone4_off"></info_portion>
+	<info_portion id="strangezone5_off"></info_portion>
+	<info_portion id="strangezone6_off"></info_portion>
+	<info_portion id="strangezone7_off"></info_portion>
+
+	<info_portion id="fakeart_deleted"></info_portion>
+
+	<info_portion id="strangezone1_rebuild"><disable>strangezone1_off</disable></info_portion>
+	<info_portion id="strangezone2_rebuild"><disable>strangezone2_off</disable></info_portion>
+	<info_portion id="strangezone3_rebuild"><disable>strangezone3_off</disable></info_portion>
+	<info_portion id="strangezone4_rebuild"><disable>strangezone4_off</disable></info_portion>
+	<info_portion id="strangezone5_rebuild"><disable>strangezone5_off</disable></info_portion>
+	<info_portion id="strangezone6_rebuild"><disable>strangezone6_off</disable></info_portion>
+	<info_portion id="strangezone7_rebuild"><disable>strangezone7_off</disable></info_portion>
+
+
+
+<!-- Патрули мерков -->
+
+<info_portion id="headhunters_robbery"></info_portion>
+<info_portion id="headhunter_suicide"></info_portion>
+
+
+<!-- Инфопоршн отключения стрельбы турелей по монстрам -->
+<info_portion id="turrets_monster_no_enemy"></info_portion>
+
+<!-- Инфопоршн отключения стрельбы турелей вообще -->
+<info_portion id="turrets_shoot_on"></info_portion>
+
+  <!-- special info portion that sends to actor when it
+    use in-game UI (PDA, Inventory, etc)-->
+    
+    <info_portion id="ui_pda">
+		<disable>ui_pda_hide</disable>
+    </info_portion>
+    <info_portion id="ui_pda_hide">
+		<disable>ui_pda</disable>
+    </info_portion>
+          
+   <info_portion id="ui_pda_contacts"></info_portion>
+   <info_portion id="ui_pda_contacts_hide"></info_portion>
+   
+   <info_portion id="ui_pda_map_local"></info_portion>
+   <info_portion id="ui_pda_map_global"></info_portion>
+   
+   <info_portion id="ui_pda_news"></info_portion>
+   <info_portion id="ui_pda_news_hide"></info_portion>
+   
+   <info_portion id="ui_pda_jobs_failed"></info_portion>
+   <info_portion id="ui_pda_jobs_accomplished"></info_portion>
+   <info_portion id="ui_pda_jobs_current"></info_portion>
+   
+    <info_portion id="ui_pda_jobs">
+		<disable>ui_pda_jobs_hide</disable>
+    </info_portion>
+    <info_portion id="ui_pda_jobs_hide">
+		<disable>ui_pda_jobs</disable>
+    </info_portion>
+
+   
+   <info_portion id="ui_pda_contracts"></info_portion>
+   
+   <info_portion id="ui_pda_diary"></info_portion>
+   <info_portion id="ui_pda_diary_hide"></info_portion>
+      
+   
+   <info_portion id="ui_pda_encyclopedia"></info_portion>
+   <info_portion id="ui_pda_encyclopedia_hide"></info_portion>
+   
+   <info_portion id="ui_pda_actor_info"></info_portion>
+   <info_portion id="ui_pda_ranking"></info_portion>
+   <info_portion id="ui_pda_events"></info_portion>
+   
+   <info_portion id="ui_inventory">
+		<disable>ui_inventory_hide</disable>
+   </info_portion>
+   <info_portion id="ui_inventory_hide">
+		<disable>ui_inventory</disable>
+   </info_portion>
+
+    <info_portion id="ui_talk">
+		<disable>ui_talk_hide</disable>
+    </info_portion>
+    <info_portion id="ui_talk_hide">
+		<disable>ui_talk</disable>
+    </info_portion>
+
+    <info_portion id="ui_trade">
+		<disable>ui_trade_hide</disable>
+    </info_portion>
+    <info_portion id="ui_trade_hide">
+		<disable>ui_trade</disable>
+    </info_portion>
+
+    <info_portion id="ui_car_body">
+		<disable>ui_car_body_hide</disable>
+    </info_portion>
+    <info_portion id="ui_car_body_hide">
+		<disable>ui_car_body</disable>
+    </info_portion>
+
+
+   <info_portion id="tutorial_part_15_hide_weapon"></info_portion>
+
+
+	<info_portion id="autojump_enabled"></info_portion>
+	<info_portion id="auto_injection_system_startup"></info_portion>
+
+
+
+
+<!-- Инфа с трупов -->
+
+<info_portion id="atp_body1_info"><action>addon_dialogs.spawn_body_habar1</action></info_portion>
+<info_portion id="atp_body1_article"><article>atp_body1_info</article></info_portion>
+
+<info_portion id="bridge_body1_info"><action>addon_dialogs.spawn_body_habar2</action></info_portion>
+<info_portion id="bridge_body1_article"><article>bridge_body1_info</article></info_portion>
+
+<info_portion id="bridge_body2_info"><action>addon_dialogs.spawn_body_habar3</action></info_portion>
+<info_portion id="bridge_body2_article"><article>bridge_body2_info</article></info_portion>
+
+<info_portion id="bridge_body3_info"><action>addon_dialogs.spawn_body_habar4</action></info_portion>
+<info_portion id="bridge_body3_article"><article>bridge_body3_info</article></info_portion>
+
+<info_portion id="bridge_body4_info"><action>addon_dialogs.spawn_body_habar5</action></info_portion>
+<info_portion id="bridge_body4_article"><article>bridge_body4_info</article></info_portion>
+
+<info_portion id="bridge_body5_info"><action>addon_dialogs.spawn_body_habar6</action></info_portion>
+<info_portion id="bridge_body5_article"><article>bridge_body5_info</article></info_portion>
+
+<info_portion id="bridge_body6_info"><action>addon_dialogs.spawn_body_habar7</action></info_portion>
+<info_portion id="bridge_body6_article"><article>bridge_body6_info</article></info_portion>
+
+<info_portion id="bridge_body7_info"><action>addon_dialogs.spawn_body_habar8</action></info_portion>
+<info_portion id="bridge_body7_article"><article>bridge_body7_info</article></info_portion>
+
+<info_portion id="bridge_body8_info"><action>addon_dialogs.spawn_body_habar9</action></info_portion>
+<info_portion id="bridge_body8_article"><article>bridge_body8_info</article></info_portion>
+
+<info_portion id="bridge_body9_info"><action>addon_dialogs.spawn_body_habar10</action></info_portion>
+<info_portion id="bridge_body9_article"><article>bridge_body9_info</article></info_portion>
+
+<info_portion id="beforepost_body1_info"><action>addon_dialogs.spawn_body_habar11</action></info_portion>
+<info_portion id="beforepost_body1_article"><article>beforepost_body1_info</article></info_portion>
+
+<info_portion id="kpp_body1_info"><action>addon_dialogs.spawn_body_habar18</action></info_portion>
+<info_portion id="kpp_body1_article"><article>kpp_body1_info</article></info_portion>
+
+<info_portion id="kpp_body2_info"><action>addon_dialogs.spawn_body_habar19</action></info_portion>
+<info_portion id="kpp_body2_article"><article>kpp_body2_info</article></info_portion>
+
+<info_portion id="kpp_body3_info"><action>addon_dialogs.spawn_body_habar20</action></info_portion>
+<info_portion id="kpp_body3_article"><article>kpp_body3_info</article></info_portion>
+
+<info_portion id="kpp_body4_info"><action>addon_dialogs.spawn_body_habar21</action></info_portion>
+<info_portion id="kpp_body4_article"><article>kpp_body4_info</article></info_portion>
+
+<info_portion id="esc_helicrash_body1_info"><article>esc_helicrash_body1_info</article></info_portion>
+<info_portion id="esc_helicrash_body2_info"></info_portion>
+<info_portion id="esc_helicrash_body3_info"></info_portion>
+
+<info_portion id="esc_tunnel_body1_info"><action>addon_dialogs.spawn_body_habar22</action></info_portion>
+<info_portion id="esc_tunnel_body1_article"><article>esc_tunnel_body1_info</article></info_portion>
+
+<info_portion id="garb_body1_info"><action>addon_dialogs.spawn_body_habar12</action></info_portion>
+<info_portion id="garb_body1_article"><article>garb_body1_info</article></info_portion>
+
+<info_portion id="garb_body2_info"><article>garb_body2_info</article></info_portion>
+<info_portion id="garb_body2_info1"></info_portion>
+
+<info_portion id="garb_body3_info"><action>addon_dialogs.spawn_body_habar14</action></info_portion>
+<info_portion id="garb_body3_article"><article>garb_body3_info</article></info_portion>
+
+<info_portion id="garb_body4_info"><action>addon_dialogs.spawn_body_habar15</action></info_portion>
+<info_portion id="garb_body4_article"><article>garb_body4_info</article></info_portion>
+
+<info_portion id="garb_body5_info"><article>garb_body5_info</article><action>addon_dialogs.spawn_body_habar16</action></info_portion>
+
+<info_portion id="garb_body6_info"><action>addon_dialogs.spawn_body_habar17</action></info_portion>
+<info_portion id="garb_body6_article"><article>garb_body6_info</article></info_portion>
+
+<info_portion id="garb_body7_info"><article>garb_body7_info</article></info_portion>
+<info_portion id="garb_body7_info1"></info_portion>
+
+<info_portion id="garb_body8_info"><article>garb_body8_info</article><action>addon_dialogs.spawn_body_habar35</action></info_portion>
+
+<info_portion id="garb_body9_info"><article>garb_body9_info</article></info_portion>
+<info_portion id="garb_body9_info1"></info_portion>
+
+<info_portion id="garb_body10_info"><action>addon_dialogs.spawn_body_habar36</action></info_portion>
+<info_portion id="garb_body10_info1"><article>garb_body10_info</article><action>addon_dialogs.spawn_body_habar36_1</action></info_portion>
+
+<info_portion id="bar_body1_info"><article>bar_body1_info</article></info_portion>
+<info_portion id="bar_body2_info"><article>bar_body2_info</article></info_portion>
+
+<info_portion id="esc_dead_scientist_info"><article>esc_dead_scientist_info</article></info_portion>
+
+<info_portion id="locomotive_body_info"><article>locomotive_body_info</article><task>locomotive_body_task</task></info_portion>
+
+<info_portion id="garb_benzovoz_body_info"><article>garb_benzovoz_body_info</article><task>lost_expedition_task</task></info_portion>
+<info_portion id="garb_excavator_body_info"><article>garb_excavator_body_info</article></info_portion>
+<info_portion id="garb_reservuar_body_info"><article>garb_reservuar_body_info</article></info_portion>
+
+<info_portion id="esc_btr_body_info"><article>esc_btr_body_info</article></info_portion>
+
+<info_portion id="garb_minefield_body1_info"><action>addon_dialogs.spawn_body_habar23</action></info_portion>
+<info_portion id="garb_minefield_body1_article"><article>garb_minefield_body1_info</article></info_portion>
+
+<info_portion id="garb_minefield_body2_info"><action>addon_dialogs.spawn_body_habar24</action></info_portion>
+<info_portion id="garb_minefield_body2_article"><article>garb_minefield_body2_info</article></info_portion>
+
+<info_portion id="garb_minefield_body3_info"><action>addon_dialogs.spawn_body_habar25</action></info_portion>
+<info_portion id="garb_minefield_body3_article"><article>garb_minefield_body3_info</article></info_portion>
+
+<info_portion id="garb_minefield_body4_info"><action>addon_dialogs.spawn_body_habar26</action></info_portion>
+<info_portion id="garb_minefield_body4_article"><article>garb_minefield_body4_info</article></info_portion>
+
+
+<info_portion id="dar_body1_info"><article>dar_body1_info</article></info_portion>
+
+<info_portion id="dar_body2_info"><article>dar_body2_info</article></info_portion>
+
+<info_portion id="dar_body3_info"><article>dar_body3_info</article><action>addon_dialogs.spawn_body_habar29</action></info_portion>
+
+<info_portion id="dar_body4_info"><article>dar_body4_info</article><action>addon_dialogs.spawn_body_habar30</action></info_portion>
+
+<info_portion id="dar_body5_info"></info_portion>
+<info_portion id="dar_body6_info"></info_portion>
+<info_portion id="dar_body7_info"></info_portion>
+<info_portion id="dar_body8_info"></info_portion>
+
+<info_portion id="dar_body9_info"><action>addon_dialogs.spawn_body_habar31</action></info_portion>
+<info_portion id="dar_body9_info1"><article>dar_body9_info</article><action>addon_dialogs.spawn_body_habar31_1</action></info_portion>
+
+<info_portion id="garb_convoy_deadscientist_info"><article>garb_convoy_deadscientist_info</article></info_portion>
+
+<info_portion id="agr_body1_info"><article>agr_body1_info</article></info_portion>
+<info_portion id="agr_body2_info"><article>agr_body2_info</article></info_portion>
+<info_portion id="agr_body3_info"></info_portion>
+<info_portion id="agr_body4_info"><article>agr_body4_info</article></info_portion>
+<info_portion id="agr_body5_info"><article>agr_body5_info</article></info_portion>
+<info_portion id="agr_body6_info"><article>agr_body6_info</article></info_portion>
+<info_portion id="agr_body7_info"><article>agr_body7_info</article></info_portion>
+<info_portion id="agr_body8_info"><article>agr_body8_info</article></info_portion>
+
+<info_portion id="agr_body9_info"><action>addon_dialogs.spawn_agr_nii_candles_box</action></info_portion>
+<info_portion id="agr_body9_info1"><article>agr_body9_info</article><action>addon_dialogs.spawn_agr_nii_candles_box1</action></info_portion>
+
+<info_portion id="agr_body10_info"><article>agr_body10_info</article></info_portion>
+<info_portion id="agr_body11_info"><article>agr_body11_info</article></info_portion>
+<info_portion id="agr_body12_info"><article>agr_body12_info</article></info_portion>
+<info_portion id="agr_body13_info"><article>agr_body13_info</article></info_portion>
+<info_portion id="agr_body14_info"></info_portion>
+<info_portion id="agr_body15_info"><article>agr_body15_info</article></info_portion>
+<info_portion id="agr_body16_info"><article>agr_body16_info</article></info_portion>
+<info_portion id="agr_body17_info"><article>agr_body17_info</article></info_portion>
+
+<info_portion id="agrund_body1_info"><article>agrund_body1_info</article><action>addon_dialogs.spawn_body_habar32</action></info_portion>
+
+<info_portion id="agrund_body3_info"><article>agrund_body3_info</article><action>addon_dialogs.spawn_body_habar34</action></info_portion>
+
+<info_portion id="predb_body2_info"></info_portion>
+<info_portion id="predb_body3_info"><article>predb_body3_info</article></info_portion>
+<info_portion id="predb_body4_info"><article>predb_body4_info</article></info_portion>
+<info_portion id="predb_body5_info"><article>predb_body5_info</article></info_portion>
+<info_portion id="predb_body6_info"><article>predb_body6_info</article></info_portion>
+<info_portion id="predb_body7_info"><article>predb_body7_info</article></info_portion>
+<info_portion id="predb_body8_info"><article>predb_body8_info</article></info_portion>
+<info_portion id="predb_body9_info"><article>predb_body9_info</article></info_portion>
+<info_portion id="predb_body10_info"><article>predb_body10_info</article></info_portion>
+<info_portion id="predb_body11_info"><article>predb_body11_info</article></info_portion>
+<info_portion id="predb_body12_info"><article>predb_body12_info</article></info_portion>
+<info_portion id="predb_body13_info"><article>predb_body13_info</article></info_portion>
+<info_portion id="predb_body14_info"><article>predb_body14_info</article></info_portion>
+<info_portion id="predb_body15_info"><article>predb_body15_info</article></info_portion>
+
+<info_portion id="predb_cave_body1info"><article>predb_cave_body1_article</article><action>addon_dialogs.cave_task_action</action></info_portion>
+<info_portion id="predb_cave_body1_article"></info_portion>
+
+<info_portion id="cave_task_1"><task>predb_cave_task1</task></info_portion>
+<info_portion id="cave_task_2"><task>predb_cave_task2</task></info_portion>
+
+
+<info_portion id="yan_body1_info"></info_portion>
+<info_portion id="yan_body2_info"></info_portion>
+<info_portion id="yan_body3_info"></info_portion>
+
+<info_portion id="mil_deadsold1_info"><article>mil_deadsold1_info</article></info_portion>
+
+<info_portion id="mil_body1_info"><article>mil_body1_info</article></info_portion>
+
+
+
+
+
+ <info_portion id="stalker_smoke_info"></info_portion>
+ <info_portion id="sanya_dead"></info_portion>
+ <info_portion id="sanya_killed_by_actor"></info_portion>
+ <info_portion id="skidan_dead"></info_portion>
+ <info_portion id="esc_izgoy_dead"></info_portion>
+ <info_portion id="esc_heli_crash_uncharged"></info_portion>
+ <info_portion id="kpp_bandits_hello"></info_portion>
+ <info_portion id="kpp_bandits_pay"></info_portion>
+ <info_portion id="underbridge_zone_uncharged"></info_portion>
+
+<info_portion id="skidan_about_weapons"></info_portion>
+
+<info_portion id="bonebreak"></info_portion>
+<info_portion id="esc_village_dog_killed_by_actor"></info_portion>
+
+<info_portion id="garb_hunter_walk_before_house"></info_portion>
+
+<info_portion id="malandrinus_first_talk"></info_portion>
+<info_portion id="malandrinus_dead"></info_portion>
+<info_portion id="actor_post_enemy"></info_portion>
+<info_portion id="post_btr_dead"></info_portion>
+<info_portion id="blokpost_alarm"><action>addon_dialogs.blokpost_alarm_tip</action></info_portion>
+<info_portion id="blokpost_alarm_off"><task>leave_blockpost</task></info_portion>
+<info_portion id="post_matugalnik_off"><action>addon_dialogs.post_patrol_scream</action></info_portion>
+<info_portion id="ibuprophen_used"></info_portion>
+<info_portion id="sold10_goto_room"></info_portion>
+<info_portion id="blokpost_alarm2"><action>addon_dialogs.blokpost_alarm_tip2</action><action>addon_dialogs.blokpost_enemy</action></info_portion>
+<info_portion id="kazarma_door_open"><disable>kazarma_door_close</disable></info_portion>
+<info_portion id="kazarma_door_close"><disable>kazarma_door_open</disable></info_portion>
+<info_portion id="post_dopros"></info_portion>
+<info_portion id="srochnik3_want_item"></info_portion>
+<info_portion id="srochnik_has_item"></info_portion>
+<info_portion id="kazarma_door_broken"><action>soundtrack.jekan_music_track3</action></info_portion>
+<info_portion id="story_task1"><task>story_task1</task><action>addon.set_start_karma</action></info_portion>
+<info_portion id="story_task2"><task>find_esc_village</task></info_portion>
+<info_portion id="actor_blokpost_leave"></info_portion>
+<info_portion id="sanya_first_talk"><disable>esc_close_door1</disable></info_portion>
+<info_portion id="village_nighthunter_task"><task>kill_village_monstr</task></info_portion>
+<info_portion id="izgoy_first_talk"></info_portion>
+<info_portion id="izgoy_tutorial_start"><task>artefact_tutorial_task</task></info_portion>
+<info_portion id="izgoy_crouch"></info_portion>
+<info_portion id="izgoy_before_anomaly"></info_portion>
+<info_portion id="izgoy_in_anomaly"></info_portion>
+<info_portion id="izgoy_give_skanner"></info_portion>
+<info_portion id="izgoy_go_home"></info_portion>
+<info_portion id="esc_lost_man_pda_done"></info_portion>
+
+<info_portion id="skidan_habar_info"><action>addon_dialogs.start_skidan_habar_timer</action></info_portion>
+<info_portion id="izgoy_go_courier"></info_portion>
+<info_portion id="izgoy_go_courier_home"></info_portion>
+<info_portion id="first_habar_info"></info_portion>
+<info_portion id="first_habar_done"></info_portion>
+<info_portion id="first_habar_is_af_ballast"></info_portion>
+<info_portion id="first_habar_is_af_roll"></info_portion>
+<info_portion id="first_habar_is_af_chickengod"></info_portion>
+<info_portion id="esc_post_zapiska_info"><article>esc_post_zapiska</article></info_portion>
+<info_portion id="sanya_skidan_zapiska_info"></info_portion>
+<info_portion id="skidan_secret_art_info"><task>skidan_secret_art_task</task></info_portion>
+<info_portion id="af_pult_use"></info_portion>
+<info_portion id="skidan_secret_art_done"></info_portion>
+
+<info_portion id="skidan_first_talk"></info_portion>
+<info_portion id="esc_close_door1"></info_portion>
+<info_portion id="village_stalkers_on_pos"></info_portion>
+<info_portion id="village_stalkers_on_pos2"></info_portion>
+<info_portion id="musorka_monstr_dead"></info_portion>
+<info_portion id="musorka_monstr_spawn"></info_portion>
+<info_portion id="musorka_monstr_finish"></info_portion>
+
+<info_portion id="sanya_food_task"><task>sanya_food_task</task></info_portion>
+<info_portion id="esc_food_boar_dead"></info_portion>
+<info_portion id="sanya_food_task_finish"></info_portion>
+<info_portion id="skidan_food_task_reward"></info_portion>
+
+<info_portion id="sanya_predbannik_info"></info_portion>
+
+<info_portion id="malandrinus_samopal_task"><task>samopal_task</task></info_portion>
+<info_portion id="malandrinus_samopal_task_finish"></info_portion>
+
+<info_portion id="malandrinus_body_task"><task>malandrinus_body_task</task></info_portion>
+<info_portion id="malandrinus_body_task_finish"><action>addon_dialogs.controler_task_timer</action><action>xr_effects.karma_up</action></info_portion>
+<info_portion id="malandrinus_goto_graveyard"></info_portion>
+<info_portion id="malandrinus_goto_body"></info_portion>
+<info_portion id="malandrinus_gravedigger"></info_portion>
+
+<info_portion id="volk_dead"></info_portion>
+<info_portion id="volk_freedom_task"><task>volk_freedom_task</task></info_portion>
+<info_portion id="miln_door_unlock"></info_portion>
+<info_portion id="miln_stranger1_dead"></info_portion>
+<info_portion id="miln_stranger2_dead"></info_portion>
+<info_portion id="miln_stranger3_dead"></info_portion>
+<info_portion id="volk_hide_zone"><task>volk_hide_task</task></info_portion>
+<info_portion id="miln_stranger1_on_place"></info_portion>
+<info_portion id="miln_stranger2_on_place"></info_portion>
+<info_portion id="miln_stranger3_on_place"></info_portion>
+
+<info_portion id="miln_stranger_on_place"></info_portion>
+<info_portion id="miln_strangers_task_end"></info_portion>
+<info_portion id="miln_strangers_alarm"><action>soundtrack.miln_strangers_alarm</action></info_portion>
+<info_portion id="volk_goto_village"></info_portion>
+<info_portion id="volk_shotgun_task"><article>volk_shotgun_task_info</article></info_portion>
+<info_portion id="skidan_milnflash_info"></info_portion>
+
+<info_portion id="volk_in_the_village"></info_portion>
+<info_portion id="sanya_volk_story"></info_portion>
+<info_portion id="volk_sanya_apologize"></info_portion>
+<info_portion id="esc_nighthunter_task"><task>esc_nighthunter_task</task></info_portion>
+<info_portion id="volk_to_nighthunters_place"><action>addon_dialogs.sanya_about_bobik_tip</action></info_portion>
+<info_portion id="volk_on_nighthunters_place"></info_portion>
+<info_portion id="dog_see_nighthunter"></info_portion>
+<info_portion id="nighthunter_spawn"></info_portion>
+<info_portion id="esc_nighthunter_dead"></info_portion>
+<info_portion id="volk_find_krivoy_item"></info_portion>
+<info_portion id="volk_go_home_after_hunt"></info_portion>
+<info_portion id="sanya_volk_apologized"><action>xr_effects.karma_up</action></info_portion>
+
+
+<info_portion id="vagon_stranger1_dead"></info_portion>
+<info_portion id="vagon_stranger2_dead"></info_portion>
+<info_portion id="vagon_stranger3_dead"></info_portion>
+<info_portion id="esc_vagon_ambush"></info_portion>
+<info_portion id="vagon_stranger1_go_avay"><action>turret_spawn.esc_afterambush_turretspawn</action><action>addon_dialogs.vagon_ambush_think</action><action>addon_dialogs.headhunters_relation_bad</action></info_portion>
+
+
+<info_portion id="skidan_killers_info"><task>skidan_killers_task</task></info_portion>
+<info_portion id="bridge_anomal_killers_spawn"></info_portion>
+<info_portion id="bridge_anomal_killer1_dead"><action>addon_dialogs.dollhelp_tip1</action><action>soundtrack.jekan_music_track2</action></info_portion>
+<info_portion id="bridge_anomal_killer2_dead"></info_portion>
+<info_portion id="bridge_anomal_killer3_dead"></info_portion>
+<info_portion id="bridge_anomal_killer_on_place"></info_portion>
+<info_portion id="underbridge_task_fail"></info_portion>
+<info_portion id="underbridge_task_sucess"><action>addon_dialogs.headhunters_respawn</action><action>addon_dialogs.headhunters_relation_bad</action></info_portion>
+
+
+<info_portion id="skidan_control_task_talk"><task>skidan_control_task_talk</task></info_portion>
+<info_portion id="atp_controler_task"><task>atp_controler_task</task></info_portion>
+<info_portion id="malandrinus_goto_atp"></info_portion>
+<info_portion id="malandrinus_before_atp"></info_portion>
+<info_portion id="malandrinus_done"></info_portion>
+<info_portion id="malandrinus_goto_village"></info_portion>
+<info_portion id="skidan_control_task_reward"></info_portion>
+
+<info_portion id="esc_kpp_band_hitted"></info_portion>
+<info_portion id="shustrila_dead"></info_portion>
+<info_portion id="tirsa_dead"></info_portion>
+<info_portion id="abdul_dead"></info_portion>
+
+<info_portion id="esc_farm_attak_boar1_dead"></info_portion>
+<info_portion id="esc_farm_attak_boar2_dead"></info_portion>
+<info_portion id="esc_farm_attak_boar3_dead"></info_portion>
+<info_portion id="esc_farm_boars_attak"></info_portion>
+<info_portion id="esc_hunter_help_task"><task>esc_hunter_help_task</task><action>addon_dialogs.spawn_farm_boars</action><action>soundtrack.andrey_help1</action></info_portion>
+<info_portion id="esc_hunter_dead"></info_portion>
+
+
+<info_portion id="skidan_post_stels_task"><task>skidan_post_stels_task</task><action>addon_dialogs.set_soldier10_neutral</action><action>addon_dialogs.post_prapor_box_spawn</action><action>addon_dialogs.soldier10_clear_inventory</action></info_portion>
+<info_portion id="esc_post_seif_open"></info_portion>
+<info_portion id="skidan_post_stels_task_done"></info_portion>
+
+
+<info_portion id="dar_renegades_spawn"></info_portion>
+<info_portion id="dar_renegade1_dead"><action>addon_dialogs.set_renegade2_neutral</action></info_portion>
+<info_portion id="dar_renegade2_dead"><action>addon_dialogs.set_renegade1_neutral</action></info_portion>
+
+<info_portion id="hunter1_goto_house"><action>xr_effects.karma_up</action></info_portion>
+<info_portion id="hunter1_in_house"></info_portion>
+<info_portion id="esc_helicrash_survival_spawn"></info_portion>
+<info_portion id="helicrash_survival_on_place"></info_portion>
+<info_portion id="helicrash_survival_task"><task>helicrash_survival_task</task></info_portion>
+<info_portion id="hunter1_enemy"></info_portion>
+<info_portion id="helicrash_survival_task_fail"></info_portion>
+<info_portion id="helicrash_survival_art_in"></info_portion>
+
+
+
+<info_portion id="hunter4_goto_vagon"></info_portion>
+
+<info_portion id="esc_kamp_seif_open"></info_portion>
+
+
+<info_portion id="wonderdoll_founded"></info_portion>
+<info_portion id="wonderdoll_first_talk"></info_portion>
+<info_portion id="wonderdoll_dead"></info_portion>
+<info_portion id="wonderdoll_task1"><task>wonderdoll_task1</task><action>addon_dialogs.wonderdoll_esc_mafon_spawn</action></info_portion>
+
+<info_portion id="wonder_task_done1"></info_portion>
+<info_portion id="wonder_task_done2"><action>addon_dialogs.wonderdoll_akumulator_spawn</action><action>soundtrack.wonderdoll_sucess_tip5</action></info_portion>
+<info_portion id="wonder_task_done3"></info_portion>
+<info_portion id="wonder_task_done4"><article>esc_btr_planshet_info</article><action>addon_dialogs.mark_darkvalley_evacuation_place</action><action>addon_dialogs.spawn_agr_camerer_car_box</action></info_portion>
+<info_portion id="wonder_task_done5"><article>camerer_pda_info</article><action>addon_dialogs.spawn_agr_camerer_box</action></info_portion>
+<info_portion id="wonder_task_done6"></info_portion>
+<info_portion id="wonder_task_done7"><action>addon_dialogs.mark_garb_colonna_zone</action></info_portion>
+<info_portion id="wonder_task_done8"></info_portion>
+<info_portion id="wonder_task_done9"></info_portion>
+<info_portion id="wonder_task_done10"></info_portion>
+<info_portion id="wonderdoll_surprise"></info_portion>
+<info_portion id="wonderdoll_end"></info_portion>
+
+<info_portion id="wonderdoll_level_secret1"></info_portion>
+<info_portion id="wonderdoll_level_secret2"></info_portion>
+<info_portion id="wonderdoll_level_secret3"></info_portion>
+<info_portion id="wonderdoll_level_secret4"></info_portion>
+<info_portion id="wonderdoll_level_secret5"></info_portion>
+<info_portion id="wonderdoll_level_secret6"></info_portion>
+<info_portion id="wonderdoll_level_secret7"></info_portion>
+<info_portion id="wonderdoll_level_secret8"></info_portion>
+<info_portion id="wonderdoll_level_secret9"></info_portion>
+<info_portion id="wonderdoll_level_secret10"></info_portion>
+<info_portion id="wonderdoll_level_secret11"></info_portion>
+<info_portion id="wonderdoll_level_secret12"></info_portion>
+<info_portion id="wonderdoll_level_secret13"></info_portion>
+<info_portion id="wonderdoll_level_secret14"></info_portion>
+<info_portion id="wonderdoll_level_secret15"></info_portion>
+<info_portion id="wonderdoll_level_secret16"></info_portion>
+<info_portion id="wonderdoll_level_secret17"></info_portion>
+
+
+<info_portion id="esc_carcrash_pda_finded"></info_portion>
+<info_portion id="esc_carcrash_pda_info"><article>esc_carcrash_pda_info</article><action>addon_dialogs.spawn_esc_carcrash_pda_shron</action></info_portion>
+
+<info_portion id="kamp_controler_transformation"></info_portion>
+<info_portion id="kamp_controler_spawn"></info_portion>
+ <info_portion id="kamp_controler_secret_info"><article>kamp_controler_secret_info</article><action>addon_dialogs.spawn_kamp_controler_secret</action></info_portion>
+<info_portion id="kamp_controler_away"></info_portion>
+<info_portion id="kamp_controler_dead"></info_portion>
+ <info_portion id="kamp_dnevnik_info"><article>kamp_dnevnik_info</article></info_portion>
+
+<info_portion id="esc_kpp_bandits_spawn"></info_portion>
+<info_portion id="helicrash_survival_first_talk"></info_portion>
+<info_portion id="helicrash_survival_ready_to_go"><task>go_to_garbage_task</task></info_portion>
+<info_portion id="hunter1_on_kpp_way"></info_portion>
+<info_portion id="hunter1_to_kamaz"></info_portion>
+<info_portion id="hunter1_behind_kamaz"></info_portion>
+<info_portion id="hunter1_look_bodies"></info_portion>
+<info_portion id="hunter1_look_bodies_done"></info_portion>
+<info_portion id="hunter1_to_kpp_room"><action>addon_dialogs.dollhelp_tip2</action></info_portion>
+<info_portion id="hunter1_in_kpp_room"></info_portion>
+<info_portion id="helicrash_survival_art_have"></info_portion>
+<info_portion id="helicrash_survival_dead"></info_portion>
+<info_portion id="hunter1_kpp_agress"></info_portion>
+<info_portion id="abdup_kpp_prepare"></info_portion>
+<info_portion id="abdul_kpp_strike"></info_portion>
+<info_portion id="kpp_bandits_timer_start"><task>kpp_bandits_abdul_task</task><action>addon_dialogs.dollhelp_tip3</action><action>soundtrack.jekan_music_track3</action></info_portion>
+<info_portion id="abdul_change_prioritets"></info_portion>
+<info_portion id="abdul_strikes_bandits"></info_portion>
+<info_portion id="hunter1_bandits_away"></info_portion>
+<info_portion id="hunter1_kpp_rest"></info_portion>
+<info_portion id="hunter1_abdul_talk"></info_portion>
+<info_portion id="survival_kpp_freetalk1"></info_portion>
+<info_portion id="garbage_door_opened"></info_portion>
+<info_portion id="abdul_goodbye"></info_portion>
+
+
+<info_portion id="skidan_job1"><task>skidan_job1</task></info_portion>
+<info_portion id="skidan_job1_reward"></info_portion>
+
+
+<info_portion id="spawn_garbage_companions"><task>garbage_companions_save</task><action>addon_dialogs.garbage_companions_timer_start</action><action>soundtrack.jekan_music_track4</action></info_portion>
+<info_portion id="garbage_companions_on_place"><action>addon_dialogs.garbage_companions_off</action><action>xr_effects.karma_up</action></info_portion>
+<info_portion id="not_all_garbage_companions_on_place"><action>addon_dialogs.garbage_companions_off</action></info_portion>
+<info_portion id="garb_hunter2_vagon_acess"></info_portion>
+<info_portion id="hunter1_garb_talk1"></info_portion>
+<info_portion id="survival_garb_talk1"></info_portion>
+<info_portion id="shadow_zone_task_info"><task>shadow_zone_task</task></info_portion>
+<info_portion id="shadow_zone_info"></info_portion>
+<info_portion id="actor_at_garb_vagon"></info_portion>
+<info_portion id="hunter2_at_garb_vagon"></info_portion>
+<info_portion id="hunter2_go_in_vagon"></info_portion>
+<info_portion id="hunter2_in_vagon"></info_portion>
+<info_portion id="garb_hunters_door_unlocked"></info_portion>
+<info_portion id="garb_hunters_door_locked"></info_portion>
+<info_portion id="hunter2_deadly_wind_info"><article>deadly_wind_info</article><action>addon_dialogs.spawn_garb_vagon_door_zone</action></info_portion>
+
+
+
+
+
+<info_portion id="izlom_garb_ataker1_dead"></info_portion>
+<info_portion id="izlom_garb_ataker2_dead"></info_portion>
+<info_portion id="izlom_garb_ataker3_dead"></info_portion>
+
+<info_portion id="boar_garb_ataker1_dead"></info_portion>
+<info_portion id="boar_garb_ataker2_dead"></info_portion>
+<info_portion id="boar_garb_ataker3_dead"></info_portion>
+
+<info_portion id="pseudo_garb_ataker1_dead"></info_portion>
+<info_portion id="pseudo_garb_ataker2_dead"></info_portion>
+<info_portion id="pseudo_garb_ataker3_dead"></info_portion>
+
+<info_portion id="garb_mobs_atak"><action>addon_dialogs.gar_mobs_atak_zone_task_give</action></info_portion>
+<info_portion id="gar_mobs_atak_zones_recharge"></info_portion>
+
+<info_portion id="garb_flying_teleport_birth"></info_portion>
+
+
+<info_portion id="garb_3shperes_task"><action>addon_dialogs.garb3shperes_task_spawns</action></info_portion>
+
+
+
+<!-- Разрушаем кристаллы гамма-вещества -->
+<info_portion id="cristall_receiver1_shield_off"></info_portion>
+<info_portion id="cristall_receiver1_destroyed"></info_portion>
+
+
+<!-- Клиентура -->
+
+<info_portion id="garb_hue_heli_back1"></info_portion>
+<info_portion id="garb_hue_heli_back2"></info_portion>
+<info_portion id="garb_hue_heli_back3"></info_portion>
+<info_portion id="client1_garbage_traveling"></info_portion>
+<info_portion id="client1_agro_traveling"></info_portion>
+<info_portion id="client1_darkval_traveling"></info_portion>
+<info_portion id="client1_military_traveling"></info_portion>
+<info_portion id="client1_yantar_traveling"></info_portion>
+<info_portion id="notebook_client3travel"></info_portion>
+<info_portion id="client3_car_dead"></info_portion>
+
+<info_portion id="agr_hue_heli_back1"></info_portion>
+<info_portion id="agr_hue_heli_back2"></info_portion>
+<info_portion id="agr_hue_heli_back3"></info_portion>
+
+<info_portion id="dar_hue_heli_back1"></info_portion>
+<info_portion id="dar_hue_heli_back2"></info_portion>
+<info_portion id="dar_hue_heli_back3"></info_portion>
+
+<info_portion id="mil_hue_heli_back1"></info_portion>
+<info_portion id="mil_hue_heli_back2"></info_portion>
+<info_portion id="mil_hue_heli_back3"></info_portion>
+
+
+<info_portion id="notebook_client1task1"><action>addon_dialogs.notebook_client1task1_spawns</action><action>addon_dialogs.notebook_client1task1marker</action></info_portion>
+<info_portion id="client1_art1_have"><action>addon_dialogs.notebook_client1task1marker_off</action></info_portion>
+<info_portion id="notebook_client1task1_reward"></info_portion>
+
+<info_portion id="notebook_client1task2"><action>addon_dialogs.notebook_client1task2_spawns</action><action>addon_dialogs.notebook_client1task2marker</action></info_portion>
+<info_portion id="client1_art2_have"><action>addon_dialogs.notebook_client1task2marker_off</action></info_portion>
+<info_portion id="notebook_client1task2_reward"></info_portion>
+
+<info_portion id="notebook_client1task3"><action>addon_dialogs.notebook_client1task3_spawns</action><action>addon_dialogs.notebook_client1task3marker</action></info_portion>
+<info_portion id="client1_art3_have"><action>addon_dialogs.notebook_client1task3marker_off</action></info_portion>
+<info_portion id="notebook_client1task3_reward"></info_portion>
+
+
+
+
+
+
+<info_portion id="client2_garbage_traveling"></info_portion>
+<info_portion id="client2_agro_traveling"></info_portion>
+<info_portion id="client2_darkval_traveling"></info_portion>
+<info_portion id="client2_military_traveling"></info_portion>
+<info_portion id="client2_yantar_traveling"></info_portion>
+
+<info_portion id="notebook_client2task1"></info_portion>
+<info_portion id="client2_arts1_have"></info_portion>
+<info_portion id="notebook_client2task1_reward"></info_portion>
+
+<info_portion id="notebook_client2task2"></info_portion>
+<info_portion id="client2_arts2_have"></info_portion>
+<info_portion id="notebook_client2task2_reward"></info_portion>
+
+<info_portion id="notebook_client2task3"></info_portion>
+<info_portion id="client2_arts3_have"></info_portion>
+<info_portion id="notebook_client2task3_reward"></info_portion>
+<info_portion id="client2_btr_dead"></info_portion>
+
+
+
+
+
+<info_portion id="garb_to_darkvalley_nopass_zone_off"></info_portion>
+<info_portion id="garb_darkvalley_sphere_respawn"></info_portion>
+
+<info_portion id="agr_nii_bodies_acess"></info_portion>
+
+
+<info_portion id="skidan_fn2000_task"><task>skidan_fn2000_task</task></info_portion>
+<info_portion id="stalker_bomzh_spawn"></info_portion>
+<info_portion id="kill_vanomas_task"><task>kill_vanomas_task</task></info_portion>
+<info_portion id="find_vanomas_task"><task>find_vanomas_task</task><action>addon_dialogs.dollhelp_tip5</action></info_portion>
+<info_portion id="bomzh_dead"><action>xr_effects.karma_down</action></info_portion>
+<info_portion id="bomzh_habar_info"><action>xr_effects.karma_up</action></info_portion>
+<info_portion id="bomzh_find_konteyner"></info_portion>
+<info_portion id="bomzh_find_konteyner_done"></info_portion>
+<info_portion id="bomzh_enemy"></info_portion>
+<info_portion id="skidan_bomzh_reward"></info_portion>
+<info_portion id="skidan_bomzh_reward1"></info_portion>
+<info_portion id="skidan_fn2000_recommendation"></info_portion>
+<info_portion id="skidan_fn2000_done"></info_portion>
+
+
+<info_portion id="agr_brownie1_dead"></info_portion>
+<info_portion id="agr_brownie2_dead"></info_portion>
+<info_portion id="agr_brownie3_dead"></info_portion>
+<info_portion id="agr_brownie4_dead"></info_portion>
+
+
+
+<info_portion id="village_house1_task_prelude"><action>addon_dialogs.village_house1_task_think</action></info_portion>
+<info_portion id="village_house1_task"><task>village_house1_task</task></info_portion>
+<info_portion id="village_house1_door_opened"></info_portion>
+
+
+
+ <info_portion id="stalker_smoke_task"><action>addon_dialogs.spawn_smoke_habar</action><task>sanya_smoke_task</task></info_portion>
+<info_portion id="smoke_habar_finded"></info_portion>
+<info_portion id="sanya_got_esc_dynamite"></info_portion>
+
+<info_portion id="sanya_suslik_task"><task>sanya_suslik_task</task><action>addon_dialogs.spawn_suslik_meshok</action></info_portion>
+<info_portion id="esc_house2_polter_spawn"></info_portion>
+<info_portion id="village_house2_door_opened"></info_portion>
+<info_portion id="esc_house2_polter_dead"></info_portion>
+<info_portion id="suslik_pda_finded"></info_portion>
+<info_portion id="sanya_suslik_pda_to_skidan"></info_portion>
+<info_portion id="obelisk_task"><task>obelisk_task</task><article>obelisk_task_info</article></info_portion>
+<info_portion id="deadmans_head_finded"></info_portion>
+<info_portion id="deadmans_head_task_done"></info_portion>
+
+<info_portion id="grave1"></info_portion>
+<info_portion id="grave2"></info_portion>
+<info_portion id="grave3"></info_portion>
+<info_portion id="grave4"></info_portion>
+<info_portion id="grave5"></info_portion>
+<info_portion id="grave6"></info_portion>
+<info_portion id="grave7"></info_portion>
+<info_portion id="grave8"></info_portion>
+<info_portion id="grave9"></info_portion>
+<info_portion id="grave10"></info_portion>
+<info_portion id="grave11"></info_portion>
+<info_portion id="grave12"></info_portion>
+<info_portion id="grave13"></info_portion>
+<info_portion id="grave14"></info_portion>
+<info_portion id="grave15"></info_portion>
+
+
+<info_portion id="ded_pihto_task1"><task>ded_pihto_task1</task></info_portion>
+
+
+<info_portion id="sold_10_rescue_task"><task>sold_10_rescue_task</task><action>addon_dialogs.dollhelp_tip4</action></info_portion>
+<info_portion id="kazarma_door_key_door_opened_again"><action>soundtrack.jekan_music_track3</action></info_portion>
+<info_portion id="sold10_doing_to_fence"></info_portion>
+<info_portion id="sold10_before_fence"></info_portion>
+<info_portion id="sold10_going_to_tree"></info_portion>
+<info_portion id="sold10_goto_point1"></info_portion>
+<info_portion id="esc_sold10_boar1_dead"></info_portion>
+<info_portion id="esc_sold10_boar2_dead"></info_portion>
+<info_portion id="esc_sold10_boar3_dead"></info_portion>
+<info_portion id="blokpost_alarm3"><action>addon_dialogs.blokpost_stels_task_alarm_think</action></info_portion>
+<info_portion id="post_soldier10_dead"></info_portion>
+<info_portion id="esc_sold10_in_village"></info_portion>
+<info_portion id="sold10_village_reject"></info_portion>
+<info_portion id="sold10_goto_podval"><action>xr_effects.karma_up</action></info_portion>
+
+
+
+<info_portion id="madhunter_info"><article>madhunter_info</article></info_portion>
+<info_portion id="esc_mad_hunter_dead"></info_portion>
+
+
+<info_portion id="repare_btr_task"><task>repare_btr_task</task><task>make_provodnik_art_task</task><action>addon_dialogs.dollhelp_tip6</action></info_portion>
+
+<info_portion id="garb_btr_dead"></info_portion>
+<info_portion id="garb3spheres_finded"></info_portion>
+
+<info_portion id="dar_varg_go_away"></info_portion>
+
+
+<info_portion id="dar_receiver_shield_off"><action>xr_effects.release_crictall_receiver1</action><action>addon_dialogs.spawn_dar_cristall</action></info_portion>
+<info_portion id="dar_cristall_destroyed"><action>achievements.spawn_dar_explorers_key</action></info_portion>
+<info_portion id="varg_harmonica_play"></info_portion>
+
+<info_portion id="dar_explorors_zapiska1_info"><article>dar_explorors_zapiska1_info</article></info_portion>
+<info_portion id="dar_fabric_ratnest_destroyed"><action>addon_dialogs.spawn_dar_explorers_key</action></info_portion>
+<info_portion id="dar_fabric_ratnest_rats_spawn"><action>xr_effects.dar_fabric_ratnest_rats_spawn</action></info_portion>
+
+<info_portion id="hunter4_in_vagon"></info_portion>
+<info_portion id="dar_factory_rats_task"><task>dar_factory_rats_task</task><action>addon_dialogs.dollhelp_tip7</action></info_portion>
+<info_portion id="dar_explorers_key_finded"></info_portion>
+
+<info_portion id="ratter_diary_info"><article>ratter_diary_info</article><task>goto_x18_task</task></info_portion>
+<info_portion id="dar_fabric_door_to_x18_unblocked"></info_portion>
+<info_portion id="dar_podval_door_opened"></info_portion>
+
+
+
+<info_portion id="dar_suicider_man_dead"></info_portion>
+<info_portion id="dar_suicider_woman_dead"></info_portion>
+<info_portion id="dar_woman_first_talk"></info_portion>
+<info_portion id="dar_zapravka_bloodsuckers_spawn"><task>dar_girl_resque_task</task><action>soundtrack.jekan_music_track1</action></info_portion>
+<info_portion id="dar_zapravka_bloodsucker1_dead"></info_portion>
+<info_portion id="dar_zapravka_bloodsucker2_dead"></info_portion>
+<info_portion id="dar_zapravka_bloodsucker3_dead"></info_portion>
+<info_portion id="dar_woman_goto_house_gate"></info_portion>
+<info_portion id="dar_woman_at_house_gate"></info_portion>
+<info_portion id="dar_woman_behind_wall"></info_portion>
+<info_portion id="dar_woman_goto_wall"></info_portion>
+<info_portion id="dar_woman_release"></info_portion>
+<info_portion id="dar_woman_goto_ovrag"><action>addon_dialogs.spawn_dar_ovrag_anomaly</action></info_portion>
+<info_portion id="dar_woman_see_the_anomaly"><action>addon_dialogs.dollhelp_tip9</action></info_portion>
+<info_portion id="dar_woman_goto_tree"></info_portion>
+<info_portion id="dar_woman_stolen"><task>dar_girl_resque2_task</task><action>addon_dialogs.dar_ovrag_woman_think</action></info_portion>
+<info_portion id="dar_hunter_woman_info"><action>addon_dialogs.spawn_dar_swamp_teleport</action></info_portion>
+<info_portion id="dar_woman_are_dead"></info_portion>
+<info_portion id="actor_find_dar_woman"><action>addon_dialogs.spawn_dar_trap_habar</action></info_portion>
+<info_portion id="dar_woman_trap_zone_off"></info_portion>
+<info_portion id="dar_trap_tuschano_atack"><action>addon_dialogs.spawn_dar_trap_tuschano</action></info_portion>
+<info_portion id="dar_teleport_trap_recharge1"></info_portion>
+<info_portion id="dar_teleport_trap_recharge2"></info_portion>
+<info_portion id="dar_teleport_trap_recharge3"></info_portion>
+<info_portion id="dar_trap_tuschano1_dead"></info_portion>
+<info_portion id="dar_trap_tuschano2_dead"></info_portion>
+<info_portion id="dar_trap_tuschano3_dead"></info_portion>
+<info_portion id="dar_trap_tuschano4_dead"></info_portion>
+<info_portion id="dar_trap_tuschano5_dead"></info_portion>
+<info_portion id="dar_trap_tuschano6_dead"></info_portion>
+<info_portion id="dar_trap_tuschano7_dead"></info_portion>
+<info_portion id="af_eye_info"><article>af_eye_info</article></info_portion>
+<info_portion id="dar_trap_teleport_spawn"></info_portion>
+<info_portion id="dar_trap_teleport1_dead"></info_portion>
+<info_portion id="dar_trap_teleport2_dead"></info_portion>
+<info_portion id="dar_trap_teleport3_dead"></info_portion>
+<info_portion id="dar_trap_teleports_spawn"></info_portion>
+
+<info_portion id="dar_woman_goto_bridge"></info_portion>
+<info_portion id="dar_woman_before_bridge"></info_portion>
+<info_portion id="dar_woman_goto_vagon"></info_portion>
+<info_portion id="dar_woman_in_vagon"><action>xr_effects.karma_up</action></info_portion>
+
+
+
+
+<info_portion id="x18_ambush_start"></info_portion>
+<info_portion id="subject_weak_3_first_talk"></info_portion>
+<info_portion id="x18_ratfarm_door_open"></info_portion>
+
+<info_portion id="dar_zapravka_suicider_info"><article>dar_zapravka_suicider_info</article></info_portion>
+<info_portion id="dar_krane_sniper_diary_info"><article>dar_krane_sniper_diary_info</article></info_portion>
+
+
+<info_portion id="dar_hunter_vorpal_info"><action>addon_dialogs.spawn_vorpal_diary1</action></info_portion>
+<info_portion id="dar_hunter_vorpal_info2"><task>dar_vorpal_task</task></info_portion>
+<info_portion id="vorpal_diary_info1"><article>vorpal_diary_info1</article><action>addon_dialogs.spawn_vorpal_diary2</action></info_portion>
+<info_portion id="vorpal_diary_info2"><article>vorpal_diary_info2</article><action>addon_dialogs.spawn_vorpal_diary3</action></info_portion>
+<info_portion id="vorpal_diary_info3"><article>vorpal_diary_info3</article><action>addon_dialogs.spawn_vorpal_diary4</action></info_portion>
+<info_portion id="vorpal_diary_info4"><article>vorpal_diary_info4</article><action>addon_dialogs.spawn_vorpal_diary5</action></info_portion>
+<info_portion id="vorpal_diary_info5"><article>vorpal_diary_info5</article><action>addon_dialogs.spawn_vorpal_diary6</action></info_portion>
+<info_portion id="vorpal_diary_info6"><article>vorpal_diary_info6</article><action>addon_dialogs.spawn_vorpal_diary7</action></info_portion>
+<info_portion id="vorpal_diary_info7"><article>vorpal_diary_info7</article><action>addon_dialogs.spawn_vorpal_diary8</action></info_portion>
+<info_portion id="vorpal_diary_info8"><article>vorpal_diary_info8</article></info_portion>
+
+
+<info_portion id="dar_holm_koster_nopass_zone_work"></info_portion>
+<info_portion id="dar_farm_deadzone_off"><action>addon_dialogs.dar_deadzone_uncharge_think</action></info_portion>
+
+
+<info_portion id="dar_oficer_planshet_info"><article>dar_oficer_planshet_info1</article><article>dar_oficer_planshet_info2</article></info_portion>
+
+
+<info_portion id="dar_farm_anomaly_task"><task>dar_farm_anomaly_task</task><action>addon_dialogs.spawn_dar_farm_renegades_box</action><action>addon_dialogs.dollhelp_tip10</action></info_portion>
+
+<info_portion id="dar_farm_trap_teleport_stage1"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage2"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage3"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage4"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage5"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage6"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage7"></info_portion>
+<info_portion id="dar_farm_trap_teleport_stage8"></info_portion>
+
+<info_portion id="farm_renegades_box_finded"><action>addon_dialogs.dar_farm_renegades_ambush_tip</action></info_portion>
+<info_portion id="dar_farm_seif_docs_info"><article>dar_farm_seif_docs_info</article></info_portion>
+<info_portion id="dar_renegades_box_proval"></info_portion>
+<info_portion id="dar_farm_box_opened"></info_portion>
+<info_portion id="dar_renegades_reward"></info_portion>
+<info_portion id="dar_renegade1_go_away"></info_portion>
+
+
+<info_portion id="dar_btr_soldiers_meeting"><action>addon_dialogs.spawn_dar_btr_mobs</action></info_portion>
+<info_portion id="dar_btr_chimera1_dead"></info_portion>
+<info_portion id="dar_btr_chimera2_dead"></info_portion>
+<info_portion id="dar_btr_chimera3_dead"></info_portion>
+
+<info_portion id="dar_btr_zomb_soldier_dead"></info_portion>
+<info_portion id="dar_btr_zomb_oficer_dead"></info_portion>
+
+
+
+<info_portion id="dyatlov_group_task"><task>dyatlov_group_task</task><action>addon_dialogs.spawn_dyatlov_group_task_items</action><article>marauders_treasure_story</article></info_portion>
+<info_portion id="dyatlovs_group_man1_info"><article>dyatlovs_group_man1_info</article></info_portion>
+<info_portion id="actor_inside_angar_from_laz"></info_portion>
+<info_portion id="dyatlovs_group_man2_info"><article>dyatlovs_group_man2_info</article></info_portion>
+<info_portion id="dyatlovs_group_man3_info"><article>dyatlovs_group_man3_info</article></info_portion>
+<info_portion id="dyatlovs_group_zapis1_info"><article>dyatlovs_group_zapis1_info</article><action>addon_dialogs.spawn_garb_angar_kabina_bag</action></info_portion>
+<info_portion id="dyatlovs_group_zapis2_info"><article>dyatlovs_group_zapis2_info</article><action>addon_dialogs.dyatlovs_group_zapis2_info_think</action></info_portion>
+<info_portion id="dyatlovs_man_pda_info"><action>addon_dialogs.mark_dyatlovs_deadplace</action><action>addon_dialogs.spawn_dyatlovs_seif</action></info_portion>
+<info_portion id="dyatlovs_man_pda2_info"><article>dyatlovs_man_pda2_info</article></info_portion>
+<info_portion id="dyatlovs_task_fail"></info_portion>
+<info_portion id="find_instruments_task"><task>find_instruments_task</task><action>addon_dialogs.spawn_fabrik_instruments</action></info_portion>
+<info_portion id="instruments_task_done"></info_portion>
+
+
+<info_portion id="garb_deadzone_off"></info_portion>
+
+<info_portion id="agr_deadzone_off"></info_portion>
+
+<info_portion id="sanya_planshet_task"><task>sanya_planshet_task</task><action>addon_dialogs.esc_musorka_tree_art_spawn</action></info_portion>
+<info_portion id="af_electro_nut_dummy_collect"></info_portion>
+<info_portion id="sanya_give_planshet_for_money"></info_portion>
+<info_portion id="sanya_give_planshet_for_art"></info_portion>
+
+
+<info_portion id="find_agr_undeground_task"><task>find_agr_undeground_task</task></info_portion>
+
+<info_portion id="agr_reservuars_artefact_collect"></info_portion>
+<info_portion id="agr_fabrik_electroshema_search"><task>find_agr_fabrik_electroshema_task</task><action>addon_dialogs.agr_fabrik_electroshema_task_spawn1</action><action>addon_dialogs.dollhelp_tip11</action></info_portion>
+<info_portion id="agr_fabrik_papka_info"><article>agr_fabrik_papka_info</article><action>addon_dialogs.agr_fabrik_electroshema_task_spawn2</action></info_portion>
+<info_portion id="agr_fabrik_elshema_done"><action>addon_dialogs.agr_fabrik_electroshema_task_spawn3</action><action>addon_dialogs.dollhelp_tip12</action><article>agr_fabrik_switchers_photo</article></info_portion>
+<info_portion id="agr_fabrik_power_on"></info_portion>
+<info_portion id="agr_fabrik_pumps1_on"></info_portion>
+<info_portion id="agr_fabrik_pumps2_on"></info_portion>
+<info_portion id="agr_fabrik_power_box_trap1"></info_portion>
+<info_portion id="agr_fabrik_power_box_trap2"></info_portion>
+<info_portion id="agr_fabrik_power_box_trap3"></info_portion>
+<info_portion id="yuriy_fabrik_reward1"></info_portion>
+<info_portion id="agr_receiver_shield_off"><action>xr_effects.release_crictall_receiver2</action><action>addon_dialogs.spawn_agr_cristall</action></info_portion>
+<info_portion id="agr_cristall_destroyed"></info_portion>
+<info_portion id="yuriy_fabrik_to_help"><action>soundtrack.jekan_music_track1</action></info_portion>
+<info_portion id="yuriy_fabrik_back_to_seif"></info_portion>
+<info_portion id="hunter3_behind_seif"></info_portion>
+<info_portion id="yuriy_got_seif_keys"></info_portion>
+<info_portion id="yuriy_seif_vzloman"></info_portion>
+<info_portion id="yuriy_goto_yard"></info_portion>
+<info_portion id="yuriy_behind_lestnitsa"></info_portion>
+<info_portion id="yuriy_goto_search"></info_portion>
+<info_portion id="spawn_agr_fabrik_sniper"><action>addon_dialogs.dollhelp_tip13</action></info_portion>
+<info_portion id="agr_fabrik_sniper_start_hunt"></info_portion>
+<info_portion id="hunter3_fabrik_wounded"></info_portion>
+<info_portion id="agr_fabrik_sniper_dead"></info_portion>
+<info_portion id="agr_hunter_dead"></info_portion>
+<info_portion id="hunter3_find_agr_katakombs_entry"></info_portion>
+<info_portion id="hunter3_fabrik_healing"></info_portion>
+<info_portion id="hunter3_bring_nii_dynamite"><task>bring_nii_dynamite</task></info_portion>
+<info_portion id="hunter3_bring_esc_dynamite"><task>bring_esc_dynamite</task></info_portion>
+<info_portion id="hunter3_plant_fabrik_dynamite"></info_portion>
+<info_portion id="actor_plant_fabrik_dynamite"></info_portion>
+<info_portion id="agr_fabrik_blocks_destroyed"></info_portion>
+<info_portion id="hunter3_behind_nii_entry"></info_portion>
+<info_portion id="hunter3_suits_task"><action>addon_dialogs.spawn_agr_hunter_vagon_key</action><action>addon_dialogs.spawn_agr_hunter_vagon_box</action><task>hunter3_suits_task</task></info_portion>
+<info_portion id="spawn_redrik"></info_portion>
+<info_portion id="redrik_warning1"></info_portion>
+<info_portion id="yuriy_germetic_suit_done"></info_portion>
+<info_portion id="spawn_new_hunter3"><action>addon_dialogs.spawn_agr_kazarma_pogon_box</action></info_portion>
+<info_portion id="agr_polkovnik_suicide"></info_portion>
+<info_portion id="agr_polkovnik_dead"></info_portion>
+<info_portion id="spawn_agrund_hunter"></info_portion>
+<info_portion id="yuriy_back_to_agrund_blocks"></info_portion>
+<info_portion id="agrund_hunter_info1"><task>agrund_hunter_task</task></info_portion>
+<info_portion id="agrund_hunter_info2"></info_portion>
+<info_portion id="agrund_hunter_info3"><action>addon_dialogs.spawn_agrund_hunter3_box</action></info_portion>
+<info_portion id="agrund_hunter_behind_door"></info_portion>
+<info_portion id="agrund_dooranomaly_zone1_clear"></info_portion>
+<info_portion id="agrund_dooranomaly_zone2_clear"></info_portion>
+<info_portion id="agrund_dooranomaly_zone3_clear"></info_portion>
+<info_portion id="agrund_door_opened"></info_portion>
+<info_portion id="agrund_hunter_behind_holl"></info_portion>
+<info_portion id="agrund_ambush_snork1_dead"></info_portion>
+<info_portion id="agrund_ambush_snork2_dead"></info_portion>
+<info_portion id="agrund_ambush_snork3_dead"></info_portion>
+<info_portion id="agrund_ambush_snork4_dead"></info_portion>
+<info_portion id="agrund_ambush_snork5_dead"></info_portion>
+<info_portion id="agrund_ambush_snork6_dead"></info_portion>
+<info_portion id="agrund_ambush_snork7_dead"></info_portion>
+<info_portion id="agrund_ambush_snork8_dead"></info_portion>
+<info_portion id="agrund_ambush_snork9_dead"></info_portion>
+<info_portion id="agrund_ambush_snork10_dead"></info_portion>
+<info_portion id="agrund_ambush_snork11_dead"></info_portion>
+<info_portion id="agrund_hunter_behind_ventilator"></info_portion>
+<info_portion id="agrund_hunter_in_upper_room"></info_portion>
+<info_portion id="agrund_redrik_spawn"></info_portion>
+<info_portion id="agrund_hunter_dead"></info_portion>
+<info_portion id="hunter3_kontainer_wait"></info_portion>
+<info_portion id="agrund_virus_konteyner_finded"></info_portion>
+<info_portion id="agrund_virus_konteyner_opened"><action>addon_dialogs.start_agrund_virus_timer</action></info_portion>
+<info_portion id="agrund_virus_konteyner_lost"></info_portion>
+<info_portion id="agrund_redrik_info1"></info_portion>
+<info_portion id="agrund_redrik_unlock_door"></info_portion>
+<info_portion id="agrund_flying_acid_redrik_hit"></info_portion>
+<info_portion id="agrund_redrik_rescue_actor"></info_portion>
+<info_portion id="agrund_redrik_vakcin_info"><action>addon_dialogs.spawn_redrik_vakcine_shron</action></info_portion>
+<info_portion id="agrund_redrik_info2"><task>agrund_ventilyator_task</task></info_portion>
+<info_portion id="agrund_ventilyator_power_on"></info_portion>
+<info_portion id="agrund_ventilyator_on"></info_portion>
+<info_portion id="agrund_gaz_clear"></info_portion>
+<info_portion id="agrund_redrik_dead"></info_portion>
+<info_portion id="agrund_redrik_final"></info_portion>
+<info_portion id="agr_redrik_goto_vagon"></info_portion>
+<info_portion id="agr_redrik_in_vagon"></info_portion>
+<info_portion id="spawn_agr_redrik2"></info_portion>
+
+
+<info_portion id="redrik_about_nii_scientists_info"><task>nii_scientists_task</task></info_portion>
+<info_portion id="agr_nii_generator_on"><action>addon_dialogs.spawn_agr_nii_lift_buttons</action></info_portion>
+<info_portion id="actor_on_agr_nii_roof"></info_portion>
+<info_portion id="af_nii_art77_destroyed"><action>addon_dialogs.agr_nii_stairs_port_delete</action></info_portion>
+<info_portion id="agr_nii_ecolog_goto_yard"></info_portion>
+<info_portion id="agr_nii_ecolog_dead"></info_portion>
+<info_portion id="agr_nii_ecolog_in_yard"></info_portion>
+<info_portion id="agr_nii_ecolog_goto_vagon"></info_portion>
+<info_portion id="agr_nii_ecolog_bloodsucker1_dead"></info_portion>
+<info_portion id="agr_nii_ecolog_bloodsucker2_dead"></info_portion>
+<info_portion id="agr_nii_ecolog_in_vagon"></info_portion>
+<info_portion id="agr_nii_ecolog_reward"><action>addon_dialogs.spawn_agr_redrik_ecolog_shron</action></info_portion>
+
+
+<info_portion id="ochkaric_shron_info"><article>ochkaric_shron_info</article><action>addon_dialogs.spawn_ochkaric_shron</action><task>find_deathlamp_task</task></info_portion>
+<info_portion id="garb_zone1_green_portion"></info_portion>
+<info_portion id="garb_zone2_blue_portion"></info_portion>
+<info_portion id="garb_zone3_red_portion"></info_portion>
+<info_portion id="garb_colorzones_off"></info_portion>
+<info_portion id="ochkarik_lamp_info"><article>ochkarik_lamp_info</article><action>addon_dialogs.mark_deathlamp</action></info_portion>
+<info_portion id="hunter2_deathlamp_client_info"></info_portion>
+<info_portion id="deathlamp_saled"></info_portion>
+
+<info_portion id="army_drop_heli_go"></info_portion>
+
+
+<info_portion id="scient_colba1_done"></info_portion>
+<info_portion id="scient_colba2_done"></info_portion>
+
+<info_portion id="esc_lathkey_spawn"></info_portion>
+<info_portion id="esc_madhunter_pda_info"><article>esc_madhunter_pda_info</article><action>addon_dialogs.mark_chickenblind_zone</action></info_portion>
+<info_portion id="esc_chickenblind_zone_off"></info_portion>
+<info_portion id="esc_helicrash_secret_info"></info_portion>
+
+<info_portion id="x18toilet_door_opened"></info_portion>
+<info_portion id="subj4_actor_angry"></info_portion>
+<info_portion id="subj4_goto_room1"></info_portion>
+<info_portion id="subj4_near_radpit"></info_portion>
+<info_portion id="subj4_job1"></info_portion>
+<info_portion id="subj5_box_info"></info_portion>
+<info_portion id="subj5_rats_done"></info_portion>
+<info_portion id="subj5_released"></info_portion>
+<info_portion id="subj5_machines_task"><task>subj5_machines_task</task><action>addon_dialogs.spawn_x18radpit_buttons</action></info_portion>
+<info_portion id="x18_radpit_manom_installed"></info_portion>
+<info_portion id="radpit_pressure_high"></info_portion>
+<info_portion id="radpit_pressure_low"></info_portion>
+<info_portion id="x18radpit_sucess"></info_portion>
+<info_portion id="x18radpit_fail"></info_portion>
+<info_portion id="x18_radpit_off"></info_portion>
+<info_portion id="subj4_freedom"><action>xr_effects.start_x18pray_timer</action></info_portion>
+<info_portion id="subject5_dead"></info_portion>
+<info_portion id="x18_farm_rats_spawn"></info_portion>
+<info_portion id="actor_biboran_take"></info_portion>
+<info_portion id="subjects_goto_pray"></info_portion>
+
+
+<info_portion id="x18_ratcatcher_task"><task>x18_ratcatcher_task</task></info_portion>
+<info_portion id="x18_food_rats_spawned"></info_portion>
+<info_portion id="x18_food_rats_reward"></info_portion>
+
+<info_portion id="x18_perfocards_task"><task>x18_perfocards_task</task></info_portion>
+<info_portion id="subj1_getout"></info_portion>
+<info_portion id="subj1_nastoyka_info"></info_portion>
+<info_portion id="subj5_freezer_info"></info_portion>
+<info_portion id="x18freezer_door_open"></info_portion>
+<info_portion id="subj5_give_nastoyka"></info_portion>
+<info_portion id="subj1_nastoyka_done"></info_portion>
+<info_portion id="subj1_safes_info"><action>addon_dialogs.x18archive_journal_spawn</action></info_portion>
+<info_portion id="x18archive_journal_info"><action>addon_dialogs.spawn_x18oficer_lock</action></info_portion>
+<info_portion id="x18oficer_info"><article>x18oficer_info</article></info_portion>
+<info_portion id="x18perfocards_finded"></info_portion>
+
+<info_portion id="subj1_oficer_info"></info_portion>
+<info_portion id="x18_oficer_door_open"></info_portion>
+<info_portion id="x18oficer_lock1_on"></info_portion>
+<info_portion id="x18oficer_lock2_on"></info_portion>
+<info_portion id="x18oficer_lock3_on"></info_portion>
+<info_portion id="x18oficer_lock4_on"></info_portion>
+
+<info_portion id="subj2_perfocards_done"></info_portion>
+<info_portion id="x18_temperature_acess"></info_portion>
+<info_portion id="x18_pressure_acess"></info_portion>
+<info_portion id="x18_radiation_acess"></info_portion>
+
+<info_portion id="x18_temperature_on"></info_portion>
+<info_portion id="x18_pressure_on"></info_portion>
+<info_portion id="x18_radiation_on"></info_portion>
+<info_portion id="x18_mashroom_fail"></info_portion>
+<info_portion id="x18_mashroom_sucess"></info_portion>
+<info_portion id="x18_mashroom_recharge"></info_portion>
+
+
+<info_portion id="subj1_docks_done"></info_portion>
+
+<info_portion id="x18_electric_acess"></info_portion>
+<info_portion id="x18_gidro_acess"></info_portion>
+<info_portion id="x18_others_acess"></info_portion>
+<info_portion id="x18_pumps_task"><task>x18_pumps_task</task></info_portion>
+
+<info_portion id="x18_codedoor1_open"></info_portion>
+<info_portion id="x18_codedoor2_open"></info_portion>
+<info_portion id="x18_electro_scheme"><article>x18_electro_scheme</article><action>addon_dialogs.x18_powerboxes_spawn</action></info_portion>
+<info_portion id="x18_tubezone1work"><action>addon_dialogs.x18_tubezone1spawn</action></info_portion>
+<info_portion id="x18_tubezone2work"><action>addon_dialogs.x18_tubezone2spawn</action></info_portion>
+<info_portion id="x18_tubezone3work"><action>addon_dialogs.x18_tubezone3spawn</action></info_portion>
+
+<info_portion id="x18powerbox1_on"></info_portion>
+<info_portion id="x18powerbox2_on"></info_portion>
+<info_portion id="x18powerbox3_on"></info_portion>
+<info_portion id="x18powerbox4_on"></info_portion>
+<info_portion id="x18powerbox5_on"></info_portion>
+<info_portion id="x18powerbox6_on"></info_portion>
+
+<info_portion id="x18tubebox1_on"></info_portion>
+<info_portion id="x18tubebox2_on"></info_portion>
+<info_portion id="x18tubebox3_on"></info_portion>
+
+<info_portion id="x18_pumps_task_reward"><disable>x18powerbox1_on</disable><disable>x18powerbox2_on</disable><disable>x18powerbox3_on</disable><disable>x18powerbox4_on</disable><disable>x18powerbox5_on</disable><disable>x18powerbox6_on</disable><disable>x18tubebox1_on</disable><disable>x18tubebox2_on</disable><disable>x18tubebox3_on</disable></info_portion>
+
+<info_portion id="x18_karzer_acess"><action>addon_dialogs.x18subj3appointment1</action></info_portion>
+
+<info_portion id="x18_rebellion_task"><task>x18_rebellion_task</task><action>addon_dialogs.x18subj3appointment2</action></info_portion>
+<info_portion id="x18_cattle1_food"><action>xr_effects.spawn_x18food_rats</action></info_portion>
+<info_portion id="x18_cattle1_food_done"></info_portion>
+<info_portion id="x18_rebellion_task_fail"></info_portion>
+<info_portion id="x18_remoralization_start"></info_portion>
+<info_portion id="x18_remoral_phase1"></info_portion>
+<info_portion id="x18_remoralizer_blow"></info_portion>
+<info_portion id="subject3_dead"></info_portion>
+<info_portion id="subject4_dead"><action>addon_dialogs.set_subjects_friends</action></info_portion>
+<info_portion id="x18_door1_open"><action>addon_dialogs.release_codedoor_nopass_zone</action></info_portion>
+<info_portion id="x18_rebellion_phase1"></info_portion>
+<info_portion id="subj3_on1level"></info_portion>
+<info_portion id="x18_rebellion_phase2"><action>addon_dialogs.x18subjects_unmake_invulnerable</action></info_portion>
+<info_portion id="subject_strong1_dead"></info_portion>
+<info_portion id="subject_strong2_dead"></info_portion>
+<info_portion id="subject_strong3_dead"></info_portion>
+<info_portion id="subject_strong4_dead"></info_portion>
+<info_portion id="subject_strong5_dead"></info_portion>
+<info_portion id="subject_strong6_dead"></info_portion>
+<info_portion id="subj3_behind_codedoor2"></info_portion>
+<info_portion id="x18_subj3_details_task"><task>x18_subj3_details_task</task></info_portion>
+<info_portion id="x18_subj3_details_task_done"><action>addon_dialogs.spawn_x18controler_boss</action><action>turret_spawn.x18doctor_turrets_spawn</action></info_portion>
+<info_portion id="subject_weak_1_dead"></info_portion>
+<info_portion id="subject_weak_2_dead"></info_portion>
+<info_portion id="subject_weak_3_dead"></info_portion>
+<info_portion id="subject7_dead"></info_portion>
+<info_portion id="x18_doctor_trap"></info_portion>
+<info_portion id="x18_subjects_info"><article>x18_subject1_info</article><article>x18_subject2_info</article><article>x18_subject3_info</article><article>x18_subject4_info</article><article>x18_subject5_info</article><article>x18_subject6_info</article><article>x18_subject7_info</article></info_portion>
+<info_portion id="x18_doctor_final"><action>addon_dialogs.spawn_x18exit</action></info_portion>
+<info_portion id="x18doctor_dead"></info_portion>
+<info_portion id="dar_subjects_spawn"><action>addon_dialogs.delete_x18trash</action></info_portion>
+
+<info_portion id="dar_build_guards_spawn"><action>addon_dialogs.spawn_dar_build_agent_bags</action></info_portion>
+
+<info_portion id="garb_foto_task"><task>garb_foto_task</task></info_portion>
+<info_portion id="garb_hangar_anomaly_start"><action>addon_dialogs.spawn_garb_hangar_ufo</action></info_portion>
+<info_portion id="garb_hangar_anomaly_foto"></info_portion>
+<info_portion id="garb_ufo_task_fail"></info_portion>
+<info_portion id="garb_ufo_fly_away"></info_portion>
+<info_portion id="garb_ufo_task_done"></info_portion>
+<info_portion id="garb_foto_task_done"><article>garb_hangar_foto</article><action>addon_dialogs.spawn_garb_klim_habar</action></info_portion>
+<info_portion id="kilm_info_article"><article>kilm_info_article</article></info_portion>
+
+<info_portion id="dar_hunter_afterlab_meet"><task>dar_hunter_afterlab_meet</task></info_portion>
+<info_portion id="dar_oboroten_task"><task>dar_oboroten_task</task><action>addon_dialogs.spawn_dar_izlom_werwolf</action></info_portion>
+<info_portion id="dar_izlom_enemy"></info_portion>
+<info_portion id="dar_izlom_drugs_task"></info_portion>
+<info_portion id="izlom_drugs_finded"><action>xr_effects.karma_up</action></info_portion>
+<info_portion id="izlom_anomaly_info"><action>addon_dialogs.spawn_af_hive</action></info_portion>
+
+<info_portion id="dar_nedostroyka_task"><task>dar_nedostroyka_task</task></info_portion>
+<info_portion id="hunter4_behind_koridor"></info_portion>
+<info_portion id="hunter4_goto_koridor"></info_portion>
+<info_portion id="dar_sergey_dead"></info_portion>
+
+<info_portion id="teleport_part_indtalled"></info_portion>
+
+<info_portion id="dar_kristall_task"><task>dar_kristall_task</task><action>addon_dialogs.release_garb_company</action></info_portion>
+<info_portion id="dar_build_guard_alarm"></info_portion>
+<info_portion id="dar_build_guard_violence"></info_portion>
+<info_portion id="abdul_psy_weapon_info"></info_portion>
+<info_portion id="abdul_goto_hideaway"></info_portion>
+
+<info_portion id="abdul_goto_garbage"><action>addon_dialogs.release_garb_company</action></info_portion>
+<info_portion id="dar_abdul_off"><action>addon_dialogs.spawn_reketirs_zapiska</action></info_portion>
+<info_portion id="anomal_radio_play"></info_portion>
+
+<info_portion id="garb_reketirs_task"><task>garb_reketirs_task</task></info_portion>
+<info_portion id="garb_reketirs_fail"></info_portion>
+<info_portion id="garb_abdul_on_reketirs_place"></info_portion>
+<info_portion id="abdul_reketirs_start"></info_portion>
+<info_portion id="garb_tirsa_dead"></info_portion>
+<info_portion id="garb_shustriy_dead"></info_portion>
+<info_portion id="reketirs_zuda_ready_to_use"><action>addon_dialogs.reketirs_zuda_ready_to_use_think</action></info_portion>
+<info_portion id="reketirs_zuda_work"></info_portion>
+<info_portion id="garb_tirsa_killed_by_actor"></info_portion>
+<info_portion id="tirsa_pda_info"></info_portion>
+<info_portion id="garb_hostages_kill"></info_portion>
+<info_portion id="hunter2_retun_to_hideway"></info_portion>
+<info_portion id="hunter2_repare_btr"><action>addon_dialogs.spawn_exit_to_bar</action></info_portion>
+<info_portion id="garb_minefield_btr_acess"></info_portion>
+<info_portion id="garb_btr_task_done"></info_portion>
+
+<info_portion id="helicrash_survival_free"></info_portion>
+<info_portion id="actor_has_af_loop"></info_portion>
+
+<info_portion id="abdul_goto_roadbus"></info_portion>
+<info_portion id="bar_road_bus_off"></info_portion>
+<info_portion id="abdul_goto_benzovoz"></info_portion>
+<info_portion id="bar_abdul_dead"></info_portion>
+<info_portion id="bar_abdul_see_zombies"></info_portion>
+<info_portion id="bar_abdul_goto_raciya"></info_portion>
+<info_portion id="bar_infection_info"></info_portion>
+<info_portion id="bar_abdul_assault_start"></info_portion>
+<info_portion id="bar_kamaz_teleport_spawn"></info_portion>
+<info_portion id="actor_goto_bar_tower"></info_portion>
+<info_portion id="bar_hunter_info1"></info_portion>
+<info_portion id="abdul_wishmaster_info"></info_portion>
+<info_portion id="esc_helicrash_survival2_thanks"></info_portion>
+<info_portion id="bar_abdul_sick"><task>bar_virus_task</task></info_portion>
+<info_portion id="bar_hunter_boxes_info"><action>addon_dialogs.spawn_bar_medicin_boxes</action></info_portion>
+<info_portion id="bar_bunkerzombie_pda_info"><article>bar_bunkerzombie_pda_info</article></info_portion>
+<info_portion id="bar_karlik_meet"><action>addon_dialogs.bar_karlik_meet_dolltip</action><action>soundtrack.bar_karlik_meet_sound</action></info_portion>
+<info_portion id="bar_tehnik_info"><article>bar_tehnik_info</article></info_portion>
+<info_portion id="bar_hunter_bunkerdoor_info"><action>addon_dialogs.mark_bar_bunkerdoor</action><action>addon_dialogs.spawn_bar_arena_gigant_point1</action></info_portion>
+<info_portion id="bar_arena_pseudogig_dead"></info_portion>
+<info_portion id="bar_arena_pseudogig_spawn"><task>bar_pseudogig_task</task></info_portion>
+<info_portion id="bar_arena_seif_open"></info_portion>
+<info_portion id="bar_karlik_chebur_done"></info_portion>
+<info_portion id="bar_hunter_predatel"></info_portion>
+<info_portion id="bar_heli_start"></info_portion>
+<info_portion id="bar_virus_off"></info_portion>
+<info_portion id="bar_abdul_norm"></info_portion>
+
+<info_portion id="x18_barocam_phase1"></info_portion>
+<info_portion id="x18_barocam_phase2"></info_portion>
+<info_portion id="x18_barocam_phase3"></info_portion>
+<info_portion id="x18_doctors_barocamera_off"></info_portion>
+
+<info_portion id="garb_camerrer_info"><article>garb_camerrer_info</article></info_portion>
+<info_portion id="spawn_yan_camerer"><task>yan_camerer_task</task></info_portion>
+
+<info_portion id="dar_subj_burers_task"><task>dar_subj_burers_task</task></info_portion>
+<info_portion id="dar_fabrik_burers_alarm"></info_portion>
+<info_portion id="dar_fabrik_burerboss_dead"></info_portion>
+<info_portion id="dar_fabrik_burer1_dead"></info_portion>
+<info_portion id="dar_fabrik_burer2_dead"></info_portion>
+<info_portion id="dar_fabrik_burer3_dead"></info_portion>
+<info_portion id="dar_subj_burers_task_reward"><action>xr_effects.karma_up</action></info_portion>
+
+<info_portion id="garb_hangar_burer_hits_by_actor"></info_portion>
+
+<info_portion id="intoxication"></info_portion>
+
+<info_portion id="bar_karlik_docs_info1"><article>bar_karlik_docs_info_article1</article></info_portion>
+<info_portion id="bar_karlik_docs_info2"><article>bar_karlik_docs_info_article2</article></info_portion>
+
+<info_portion id="bar_abdul_to_alan_talk"><action>addon_dialogs.start_bar_abdul_rest_timer</action></info_portion>
+
+<info_portion id="bar_kotelnya_quest"><task>bar_kotelnya_quest</task></info_portion>
+
+<info_portion id="spawn_bar_alan"><action>addon_dialogs.remove_bar_minefield_board</action><action>addon_dialogs.remove_bar_karlik</action></info_portion>
+
+<info_portion id="spawn_bar_zomb_komendant"><action>addon_dialogs.spawn_bar_zomb_komendant</action></info_portion>
+<info_portion id="alan_about_lost_man"></info_portion>
+<info_portion id="bar_komendant_door_open"></info_portion>
+<info_portion id="bar_kotelnya_door_open"></info_portion>
+<info_portion id="bar_kotelnya_seif_open"></info_portion>
+<info_portion id="bar_koteln_ventilyator_charge1"></info_portion>
+<info_portion id="bar_koteln_ventilyator_charge2"></info_portion>
+
+<info_portion id="bar_reservuar_task"><task>bar_reservuar_task</task></info_portion>
+<info_portion id="bar_ventil1_open"></info_portion>
+<info_portion id="bar_ventil2_open"></info_portion>
+<info_portion id="bar_ventil3_open"></info_portion>
+<info_portion id="bar_tower_top_art_spawn"><action>addon_dialogs.bar_tower_top_art_spawn</action></info_portion>
+<info_portion id="af_pumice_gathered"></info_portion>
+
+<info_portion id="bar_abdul_rest_off"></info_portion>
+
+<info_portion id="abdul_goto_military"></info_portion>
+
+<info_portion id="ros_master_first_meet"></info_portion>
+<info_portion id="ros_master_dead"></info_portion>
+<info_portion id="ros_blaster_dead"></info_portion>
+<info_portion id="ros_zomb_resurrection"></info_portion>
+<info_portion id="ros_dead_hunter_info1"><article>ros_dead_hunter_info1</article><action>addon_dialogs.spawn_ros_hunter_diary2</action></info_portion>
+<info_portion id="ros_dead_hunter_info2"><article>ros_dead_hunter_info2</article><action>addon_dialogs.spawn_ros_hunter_diary3</action></info_portion>
+<info_portion id="ros_dead_hunter_info3"><article>ros_dead_hunter_info3</article><action>addon_dialogs.spawn_ros_hunter_diary4</action></info_portion>
+<info_portion id="ros_dead_hunter_info4"><article>ros_dead_hunter_info4</article><action>addon_dialogs.spawn_ros_hunter_diary5</action></info_portion>
+<info_portion id="ros_dead_hunter_info5"><article>ros_dead_hunter_info5</article></info_portion>
+
+<info_portion id="ros_international_read"></info_portion>
+<info_portion id="ros_hunter_first_talk"><action>addon_dialogs.mark_ros_deadhunter</action></info_portion>
+<info_portion id="ros_hunter_second_talk"></info_portion>
+<info_portion id="ros_hunter_third_talk"><action>addon_dialogs.spawn_ros_hunters_shron</action></info_portion>
+<info_portion id="ros_hunter_fourth_talk"></info_portion>
+<info_portion id="ros_serega_talk1"></info_portion>
+<info_portion id="ros_hunter2_diary1_info"><article>ros_hunter2_diary1_info</article><action>addon_dialogs.spawn_ros_hunter2diary2</action></info_portion>
+<info_portion id="ros_hunter2_diary2_info"><article>ros_hunter2_diary2_info</article></info_portion>
+<info_portion id="ros_tunnel_vetryak_off"></info_portion>
+<info_portion id="ros_house_diary1_info"><article>ros_house_diary1_info</article></info_portion>
+<info_portion id="spawn_ros_master"></info_portion>
+<info_portion id="lenin_bust_gathered"></info_portion>
+<info_portion id="lenin_bust_destroyed"></info_portion>
+<info_portion id="ros_house_keis_info"><article>ros_house_keis_info</article></info_portion>
+<info_portion id="ros_master_kill_task"><task>ros_master_kill_task</task></info_portion>
+<info_portion id="ros_master_note_info"><article>ros_master_note_info</article></info_portion>
+<info_portion id="ros_hunter_shron2_info"><task>ros_hunter_shron2_task</task><action>addon_dialogs.spawn_ros_hunter_shron2</action></info_portion>
+<info_portion id="ros_hunter_object_info"></info_portion>
+<info_portion id="ros_hunter_yan_box_info"><article>ros_hunter_yan_box_info</article><action>addon_dialogs.mark_ros_hunter_yan_box</action></info_portion>
+<info_portion id="ros_hunter_mayak_finded"></info_portion>
+<info_portion id="ros_tunnel_acess"></info_portion>
+<info_portion id="ros_suslik_info"></info_portion>
+
+<info_portion id="spawn_ros_desant"></info_portion>
+<info_portion id="ros_rescuer_talk1"></info_portion>
+<info_portion id="ros_hunter_goto_rescuer"></info_portion>
+<info_portion id="ros_hunter_behind_rescuer"></info_portion>
+<info_portion id="ros_hunter_behind_rescuer2"></info_portion>
+<info_portion id="ros_hunter_in_building"></info_portion>
+<info_portion id="saharov_flash_task"><task>saharov_flash_task</task><action>addon_dialogs.spawn_ros_stroyka_atack_mobs</action><action>xr_effects.spawn_ros_danger_anomaly</action></info_portion>
+<info_portion id="ros_stroyka_atack_mob1dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob2dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob3dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob4dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob5dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob6dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob7dead"></info_portion>
+<info_portion id="ros_stroyka_atack_mob8dead"></info_portion>
+<info_portion id="ros_mobs_atack"></info_portion>
+<info_portion id="ros_rescuers_atack"></info_portion>
+<info_portion id="ros_rescuers_robbery"><action>addon_dialogs.put_items_to_ros_nedostroyka_box</action><action>addon_dialogs.ros_rescuers_actor_getoff</action></info_portion>
+<info_portion id="ros_hunter_dead"></info_portion>
+<info_portion id="ros_old_items_info"></info_portion>
+<info_portion id="ros_old_spirit_secret"></info_portion>
+
+
+
+
+<info_portion id="predb_trader_dead"></info_portion>
+<info_portion id="predb_kontrabander1_dead"></info_portion>
+<info_portion id="predb_kontrabander2_dead"></info_portion>
+<info_portion id="predb_kontrabander3_dead"></info_portion>
+<info_portion id="predb_kontrabander4_dead"></info_portion>
+<info_portion id="predb_kontrabander5_dead"></info_portion>
+<info_portion id="predb_kontrabander6_dead"></info_portion>
+<info_portion id="predb_kontrabander7_dead"></info_portion>
+<info_portion id="predb_kontrabander8_dead"></info_portion>
+<info_portion id="predb_courier1_dead"></info_portion>
+<info_portion id="predb_courier2_dead"></info_portion>
+<info_portion id="predb_courier3_dead"></info_portion>
+<info_portion id="predb_kpp_soldier1_dead"></info_portion>
+<info_portion id="predb_kpp_soldier2_dead"></info_portion>
+<info_portion id="predb_kpp_soldier3_dead"></info_portion>
+<info_portion id="predb_kpp_soldier4_dead"></info_portion>
+<info_portion id="predb_kpp_soldier5_dead"></info_portion>
+<info_portion id="predb_kpp_soldier6_dead"></info_portion>
+<info_portion id="predb_kpp_soldier7_dead"></info_portion>
+
+<info_portion id="predb_courier_goto_hutor"><task>predb_courier_task</task></info_portion>
+<info_portion id="predb_kpp_fight_start"><action>addon_dialogs.spawn_predb_mobs</action></info_portion>
+<info_portion id="predb_kpp_soldiers_atacked"><action>xr_effects.predb_kpp_kontrab_make_invulnerable</action></info_portion>
+<info_portion id="predb_kpp_kontrab_atacked"><action>xr_effects.predb_kpp_sold_make_invulnerable</action><action>addon_dialogs.predb_quest_spawn</action></info_portion>
+
+<info_portion id="kpp_kontrab_goto_hutor"><action>addon_dialogs.mark_predb_hutor_zone</action><action>xr_effects.predb_kpp_heli_patrol_start</action></info_portion>
+<info_portion id="predb_kpp_heli_patrol_start"></info_portion>
+
+<info_portion id="predb_kpp_komander_task1"><task>predb_kpp_komander_task1</task></info_portion>
+<info_portion id="predb_lost_man_task"><task>predb_lost_man_task</task></info_portion>
+<info_portion id="predb_trader_first_talk"></info_portion>
+<info_portion id="predb_trader_second_talk"></info_portion>
+<info_portion id="predb_lost_man_task_done"><action>addon_dialogs.predb_capsula_dollhelp_timer_start</action></info_portion>
+<info_portion id="predb_cave_trap"><action>addon_dialogs.predb_cave_port1delete</action><action>addon_dialogs.predb_cave_capsula_spawn</action></info_portion>
+<info_portion id="predb_hermit_execute"></info_portion>
+<info_portion id="predb_hermit_live"></info_portion>
+<info_portion id="predb_hermit_dead"></info_portion>
+<info_portion id="predb_hermit_call"></info_portion>
+<info_portion id="predb_hermit_art1"></info_portion>
+<info_portion id="predb_hermit_art2"></info_portion>
+<info_portion id="predb_hermit_art3"></info_portion>
+<info_portion id="predb_cave_task_done"><task>predb_rad_man_task</task></info_portion>
+<info_portion id="hermit_pda_info"><article>hermit_pda_article</article><action>addon_dialogs.spawn_hermit_habar</action></info_portion>
+<info_portion id="kontrabander4_enemy"></info_portion>
+<info_portion id="predb_village_grass_info"><article>kontrab4_pda_article</article><action>addon_dialogs.mark_village_grass</action></info_portion>
+<info_portion id="predb_grass_done"></info_portion>
+
+<info_portion id="spawn_predb_hutor_freezer_mobs"></info_portion>
+<info_portion id="predb_village_snd_trap1"><task>predb_village_trap_task1</task></info_portion>
+<info_portion id="predb_village_trap"><task>predb_village_trap_task2</task><task>predb_village_trap_task3</task><action>addon_dialogs.del_predb_rogue_npc1</action></info_portion>
+<info_portion id="predb_village_anomaly"><task>predb_village_trap_task4</task><action>addon_dialogs.del_predb_rogue_npc2</action></info_portion>
+<info_portion id="predb_village_trap_punish"></info_portion>
+
+<info_portion id="predb_village_quest_mob_spawn"></info_portion>
+<info_portion id="predb_village_quest_mob1_dead"></info_portion>
+<info_portion id="predb_village_quest_mob2_dead"></info_portion>
+<info_portion id="predb_village_quest_mob3_dead"></info_portion>
+<info_portion id="predb_village_quest_mob4_dead"></info_portion>
+<info_portion id="predb_village_quest_mob5_dead"></info_portion>
+
+<info_portion id="predb_village_art_have"></info_portion>
+<info_portion id="predb_village_art_done"></info_portion>
+<info_portion id="predb_village_finditem"><task>predb_village_trap_task5</task><action>addon_dialogs.del_predb_rogue_npc3</action></info_portion>
+<info_portion id="predb_dead_friend_info"><article>predb_dead_friend_info_article</article><action>addon_dialogs.predb_dead_friend_info_action</action></info_portion>
+<info_portion id="predb_village_music_toy_off"></info_portion>
+<info_portion id="predb_village_rogue_finded"></info_portion>
+<info_portion id="predb_village_rogue_punish"></info_portion>
+<info_portion id="predb_village_rogue_free"><article>predb_village_suit_shron_info</article></info_portion>
+<info_portion id="predb_rogue_dead"></info_portion>
+<info_portion id="predb_village_freezer_open"></info_portion>
+<info_portion id="predb_stove_fired"></info_portion>
+
+<info_portion id="predb_soldier_junks_job"></info_portion>
+
+<info_portion id="predb_kontrab_wakeup1"></info_portion>
+<info_portion id="predb_kontrab_wakeup2"></info_portion>
+<info_portion id="predb_kontrab_habar_info"></info_portion>
+<info_portion id="kontrab5_story_tell"></info_portion>
+<info_portion id="predb_courier_heli_info"></info_portion>
+<info_portion id="predb_rpg_info"><task>predb_rpg_task</task></info_portion>
+
+<info_portion id="predb_firest_maroud_mob1_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob2_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob3_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob4_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob5_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob6_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob7_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob8_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob9_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob10_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob11_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob12_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob13_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob14_dead"></info_portion>
+<info_portion id="predb_firest_maroud_mob15_dead"></info_portion>
+
+<info_portion id="predb_base_door_unlocked"></info_portion>
+
+<info_portion id="predb_firest_docks_info"><article>predb_firest_docks_info_article</article><task>predb_firest_key_task</task></info_portion>
+<info_portion id="predb_firest_docks2_info"><article>predb_firest_docks2_info_article</article></info_portion>
+<info_portion id="predb_marouder_search"><task>predb_marouders_task</task></info_portion>
+<info_portion id="predb_firest_undegr_door_finded"></info_portion>
+<info_portion id="predb_marouders_to_door"><action>xr_effects.predb_marouders_unmake_invulnerable</action></info_portion>
+<info_portion id="predb_maroder_lager"><task>predb_maroder_lager_task</task></info_portion>
+<info_portion id="predb_maroder_lager_done"></info_portion>
+<info_portion id="predb_marouder_door_open"></info_portion>
+<info_portion id="predb_arsenl_door"></info_portion>
+<info_portion id="predb_firest_stairs"></info_portion>
+<info_portion id="predb_firest_moneta"></info_portion>
+
+
+<info_portion id="predb_heli_dead"></info_portion>
+<info_portion id="predb_firest_vishka_tros_use"></info_portion>
+<info_portion id="predb_firest_radio_peleng"></info_portion>
+<info_portion id="predb_firest_weap_seif_open"></info_portion>
+<info_portion id="predb_firest_komander_zapiska_info"><article>predb_firest_komander</article></info_portion>
+<info_portion id="predb_marouders_to_base"></info_portion>
+<info_portion id="predb_marouder1_dead"></info_portion>
+<info_portion id="predb_marouder2_dead"></info_portion>
+<info_portion id="predb_marouder3_dead"></info_portion>
+<info_portion id="predb_maroresr_base"></info_portion>
+<info_portion id="predb_maroresr_base2"></info_portion>
+
+<info_portion id="predb_base_btn_switch"><task>predb_chimera_task</task></info_portion>
+<info_portion id="predb_base_gener_on"></info_portion>
+<info_portion id="predb_base_comp_acess"></info_portion>
+<info_portion id="predb_base_kazarm_open"></info_portion>
+<info_portion id="predb_base_turret"></info_portion>
+<info_portion id="predb_base_chimera_spawn"></info_portion>
+<info_portion id="predb_base_chimera_dead"></info_portion>
+<info_portion id="predb_base_docks1_info"><article>predb_base_docks1_info</article></info_portion>
+<info_portion id="predb_base_docks2_info"><article>predb_base_docks2_info</article></info_portion>
+<info_portion id="predb_base_docks3_info"><article>predb_base_docks3_info</article></info_portion>
+<info_portion id="predb_base_docks4_info"><article>predb_base_docks4_info</article></info_portion>
+<info_portion id="predb_marod_base_end"></info_portion>
+<info_portion id="predb_marod_base2"></info_portion>
+
+<info_portion id="predb_courier_go"></info_portion>
+<info_portion id="predb_courier_on_place"></info_portion>
+<info_portion id="predb_courier_goodbye"><action>addon_dialogs.predb_kontrabs_vodka_spawn</action></info_portion>
+<info_portion id="predb_kontrabs_end"></info_portion>
+<info_portion id="predb_kontrabs_bad"></info_portion>
+
+<info_portion id="hutor_weel_ghost"></info_portion>
+<info_portion id="predb_king_info"></info_portion>
+<info_portion id="predb_king_info2"></info_portion>
+<info_portion id="predb_king_info3"></info_portion>
+<info_portion id="predb_king_zapiska_info"></info_portion>
+<info_portion id="predb_king_dead"></info_portion>
+<info_portion id="predb_recipes"><article>predb_recipes_article</article></info_portion>
+
+<info_portion id="predb_liqour_task"><task>predb_liqour_task</task></info_portion>
+<info_portion id="predb_kontrab_liqour"><article>predb_kontrab_liqour_article</article></info_portion>
+<info_portion id="predb_catwoman_perv"></info_portion>
+
+<info_portion id="predb_marod1_pda_info"><article>predb_marod1_pda_info</article></info_portion>
+
+<info_portion id="predb_mega_boar_task"><task>predb_mega_boar_task</task></info_portion>
+<info_portion id="predb_mega_boar_spawn"></info_portion>
+<info_portion id="predb_mega_boar_dead"></info_portion>
+<info_portion id="predb_mega_boar_lost"></info_portion>
+<info_portion id="predb_mega_boar_reward"></info_portion>
+
+<info_portion id="predb_unkn_stalker_info"><article>predb_unkn_stalker_info</article></info_portion>
+
+<info_portion id="kontrab_bloknot_info"><article>kontrab_bloknot_info</article></info_portion>
+<info_portion id="predb_serg_location"></info_portion>
+<info_portion id="predb_firest_search"><task>predb_firest_search_task</task></info_portion>
+
+<info_portion id="predb_body1_info"><article>predb_body1_info</article><action>addon_dialogs.predb_body1info_tip</action></info_portion>
+
+
+<info_portion id="predb_army_docks_1_info"><article>predb_army_docks_1_info</article><action>addon_dialogs.mark_firest_radio</action><action>addon_dialogs.mark_tower_teleport</action></info_portion>
+<info_portion id="predb_cave_search"><task>predb_cave_search_task</task><action>addon_dialogs.spawn_predb_ovrag_capsula</action></info_portion>
+<info_portion id="zaurus_info"><article>zaurus_info</article></info_portion>
+<info_portion id="predb_btr_acess"></info_portion>
+<info_portion id="predb_btr_info"></info_portion>
+
+<info_portion id="predb_kontrab4"></info_portion>
+
+<info_portion id="vill_sold_spwn"></info_portion>
+<info_portion id="predb_village_sold_dead"></info_portion>
+
+<info_portion id="predb_fabrik_search"><task>predb_fabrik_search_task</task></info_portion>
+<info_portion id="kontrab_lager_info"></info_portion>
+<info_portion id="kaban_pda_info"><article>kaban_pda_info</article></info_portion>
+<info_portion id="courier_spwn"><task>kill_courier_task</task><action>addon_dialogs.spawn_hutor_courier</action></info_portion>
+<info_portion id="solds_goodbye"></info_portion>
+<info_portion id="predb_helicr_info"></info_portion>
+<info_portion id="predb_vilg_sold_end"></info_portion>
+<info_portion id="predb_vilg_sold_rwrd"></info_portion>
+
+<info_portion id="predb_radio_secret"></info_portion>
+
+
+<info_portion id="faint_body1_use_morphine"></info_portion>
+<info_portion id="faint_body1_finish"></info_portion>
+<info_portion id="faint_npc1_dead"></info_portion>
+<info_portion id="faint_man1_goodbye"></info_portion>
+<info_portion id="faint_body2_use_morphine"></info_portion>
+<info_portion id="faint_body2_finish"></info_portion>
+<info_portion id="faint_npc2_dead"></info_portion>
+<info_portion id="faint_man2_companion"></info_portion>
+
+
+<info_portion id="faint_man1_companion"><disable>faint_man1_rest</disable></info_portion>
+<info_portion id="faint_man1_rest"><action>addon_dialogs.faint_man1rest_action</action></info_portion>
+<info_portion id="faint_man1_pda_info"><article>faint_man1_pda_info</article></info_portion>
+<info_portion id="faint_man1_pda_info_article"><article>faint_man1_pda_info</article></info_portion>
+<info_portion id="deadmask_task1"><task>deadmask_task1</task></info_portion>
+<info_portion id="deadmask_used"><action>addon_dialogs.start_deadmask_timer</action></info_portion>
+<info_portion id="deadmask_teleport"></info_portion>
+<info_portion id="deadmask_research"><task>deadmask_task2</task></info_portion>
+<info_portion id="deadmask_escape_info"></info_portion>
+<info_portion id="deadmask_garb_info"></info_portion>
+<info_portion id="deadmask_agro_info"></info_portion>
+<info_portion id="deadmask_predb_info"></info_portion>
+<info_portion id="deadmask_diary1_info"><article>deadmask_diary1_info</article></info_portion>
+<info_portion id="deadmask_diary2_info"><article>deadmask_diary2_info</article></info_portion>
+<info_portion id="deadmask_diary3_info"><article>deadmask_diary3_info</article></info_portion>
+<info_portion id="deadmask_diary4_info"><article>deadmask_diary4_info</article></info_portion>
+<info_portion id="deadmask_lets_go"><task>deadmask_task3</task></info_portion>
+<info_portion id="deadmask_target"></info_portion>
+
+<info_portion id="yan_bunker_sold_acess"></info_portion>
+<info_portion id="yan_sold_comander_dead"></info_portion>
+<info_portion id="yan_sold1_dead"></info_portion>
+<info_portion id="yan_sold2_dead"></info_portion>
+<info_portion id="yan_sold3_dead"></info_portion>
+<info_portion id="yan_sold4_dead"></info_portion>
+<info_portion id="yan_sold5_dead"></info_portion>
+<info_portion id="yan_sold6_dead"></info_portion>
+
+<info_portion id="yan_burer_king_dead"></info_portion>
+<info_portion id="yan_burer_adviser_dead"></info_portion>
+<info_portion id="yan_burer_sold1_dead"></info_portion>
+<info_portion id="yan_burer_sold2_dead"></info_portion>
+<info_portion id="yan_burer_sold3_dead"></info_portion>
+<info_portion id="yan_burer_sold4_dead"></info_portion>
+<info_portion id="yan_burer_sold5_dead"></info_portion>
+<info_portion id="yan_burer_sold6_dead"></info_portion>
+<info_portion id="yan_burer_sold7_dead"></info_portion>
+<info_portion id="yan_burer_sold8_dead"></info_portion>
+<info_portion id="yan_burer_sold9_dead"></info_portion>
+<info_portion id="yan_burer_sold10_dead"></info_portion>
+<info_portion id="yan_burer_sold11_dead"></info_portion>
+<info_portion id="yan_burer_sold12_dead"></info_portion>
+
+<info_portion id="yan_road_zone_mobs_atack"></info_portion>
+<info_portion id="yan_brain_turn_on"></info_portion>
+<info_portion id="yan_sold_comandr_first_talk"></info_portion>
+<info_portion id="yan_bunker_atack_start"></info_portion>
+<info_portion id="yan_sold_btr_dead"></info_portion>
+<info_portion id="yan_bunker_acess"></info_portion>
+
+<info_portion id="yan_bunker_sold_secret_talk"></info_portion>
+
+<info_portion id="yan_burer_scout_spawn"><action>addon_dialogs.unmark_yan_sold7body</action></info_portion>
+<info_portion id="yan_burer_scout_shron_spawn"></info_portion>
+<info_portion id="yan_burer_scout_lost"></info_portion>
+<info_portion id="yan_bunker_scout_hunt"><task>yan_bunker_scout_hunt_task</task></info_portion>
+
+<info_portion id="yan_zavod_burers_see_actor"></info_portion>
+<info_portion id="yan_zavod_burers_search"></info_portion>
+
+<info_portion id="yan_zavod_task"><task>yan_zavod_task</task></info_portion>
+
+<info_portion id="yan_bunker_mob1dead"></info_portion>
+<info_portion id="yan_bunker_mob2dead"></info_portion>
+<info_portion id="yan_bunker_mob3dead"></info_portion>
+<info_portion id="yan_bunker_mob4dead"></info_portion>
+<info_portion id="yan_bunker_mob5dead"></info_portion>
+<info_portion id="yan_bunker_mob6dead"></info_portion>
+<info_portion id="yan_bunker_mob7dead"></info_portion>
+<info_portion id="yan_bunker_mob8dead"></info_portion>
+<info_portion id="yan_bunker_mob9dead"></info_portion>
+<info_portion id="yan_bunker_mob10dead"></info_portion>
+
+<info_portion id="yan_sold_raciya_info"><action>addon_dialogs.spawn_yan_sergant_shron</action><action>addon_dialogs.release_burer_scout</action></info_portion>
+<info_portion id="yan_sold6_on_position"></info_portion>
+
+<info_portion id="yan_zavod_kill_burers"><task>yan_zavod_kill_burers</task></info_portion>
+<info_portion id="actor_in_yan_zavod_trap"></info_portion>
+
+<info_portion id="burer_king_dialog1"></info_portion>
+<info_portion id="yan_burers_actor_punish"></info_portion>
+<info_portion id="yan_burers_actor_punish2"></info_portion>
+<info_portion id="yan_goto_lab"></info_portion>
+
+<info_portion id="yan_saharov_dead"></info_portion>
+<info_portion id="yan_saharov_escape"></info_portion>
+<info_portion id="yan_saharov_companion"><action>addon_dialogs.saharov_invulnerable</action></info_portion>
+<info_portion id="yan_saharov_on_base"></info_portion>
+<info_portion id="yan_sold_comander_reward"></info_portion>
+<info_portion id="yan_sold_comander_arsenal_acess"></info_portion>
+<info_portion id="yan_saharov_burers_info"></info_portion>
+<info_portion id="yan_our_items_back"></info_portion>
+<info_portion id="saharov_medbox_ready"></info_portion>
+
+<info_portion id="yan_swamp_task"><task>yan_swamp_task</task></info_portion>
+<info_portion id="yan_vasiliev_anomaly_talk"></info_portion>
+<info_portion id="yan_anomaly_charge"></info_portion>
+<info_portion id="yan_anomaly_reward"></info_portion>
+<info_portion id="yan_sold5_details"></info_portion>
+<info_portion id="yan_lost_hunter_task"><task>yan_lost_hunter_task</task><action>addon_dialogs.spawn_yan_lost_hunter_pda</action></info_portion>
+<info_portion id="yan_lost_hunter_pda_info"><article>yan_lost_hunter_pda_info</article></info_portion>
+<info_portion id="yan_lost_camp_bodies"></info_portion>
+<info_portion id="yan_faint_on_base"></info_portion>
+<info_portion id="yan_hunter_habar_info"></info_portion>
+<info_portion id="actor_yan_hunter_habar_trap"></info_portion>
+<info_portion id="yan_comandr_losthunter_info"></info_portion>
+<info_portion id="yan_losthunter_info"></info_portion>
+<info_portion id="yan_losthunter_dead"></info_portion>
+<info_portion id="yan_losthunter_excuse"></info_portion>
+<info_portion id="yan_losthunter_dog1_dead"></info_portion>
+<info_portion id="yan_losthunter_dog2_dead"></info_portion>
+<info_portion id="yan_losthunter_dog3_dead"></info_portion>
+<info_portion id="yan_lost_hunter_task_reward"></info_portion>
+<info_portion id="yan_lost_cargo_task"><task>yan_lost_cargo_task</task><action>addon_dialogs.spawn_yan_lost_cargo</action></info_portion>
+<info_portion id="yan_lost_cargo_task_reward"></info_portion>
+
+<info_portion id="yan_camerer_yes"></info_portion>
+<info_portion id="yan_camerer_no"><action>addon_dialogs.yan_camerer_no</action></info_portion>
+<info_portion id="yan_camerer_end"></info_portion>
+<info_portion id="yan_camerer_reward"></info_portion>
+
+
+<info_portion id="x16_diary1_info"><article>x16_diary1_info</article></info_portion>
+<info_portion id="x16_diary2_info"><article>x16_diary2_info</article></info_portion>
+<info_portion id="x16_diary3_info"><article>x16_diary3_info</article></info_portion>
+<info_portion id="x16_diary4_info"><article>x16_diary4_info</article></info_portion>
+<info_portion id="x16_diary5_info"><article>x16_diary5_info</article></info_portion>
+
+<info_portion id="x16_burers_hile"></info_portion>
+<info_portion id="x16_adviser_walk0"><action>addon_dialogs.teleport_x16burer_adviser</action></info_portion>
+<info_portion id="x16_adviser_walk1"></info_portion>
+<info_portion id="x16_adviser_walk2"><action>addon_dialogs.x16secret_documents_doll_tip</action></info_portion>
+<info_portion id="x16_find_brain_docks1"><task>x16_docks1_task</task></info_portion>
+<info_portion id="x16_find_brain_docks2"><task>x16_docks2_task</task></info_portion>
+<info_portion id="x16_brain_temperature"><task>x16_brain_temperature_task</task></info_portion>
+<info_portion id="x16_brain_talk1"></info_portion>
+<info_portion id="x16_brain_talk2"></info_portion>
+<info_portion id="x16_brain_meet"></info_portion>
+<info_portion id="x16_power_on"><task>x16_power_on</task></info_portion>
+<info_portion id="x16_power1"></info_portion>
+<info_portion id="x16_power2"></info_portion>
+<info_portion id="x16_power3"></info_portion>
+<info_portion id="x16_talk_to_brain_again"><task>x16_ask_brain_task</task></info_portion>
+<info_portion id="x16_rubilnik_vabank"></info_portion>
+<info_portion id="x16_brain_kill"></info_portion>
+<info_portion id="x16_brain_saharov_hit"></info_portion>
+<info_portion id="x16_burers_visit"><action>addon_dialogs.release_x16burer_adviser1</action></info_portion>
+<info_portion id="x16_burers_atack"><action>addon_dialogs.release_x16brain</action></info_portion>
+<info_portion id="x16_saharov_in_room"><action>addon_dialogs.spawn_x16burers_solds</action></info_portion>
+<info_portion id="x16_saharov_door_closed"></info_portion>
+<info_portion id="x16_fuel_detonate"></info_portion>
+<info_portion id="x16_fuel_blow"></info_portion>
+<info_portion id="x16_exit_done"></info_portion>
+
+
+
+
+<info_portion id="mil_abdul_spawn"></info_portion>
+<info_portion id="mil_separ_alarm"></info_portion>
+<info_portion id="mil_abdul_goto_gravianomaly"></info_portion>
+<info_portion id="mil_abdul_behind_gravit"></info_portion>
+<info_portion id="mil_abdul_goto_barier"></info_portion>
+<info_portion id="mil_abdul_on_barier"></info_portion>
+<info_portion id="mil_streak_task"><task>mil_streak_task</task></info_portion>
+<info_portion id="mil_freak_dogs_spawn"></info_portion>
+<info_portion id="mil_freak_alarm"></info_portion>
+<info_portion id="mil_freak_dog1_dead"></info_portion>
+<info_portion id="mil_freak_dog2_dead"></info_portion>
+<info_portion id="mil_freak_panik1"></info_portion>
+<info_portion id="mil_kazarma2_portzones"></info_portion>
+<info_portion id="mil_kazarm_portzones_off"></info_portion>
+<info_portion id="mil_kazarma1_polter_dead"></info_portion>
+<info_portion id="mil_military_docks1_info"><article>mil_military_docks1_info_article</article><action>addon_dialogs.spawn_mil_freak_key2shron</action></info_portion>
+<info_portion id="mil_military_docks2_info"><article>mil_military_docks2_info_article</article><action>addon_dialogs.spawn_mil_freak3shron</action></info_portion>
+<info_portion id="mil_freak_water_drink"><action>addon_dialogs.spawn_mil_village_bloodsuckers</action></info_portion>
+<info_portion id="mil_ded_house_find"><task>mil_ded_house_find</task></info_portion>
+<info_portion id="mil_dedok_hello"></info_portion>
+
+<info_portion id="mil_find_icon_task1"><task>mil_find_icon_task1</task></info_portion>
+<info_portion id="mil_find_icon_task2"><task>mil_find_icon_task2</task></info_portion>
+<info_portion id="mil_village_shkaf_destroy"></info_portion>
+<info_portion id="mil_find_icon_task3"><task>mil_find_icon_task3</task></info_portion>
+<info_portion id="mil_village_panteley_house_door_use"></info_portion>
+<info_portion id="mil_village_docks_info"><article>mil_village_docks_info_article</article></info_portion>
+<info_portion id="mil_find_icon_task3_done"></info_portion>
+<info_portion id="mil_find_icon_task4"><task>mil_find_icon_task4</task><action>addon_dialogs.spawn_mil_village_tabak_box</action></info_portion>
+<info_portion id="mil_find_icon_task4_done"></info_portion>
+<info_portion id="mil_village_antenna_task"><task>mil_village_antenna_task</task><action>addon_dialogs.spawn_mil_village_tower_tesla</action></info_portion>
+<info_portion id="mil_find_icon_task5"><task>mil_find_icon_task5</task></info_portion>
+<info_portion id="mil_icon_finded"><action>addon_dialogs.spawn_mil_village_bones</action></info_portion>
+<info_portion id="mil_pribor_on"></info_portion>
+<info_portion id="mil_dedok_goodbye"><action>addon_dialogs.mil_headhunters_respawn</action><action>addon_dialogs.mil_actor_undream</action></info_portion>
+<info_portion id="mil_antenne_activate_task1"><task>mil_antenne_activate_task1</task></info_portion>
+<info_portion id="mil_antenne_activate_task2"><task>mil_antenne_activate_task2</task></info_portion>
+<info_portion id="mil_antenna_on"><action>addon_dialogs.mil_teslas_release</action></info_portion>
+<info_portion id="mil_abdul_goto_radar"></info_portion>
+<info_portion id="mil_separ_acess"><task>mil_separ_task1</task></info_portion>
+<info_portion id="mil_vsu_acess"><task>mil_vsu_task1</task></info_portion>
+<info_portion id="mil_freak_pasport_task"><task>mil_freak_pasport_task</task></info_portion>
+<info_portion id="mil_freak_dead"></info_portion>
+<info_portion id="mil_freak_pasport_zakaz"></info_portion>
+<info_portion id="mil_freak_pasport_ready"></info_portion>
+<info_portion id="mil_freak_pasport_in"></info_portion>
+<info_portion id="mil_freak_pasport_done"></info_portion>
+<info_portion id="mil_freak_enemy"></info_portion>
+
+
+<info_portion id="mil_grocery_in"></info_portion>
+<info_portion id="mil_grocery_task"></info_portion>
+<info_portion id="mil_komp"></info_portion>
+
+<info_portion id="mil_aviators_spwn"></info_portion>
+
+<info_portion id="separ_war"><task>separ_war_task</task></info_portion>
+<info_portion id="separ_peace"></info_portion>
+<info_portion id="separ_if_fire"></info_portion>
+
+<info_portion id="mil_hntr_spawn"></info_portion>
+<info_portion id="mil_hntr_dog1"></info_portion>
+<info_portion id="mil_hntr_dog2"></info_portion>
+<info_portion id="mil_hntr_dog3"></info_portion>
+<info_portion id="mil_hunter_dead"></info_portion>
+<info_portion id="mil_aviatrs_fail"></info_portion>
+
+<info_portion id="mil_aviators_task"><task>mil_aviators_task</task></info_portion>
+<info_portion id="mil_swamper_info"><article>mil_swamper_info</article></info_portion>
+<info_portion id="mil_aviators_rwrd"></info_portion>
+<info_portion id="mil_fuel_task"><task>mil_fuel_task</task></info_portion>
+<info_portion id="mil_aviators_rwrd2"></info_portion>
+<info_portion id="mil_hntr_vagon_acess"></info_portion>
+<info_portion id="mil_grav_off"><action>addon_dialogs.mil_komandr_body_port</action><action>addon_dialogs.mil_hntr_grav_off_tip</action></info_portion>
+<info_portion id="mil_separ_explor"><task>separ_explor_task</task></info_portion>
+<info_portion id="mil_vsu_fail"></info_portion>
+<info_portion id="mil_vsu_fail2"></info_portion>
+<info_portion id="mil_vsu_shans"></info_portion>
+<info_portion id="mil_vsu_medics"></info_portion>
+<info_portion id="mil_vsu_end"></info_portion>
+<info_portion id="mil_separ_end"></info_portion>
+<info_portion id="mil_separ_vsu_rwrd"></info_portion>
+
+<info_portion id="mil_vsu_commander_dead"></info_portion>
+<info_portion id="mil_vsu_sold1_dead"></info_portion>
+<info_portion id="mil_vsu_sold2_dead"></info_portion>
+<info_portion id="mil_vsu_sold3_dead"></info_portion>
+<info_portion id="mil_vsu_sold4_dead"></info_portion>
+<info_portion id="mil_vsu_sold5_dead"></info_portion>
+<info_portion id="mil_vsu_sold6_dead"></info_portion>
+
+<info_portion id="mil_vsu_war"><task>vsu_war_task</task></info_portion>
+
+<info_portion id="mil_separ_commander_dead"></info_portion>
+<info_portion id="mil_separ1_dead"></info_portion>
+<info_portion id="mil_separ2_dead"></info_portion>
+<info_portion id="mil_separ3_dead"></info_portion>
+<info_portion id="mil_separ4_dead"></info_portion>
+<info_portion id="mil_separ5_dead"></info_portion>
+
+
+
+
+<info_portion id="sanya_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="malandrinus_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="skidan_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="hunter1_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="hunter2_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="hunter3_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="redrik_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="hunter4_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="bar_scientist_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="hunter6_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="predb_trader_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="kontrabander3_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="kontrabander4_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="kontrabander5_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="kpp_soldier5_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="kpp_soldier6_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="marouder1_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="hunter7_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="mil_freak_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="saharov_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="semenov_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+<info_portion id="yan_sold_comandr_art_cheat"><disable>arts_powerup_neutral</disable><action>addon_dialogs.art_cheat_treasure_tip</action></info_portion>
+
+
+<info_portion id="rad_abdul_spawn"></info_portion>
+<info_portion id="rad_secret_talk1"></info_portion>
+<info_portion id="rad_abdul_goto_forest"></info_portion>
+<info_portion id="rad_ambush_agent1_dead"></info_portion>
+<info_portion id="rad_ambush_agent2_dead"></info_portion>
+<info_portion id="rad_ambush_agent3_dead"></info_portion>
+<info_portion id="rad_ambush_agent4_dead"></info_portion>
+<info_portion id="rad_abdul_rest"><task>rad_fenix_task</task><action>addon_dialogs.rad_mobs_spawn</action></info_portion>
+<info_portion id="rad_fenix_dead"><action>addon_dialogs.spawn_rad_abdul_zapiska</action></info_portion>
+<info_portion id="rad_abdul_lost"><task>rad_abdul_lost_task</task><action>addon_dialogs.rad_abdul_lost_think</action></info_portion>
+<info_portion id="rad_fenix_teleport_think"><action>xr_effects.rad_fenix_teleport_think1</action></info_portion>
+<info_portion id="rad_fenix_headshot"></info_portion>
+<info_portion id="rad_fenix_suicide"></info_portion>
+<info_portion id="rad_secret_code"></info_portion>
+<info_portion id="rad_agent1_dead"></info_portion>
+<info_portion id="rad_agent2_dead"></info_portion>
+<info_portion id="rad_agent3_dead"></info_portion>
+<info_portion id="rad_agent4_dead"></info_portion>
+<info_portion id="rad_agent5_dead"></info_portion>
+<info_portion id="rad_lost_pda1_info"><article>rad_lost_pda1_info_article</article><action>addon_dialogs.rad_lost_info_dollhelp_tip</action></info_portion>
+<info_portion id="rad_lost_pda2_info"><article>rad_lost_pda2_info_article</article></info_portion>
+<info_portion id="rad_lost_pda3_info"><article>rad_lost_pda3_info_article</article></info_portion>
+<info_portion id="rad_lost_pda4_info"><article>rad_lost_pda4_info_article</article></info_portion>
+<info_portion id="rad_headhunters_actor_alarm"><action>addon_dialogs.rad_headhunters_actor_alarm</action></info_portion>
+<info_portion id="rad_agent_task1"><task>rad_agent_task1</task></info_portion>
+<info_portion id="rad_agent_task2"><task>rad_agent_task2</task></info_portion>
+<info_portion id="rad_agent_task3"><task>rad_agent_task3</task></info_portion>
+<info_portion id="rad_base_chimera_dead"></info_portion>
+<info_portion id="rad_trader_bunker_acess"></info_portion>
+<info_portion id="rad_tunnel_door_check"></info_portion>
+<info_portion id="rad_agent_task3_done"></info_portion>
+
+<info_portion id="rad_abdul_free"></info_portion>
+<info_portion id="rad_antenna_on"></info_portion>
+<info_portion id="rad_abdul_goto_pri"></info_portion>
+<info_portion id="rad_abdul_delete"></info_portion>
+
+<info_portion id="rad_dead_agent4_info"><action>addon_dialogs.spawn_body_habar40</action></info_portion>
+<info_portion id="rad_dead_agent4_info_article"><article>rad_dead_agent4_info</article></info_portion>
+
+<info_portion id="rad_lost_pda_mob1_spawn"></info_portion>
+<info_portion id="rad_lost_pda_mob2_spawn"></info_portion>
+<info_portion id="rad_lost_pda_mob3_spawn"></info_portion>
+
+
+<info_portion id="x10_button_switch"><action>addon_dialogs.delete_x10door_nopass_zone</action></info_portion>
+<info_portion id="x10_agent1_dead"></info_portion>
+<info_portion id="x10_agent2_dead"></info_portion>
+<info_portion id="x10_agent3_dead"></info_portion>
+<info_portion id="x10_agent4_dead"></info_portion>
+<info_portion id="x10_agent5_dead"></info_portion>
+<info_portion id="x10_agent6_dead"></info_portion>
+<info_portion id="x10_agent7_dead"></info_portion>
+<info_portion id="x10_agent8_dead"></info_portion>
+<info_portion id="x10_agent9_dead"></info_portion>
+<info_portion id="x10_agent10_dead"></info_portion>
+<info_portion id="x10_agent11_dead"></info_portion>
+<info_portion id="x10_agent12_dead"></info_portion>
+<info_portion id="x10_abdul_punish"></info_portion>
+<info_portion id="x10_abdul_button_info"></info_portion>
+<info_portion id="x10_abdul_dead"></info_portion>
+<info_portion id="x10_agent4_info"><article>x10_agent4_info_article</article></info_portion>
+<info_portion id="x10_codedoor1_unlocked"></info_portion>
+<info_portion id="x10_codedoor2_unlocked"></info_portion>
+<info_portion id="x10_codedoor3_unlocked"></info_portion>
+
+
+
+<info_portion id="pri_abdul_fail"></info_portion>
+<info_portion id="pri_abdul_goto_sniper"></info_portion>
+<info_portion id="pri_abdul_behind_sniper"></info_portion>
+<info_portion id="pri_abdul_last_talk1"><action>addon_dialogs.spawn_pri_abdul_sniper</action></info_portion>
+<info_portion id="pri_abdul_last_talk2"><task>pri_find_base_task</task></info_portion>
+<info_portion id="pri_abdul_sniper_dead"></info_portion>
+<info_portion id="pri_abdul_dead"></info_portion>
+<info_portion id="pri_detsad_car_dokuments_info"><article>pri_detsad_car_dokuments_info</article></info_portion>
+<info_portion id="pri_detsad_medroom_docks_info"><article>pri_detsad_medroom_docks_info</article></info_portion>
+<info_portion id="pri_brownie1_spawn"></info_portion>
+<info_portion id="pri_brownie2_spawn"></info_portion>
+<info_portion id="pri_brownie3_spawn"></info_portion>
+<info_portion id="pri_brownie1_dead"></info_portion>
+<info_portion id="pri_brownie2_dead"></info_portion>
+<info_portion id="pri_brownie3_dead"><action>addon_dialogs.delete_pri_detsad_teleport</action></info_portion>
+<info_portion id="pri_detsad_secret_room3_info"></info_portion>
+<info_portion id="pri_detsad_director_docks_info"><article>pri_detsad_director_docks_info</article></info_portion>
+<info_portion id="pri_detsad_scelet1_zapiska_info"><article>pri_detsad_scelet1_zapiska_info</article></info_portion>
+<info_portion id="pri_avtostation_task"><task>pri_avtostation_task</task></info_portion>
+<info_portion id="pri_avtostation_mob_spawn"></info_portion>
+<info_portion id="pri_avtostation_mob_dead"></info_portion>
+<info_portion id="pri_avtostaion_mob_delete"></info_portion>
+<info_portion id="pri_avtost_mob_fight"></info_portion>
+
+<info_portion id="pri_agents_meet_task"><task>pri_agents_meet_task</task><article>pri_avtostation_zapiska_info</article><action>addon_dialogs.pri_agents_meet_task_think</action></info_portion>
+<info_portion id="pri_agents_lider_spawn"></info_portion>
+<info_portion id="pri_agent_lider_dead"></info_portion>
+<info_portion id="pri_agent1_dead"></info_portion>
+<info_portion id="pri_agent2_dead"></info_portion>
+<info_portion id="pri_agent3_dead"></info_portion>
+<info_portion id="pri_agent4_dead"></info_portion>
+<info_portion id="pri_agent5_dead"></info_portion>
+<info_portion id="pri_agent6_dead"></info_portion>
+<info_portion id="pri_agent7_dead"></info_portion>
+<info_portion id="pri_agent8_dead"></info_portion>
+<info_portion id="pri_agent9_dead"></info_portion>
+<info_portion id="pri_agent10_dead"></info_portion>
+<info_portion id="pri_agent_lider_hit_by_actor"></info_portion>
+<info_portion id="pri_agents_accept"></info_portion>
+<info_portion id="pri_hall_agents_spawn"></info_portion>
+<info_portion id="pri_agent_lider_speech_end"></info_portion>
+<info_portion id="actor_agents_influence"></info_portion>
+<info_portion id="actor_teleport_to_pri_hotel_roofzone"></info_portion>
+<info_portion id="actor_mind_fight"></info_portion>
+<info_portion id="pri_rooftop_ghost1_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost2_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost3_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost4_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost5_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost6_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost7_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost8_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost9_dead"></info_portion>
+<info_portion id="pri_rooftop_ghost10_dead"></info_portion>
+<info_portion id="pri_rooftop_ghosts2wave_spawn"></info_portion>
+<info_portion id="pri_rooftop_ghosts3wave_spawn"></info_portion>
+<info_portion id="pri_rooftop_battle_end"></info_portion>
+<info_portion id="pri_actors_mind_dead"></info_portion>
+
+<info_portion id="pri_heli_dead"></info_portion>
+<info_portion id="pri_timecapsula_zone1_info"></info_portion>
+<info_portion id="pri_timecapsula_zone2_info"></info_portion>
+<info_portion id="pri_timecapsula_zone3_info"></info_portion>
+<info_portion id="pri_timecapsula_zone4_info"><action>xr_effects.spawn_pri_timecapsula</action></info_portion>
+<info_portion id="pri_agent_lider_last_info"><task>pri_stadion_task</task><article>pri_agent_lider_last_info_article</article></info_portion>
+<info_portion id="pri_stadion_agent_info"><action>addon_dialogs.pri_stadion_agent_info_tip</action></info_portion>
+<info_portion id="pri_abdul_shron_task"><task>pri_abdul_shron_task</task></info_portion>
+
+<info_portion id="pri_phone_task"><task>pri_phone_task</task></info_portion>
+<info_portion id="pri_phone_off"></info_portion>
+<info_portion id="pri_anomal_ball_off"></info_portion>
+<info_portion id="pri_monument_spawn"><action>addon_dialogs.pri_monument_spawn</action></info_portion>
+<info_portion id="pri_child_finded"></info_portion>
+
+<info_portion id="aes_body1_info"><article>aes_body1info</article><action>addon_dialogs.aes_door_code1</action></info_portion>
+<info_portion id="aes_body2_info"><action>addon_dialogs.aes_door_code2</action></info_portion>
+<info_portion id="aes_body3_info"><action>addon_dialogs.aes_door_code3</action></info_portion>
+<info_portion id="aes_body4_info"><action>addon_dialogs.aes_door_code4</action></info_portion>
+<info_portion id="aes_tube_blowout"></info_portion>
+<info_portion id="aes_radstorm"></info_portion>
+<info_portion id="aes_last_agent_dead"></info_portion>
+<info_portion id="spawn_aes_guard"></info_portion>
+<info_portion id="aes_agents_task"><task>aes_agents_task</task></info_portion>
+<info_portion id="aes_altar_off"></info_portion>
+<info_portion id="aes_last_agent_meet"></info_portion>
+<info_portion id="aes_altar_info"><article>aes_altar_info_article</article></info_portion>
+
+
+<info_portion id="actor_in_aes_undeground"></info_portion>
+<info_portion id="goldsphere_finded"></info_portion>
+<info_portion id="mon_general_komp_on"></info_portion>
+<info_portion id="general_scientist_last_info"></info_portion>
+<info_portion id="goldsphere_guard_off"></info_portion>
+<info_portion id="goldsphere_destroy"></info_portion>
+<info_portion id="goldsphere_blow"></info_portion>
+<info_portion id="goldsphere_used"></info_portion>
+<info_portion id="end_game"></info_portion>
+
+<info_portion id="esc_izg_dial_ab_znak_1_start"><task>esc_find_good_food_for_izgoy</task></info_portion>
+<info_portion id="esc_izg_dial_ab_znak_1_end"></info_portion>
+<info_portion id="esc_izg_dial_ab_znak_1_fail"></info_portion>
+
+	<info_portion id="anim_action"></info_portion>
+
+	<info_portion id="has_item_af_loop"></info_portion>
+
+	<info_portion id="water_sanya"></info_portion>
+	<info_portion id="vehicle_skidan"></info_portion>
+	<info_portion id="strange_psy_effect"></info_portion>
+	<info_portion id="radio_treasure_secret"></info_portion>
+	<info_portion id="garb_abdul_dead"></info_portion>
+
+	<info_portion id="turrets_shoot_off">
+	<disable>turrets_shoot_on</disable>
+	</info_portion>
+
+	<info_portion id="perehod_svalka"></info_portion>
+	<info_portion id="perehod_svalka1"></info_portion>
+
+	<info_portion id="miksture_drink"></info_portion>
+
+	<info_portion id="using_yod"></info_portion>
+	<info_portion id="using_vodka"></info_portion>
+	<info_portion id="using_dix"></info_portion>
+	<info_portion id="using_bipsizon"></info_portion>
+	<info_portion id="using_vint"></info_portion>
+
+	<info_portion id="electrochimera_dead"><article>enc_electrochimera</article></info_portion>
+	<info_portion id="psy_burer_dead"><article>enc_psy_burer</article></info_portion>
+	<info_portion id="psy_dog_dead"><article>enc_psydog</article></info_portion>
+
+	<info_portion id="zombie_dead"><article>mutant_zombie_general</article></info_portion>
+	<info_portion id="zombie_ghost_dead"><article>mutant_zombieg_general</article></info_portion>
+	<info_portion id="zombie_rusty_dead"><article>mutant_zombie_rusty</article></info_portion>
+	<info_portion id="zombie_plague_dead"><article>mutant_zombie_plague</article></info_portion>
+	
+	<info_portion id="cat_dead"><article>mutant_cat_general</article></info_portion>
+	<info_portion id="fracture_dead"><article>mutant_fracture_general</article></info_portion>
+	<info_portion id="tushkano_dead"><article>mutant_tushkano</article></info_portion>
+	<info_portion id="chimera_dead"><article>mutant_chimera_general</article></info_portion>
+	<info_portion id="burer_dead"><article>mutant_burer_general</article></info_portion>
+
+	<info_portion id="dog_dead"><article>mutant_blind_general</article></info_portion>
+	<info_portion id="pseudodog_dead"><article>mutant_pseudodog_general</article></info_portion>
+	<info_portion id="flesh_dead"><article>mutant_flesh_general</article></info_portion>
+	<info_portion id="boar_dead"><article>mutant_boar_general</article></info_portion>
+	<info_portion id="snork_dead"><article>mutant_snork_general</article></info_portion>
+	<info_portion id="bloodsucker_dead"><article>mutant_bloodsucker_general</article></info_portion>
+	<info_portion id="controller_dead"><article>mutant_controller_general</article></info_portion>
+	<info_portion id="pseudogiant_dead"><article>mutant_pseudogiant_general</article></info_portion>
+	<info_portion id="gigant_dead"><article>mutant_pseudogiant_general</article></info_portion>
+	<info_portion id="poltergeist_dead"><article>mutant_poltergeist_general</article></info_portion>
+	<info_portion id="rat_weak_dead"><article>mutant_rat_weak</article></info_portion>
+	<info_portion id="rat_plague_dead"><article>mutant_rat_plague</article></info_portion>
+	<info_portion id="sceleton_weak_dead"><article>mutant_sceleton_weak</article></info_portion>
+	<info_portion id="zombie_hand_sold"></info_portion>
+	<info_portion id="zombie_hand_research"><article>rusty_zombie_research</article></info_portion>
+
+	<info_portion id="secret_talk"><article>rad_code_door_info</article></info_portion>
+
+	<info_portion id="freeplay"><article>freeplay_info</article></info_portion>
+	<info_portion id="game_end"></info_portion>
+
+	<info_portion id="first_blowout"></info_portion>
+
+	<info_portion id="level_changer_icons"/>
+
+	<info_portion id="teleport_reserv_spawn"/>
+
+	<info_portion id="actor_find_dar_woman_teleport"/>
+
+	<info_portion id="actor_find_dar_woman_process"/>
+	<info_portion id="val_prisoner_door_unlocked"></info_portion>
+	<info_portion id="yan_bunker_door_1_open"></info_portion>
+	<info_portion id="yan_bunker_door_1_close"></info_portion>
+	<info_portion id="yan_bunker_door_2_open"></info_portion>
+
+	<info_portion id="yan_tonnel_snork_spawn_1"></info_portion>
+	<info_portion id="yan_tonnel_snork_spawn_2"></info_portion>
+	<info_portion id="yan_tonnel_snork_spawn_3"></info_portion>
+	<info_portion id="yan_tonnel_snork_spawn_4"></info_portion>
+	<info_portion id="yan_tonnel_snork_spawn_5"></info_portion>
+
+	<info_portion id="yantar_hello_scientist"/>	
+	<info_portion id="yan_find_vasilyev_done"/>
+	<info_portion id="yan_scientist_start_research"/>
+	<info_portion id="yan_scientist_return_to_bunker"/>
+	<info_portion id="yan_scientist_gulag_state_2"/>
+	<info_portion id="yan_scientist_gulag_state_3"/>
+	<info_portion id="yan_scientist_die">
+		<disable>yan_scientist_door_2_open</disable>
+		<disable>yan_scientist_door_1_open</disable>
+	</info_portion>
+	<info_portion id="yantar_kruglov_talk"/>
+	<info_portion id="yan_scientist_door_2_open"/>
+	<info_portion id="yan_scientist_door_1_open"/>
+	<info_portion id="yantar_scientists_talk"/>
+	<info_portion id="yantar_kruglov_phrase_1"/>
+	<info_portion id="yantar_professor_phrase_2"/>
+	<info_portion id="yantar_kruglov_phrase_2"/>
+	<info_portion id="yantar_scientists_talk_end"/>
+	<info_portion id="yan_scientist_exit"/>
+	<info_portion id="yan_disable_ui"/>
+	<info_portion id="yantar_ghost_talk_2"/>
+	<info_portion id="yantar_klyk_talk"/>
+	<info_portion id="yantar_professor_talk_about_brain"/>
+	<info_portion id="yantar_professor_talk_about_brain_end"/>
+	<info_portion id="yan_kruglov_after_actor"/>
+	<info_portion id="yantar_scientist_talk_good_quest"/>
+	<info_portion id="yantar_scientist_talk_good_quest_1"/>
+	<info_portion id="yantar_scientist_talk_semenov_die_1"/>
+	<info_portion id="yantar_scientist_talk_semenov_die"/>
+
+	<info_portion id="mil_village_monsters_spawn"></info_portion>
+	<info_portion id="mil_arsenal_inside"></info_portion>
+
+	<info_portion id="rad_code_door">
+		<article>rad_code_door_info</article>
+	</info_portion>
+	<info_portion id="rad_code_door_found">
+	</info_portion>
+	<info_portion id="rad_code_door_unlocked">
+	</info_portion>
+
+	<info_portion id="rad_lab_door_unlocked">
+	</info_portion>
+
+</game_information_portions>

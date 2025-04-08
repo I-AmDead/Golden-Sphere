@@ -1,0 +1,2261 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+
+<string id="predb_kontrabander6_start_dialog_phrase_1">
+	<text>Эй, парень! Всё в порядке?</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_2">
+	<text>Вполне себе. Ты кто такой, приятель?</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_3">
+	<text>Я Жекан. Получил твой сигнал о помощи и решил вмешаться. Что здесь произошло?</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_4">
+	<text>Мы тебе очень благодарны. Слушай, Жекан, пошли-ка с нами, а? Мы тебе всё расскажем.</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_5">
+	<text>Куда?</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_6">
+	<text>Я смотрю, что ты военных не празднуешь, значит, тебе можно доверять. Айда со мной в наше убежище, там я тебе всё расскажу и покажу. Вот метка на карте.</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_7">
+	<text>Хорошо, но кто вы вообще такие?</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_8">
+	<text>Как кто? Контрабандисты, конечно. Вояки нашего курьера сцапали, а мы пришли его выручать... Ну, так ты идешь или нет? Думай быстрее, а то скоро военная карательная вертушка прилетит.</text>
+</string>
+<string id="predb_kontrabander6_start_dialog_phrase_9">
+	<text>Да, веди.</text>
+</string>
+
+<string id="predb_kpp_soldier5_dialog1_phrase_1">
+	<text>Нарушитель, требуется твоя помощь! На нас напали контрабандисты, мои бойцы деморализованы, патроны на исходе. Помоги!</text>
+</string>
+<string id="predb_kpp_soldier5_dialog1_phrase_2">
+	<text>Сейчас разберёмся.</text>
+</string>
+
+<string id="predb_kpp_soldier5_dialog2_phrase_1">
+	<text>Порядок, командир?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_2">
+	<text>Кажется да. Проклятые контрабандисты, чтоб их черти драли... А ты кто и откуда, мужик?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_3">
+	<text>Я Жекан, пришел с Кордона.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_4">
+	<text>Ты, наверное, нарушитель, да? Пришел собирать артефакты? Можешь не скрывать, по тебе это видно. Не беспокойся, поскольку ты нам помог, то я не буду задерживать тебя или о тебе докладывать. Договоримся так: тебя здесь не было.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_5">
+	<text>Резонно. Но что вы делаете на этом КПП в удалении от периметра?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_6">
+	<text>Это не просто будка с вышкой, а военный стратегический объект. Мы контролируем территорию, граничащую с опасными регионами Зоны отчуждения, если оттуда станет надвигаться какая-то угроза, то мы должны будем среагировать должным образом.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_7">
+	<text>Почему на вас напали эти, как вы говорите, контрабандисты?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_8">
+	<text>Да потому что мы им своим присутствием мешаем. Ведь наша задача не просто охранять периметр, но ещё и пресекать попытки выноса из Зоны вещей, представляющих опасность для человечества. Они же как раз этим и занимаются - по тайным тропинкам вытаскивают из Зоны разную гадость. А кто-то там, в больших городах, делает на этом деньги.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_9">
+	<text>Дальше в Зону мне пройти можно?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_10">
+	<text>Проходи. Только далеко ты не уйдешь - это окраина, здесь как бы тупик. По большому счёту ничего интересного. Кстати о хабаре... А не хочешь ли ты подзаработать?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_11">
+	<text>Что надо делать?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_12">
+	<text>Нет.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_13">
+	<text>Понимаешь, это нападение на КПП не первое, контрабандисты хотят нас отсюда выжить. Они действуют подлыми методами: устраивают засады на патрульных, нападают исподтишка, подбрасывают отравленные продукты - сволочи еще те. Я не прошу тебя сражаться с этими уродами вместе с нами - это, в конце-концов не твоя проблема. Единственное, что от тебя попрошу - разведай местонахождение их логова. Где-то на Окраине у них есть лагерь, в котором прячутся. Не нападай на них, подойди, представься простым бродягой, познакомься. Затем разведай подробно: сколько их там, чем вооружены, кто главный. А потом придешь и доложишь. Договор?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_14">
+	<text>Договор.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_15">
+	<text>Не надо на них сразу нападать. Это очень важно! Если их лагерь здесь не один, то уничтожив часть бандюков, остальных мы просто спугнём. А нам нужно накрыть сразу всех.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_16">
+	<text>Ясно. Разведаю обстановку.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_17">
+	<text>Да, и еще. Поговори с сержантом Александровым, он вроде бы видел, откуда они приходили.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog2_phrase_18">
+	<text>Поговорю.</text>
+</string>
+
+
+<string id="predb_trader_start_dialog_phrase_1">
+	<text>Подходите-подходите! Для таких, как ви у меня всегда есть что-то интересное...</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_2">
+	<text>Кто вы такой и что здесь делаете?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_3">
+	<text>Я менеджер, понимаете? Ви вообще знаете, что это такое?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_4">
+	<text>Торговец?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_5">
+	<text>Молодой, человек, я поражаюсь, как ви мало знаете жизнь. Если Мойша говорит, что он менеджер, это значит, что он и торговец, и управляющий, и бухгалтер, и секретарь и всё-всё! Понимаете? Да ви вообще ничего не понимаете.</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_6">
+	<text>Понимаю, понимаю. Но что вы и ваши напарники делают здесь, в этом Богом забытом месте?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_7">
+	<text>Это бизнесс, молодой человек, я не могу раскрыть вам детали нашего общего дела.</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_8">
+	<text>И что же это за дело? Хабар?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_9">
+	<text>Ой, да что ви такое говорите... Я не понимаю значения этого слова. Разве мы, деловые люди, можем себе позволить нарушать закон? Ви понимаете, что это несерьезно? Мы всего лишь помогаем одним людям и немножечко другим... в плане доставки. А вместе они нам очень благодарны! </text>
+</string>
+<string id="predb_trader_start_dialog_phrase_10">
+	<text>"В плане доставки"? То есть, вы - контрабандисты? Перебрасываете партии хабара из Зоны за периметр?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_11">
+	<text>Всё-всё, молодой человек! Я больше не хочу общаться с вами на эту тэму! Так деловые люди не поступают, понимаете?</text>
+</string>
+<string id="predb_trader_start_dialog_phrase_12">
+	<text>Как скажите.</text>
+</string>
+
+<string id="predb_trader_dialog1_phrase_1">
+	<text>Что здесь в округе есть интересного?</text>
+</string>
+<string id="predb_trader_dialog1_phrase_2">
+	<text>Ви таки будите смеяться, но ничего!</text>
+</string>
+<string id="predb_trader_dialog1_phrase_3">
+	<text>Как это так - ничего? Здесь же вроде бы Зона. Может, какие аномалии или в плане хабара есть чем поживиться?</text>
+</string>
+<string id="predb_trader_dialog1_phrase_4">
+	<text>Аномалии мне не интересны, уважаемий, я человек занятой, понимаете? Я делаю своё дело и никуда не вмешиваюсь. Чего и вам желаю!</text>
+</string>
+<string id="predb_trader_dialog1_phrase_5">
+	<text>И про аномальные зоны тоже ничего не знаете?</text>
+</string>
+<string id="predb_trader_dialog1_phrase_6">
+	<text>Я не знаю, что означает это слово! Понимаете?</text>
+</string>
+<string id="predb_trader_dialog1_phrase_7">
+	<text>Что за дела вы здесь проворачиваете, что вам ни хабар, ни окружающая обстановка не интересны?</text>
+</string>
+<string id="predb_trader_dialog1_phrase_8">
+	<text>Молодой человек, я же русским языком сказал вам только что: я - менеджер! Понимаете? Всё-всё здесь держится только на мне. Хорошо, ладно! Мойша уйдёт, если ви так хотите! Он сядет на поезд и поедет на родину, хорошо! Тогда вы увидите, как всё-всё тут остановится и сколько людей будут этому недовольны. Уважаемых людей! Понимаете?</text>
+</string>
+<string id="predb_trader_dialog1_phrase_9">
+	<text>Нихрена не понимаю.</text>
+</string>
+<string id="predb_trader_dialog1_phrase_10">
+	<text>Небо!... Небо не видело более непонятливого шлемазла, чем ви! Ладно, идите к Кабану, он с вами поговорит на вашим язике. Всё! Уходите!</text>
+</string>
+<string id="predb_trader_dialog1_phrase_11">
+	<text>Окей, поговорю с Кабаном.</text>
+</string>
+
+<string id="predb_kontrabander3_dialog1_phrase_1">
+	<text>Привет, Кабан! Я от Мойши.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_2">
+	<text>Ну, здорово. Савик мне только что о тебе рассказал. Спасибо, что выручил нашего товарища. Как тебя зовут?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_3">
+	<text>Жекан, нарушитель периметра. А кто ты по здешней "специальности"?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_4">
+	<text>Разве ты не догадался, зачем мы здесь обосновались? Мы - контрабандисты. Перегоняем партии хабара из разных территорий Зоны за периметр. Охраняем караваны и курьеров, разведываем для них безопасные тропы.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_5">
+	<text>В принципе, я догадывался. Правда Мойша мне сказал, что он здесь делает какие-то "дела".</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_6">
+	<text>Слушай больше этого жида! Тоже мне, Моше Даян выискался. Сидит в своей норе безвылазно, только указания даёт, а мы между аномалиями и мутантами рыскаем.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_7">
+	<text>Он ваш лидер?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_8">
+	<text>Как тебе сказать... В общем, за главного как бы я, но Мойша - это доверенное лицо нашего Шефа, все контакты с покупателями и все финансовые дела идут через него, а всю остальную работу выполняем мы. Поэтому он так пыжится и всем пытается показать, какой он важный.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_9">
+	<text>Он сказал мне, что является вашим менеджером.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_10">
+	<text>Да, управляющий из него хороший, деньги считать и экономить он умеет хорошо. Вот только иногда недоплачивает, гад... Но это ладно. Короче, характер у него еще тот, но ты ему не груби, если, конечно, хочешь иметь дело с нами, контрабандистами.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_11">
+	<text>Почему бы и нет. Слушай, ты знаешь что-нибудь об Исполнителе желаний?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_12">
+	<text>Хм... Где-то о похожем слышал, но не помню где. А что это такое?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_13">
+	<text>Это такая вещь... Или не вещь... В общем, это такая штука, которая может исполнить любое человеческое желание. Она находится где-то здесь, в Зоне.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_14">
+	<text>Интересно... Значит, ты пришел сюда за этим? Первый раз слышу подобное.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_15">
+	<text>Неважно... Раз уж ты ничего о нём не знаешь, то забудь.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_16">
+	<text>Постой, я кажется, вспомнил!</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_17">
+	<text>Слушаю.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_18">
+	<text>Я знал одного человека, который что-то об этом говорил. Только услуга за услугу!</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_19">
+	<text>Чего ты хочешь?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_20">
+	<text>Помоги мне найти одного нашего товарища. Он ушел из лагеря два дня назад и пропал. Я укажу тебе координаты того места, куда он собирался. За это я заплачу тебе. Его звали Зубом.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_21">
+	<text>Почему сами его не обследовали?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_22">
+	<text>Потому, что там много аномалий. Если найдешь тело, принеси ПДА. Договорились?</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_23">
+	<text>Договорились.</text>
+</string>
+<string id="predb_kontrabander3_dialog1_phrase_24">
+	<text>Немного позже.</text>
+</string>
+
+<string id="predb_kontrabander3_dialog2_phrase_1">
+	<text>А что это там, в подвальчике за горемыка стонет? Случилось что?</text>
+</string>
+<string id="predb_kontrabander3_dialog2_phrase_2">
+	<text>Случилось... Сначала принеси мне ПДА контрабандиста, потом я расскажу что именно.</text>
+</string>
+<string id="predb_kontrabander3_dialog2_phrase_3">
+	<text>Возможно я мог бы чем-то помочь...</text>
+</string>
+<string id="predb_kontrabander3_dialog2_phrase_4">
+	<text>Единственное, чем ты сможешь ему помочь, это выполнить мою просьбу.</text>
+</string>
+
+<string id="predb_kontrabander3_dialog3_phrase_1">
+	<text>Я осмотрел тело Зуба. ПДА при нём не было.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_2">
+	<text>То есть как не было? Не может такого быть. Ты его зажал, что ли?</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_3">
+	<text>Делать мне больше нечего. Не было ПДА и всё. Зато был вот этот вот "недоартефакт".</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_4">
+	<text>Странно... Недоартефакт, говоришь? Ну-ка дай-ка взглянуть.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_5">
+	<text>Пожалуйста.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_6">
+	<text>Та-а-ак... Ясно. Это не совсем артефакт, понимаешь? Это инкапси... инкапсли... э-э-э-э... "Инкапсулированная область пространства", вот! Мне так учёный один сказал.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_7">
+	<text>И что это заумное слово значит?</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_8">
+	<text>Если вкратце, то это полуартефакт или "обманка". То есть он имеет форму артефакта, но не имеет свойств, зато с его помощью можно кое-что сделать. Его можно активировать. Но это нужно уметь делать!</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_9">
+	<text>Активировать? И что произойдёт?</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_10">
+	<text>Что произойдёт - тут я не могу сказать. Как раз весь цимес в том, что нельзя сказать наперёд. После активации на месте этой обманки появится что-то... Но что - это уже зависит от самой Зоны. Может какой-то хороший полноценный арт родится, может просто мусор какой, а может прямо из воздуха на тебя дикий кабан выскочить! Здесь надо быть осторожным и ожидать всякого.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_11">
+	<text>И что ты будешь с этим чудом делать?</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_12">
+	<text>Отдам тебе, потому что мне оно не надо. Я раз попробовал сделать активацию, так оттуда на меня такое мурло вылезло, что потом драпать пришлось... Если хочешь - активируй его, нет - выброси к чертям.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_13">
+	<text>Научи меня активировать обманки.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_14">
+	<text>Короче, берешь эту фигню в обе руки, сначала поворачиваешь вот так... Затем двумя пальцами прижимаешь здесь и вот здесь. Потом надо его немножечко встряхнуть и бросить на землю, он полежит, помигает красивыми огоньками и хлоп - что-то на его месте появится. А что именно - зависит от твоей удачи. Так что удачи тебе, Жекан! И еще небольшое вознаграждение за то, что по аномалиям лазил.</text>
+</string>
+<string id="predb_kontrabander3_dialog3_phrase_15">
+	<text>Спасибо.</text>
+</string>
+
+
+<string id="predb_hermit_start_dialog_phrase_1">
+	<text>Кто ты такой и что здесь делаешь?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_2">
+	<text>Я - конченый человек. Сижу и жду смерти.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_3">
+	<text>Что это значит?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_4">
+	<text>Всего лишь жалкий отшельник... Можешь меня убить. Самому мне духу не хватает, а хочется давно.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_5">
+	<text>Пока ты мне не расскажешь, как отсюда выбраться, я тебя точно не убью.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_6">
+	<text>А откуда ты знаешь, что я смогу помочь тебе уйти отсюда?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_7">
+	<text>В записях погибших здесь разведчиков было написано, что ты заманил их сюда и обещал выпустить.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_8">
+	<text>Понимаешь, я наркоман и мне регулярно нужна доза. Здесь, в Зоне её достать нереально. Я бы давно уже сдох, но мне повезло, потому что я нашел это место. Это непростое место, нет! Сюда, в этот овраг, после аварии свозили радиоактивный хлам с ЧАЭС и засыпали его землёй - прятали. Получился большой холм, внутри которого дождями вымыло эту нору-пещеру... Однако она не имеет выхода на поверхность. И она рождает уникальные вещи - "Обманки".</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_9">
+	<text>Как же ты попал сюда?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_10">
+	<text>Так же, как и ты - с помощью "Полуарта-обманки". Расскажу поподробнее. В Зону я пришёл, потому что просто хотел умереть - быстро и безболезненно. Начитался в газетах, что аномалии тут людей разрывают на раз и... Но как выяснилось, не всё так просто. В общем, не смог я умереть, вернее побоялся. Решил подождать, побродить немного, затем прибился к контрабандистам, а потом и "Обманку" нашел. Активировал её и попал сюда.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_11">
+	<text>Что заставило тебя желать смерти?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_12">
+	<text>Жизнь... Я пережил много неприятностей в своей короткой, но никчёмной жизни. Отца у меня не было, я рос в нищете, застенчивым и забитым. В школе меня унижали. Учёбу продолжить не смог - не хватило денег и желания. В общем, сидел я на шее у родителей, пока не попал в тюрьму - за мелкое мошенничество. Пробовал в сети разводить людей на бабки, регистрировал липовые магазины и фирмы, подделывал документы... Долго этим занимался. Научился этому, кстати, на одном анонимном форуме, там собирались такие же как я ущербные подростки, делились своими проблемами, жаловались на жизнь, завидовали тем, у кого всё получилось. Там же меня убедили попробовать серьезные наркотики, до этого я только коноплёй баловался.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_13">
+	<text>Продолжай.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_14">
+	<text>В тюрьме мне худо пришлось. Таких как я, слабохарактерных сразу определяли в касту "обиженных". Много разных чудовищных унижений я вытерпел за три года... Пока был за решеткой, умерла мать. После освобождения я продал хату и подался сюда - умирать. Но даже с этим у меня не вышло, как следует...</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_15">
+	<text>А разведчики? Это ты их сюда заманил?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_16">
+	<text>Они получили по заслугам... Совершенно случайно встретил здесь своего бывшего сокамерника, который надо мной больше всех издевался - того самого Руслана. Он меня не узнал, а я его - да... Подарил ему "Обманку", которая рождает телепорт, ведущий сюда и он вместе со своими отмычками оказался в этой пещере. Сначала я хотел его помучить, унизить как следует. Не давал им пищи, хотел, чтобы они занялись каннибализмом. Но потом я забалдел от очередной дозы и просто забыл... В общем, они померли с голоду. Такие дела.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_17">
+	<text>Ты говорил, что наркоман, где достаешь дозу?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_18">
+	<text>Я самого главного не сказал - эти обманки разные бывают. Все они рождаются только под этой кучей, я их здесь постоянно нахожу. Некоторые из них рождают телепорты, некоторые - мутантов или аномалии, но некоторые, представь себе - кое-что полезное! Я так понимаю, что эти "Полуарты" как бы захватывают часть пространства, расположенную далеко от них и телепортируют всё, что в ней находится, прямо к тебе. В некоторых из них попадаются такие вещи, как еда, вода, снаряга, оружие и медикаменты... Это зависит от их цвета. Не беспокойся, "Обманку", телепортирующую тебя отсюда я тебе отдам.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_19">
+	<text>Теперь понятно. Ну и что же мне теперь делать?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_20">
+	<text>Просто возьми и убей меня. Мне надоело жить, дышать. Исправь ошибку природы. Об этом всё равно никто никогда не узнает.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_21">
+	<text>Не могу. Ты мне ничего плохого не сделал.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_22">
+	<text>Тогда давай так: я дам тебе наводку на хороший хабар, а ты меня грохнешь. Договорились?</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_23">
+	<text>Окей.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_24">
+	<text>Нет, живи.</text>
+</string>
+<string id="predb_hermit_start_dialog_phrase_25">
+	<text>Моя жизнь - пытка... Ладно, вот тебе две "Обманки". Одна из них телепортирует тебя отсюда на поверхность, другая - наоборот, перенесёт сюда. Это если передумаешь. Ну и раз ты обрекаешь меня на мучения, то время от времени заглядывай на огонёк. Если принесёшь с собой дозу, то я обменяю её у тебя на хабар.</text>
+</string>
+
+<string id="predb_hermit_change_dialog1_phrase_1">
+	<text>Привет, доходяга. Нашел что-нибудь интересное?</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_2">
+	<text>Конечно. А ты морфин принёс? Если да, то будем меняться.</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_3">
+	<text>Принёс.</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_4">
+	<text>Не принёс.</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_5">
+	<text>Мужик, мы так не договаривались. Принесёшь дозу - получишь награду.</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_6">
+	<text>Отлично. Вот тебе "Зелёная обманка". Из неё может выпасть полезная вещь.</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_7">
+	<text>Отлично. Вот тебе "Синяя обманка". Из неё появляются артефакты, но иногда может родиться аномалия.</text>
+</string>
+<string id="predb_hermit_change_dialog1_phrase_8">
+	<text>Отлично. Вот тебе "Красная обманка". Она рождает разных тварей: иногда дружественных, иногда - враждебных.</text>
+</string>
+
+
+
+<string id="predb_kontrabander3_dialog4_phrase_1">
+	<text>Помнишь разведчика Руслана?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_2">
+	<text>Конечно, помню.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_3">
+	<text>Я нашел его тело в пещере неподалёку отсюда. Его туда заманили и заморили голодом.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_4">
+	<text>Ах, вон оно что! Теперь ясно, куда он подевался. Слушай, а при нём был металлический ящик с кодовым замком?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_5">
+	<text>Не было.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_6">
+	<text>Хреново. Раз уж такое дело, то объясню тебе ситуацию. Этот самый Руслан две недели назад нанялся проводником к курьеру, который должен был переправить за периметр один очень ценный груз...</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_7">
+	<text>Но потом он пропал?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_8">
+	<text>Да, вместе с этим самым курьером и грузом! Помнишь Зуба, искать которого я тебя посылал? Он был помощником Руслана и пропал вместе с ним. Когда они оба исчезли, то мы решили, что это дело рук военных.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_9">
+	<text>Руслан погиб не от военных, а по иной причине. Куда делся курьер? И груз?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_10">
+	<text>Вот этот вопрос нас здесь и волнует, ибо на кону большие бабки. Жекан, доведи это дело до конца, отыщи курьера и груз. А мы, контрабандисты, с тобой рассчитаемся.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_11">
+	<text>Хорошо, есть какие-то зацепки?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_12">
+	<text>Это ваши проблемы.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_13">
+	<text>Да. Видишь этого бедолагу, который лежит в погребке и стонет? Это наш друг Никита. Его подстрелили из какого-то странного оружия. Произошло это на территории заброшенной фабрики, что за воинской частью. Рана вроде бы затянулась, но его тело стало сильно излучать радиацию, он умирает на глазах.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_14">
+	<text>Как это связано с курьером?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_15">
+	<text>Никита был напарником пропавшего курьера, и он может знать, каким путём он мог двинуться. К сожалению, его состояние очень тяжелое, он бреду ничего выпытать у него нельзя.</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_16">
+	<text>Понимаю, что нужно от меня?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_17">
+	<text>Ты должен пойти на фабрику и найти того урода, который пользуется "грязным" оружием и который подстрелил Никиту. Найдёшь его и узнаешь, как можно вылечить такое ранение. Если мы хоть на минуту сможем привести больного в чувство, то узнаем у него координаты места, где может находиться груз. Итак?</text>
+</string>
+<string id="predb_kontrabander3_dialog4_phrase_18">
+	<text>Я займусь этим.</text>
+</string>
+
+
+
+<string id="predb_kontrabander4_start_dialog_phrase_1">
+	<text>Чего тебе нужно? Убирайся отсюда!</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_2">
+	<text>Это ты здесь людей отстреливаешь?</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_3">
+	<text>Не твоё это дело, бродяга. Если отстреливаю, то значит, есть за что.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_4">
+	<text>Ты ранил курьера Никиту, который должен был доставить ценный хабар в указанное место.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_5">
+	<text>Да, было дело. Но если ты думаешь, что груз у меня, то ошибаешься, потому что это не был грабеж.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_6">
+	<text>Зачем же ты обстрелял их?</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_7">
+	<text>Чтобы отомстить. Я знаю, что тебя прислали Мойша с Кабаном, они там, на хуторе заправляют. Таскают грузы за периметр, зарабатывают бабло... А ты знаешь, что я тоже был контрабандистом?</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_8">
+	<text>Расскажи подробнее.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_9">
+	<text>Заткнись, урод. Даю тебе три секунды, если не скажешь, как вылечить Никиту, то я тебе ногу прострелю!</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_10">
+	<text>Я тоже был курьером, представь себе! Но эта сволочь Кабан тебе, конечно, об этом ничего не рассказал... В своё время я таскал хабар, получал денежки и всё было хорошо, пока у меня не произошло ЭТО. Однажды во сне ко мне пришел какой-то высокий мужик в военной форме и дал ключ. Он о чём-то просил, кажется, открыть какую-то дверь, но я не помню точно... После этого что-то в моём организме пошло не так. Счётчик стал реагировать на меня самого как на очаг радиации, кожа начала слезать и слабо светиться по ночам. Сперва я скрывал это, но когда контрабандисты узнали о проблеме, то решили изгнать меня из своего лагеря. Так я оказался здесь.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_11">
+	<text>Продолжай.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_12">
+	<text>Не знаю, почему я не умер от лучевой болезни. Единственное, что приходит на ум - моё тело подверглось какой-то мутации. Злость засела глубоко в моей душе, я понимал, что при таком положении дел мне придётся доживать свой век здесь, в Зоне... А ведь за периметром у меня осталась жена и маленькая дочь! Гнев охватил меня. Я решил отомстить своим обидчикам, но, не убивая их, а подвергнув такой же участи. Здесь, на этой фабрике, я нашел много бочек с радиоактивными отходами. У меня был охотничий арбалет, я переделал его так, чтобы можно было стрелять радиоактивными стрелами. Подстерёг курьера и выстрелил... Он ещё жив?</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_13">
+	<text>При смерти. Как ему можно помочь?</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_14">
+	<text>Обычный антирад не поможет: стрела, внедряясь в тело, заносит в ткани много радиоактивного вещества. Однако я заметил, что после одной травы, отвар из которой я недавно пил, моё тело стало немного меньше фонить. Растёт она на окраине заброшенной деревни, это недалеко отсюда. Точные координаты я тебе дам. Кстати, если занесешь мне немного этой травки, то я тебя отблагодарю.</text>
+</string>
+<string id="predb_kontrabander4_start_dialog_phrase_15">
+	<text>Посмотрим.</text>
+</string>
+
+<string id="predb_rogue_npc_dialog1_phrase_1">
+	<text>Ага, попался!</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_2">
+	<text>Что это? Кто ты такой? Я никого не вижу!</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_3">
+	<text>Правильно, так и должно быть. Потому что я - невидимка.</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_4">
+	<text>Что?!</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_5">
+	<text>Отныне я твой начальник. Так меня и называй, ясно?</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_6">
+	<text>Ерунда какая-то... Если ты где-то прячешься, то покажись.</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_7">
+	<text>Я не прячусь, потому что прятаться некому. Я есть, но меня нет; я не здесь, я - везде, заполняю собой всю эту деревню. И у меня есть большая сила... Если захочу, то придушу тебя как курицу. Хочешь?</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_8">
+	<text>Не стоит. Лучше скажи, чего тебе от меня нужно.</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_9">
+	<text>Всё очень просто: ты выполняешь мои приказы, а я не убиваю тебя за это. Один день - один приказ, если нет - кирдык. Понятно тебе?</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_10">
+	<text>Понятно.</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_10_1">
+	<text>Да пошел ты...</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_11">
+	<text>Нужно говорить "Понятно, господин начальник"!</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_12">
+	<text>Понятно, господин начальник.</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_13">
+	<text>Вот так, хорошо. Теперь слушай сюда: первым поручением для тебя будет уничтожить стаю кабанов. Они регулярно приходят в мою деревню, мешают мне спать... Разберись с ними. И помни: я слежу за тобой! Попробуешь удрать - придушу!</text>
+</string>
+<string id="predb_rogue_npc_dialog1_phrase_14">
+	<text>Хорошо, я займусь этими кабанами.</text>
+</string>
+
+
+<string id="predb_rogue_npc_dialog2_phrase_1">
+	<text>Кабанов я отстрелял.</text>
+</string>
+<string id="predb_rogue_npc_dialog2_phrase_2">
+	<text>Неплохо, неплохо. Следующим заданием будет добыть артефакт.</text>
+</string>
+<string id="predb_rogue_npc_dialog2_phrase_3">
+	<text>Кабаны, теперь артефакт. Ты же якобы бесплотный, зачем тебе это всё?</text>
+</string>
+<string id="predb_rogue_npc_dialog2_phrase_4">
+	<text>Не твоё дело, ты всего лишь слуга! Так что заткнись и выполняй мою команду. Ясно? Не то придушу.</text>
+</string>
+<string id="predb_rogue_npc_dialog2_phrase_5">
+	<text>Куда ж яснее.</text>
+</string>
+<string id="predb_rogue_npc_dialog2_phrase_6">
+	<text>Как я тебя правильно отвечать учил?</text>
+</string>
+<string id="predb_rogue_npc_dialog2_phrase_7">
+	<text>Ясно, господин начальник</text>
+</string>
+
+<string id="predb_rogue_npc_dialog3_phrase_1">
+	<text>Вот тебе твоя бирюлька, подавись.</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_2">
+	<text>Замечательно, хороший артефакт, дорогой! А ты не груби начальству, а то пожалеешь! Чего стал как вкопанный, бери добычу и неси в место, которое я тебе покажу. А затем отправишься на поиски.</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_3">
+	<text>На поиски чего?</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_4">
+	<text>Где-то здесь, в деревне, есть тайник с неплохим защитным костюмом. Его сделал один разведчик, который погиб. Я хочу, чтобы ты отыскал этот костюм и принёс в указанное место.</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_5">
+	<text>Где же мне искать? Дай хоть какую-то зацепку.</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_6">
+	<text>Нет, ищи сам! Не найдешь - хреново тебе будет: сначала переломаю тебе все кости, а потом выкину на съедение собакам.</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_7">
+	<text>Я вот не пойму: то тебе артефакт, то костюм какой-то. Ты же всесильный, бесплотный - зачем всё это?</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_8">
+	<text>Вопросы здесь задаю я. Так ты понял или нет?</text>
+</string>
+<string id="predb_rogue_npc_dialog3_phrase_9">
+	<text>Да, понял... Господин начальник.</text>
+</string>
+
+
+
+<string id="predb_trader_junk_dialog_phrase_1">
+	<text>Я кое-что нашел.</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_2">
+	<text>И что же?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_3">
+	<text>Да нет, ничего.</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_4">
+	<text>Я смотрю на вас и думаю: ви таки поц или только притворяетэсь?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_5">
+	<text>Металлолом. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_6">
+	<text>Емкость с опасным веществом. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_7">
+	<text>Антикварное радио. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_8">
+	<text>Золотые часы. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_9">
+	<text>Старинная книга. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_10">
+	<text>Альбом с марками. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_11">
+	<text>Музыкальная шкатулка. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_12">
+	<text>Артефакт "Манипулятор". Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_13">
+	<text>Старая монета. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_14">
+	<text>Коллекция антиквариата. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_15">
+	<text>Необычная лампа. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_16">
+	<text>Набор оружейника. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_17">
+	<text>Электронный блок. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_18">
+	<text>Сломанная радиостанция. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_19">
+	<text>Коллекция марок. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_20">
+	<text>Системный блок. Интересует?</text>
+</string>
+<string id="predb_trader_junk_dialog_phrase_21">
+	<text>Таки да, интересует... Вот вам мои бывшие денэжки.</text>
+</string>
+
+
+
+<string id="predb_soldier_junk_dialog_phrase_1">
+	<text>Я кое-что нашел.</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_2">
+	<text>Что там у тебя?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_3">
+	<text>Да нет, ничего.</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_4">
+	<text>Всё шутки шутишь?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_5">
+	<text>Металлолом. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_6">
+	<text>Емкость с опасным веществом. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_7">
+	<text>Антикварное радио. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_8">
+	<text>Золотые часы. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_9">
+	<text>Старинная книга. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_10">
+	<text>Альбом с марками. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_11">
+	<text>Музыкальная шкатулка. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_12">
+	<text>Артефакт "Манипулятор". Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_13">
+	<text>Старая монета. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_14">
+	<text>Коллекция антиквариата. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_15">
+	<text>Необычная лампа. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_16">
+	<text>Набор оружейника. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_17">
+	<text>Электронный блок. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_18">
+	<text>Сломанная радиостанция. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_19">
+	<text>Альбом с марками. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_20">
+	<text>Системный блок компьютера. Интересует?</text>
+</string>
+<string id="predb_soldier_junk_dialog_phrase_21">
+	<text>Да, конечно. Вот тебе из фонда украинской армии:</text>
+</string>
+
+
+
+<string id="predb_rogue_start_dialog_phrase_1">
+	<text>Не убивай, браток! Только не убивай.</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_2">
+	<text>Ага, вот значит кто тут такой крутой. Ну, всё, гад, теперь держись!</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_3">
+	<text>Подожди, не надо! Я тебе денег дам, много, будешь богатым! Артефакты там разные тоже дам, короче, не обижай меня, прошу!</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_4">
+	<text>Что ты можешь мне дать? И как ты говорил со мной на расстоянии?</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_5">
+	<text>Это специальный артефакт, называется "Манипулятор". Имея его, можно влиять на разум какого-нибудь человека и давать ему приказы. Единственное условие, необходимое для взятия его под контроль, это жалость... Нужно, чтобы жертва почувствовала жалость, тогда она твоя!</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_6">
+	<text>То есть это ты заманил меня, прикинувшись раненым?</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_7">
+	<text>Нет, там просто были диктофоны с записью голоса. Я разжалобил тебя, ну и...</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_8">
+	<text>А Марат? Это ты убил его?</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_9">
+	<text>Да, я. Но это была самозащита! Он первым решил напасть на меня, чтобы забрать "Манипулятор" - знал, что я ни за что не расстанусь с такой находкой.</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_10">
+	<text>Хорошо, теперь скажи, как ты можешь искупить свою вину.</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_11">
+	<text>Я отдам тебе всё в обмен на жизнь, только отпусти меня. Отдам и "Манипулятор", и тот артефакт, что бы в аномальном поле, и костюм, который я спрятал в деревне. Только не убивай, я жить хочу.</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_12">
+	<text>Казнить такую тварь, как ты - уже награда!</text>
+</string>
+<string id="predb_rogue_start_dialog_phrase_13">
+	<text>Ступай на все четыре.</text>
+</string>
+
+
+<string id="predb_kpp_soldier3_dialog1_phrase_1">
+	<text>Здорово, служивый. Как жизнь?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_2">
+	<text>Привет, цивильный. Спрашивать у солдата в Зоне про жизнь - это ж каким нахалом надо быть...</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_3">
+	<text>Ладно, не нервничай. Я ж просто так спросил.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_4">
+	<text>Да я не мудель какой-нибудь, не подумай. Просто нервы на пределе, сам понимаешь. Ладно, хватит о ерунде. У меня деловое предложение к тебе.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_5">
+	<text>Слушаю.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_6">
+	<text>Здесь, на окраине, артефактов мало, но осталось много заброшенных построек: военная база, пожарная часть, деревня. А там при эвакуации люди много всякого добра побросали. В общем, если найдешь что - тащи мне, я куплю.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_7">
+	<text>Зачем тебе старая рухлядь? Что ты с ней будешь делать?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_8">
+	<text>Ну рухлядь ты мне не тащи. Я имею в виду такие вещи, как технику, приборы всякие, антиквариат. Понимаешь?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_9">
+	<text>Мародёрством, значит, занимаемся?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_10">
+	<text>Тс-с-с, тихо! Тебе что, деньги не нужны?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog1_phrase_11">
+	<text>В деле.</text>
+</string>
+
+
+
+
+
+<string id="predb_kontrabander4_dialog2_phrase_1">
+	<text>Я раздобыл нужное растение.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_2">
+	<text>Отлично, а я как раз накипятил воду. Давай его сюда, буду готовить отвар.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_3">
+	<text>Думаешь, какая-то жухлая травка поможет от тяжёлой лучевой болезни?</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_4">
+	<text>Сказать честно?</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_5">
+	<text>Ну да.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_6">
+	<text>Это даже не лекарственное растение, а трава-дурман, её отвар даст анестезирующий эффект на некоторое время - вот и всё. Но этого хватит, чтобы привести Никиту в сознание и выведать у него нужную тебе информацию. Извини, но больше ничего сделать не могу.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_7">
+	<text>То есть он умрёт?</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_8">
+	<text>Скорее всего, да.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_9">
+	<text>А как же ты?</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_10">
+	<text>Я должен был подохнуть давно, но этого не произошло, как видишь... Скорее всего, мой организм мутировал, такое возможно в очень редких случаях, но всё равно это уже не жизнь, а мука: каждый день меня терзают дикие боли, я истекаю гноем и медленно разлагаюсь. Жекан, запомни: месть - это зло, какими благородными мотивами она бы не была подкреплена.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_11">
+	<text>Запомню.</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_12">
+	<text>Так, а вот и отвар... Я перелью немного тебе в термос, держи:</text>
+</string>
+<string id="predb_kontrabander4_dialog2_phrase_13">
+	<text>Спасибо.</text>
+</string>
+
+
+<string id="predb_kontrabander2_start_dialog_phrase_1">
+	<text>У меня есть лекарство, которое облегчит страдания раненого.</text>
+</string>
+<string id="predb_kontrabander2_start_dialog_phrase_2">
+	<text>Хорошо, сейчас я попробую его напоить.</text>
+</string>
+
+
+<string id="predb_kontrabander1_start_dialog_phrase_1">
+	<text>Как ты себя чувствуешь?</text>
+</string>
+<string id="predb_kontrabander1_start_dialog_phrase_2">
+	<text>Болит в груди... Где Руслан? Я обещал ему помочь...</text>
+</string>
+<string id="predb_kontrabander1_start_dialog_phrase_3">
+	<text>Не беспокойся о нём. Скажи мне, где ты оставил груз?</text>
+</string>
+<string id="predb_kontrabander1_start_dialog_phrase_4">
+	<text>Кто... Кто ты такой?</text>
+</string>
+<string id="predb_kontrabander1_start_dialog_phrase_5">
+	<text>Меня послал Кабан, он с товарищами ищет груз, который ты спрятал. Где он?</text>
+</string>
+<string id="predb_kontrabander1_start_dialog_phrase_6">
+	<text>Скажи ему... Скажи ему, что груз в том месте, где гробанулся Душман... Он знает...</text>
+</string>
+<string id="predb_kontrabander1_start_dialog_phrase_7">
+	<text>Понял.</text>
+</string>
+
+
+
+<string id="predb_kontrabander3_dialog5_phrase_1">
+	<text>Никита сказал, что груз в том месте, где гробанулся Душман.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_2">
+	<text>Ага, так... Я помню, где это место. Сейчас попробую вычислить координаты по карте... Есть!</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_3">
+	<text>Что дальше?</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_4">
+	<text>Теперь я передам эти координаты нашему Курьеру. Он доберётся туда, заберёт груз, доставит его куда нужно и всё - дело в шляпе! Жекан, если всё пройдет, как положено, то бухать будем неделю точно, причем за мой счет.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_5">
+	<text>Ты уверен, что Курьер доберется до точки? Всё-таки вокруг Зона.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_6">
+	<text>И, правда. Слушай, ведь ты здесь уже как бы освоился, помоги нам в последний раз. Проводи Курьера до места назначения, обеспечь ему, так сказать, охрану. А мы тебя отблагодарим.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_7">
+	<text>Хорошо, где этот ваш Курьер?</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_8">
+	<text>Хватит с меня ваших афёр.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_9">
+	<text>Координаты я ему передал, теперь надо подождать, пока он отчитается о том, что груз найден. После того, как это произойдёт, он направится сначала сюда, в наш лагерь, а потом уже - к назначенному месту.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_10">
+	<text>Понятно. Он сам?</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_11">
+	<text>Нет, при нём два охранника. Они конечно профи в плане пострелять, но в Зоне оба в первый раз, так что без тебя не обойтись.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_12">
+	<text>Хорошо, ждём Курьера.</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_13">
+	<text>И это, Жекан... Только между нами: если Курьер вдруг гробанётся - ты не тормози! Бери его груз и тащи к заказчику сам. На кону большое бабло, понимаешь?</text>
+</string>
+<string id="predb_kontrabander3_dialog5_phrase_14">
+	<text>Понимаю, что с вас взять.</text>
+</string>
+
+
+
+<string id="predb_kontrabander5_dialog1_phrase_1">
+	<text>Эй, ты! Как тебя угораздило к военным в лапы попасть?</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_2">
+	<text>Да вот так вот, шел себе я, шел, ну и...</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_3">
+	<text>Так я и поверил. Небось, полез на блокпост патроны тырить?</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_4">
+	<text>Слышь, ну а что такого? Здесь без патронов как без жратвы - жизни нет! Сам-то вон с пушкой бегаешь. Кстати, а ты кто такой? Что-то я твою рожу здесь раньше не видел.</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_5">
+	<text>На себя посмотри... Я Жекан, разведчик. Здесь просто осматриваюсь.</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_6">
+	<text>А я - Косой, контрабандист! Ладно, Жекан, я вижу, что ты вроде нормальный чувак, ментов, то есть вояк вместе с нами нагнул. Посему хочу тебя предупредить: не суйся в опасные места.</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_7">
+	<text>Здесь же окраина Зоны.</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_8">
+	<text>Ну и что с того? Опасностей и тут хватает. Вот намедни приключилась со мной одна история... Рассказать?</text>
+</string>
+<string id="predb_kontrabander5_dialog1_phrase_9">
+	<text>Расскажи.</text>
+</string>
+
+
+
+<string id="predb_courier_dialog1_phrase_1">
+	<text>Приветствую, я Жекан. Мне поручили сопроводить вас в назначенное место и обеспечить охрану. Когда будем выдвигаться?</text>
+</string>
+<string id="predb_courier_dialog1_phrase_2">
+	<text>Здорово, Жекан. Давай на "ты", чтоб попроще. Слушай, я тут в бинокль видел военную вертушку, что она здесь делает?</text>
+</string>
+<string id="predb_courier_dialog1_phrase_3">
+	<text>Патрулирует локацию.</text>
+</string>
+<string id="predb_courier_dialog1_phrase_4">
+	<text>С какого перепугу? Военные раньше так не делали.</text>
+</string>
+<string id="predb_courier_dialog1_phrase_5">
+	<text>Люди Кабана напали на блокпост к западу отсюда, чтобы освободить пленного. После этого появился вертолёт.</text>
+</string>
+<string id="predb_courier_dialog1_phrase_6">
+	<text>Слушайте, мне всё равно, что у вас там за тёрки с военными. Моя задача здесь - груз, я отвечаю за его доставку и сохранность жизнью. И я не могу продолжить дело, если на пути такая помеха. Почему вы с Кабаном раньше об этом не подумали? Ведь нас всех просто расстреляют с воздуха - у него там крупнокалиберный пулемёт, ни одна броня не поможет.</text>
+</string>
+<string id="predb_courier_dialog1_phrase_7">
+	<text>Может, как-то проскочим?</text>
+</string>
+<string id="predb_courier_dialog1_phrase_8">
+	<text>Исключено! Я не могу так рисковать.</text>
+</string>
+<string id="predb_courier_dialog1_phrase_9">
+	<text>Что ж делать-то?</text>
+</string>
+<string id="predb_courier_dialog1_phrase_10">
+	<text>Я не знаю... Кстати, время уходит, клиенты не будут ждать вечно. Иди к своему Кабану и вместе с ним решайте эту проблему. Пока здесь будет эта вертушка, я из лагеря носа не высуну.</text>
+</string>
+<string id="predb_courier_dialog1_phrase_11">
+	<text>Подумаем...</text>
+</string>
+
+
+<string id="predb_kontrabander3_dialog6_phrase_1">
+	<text>Кабан, есть проблема. Курьер не хочет идти, боится патрульного вертолёта.</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_2">
+	<text>Вот бля, как я сразу это не предусмотрел? Что ж делать-то... Слушай, Жекан, ты должен убрать эту вертушку отсюда нафиг.</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_3">
+	<text>Убрать? Как именно?</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_4">
+	<text>Сбить её!</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_5">
+	<text>Это же военный вертолёт, его даже бронебойные пули не берут.</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_6">
+	<text>Тебе нужно оружие покруче... Например, РПГ.</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_7">
+	<text>У тебя он есть?</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_8">
+	<text>Откуда ему здесь взяться? Но я знаю место, где это оружие может быть. Это заброшенная военная база на холме, что к северу отсюда. Есть проблема: она опечатана. Но дверь можно или взломать, или же взорвать.</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_9">
+	<text>Легко сказать.</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_10">
+	<text>Да, надо действовать наверняка. Слушай, а наведайся-ка ты в пожарную часть, это недалеко от базы. Там по-любому найдешь что-то подходящее. Мне кто-то говорил, что до аварии военные были тесно связаны с пожарными, возможно там у них остались какие-то документы или инфа, как попасть на базу. Во, вспомнил! Один чел мне по большому секрету рассказывал, что пожарная часть эта имеет какие-то подземные помещения. Возможно, там что-то осталось. Пойди и поищи сначала там, а потом наведайся на базу. Найдёшь РПГ - залезь с ним на вышку, что посреди пожарки стоит. С вертухи тебя заметят, подлетят, а ты их...</text>
+</string>
+<string id="predb_kontrabander3_dialog6_phrase_11">
+	<text>Или они меня. Ладно, что поделаешь, пойду на "пожарку".</text>
+</string>
+
+
+
+<string id="predb_marouder1_dialog1_phrase_1">
+	<text>Братишка, шикарно ты их отмудохал!</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_2">
+	<text>Кто вы такие?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_3">
+	<text>Ну мы типа того... разведчики, короче.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_4">
+	<text>Что-то не похожи вы на разведчиков.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_5">
+	<text>Да ладно, чего не похожи-то? Мы честные люди, просто денежки зарабатываем и всё.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_6">
+	<text>Как именно?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_7">
+	<text>Собираем и продаём.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_8">
+	<text>Хабар, что ли? Но здесь же нет аномальных зон, где вы его берёте?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_9">
+	<text>Артефактами мы не занимаемся, опасно это, да и всё уже схвачено. Мы собираем материальные ценности - то, что оставили при эвакуации.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_10">
+	<text>А, так вон оно что - вы мародёры!</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_11">
+	<text>Ну чего вот так сразу обзываться? Попробуй, докажи, что мы - мародёры, попробуй! Мы же не крадём и не убиваем, а собираем то что уже брошено и за чем уже не вернутся хозяева, не пропадать же добру, так? ... Вот такая вот у нас работа. Ты сам-то кто?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_12">
+	<text>Пока ещё не определился. Можешь считать меня бродягой.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_13">
+	<text>Папин бродяга, мамин симпатяга? Хе-хе! Ладно, что уж там. Я и мои кореша тебе благодарны за то, что ты шавок отстрелял, они нас здорово прижали. Если бы у меня что-то ценное было, то я бы тебя отблагодарил. С деньгами тоже напряг - не заработали ещё, так что сам понимаешь.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_14">
+	<text>Ближе к делу. Я ищу информацию о военной базе, что неподалёку. Ты был там?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_15">
+	<text>Военная база? Что ты, конечно, нет - там, на входе система защиты стоит, если кто сунется - кирдык ему, пуля в лоб! А здесь, на "пожарке" спокойно. Можно поработать.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_16">
+	<text>Ты давно здесь?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_17">
+	<text>Пару дней.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_18">
+	<text>Мне говорили, что здесь имеется какой-то подвал. Не натыкался на него?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_19">
+	<text>Подвал, говоришь? Кхе-кхем... Нет, а кто тебе такое сказал?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_20">
+	<text>Неважно. Слушай, ты со своими приятелями пришел сюда раньше меня. Находил какие-то документы, ключи, пропуска? Если что такое нашел, я это у тебя куплю.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_21">
+	<text>Мы бумажками не занимаемся, мы ищем что поценнее.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_22">
+	<text>Цветные металлы, аппаратура, антиквариат?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_23">
+	<text>Не-а, бери выше. Нам нужно оружие.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_24">
+	<text>Разве здесь оно есть?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_25">
+	<text>Представь себе. Мне один человек продал инфу, что именно здесь, на "пожарке" вояки когда-то обустроили тайный склад с оружием, но где именно - неизвестно. Если ты говоришь, что знаешь о каком-то подвале, то...</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_26">
+	<text>Это зацепка?</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_27">
+	<text>Именно так. Получается, что у нас как бы одна цель: этот самый подвал.</text>
+</string>
+<string id="predb_marouder1_dialog1_phrase_28">
+	<text>Тогда приступим к поискам.</text>
+</string>
+
+
+<string id="predb_marouder1_dialog2_phrase_1">
+	<text>Кажется, я нашел вход в подвал.</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_2">
+	<text>Молоток! И где же он находится?</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_3">
+	<text>В центральном двухэтажном здании, возле шлагбаума. Но проход заперт.</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_4">
+	<text>Снова облом! Что ж делать? Дверь мощная, сломать её можно?</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_5">
+	<text>Вряд ли, там металлическая решетка.</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_6">
+	<text>У меня есть идея. Любую дверь, запертую на ключ, можно открыть, взломав замок, верно? Мой кореш Жучара - спец по отмычкам, за это дело даже сидел. Так что надо его подключить.</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_7">
+	<text>Хорошо, я не против.</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_8">
+	<text>Айда с нами, прикроешь, если что.</text>
+</string>
+<string id="predb_marouder1_dialog2_phrase_9">
+	<text>Так и быть.</text>
+</string>
+
+<string id="predb_marouder1_dialog3_phrase_1">
+	<text>Я нашел компонент радиопередатчика. Нужен?</text>
+</string>
+<string id="predb_marouder1_dialog3_phrase_2">
+	<text>Ну-ка, дай-ка взглянуть. Нет, старьё. Лучше выбрось его нафиг, но если совсем уж делать нечего, могу подсказать, где его можно использовать.</text>
+</string>
+<string id="predb_marouder1_dialog3_phrase_3">
+	<text>Где же?</text>
+</string>
+<string id="predb_marouder1_dialog3_phrase_4">
+	<text>Я в бинокль случайно заметил, что на радиовышке, которая стоит рядом с "пожаркой", - вон она, за забором, - на самом верху находится радиопередатчик. Но состояние у него хреновое, сам понимаешь - под дождём и ветром столько лет... Так вот, попробуй эту запчасть в него поставить, может, заработает.</text>
+</string>
+<string id="predb_marouder1_dialog3_phrase_5">
+	<text>Как туда влезть? Лестница сломана.</text>
+</string>
+<string id="predb_marouder1_dialog3_phrase_6">
+	<text>Это ты уже сам придумай.</text>
+</string>
+
+<string id="predb_marouder1_dialog4_phrase_1">
+	<text>У меня две новости: хорошая и плохая. С какой начать?</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_2">
+	<text>Ну давай с плохой.</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_3">
+	<text>Оружие там есть, но оно испорчено. Ржавая аномалия, которая завелась в подвале, превратила его в груду металла.</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_4">
+	<text>Чего блядь?! Ты чо, прикалываешься??</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_5">
+	<text>Можешь сам пойти посмотреть.</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_6">
+	<text>Это полный пиздец... Всё потеряно... А хорошее что?</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_7">
+	<text>Там была записка, в которой написано, что сюда привезли не всё оружие и кое-что осталось в военной базе на холме.</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_8">
+	<text>Надо сходить туда и проверить.</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_9">
+	<text>Пошли.</text>
+</string>
+<string id="predb_marouder1_dialog4_phrase_10">
+	<text>Обожди, дай с мыслями собраться.</text>
+</string>
+
+
+<string id="predb_marouder3_dialog1_phrase_1">
+	<text>Проблемы?</text>
+</string>
+<string id="predb_marouder3_dialog1_phrase_2">
+	<text>Замок серьезный оказался, видно вояки оружие своё берегли. Отмычки, которые я взял с собой, не помогут. Мне нужен набор моих старых отмычек, который я оставил в нашем старом лагере. Принесешь?</text>
+</string>
+<string id="predb_marouder3_dialog1_phrase_3">
+	<text>Конечно. Где это?</text>
+</string>
+<string id="predb_marouder3_dialog1_phrase_4">
+	<text>Я помечу тебе на карте.</text>
+</string>
+<string id="predb_marouder3_dialog1_phrase_5">
+	<text>Замечательно.</text>
+</string>
+
+<string id="predb_marouder3_dialog3_phrase_1">
+	<text>Снова облом. Там внизу, перед самым сейфом - ещё одна запертая дверь.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_2">
+	<text>Ишь ты, как вояки перестраховались, наверное, знатный там хранится арсенал.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_3">
+	<text>Ты взломал одну дверь, что тебе стоит открыть и эту?</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_4">
+	<text>Э, нет, дружище. Я смотрю, там какая-то стрёмная фигня в подвале летает... В общем, я на это не подписывался. Моё дело - замки.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_5">
+	<text>Остановимся за шаг до финиша?</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_6">
+	<text>А есть возможность найти ключ от неё?</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_7">
+	<text>Я уже всё обыскал, никаких ключей нету.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_8">
+	<text>В доме напротив смотрел? Там подъезд открыт. По-идее, в нём их начальство когда-то жило, проверь.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_9">
+	<text>Хорошо.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_10">
+	<text>Я был там. Но на лестничной клетке аномалия, она меня отбрасывает и... смеётся.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_11">
+	<text>А рядом кости валяются?</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_12">
+	<text>Как узнал?</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_13">
+	<text>Я там тоже был. В общем, вот тебе одна штуковина... А точнее, монета. Положи её в коробочку, что рядом со скелетом. Только тогда иди наверх.</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_14">
+	<text>Что это даст?</text>
+</string>
+<string id="predb_marouder3_dialog3_phrase_15">
+	<text>Я думаю, что-то произойдёт. Потому что монетку эту я днем раньше оттуда забрал... В общем, поверь старому вору.</text>
+</string>
+
+<string id="predb_marouder3_dialog2_phrase_1">
+	<text>Я принёс отмычки.</text>
+</string>
+<string id="predb_marouder3_dialog2_phrase_2">
+	<text>Вот и хорошо.</text>
+</string>
+
+<string id="predb_marouder1_dialog5_phrase_1">
+	<text>Эй! Почему дверь закрылась?</text>
+</string>
+<string id="predb_marouder1_dialog5_phrase_2">
+	<text>Не знаю, чувак, мы ничего не делали.</text>
+</string>
+<string id="predb_marouder1_dialog5_phrase_3">
+	<text>Ладно, я пока что осмотрюсь здесь. А вы никуда не уходите.</text>
+</string>
+<string id="predb_marouder1_dialog5_phrase_4">
+	<text>Дык само-собой, братэлло! Только ты это... Как найдёшь что ценного в плане оружия - бросай нам через забор! Мы его здесь отсортируем.</text>
+</string>
+<string id="predb_marouder1_dialog5_phrase_5">
+	<text>Разберемся.</text>
+</string>
+
+<string id="predb_marouder1_dialog6_phrase_1">
+	<text>А вот и я.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_2">
+	<text>Ну, чё тут такое было, а? Мы слышали шмальбу, вой. Думали - всё, пиздец!</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_3">
+	<text>Не переживайте, со мной всё нормально.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_4">
+	<text>Да, не, мы думали, что раз тебе здесь пиздец, то теперь нам ворота никто не откроет, а они потом сами распахнулись, хе-хе! Ну, дык что, надыбал чего полезного?</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_5">
+	<text>Оружия не нашел. Но подстрелил какую-то странную тварь. Видел таких? Вон она валяется.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_6">
+	<text>Не-е-е, ну нафиг, такая шняга в наши планы не входит! Я с корешами должен устроить хороший шмон на этой ментовской хазе. Поможешь нам?</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_7">
+	<text>Нет, мне хватило той твари.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_8">
+	<text>Дело хозяйское.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_9">
+	<text>Я нашел детали к оружию. Нужны?</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_10">
+	<text>Я пошел.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_11">
+	<text>Покупаю. Вернее ша, погоди! Денег негусто... На бирюльку сменяешь? Красивая, под забором нашел.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_12">
+	<text>На артефакт? Конечно.</text>
+</string>
+<string id="predb_marouder1_dialog6_phrase_13">
+	<text>Нет, приберегу.</text>
+</string>
+
+
+
+<string id="predb_courier_dialog2_phrase_1">
+	<text>Всё, вертушка нам не помешает. Будем выдвигаться?</text>
+</string>
+<string id="predb_courier_dialog2_phrase_2">
+	<text>Да, в путь. Я буду двигаться по своей карте, твоя задача - прикрывать меня. Пункт назначения находится в двух километрах на юго-запад.</text>
+</string>
+<string id="predb_courier_dialog2_phrase_3">
+	<text>Двинули.</text>
+</string>
+
+
+<string id="predb_courier_dialog3_phrase_1">
+	<text>Что теперь?</text>
+</string>
+<string id="predb_courier_dialog3_phrase_2">
+	<text>Твоя работа выполнена, разведчик. Прими мою благодарность и этот скромный подарок. Также советую тебе зайти к Мойше и Кабану. Я сейчас отправлю им сообщение о том, что груз в безопасности - они отблагодарят тебя. За мной сейчас приедут, удачи.</text>
+</string>
+<string id="predb_courier_dialog3_phrase_3">
+	<text>Бывай.</text>
+</string>
+
+
+<string id="predb_trader_dialog2_phrase_1">
+	<text>Докладываю: груз доставлен в пункт назначения.</text>
+</string>
+<string id="predb_trader_dialog2_phrase_2">
+	<text>Ой-вей, какиэ ми сигодня будем весэлые! Наверно даже Моисей Соломонович достанет из-под прилавка немного наливки и будет ему хорошо. Чего и вам жэлаю!</text>
+</string>
+<string id="predb_trader_dialog2_phrase_3">
+	<text>А где Кабан?</text>
+</string>
+<string id="predb_trader_dialog2_phrase_4">
+	<text>Я конечно извиняюсь, но очень сильно попрошу вас не произносить это халяльное слово накануне Шаббата, по крайней мере здесь, в моём доме.</text>
+</string>
+<string id="predb_trader_dialog2_phrase_5">
+	<text>Кхе-м... Ну хорошо, где он?</text>
+</string>
+<string id="predb_trader_dialog2_phrase_6">
+	<text>Если ви о моём управляющем, то он, этот шлемазл, совсем не может бить как человэк! Ви понимаэте, он напоил их! Напоил своих товарищэй, то есть моих подчинённых и всё!</text>
+</string>
+<string id="predb_trader_dialog2_phrase_7">
+	<text>Что значит "всё"?</text>
+</string>
+<string id="predb_trader_dialog2_phrase_8">
+	<text>А то и значит, мой уважаэмий, что он ушел. Скрылся, вот и всё! Ви миня понимаэте?</text>
+</string>
+<string id="predb_trader_dialog2_phrase_9">
+	<text>То есть как это скрылся? А как же моя награда? Я на это дело шел не просто так.</text>
+</string>
+<string id="predb_trader_dialog2_phrase_10">
+	<text>Щито, проститэ? Какая ещё награда? Если он вам чэго-то наговорил, то я здэсь не причём, понимаэте? Вот и хорошо!</text>
+</string>
+<string id="predb_trader_dialog2_phrase_11">
+	<text>Ну вы вообще какие-то жлобы. Я столько для вас горбатился, кучу артефактов через Периметр помог переправить, а вы...</text>
+</string>
+<string id="predb_trader_dialog2_phrase_12">
+	<text>Я вас умоляю, молодой человэк, не смешите мои тапочки. Какие ещё "артефакты"? С чего ви взяли, что там били именно они?</text>
+</string>
+<string id="predb_trader_dialog2_phrase_13">
+	<text>А что ж там было?</text>
+</string>
+<string id="predb_trader_dialog2_phrase_14">
+	<text>Скажу вам одно: учитэсь! Учитэсь жить, иначе будет вам плохо, вспомните тогда Моисея Соломоновича. А вот это вам на лекарство от глупости... А теперь всё! До свидания!</text>
+</string>
+<string id="predb_trader_dialog2_phrase_15">
+	<text>Ладно.</text>
+</string>
+<string id="predb_trader_dialog2_phrase_16">
+	<text>%c[255,255,118,118]Если ты мне сейчас не заплатишь, как следует, я тебе всю лавочку разнесу!%c[default]</text>
+</string>
+<string id="predb_trader_dialog2_phrase_17">
+	<text>Ах вот значит как. В таком случаэ я винужден вам заплатить. Как ви хотитэ.</text>
+</string>
+<string id="predb_trader_dialog2_phrase_18">
+	<text>Давай гони бабло.</text>
+</string>
+
+
+<string id="predb_kontrabander5_dialog2_phrase_1">
+	<text>Эй, Ванька! Куда делся Кабан?</text>
+</string>
+<string id="predb_kontrabander5_dialog2_phrase_2">
+	<text>Напра-а-асно...</text>
+</string>
+<string id="predb_kontrabander5_dialog2_phrase_3">
+	<text>Что  напрасно?</text>
+</string>
+<string id="predb_kontrabander5_dialog2_phrase_4">
+	<text>Напра-а-асно старушка ждет сына домо-о-ой! Ик!</text>
+</string>
+<string id="predb_kontrabander5_dialog2_phrase_5">
+	<text>Пьянь подзаборная.</text>
+</string>
+
+
+
+<string id="predb_kontrabander3_dialog7_phrase_1">
+	<text>Я видел военный вертолёт.</text>
+</string>
+<string id="predb_kontrabander3_dialog7_phrase_2">
+	<text>Да, после того шороха, который наши ребята навели на КПП, вояки прислали карательную вертушку. Смотри не попадись на глаза пилотам: изрешетят, как пить дать. Теперь для них каждый, кто внизу - враг.</text>
+</string>
+<string id="predb_kontrabander3_dialog7_phrase_3">
+	<text>Сам-то не боишься?</text>
+</string>
+<string id="predb_kontrabander3_dialog7_phrase_4">
+	<text>Этот хуторок хорошо скрыт растительностью, так что пока мы в безопасности. А ты, если будешь исследовать эту территорию, помни: вертушка тебя засекла, - спрячься и пережди некоторое время. У них горючее в дефиците, долго вычислять тебя не будут. И ещё одно: человек в камуфляжном костюме менее заметен на фоне этого ландшафта, тем более с высоты. В конце-концов можно просто в кустах отсидеться.</text>
+</string>
+
+
+
+<string id="predb_kontrabander3_dialog8_phrase_1">
+	<text>А кто такой "Царь"?</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_2">
+	<text>Да был тут один такой придурок... Шибанутый на всю голову! Сначала он типа как с нами сотрудничал: помогал переправлять товар, прикрывал курьеров и так далее. Но потом такое учудил...</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_3">
+	<text>Что же он такого натворил?</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_4">
+	<text>Сначала стал речи у костра толкать, что мол "Зона на самом деле живая" ну и прочую хрень. Потом стал в рейды без оружия ходить. Мы ему: "возьми винтовку, придурок!", а он: "Она мне не нужна". Можешь такое себе представить? Короче, решили мы, что он нам нафиг не впёрся и отлучили от дел. Он первое время шлялся в окрестностях лагеря, потом пропал куда-то. Оно и не мудрено: кругом полно голодных мутантов, а тут готовый обед разгуливает.</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_5">
+	<text>В его подвале какая-то аномалия.</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_6">
+	<text>Да, мы тоже хотели туда спуститься, но не получилось. Потом забили. Забей и ты.</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_7">
+	<text>Действительно придурок какой-то.</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_8">
+	<text>Возможно, он ещё жив.</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_9">
+	<text>У "Царя" был лагерь где-то на западе. Если хочешь, могу скинуть координаты.</text>
+</string>
+<string id="predb_kontrabander3_dialog8_phrase_10">
+	<text>Скидывай.</text>
+</string>
+
+
+<string id="predb_kpp_soldier3_dialog2_phrase_1">
+	<text>Слыхал о "Царе"?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_2">
+	<text>Каком таком царе?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_3">
+	<text>Да видел недавно табличку у одного схрона: "Собственность Царя".</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_4">
+	<text>А, что-то такое помню. Кажись, был у контрабандистов такой мудило, который себя Царём называл. Говорят, настолько шибанутый был, что без оружия по Зоне шлялся. Хотя чего удивляться - все контрики пьют как ненормальные, у них мозги проспиртованы. В общем, этого чудилу его же кореша нафиг послали и жил он отдельно.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_5">
+	<text>Да уж, каких только придурков на свете не бывает.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_6">
+	<text>Всё-таки интересно было бы этого Царя найти.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_7">
+	<text>Нахрена тебе это? Но если так хочется, то могу скинуть координаты одного места, там наши с вертушки видели чью-то палатку. Возможно, это его лагерь.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog2_phrase_8">
+	<text>Давай, посмотрю.</text>
+</string>
+
+<string id="predb_king_dialog1_phrase_1">
+	<text>На колени, тварь!</text>
+</string>
+<string id="predb_king_dialog1_phrase_2">
+	<text>Что, простите?</text>
+</string>
+<string id="predb_king_dialog1_phrase_3">
+	<text>Покорись Царю.</text>
+</string>
+<string id="predb_king_dialog1_phrase_4">
+	<text>Ты что, шизик?</text>
+</string>
+<string id="predb_king_dialog1_phrase_5">
+	<text>Я - человек! Я - царь природы, царь Зоны! Повинуйся мне, тварь.</text>
+</string>
+<string id="predb_king_dialog1_phrase_6">
+	<text>Успокойся, мужик. Давай поговорим.</text>
+</string>
+<string id="predb_king_dialog1_phrase_7">
+	<text>Ах ты сволочь неблагодарная! Я тебя накажу.</text>
+</string>
+<string id="predb_king_dialog1_phrase_8">
+	<text>Подожди. Я тоже человек.</text>
+</string>
+<string id="predb_king_dialog1_phrase_9">
+	<text>Какой ещё нафиг человек? Ты же кровосос. Обыкновенный кровосос, со щупальцами.</text>
+</string>
+<string id="predb_king_dialog1_phrase_10">
+	<text>Ты понимаешь, что ты поехавший?</text>
+</string>
+
+
+<string id="predb_kontrabander4_dialog3_phrase_1">
+	<text>Как жизнь?</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_2">
+	<text>Хреново.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_3">
+	<text>Чем я могу помочь тебе, горемыка?</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_4">
+	<text>Мне уже на всё пофиг. Единственное, чего иногда хочется - чтобы боль прошла. Человек такое существо, которое может привыкнуть ко всему, кроме одного: боли.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_5">
+	<text>Может лекарство, какое тебе принести?</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_6">
+	<text>Мутация не лечится никаким лекарством. Разве что для облегчения страданий... Если найдёшь достаточное количество обезболивающего, например Ибупрофена, то неси. Я в долгу не останусь.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_7">
+	<text>Сколько необходимо порций?</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_8">
+	<text>Много. Пачек двадцать.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_9">
+	<text>Ясно.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_10">
+	<text>У меня есть 20 пачек Ибупрофена, можешь взять.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_11">
+	<text>Хорошо. Чем же тебя отблагодарить? Давай я тебя научу делать отвары.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_12">
+	<text>Что это такое?</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_13">
+	<text>Жизнь полузомби заставила меня привыкнуть к "подножному корму". Я знаю, что некоторые разведчики употребляют в пищу мясо мутантов. Методом проб и ошибок я нашел несколько рецептов приготовления отваров, дающих некоторые свойства на определённое время. Например, повышать выносливость или самочувствие, сопротивляться радиации.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_14">
+	<text>Я не против.</text>
+</string>
+<string id="predb_kontrabander4_dialog3_phrase_15">
+	<text>Вот, я записал на этой бумажке, возьми. Теперь ты сможешь готовить новые отвары на костре.</text>
+</string>
+
+<string id="predb_courier_guard_dialog_phrase_1">
+	<text>Эй, мужик.</text>
+</string>
+<string id="predb_courier_guard_dialog_phrase_2">
+	<text>Чего тебе?</text>
+</string>
+<string id="predb_courier_guard_dialog_phrase_3">
+	<text>Давно в Зоне?</text>
+</string>
+<string id="predb_courier_guard_dialog_phrase_4">
+	<text>В первый раз. Но я не боюсь: мои охотничьи навыки мне помогут.</text>
+</string>
+
+<string id="predb_kontrabander2_dialog1_phrase_1">
+	<text>Ты медик? У меня проблема с радиацией.</text>
+</string>
+<string id="predb_kontrabander2_dialog1_phrase_2">
+	<text>Ну да, я по образованию медик. Что там у тебя?</text>
+</string>
+<string id="predb_kontrabander2_dialog1_phrase_3">
+	<text>Тот урод на фабрике попал в меня из радиоактивного оружия. Теперь я не могу вывести радиацию из своего организма. Что делать?</text>
+</string>
+<string id="predb_kontrabander2_dialog1_phrase_4">
+	<text>Так тебя, значит, как нашего Никиту подстрелили? Не завидую. Дай-ка посмотрю рану... Видишь, какое дело: эти радиоактивные заряды заносят в кровь какое-то токсичное вещество, которое потом распространяется по всему организму, и просто так его не выведешь. Твоё ранение не такое глубокое, как у Никиты, но, тем не менее, токсины попали в рану. Хорошее переливание крови, конечно, помогло бы, но...</text>
+</string>
+<string id="predb_kontrabander2_dialog1_phrase_5">
+	<text>Вообще никаких идей?</text>
+</string>
+<string id="predb_kontrabander2_dialog1_phrase_6">
+	<text>В условиях Зоны ты эту болячку точно не вылечишь.</text>
+</string>
+<string id="predb_kontrabander2_dialog1_phrase_7">
+	<text>Пиздец...</text>
+</string>
+
+<string id="predb_kontrabander3_dialog9_phrase_1">
+	<text>У меня проблема с радиацией.</text>
+</string>
+<string id="predb_kontrabander3_dialog9_phrase_2">
+	<text>Что такое?</text>
+</string>
+<string id="predb_kontrabander3_dialog9_phrase_3">
+	<text>Тот урод на фабрике попал в меня из радиоактивного оружия. Теперь я не могу вывести радиацию из своего организма. Что делать?</text>
+</string>
+<string id="predb_kontrabander3_dialog9_phrase_4">
+	<text>Пердеть и бегать... Иди к Михалычу, он на скорой помощи работал. Должен помочь.</text>
+</string>
+
+<string id="predb_kontrabander5_dialog3_phrase_1">
+	<text>У меня проблема с радиацией.</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_2">
+	<text>Рассказывай.</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_3">
+	<text>Тот урод на фабрике попал в меня из радиоактивного оружия. Теперь я не могу вывести радиацию из своего организма. Что делать?</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_4">
+	<text>Ну что ж ты так подставился? Ладно, что с тобой, горемыкой, делать. В общем, подскажу один народный метод, но только ты никому о нём не рассказывай, добро?</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_5">
+	<text>Добро.</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_6">
+	<text>Есть у меня рецепт одной настойки, делается на водке. Но там процесс сложный, водяры придется потратить очень много... Литров десять минимум. Ещё пять рук зомби в придачу и один антирад!</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_7">
+	<text>Ни хрена себе. Это что, ванну из водки принять, что ли?</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_8">
+	<text>Не, не гони, подожди. Короче, ты мне это дело принеси, а я сам сварганю. Напою и научу этот отвар готовить. Договорились? Ящик водки с тебя.</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_9">
+	<text>Принесу.</text>
+</string>
+<string id="predb_kontrabander5_dialog3_phrase_10">
+	<text>Не вешай мне лапшу на уши, алконавт.</text>
+</string>
+
+<string id="predb_kontrabander5_dialog4_phrase_1">
+	<text>Я принёс всё, что ты просил.</text>
+</string>
+<string id="predb_kontrabander5_dialog4_phrase_2">
+	<text>Тэ-э-экс, хорошо... Значит, водочку мы взбалтываем и немножко принимаем внутрь - для пробы. Вроде подходящая. А то знаешь, щас всякие подделки бывают. Так вот, наливаем это сюда, а вот это кладём сюда. Приправляем, как следует таблеточками, чтоб головка утром не болела. Ну и готовим.</text>
+</string>
+<string id="predb_kontrabander5_dialog4_phrase_3">
+	<text>Ты говорил, что нужен ящик водки, а использовал только половину.</text>
+</string>
+<string id="predb_kontrabander5_dialog4_phrase_4">
+	<text>Это дело тонкое, может с первого раза не получиться... Немного подождём. Кажется всё.</text>
+</string>
+<string id="predb_kontrabander5_dialog4_phrase_5">
+	<text>Готово?</text>
+</string>
+<string id="predb_kontrabander5_dialog4_phrase_6">
+	<text>Да, вот тебе отвар, я называю его "Мёртвая вода". Вещь тяжёлая, по мозгам бъет крепко, так что не переборщи. Зато о радиации можешь забыть на целый день! А рецепт я тебе запишу.</text>
+</string>
+<string id="predb_kontrabander5_dialog4_phrase_7">
+	<text>Благодарствую.</text>
+</string>
+
+
+<string id="predb_catwoman_dialog1_phrase_1">
+	<text>Ты в порядке?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_2">
+	<text>Ох... Вроде.</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_3">
+	<text>Ранения есть?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_4">
+	<text>Нет, эти псы почему-то не тронули меня. Но мои друзья...</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_5">
+	<text>Сочувствую. Кто ты такая? Как здесь очутилась?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_6">
+	<text>Мы туристы. За деньги договорились с одним человеком, он провёл на сюда. Думали, что ту безопасно! Но потом навигатор почему-то заглючил, а стрелка компаса крутилась в разные стороны. В общем, мы заблудились. А вы кто такой?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_7">
+	<text>Я разведчик. Не бойся, не трону.</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_8">
+	<text>Большое вам спасибо, что защитили меня от этих уродливых собак! Скажите, а вы здесь один? У вас есть напарники?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_9">
+	<text>Нет, напарников нету. Слушай, надо тебя как-то отсюда вывести. Вспомни, откуда вы пришли.</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_10">
+	<text>Не помню, у меня в голове всё смешалось. А вот валерьянка у вас найдётся?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_11">
+	<text>Валерьянка? Это ещё зачем?</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_12">
+	<text>Потому что я люблю валерьянку. А ещё я люблю одиноких мальчиков. Особенно их мозги.</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_13">
+	<text>Не понял...</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_14">
+	<text>Таких, как ты.</text>
+</string>
+<string id="predb_catwoman_dialog1_phrase_15">
+	<text>Что??</text>
+</string>
+
+
+<string id="predb_trader_dialog3_phrase_1">
+	<text>Чем могу быть полезен?</text>
+</string>
+<string id="predb_trader_dialog3_phrase_2">
+	<text>Я смотрю ви молодой, энергичный... Это хорошо! Надо вашу энергию направить в нужное русло. Скажитэ, а ви бистро бегаэте?</text>
+</string>
+<string id="predb_trader_dialog3_phrase_3">
+	<text>Ну допустим.</text>
+</string>
+<string id="predb_trader_dialog3_phrase_4">
+	<text>Тут такое щепетильное дэло... Понимаэте, надо застрэлить одну тварь. О Господи, не хочу произносить это слово накануне светлого праздника Йом-Киппура, но придётся. В общем, она из тэх тварей, что принадлежат к свинячьей нечистой породе. Ви миня поняли?</text>
+</string>
+<string id="predb_trader_dialog3_phrase_5">
+	<text>Кабана что ли убить надо?</text>
+</string>
+<string id="predb_trader_dialog3_phrase_6">
+	<text>И таки да, причём немэдленно! Плачу щедро.</text>
+</string>
+<string id="predb_trader_dialog3_phrase_7">
+	<text>Согласен, где этот кабан?</text>
+</string>
+<string id="predb_trader_dialog3_phrase_8">
+	<text>Увы, нет желания.</text>
+</string>
+<string id="predb_trader_dialog3_phrase_9">
+	<text>Это нечистое существо проживаит недалеко от тропинки, по которой ходят наши куръери. Вот вам координати. Знайте: тварь очень-очень живучая!</text>
+</string>
+<string id="predb_trader_dialog3_phrase_10">
+	<text>Замечательно.</text>
+</string>
+
+<string id="predb_trader_dialog4_phrase_1">
+	<text>Матёрый кабан уничтожен.</text>
+</string>
+<string id="predb_trader_dialog4_phrase_2">
+	<text>А вот и хорошо!</text>
+</string>
+<string id="predb_trader_dialog4_phrase_3">
+	<text>Что на счёт награды?</text>
+</string>
+<string id="predb_trader_dialog4_phrase_4">
+	<text>Если ви меня спросите, что я думаю о жадних людях, так я вам отвечу, что ничего хорошего!</text>
+</string>
+<string id="predb_trader_dialog4_phrase_5">
+	<text>И на том спасибо.</text>
+</string>
+
+
+<string id="predb_kpp_soldier3_dialog4_phrase_1">
+	<text>Я от капитана.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_2">
+	<text>Хорошо. Я расскажу тебе об этой местности, чтобы тебе было легче её исследовать. Здесь окраина Зоны - местность, гораздо меньше остальных пострадавшая от аномального воздействия. Когда-то в этих местах базировались военные, не пограничники, как мы, а другие. Кажись, это были ПВО-шники, хотя не помню точно. От них осталась военная база на холме.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_3">
+	<text>[...далее]</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_4">
+	<text>Ещё здесь имеется заброшенная пожарная часть. После второй аварии её так спешно эвакуировали, что по слухам бросили там много полезного... Впрочем, это лишь слухи. Однако недавно там видели каких-то подозрительных чуваков, так что будь осторожен. Хочу предупредить: встретишь мародёров - стреляй без сомнений! Они нашего брата-пограничника не жалуют, ну и мы их тоже...</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_5">
+	<text>[...далее]</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_6">
+	<text>Так вот: есть ещё деревенька заброшенная. Туда лучше не суйся, потому что говорят, что там люди пропадают. Точно знаю, что один наш разведчик оттуда не вернулся, но это только за последний месяц, а сколько до меня было - чёрт его знает. Вообще деревня эта особого интереса не представляет, но контрабандисты там, кстати, вполне могут оборудовать своё логово. Смотри и думай сам.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_7">
+	<text>[...далее]</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_8">
+	<text>Ну и небольшая фабрика за холмом. Что там производили - без понятия. Однако разведчик наш, оттуда вернувшийся, сказал, что его дозиметр там зашкаливал на каждом углу. В общем, без таблеток или хорошего комбеза я бы туда не пошел. Вот в принципе и всё. </text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_9">
+	<text>Спасибо за экскурс.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_10">
+	<text>Я знаю, что Капитан попросил тебя помочь с поисками контрабандистов, однако он не сказал тебе одной важной вещи. Дело в том, что в последнее время до нашего командования дошла информация о том, что якобы через окраину эти самые контрабандисты должны переправить очень ценный и опасный груз. Наша задача - помешать им это осуществить. Кто его знает, что они там протащить хотят, - эти парни настолько на бабле помешаны, что чёрта лысого из Зоны вынесут, дай им только волю... Так что миссия твоя очень важная. Дам один совет: прогуляйся сначала в восточную часть окраины, там есть одна рощица, в тени деревьев, которой вполне может скрываться лагерь.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog4_phrase_11">
+	<text>Ну что ж, постараюсь не подвести.</text>
+</string>
+
+
+<string id="predb_kpp_soldier5_dialog3_phrase_1">
+	<text>Мне удалось найти лагерь контрабандистов.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_2">
+	<text>Слушаю.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_3">
+	<text>Они прятались на небольшом хуторе, к востоку отсюда. Когда я там появился, их уже и след простыл.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_4">
+	<text>Ты хорошо осмотрел это место?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_5">
+	<text>Да и кое-что нашел. Блокнот, в котором есть информация о "грузе" и "Кабане с его ребятами". Также мне попался список радиочастот и упоминание о "запасном лагере".</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_6">
+	<text>Значит, информация подтверждается - груз они потащат через Окраину. А Кабан это, скорей всего, их главный. Где-то я такую кличку уже слышал... Жекан, мне надо связаться со штабом, большое спасибо тебе за помощь. Что касается этого списка частот, то я сейчас дам задание нашему радисту, пускай их просканирует. Возможно, нам удастся подслушать их переговоры и выяснить местонахождения этого запасного лагеря... Однако задача ещё не выполнена, надо продолжать поиски, контрабандисты что-то замышляют.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_7">
+	<text>Хорошо. Что теперь?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_8">
+	<text>Нужно проверить пожарную часть. Согласно документам, там есть какие-то подземные помещения, возможно подвалы, в которых могут прятаться наши "друзья".</text>
+</string>
+<string id="predb_kpp_soldier5_dialog3_phrase_9">
+	<text>Я проверю это место.</text>
+</string>
+
+
+<string id="predb_kpp_soldier5_dialog4_phrase_1">
+	<text>Обследовав пожарную станцию, я наткнулся на мародёров. Пришлось пострелять.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_2">
+	<text>Много их там было?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_3">
+	<text>Не очень. У их главного была инфа о том, что где-то там спрятано оружие, но я ничего не нашел. Контрабандистов тоже не видел.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_4">
+	<text>Что ещё там было?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_5">
+	<text>Что-то вроде наблюдательного пункта. Там я нашел записи военных, в которых говорится об упавшем вертолёте.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_6">
+	<text>Ага, помню эту историю. Месяц тому назад где-то здесь пропала вертушка со спецназовцами, наши выслали несколько поисковых групп, хотели засечь их сигнал. Однако ничего не нашли.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_7">
+	<text>Так вот в этих записях говорится, что они что-то засекли.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_8">
+	<text>Я нашел. Вертушка эта лежит на холме, севернее заброшенной деревни. Что характерно - тел внутри нет, возможно, экипаж выжил. Кроме того, мне попалась какая-то карта.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_8_1">
+	<text>Возможно, стоит поискать этот вертолёт.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_9">
+	<text>Вот это неожиданность! Да, видно ты неплохой следопыт, настоящий, как это там говорится, "сталкер", да? Карта эта тактическая, на ней есть пометки. Вот здесь, похоже, последняя. Обозначает она как раз ту самую заброшенную деревню. Её старое название - Калачи. Скорей всего, оставшиеся в живых члены экипажа и спецназовцы направились туда. Что ж, теперь нашей дополнительной задачей будет их поиск. Необходимо найти их и если кто остался жив, привести его сюда.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_10">
+	<text>А контрабандисты?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_11">
+	<text>Мне пришла информация из штаба по этому "Кабану". Тип очень хитрый. Раньше занимался мелкими афёрами, разводил людей и фирмы на бабло, за что отсидел. Год назад вышел на свободу и сразу же направился сюда, в Зону. Видимо за решеткой он обзавелся знакомыми, которые порекомендовали его нынешним хозяевам. Всё это заставляет нас сделать вывод о том, что искать его надо не в обычном месте...</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_12">
+	<text>А в каком?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_13">
+	<text>В необычном. Сейчас объясню: один мой разведчик недавно наткнулся на малозаметный овраг неподалёку отсюда. Исследовал его и увидел, что там есть вход в какую-то пещеру или нору. Сначала я думал, что это логово местного зверья, но потом мне пришла в голову мысль...</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_14">
+	<text>Они оборудовали подземное логово?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_15">
+	<text>Маловероятно, но проверить надо. Итак, перед тобой две задачи. Первое: наведаться в деревню, поискать спецназовцев и второе: прошерстить тот овраг и найти вход в пещеру.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_16">
+	<text>Сделаем и то и другое.</text>
+</string>
+
+<string id="predb_kpp_soldier5_dialog4_phrase_17">
+	<text>Наверное, этот вертолёт упал неподалёку отсюда... Слушай, Жекан, если сигнал был, то это хорошо. Военные аварийные маячки могут работать очень долго. Мы можем найти этот вертолёт.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_18">
+	<text>У вас тут есть радио.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_19">
+	<text>Есть, но необходим мощный приёмник с усилителем и очень хорошая антенна. Кстати, за пожаркой вроде есть радиовышка. Может, использовать её?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_20">
+	<text>Как ты предлагаешь это сделать?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_21">
+	<text>Забраться туда, подключить радиостанцию и просканировать диапазон коротких волн.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog4_phrase_22">
+	<text>Легко сказать.</text>
+</string>
+
+
+<string id="predb_kpp_soldier5_dialog5_phrase_1">
+	<text>Мне удалось побывать в той пещере.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog5_phrase_2">
+	<text>Продолжай.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog5_phrase_3">
+	<text>Никаких контрабандистов там нет.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog5_phrase_4">
+	<text>Плохо дело! Получается, что след Кабана мы потеряли.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog5_phrase_5">
+	<text>Где ещё он может прятаться?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog5_phrase_6">
+	<text>Есть ещё одно подходящее место - это фабрика. Когда-то на ней делали сельскохозяйственные удобрения, теперь там почему-то сильно фонит. Согласись, не самое удачное место для убежища, но поскольку Кабан наш - тварь хитрая, то, как раз это обстоятельство он мог использовать для отвода глаз.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog5_phrase_7">
+	<text>Пойду на фабрику.</text>
+</string>
+
+
+
+<string id="predb_kpp_soldier6_dialog1_phrase_1">
+	<text>Я смотрю у вас тут транспорт есть.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_2">
+	<text>БТР, что у дороги стоит, транспортом назвать язык не поворачивается. С тех пор, как нам его на автоплатформе приволокли, он ни разу не ездил, стоит чисто для понта. И патронов к пулемёту нет.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_3">
+	<text>У вас есть кто-то, кто мог бы его починить?</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_4">
+	<text>Механик вообще-то я, но у меня нет материалов.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_5">
+	<text>Бардак.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_6">
+	<text>Какие материалы тебе нужны?</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_7">
+	<text>Ремкомплект для техники, набор для ревизии дизельного двигателя, а также хороший аккумулятор. Если найдешь все эти вещи - приноси, тогда я сделаю из этой консервной банки средство передвижения.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog1_phrase_8">
+	<text>Хорошо.</text>
+</string>
+
+
+<string id="predb_kpp_soldier6_dialog2_phrase_1">
+	<text>У меня есть всё необходимое для ремонта БТР-а.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog2_phrase_2">
+	<text>Спасибо. Думаю, в скором времени ты сможешь на нём прокатиться.</text>
+</string>
+
+
+<string id="predb_kontrabander4_dialog4_phrase_1">
+	<text>Бросай оружие!</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_2">
+	<text>Чёрта с два. Ты кто такой?</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_3">
+	<text>Я тот, кто вышибет тебе мозги, если не сдашься, проклятый контрабандист!</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_4">
+	<text>А, так ты, наверное, переодетый вояка? Или их прихвостень... Опусти ствол, я не буду сопротивляться. Давай поговорим.</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_5">
+	<text>Где ваш лагерь?</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_6">
+	<text>У меня нет лагеря. Да, я контрабандист, но бывший. Мои товарищи изгнали меня после того, как я подцепил одну редкую болезнь.</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_7">
+	<text>Что ещё за болезнь?</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_8">
+	<text>То ли болезнь, то ли мутация... Моё тело источает радиацию, но сам я от неё не гибну. Вернее, ущерб здоровью есть, но незначительный. Что касается моих бывших друзей, то я сам их ненавижу и открываю огонь, как только замечаю кого-то из них на горизонте. Где находится теперь их лагерь? Скорей всего неподалёку от заброшенной деревни, за маленьким кладбищем.</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_9">
+	<text>Ну что ж, спасибо за инфу. А теперь сдохни, грязный урод.</text>
+</string>
+<string id="predb_kontrabander4_dialog4_phrase_10">
+	<text>Это всё, что я хотел узнать.</text>
+</string>
+
+<string id="predb_kpp_soldier5_dialog6_phrase_1">
+	<text>Главарь контрабандистов ликвидирован.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_2">
+	<text>Ну, Жекан, ты настоящий опер! Шучу, шучу. Ладно, а что на счёт груза?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_3">
+	<text>У лидера была инфа о том, что Курьер, который должен понести груз через Окраину, прибудет к заброшенному хутору.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_4">
+	<text>Это шанс. То, что сами контрабандисты уничтожены, это замечательно, но главное - не дать им вынести из Зоны этот самый груз... Теперь, когда Курьеру не на кого будет положиться, его задача усложняется, но всё же груз он потащит при любых условиях.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_5">
+	<text>Будем "брать" этого Курьера?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_6">
+	<text>Будем. Живьем вряд ли получится, потому что он будет с охраной. В общем, ты знаешь, что делать.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_7">
+	<text>А груз? Как поступим с ним?</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_8">
+	<text>Доставишь его сюда. А в Штабе разберутся.</text>
+</string>
+<string id="predb_kpp_soldier5_dialog6_phrase_9">
+	<text>Выступаю.</text>
+</string>
+
+<string id="predb_komandr_agent_dialog1_phrase_1">
+	<text>Привет! Что произошло?</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_2">
+	<text>Полная хрень творится, скажу я тебе. Нашего капитана вдруг срочно вызвали в штаб. Через полчаса прилетела вертушка с базы и увезла его.</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_3">
+	<text>С чего бы такая спешка?</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_4">
+	<text>Мы с сержантом полагаем, что твои с ним действия по устранению контрабандистов кому-то там, за периметром, сильно помешали... Не даром же говорят, что в штабе многие офицеры подкуплены одной хитрой "лавочкой".</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_5">
+	<text>Что ещё за "лавочка"?</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_6">
+	<text>"Кардигановские лаборатории", слыхал? Это якобы они курировали контрабандистов и через них таскали грузы из Зоны. В общем, теперь нашего Чернова скорей всего переведут, а сюда пришлют кого понадёжнее.</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_7">
+	<text>Что мне делать с грузом?</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_8">
+	<text>Капитан перед вылетом дал секретное распоряжение спрятать груз в Зоне, чтобы его никто не нашел. Передай его мне, а я об этом позабочусь.</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_9">
+	<text>Этого следовало было ожидать.</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_10">
+	<text>Не переживай, всё будет хорошо. Теперь контрабандисты и их хозяева не скоро оправятся и смогут возобновить свои дела. Прощай.</text>
+</string>
+<string id="predb_komandr_agent_dialog1_phrase_11">
+	<text>До свидания.</text>
+</string>
+
+
+<string id="predb_kpp_soldier3_dialog5_phrase_1">
+	<text>Что слышно о капитане?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog5_phrase_2">
+	<text>Что слышно... Повезло нашему Чернову, на повышение пошел.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog5_phrase_3">
+	<text>Серьезно? А мне сказали, что его в отставку отправят.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog5_phrase_4">
+	<text>Глупости, кто тебе такое говорил?</text>
+</string>
+<string id="predb_kpp_soldier3_dialog5_phrase_5">
+	<text>Ваш разведчик, Саша.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog5_phrase_6">
+	<text>Нашего разведчика звали не Саша, а Николай, он неделю назад без вести пропал. Кто там тебе чего наплёл, я не знаю. Кстати, капитан просил передать тебе какой-то ключ, вот, возьми.</text>
+</string>
+<string id="predb_kpp_soldier3_dialog5_phrase_7">
+	<text>Ну спасибо.</text>
+</string>
+
+
+<string id="predb_village_sold_dialog1_phrase_1">
+	<text>Очнись.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_2">
+	<text>Вот сука... Пошел прочь от меня...</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_3">
+	<text>Спокойно, мужик. Я мирный.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_4">
+	<text>А, разведчик. Извини, я принял тебя за другого. Тут был кто-то... Кто-то невидимый. Чёрт, башка раскалывается!</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_5">
+	<text>Объясни, что произошло.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_6">
+	<text>Мы летели на КПП, вертолёт попал в воздушную аномалию. Это было ещё месяц назад. Выживших было трое: я, мой напарник и пилот. Спасаясь от мутантов, мы укрылись в этой деревне, но здесь нас подстерегала иная опасность - невидимка.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_7">
+	<text>Невидимка?</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_8">
+	<text>Голос, доносящийся из пустоты... Он говорил с нами, давал разные указания. Подавлял сопротивление, воздействуя на наши мозги чудовищной головной болью. Сначала мы повиновались, но потом это существо стало издеваться над нами, заставляло прыгать с деревьев, драться с мутантами с одним ножом, скакать через аномалии. Оно словно бы забавлялось с нами. Вследствие таких забав в живых остался только я. И тогда я решил сопротивляться до последнего, приняв специальный препарат, блокирующий мозговую деятельность. От него человек впадает в анабиоз и в таком состоянии может прожить до 4-х дней. Затем пришел ты.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_9">
+	<text>Как бы то ни было, я вернул тебя к жизни.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_10">
+	<text>Спасибо.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_11">
+	<text>Какова была ваша миссия?</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_12">
+	<text>Зачистка опечатанной военной базы. Звучит глупо, но по разведывательным данным, там завелись какие-то мутанты, рядом видели подозрительных личностей, а объект считался секретным.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_13">
+	<text>Как проникнуть на эту базу?</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_14">
+	<text>Нужно знать код от двери. Вот он: 6765412.</text>
+</string>
+<string id="predb_village_sold_dialog1_phrase_15">
+	<text>Спасибо.</text>
+</string>
+<string id="predb_village_sold_dialog3_phrase_16">
+	<text>Отвести тебя на КПП к военным?</text>
+</string>
+<string id="predb_village_sold_dialog3_phrase_17">
+	<text>Буду очень благодарен.</text>
+</string>
+
+<string id="predb_kpp_komander_task1">
+	<text>Кто этот оборванец, сидящий в углу?</text>
+</string>
+<string id="predb_kpp_komander_task2">
+	<text>Это пленный контрабандист. Прошлой ночью пролез к нам на КПП и хотел украсть патроны, хорошо прапорщик вовремя его заметил. Ну а сегодня дружки пришли его выручать.</text>
+</string>
+<string id="predb_kpp_komander_task3">
+	<text>И что вы теперь с ним будете делать? Завалите что ли?</text>
+</string>
+<string id="predb_kpp_komander_task4">
+	<text>Расслабься, нарушитель. Никто его и пальцем не тронет, а просто через пару дней прилетит вертушка и заберёт его за периметр, а там, как ты уже догадываешься, его будет ждать следственный изолятор и статья 696 УК "За нарушение режима специальных территорий".</text>
+</string>
+<string id="predb_kpp_komander_task5">
+	<text>Ясненько.</text>
+</string>
+
+
+<string id="predb_kpp_soldier6_dialog3_phrase_1">
+	<text>Не стыдно торговать казёным имуществом?</text>
+</string>
+<string id="predb_kpp_soldier6_dialog3_phrase_2">
+	<text>Ничего подобного. Казёного я не продаю, это всё моё личное.</text>
+</string>
+<string id="predb_kpp_soldier6_dialog3_phrase_3">
+	<text>Как скажешь.</text>
+</string>
+
+
+<string id="predb_village_sold_dialog2_phrase_1">
+	<text>Порядок, "Сокол"?</text>
+</string>
+<string id="predb_village_sold_dialog2_phrase_2">
+	<text>Нормалёвич! Спасибо тебе, разведчик за то, что стал моим проводником.</text>
+</string>
+<string id="predb_village_sold_dialog2_phrase_3">
+	<text>Если что - обращайся.</text>
+</string>
+
+	<string id="predb_soldier_junk_dialog_phrase_191">
+		<text>Дезинтегратор ДАН-15. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_192">
+		<text>Гаечный ключ 24х30. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_193">
+		<text>Ключ доктора. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_194">
+		<text>Неработающая портативная радиостанция. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_195">
+		<text>Планшет летчика. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_196">
+		<text>Ведро. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_197">
+		<text>Набор для ревизии. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_198">
+		<text>Ключ контрабандиста. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_199">
+		<text>Ключ от ящика военных. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_1991">
+		<text>Электросхема. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_1992">
+		<text>Записка Суслика. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_1993">
+		<text>Связка ключей. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_1994">
+		<text>Священный Биборан. Интересует?</text>
+	</string>	
+	<string id="predb_soldier_junk_dialog_phrase_1995">
+		<text>Лопата. Интересует?</text>
+	</string>
+	<string id="predb_soldier_junk_dialog_phrase_1996">
+		<text>Башка. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_191">
+		<text>Дезинтегратор ДАН-15. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_192">
+		<text>Гаечный ключ 24х30. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_193">
+		<text>Ключ доктора. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_194">
+		<text>Неработающая портативная радиостанция. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_195">
+		<text>Планшет летчика. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_196">
+		<text>Ведро. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_197">
+		<text>Набор для ревизии. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_198">
+		<text>Ключ контрабандиста. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_199">
+		<text>Ключ от ящика военных. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_1991">
+		<text>Электросхема. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_1992">
+		<text>Записка Суслика. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_1993">
+		<text>Связка ключей. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_1994">
+		<text>Священный Биборан. Интересует?</text>
+	</string>	
+	<string id="predb_trader_junk_dialog_phrase_1995">
+		<text>Лопата. Интересует?</text>
+	</string>
+	<string id="predb_trader_junk_dialog_phrase_1996">
+		<text>Башка. Интересует?</text>
+	</string>	
+</string_table>

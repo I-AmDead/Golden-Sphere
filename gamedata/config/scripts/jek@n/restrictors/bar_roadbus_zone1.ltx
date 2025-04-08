@@ -1,0 +1,16 @@
+[logic]
+active = sr_particle@1
+
+[sr_particle@1]
+name = anomaly2\group_items\heat_particle_trails
+path = bar_roadbus_zone_point
+mode = 2
+looped = true
+on_info = {+bar_road_bus_off} nil
+on_actor_inside = {!actor_near_bar_scelets} nil %=bar_roadbus_zone_effect2%
+
+[sr_idle@kill]
+on_timer = 200|sr_particle@1 %=bar_roadbus_zone_effect2%
+
+
+

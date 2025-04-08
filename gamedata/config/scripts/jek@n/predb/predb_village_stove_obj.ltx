@@ -1,0 +1,21 @@
+[collide]
+ignore_static
+
+[logic]
+active = {+predb_stove_fired} ph_sound, ph_idle@1
+
+[ph_idle@1]
+tips      = predb_village_stove_obj_use
+on_use = {=actor_has_item(firewood)} ph_idle@2 %=run_postprocess(agr_u_fade) =remove_item(firewood)%
+
+[ph_idle@2]
+on_timer = 2000|ph_idle@3 %=play_snd(characters_voice\scenario\matches)%
+
+[ph_idle@3]
+on_timer = 2000|ph_sound %=spawn_predb_village_fireart +predb_stove_fired%
+
+[ph_sound]
+snd = fire_burns
+looped = true
+
+

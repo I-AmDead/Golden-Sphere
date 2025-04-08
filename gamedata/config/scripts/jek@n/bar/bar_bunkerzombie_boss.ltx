@@ -1,0 +1,22 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@base1
+on_death = death
+
+[walker@base1]
+path_walk = bar_bunker_prestol_walk1
+path_look = bar_bunker_prestol_look1
+;on_timer = 100000 | walker@base2
+
+[walker@base2]
+path_walk = bar_bunker_prestol_walk2
+path_look = bar_bunker_prestol_look2
+danger = danger_condition
+on_timer = 100000 | walker@base1
+
+
+[death]
+on_info = %+bar_bunkerzombie_boss_dead%
+

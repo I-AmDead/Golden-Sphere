@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<afscanner_6>
+
+<panel x="160" y="420" width="600" height="870" stretch="1">
+	<texture x="0" y="0" width="1014" height="1014">ui\afscanner\skanner_screen_6</texture>
+</panel>
+
+
+	<btn_1 x="450" y="653" width="20" height="20">
+		<texture_e>ui\afscanner\skanner_button3</texture_e>
+		<texture_h>ui\afscanner\skanner_button4</texture_h>
+		<texture_t>ui\afscanner\skanner_button4</texture_t>
+	</btn_1>
+	<btn_2 x="480" y="653" width="20" height="20">
+		<texture_e>ui\afscanner\skanner_button1</texture_e>
+		<texture_h>ui\afscanner\skanner_button2</texture_h>
+		<texture_t>ui\afscanner\skanner_button2</texture_t>
+	</btn_2>
+	<btn_3 x="520" y="653" width="20" height="20">
+		<texture_e>ui\afscanner\skanner_button_pulse1</texture_e>
+		<texture_h>ui\afscanner\skanner_button_pulse2</texture_h>
+		<texture_t>ui\afscanner\skanner_button_pulse2</texture_t>
+	</btn_3>
+
+
+	<btn_quit x="529" y="680" width="20" height="20">
+		<texture_e>ui\afscanner\skanner_button_off1</texture_e>
+		<texture_t>ui\afscanner\skanner_button_off2</texture_t>
+	</btn_quit>
+
+</afscanner_6>
+

@@ -1,0 +1,54 @@
+[logic]
+active = heli_move@waiting
+
+; Висим за локацией и ждем, пока позовут
+[heli_move@waiting]
+path_move = esc_heli1_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+helicrash_survival_ready_to_go12} heli_move@patrol
+
+
+
+[heli_move@patrol]
+path_move = esc_heli1_point_patrol
+engine_sound = true
+; combat_safe_altitude = -30
+combat_ignore = false
+combat_enemy = actor
+combat_use_rocket = false
+combat_use_mgun = true
+invulnerable = true
+immortal = true
+default_velocity = 20
+on_timer = 50000 | heli_move@to_sit %-post_heli_start_patrol =esc_post_heli_landing_message%
+
+[heli_move@to_sit]
+path_move = esc_heli1_point_sit
+engine_sound = true
+; combat_safe_altitude = -30
+combat_ignore = false
+combat_enemy = nil
+combat_use_rocket = false
+combat_use_mgun = true
+invulnerable = true
+immortal = true
+default_velocity = 4
+on_signal = arrived | heli_move@sit %=spawn_esc_post_pilot%
+
+[heli_move@sit]
+path_move = esc_heli1_point_sit
+engine_sound = true
+; combat_safe_altitude = -30
+combat_ignore = false
+combat_enemy = nil
+combat_use_rocket = false
+combat_use_mgun = true
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+post_heli_start_patrol} heli_move@patrol

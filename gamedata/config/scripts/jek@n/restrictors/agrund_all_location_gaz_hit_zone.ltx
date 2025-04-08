@@ -1,0 +1,13 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_timer = 2000 | sr_idle@2 %=play_gaz_hit_on_actor%
+on_info = {+agrund_gaz_clear} nil
+
+[sr_idle@2]
+on_timer = 2000 | sr_idle@1 %=play_gaz_hit_on_actor%
+on_info = {+agrund_gaz_clear} nil
+
+
+

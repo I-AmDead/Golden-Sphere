@@ -1,0 +1,13 @@
+[logic]
+active = nil
+
+[sr_idle]
+on_info = {-underbridge_zone_uncharged} sr_particle@1
+
+[sr_particle@1]
+name = anomaly2\artefact_bold_blast_finished
+path = underbridge_anomaly_point1_2
+mode = 2
+looped = true
+on_info = {+underbridge_zone_uncharged} sr_idle
+

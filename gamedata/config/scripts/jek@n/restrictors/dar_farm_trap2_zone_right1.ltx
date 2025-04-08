@@ -1,0 +1,18 @@
+[logic]
+active = sr_particle
+
+[sr_particle]
+name = monsters\group\polter_trail_01
+;name = static\wave_distort01
+;name = anomaly2\artefact\artefact_electra_idle_01
+path = dar_farm_trap2_zone_right1_point
+mode = 2
+looped = true
+on_actor_inside = {-dar_farm_trap_teleport_stage8 +dar_farm_trap_teleport_stage5 +dar_farm_trap_teleport_stage6 +dar_farm_trap_teleport_stage7} sr_idle %+dar_farm_trap_teleport_stage8 =play_snd(ambient\underground\strange_noise_2)%
+
+
+[sr_idle]
+on_info = {-dar_farm_trap_teleport_stage5 -dar_farm_trap_teleport_stage6 -dar_farm_trap_teleport_stage7 -dar_farm_trap_teleport_stage8} sr_particle
+
+
+

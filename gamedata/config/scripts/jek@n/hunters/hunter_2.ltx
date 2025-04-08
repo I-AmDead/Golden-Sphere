@@ -1,0 +1,130 @@
+; Василий, Свалка
+
+[smart_terrains]
+none = true
+
+[logic]
+active = {+tirsa_pda_info} walker@garb_hostage, {+hunter2_in_vagon} walker@in_vagon, walker@start
+on_death = death
+threshold = threshold@hunter2_threshold
+;trade = misc\trade_hunter2.ltx
+
+[walker@start]
+path_walk = garb_hunter_walk_vagon
+path_look = garb_hunter_look_vagon
+on_timer      = 10 | walker@to_vagon %=make_invulnerable%
+
+[walker@to_vagon]
+path_walk = garb_hunter_walk_vagon
+path_look = garb_hunter_look_vagon
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+meet = no_meet
+on_signal       = arrived | walker@at_vagon %+hunter2_at_garb_vagon%
+
+[walker@at_vagon]
+path_walk = garb_hunter_walk_vagon
+path_look = garb_hunter_look_vagon
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {-esc_hunter_dead} remark@hello_to_hunter1
+on_info2 = {+esc_hunter_dead} kamp@behind_vagon
+
+[remark@hello_to_hunter1]
+anim = hello
+snd = hunter2_hello
+snd_anim_sync = true
+target = 8056
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end | kamp@behind_vagon
+
+[kamp@behind_vagon]
+center_point = garb_vagon_outside_kamp 
+radius = 2
+def_state_moving = walk
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+garb_hunters_door_unlocked} walker@go_in_vagon
+
+[walker@go_in_vagon]
+path_walk = hunter2_in_garb_vagon_walk
+path_look = hunter2_in_garb_vagon_look
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@in_vagon %+hunter2_in_vagon%
+
+[walker@in_vagon]
+path_walk = hunter2_in_garb_vagon_walk
+path_look = hunter2_in_garb_vagon_look
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+; В плену у бандитов:
+[walker@garb_hostage]
+path_walk = hunter2_walk2
+path_look = hunter2_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@garb_hostage1
+
+[walker@garb_hostage1]
+path_walk = hunter2_walk2
+path_look = hunter2_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+garb_hostages_kill} %=die%
+on_info2 = {+hunter2_retun_to_hideway} walker@return1 %=make_invulnerable%
+
+[walker@return1]
+path_walk = hunter2_walk3
+path_look = hunter2_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@return2
+
+[walker@return2]
+path_walk = hunter2_walk3
+path_look = hunter2_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter2_repare_btr} walker@return3 %=run_postprocess(agr_u_fade)%
+
+[walker@return3]
+path_walk = hunter2_walk3
+path_look = hunter2_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | walker@return4 %+garb_minefield_btr_acess%
+
+[walker@return4]
+path_walk = hunter2_walk3
+path_look = hunter2_look3
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+[threshold@hunter2_threshold]
+max_ignore_distance = 1
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[death]
+on_info = %+garb_hunter_dead%

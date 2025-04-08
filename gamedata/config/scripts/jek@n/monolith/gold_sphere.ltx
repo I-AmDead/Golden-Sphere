@@ -1,0 +1,16 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = gold_sphere_use
+on_use = ph_idle@2 %=run_postprocess(agr_u_fade) =disable_ui +goldsphere_used +end_game%
+on_info = {+goldsphere_blow} ph_sound
+
+[ph_sound]
+snd = goldsphere_overheat
+looped = true
+on_info = {-end_game} nil
+
+[ph_idle@2]
+on_timer = 3000|nil %=game_over2%
+ 

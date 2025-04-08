@@ -1,0 +1,165 @@
+Подвал, ходит от клетки к костру в углу
+
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[walker@start]
+path_walk = dar_build_guard1_walk1
+path_look = dar_build_guard1_look1
+combat_ignore_cond = always
+danger = danger_condition
+on_timer = 1 | walker@rasstrel1 %=actor_friend%
+
+[walker@rasstrel1]
+path_walk = dar_build_guard1_walk0
+path_look = dar_build_guard1_look0
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_signal       = arrived | walker@rasstrel2
+
+[walker@rasstrel2]
+path_walk = dar_build_guard1_walk0
+path_look = dar_build_guard1_look0
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_actor_dist_le_nvis = 3 | walker@rasstrel3 %=play_snd_from_obj(8483:characters_voice\human_01\killer\fight\searching_enemy\search_12)%
+
+[walker@rasstrel3]
+path_walk = dar_build_guard1_walk0
+path_look = dar_build_guard1_look0
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_timer = 5000 | camper@rasstrel %=play_snd_from_obj(8481:characters_voice\human_01\stalker\states\panic_human\panic_human_4) =set_enemies(8483:8481) =actor_friend%
+
+
+; Начинаем казнить разведчика:
+[camper@rasstrel]
+path_walk = dar_build_guard1_walk0
+path_look = dar_build_guard1_look0
+radius = 3
+danger = danger_condition
+meet = no_meet
+on_info     = {+dar_sergey_dead} walker@1 %=killactor%
+
+
+
+
+; Разведчик расстрелян, теперь можно гулять дальше:
+[walker@1]
+path_walk = dar_build_guard1_walk1
+path_look = dar_build_guard1_look1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_info     = {+dar_build_guard_alarm} remark@alarm
+on_info2     = {+dar_cristall_destroyed} remark@psy_pain
+on_actor_dist_le = 15 | {+val_prisoner_door_unlocked} remark@alarm %=dar_build_guard_alarm%
+on_timer = 25000 | walker@2
+
+[walker@2]
+path_walk = dar_build_guard1_walk2
+path_look = dar_build_guard1_look2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_info     = {+dar_build_guard_alarm} remark@alarm
+on_info2     = {+val_prisoner_door_unlocked} walker@search1 %=play_snd_from_obj(8483:characters_voice\human_03\killer\fight\searching_enemy\search_15)%
+on_info3     = {+dar_cristall_destroyed} remark@psy_pain
+on_actor_dist_le = 15 | {+val_prisoner_door_unlocked} remark@alarm %=dar_build_guard_alarm%
+on_timer = 50000 | walker@1
+
+
+; Увидели, что ГГ свалил из клетки и рыщем по углам:
+[walker@search1]
+path_walk = dar_build_guard1_walk3
+path_look = dar_build_guard1_look3_1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info     = {+dar_cristall_destroyed} remark@psy_pain
+on_actor_dist_le = 10 | {+val_prisoner_door_unlocked} remark@alarm %=dar_build_guard_alarm%
+on_timer = 20000 | walker@search2 %=play_snd_from_obj(8483:characters_voice\human_03\stalker\reactions\nothing\nothing_1)%
+
+[walker@search2]
+path_walk = dar_build_guard1_walk3
+path_look = dar_build_guard1_look3_2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info     = {+dar_cristall_destroyed} remark@psy_pain
+on_actor_dist_le = 10 | {+val_prisoner_door_unlocked} remark@alarm %=dar_build_guard_alarm%
+on_timer = 23000 | walker@search1 %=play_snd_from_obj(8483:characters_voice\human_03\stalker\reactions\nothing\nothing_6)%
+
+
+[remark@alarm]
+snd = reac_see
+anim = specnaz
+target = nil
+danger = danger_condition
+meet = no_meet
+on_info     = {-dar_build_guard_alarm} walker@1
+on_info2     = {+dar_cristall_destroyed} remark@psy_pain
+on_timer = 50000 | walker@1 %-dar_build_guard_alarm%
+
+
+[remark@psy_pain]
+snd = wounded_psy
+anim = psy_pain
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+;on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) =delme2%
+
+[death]
+on_info = {!actor_armed_knife =killed_by_actor} %=dar_build_guard_alarm%
+

@@ -1,0 +1,381 @@
+[mounted_weapon]:wpn_defines
+GroupControlSection		= spawn_group
+class				= W_MOUNTD
+$spawn				= "weapons\mounted_weapon"
+cform   	        = skeleton
+visual  	        = weapons\mounted_weapons\wpn_pkm_trenoga.ogf  
+
+;-----------------------------------------------------------------------------------
+
+;params of weapon recoil
+fire_dispersion_base = 1 	;угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+
+;отдача
+cam_relax_speed     = 5.0	;3; скорость возврата в исходное положение
+cam_dispersion      = 0.7	;увеличени€ угла (в градусах) с каждым выстрелом
+cam_max_angle		= 8	;максимальный угол отдачи
+cam_max_angle_horz	= 9.0  	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz	= 1.8	;(degree) size of step camera moved in horizontal position while shooting
+
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability = 0.0001	;веро€тность осечки при максимальном износе 
+condition_shot_dec 	= 0.00003	;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+; ttc
+hit_power			= 0.5
+hit_impulse			= 30
+hit_type 			= fire_wound 	
+
+fire_distance  		= 500
+bullet_speed		= 800	;начальна€ скорость пули
+rpm            		= 650
+
+light_color		 	= 0.9,0.9,0.5
+light_range		 	= 6
+light_var_color  	= 0.05
+light_var_range  	= 0.5
+light_time 		 	= 0.3
+
+ammo_class		 	= ammo_12x76_zhekan_heli
+
+flame_particles		= weapons\generic_weapon_btr
+smoke_particles		= weapons\generic_shoot_00
+
+shell_point		 	= 0.0, 0.0, 0.0
+shell_particles	 	= weapons\generic_shells00
+
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\pkm\pkm_shot
+;----------------------------------------------------------------------------
+
+[stationary_mgun]:wpn_defines
+GroupControlSection		= spawn_group
+class				= W_STMGUN
+$spawn				= "weapons\stationary_mgun"
+cform   	        = skeleton
+visual  	        = weapons\mounted_weapons\wpn_pkm_trenoga.ogf  
+
+cam_relax_speed     = 5.0	;3;скорость возврата в исходное положение
+cam_max_angle		= 8	;максимальный угол отдачи
+
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\pkm\pkm_shot
+;-----------------------------------------------------------------------------
+use_aim_bullet		= false
+
+ammo_class			= ammo_12x76_zhekan_heli
+fire_dispersion_base = 1 	;угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+rpm            		= 650
+hit_power			= 0.5
+hit_impulse			= 30
+fire_distance  		= 500
+bullet_speed		= 800	;начальна€ скорость пули
+
+light_color			= 0.9,0.9,0.5
+light_range			= 6
+light_var_color		= 0.05
+light_var_range		= 0.5
+light_time 			= 0.3
+
+flame_particles		= weapons\generic_weapon_btr
+smoke_particles		= weapons\generic_shoot_00
+shell_point			= 0.0, 0.0, 0.0
+shell_particles		= weapons\generic_shells00
+
+tracer_trail_scale	= 0.15
+tracer_start_length	= 2
+tracer_width		= 0.07
+
+inv_name	       	= Mounted Weapon								; name in inventory	
+inv_name_short		= Mounted Weapon
+
+[kpvt_mgun]:stationary_mgun
+hit_power			= 0.8
+bullet_speed		= 620
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\weapon_btr_kpvt
+;-----------------------------------------------------------------------------
+ammo_class			= ammo_12x76_zhekan_heli
+flame_particles		= weapons\heli_weapon
+shell_particles		= weapons\generic_shells
+
+[turret_mgun]
+GroupControlSection	= spawn_group
+$spawn				= "weapons\turret_mgun"
+$prefetch			= 1
+cform				= skeleton
+class				= TURRETMG
+script_binding		= turret_mgun.bind
+visual				= weapons\mounted_weapons\wpn_pkm_trenoga.ogf
+
+wallmarks			= explosion_marks
+
+// SHeliMovementState::Load
+path_angular_sp_pitch	= 0.35
+path_angular_sp_heading	= 0.75
+path_linear_acc_fw		= 6
+path_linear_acc_bk		= 4
+on_point_range_dist		= 10.0
+velocity			    = 30
+min_altitude			= -15
+path_angular_sp_pitch_0	= 0.2
+path_angular_sp_heading_0	= 1
+safe_altitude			= -10
+
+// SHeliBodyState::Load
+model_angular_sp_bank	= 0.5
+model_angular_sp_pitch	= 0.1
+model_pitch_koef		= 0.016
+model_bank_koef			= 0.018
+
+// SHeliEnemy::Load
+use_fire_trail			= false
+fire_trail_length		= 0
+
+death_angular_vel		= 0.1,6.0,0.2
+death_lin_vel_koeff		= 1
+
+immunities_sect			= turret_mgun_immunities
+
+// CShootingObject::Load
+rpm				    = 450
+// CShootingObject::LoadFireParams
+fire_dispersion_base = 0.4
+hit_power			= 0.8
+hit_impulse			= 30
+fire_distance		= 500
+bullet_speed		= 500
+use_aim_bullet		= false
+
+// CShootingObject::LoadLights
+light_color			= 0.9,0.8,0.4
+light_range			= 5
+light_var_color		= 0.05
+light_var_range		= 0.5
+light_time			= 0.2
+
+// CShootingObject::LoadShellParticles
+shell_particles		= weapons\generic_shells00
+shell_point			= 0.0,0.0,0.0
+
+// CShootingObject::LoadFlameParticles
+flame_particles		= weapons\generic_weapon_btr
+smoke_particles		= weapons\generic_shoot_00
+;shot_particles		=
+
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\pkm\pkm_shoot
+snd_shoot_rocket	= weapons\weapon_heli_rocket_shoot
+;-----------------------------------------------------------------------------
+
+// CRocketLauncher::Load
+launch_speed			= 60
+
+// CHelicopter::UseFireTrail
+fire_dispersion_null		= 1.0
+
+ammo_class			= ammo_12x76_zhekan_heli
+rocket_class		= wpn_rpg7_missile
+use_rocket			= false
+use_mgun			= true
+min_rocket_attack_dist		= 0
+max_rocket_attack_dist		= 0
+min_mgun_attack_dist		= 3
+max_mgun_attack_dist		= 200
+time_between_rocket_attack	= 0
+syncronize_rocket		= false
+barrel_dir_tolerance		= 2
+
+smoke_particle			= damage_fx\heli_burn
+
+// хе-хе, конфликт имЄн?
+;light_range			= 10.0
+light_brightness		= 5.0
+;light_color			= 0.9,0.9,0.5
+light_color_animmator		= koster_00
+
+// CHelicopter::MoveStep
+magic_angle			= 0.3
+
+// CHelicopter::OnShot
+fire_trace_width		= 0.1
+
+// CHelicopter::DieHelicopter
+broken_snd			= $no_sound
+
+[turret_mgun_immunities]
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.8
+wound_immunity			= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 0.0
+fire_wound_immunity		= 1.2
+explosion_immunity		= 0.9
+
+[turret_army]:turret_mgun
+
+visual				= weapons\mounted_weapons\wpn_turret_pkm.ogf
+
+[turret_nato]:turret_mgun
+
+visual				= weapons\mounted_weapons\wpn_turret_nato.ogf
+ammo_class			= ammo_12x76_zhekan_heli
+
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\lr300\lr300_shoot2
+;-----------------------------------------------------------------------------
+rpm				    = 600
+fire_dispersion_base = 0.3
+hit_power			= 0.9
+hit_impulse			= 280
+fire_distance		= 500
+bullet_speed		= 970
+
+
+[turret_sniper]:turret_mgun
+
+visual				= weapons\mounted_weapons\wpn_turret_nato.ogf
+ammo_class			= ammo_12x76_zhekan_heli
+
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\lr300\lr300_shoot2
+;-----------------------------------------------------------------------------
+rpm				    = 75
+fire_dispersion_base = 0.3
+hit_power			= 1.0
+hit_impulse			= 50
+fire_distance		= 800
+bullet_speed		= 450
+
+smoke_particles		= weapons\group_items\shot_matrix01_old
+
+immunities_sect			= turret_sniper_immunities
+
+[turret_sniper_immunities]
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.8
+wound_immunity			= 0.3
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 0.0
+fire_wound_immunity		= 1.2
+explosion_immunity		= 0.7
+
+
+
+[personal_turret]:turret_mgun
+
+visual				= weapons\mounted_weapons\wpn_turret_nato.ogf
+ammo_class			= ammo_12x76_zhekan_heli
+
+;------------------------------ O.G.S.E. sound remake -----------------------
+snd_shoot			= weapons\lr300\lr300_shoot2
+;-----------------------------------------------------------------------------
+rpm				    = 85
+fire_dispersion_base = 0.3
+hit_power			= 1.2
+hit_impulse			= 480
+fire_distance		= 800
+bullet_speed		= 470
+immunities_sect			= turret_sniper_immunities
+
+
+
+; “урели доктора в х-18:
+[turret_x18]:turret_mgun
+immunities_sect			= turret_x18_immunities
+
+[turret_x18_immunities]
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.0
+wound_immunity			= 0.4
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 0.0
+fire_wound_immunity		= 1.2
+explosion_immunity		= 1.0
+
+
+; “урели агентов на недостройке в ƒолине:
+[turret_darkval]:turret_nato
+immunities_sect			= turret_darkval_immunities
+
+[turret_darkval_immunities]
+burn_immunity		= 0.0
+strike_immunity		= 0.0
+shock_immunity		= 0.0
+wound_immunity		= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 0.0
+fire_wound_immunity	= 0.0
+explosion_immunity		= 0.0
+
+
+[turret_darkval_sniper]:turret_sniper
+smoke_particles		= weapons\group_items\shot_matrix01_old
+immunities_sect			= turret_darkval_sniper_immunities
+
+[turret_darkval_sniper_immunities]
+burn_immunity		= 0.0
+strike_immunity		= 0.0
+shock_immunity		= 0.0
+wound_immunity		= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 0.0
+fire_wound_immunity	= 0.0
+explosion_immunity		= 0.0
+
+
+
+; –учна€ турель:
+[turret_usable]:turret_mgun
+visual				= weapons\mounted_weapons\wpn_turret_pkm.ogf
+ammo_class			= ammo_7.62x54r
+snd_shoot			= weapons\pkm\pkm_shoot
+rpm				    = 410
+fire_dispersion_base = 1.5
+hit_power			= 1.0
+hit_impulse			= 130
+fire_distance		= 150
+bullet_speed		= 570
+smoke_particles		= weapons\group_items\shot_matrix01_old
+immunities_sect			= turret_usable_immunities
+
+[turret_usable_immunities]
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.0
+wound_immunity			= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 0.0
+fire_wound_immunity	= 0.0
+explosion_immunity		= 0.0
+
+
+
+[stationary_turret]:turret_usable
+visual = weapons\mounted_weapons\wpn_pkm_trenoga.ogf
+script_binding		= bind_statpkm.bind
+
+
+
+
+[laser_turret]:turret_nato
+flame_particles		= weapons\group_items\shot_matrix01_old
+smoke_particles		= weapons\generic_flame_01
+hit_power			= 0.6
+hit_impulse		= 0
+fire_distance		= 1000
+bullet_speed		= 600
+snd_shoot			= weapons\laser_shoot
+
+

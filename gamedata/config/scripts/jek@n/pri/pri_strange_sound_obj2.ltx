@@ -1,0 +1,13 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = pri_strange_snd2
+min_idle = 2000
+max_idle = 6000
+looped = true
+on_actor_dist_le_nvis = 15|ph_idle
+
+[ph_idle]
+on_actor_dist_ge_nvis = 35|ph_sound
+ 

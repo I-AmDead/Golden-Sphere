@@ -1,0 +1,15 @@
+[logic]
+active = sr_sound@1
+
+[sr_sound@1]
+snd = anomaly\emi_idle
+position = esc_helicrash_centr
+on_signal = sound_end | sr_sound@2
+on_info = {+esc_heli_crash_uncharged} nil
+
+[sr_sound@2]
+snd = anomaly\emi_idle
+position = esc_helicrash_centr
+on_signal = sound_end | sr_sound@1
+on_info = {+esc_heli_crash_uncharged} nil
+

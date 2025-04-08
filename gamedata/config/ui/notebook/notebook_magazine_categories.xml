@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<notebook_magazine_categories>
+
+<corpus x="250" y="250" width="550" height="550" stretch="1">
+	<texture>ui\notebook\notebook_corpus</texture>
+</corpus>
+<system_logo x="420" y="305" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="letterica18">Выберите категорию товара:</text>
+</system_logo>
+
+
+<icon_suits x="350" y="360" width="70" height="80" stretch="1">
+	<texture>ui\notebook\icon_order_suits</texture>
+</icon_suits>
+<icon_weapons x="450" y="370" width="90" height="60" stretch="1">
+	<texture>ui\notebook\icon_order_weapons</texture>
+</icon_weapons>
+<icon_ammo x="570" y="370" width="120" height="100" stretch="1">
+	<texture>ui\notebook\icon_order_ammo</texture>
+</icon_ammo>
+<icon_others x="330" y="500" width="100" height="80" stretch="1">
+	<texture>ui\notebook\icon_order_others</texture>
+</icon_others>
+
+
+	<btn_1 x="330" y="450" width="95" height="20">
+		<texture_e>ui\notebook\notebook_file</texture_e>
+		<text x="0" y="0" r="125" g="218" b="218" font="letterica16">Костюмы</text>
+	</btn_1>
+	<btn_2 x="450" y="450" width="95" height="20">
+		<texture_e>ui\notebook\notebook_file</texture_e>
+		<text x="0" y="0" r="125" g="218" b="218" font="letterica16">Оружие</text>
+	</btn_2>
+	<btn_3 x="570" y="450" width="95" height="20">
+		<texture_e>ui\notebook\notebook_file</texture_e>
+		<text x="0" y="0" r="125" g="218" b="218" font="letterica16">Боеприпасы</text>
+	</btn_3>
+	<btn_4 x="330" y="570" width="90" height="20">
+		<texture_e>ui\notebook\notebook_file</texture_e>
+		<text x="0" y="0" r="125" g="218" b="218" font="letterica16">Прочее</text>
+	</btn_4>
+
+
+
+	<btn_5 x="580" y="590" width="70" height="20">
+		<texture_e>ui\notebook\notebook_file</texture_e>
+		<text x="0" y="0" r="225" g="118" b="118" font="letterica16">назад</text>
+	</btn_5>
+
+
+
+	<btn_quit x="690" y="610" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">OFF</text>
+	</btn_quit>
+
+</notebook_magazine_categories>
+

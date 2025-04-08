@@ -1,0 +1,3604 @@
+
+-- Каждая функция в этом файле используется как условие xr_logic: {=функция !функция}
+-- Если в функцию необходимо передавать параметры, то:  {=функция(парам1:парам2:...) !функция(парам1:парам2:...)}
+-- Формат: function f(actor, npc). В случае передачи параметров: function f(actor, npc, p).
+-- Детали реализации нужно помещать в файл xr_conditions_impl.script, а не в этот файл.
+
+-- ----------------------------------------------------------------------------------------------------
+-- Общие функции
+-- ----------------------------------------------------------------------------------------------------
+-- видим ли мы еще "черный экран" или нет?
+function black_screen(actor, npc)
+	return device().precache_frame > 1
+end
+
+-- 
+--[[ -- нет такой функции и не используется нигде
+function is_actor_sleeping(actor, npc)
+    return db.actor:is_actor_sleeping()
+end]]
+
+--Мы в машине?
+function is_in_car()
+	return get_actor_car()~=nil
+end
+
+-- проверка, что актер жив
+function actor_alive(actor, npc)
+    if db.actor and db.actor:alive() then
+	    return true
+	end
+	return false
+end
+
+-- проверка, что актер мертв
+function actor_dead(actor, npc)
+    if db.actor and not db.actor:alive() then
+	    return true
+	end
+	return false
+end
+
+function see_npc(actor, npc, p)
+    local npc1 = level_object_by_sid(p[1])
+    if npc and npc1 then
+        return npc:see(npc1)
+    else
+        return false
+    end
+end
+
+function is_wounded(actor, npc)
+	return xr_wounded.is_wounded(npc)
+end
+
+function dist_to_actor_le(actor, npc, p)
+    local d = p[1]
+    return d and npc:position():distance_to_sqr(actor:position()) <= d * d
+end
+
+function dist_to_actor_ge(actor, npc, p)
+    local d = p[1]
+    return d and npc:position():distance_to_sqr(actor:position()) >= d * d
+end
+
+-- проверка того что дистанция до обьекта <= заданной
+-- параметры: [sid,dist]
+function distance_to_obj_le(actor, npc, p)
+    local npc1 = level_object_by_sid(p[1])
+    if npc1 then
+        local res = npc:position():distance_to_sqr(npc1:position()) <= p[2]*p[2]
+	    return res
+	end
+	return false
+end
+
+-- проверка того что дистанция до обьекта >= заданной
+-- параметры: [sid,dist]
+function distance_to_obj_ge(actor, npc, p)
+    local npc1 = level_object_by_sid(p[1])
+    if npc1 then
+        local res = npc:position():distance_to_sqr(npc1:position()) >= p[2]*p[2]
+	    return res
+	end
+	return false
+end
+
+-- проверка того что npc находится в заданной зоне
+-- !!! ВЫЗЫВАТЬ ТОЛЬКО ИЗ SPACE RESTRICTOR !!!
+-- параметры: [sid1:sid2:...]
+-- !!! НЕКОРРЕКТНО РАБОТАЕТ ДЛЯ ОБЬЕКТОВ В offline'e !!!
+-- !!! ДЛЯ ГАРАНТИИ ИСПОЛЬЗОВАТЬ one_obj_in_zone !!!
+function obj_in_zone(actor, zone, p)
+    local npc1, i, v = 0, 0, 0
+	for i, v in pairs(p) do
+	    npc1 = level_object_by_sid(v)
+        if npc1 and zone:inside(npc1:position()) then
+            return true
+        end
+    end
+    return false
+end
+
+-- параметры: [sid:def*] def=true|false
+-- * параметр не обязателен
+function one_obj_in_zone(actor, zone, p)
+    --local def_offline = (p[2] ~= "false") -- default (true) result if npc in offline
+	local obj1 = level_object_by_sid(p[1])
+
+    if obj1 then -- npc is online
+        return zone:inside(obj1:position())
+    else -- npc is offline
+        return (p[2] ~= "false") -- default (true) result if npc in offline
+    end
+end
+
+function actor_in_zone(actor, npc, p)
+	local zone = db.zone_by_name[p[1]]
+	return utils.npc_in_zone(db.actor, zone)
+end
+
+function actor_in_one_of_the_zones(zone_names)
+	local inZone = false
+	if zone_names then
+		for k, name in pairs(zone_names) do
+			local zone = db.zone_by_name[name]
+			local position = db.actor:position()
+			if zone and position and zone:inside(position) then inZone = true end
+		end
+	end
+	return inZone
+end
+
+function actor_out_zone(actor, npc, p)
+	local zone = db.zone_by_name[p[1]]
+	if zone == nil then
+		return false
+	end
+	return not utils.npc_in_zone(db.actor, db.zone_by_name[p[1]])
+end
+
+-- true, если здоровье npc <= заданному значению
+-- false в противном случае
+function health_le(actor, npc, p)
+    return p[1] and npc.health < p[1]
+end
+
+-- true, если здоровье вертолёта <= заданному значению
+-- false в противном случае
+function heli_health_le(actor, obj, p)
+    return p[1] and obj:get_helicopter():GetfHealth() < p[1]
+end
+
+-- видит ли вертолёт npc (по story id)
+function heli_see_npc(actor, obj, p)
+	if p[1] then
+		local o = level_object_by_sid( p[1] )
+
+		return o ~= nil and obj:get_helicopter():isVisible( o )
+	else
+		return false
+	end
+end
+
+-- Проверка на принадлежность врага к одной из групп
+-- (можно задавать несколько через двоеточие)
+function enemy_group(actor, npc, p)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if enemy and enemy:alive() then
+		local g = enemy:group()
+		local i, v = 0, 0
+		for i, v in pairs(p) do
+			if v == g then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+function enemy_gulag(actor, npc, p)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+
+	if enemy and enemy:alive() and enemy:id() ~= actor:id() then
+        local g = xr_gulag.get_npc_gulag(enemy)
+
+        if g ~= nil then
+            local n = g.name
+	        local i, v = 0, 0
+
+            for i, v in pairs(p) do
+                if n == v then
+                    return true
+                end
+            end
+        end
+    end
+    return false
+end
+
+function gulag_state(actor, npc, p)
+	if xr_gulag.getGulagState(p[1]) == p[2] then
+		return true
+	end
+	return false
+end
+
+function npc_community(actor, npc, p)
+	if p[1] == nil then
+		abort("Wrong number of params in npc_community")
+	end
+
+	if npc:character_community() == p[1] then
+		return true
+	end
+	return false
+end
+
+function npc_rank(actor, npc, p)
+	if p[1] == nil then
+		abort("Wrong number of params in npc_rank")
+	end
+
+	if ranks.get_obj_rank_name(npc) == p[1] then
+		return true
+	end
+	return false
+end
+
+function npc_profile(actor, npc, p)
+	if p[1] == nil then
+		abort("Wrong number of params in npc_profile")
+	end
+	
+	if npc:profile_name() == p[1] then
+		return true
+	end
+	return false
+	
+end
+
+
+-- Проверка того что удар был нанесен кем-то из npc указанных в списке.
+-- Параметры это story_id персонажей. Можно задавать несколько story_id.
+function hitted_by(actor, npc, p)
+	local npc1
+	local t = db.storage[npc:id()].hit
+	if t then
+		for i, v in pairs(p) do
+			npc1 = level_object_by_sid(v)
+			if npc1 and t.who == npc1:id() then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+-- Проверка, что лучшее оружие персонажа - пистолет
+function best_pistol(actor, npc)
+	local pistol = npc:item_in_slot(1)
+	if pistol ~= nil then
+		return true
+	else
+		return false
+	end
+end
+
+-- Проверка того что персонаж был убит кем-то из npc указанных в списке.
+-- Параметры это story_id персонажей. Можно задавать несколько story_id.
+function killed_by(actor, npc, p)
+	local npc1
+	local t = db.storage[npc:id()].death
+	if t then
+		for i, v in pairs(p) do
+			npc1 = level_object_by_sid(v)
+			if npc1 and t.killer == npc1:id() then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+-- проверка (по story_id) все ли проверяемые сталкеры живы
+-- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
+--       не успели проспавниться.
+function is_alive_all(actor, npc, p)
+	local npc1
+	for i, v in pairs(p) do
+		npc1 = level_object_by_sid(v)
+		if npc1 and not npc1:alive() then
+			return false
+		end
+	end
+	return true
+end
+
+-- проверка (по story_id) того, что чотя бы один из проверяемых сталкеров жив
+-- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
+--       не успели проспавниться.
+function is_alive_one(actor, npc, p)
+	local npc1
+	for i, v in pairs(p) do
+		npc1 = level_object_by_sid(v)
+		if npc1 and npc1:alive() then
+			return true
+		end
+	end
+	return false
+end
+
+-- проверка (по story_id) того, что проверяемыq npc жив
+-- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
+--       не успели проспавниться.
+function is_alive(actor, npc, p)
+	local npc1
+	npc1 = level_object_by_sid(p[1])
+	return npc1 and npc1:alive()
+end
+
+function is_box_empty(actor,npc,p)
+	local InvBox = level_object_by_sid(p[1])
+    if InvBox then
+		if InvBox:is_inv_box_empty() then
+			return true
+		end
+	end
+  return false
+end
+
+-- проверка (по story_id) все ли проверяемые сталкеры мертвы
+-- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
+--       не успели проспавниться.
+function is_dead_all(actor, npc, p)
+	local npc1
+	for i, v in pairs(p) do
+		npc1 = level_object_by_sid(v)
+		if npc1 then
+			if npc1:alive() then
+				return false
+			else
+			end
+		end
+	end
+	return true
+end
+
+-- проверка (по story_id) жив ли объект (для всей игры, не только для онлайна)
+function is_alive_sid(actor, npc, p)
+	local sim = alife()
+	if sim then
+		local se_obj = sim:story_object( p[1] )
+		if se_obj and se_obj:alive() then
+			return true
+		else	
+			return false
+		end
+	end
+	return false
+end
+
+-- проверка (по story_id) того, что хотя бы один из проверяемых сталкеров мертв
+-- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
+--       не успели проспавниться.
+function is_dead_one(actor, npc, p)
+	local npc1
+	for i, v in pairs(p) do
+		npc1 = level_object_by_sid(v)
+		if not npc1 or not npc1:alive() then
+			return true
+		end
+	end
+	return false
+end
+
+-- проверка (по story_id) того, что хотя бы один из проверяемых сталкеров мертв
+-- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
+--       не успели проспавниться.
+function is_dead(actor, npc, p)
+	local npc1
+	npc1 = level_object_by_sid(p[1])
+	return not npc1 or not npc1:alive()
+end
+
+-- проверка (по story_id) того, что нашим врагом есть хотя бы кото-то один из списка
+function check_fighting(actor, npc, p)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	local sid
+	if enemy and enemy:alive() then
+	    sid = enemy:story_id()
+	    for i, v in pairs(p) do
+		    if type(v) == 'number' and sid == v then
+			    return true		   
+		    end
+	    end
+	end
+	return false
+end
+
+-- Проверка (по профилю)  того, что нашим врагом есть хотя бы кото-то один из списка
+function check_fighting_by_profile_name(actor, npc, p)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	local profile
+	if enemy and enemy:alive() then
+		profile = enemy:profile_name()
+		for k,v in pairs(p) do
+			if type(v) == "string" and profile == v then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+function val_nap1_check_fighting(actor, npc, p)
+	local enemy, npc1
+	for i, v in pairs(p) do
+	    npc1 = level_object_by_sid(v)
+	    if npc1 then
+	        enemy = npc1:best_enemy()
+		    if enemy and (enemy:id() == npc:id() or enemy:id() == actor:id()) then
+			    return true
+		    end
+		end
+	end
+	return false
+end
+
+-- true, если гулага с таким именем (или story id) не существует или в нём нет никого
+function gulag_empty(actor, npc, p)
+	return ( not p[1] ) or ( xr_gulag.getGulagPopulationComed( p[1] ) == 0 )
+end
+
+-- true, если  в указанном гулаге народу меньше чем надо.
+function gulag_population_le(actor, npc, p)
+	return ( not p[1] or not p[2] ) or ( xr_gulag.getGulagPopulation( p[1] ) <= p[2] )
+end
+
+-- true, если  в указанном гулаге народу больше чем надо.
+function gulag_population_ge(actor, npc, p)
+	return ( not p[1] or not p[2] ) or ( xr_gulag.getGulagPopulation( p[1] ) >= p[2] )
+end
+
+-- true, если  в указанном гулаге пришло народу меньше чем надо.
+function gulag_population_comed_le(actor, npc, p)
+	return ( not p[1] or not p[2] ) or ( xr_gulag.getGulagPopulationComed( p[1] ) <= p[2] )
+end
+
+-- true, если  в указанном гулаге пришло народу больше чем надо.
+function gulag_population_comed_ge(actor, npc, p)
+	return ( not p[1] or not p[2] ) or ( xr_gulag.getGulagPopulationComed( p[1] ) >= p[2] )
+end
+
+-- true, если число людей в гулаге заданного коммунити более или равно указанному
+function gulag_community_pop(actor, npc, p)
+	return ( not p[1] or not p[2] or not p[3] ) or ( xr_gulag.getGulagPopulationCommunity( p[1], p[2] ) >= p[3] )
+end
+
+-- возвращает количество опасных персонажей в гулаге(живых и не раненных).
+function gulag_population_active(actor, npc, p)
+	 local gulag = xr_gulag.get_gulag_by_name( p[1] )
+
+    if gulag == nil then
+		return 0
+	end
+	
+	local val = 0
+	
+	for k,v in pairs(gulag.Object) do
+		if (v == true or ( v:alive() and
+		   not(xr_wounded.is_heavy_wounded_by_id(k) or
+		       xr_wounded.is_psy_wounded_by_id(k)))) and
+			gulag.Object_begin_job[k] == true
+		then
+			val = val + 1
+		end
+	end
+	return val
+end
+
+function gulag_inactive(actor, npc, p)
+	 local gulag = xr_gulag.get_gulag_by_name( p[1] )
+
+    if gulag == nil then
+		return false
+	end
+	
+	local val = 0
+	
+	for k,v in pairs(gulag.Object) do
+		if (v == true or ( v:alive() and
+		   not(xr_wounded.is_heavy_wounded_by_id(k) or
+		       xr_wounded.is_psy_wounded_by_id(k)))) and
+			gulag.Object_begin_job[k] == true
+		then
+			val = val + 1
+		end
+	end
+	return val == 0
+end
+
+function gulag_population_active_le(actor, npc, p)
+	 local gulag = xr_gulag.get_gulag_by_name( p[1] )
+
+    if gulag == nil then
+		return false
+	end
+	
+	local val = 0
+	
+	for k,v in pairs(gulag.Object) do
+		if (v == true or ( v:alive() and
+		   not(xr_wounded.is_heavy_wounded_by_id(k) or
+		       xr_wounded.is_psy_wounded_by_id(k)))) and
+			gulag.Object_begin_job[k] == true
+		then
+			val = val + 1
+		end
+	end
+	return val <= p[2]
+end
+
+-- true, если в указанном гулаге потери больше или равны заданным
+function gulag_casualities_ge(actor, npc, p)
+	return ( p[1] ~= nil and p[2] ~= nil ) and ( xr_gulag.getCasualities( p[1] ) >= p[2] )
+end
+
+-- true, если у актёра в инвентаре есть указанный предмет
+-- false, если нету, либо не задана секция предмета
+function actor_has_item(actor, npc, p)
+	return p[1] ~= nil and actor:object( p[1] ) ~= nil
+end
+
+-- true если у актора одет шлем указанной секции
+function actor_wear_helmet(actor, npc, p)
+	return p[1] ~= nil and actor:object( p[1] ) ~= nil and actor:item_in_slot(10) ~= nil and actor:item_in_slot(10):section() == p[1]
+end
+
+-- возвращает true, если в текущей схеме персонажа взведён указанный сигнал.
+function signal(actor, npc, p)
+	if p[1] then
+		local st   = db.storage[npc:id()]
+		local sigs = st[st.active_scheme].signals
+		return sigs ~= nil and sigs[p[1]] == true
+	else
+		return false
+	end
+end
+
+-- возвращает true, если значение указанного счётчика актёра больше указанного числа
+function counter_greater(actor, npc, p)
+	if p[1] and p[2] then
+		local c = xr_logic.pstor_retrieve(actor, p[1], 0)
+		return c > p[2]
+	else
+		return false
+	end
+end
+
+-- определяет нечётность интервала игрового времени. интервал нужно передать в p[1]
+function odd_time_interval(actor, npc, p)
+	return odd( game.time() / p[1] )
+end
+
+-- текущий враг на расстоянии больше или равном заданному расстоянию
+-- для combat_ignore
+function fighting_dist_ge(actor, npc, p)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if enemy then
+		return enemy:position():distance_to( npc:position() ) >= p[1]
+	else
+		return false
+	end
+end
+
+-------------------------------------------------------------------------------------------------------
+-- Функции поддержки kamp
+function _kamp_talk(actor, npc)
+	if xr_kamp.kamp_stalkers[npc:id()] then
+		return xr_kamp.kamp_stalkers[npc:id()]
+	end
+	return false
+end
+
+function _used(actor, npc)
+	return npc:is_talking()
+end
+
+-------------------------------------------------------------------------------------------------------
+
+function has_enemy(actor, npc)
+	return npc:best_enemy() ~= nil
+end
+
+function see_enemy(actor, npc)
+    local enemy = npc:best_enemy()
+    
+    if enemy ~= nil then 
+        return npc:see(enemy) 
+    end
+    return false
+end
+
+
+-- DELME: для тестов: {=test_condition_actor_near}
+function test_condition_actor_near(actor, npc)
+	if distance_between(actor, npc) <= 3 then
+		return true
+	end
+	return false
+end
+
+function talking(actor, npc)
+	return actor:is_talking()
+end
+
+function talking_or_tutor(actor, npc)
+	return actor:is_talking() or has_alife_info("esc_trader_experienced") or has_alife_info("esc_trader_newbie")
+end
+
+function see_actor(actor, npc)
+	--log1(if_then_else(pc:alive() and npc:see(actor), "true", "false"))
+	return npc:alive() and npc:see(actor)
+end
+
+-- видит ли вертолёт актера
+function heli_see_actor(actor, obj)
+	return obj:get_helicopter():isVisible(actor)
+end
+
+function actor_enemy(actor, npc)
+	local t = db.storage[npc:id()].death
+	return npc:relation(actor) == game_object.enemy or (t ~= nil and t.killer == actor:id())
+end
+
+function gar_dm_nearest_bandit(actor, npc)
+	return xr_conditions_impl.gar_dm_nearest_bandit(actor, npc, 1)
+end
+
+function gar_dm_2nd_nearest_bandit(actor, npc)
+	return xr_conditions_impl.gar_dm_nearest_bandit(actor, npc, 2)
+end
+
+function trade_exchanged(actor, npc)
+	return db.storage[npc:id()].trade.exchanged
+end
+
+function trading(actor, npc)
+	return db.storage[npc:id()].trade.trading
+end
+
+function hit_by_actor(actor, npc)
+	local t = db.storage[npc:id()].hit
+	return t and t.who == actor:id()
+end
+
+function killed_by_actor(actor, npc)
+	local t = db.storage[npc:id()].death
+	return t and t.killer == actor:id()
+end
+
+function actor_has_weapon (actor, npc)
+    local obj = actor:active_item ()
+	local be = npc:best_enemy()
+	local see = npc:see(actor)
+	local dist = actor:position():distance_to(npc:position())
+    if not obj or not obj:is_weapon() or (be and not be:is_actor()) or not see or dist > 6 then return false end
+    return true
+end
+
+function heavy_wounded(actor, npc)
+	return xr_wounded.is_heavy_wounded_by_id( npc:id() )
+end
+
+function actor_in_outfit(actor,npc,p)
+	if p[1] then
+		local item = db.actor:item_in_slot(6)
+		if item then
+			return item:section()==p[1]
+		end
+	end
+end
+
+--[[
+Проверка на заданный период времени
+Время задается в минутах
+Параметры: (time_shift:period_min)
+           time_shift - периодичность срабатывания
+           period - период срабатывания на котором мы получаем true
+
+Примеры:
+time_period(60:10) - возвращает true каждый час на протяжении первых 10 минут
+--]]
+function time_period(actor, npc, p)
+    local tshift, period = p[1], p[2]
+    if tshift ~= nil and period ~= nil then
+        return tshift > period and level.get_time_minutes() % tshift <= period
+    end
+    return false
+end    
+
+function is_day (actor, npc)
+    return level.get_time_hours() >= 6 and level.get_time_hours() < 21
+end    
+
+function is_night (actor, npc)
+    return level.get_time_hours() >= 21 and level.get_time_hours() < 6
+end    
+
+function is_arsenal_guard_rest_time (actor, npc)
+    return level.get_time_hours() > 3 and level.get_time_hours() < 5
+end
+
+function bar_no_sniper_time (actor, npc)
+    return level.get_time_hours() >= 5
+end 
+
+function mob_has_enemy(actor, npc)
+    -- return false
+    if npc == nil then return false end
+    return npc:get_enemy() ~= nil
+end    
+
+function mob_actor_nearest(actor, npc)
+    return false
+    --if npc == nil then return false end
+    --return distance_between (actor, npc) < 20
+end 
+
+function mob_was_hit(actor, npc)
+	local h = npc:get_monster_hit_info()
+	if h.who and h.time ~= 0 then
+		return true
+	end
+	return false
+end
+
+-- текущий враг актёр?
+function fighting_actor(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	--ogse.send_tip(if_then_else(enemy and enemy:id() == actor:id(), "true", "false"))
+    return enemy and enemy:id() == actor:id()
+end
+
+function fighting_actor_v2(actor, npc)
+	local best_enemy = npc:best_enemy()
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	--ogse.send_tip(if_then_else((enemy and enemy:id() == actor:id()) or (best_enemy and best_enemy:id() == actor:id()), "true", "false"))
+	return not (enemy and enemy:id() == actor:id()) or (best_enemy and best_enemy:id() == actor:id())
+end
+
+function dont_fighting_actor(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+    return enemy and enemy:id() ~= actor:id()
+end
+
+-- текущий враг на расстоянии больше или равном 20м
+function fighting_dist_ge_20(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if enemy then
+		return enemy:position():distance_to_sqr( npc:position() ) >= 400 -- 20^2
+	else
+		return false
+	end
+end
+
+-- расстояние до текущего реального врага больше или равно заданного значения
+function dist_to_enemy_ge(actor, npc, p)
+    local d, enemy = p[1], npc:best_enemy()
+	return d and enemy and enemy:position():distance_to_sqr(npc:position()) >= d * d
+end
+
+-- расстояние до текущего реального врага меньше или равно заданного значения
+function dist_to_enemy_le(actor, npc, p)
+    local d, enemy = p[1], npc:best_enemy()
+	return d and enemy and enemy:position():distance_to_sqr(npc:position()) <= d * d
+end
+
+function esc_tutorial_flesh_died_in_anomaly(actor, npc)
+	local t = db.storage[npc:id()].death
+	if t and t.killer_name then
+		if t.killer_name == "esc_tutorial_mincer_02" or
+		   t.killer_name == "esc_tutorial_mosquito_bald_01" or
+		   t.killer_name == "esc_tutorial_mincer_01" then
+			return true
+		end
+	end
+	return false
+end
+
+
+------------------------------------------------------------------------------------
+-- Special functions for Garbage
+------------------------------------------------------------------------------------
+function gar_boars_nest2_dead() --TODO: Удалить с НИ!
+	return true
+end
+
+function gar_damaged_bandits(actor, npc)
+	if (gulag_population_active(actor, npc, {"gar_bandit_agr"}) <= 5) then
+		return true
+	end
+	return false
+end
+
+function gar_angar_sleep(actor,npc)
+	return (gulag_empty(actor,npc,{"gar_seryi_bandits"}) and not has_alife_info("agr_krot_band_start")) or
+	       (gulag_population_le(actor,npc,{"gar_smart_bandit_large_lager",9}) and has_alife_info("agr_krot_band_start"))
+end
+
+function gar_not_damaged_bandits(actor, npc)
+	return  not this.gar_damaged_bandits (actor, npc)
+end
+
+function gar_bandits_seryi_die()
+	if db.actor then
+		if gulag_population_active(db.actor, npc, {"gar_seryi_bandits"}) == 0 then
+			return true			
+		else
+			return false
+		end
+	else
+		return false
+	end
+end
+
+function gar_bandits_seryi_not_die()
+	return not xr_conditions.gar_bandits_seryi_die()
+end
+
+
+------------------------------------------------------------------------------------
+-- Special functions for Dark Valley
+------------------------------------------------------------------------------------
+-- General combat ignore for bandits
+function val_bandits_ci(actor, npc)
+    local ig = {val_escort_captive_enemy = 400,
+                val_sacrifice_finish = 401,
+                val_prisoner_free = 402}
+
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	local sid
+	if enemy and enemy:alive() then
+	    sid = enemy:story_id()
+	    for v, i in pairs(ig) do
+		    if sid == i then
+		        if has_alife_info(v) then
+			        return false
+			    end
+			    return true
+		    end
+	    end
+	end
+	return false
+end
+
+-- Combat ignore for bandits with checking combat with actor checking
+function val_bandits_ci_actor(actor, npc, p)
+    local ig = {val_escort_captive_enemy = 400,
+                val_sacrifice_finish = 401,
+                val_prisoner_free = 402}
+
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	local sid
+	if enemy and enemy:alive() then
+	    if enemy:id() == actor:id() then
+            return npc:position():distance_to_sqr(actor:position()) >= p[1] * p[1]
+	    end
+
+	    sid = enemy:story_id()
+	    for v, i in pairs(ig) do
+		    if sid == i then
+		        if has_alife_info(v) then
+			        return false
+			    end
+			    return true
+		    end
+	    end
+	end
+	return false
+end
+
+-- параметры: [dist]
+function val_escort_captive_dist_to_guards_ge(actor, npc, p)
+    local d2 = p[1] * p[1]
+
+    local g1 = level_object_by_sid(407)
+    if g1 and g1:alive() then
+        if npc:position():distance_to_sqr(g1:position()) < d2 then
+            return false
+        end
+	end
+
+    local g2 = level_object_by_sid(408)
+    if g2 and g2:alive() then
+        if npc:position():distance_to_sqr(g2:position()) < d2 then
+            return false
+        end
+	end
+
+	return true
+end
+
+function val_escort_captive_dist_to_guards_le(actor, npc, p)
+    local d2 = p[1] * p[1]
+
+    local g1 = level_object_by_sid(407)
+    if g1 and g1:alive() then
+        if npc:position():distance_to_sqr(g1:position()) > d2 then
+            return false
+        end
+	end
+
+    local g2 = level_object_by_sid(408)
+    if g2 and g2:alive() then
+        if npc:position():distance_to_sqr(g2:position()) > d2 then
+            return false
+        end
+	end
+
+	return true
+end
+
+function val_fighting_captive(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end
+	if ( enemy:is_stalker() or enemy:is_actor() ) and enemy:alive() then
+		return enemy:story_id() == 400
+	else
+		return false
+	end
+end
+
+function val_escort_combat_end(actor, npc)
+	return false
+end
+
+function val_hit_by_nap1(actor, npc)
+	local nap1 = level_object_by_sid(406)
+	if nap1 == nil then return false end
+	local t = db.storage[npc:id()].hit
+	local hit_by_nap1 = (t ~= nil and t.who == nap1:id())
+	return hit_by_nap1
+end
+
+function val_hit_by_guard(actor, npc)
+	local g1 = level_object_by_sid(407)
+	local g2 = level_object_by_sid(408)
+	if g1 == nil and g2 == nil then return false end
+	local t = db.storage[npc:id()].hit
+	local hit_by_guard = (t ~= nil and
+						  ((g1 ~= nil and t.who == g1:id()) or
+						   (g2 ~= nil and t.who == g2:id())
+						  ))
+	return hit_by_guard
+end
+
+function val_fighting_sacrifice_victim(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if ( enemy:is_stalker() or enemy:is_actor() ) and enemy:alive() then
+		return enemy:story_id() == 401
+	else
+		return false
+	end		
+end 
+
+function val_fighting_prisoner(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if ( enemy:is_stalker() or enemy:is_actor() ) and enemy:alive() then
+		return enemy:story_id() == 402
+	else
+		return false
+	end	
+end
+
+function val_fighting_sacrifice_bloodsucker(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if enemy and enemy:is_monster() and enemy:alive() then
+		return enemy:story_id() == 403
+	else	
+		return false
+	end	
+end    
+
+function val_actor_in_cage(actor, npc)
+	return utils.npc_in_zone(actor, db.zone_by_name["val_prisoner_cage_zone"])
+end
+
+function val_actor_has_key_to_underground(actor, npc)
+	if xr_conditions_impl.actor_has_object(actor, "val_key_to_underground") then
+		return true
+	end
+	return false
+end
+
+--[[
+function val_prisoner_in_cage(actor, npc)
+	local prisoner = level_object_by_sid(402)
+	if not prisoner then
+		return false
+	end
+	return utils.npc_in_zone(prisoner, db.zone_by_name["val_prisoner_cage_zone"])
+end
+--]]
+
+-- function actor_wears_bandit_outfit(actor, npc)
+	--[[
+--	local cur_eq = actor:get_current_equipment()
+--	local wears = cur_eq and cur_eq:name() == "bandit_plash"
+--	return wears
+	--]]
+--	return xr_conditions_impl.actor_has_object(actor, "bandit_plash")
+-- end
+
+function actor_wears_bandit_outfit(actor, npc)
+   local visual =
+   {
+      ["bandit_outfit"] = true
+   }
+   
+   if db.actor:item_in_slot(6) and visual[db.actor:item_in_slot(6):section()] then
+   return true
+   end
+end
+
+
+------------------------------------------------------------------------------------
+-- Special functions for Pripyat
+------------------------------------------------------------------------------------
+function pri_followers_can_hear(actor, npc)
+	local gulag = xr_gulag.get_gulag(823)
+
+    return not has_alife_info("pri_followers_start") or           
+           gulag ~= nil and gulag:get_population() > 0 and
+           not gulag:npc_is_enemy_to_anybody(actor)
+end
+
+function pri_monolith_combat_ignore(actor, npc)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+	if enemy and enemy.clsid == clsid.snork_s and enemy:alive() then
+        local g = xr_gulag.get_npc_gulag(enemy)
+        return g ~= nil and (g.name == "pri_snork_nest1" or g.name == "pri_snork_nest2")
+    else
+        return false
+    end
+end
+
+function pri_actor_has_rpg_ammo(actor, npc)
+	return actor:object("ammo_og-7b") ~= nil
+end
+
+function pri_follower_see_ambush (actor, npc)
+	local gulag = xr_gulag.get_gulag_by_name("pri_wave7")
+
+    if gulag == nil then
+		return true
+	end
+	
+	for k,v in pairs(gulag.Object) do
+		if v ~= nil and npc:best_enemy() and npc:best_enemy():id() == v:id()
+			then
+				return true
+		end
+	end
+	return false
+end
+
+
+------------------------------------------------------------------------------------
+-- Special functions for Escape
+------------------------------------------------------------------------------------
+function esc_vagon_all_dead(actor, npc)
+	return xr_conditions_impl.esc_vagon_all_dead()
+end
+
+function esc_blokpost_night(actor,npc)
+	if xr_gulag.getGulagState("esc_blokpost") == 1 then
+		return true
+	end
+	return false
+end
+
+function esc_bandits_die(sctor,npc)
+	if has_alife_info("esc_kill_bandits_quest_kill") or has_alife_info("esc_kill_bandits_noquest_kill") then
+		return true
+	end
+	return false
+end
+
+------------------------------------------------------------------------------------
+-- Special functions for LabX18
+------------------------------------------------------------------------------------
+function dar_actor_has_a_key1(actor,npc)
+	return xr_conditions_impl.actor_has_object(actor,"ugrum_flash")
+end
+
+function dar_actor_has_a_key2(actor,npc)
+	return xr_conditions_impl.actor_has_object(actor,"krot_flash")
+end
+
+
+------------------------------------------------------------------------------------
+-- Special functions for BAR - ROSTOK
+------------------------------------------------------------------------------------
+function bar_arena_actor_inside(actor,npc)
+	local t = db.zone_by_name["bar_arena_waiter"]
+	if t and db.actor then
+		if t:inside(db.actor:position()) then
+			return true
+		end
+	end
+	return false
+end
+function bar_arena_actor_fight(actor,npc)
+	local t = db.zone_by_name["bar_arena_sr"]
+	local tt = db.zone_by_name["bar_arena_waiter"]
+	if t and tt and db.actor then
+		if t:inside(db.actor:position()) and
+		   not tt:inside(db.actor:position())
+		then
+			return true
+		end
+	end
+	return false
+end
+function bar_arena_actor_outside(actor,npc)
+	local t = db.zone_by_name["bar_arena_waiter_out"]
+	if t and db.actor then
+		if t:inside(db.actor:position()) then
+			return true
+		end
+	end
+	return false
+end
+function bar_dolg_alarm(actor,npc)
+	if xr_gulag.getGulagState("bar_dolg_general") == 2 then
+		return true
+	end
+	if xr_gulag.getGulagState("bar_dolg_veterans") == 2 then
+		return true
+	end
+	return false
+end
+function bar_hostile_npc(actor,npc)
+	-- на бармена забьём, всё равно его не убить.
+	local c = npc:character_community()
+	if c == "stalker" or c == "dolg" or c == "ecolog" then
+		return false
+	end
+	return true
+end
+
+
+function is_courier_time (actor, npc)
+    return level.get_time_hours() >= 22 and level.get_time_hours() < 23
+end
+
+function is_controller_dead (actor, npc)
+    local c = level_object_by_sid (729)
+    if c == nil then return false end
+    return not c:alive ()
+end
+
+function bar_arena_fight_3_end ()
+	return has_alife_info("bar_arena_fight_3_stalker_1_die") and has_alife_info("bar_arena_fight_3_stalker_2_die")
+end
+
+function bar_arena_fight_4_end ()
+	return has_alife_info("bar_arena_fight_4_stalker_1_die") and has_alife_info("bar_arena_fight_4_stalker_2_die") and has_alife_info("bar_arena_fight_4_stalker_3_die")
+end
+
+function bar_arena_fight_5_end ()
+	return has_alife_info("bar_arena_fight_5_stalker_1_die") and has_alife_info("bar_arena_fight_5_stalker_2_die")
+end
+
+function bar_arena_fight_6_end ()
+	return has_alife_info("bar_arena_fight_6_stalker_1_die") and has_alife_info("bar_arena_fight_6_stalker_2_die") and has_alife_info("bar_arena_fight_6_stalker_3_die") and has_alife_info("bar_arena_fight_6_stalker_4_die") and has_alife_info("bar_arena_fight_6_stalker_5_die") and has_alife_info("bar_arena_fight_6_stalker_6_die")
+end
+
+function bar_arena_fight_8_end ()
+	return has_alife_info("bar_arena_fight_8_stalker_1_die") and has_alife_info("bar_arena_fight_8_stalker_2_die") and has_alife_info("bar_arena_fight_8_stalker_3_die") and has_alife_info("bar_arena_fight_8_stalker_4_die")
+end
+------------------------------------------------------------------------------------
+-- Special functions for Military
+------------------------------------------------------------------------------------
+function mil_actor_enemy (actor, npc)
+    local npc = level_object_by_sid (707)
+    if npc == nil or npc:alive () == false then
+       npc = level_object_by_sid (702) 
+       if npc == nil or npc:alive () == false then
+          npc = level_object_by_sid (728)
+          if npc == nil then 
+             return
+          end
+        end         
+    end
+    return npc:relation (actor) == game_object.enemy
+end
+
+function mil_actor_enemy_freedom (actor, npc)
+    if relation_registry.community_goodwill ("freedom", actor:id ()) < -500 then
+       return true
+    end   
+    return false
+end
+
+------------------------------------------------------------------------------------
+-- Special functions for Deadcity
+------------------------------------------------------------------------------------
+function cit_combat_ignore(actor, npc, p)
+    local enemy_st = db.storage[npc:id()].enemy
+	local valid, enemy = validate_enemy_object(enemy_st)
+	if valid == false then
+		return false
+	end	
+    if enemy and enemy:alive() then
+        if enemy:id() == actor:id() then
+            return p[1] ~= nil and not has_alife_info(p[1])
+        elseif enemy:story_id() == 1200 then
+            return true
+        else
+            local g = xr_gulag.get_npc_gulag(enemy)
+            local gulags = {cit_kanaliz1 = 1, cit_kanaliz2 = 1, cit_kanaliz3 = 1}
+            return g ~= nil and gulags[g] == 1
+        end
+    end
+    return false
+end
+
+
+-------------------------------------------------------------------------------------
+-- Special for Agroprom
+-------------------------------------------------------------------------------------
+
+function agr_boars_nest_dead(actor, npc)		-- название функции
+		local g = xr_gulag.fraction["agr_boar_nest"]  -- имя гулага
+		return (not g) or (g:get_population() == 0)
+end
+
+function is_wfx_playing (actor, npc)
+    return level.is_wfx_playing ()
+end
+
+function agr_nii_pop_check(actor, npc)
+	if (gulag_population_active(actor, npc, {"agr_nii"}) < 6) then
+		return true
+	end
+	return false
+end
+
+
+-------------------------------------------------------------------------------------
+-- Special for rostok
+-------------------------------------------------------------------------------------
+function rostok_gulag_inactive(actor, npc)
+    local gulag = xr_gulag.get_gulag_by_name("bar_freedom_attack")
+
+    if gulag == nil then
+		return true
+	end
+	
+	local val = 0
+	
+	for k,v in pairs(gulag.Object) do
+		local job_prior = gulag.Job[gulag.ObjectJob[k]].prior
+
+		if (v == true or 
+		   (v:alive() and
+		    not xr_wounded.is_heavy_wounded_by_id(k) and
+		    not xr_wounded.is_psy_wounded_by_id(k) and
+			job_prior == 5)) and gulag.Object_begin_job[k] == true
+		then
+			val = val + 1
+		end
+	end
+	if val == 0 then 
+		return true
+	end
+	return false
+end
+
+function agr_factory_hold_inactive (actor, npc)
+	 local gulag = xr_gulag.get_gulag_by_name("agr_factory_hold")
+
+    if gulag == nil then
+		return true
+	end
+	
+	local val = 0
+	
+	for k,v in pairs(gulag.Object) do
+		if (v == true or (v:alive() and 
+			not xr_wounded.is_heavy_wounded_by_id(k) and 
+			not xr_wounded.is_psy_wounded_by_id(k) and
+			v:character_community()~="stalker")) and 
+			gulag.Object_begin_job[k] == true
+		then
+			val = val + 1
+		end
+	end
+	if val == 0 then 
+		return true
+	end
+	return false
+end
+
+
+function rostok_gulag_2_inactive(actor, npc)
+	 local gulag = xr_gulag.get_gulag_by_name("bar_freedom_chasers_attack")
+
+    if gulag == nil then
+		return true
+	end
+	
+	local val = 0
+	
+	for k,v in pairs(gulag.Object) do
+		if (v == true or ( v:alive() and
+		   not(xr_wounded.is_heavy_wounded_by_id(k) or
+		       xr_wounded.is_psy_wounded_by_id(k)))) and
+			gulag.Object_begin_job[k] == true
+		then
+			val = val + 1
+		end
+	end
+	if val == 0 then 
+		return true
+	end
+	return false
+end
+
+function rostok_dist_to_actor_le(actor, npc, p)
+    local actor = db.actor
+    if actor then
+	    return npc:position():distance_to_sqr(actor:position()) < p[1]*p[1]
+	end
+	return false
+end
+function see_actor_and_kruglov(actor, npc)
+	local kruglov = level_object_by_sid (503)
+    return npc:see(actor) or npc:see(kruglov)
+end
+function has_ghost_pda ()
+		return db.actor:object ("yantar_ghost_pda")
+end
+
+
+-------------------------------------------------------------------------------------
+-- Special for Radar
+-------------------------------------------------------------------------------------
+function rad_pass_time(actor, npc)
+	return true
+--    return level.get_time_hours() >= 10 and level.get_time_hours() < 11
+end
+
+
+-------------------------------------------------------------------------------------
+-- Special for Sarcofag
+-------------------------------------------------------------------------------------
+function actor_has_decoder(actor, npc)
+	return actor:object("decoder") ~= nil
+end
+
+
+-------------------------------------------------------------------------------------
+-- Special for Trade
+-------------------------------------------------------------------------------------
+local trade_by_level = {
+	l01_escape = "escape",
+	l02_garbage = "garbage",
+	l03_agroprom = "garbage",
+	l03u_agr_underground = "garbage",
+	l04_darkvalley = "garbage",
+	k01_darkscap = "garbage",
+	l04u_labx18 = "garbage",
+	l05_bar = "bar",
+	l06_rostok = "bar",
+	l07_military = "bar",
+	l08_yantar = "yantar",
+	l08u_brainlab = "yantar",
+	l09_deadcity = "yantar",
+	l10_radar = "radar",
+	l10u_bunker = "radar",
+	l11_pripyat = "radar"
+	}
+function npc_trade_by_level(actor, npc, p)
+	local trade = trade_by_level[level.name()]	
+
+	if trade == nil then
+		return false
+	end
+
+	if trade == p[1] then
+		return true
+	else
+		return false
+	end
+end
+
+function actor_in_dolg(actor, npc)
+	if db.actor then
+		return db.actor:character_community() == "actor_dolg"
+	end
+	return false
+end
+function actor_in_freedom(actor, npc)
+	if db.actor then
+		return db.actor:character_community() == "actor_freedom"
+	end
+	return false
+end
+
+function actor_on_level(actor, npc, p)
+	return p[1] == level.name()
+end
+
+function treasure_exist(actor, npc, p)
+	return true
+end
+
+function can_send_tutorial(actor, npc, p)
+	if db.actor:is_talking() then
+		return false
+	end
+	if game.has_active_tutorial() then
+		return false
+	end
+	if db.actor:has_info("ui_inventory") then
+		return false
+	end
+	if db.actor:has_info("ui_pda") then
+		return false
+	end
+	return true
+end
+
+
+function has_some_fakearts()
+	return (db.actor:object("fake_art1") or db.actor:object("fake_art2") or db.actor:object("fake_art3"))
+end
+
+function no_fakearts()
+	return not has_some_fakearts()
+end
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+function actor_wears_mask_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and ( suit:section() == "mask_outfit" or suit:section() == "mask_outfit_gilly" ) then
+	return true
+	end
+	return false
+end
+
+function actor_dont_wears_ecolog_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() ~= "ecolog_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_dielectric_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and ( suit:section() == "outfit_stalker_blue" or suit:section() == "ecolog_outfit" ) then
+	return true
+	end
+	return false
+end
+
+function actor_wears_headhunter_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "headhunter_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_victims_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "victims_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_forester_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "forester_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_madmans_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "madmans_outfit" then
+		return true
+	elseif suit and suit:section() ~= "madmans_outfit" then
+		return false
+	end
+end
+
+function actor_wears_licvidator_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "licvidator_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_smuggler_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "smuggler_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_hunter_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "hunter_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_slayer_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "slayer_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_courier_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "courier_outfit" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_secret_outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "rad_secret_suite" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_headhunter_m1outfit()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "headhunter_outfit_m1" then
+	return true
+	end
+	return false
+end
+
+function actor_wears_agents_T_outfit()
+	local suit = db.actor:item_in_slot(6)
+	if suit then
+		return suit:section() == "headhunter_outfit" or suit:section() == "headhunter_outfit_m1"
+	else
+		return false
+	end
+end
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+function actor_armed_psy()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_psy" or db.actor:active_item():section()=="wpn_psy_m1" ) then
+	return true
+	end
+end
+
+function actor_armed_crossbow()
+if db.actor and db.actor:alive() and db.actor:active_item() and ( db.actor:active_item():section()=="wpn_crossbow" or db.actor:active_item():section()=="wpn_crossbow_up1" or db.actor:active_item():section()=="wpn_crossbow_up2" or db.actor:active_item():section()=="wpn_crossbow_up3" ) then
+	return true
+	end
+end
+
+function actor_armed_knife()
+	if db.actor and db.actor:alive() and db.actor:active_item()
+		and string.find(db.actor:active_item():section(),"^wpn_knife") then
+		return true
+	end
+	return false
+end
+
+function actor_armed_laser()
+if db.actor and db.actor:alive() and db.actor:active_item() and ( db.actor:active_item():section()=="wpn_laser" or db.actor:active_item():section()=="wpn_laser_up1" ) then
+	return true
+	end
+end
+
+function actor_armed_flame()
+if db.actor and db.actor:alive() and db.actor:active_item() and ( db.actor:active_item():section()=="wpn_flame" or db.actor:active_item():section()=="wpn_flame2" ) then
+	return true
+	end
+end
+
+------------------------------------------------------------------------------------------------
+function actor_armed_anomal_pm()
+if db.actor and db.actor:alive() and db.actor:active_item() and db.actor:active_item():section()=="wpn_pm_anomal" then
+	return true
+	end
+end
+
+function actor_armed_anomal_tt()
+if db.actor and db.actor:alive() and db.actor:active_item() and db.actor:active_item():section()=="wpn_tt_rusty" then
+	return true
+	end
+end
+
+function actor_armed_anomal_shotgun()
+if db.actor and db.actor:alive() and db.actor:active_item() and db.actor:active_item():section()=="wpn_bm16full_anomal" then
+	return true
+	end
+end
+
+function actor_armed_anomal_aksu()
+if db.actor and db.actor:alive() and db.actor:active_item() and db.actor:active_item():section()=="wpn_ak74u_anomal" then
+	return true
+	end
+end
+
+function actor_armed_anomal_svd()
+if db.actor and db.actor:alive() and db.actor:active_item() and db.actor:active_item():section()=="wpn_svd_anomal" then
+	return true
+	end
+end
+-------------------------------------------------------------------------------------------------------
+
+function actor_armed_pistols1()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_colt1911"
+or db.actor:active_item():section()=="wpn_glock"
+or db.actor:active_item():section()=="wpn_pm"
+or db.actor:active_item():section()=="wpn_pm_anomal"
+or db.actor:active_item():section()=="wpn_tt"
+or db.actor:active_item():section()=="wpn_tt_rusty"
+or db.actor:active_item():section()=="wpn_samopal" ) then
+	return true
+	end
+end
+
+function actor_armed_pistols2()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_aps"
+or db.actor:active_item():section()=="wpn_cz75"
+or db.actor:active_item():section()=="wpn_gsh"
+or db.actor:active_item():section()=="wpn_fnp" ) then
+	return true
+	end
+end
+
+function actor_armed_shotguns1()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_toz194"
+or db.actor:active_item():section()=="wpn_bm16_full" ) then
+	return true
+	end
+end
+
+function actor_armed_shotguns2()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_sayga"
+or db.actor:active_item():section()=="wpn_protecta" ) then
+	return true
+	end
+end
+
+function actor_armed_rifles1()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_m4a1"
+or db.actor:active_item():section()=="wpn_aug"
+or db.actor:active_item():section()=="wpn_aks74" ) then
+	return true
+	end
+end
+
+function actor_armed_rifles2()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_akm"
+or db.actor:active_item():section()=="wpn_akm_super"
+or db.actor:active_item():section()=="wpn_fnc" 
+or db.actor:active_item():section()=="wpn_ak12" ) then
+	return true
+	end
+end
+
+function actor_armed_ak_super()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+ db.actor:active_item():section()=="wpn_akm_super" then
+	return true
+	end
+end
+
+function actor_armed_smg1()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_uzi" 
+or db.actor:active_item():section()=="wpn_ump"
+or db.actor:active_item():section()=="wpn_bizon"
+or db.actor:active_item():section()=="wpn_pp2000"
+or db.actor:active_item():section()=="wpn_mp5" ) then
+	return true
+	end
+end
+
+function actor_armed_smg2()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_ppsh"
+or db.actor:active_item():section()=="wpn_vihr"
+or db.actor:active_item():section()=="wpn_ak74u" ) then
+	return true
+	end
+end
+
+function actor_armed_sniper1()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_k98" 
+or db.actor:active_item():section()=="wpn_sks"
+or db.actor:active_item():section()=="wpn_vintorez"
+or db.actor:active_item():section()=="wpn_pkm"
+or db.actor:active_item():section()=="wpn_toz34" ) then
+	return true
+	end
+end
+
+function actor_armed_sniper2()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_awm"
+or db.actor:active_item():section()=="wpn_mk14"
+or db.actor:active_item():section()=="wpn_svd" ) then
+	return true
+	end
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function actor_armed_weak_sniper()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_awm" 
+or db.actor:active_item():section()=="wpn_crossbow"
+or db.actor:active_item():section()=="wpn_k98"
+or db.actor:active_item():section()=="wpn_sks"
+or db.actor:active_item():section()=="wpn_svd"
+or db.actor:active_item():section()=="wpn_svd_anomal"
+or db.actor:active_item():section()=="wpn_toz34"
+or db.actor:active_item():section()=="wpn_vintorez"
+or db.actor:active_item():section()=="wpn_mk14" ) then
+	return true
+	end
+end
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function actor_armed_some_obrez()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_bm16" 
+or db.actor:active_item():section()=="wpn_obrez_up1" ) then
+	return true
+	end
+end
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+function actor_not_armed_knife_or_grenade()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()~="grenade_f1" 
+or db.actor:active_item():section()~="grenade_rgd5"
+or db.actor:active_item():section()~="wpn_knife"
+or db.actor:active_item():section()~="wpn_knife1_up1"
+or db.actor:active_item():section()~="wpn_knife2"
+or db.actor:active_item():section()~="wpn_knife2_up1"
+or db.actor:active_item():section()~="wpn_knife3"
+or db.actor:active_item():section()~="wpn_knife3_up1"
+or db.actor:active_item():section()~="wpn_knife4"
+or db.actor:active_item():section()~="wpn_knife4_up1"
+or db.actor:active_item():section()~="wpn_knife5"
+or db.actor:active_item():section()~="wpn_knife5_up1"
+or db.actor:active_item():section()~="wpn_knife6"
+or db.actor:active_item():section()~="wpn_knife6_up1" ) then
+	return true
+	end
+end
+
+function actor_armed_dvustvolka()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_bm16_full" 
+or db.actor:active_item():section()=="wpn_bm16_up1" ) then
+	return true
+	end
+    return false
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function actor_armed_rpg()
+if db.actor and db.actor:alive() and db.actor:active_item() and 
+( db.actor:active_item():section()=="wpn_rpg7" 
+or db.actor:active_item():section()=="wpn_rpg7_up1" )  
+and ( db.actor:active_item():section()~="grenade_f1" or db.actor:active_item():section()~="grenade_rgd5" ) then
+	return true
+	end
+    return false
+end
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function garb_movig_teleport_capture()
+	local obj = level_object_by_sid(8246)
+	if obj ~= nil and obj:position():distance_to_sqr(db.actor:position())  <= 5*5 then
+		return true
+	end
+	return false
+end
+
+function garb_polyn_star_is_near()
+	local obj = level_object_by_sid(8265)
+	if obj ~= nil and obj:position():distance_to_sqr(db.actor:position())  <= 5*5 then
+		return true
+	end
+	return false
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+function skidan_money_low()
+local npc = level_object_by_sid (8064)
+	if npc ~= nil and npc:alive() and npc:money() < 5000 then
+		return true
+	end
+end
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--Мы в свалочном БТР-е?
+function is_in_garbage_btr()
+	local actor_car = get_actor_car()
+	return actor_car and (actor_car:story_id() == 8979) or false
+end
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+function dar_woman_is_near7meters()
+local anom = level_object_by_sid(8342)
+local woman = level_object_by_sid(8343)
+if anom and woman and anom:position():distance_to_sqr(woman:position()) <= 8*8 then
+		return true
+	end
+	return false
+end
+
+function dar_woman_is_near4meters()
+local anom = level_object_by_sid(8342)
+local woman = level_object_by_sid(8343)
+if anom and woman and anom:position():distance_to_sqr(woman:position()) <= 5*5 then
+		return true
+	end
+	return false
+end
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+function dar_movig_teleport_capture()
+	local obj = level_object_by_sid(8355)
+	if obj ~= nil and obj:position():distance_to_sqr(db.actor:position())  <= 5*5 then
+		return true
+end
+	return false
+end
+
+function actor_has_item_on_belt(actor, npc, p)
+    local obj = actor:object(p[1])
+    return obj and actor:is_on_belt(obj)
+end
+
+
+-- true если у актора одет шлем указанной секции
+function actor_wear_helmet(actor, npc, p)
+	return p[1] ~= nil and actor:object( p[1] ) ~= nil and actor:item_in_slot(10) ~= nil and actor:item_in_slot(10):section() == p[1]
+end
+
+function glowworm_capture(actor, npc)
+return npc:position():distance_to_sqr(actor:position()) <= 3 * 3
+end
+
+
+function actor_returns_after_garbage()
+	local obj = level_object_by_sid(8283)
+	if ( obj ~= nil and obj:position():distance_to_sqr(db.actor:position())  <= 25*25 ) and has_alife_info("actor_at_garb_vagon") then
+		return true
+	end
+	return false
+end
+
+
+function esc_helicrash_zone_rest_time()
+local hours = level.get_time_hours()
+local minutes = level.get_time_minutes()
+if hours >= 5 or hours < 7 and minutes >= 30 or minutes < 33 then
+		return true
+	end
+	return false
+end  
+
+
+
+function agrund_flying_acid_redrik_hit()
+local anom = level_object_by_sid(8219)
+local red = level_object_by_sid(8448)
+if anom ~= nil and red ~= nil and anom:position():distance_to_sqr(red:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+
+
+function carma_high()
+local karma = starvation.get_karma()
+if karma>=0.4 then
+		return true
+	end
+	return false
+end
+
+function carma_low()
+local karma = starvation.get_karma()
+if karma<0.4 then
+		return true
+	end
+	return false
+end
+-----------------------------
+function carma_wery_bad()
+local karma = starvation.get_karma()
+if karma<0.2 then
+		return true
+	end
+	return false
+end
+
+function carma_not_wery_bad()
+local karma = starvation.get_karma()
+if karma>=0.2 then
+		return true
+	end
+	return false
+end
+-----------------------------
+
+
+function garb_ufo_on_rooftop()
+local ufo = level_object_by_sid(8468)
+local zone = level_object_by_sid(8467)
+if ufo ~= nil and zone ~= nil and ufo:position():distance_to_sqr(zone:position()) <= 8*8 then
+		return true
+	end
+	-- return false
+end
+
+function garb_ufo_on_heap()
+local ufo = level_object_by_sid(8471)
+local zone = level_object_by_sid(8470)
+if ufo ~= nil and zone ~= nil and ufo:position():distance_to_sqr(zone:position()) <= 10*10 then
+		return true
+	end
+	-- return false
+end
+
+function garb_ufo_actor_capture()
+	local obj = level_object_by_sid(8472)
+	if obj ~= nil and obj:position():distance_to_sqr(db.actor:position())  <= 4*4 then
+		return true
+	end
+	-- return false
+end
+
+
+
+function actor_behind_headhunters_shron()
+	local sim = alife()
+	for i=1,65534 do
+	local sobj = sim:object(i)
+	if sobj and sobj:name():find("^headhunters_shron") and sobj.position:distance_to_sqr(db.actor:position())  <= 30*30 then
+		return true
+	end
+end
+end
+
+
+
+function actor_near_bar_scelets()
+if ( actor_near_bar_scelet1() == true or 
+	actor_near_bar_scelet2() == true or 
+	actor_near_bar_scelet3() == true or 
+	actor_near_bar_scelet4() == true or 
+	actor_near_bar_scelet5() == true or 
+	actor_near_bar_mafon() == true ) then
+		return true
+	end
+	return false
+end
+
+function actor_near_bar_scelet1()
+local obj = level_object_by_sid(8498)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+function actor_near_bar_scelet2()
+local obj = level_object_by_sid(8499)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+function actor_near_bar_scelet3()
+local obj = level_object_by_sid(8500)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+function actor_near_bar_scelet4()
+local obj = level_object_by_sid(8501)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+function actor_near_bar_scelet5()
+local obj = level_object_by_sid(8502)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+function actor_near_bar_mafon()
+local obj = level_object_by_sid(8497)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+
+function actors_suit_damaged()
+local suit = db.actor:item_in_slot(6)
+   if db.actor:item_in_slot(6) and suit:condition() < 0.9 then
+		return true
+	end
+	return false
+end
+
+
+function actor_wears_ecolog_outfit()
+   local scientvisuals =
+   {
+      ["scientific_outfit"] = true,
+      ["ecolog_outfit"] = true
+   }
+local suit = db.actor:item_in_slot(6)
+   if db.actor:item_in_slot(6) and scientvisuals[db.actor:item_in_slot(6):section()] then
+	return true
+	end
+	return false
+end
+
+
+function actor_dont_wears_ecolog_outfit()
+   local scientvisuals =
+   {
+      ["scientific_outfit"] = true,
+      ["ecolog_outfit"] = true
+   }
+local suit = db.actor:item_in_slot(6)
+	if suit and scientvisuals[suit:section()] ~= true then
+	return true
+
+	elseif suit == nil then
+	return true
+
+	elseif suit:condition() < 0.8 then
+	return true
+	end
+	return false
+end
+
+function actor_not_in_af_top_zone()
+	local obj = level_object_by_sid(8511)
+	if obj and obj:position():distance_to_sqr(db.actor:position()) > 8*8 then
+		return true
+	end
+	return false
+end
+
+function actor_in_af_top_zone()
+	return not actor_not_in_af_top_zone()
+end
+
+function actor_in_af_top_zone2()
+	local obj = level_object_by_sid(8511)
+	if obj and obj:position():distance_to_sqr(db.actor:position()) <= 8*8 then
+		return true
+	end
+	return false
+end
+
+
+function actor_see_bar_karlik()
+local obj = level_object_by_sid(8516)
+if obj and obj:position():distance_to_sqr(db.actor:position()) <= 6*6 then
+		return true
+	end
+	return false
+end
+
+function actor_in_bar_sklad_zones()
+local zone1 = level_object_by_sid(8523)
+local zone2 = level_object_by_sid(8524)
+local zone3 = level_object_by_sid(8525)
+local zone4 = level_object_by_sid(8526)
+if ( zone1 and zone1 ~= nil and zone1:position():distance_to_sqr(db.actor:position()) <= 4*4 )  or
+ ( zone2 and zone2 ~= nil and zone2:position():distance_to_sqr(db.actor:position()) <= 4*4 )  or
+ ( zone3 and zone3 ~= nil and zone3:position():distance_to_sqr(db.actor:position()) <= 4*4 )  or
+ ( zone4 and zone4 ~= nil and zone4:position():distance_to_sqr(db.actor:position()) <= 4*4 ) 
+then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_bar_sklad_zone1()
+local zone = level_object_by_sid(8523)
+if zone and zone ~= nil and zone:position():distance_to_sqr(db.actor:position()) <= 4*4 then
+		return true
+	end
+	return false
+end
+
+function actor_in_bar_sklad_zone2()
+local zone = level_object_by_sid(8524)
+if zone and zone ~= nil and zone:position():distance_to_sqr(db.actor:position()) <= 4*4 then
+		return true
+	end
+	return false
+end
+
+function actor_in_bar_sklad_zone3()
+local zone = level_object_by_sid(8525)
+if zone and zone ~= nil and zone:position():distance_to_sqr(db.actor:position()) <= 4*4 then
+		return true
+	end
+	return false
+end
+
+function actor_in_bar_sklad_zone4()
+local zone = level_object_by_sid(8526)
+if zone and zone ~= nil and zone:position():distance_to_sqr(db.actor:position()) <= 4*4 then
+		return true
+	end
+	return false
+end
+
+----------------------------------------------------------------------------------------------------------------------------------
+function nearest_seif_passwords()
+	local seifs = {
+		garb_ruins_seif = {area = 10*10, passwords = "wonderdoll_seif_tip1"},
+		agr_nii_seif1 = {area = 10*10, passwords = "wonderdoll_seif_tip2"},
+		agr_nii_seif2 = {area = 10*10, passwords = "wonderdoll_seif_tip3"},
+		x18_radpit_box = {area = 10*10, passwords = "wonderdoll_seif_tip4"},
+		esc_village_house1_seif = {area = 10*10, passwords = "wonderdoll_seif_tip5"},
+		esc_kamp_seif = {area = 10*10, passwords = "wonderdoll_seif_tip6"},
+		x18_arhive_seif1 = {area = 6*6, passwords = "wonderdoll_seif_tip7"},
+		x18_acidroom_seif = {area = 6*6, passwords = "wonderdoll_seif_tip8"},
+		bar_kamaz_seif = {area = 6*6, passwords = "wonderdoll_seif_tip9"},
+		x18_kitchen_pantry_box = {area = 5*5, passwords = "wonderdoll_seif_tip10"},
+		agrund_stairs_seif = {area = 5*5, passwords = "wonderdoll_seif_tip11"},
+		dar_farm_seif = {area = 5*5, passwords = "wonderdoll_seif_tip12"},
+		ros_tunnel_seif = {area = 5*5, passwords = "wonderdoll_seif_tip13"},
+		rad_base_house_seif = {area = 5*5, passwords = "wonderdoll_seif_tip14"},
+		x10_secret_box1 = {area = 5*5, passwords = "wonderdoll_seif_tip15"},
+		x10_secret_box2 = {area = 5*5, passwords = "wonderdoll_seif_tip16"},
+		predb_fabrik_seif_1 = {area = 5*5, passwords = "wonderdoll_seif_tip17"},
+		predb_fabrik_seif_2 = {area = 5*5, passwords = "wonderdoll_seif_tip18"},
+		predb_village_house2_seif = {area = 5*5, passwords = "wonderdoll_seif_tip19"},
+		mil_village_seif = {area = 5*5, passwords = "wonderdoll_seif_tip20"},
+		predb_base_secret_food_box = {area = 5*5, passwords = "wonderdoll_seif_tip21"},
+		pri_detsad_directors_seif = {area = 5*5, passwords = "wonderdoll_seif_tip22"},
+		rad_base_house_seif = {area = 5*5, passwords = "wonderdoll_seif_tip23"},
+		post_seif = {area = 5*5, passwords = "wonderdoll_seif_tip24"},
+		bar_kotelnya_seif = {area = 5*5, passwords = "wonderdoll_seif_tip25"},
+		predb_hutor_seif = {area = 5*5, passwords = "wonderdoll_seif_tip26"},
+	}
+	local sim = alife()
+	for i=1, 65534 do
+		local sobject = sim:object(i)
+		if sobject then
+			local seif = seifs[sobject:name()]
+			if seif and sobject.position:distance_to_sqr(db.actor:position()) <= seif.area then
+				return seif.passwords
+			end
+		end
+	end
+	return nil
+end
+
+--------------------------------------------------------------------------------------------------------------------
+
+function actor_behind_faintbody1()
+local obj = level_object_by_sid(8667)
+	if obj and obj ~= nil and obj:position():distance_to(db.actor:position())  < 4 then
+		return true
+	end
+end
+
+function actor_behind_faintbody2()
+local obj = level_object_by_sid(8747)
+	if obj and obj ~= nil and obj:position():distance_to(db.actor:position())  < 4 then
+		return true
+	end
+end
+--------------------------------------------------------------------------------------------------------------------
+
+
+function esc_village_scelet_near()
+local obj = level_object_by_sid(8537)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 5*5 then
+		return true
+	end
+	return false
+end
+--------------------------------------------------------------------------------------------------------------------
+
+function actor_near_bar_zomby_boss()
+local obj = level_object_by_sid(8544)
+if obj ~= nil and obj:position():distance_to_sqr(db.actor:position()) <= 3*3 then
+		return true
+	end
+	return false
+end
+
+
+function bar_levitation_car_in_zone()
+local zone = level_object_by_sid(8342)
+local obj = level_object_by_sid(8343)
+if zone ~= nil and obj ~= nil and zone:position():distance_to_sqr(obj:position()) <= 4*4 then
+		return true
+	end
+	return false
+end
+
+
+function bar_actor_at_zombboss_see1()
+local obj = level.get_target_obj()
+local zomb = level_object_by_sid(8544)
+if zomb ~= nil and obj ~= nil and zomb:id() == obj:id() then
+		return true
+	end
+	return false
+end
+
+
+function bar_actor_at_zombboss_see2()
+local obj = level_object_by_sid(8544)
+if obj and obj ~= nil and db.actor:see(obj) and obj:position():distance_to_sqr(db.actor:position()) <= 35*35 then
+		return true
+	end
+	return false
+end
+---------------------------------------------------------------------------------------------------------------
+
+function actor_see_ros_master()
+local obj = level_object_by_sid(8551)
+if obj and obj ~= nil and db.actor:see(obj) and obj:position():distance_to_sqr(db.actor:position()) <= 30*30 then
+		return true
+	end
+	return false
+end
+
+function actor_see_ros_blaster()
+local obj = level_object_by_sid(8552)
+if obj and obj ~= nil and db.actor:see(obj) and obj:position():distance_to_sqr(db.actor:position()) <= 30*30 then
+		return true
+	end
+	return false
+end
+
+function actor_target_ros_master()
+local obj1 = level.get_target_obj()
+local obj2 = level_object_by_sid(8551)
+if obj1 ~= nil and obj2 ~= nil and obj1:id() == obj2:id() then
+		return true
+	end
+	return false
+end
+
+function actor_target_ros_blaster()
+local obj1 = level.get_target_obj()
+local obj2 = level_object_by_sid(8552)
+if obj1 ~= nil and obj2 ~= nil and obj1:id() == obj2:id() then
+		return true
+	end
+	return false
+end
+
+function predb_kpp_heli_actor_check()
+local obj = level_object_by_sid(8638)
+if xr_conditions.actor_wears_mask_outfit() == false then
+	if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 85 then
+		return true
+	end
+	return false
+elseif xr_conditions.actor_wears_mask_outfit() == true then
+	if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 35 then
+		return true
+	end
+	return false
+end
+end
+
+
+
+
+
+function predb_kpp_heli_actor_lost()
+local obj = level_object_by_sid(8638)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) > 140 then
+		return true
+	end
+	return false
+end
+
+function predb_kontrab1see_actor()
+local obj = level_object_by_sid(8620)
+if obj and obj ~= nil and db.actor:see(obj) and obj:position():distance_to_sqr(db.actor:position()) <= 7*7 then
+		return true
+	end
+	return false
+end
+
+function predb_kontrab4see_actor()
+local obj = level_object_by_sid(8623)
+if obj and obj ~= nil and db.actor:see(obj) and obj:position():distance_to_sqr(db.actor:position()) <= 7*7 then
+		return true
+	end
+	return false
+end
+
+function actor_yan_after_bunker_atack()
+local obj = level_object_by_sid(8682)
+if ( obj and obj ~= nil and obj:position():distance_to(db.actor:position()) > 70 ) 
+and has_alife_info("yan_sold_comandr_first_talk") 
+and has_alife_info("yan_bunker_mob1dead")
+and has_alife_info("yan_bunker_mob2dead")
+and has_alife_info("yan_bunker_mob3dead")
+and has_alife_info("yan_bunker_mob4dead")
+and has_alife_info("yan_bunker_mob5dead")
+and has_alife_info("yan_bunker_mob6dead")
+and has_alife_info("yan_bunker_mob7dead")
+and has_alife_info("yan_bunker_mob8dead")
+and has_alife_info("yan_bunker_mob9dead")
+and has_alife_info("yan_bunker_mob10dead") and db.actor:dont_has_info("yan_bunker_sold_secret_talk") then
+		return true
+	end
+	return false
+end
+
+
+function yan_burer_scout_body_on_place()
+local obj1 = level_object_by_sid(8680)
+local obj2 = level_object_by_sid(8695)
+if (obj1 and obj1 ~= nil) and (obj2 and obj2 ~= nil) and obj1:position():distance_to_sqr(obj2:position()) <= 4*4 then
+		return true
+	end
+	return false
+end
+
+function yan_burer_scout_lost_condition()
+local obj = level_object_by_sid(8695)
+if ( obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 10 ) and db.actor:dont_has_info("yan_burer_sold12_dead") then
+		return true
+	end
+	return false
+end
+
+function actor_behind_yan_zavod_zone()
+	local sim = alife()
+	for i=1,65534 do
+	local sobj = sim:object(i)
+	if sobj and sobj:name():find("yan_zavod_zone") and sobj.position:distance_to(db.actor:position()) < 80 then
+		return true
+	end
+end
+end
+
+function actor_in_yan_zavod_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"yan_zavod_zone"}) then
+		return true
+	end
+	return false
+end
+
+function yan_burer_scout_on_place()
+	local obj = level_object_by_sid(8695)
+	local sim = alife()
+	for i=1,65534 do
+	local sobj = sim:object(i)
+	if sobj and sobj:name():find("yan_burer_scout_shron_zone") and sobj.position:distance_to_sqr(obj:position()) <= 4*4 then
+		return true
+	end
+end
+end
+
+
+
+
+function x16adviser_on_point1()
+local obj1 = level_object_by_sid(8722)
+local obj2 = level_object_by_sid(8723)
+if (obj1 and obj1 ~= nil) and obj1:position():distance_to(obj2:position()) < 3 then
+		return true
+	end
+	return false
+end
+
+function x16adviser_on_point2()
+local obj1 = level_object_by_sid(8722)
+local obj2 = level_object_by_sid(8724)
+if (obj1 and obj1 ~= nil) and obj1:position():distance_to(obj2:position()) < 3 then
+		return true
+	end
+	return false
+end
+
+function x16adviser_on_point3()
+local obj1 = level_object_by_sid(8722)
+local obj2 = level_object_by_sid(8725)
+if (obj1 and obj1 ~= nil) and obj1:position():distance_to(obj2:position()) < 3 then
+		return true
+	end
+	return false
+end
+
+function x16adviser_on_point4()
+local obj1 = level_object_by_sid(8722)
+local obj2 = level_object_by_sid(8726)
+if (obj1 and obj1 ~= nil) and obj1:position():distance_to(obj2:position()) < 3 then
+		return true
+	end
+	return false
+end
+
+function x16adviser_on_point5()
+local obj1 = level_object_by_sid(8733)
+local obj2 = level_object_by_sid(8731)
+if (obj1 and obj1 ~= nil) and obj1:position():distance_to(obj2:position()) < 3 then
+		return true
+	end
+	return false
+end
+
+
+function x16king_on_point6()
+local obj1 = level_object_by_sid(8730)
+local obj2 = level_object_by_sid(8732)
+if (obj1 and obj1 ~= nil) and obj1:position():distance_to(obj2:position()) < 3 then
+		return true
+	end
+	return false
+end
+
+
+
+function actor_in_x16docks2zone()
+if xr_conditions.actor_in_zone(nil,nil,{"x16docks2_zone"}) then
+		return true
+	end
+	return false
+end
+
+function x16brain_too_far()
+local obj = level_object_by_sid(8727)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) > 6 then
+		return true
+	end
+	return false
+end
+
+function x16brain_talk_ready1()
+local brain = level_object_by_sid(8727)
+if brain and brain:position():distance_to(db.actor:position()) <= 4 and db.actor:dont_has_info("x16_brain_talk1") then
+		return true
+	end
+	return false
+end
+
+function x16brain_talk_ready2()
+local brain = level_object_by_sid(8727)
+if brain and brain:position():distance_to(db.actor:position()) <= 3 and db.actor:dont_has_info("x16_brain_talk2") then
+		return true
+	end
+	return false
+end
+
+function actor_in_brain_talk_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"x16_brain_talk_zone"}) then
+		return true
+	end
+	return false
+end
+
+
+function have_all_yan_lost_scanners()
+	if addon.actor_has_items("yan_lost_scaner", 3) then
+			return true
+	end
+	return false
+end
+
+
+function have_all_ros_af_parts()
+return addon.actor_has_items("af_chip", 5)
+end
+
+
+
+function mil_grav_obj1_in_zone1()
+local zone = level_object_by_sid(8805)
+local obj = level_object_by_sid(8801)
+if zone ~= nil and obj ~= nil and zone:position():distance_to(obj:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function mil_grav_obj2_in_zone2()
+local zone = level_object_by_sid(8805)
+local obj = level_object_by_sid(8801)
+if zone ~= nil and obj ~= nil and zone:position():distance_to(obj:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function mil_grav_obj3_in_zone3()
+local zone = level_object_by_sid(8805)
+local obj = level_object_by_sid(8801)
+if zone ~= nil and obj ~= nil and zone:position():distance_to(obj:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function mil_grav_obj4_in_zone4()
+local zone = level_object_by_sid(8805)
+local obj = level_object_by_sid(8801)
+if zone ~= nil and obj ~= nil and zone:position():distance_to(obj:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function mil_grav_obj5_in_zone6()
+local zone = level_object_by_sid(8823)
+local obj = level_object_by_sid(8822)
+if zone ~= nil and obj ~= nil and zone:position():distance_to(obj:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function mil_comandr_in_grav_zone(actor, npc)
+	local obj = level_object_by_sid(8810)
+	if utils.npc_in_zone(obj, db.zone_by_name["mil_grav_zone5"]) then
+		return true
+	end
+	return false
+end
+
+
+
+
+function mil_actor_behind_barier()
+local obj = level_object_by_sid(8813)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 25 then
+		return true
+	end
+	return false
+end
+
+
+function actor_behind_mil_village_ded()
+local obj = level_object_by_sid(8800)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 4 then
+		return true
+	end
+	return false
+end
+
+
+
+function actor_in_mil_village_safezones()
+if ( xr_conditions.actor_in_zone(nil,nil,{"mil_village_ded_house_zone"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone5"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone6"}) or 
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone7"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_saray_zone"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_village_housezone8"}) ) then
+		return true
+	end
+	return false
+end
+
+
+function actor_behind_mil_village_shkaf()
+	local sim = alife()
+	for i=1,65534 do
+	local sobj = sim:object(i)
+	if sobj and sobj:name():find("mil_village_house_shkaf") and sobj.position:distance_to_sqr(db.actor:position())  <= 5*5 then
+		return true
+	end
+end
+end
+
+
+function actor_in_mil_village_tower_roof_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"mil_village_tower_roof_zone"})  then
+		return true
+	end
+	return false
+end
+
+
+function rad_secret_npc_near()
+local obj = level_object_by_sid(8841)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 2 then
+		return true
+	end
+	return false
+end
+
+
+function rad_suicide_mob1near()
+local obj = level_object_by_sid(8844)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 25 then
+		return true
+	end
+	return false
+end
+
+function rad_suicide_mob2near()
+local obj = level_object_by_sid(8845)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 25 then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_rad_heli_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"rad_forest_heli_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_x10entry_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"x10entry_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_x10abdul_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"x10abdul_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_rad_chimera_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"rad_chimera_zone"})  then
+		return true
+	end
+	return false
+end
+
+
+
+function actor_in_esc_deadmask_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"deadmask_trap_zone_escape"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_garb_deadmask_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"deadmask_trap_zone_garbage"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_agro_deadmask_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"deadmask_trap_zone_agro"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_predb_deadmask_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"deadmask_trap_zone_predb"})  then
+		return true
+	end
+	return false
+end
+
+
+
+function x10abdul_near()
+local obj = level_object_by_sid(8860)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 15 then
+		return true
+	end
+	return false
+end
+
+function actor_not_in_radar_antenna_zone()
+if xr_conditions.actor_out_zone(nil,nil,{"rad_antenna_radiation"})  then
+		return true
+	end
+	return false
+end
+
+
+
+function actor_not_or_radar_or_x10()
+local level_name = level.name()
+	if ( level_name ~= "l10_radar" and level_name ~= "l10u_bunker" ) then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_pri_detsad_brownie1zone()
+if xr_conditions.actor_in_zone(nil,nil,{"pri_detsad_brownie1_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_pri_detsad_brownie2zone()
+if xr_conditions.actor_in_zone(nil,nil,{"pri_detsad_brownie2_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_pri_detsad_brownie3zone()
+if xr_conditions.actor_in_zone(nil,nil,{"pri_detsad_brownie3_zone"})  then
+		return true
+	end
+	return false
+end
+
+
+function actor_target_pri_avtostation_mob()
+local obj1 = level.get_target_obj()
+local obj2 = level_object_by_sid(8904)
+if obj1 ~= nil and obj2 ~= nil and obj1:id() == obj2:id() and obj2:alive() then
+		return true
+	end
+	return false
+end
+
+
+
+
+function pri_rooftop_ghost1actors_mind_capture()
+local obj1 = level_object_by_sid(8913)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost2actors_mind_capture()
+local obj1 = level_object_by_sid(8914)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost3actors_mind_capture()
+local obj1 = level_object_by_sid(8915)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost4actors_mind_capture()
+local obj1 = level_object_by_sid(8916)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost5actors_mind_capture()
+local obj1 = level_object_by_sid(8917)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost6actors_mind_capture()
+local obj1 = level_object_by_sid(8918)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost7actors_mind_capture()
+local obj1 = level_object_by_sid(8919)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost8actors_mind_capture()
+local obj1 = level_object_by_sid(8920)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost9actors_mind_capture()
+local obj1 = level_object_by_sid(8921)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+function pri_rooftop_ghost10actors_mind_capture()
+local obj1 = level_object_by_sid(8922)
+local obj2 = level_object_by_sid(8923)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 3 then
+		return true
+	end
+	return false
+end
+
+
+
+
+
+function actor_in_aes_safe_zones()
+if ( xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone5"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone6"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone7"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone8"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone9"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone10"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone11"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone12"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone13"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone14"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone15"}) ) then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_pripyat_stadion_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"pri_stadion_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_pri_capsula_zone()
+if ( xr_conditions.actor_in_zone(nil,nil,{"pri_stadion_timecapsula_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_stadion_timecapsula_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_stadion_timecapsula_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_stadion_timecapsula_zone4"}) ) then
+		return true
+	end
+	return false
+end
+
+
+function faint_man1on_current_level()
+    local sobj = alife():story_object(8666)
+    if not sobj then return false end -- объекта нет
+    local sobjlvl = game_graph():vertex(sobj.m_game_vertex_id):level_id()
+    local actorlvl = alife():level_id()
+    return actorlvl == sobjlvl
+end
+
+
+
+function actor_in_camp_zone()
+local level_name = level.name()
+if ( xr_conditions.actor_in_zone(nil,nil,{"esc_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"esc_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"esc_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"esc_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone5"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone6"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone7"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"garb_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"garb_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"garb_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"garb_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"agr_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"agr_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"agr_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"dar_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"dar_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"dar_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"dar_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_anomaly_spawn_zone5"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_hutor1_alarm_zone"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"mil_vagon_hideout_zone"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"yan_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"yan_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"rad_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"rad_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"rad_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"rad_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"rad_anomaly_spawn_zone5"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"predb_hill_camp_zone"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone5"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone6"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone7"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone8"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone9"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone10"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone11"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone12"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone13"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone14"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"aes_radiation_safezone15"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_anomaly_spawn_zone1"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_anomaly_spawn_zone2"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_anomaly_spawn_zone3"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"pri_anomaly_spawn_zone4"}) or
+	xr_conditions.actor_in_zone(nil,nil,{"rad_anomaly_spawn_zone6"}) or
+	level_name == "l04u_labx18" or
+	level_name == "l10u_bunker" or
+	level_name == "l12u_control_monolith" or
+	level_name == "l03u_agr_underground" or
+	level_name == "l08u_brainlab" ) or actor_near_bar_alan() == true then
+		return true
+	end
+	return false
+end
+
+
+
+function actor_near_bar_alan()
+local npc = level_object_by_sid(8539)
+if npc and npc ~= nil and npc:position():distance_to_sqr(db.actor:position()) <= 15*15 then
+		return true
+	end
+	return false
+end
+
+
+function actor_on_ai_net()
+local lvid = db.actor:level_vertex_id()
+local pos = db.actor:position()
+if level.vertex_position(lvid):distance_to(pos) <= 0.7 then
+		return true
+	end
+	return false
+end
+
+
+function nightmobs_spawn_time()
+if level.get_time_hours() >= 22 or level.get_time_hours() < 6 then
+		return true
+	end
+	return false
+end  
+
+
+
+function actor_wears_head_resist()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:condition() > 0.5 and
+		( suit:section() == "scientific_outfit" 
+		or suit:section() == "ecolog_outfit"
+		or suit:section() == "specops_outfit"
+		or suit:section() == "fireproof_outfit"
+		or suit:section() == "usas_outfit"
+		or suit:section() == "outfit_stalker_red"
+		or suit:section() == "outfit_stalker_blue"
+		or suit:section() == "outfit_stalker_green"
+		or suit:section() == "licvidator_outfit"
+		or suit:section() == "slayer_outfit"
+		or suit:section() == "rad_secret_suite" ) then
+	return true
+	elseif ( db.actor:item_in_slot(10) and db.actor:item_in_slot(10):section()=="army_helmet" ) or (db.actor:item_in_slot(10) and db.actor:item_in_slot(10):section()=="army_helmet") then 
+	return true
+	end
+	return false
+end
+
+function actor_wears_torso_resist()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:condition() > 0.5 and
+		( suit:section() == "stalker_outfit" 
+		or suit:section() == "novice_outfit"
+		or suit:section() == "scientific_outfit"
+		or suit:section() == "neytral_exo_antigas_outfit"
+		or suit:section() == "cargo_exo_outfit"
+		or suit:section() == "vatnik_outfit"
+		or suit:section() == "vatnik_outfit_m1"
+		or suit:section() == "novice_outfit_leather"
+		or suit:section() == "bulletproof_outfit"
+		or suit:section() == "outfit_stalker_m3"
+		or suit:section() == "bandit_master_outfit"
+		or suit:section() == "killer_outfit"
+		or suit:section() == "outfit_killer_m1"
+		or suit:section() == "outfit_soldier_m1"
+		or suit:section() == "oficer_outfit"
+		or suit:section() == "specops_outfit"
+		or suit:section() == "fireproof_outfit"
+		or suit:section() == "usas_outfit"
+		or suit:section() == "outfit_stalker_red"
+		or suit:section() == "outfit_stalker_blue"
+		or suit:section() == "outfit_stalker_green"
+		or suit:section() == "ranger_outfit"
+		or suit:section() == "headhunter_outfit"
+		or suit:section() == "headhunter_outfit_m1"
+		or suit:section() == "scout_outfit"
+		or suit:section() == "maroders_outfit"
+		or suit:section() == "licvidator_outfit"
+		or suit:section() == "victims_outfit"
+		or suit:section() == "rus_bulletproof_outfit"
+		or suit:section() == "madmans_outfit"
+		or suit:section() == "forester_outfit"
+		or suit:section() == "hunter_outfit"
+		or suit:section() == "slayer_outfit"
+		or suit:section() == "courier_outfit"
+		or suit:section() == "rad_secret_suite"
+		or suit:section() == "ecolog_outfit" ) then
+	return true
+	end
+	return false
+end
+
+function actor_wears_arms_resist()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:condition() > 0.5 and
+		( suit:section() == "stalker_outfit" 
+		or suit:section() == "scientific_outfit"
+		or suit:section() == "outfit_killer_m1"
+		or suit:section() == "specops_outfit"
+		or suit:section() == "fireproof_outfit"
+		or suit:section() == "outfit_stalker_red"
+		or suit:section() == "outfit_stalker_blue"
+		or suit:section() == "outfit_stalker_green"
+		or suit:section() == "ranger_outfit"
+		or suit:section() == "scout_outfit"
+		or suit:section() == "licvidator_outfit"
+		or suit:section() == "forester_outfit"
+		or suit:section() == "smuggler_outfit"
+		or suit:section() == "slayer_outfit"
+		or suit:section() == "rad_secret_suite" ) then
+	return true
+	elseif ( inventory.on_belt( "army_gloves" ) or inventory.on_belt( "stalker_gloves" ) or inventory.on_belt( "anomal_gloves" ) ) then
+	return true
+	end
+	return false
+end
+
+function actor_wears_legs_resist()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:condition() > 0.5 and
+		( suit:section() == "scientific_outfit" 
+		or suit:section() == "outfit_stalker_m3"
+		or suit:section() == "bandit_master_outfit"
+		or suit:section() == "specops_outfit"
+		or suit:section() == "fireproof_outfit"
+		or suit:section() == "outfit_stalker_red"
+		or suit:section() == "outfit_stalker_blue"
+		or suit:section() == "outfit_stalker_green"
+		or suit:section() == "usas_outfit"
+		or suit:section() == "maroders_outfit"
+		or suit:section() == "licvidator_outfit"
+		or suit:section() == "madmans_outfit"
+		or suit:section() == "hunter_outfit"
+		or suit:section() == "smuggler_outfit"
+		or suit:section() == "courier_outfit"
+		or suit:section() == "rad_secret_suite" ) then
+	return true
+	elseif ( inventory.on_belt( "army_boots" ) or inventory.on_belt( "stalker_boots" ) ) then
+	return true
+	end
+	return false
+end
+
+function actor_wears_pelvis_resist()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:condition() > 0.5 and
+		( suit:section() == "stalker_outfit" 
+		or suit:section() == "outfit_stalker_m3"
+		or suit:section() == "scientific_outfit"
+		or suit:section() == "neytral_exo_antigas_outfit"
+		or suit:section() == "cargo_exo_outfit"
+		or suit:section() == "fireproof_outfit"
+		or suit:section() == "outfit_stalker_green"
+		or suit:section() == "novice_outfit_leather"
+		or suit:section() == "killer_outfit"
+		or suit:section() == "licvidator_outfit"
+		or suit:section() == "outfit_killer_m1"
+		or suit:section() == "oficer_outfit"
+		or suit:section() == "specops_outfit"
+		or suit:section() == "usas_outfit"
+		or suit:section() == "specops_outfit"
+		or suit:section() == "headhunter_outfit"
+		or suit:section() == "headhunter_outfit_m1"
+		or suit:section() == "scout_outfit"
+		or suit:section() == "victims_outfit"
+		or suit:section() == "madmans_outfit"
+		or suit:section() == "hunter_outfit"
+		or suit:section() == "smuggler_outfit"
+		or suit:section() == "rad_secret_suite" ) then
+	return true
+	end
+	return false
+end
+
+
+
+
+function actor_wears_anomal_vatnik()
+local suit = db.actor:item_in_slot(6)
+	if suit and suit:section() == "vatnik_outfit_m1" then
+	return true
+	end
+	return false
+end
+
+
+
+
+
+function actor_behind_predb_hermit()
+local obj = level_object_by_sid(8652)
+if obj and obj ~= nil and obj:position():distance_to(db.actor:position()) < 5 then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_predb_cave_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_cave_trap_zone"})  then
+		return true
+	end
+	return false
+end
+
+function actor_in_predb_cave_zone_big()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone7"})  then
+		return true
+	end
+	return false
+end
+
+function actor_not_in_predb_cave_zone()
+if xr_conditions.actor_out_zone(nil,nil,{"predb_anomaly_spawn_zone7"})  then
+		return true
+	end
+	return false
+end
+
+
+function predb_village_boars_dead()
+	if has_alife_info("predb_village_quest_mob1_dead") and
+		has_alife_info("predb_village_quest_mob2_dead") and
+		has_alife_info("predb_village_quest_mob3_dead") and
+		has_alife_info("predb_village_quest_mob4_dead") and
+		has_alife_info("predb_village_quest_mob5_dead") then
+		return true
+	else
+		return false
+	end
+end
+
+function actor_in_village_boars_zone()
+if ( xr_conditions.actor_in_zone(nil,nil,{"pedb_village_boars_zone"}) and has_alife_info("predb_village_quest_mob_spawn") ) then
+		return true
+	end
+	return false
+end
+
+
+function predb_courier_near_hutor()
+local obj1 = level_object_by_sid(8625)
+local obj2 = level_object_by_sid(8617)
+if obj1 ~= nil and obj2 ~= nil and obj1:position():distance_to(obj2:position()) <= 50 then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_firest_tower_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_firest_tower_zone"}) and db.actor:object("wpn_rpg7") then
+		return true
+	end
+	return false
+end
+
+
+function predb_firest_teleport_capture()
+	local obj = level_object_by_sid(8960)
+	if obj ~= nil and obj:position():distance_to_sqr(db.actor:position())  <= 3*3 then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_predb_base_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_anomaly_spawn_zone4"}) then
+		return true
+	end
+	return false
+end
+
+function actor_in_firest_tower_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_firest_tower_zone"}) then
+		return true
+	end
+	return false
+end
+
+function actor_in_predb_maroder_lager_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_maroder_lager_zone"}) then
+		return true
+	end
+	return false
+end
+
+
+function actor_near_predb_marouder1()
+	local obj = level_object_by_sid(8957)
+	if obj ~= nil and obj:position():distance_to(db.actor:position())  < 6 then
+		return true
+	end
+	return false
+end
+
+function predb_base_chimera_near()
+	local obj = level_object_by_sid(8961)
+	if obj ~= nil and obj:position():distance_to(db.actor:position())  < 6 then
+		return true
+	end
+	return false
+end
+
+
+function predb_heli_zone1(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone1"])
+end
+
+function predb_heli_zone2(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone2"])
+end
+
+function predb_heli_zone3(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone3"])
+end
+
+function predb_heli_zone4(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone4"])
+end
+
+function predb_heli_zone5(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone5"])
+end
+
+function predb_heli_zone6(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone6"])
+end
+
+function predb_heli_zone7(actor, npc)
+	local obj = level_object_by_sid(8638)
+	if not obj then
+		return false
+	end
+	return utils.npc_in_zone(obj, db.zone_by_name["predb_heli_zone7"])
+end
+
+
+function predb_mega_boar_health_low()
+ 	local sobj = level_object_by_sid(8968)
+    if sobj then
+		local hlth = sobj.health
+		if hlth < 0.3 then return true end
+	end
+end
+
+
+function predb_cave_done_condition()
+if has_alife_info("predb_hermit_execute") or has_alife_info("predb_hermit_live") then
+		return true
+	end
+	return false
+end
+
+
+function mil_grav_anomaly_uncharge_condition()
+	local obj = level_object_by_sid(8809)
+	if obj and obj:position():distance_to_sqr(db.actor:position()) < 60*60 then
+		return true
+	end
+	return false
+end
+
+function mil_pelepatz_in_grav_zone()
+local obj = level_object_by_sid(8835)
+local zone = level_object_by_sid(8801)
+if obj and zone and obj:position():distance_to_sqr(zone:position()) < 50*50 then
+		return true
+	end
+	return false
+end
+
+
+function actor_on_escape_level()
+	local level_name = level.name()
+		if level_name == "l01_escape" then
+		return true
+	end
+	return false
+end
+
+
+function actor_silencer_use()
+local act_it = db.actor:active_item()
+local addonf = rx_utils.get_weapon_data(alife():object(act_it:id())).addon_flags
+	if system_ini():line_exist(act_it:section(), "silencer_status") then
+		sil = system_ini():r_u32(act_it:section(), "silencer_status")
+	end
+if (sil == 1 or (sil == 2 and bit_and(addonf, 1) == 1) or string.find(act_it:section(), "wpn_vintorez")) then
+		return true
+	end
+	return false
+end
+
+
+function actor_predb_firest_entice_zone1()
+if xr_conditions.actor_in_zone(nil,nil,{"predb_firest_entice_zone1"}) and has_alife_info("predb_firest_docks_info") then
+		return true
+	end
+	return false
+end
+
+
+function predb_megaboar_lost_condition(actor, npc)
+	local obj = level_object_by_sid(8968)
+	if obj ~= nil and obj:position():distance_to(db.actor:position()) > 100 then
+		return true
+	end
+	return false
+end
+
+
+function actor_in_mil_hutor_zone()
+if xr_conditions.actor_in_zone(nil,nil,{"mil_hutor1_alarm_zone"}) then
+		return true
+	end
+	return false
+end
+
+function actor_in_mil_hutor2zone()
+if xr_conditions.actor_in_zone(nil,nil,{"mil_anomaly_spawn_zone2"}) then
+		return true
+	end
+	return false
+end
+
+
+function mil_hutor1alarm_zone_off()
+if has_alife_info("mil_vsu_acess") or has_alife_info("mil_separ_explor") or has_alife_info("separ_war") then
+		return true
+	end
+	return false
+end
+
+
+function antigas_on_belt()
+if ( xr_conditions.actor_wears_headhunter_outfit() == true and db.actor:dont_has_info("rad_headhunters_actor_alarm") ) then
+		return true
+	end
+	return false
+end
+
+
+function aes_last_agent_run_init(actor, npc)
+	local obj = level_object_by_sid(8937)
+	if obj and obj ~= nil then
+		if ( obj:position():distance_to(db.actor:position()) < 6 and not db.actor:object("aes_kristall") ) then
+		return true
+		end
+	end
+	return false
+end
+
+
+function predb_heli_dead(actor, npc)
+	local npc1 = level_object_by_sid(8638)
+	return not npc1 or not npc1:alive()
+end
+
+
+function agr_brownie2in_zone()
+	local obj = level_object_by_sid(8262)
+	if utils.npc_in_zone(obj, db.zone_by_name["agr_farbik_brownie2_zone"]) then
+			return true
+		end
+	return false
+end
+
+
+function is_night_time()
+    if ( level.get_time_hours() >= 21 and level.get_time_hours() < 6 ) then
+			return true
+		end
+	return false
+end 
+
+
+function hit_by_dar_build_guard1(actor, npc)
+	local guard = level_object_by_sid(8483)
+	if guard == nil then return false end
+	local t = db.storage[npc:id()].hit
+	local hit_by_guard = (t ~= nil and t.who == guard:id())
+	return hit_by_guard
+end
+
+
+
+function mil_separ_in_fire()
+	local obj1 = level_object_by_sid(8794)
+	local obj2 = level_object_by_sid(8795)
+	local obj3 = level_object_by_sid(8796)
+	local obj4 = level_object_by_sid(8797)
+	local obj5 = level_object_by_sid(8798)
+	if not ( obj1 and obj2 and obj3 and obj4 and obj5 ) then
+		return false
+	end
+	local zone = db.zone_by_name["camp_fire_0003"]
+	return utils.npc_in_zone(obj1, zone)
+			and utils.npc_in_zone(obj2, zone)
+			and utils.npc_in_zone(obj3, zone)
+			and utils.npc_in_zone(obj4, zone)
+			and utils.npc_in_zone(obj5, zone)
+end

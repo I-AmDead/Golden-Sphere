@@ -1,0 +1,13 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+ros_master_dead} nil
+on_actor_dist_le_nvis = 8 | ph_idle@2 %=strike_to_actor1%
+
+[ph_idle@2]
+on_timer = 3000 | ph_idle@1
+
+
+
+ 

@@ -1,0 +1,13 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = predb_base_comp_use1
+on_info = {+predb_base_gener_on} ph_idle@2
+
+[ph_idle@2]
+tips      = predb_base_comp_use2
+on_use = {+predb_base_comp_acess} %=predb_base_comp_use%
+
+
+

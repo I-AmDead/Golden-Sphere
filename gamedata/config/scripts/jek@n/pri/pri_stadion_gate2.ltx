@@ -1,0 +1,25 @@
+[collide]
+ignore_static
+
+[ph_heavy]
+
+[logic]
+active = ph_gate@locked
+
+[ph_gate@locked]
+state = closed
+locking = hard
+breakable = false
+on_info = {+pri_heli_dead =actor_has_item(pri_analog_chip)} ph_gate@open
+
+[ph_gate@unlocked]
+state = closed
+locking = stick
+breakable = false
+
+[ph_gate@open]
+state = open
+locking = stick
+breakable = false
+left_limit = 80
+right_limit = 80

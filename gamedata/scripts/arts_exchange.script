@@ -1,0 +1,364 @@
+-- Специальный скрипт для артобмена с НПС и просто для функций проверки прекондишнов на содержание артефактов. 26.06.2014.
+
+
+-- Проверка на наличие артов как таковых:
+
+function have_some_arts()
+	return ( db.actor:object("af_coal") or 
+	db.actor:object("af_scale") or
+	db.actor:object("af_bitum") or
+	db.actor:object("af_ballast") or
+	db.actor:object("af_roll") or
+	db.actor:object("af_chicken_god") or
+	db.actor:object("af_steel_nut") or
+	db.actor:object("af_bearing") or
+	db.actor:object("af_crown") or
+	db.actor:object("af_frog") or
+	db.actor:object("af_chestnut") or
+	db.actor:object("af_sagebrush") or
+	db.actor:object("af_mushroom") or
+	db.actor:object("af_glass") or
+	db.actor:object("af_teardrop") or
+	db.actor:object("af_lens") or
+	db.actor:object("af_spiral") or
+	db.actor:object("af_cristallic") or
+	db.actor:object("af_snail") or
+	db.actor:object("af_hole") or
+	db.actor:object("af_egg")  )
+end
+
+
+
+-- Проверка артов по группам:
+
+function have_firegroop_arts(stalker, player)
+	return ( db.actor:object("af_coal") or 
+	db.actor:object("af_scale") or 
+	db.actor:object("af_bitum") )
+end
+
+function have_stonegroop_arts(stalker, player)
+	return ( db.actor:object("af_ballast") or 
+	db.actor:object("af_roll") or 
+	db.actor:object("af_chicken_god") )
+end
+
+function have_steelgroop_arts(stalker, player)
+	return ( db.actor:object("af_steel_nut") or 
+	db.actor:object("af_bearing") or 
+	db.actor:object("af_crown") )
+end
+
+function have_vegetgroop_arts(stalker, player)
+	return ( db.actor:object("af_frog") or 
+	db.actor:object("af_chestnut") or 
+	db.actor:object("af_sagebrush") or 
+	db.actor:object("af_mushroom") )
+end
+
+function have_glassgroop_arts(stalker, player)
+	return ( db.actor:object("af_glass") or 
+	db.actor:object("af_teardrop") or 
+	db.actor:object("af_lens") )
+end
+
+function have_neutralgroop_arts(stalker, player)
+	return ( db.actor:object("af_spiral") or 
+	db.actor:object("af_cristallic") or 
+	db.actor:object("af_snail") or 
+	db.actor:object("af_hole") or 
+	db.actor:object("af_egg") )
+end
+
+
+
+
+-- Проверка артов по именам:
+
+function have_af_coal(stalker, player)
+	return db.actor:object("af_coal")
+end
+function have_af_scale(stalker, player)
+	return db.actor:object("af_scale")
+end
+function have_af_bitum(stalker, player)
+	return db.actor:object("af_bitum")
+end
+function have_af_ballast(stalker, player)
+	return db.actor:object("af_ballast")
+end
+function have_af_roll(stalker, player)
+	return db.actor:object("af_roll")
+end
+function have_af_chicken_god(stalker, player)
+	return db.actor:object("af_chicken_god")
+end
+function have_af_steel_nut(stalker, player)
+	return db.actor:object("af_steel_nut")
+end
+function have_af_bearing(stalker, player)
+	return db.actor:object("af_bearing")
+end
+function have_af_crown(stalker, player)
+	return db.actor:object("af_crown")
+end
+function have_af_frog(stalker, player)
+	return db.actor:object("af_frog")
+end
+function have_af_chestnut(stalker, player)
+	return db.actor:object("af_chestnut")
+end
+function have_af_sagebrush(stalker, player)
+	return db.actor:object("af_sagebrush")
+end
+function have_af_mushroom(stalker, player)
+	return db.actor:object("af_mushroom")
+end
+function have_af_glass(stalker, player)
+	return db.actor:object("af_glass")
+end
+function have_af_teardrop(stalker, player)
+	return db.actor:object("af_teardrop")
+end
+function have_af_lens(stalker, player)
+	return db.actor:object("af_lens")
+end
+function have_af_spiral(stalker, player)
+	return db.actor:object("af_spiral")
+end
+function have_af_cristallic(stalker, player)
+	return db.actor:object("af_cristallic")
+end
+function have_af_snail(stalker, player)
+	return db.actor:object("af_snail")
+end
+function have_af_hole(stalker, player)
+	return db.actor:object("af_hole")
+end
+function have_af_egg(stalker, player)
+	return db.actor:object("af_egg")
+end
+
+function have_af_likvidator(stalker, player)
+	return db.actor:object("af_licvidator")
+end
+function have_af_watch(stalker, player)
+	return db.actor:object("af_watch")
+end
+function have_af_emerald(stalker, player)
+	return db.actor:object("af_emerald")
+end
+function have_af_zuda(stalker, player)
+	return db.actor:object("af_zuda")
+end
+function have_af_controscull(stalker, player)
+	return db.actor:object("master_art")
+end
+function have_af_eye(stalker, player)
+	return db.actor:object("af_eye")
+end
+function have_af_maroders_hand(stalker, player)
+	return db.actor:object("af_marouders_hand")
+end
+function have_af_top(stalker, player)
+	return db.actor:object("af_top")
+end
+function have_af_stoneegg(stalker, player)
+	return db.actor:object("af_magic_egg")
+end
+function have_af_powerscull(stalker, player)
+	return db.actor:object("power_scull")
+end
+function have_af_spider(stalker, player)
+	return db.actor:object("af_spider")
+end
+function have_af_lamp(stalker, player)
+	return db.actor:object("af_lamp")
+end
+
+
+
+-- Функции изымания артефактов из нашего инвентаря:
+
+function af_coal_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_coal", "out")
+	dialogs.relocate_money(second_speaker, 8000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_scale_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_scale", "out")
+	dialogs.relocate_money(second_speaker, 11000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_bitum_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_bitum", "out")
+	dialogs.relocate_money(second_speaker, 16000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_ballast_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_ballast", "out")
+	dialogs.relocate_money(second_speaker, 7000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_roll_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_roll", "out")
+	dialogs.relocate_money(second_speaker, 10000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_chicken_god_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_chicken_god", "out")
+	dialogs.relocate_money(second_speaker, 12000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_steel_nut_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_steel_nut", "out")
+	dialogs.relocate_money(second_speaker, 5000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_bearing_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_bearing", "out")
+	dialogs.relocate_money(second_speaker, 10000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_crown_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_crown", "out")
+	dialogs.relocate_money(second_speaker, 15000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_frog_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_frog", "out")
+	dialogs.relocate_money(second_speaker, 6000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_chestnut_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_chestnut", "out")
+	dialogs.relocate_money(second_speaker, 9000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_sagebrush_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_sagebrush", "out")
+	dialogs.relocate_money(second_speaker, 11000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_mushroom_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_mushroom", "out")
+	dialogs.relocate_money(second_speaker, 15000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_glass_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_glass", "out")
+	dialogs.relocate_money(second_speaker, 7000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_teardrop_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_teardrop", "out")
+	dialogs.relocate_money(second_speaker, 11000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_lens_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_lens", "out")
+	dialogs.relocate_money(second_speaker, 15000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_spiral_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_spiral", "out")
+	dialogs.relocate_money(second_speaker, 7000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_cristallic_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_cristallic", "out")
+	dialogs.relocate_money(second_speaker, 12000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_snail_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_snail", "out")
+	dialogs.relocate_money(second_speaker, 16000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_hole_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_hole", "out")
+	dialogs.relocate_money(second_speaker, 5000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+function af_egg_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_egg", "out")
+	dialogs.relocate_money(second_speaker, 14000, "in")
+	db.actor:disable_info_portion("notebook_client3travel")
+end
+
+
+
+-- Отдельное изымание артов: 
+
+function af_bitum_out2(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_bitum", "out")
+end
+
+function af_chicken_god_out2(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_chicken_god", "out")
+end
+
+function af_crown_out2(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_crown", "out")
+end
+
+function af_mushroom_out2(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_mushroom", "out")
+end
+
+function af_lens_out2(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_lens", "out")
+end
+
+function af_egg_out2(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_egg", "out")
+end
+
+
+function af_likvidator_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_licvidator", "out")
+end
+
+function af_watch_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_watch", "out")
+end
+
+function af_emerald_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_emerald", "out")
+end
+
+function af_zuda_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_zuda", "out")
+end
+
+function af_controscull_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "master_art", "out")
+end
+
+function af_eye_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_eye", "out")
+end
+
+function af_maroders_hand_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_marouders_hand", "out")
+end
+
+function af_top_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_top", "out")
+end
+
+function af_stoneegg_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_magic_egg", "out")
+end
+
+function af_powerscull_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "power_scull", "out")
+end
+
+function af_spider_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_spider", "out")
+end
+
+function af_lamp_out(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_lamp", "out")
+end

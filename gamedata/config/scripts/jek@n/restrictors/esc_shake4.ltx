@@ -1,0 +1,5 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_actor_inside = %=hit_obj(37:bip01_spine:0:50) =run_cam_effector(earthquake) =drop_npc_item2(37:esc_shake4_point) =play_snd(ambient\rnd_outdoor\rnd_darkwind5)%

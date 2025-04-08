@@ -1,0 +1,37 @@
+[logic]
+active = ph_idle1
+
+[ph_idle1]
+on_timer = 1 |  {~25} ph_code2, {~45} ph_code1, ph_code3
+
+
+[ph_code1]
+code = 1986
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = dar_farm_seif_text1
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+[ph_code2]
+code = 2011
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = dar_farm_seif_text2
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+[ph_code3]
+code = 2000
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = dar_farm_seif_text3
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+
+
+[ph_idle@hand]
+tips = safe_use_with_maroders_hand
+on_use = ph_idle@open %=play_snd(device\metal_small_close_stop) =karma_down%
+on_info = {!actor_has_item_on_belt(af_marouders_hand)} ph_idle1
+
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure
+

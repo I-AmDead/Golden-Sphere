@@ -1,0 +1,14 @@
+[logic]
+active = ph_on_death
+
+[ph_idle@1]
+on_info = {+agr_receiver_shield_off} ph_idle@2
+
+[ph_idle@2]
+hit_on_bone = 1 | %=release_crictall_receiver2 +agr_cristall_destroyed =send_tip(test_tip:default)%
+hit_on_bone = 2 | %=release_crictall_receiver2 +agr_cristall_destroyed =send_tip(test_tip:default)%
+
+
+
+[ph_on_death]
+on_info = %+agr_cristall_destroyed%

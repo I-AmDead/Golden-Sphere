@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<w>
+
+	<static_head x="16" y="659" width="20" height="36">
+	</static_head>
+	<head_progress width="20" height="4" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_bar</texture>
+		</progress>
+	</head_progress>
+
+	<static_tors x="66" y="659" width="20" height="36">
+	</static_tors>
+	<tors_progress width="20" height="4" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_bar</texture>
+		</progress>
+	</tors_progress>
+
+	<static_l_hand x="16" y="686" width="20" height="36">
+	</static_l_hand>
+	<l_hand_progress width="20" height="4" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_bar</texture>
+		</progress>
+	</l_hand_progress>
+
+
+	<static_r_hand x="66" y="686" width="20" height="36">	
+	</static_r_hand>
+	<r_hand_progress width="20" height="4" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_bar</texture>
+		</progress>
+	</r_hand_progress>
+
+	<static_l_leg x="16" y="713" width="20" height="36">
+	</static_l_leg>
+	<l_leg_progress width="20" height="4" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_bar</texture>
+		</progress>
+	</l_leg_progress>
+
+	<static_r_leg x="66" y="713" width="20" height="36">	
+	</static_r_leg>
+	<r_leg_progress width="20" height="4" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_bar</texture>
+		</progress>
+	</r_leg_progress>
+
+	<background_body_state  x="0" y="611" width="168" height="154" stretch="1" />
+
+	<body_state x="38" y="650" width="26" height="87" stretch="1" />
+
+	<static_power  x="0" y="611" width="168" height="154" stretch="1">
+	</static_power>
+	<power_progress x="15" y="134" width="70" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_bhs_stamina</texture>
+		</progress>
+	</power_progress>
+
+	<static_health x="900" y="654" width="130" height="34" stretch="1">
+		<texture>ui_hud_shkala_health</texture>
+	</static_health>
+	<health_progress x="25" y="8" width="86" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_shk_health</texture>
+		</progress>
+	</health_progress>
+
+	<static_armor x="900" y="630" width="130" height="34" stretch="1">
+		<texture>ui_hud_shkala_armor</texture>
+	</static_armor>
+	<armor_progress x="25" y="8" width="86" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_shk_armour</texture>
+		</progress>
+	</armor_progress>
+
+	<static_radiation x="900" y="582" width="130" height="34" stretch="1">
+		<texture>ui_hud_shkala_radiation</texture>
+	</static_radiation>
+	<radiation_progress x="25" y="8" width="86" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_shk_radiation</texture>
+		</progress>
+	</radiation_progress>
+
+	<static_psy x="900" y="606" width="130" height="34" stretch="1">
+		<texture>ui_hud_shkala_psy</texture>
+	</static_psy>
+	<psy_progress x="25" y="8" width="86" height="10" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_hud_shk_psy</texture>
+		</progress>
+	</psy_progress>
+
+</w>

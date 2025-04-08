@@ -1,0 +1,16 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_force
+
+[ph_idle]
+on_timer = 1|ph_force
+ 
+[ph_force]
+force = 1000
+time = 50
+delay = 0
+point = garb_hangar_rooftop_zone_point
+point_index = 0
+on_info = {=garb_ufo_on_rooftop} %=spawn_garb_hangar_ufo_static =delme%

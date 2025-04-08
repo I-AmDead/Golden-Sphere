@@ -1,0 +1,62 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+threshold = threshold
+on_death = death
+
+[walker@start]
+path_walk = agr_fabrik_sniper_walk1
+path_look = agr_fabrik_sniper_look1
+on_timer      = 1|walker@1 %=disable_trading%
+
+[walker@1]
+path_walk = agr_fabrik_sniper_walk1
+path_look = agr_fabrik_sniper_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+on_info = {+agr_fabrik_sniper_start_hunt} walker@2 
+on_info2 = {+agr_hunter_dead} walker@3 %=make_invulnerable%
+
+[walker@2]
+path_walk = agr_fabrik_sniper_walk2
+path_look = agr_fabrik_sniper_look2_1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+on_info = {+agr_hunter_dead} walker@3 %=make_invulnerable%
+
+; Цель уничтожена, сваливаем:
+[walker@3]
+path_walk = agr_fabrik_sniper_walk3
+path_look = agr_fabrik_sniper_look3
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived|%=delme2%
+
+
+
+
+
+[threshold]
+max_ignore_distance = 2
+;ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+agr_fabrik_sniper_dead%

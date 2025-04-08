@@ -1,0 +1,15 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+predb_base_btn_switch} ph_sound@alarm
+
+[ph_sound@alarm]
+snd = rupor_sirena
+looped = true
+on_info = {+predb_base_chimera_dead} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end | nil
+

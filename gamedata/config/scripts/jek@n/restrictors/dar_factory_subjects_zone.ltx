@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {+x18_doctor_final -dar_oboroten_task} sr_idle@2
+
+[sr_idle@2]
+on_timer = 15000|sr_idle@3 %=delete_x18subject2 =delete_x18subject3 =delete_x18subject5 =delete_x18subject6 =delete_x18cattle1 =delete_x18cattle2 =dar_hunter4_tip =play_snd(characters_voice\scenario\dar_hunter_after_lab_message)%
+
+[sr_idle@3]
+on_timer = 5000 | sr_idle@4 %+dar_hunter_afterlab_meet%
+
+[sr_idle@4]
+on_actor_outside = nil %+dar_subjects_spawn%
+
+
+
+
+
+

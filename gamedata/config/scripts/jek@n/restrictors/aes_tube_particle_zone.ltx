@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_info = {+aes_tube_blowout} sr_particle@1
+
+[sr_particle@1]
+name = parpar\particle_paradise_expxlarge_00
+path = aes_tube_point
+mode = 2
+looped = false
+;on_signal = particle_end | sr_particle@2
+on_timer = 2000 | sr_particle@2
+
+[sr_particle@2]
+name = parpar\particle_paradise_exp_xlsmog00_up_army_00
+;name = explosions\expl_car_smoke_big_00
+path = aes_tube_point2
+mode = 2
+looped = true

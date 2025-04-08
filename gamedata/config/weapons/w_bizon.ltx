@@ -1,0 +1,238 @@
+; Пистолет-пулемет ПП-19 «Бизон»
+;-(TrickSR, Ga2z)-----------------------------------------
+; калибр 				9х18 мм
+; длина ствола 				230 мм
+; магазин				64
+; вес с пустым магазином		2.7 кг
+; максимальная дальность стрельбы	500 м
+; эффективная дальность стрельбы	25-100 м
+; прицельная дальность			150 м
+; дульная скорость пули			340 м/с
+; темп стрельбы				680 в/м
+;---------------------------------------------------
+[wpn_bizon]:wpn_defines,hud_wpn_fx.bizon
+GroupControlSection 			= spawn_group
+$spawn					= "weapons\bizon"
+$npc					= on
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_LR300
+min_radius          	= 30				; [] for AI
+max_radius          	= 100				; [] for AI
+description				= steur_tmp_descr
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+inv_name	        	= steur_tmp_name							; name in inventory	
+inv_name_short			= steur_tmp_name							; weight in inventory
+
+inv_grid_width     = 4
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 39
+
+kill_msg_x				= 72
+kill_msg_y				= 82
+kill_msg_width				= 56
+kill_msg_height				= 23
+
+cost					= 40000
+weapon_class				= assault_rifle
+inv_weight				= 2.70
+hud					= wpn_bizon_hud
+visual					= dynamics\weapons\wpn_bizon\wpn_bizon.ogf
+
+ph_mass					= 3
+
+ammo_class				= ammo_9x18_fmj, ammo_9x18_pmm
+
+startup_ammo				= 90
+ammo_current		 		= 180
+ammo_elapsed		 		= 64
+ammo_limit		 		= 210
+ammo_mag_size		 		= 64
+
+fire_modes				= 1, -1
+
+grenade_class				= ammo_vog-25
+
+launch_speed				= 0
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power				= 0.26
+hit_impulse				= 10
+hit_type				= fire_wound
+fire_distance				= 500
+bullet_speed				= 340
+rpm					= 680
+rpm_empty_click				= 200
+use_aim_bullet				= false
+time_to_aim				= 3
+
+misfire_probability			= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 		= 0.004
+misfire_end_prob	 		= 0.057
+condition_shot_dec 			= 0.000125
+condition_queue_shot_dec		= 0.0002
+
+zoom_dof				= 0.5,1,180
+reload_dof				= 0,0.5,5,2
+
+fire_dispersion_base			= 0.32
+fire_dispersion_condition_factor	= 2.5
+control_inertion_factor			= 1.1f
+crosshair_inertion 			= 4.35
+
+cam_return				= 0
+cam_relax_speed				= 5
+cam_relax_speed_ai			= 120.75
+cam_dispersion				= 0.5
+cam_dispersion_inc			= 0.25
+cam_dispersion_frac			= 1.0
+cam_max_angle				= 50.0
+cam_max_angle_horz			= 50.0
+cam_step_angle_horz			= 1.5
+
+zoom_cam_relax_speed			= 10
+zoom_cam_relax_speed_ai			= 120.75
+zoom_cam_dispersion			= 0.5
+zoom_cam_dispersion_inc			= 0.25
+zoom_cam_dispersion_frac		= 1
+zoom_cam_max_angle			= 50
+zoom_cam_max_angle_horz			= 50
+zoom_cam_step_angle_horz		= 1.5
+
+PDM_disp_base 				= 0.5
+PDM_disp_vel_factor 			= 1.5
+PDM_disp_accel_factor 			= 1.5
+PDM_disp_crouch	 			= 1
+PDM_disp_crouch_no_acc 			= 1
+
+min_radius				= 30
+max_radius				= 40
+
+holder_range_modifier			= 1
+holder_fov_modifier			= 1
+
+slot					= 2
+animation_slot				= 8
+
+position				= -0.026,-0.175,0
+orientation				= 0,0,0
+
+fire_point				= 0,0.218,0.420
+fire_point2				= 0,0.161,0.583
+
+flame_particles				= weapons\new_effects\pistol_9x18
+smoke_particles				= weapons\new_effects\smoke_muzzle_00
+silencer_smoke_particles 		= weapons\new_effects\smoke_sincer_pistol
+
+shell_point				= 0,0.188,0.082
+shell_dir				= 0,1,0
+shell_particles	 			= weapons\generic_shells
+
+strap_position 				= -0.16,-0.36,0.15
+strap_orientation 			= -10,-5,10
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= false
+light_color				= 0.6,0.5,0.3
+light_range				= 5
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time				= 0.2
+
+scope_status				= 2
+silencer_status				= 2
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.2
+scope_zoom_factor			= 1
+
+scope_name 				= pso
+scope_x					= 41
+scope_y					= 5
+
+silencer_name				= sil_pbs1
+silencer_x                  		= 176
+silencer_y                  		= 16
+
+silencer_hit_power 			= 0.24
+;silencer_hit_impulse			= 10
+silencer_fire_distance 			= 400
+silencer_bullet_speed	 		= 290
+
+silencer_light_color			= 0.6,0.5,0.3
+silencer_light_range			= 0.01
+silencer_light_var_color		= 0.05
+silencer_light_var_range		= 0.5
+silencer_light_time			= 0.2
+
+snd_draw				= weapons\bizon\bizon_draw
+snd_empty				= weapons\bizon\bizon_empty
+snd_holster				= weapons\bizon\bizon_holster
+snd_reload				= weapons\bizon\bizon_reload
+snd_reload_empty			= weapons\bizon\bizon_reload_empty
+snd_reload_misfire			= weapons\bizon\bizon_misfire
+snd_shoot				= weapons\bizon\bizon_shoot
+snd_silncer_shot			= weapons\bizon\bizon_shot_sil
+
+[wpn_bizon_hud]
+zoom_hide_crosshair     		= true
+attach_place_idx        		= 0
+item_visual             		= dynamics\weapons\wpn_bizon\wpn_bizon_hud.ogf
+
+hands_position				= -0.083500,-0.121125,-0.017500
+hands_orientation			= -2.814910,-0.285001,0.150000
+
+hands_position_16x9			= -0.083500,-0.121125,-0.017500
+hands_orientation_16x9			= -2.814910,-0.285001,0.150000
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos			= -0.082100,0.009300,-0.154005
+aim_hud_offset_rot			= -0.020681,-0.029495,0.031125
+
+aim_hud_offset_pos_16x9			= -0.082100,0.009300,-0.154005
+aim_hud_offset_rot_16x9			= -0.020681,-0.029495,0.031125
+
+shell_point				= 0.028,0.078,0.113
+shell_dir				= 0,1,0
+shell_bone				= wpn_body
+
+fire_point				= 0,0.053507,0.422361
+fire_bone				= wpn_body
+fire_point2				= 0,0.1,0.1
+fire_bone2				= wpn_body
+
+anm_show                		= lancew_bizon_draw
+anm_hide                		= lancew_bizon_holster
+anm_idle                		= lancew_bizon_idle
+anm_idle_sprint         		= lancew_bizon_sprint 
+anm_idle_moving         		= lancew_bizon_moving
+anm_shots               		= lancew_bizon_shoot, shoot
+anm_shots_when_aim               	= bizon_shoot_scope
+anm_reload              		= bizon_reload, reload
+anm_reload_empty              		= lancew_bizon_reload, reload_empty
+anm_reload_misfire              	= bizon_misfire, misfire
+anm_idle_aim            		= lancew_bizon_idle_aim, idle_aim
+anm_bore                		= lancew_bizon_no_reload
+
+gl_hud_offset_pos       		= 0,0,0
+gl_hud_offset_rot       		= 0,0,0
+
+gl_hud_offset_pos_16x9  		= 0,0,0
+gl_hud_offset_rot_16x9  		= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+
+[wpn_steyr_tmp]:wpn_bizon

@@ -1,0 +1,19 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = pri_anomal_phone_use
+on_info = {+pri_phone_off} nil
+on_info2 = {+pri_phone_task} nil
+on_timer = 5000|ph_idle@2 %=play_snd_on_me(characters_voice\scenario\telring)%
+on_use = %=pri_anomal_phone_use%
+
+[ph_idle@2]
+tips      = pri_anomal_phone_use
+on_info = {+pri_phone_off} nil
+on_info2 = {+pri_phone_task} nil
+on_timer = 5000|ph_idle@1 %=play_snd_on_me(characters_voice\scenario\telring)%
+on_use = %=pri_anomal_phone_use%
+
+
+ 

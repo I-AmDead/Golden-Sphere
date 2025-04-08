@@ -1,0 +1,45 @@
+[logic]
+active = ph_door@locked1
+
+[ph_door@locked1]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = rad_secret_door_use
+on_info = {++rad_lost_pda1_info +rad_lost_pda2_info +rad_lost_pda3_info +rad_lost_pda4_info} ph_door@locked2 %=send_tip(rad_secret_door_mark_tip:default) =add_self_spot(green_location:rad_secret_door_use)%
+
+[ph_door@locked2]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = rad_secret_door_use
+on_info = {+rad_code_door_unlocked} ph_door@close %=play_snd_on_me(device\metal_small_close_stop) =remowe_self_spot(green_location:rad_secret_door_use)%
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+;tip_open = dar_building_generator_door_use
+on_use = ph_door@open
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+
+
+
+
+
+

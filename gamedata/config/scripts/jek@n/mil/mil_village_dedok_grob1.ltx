@@ -1,0 +1,10 @@
+[logic]
+active = nil
+
+[ph_idle@1]
+on_timer = 1|ph_idle@2 %=switch_offline%
+
+[ph_idle@2]
+on_info = {+mil_find_icon_task1} ph_idle@3 %=switch_online%
+
+[ph_idle@3]

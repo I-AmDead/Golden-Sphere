@@ -1,0 +1,24 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = camper
+combat_ignore = combat_ignore
+on_death = death
+
+[camper]
+path_walk = pri_abdul_sniper_walk
+path_look = pri_abdul_sniper_look
+;sniper = true
+combat_ignore_cond = always
+def_state_campering = specnaz_hide
+def_state_campering_fire = hide_fire
+radius = 5
+
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+pri_abdul_sniper_dead%
+

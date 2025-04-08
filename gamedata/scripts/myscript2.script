@@ -1,0 +1,14 @@
+  function action_timer()
+        perbarsvalka.perehod_na_svalku() 
+   end
+ 
+  function start_timer()
+      local iTimer = time_global() + 3000
+ 
+
+  local function check_timer()
+         return time_global() > iTimer
+      end
+ 
+      level.add_call(check_timer, action_timer)
+   end

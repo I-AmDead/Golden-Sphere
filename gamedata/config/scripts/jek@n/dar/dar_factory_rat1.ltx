@@ -1,0 +1,17 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@outdoor
+
+[mob_home@outdoor]
+path_home = dar_fabrik_rat_home_outdoor
+home_min_radius = 15
+home_max_radius = 25
+on_actor_not_in_zone = dar_fabric_outdoor_zone | mob_home@yard
+
+
+[mob_home@yard]
+path_home = dar_fabrik_rat_home_yard
+home_min_radius = 15
+home_max_radius = 25

@@ -1,0 +1,28 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_remark@1
+on_death = mob_death
+
+[mob_remark@1]
+anim = z_sleep_to_sit_idle_0
+braindead = true
+target = 8075
+on_timer = 10 | mob_remark@2 %=make_invulnerable%
+
+[mob_remark@2]
+anim = z_sleep_to_sit_idle_0
+braindead = true
+target = 8075
+on_actor_dist_le = 18 | mob_home %=unmake_invulnerable%
+
+[mob_home]
+path_home = esc_miln_nest_center
+home_min_radius = 5
+home_max_radius = 10
+
+[mob_death]
+on_info = %+esc_miln_controler_dead%
+
+

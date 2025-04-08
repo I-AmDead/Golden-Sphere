@@ -1,0 +1,17 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_actor_in_zone = mil_kazarma1_zone|ph_idle@2
+
+[ph_idle@2]
+on_info = {+mil_kazarma1_polter_dead} nil
+on_actor_dist_le_nvis = 25 | ph_idle@3 %=strike_to_actor2%
+
+[ph_idle@3]
+on_info = {+mil_kazarma1_polter_dead} nil
+on_timer = 3000 | ph_idle@2
+
+
+
+ 

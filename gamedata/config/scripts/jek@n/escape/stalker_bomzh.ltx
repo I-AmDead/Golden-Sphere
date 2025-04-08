@@ -1,0 +1,91 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+kill_vanomas_task} walker@agressive, {+find_vanomas_task} walker@norm
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@bomzh_threshold
+
+
+[walker@agressive]
+path_walk = bomzh_walk1
+path_look = bomzh_look1
+danger = danger_condition
+meet = no_meet
+on_actor_dist_le_nvis = 50|%=killactor%
+
+
+[walker@norm]
+path_walk = bomzh_walk1
+path_look = bomzh_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bomzh_enemy} walker@scare1 
+on_info2 = {+bomzh_habar_info} walker@norm2 %=make_invulnerable =disable_trading%
+
+[walker@norm2]
+path_walk = bomzh_walk1
+path_look = bomzh_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_ge_nvis = 60 | {+bomzh_habar_info} %=delme2%
+
+
+
+
+
+[walker@scare1]
+path_walk = bomzh_walk1
+path_look = bomzh_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000 | walker@scare2
+
+[walker@scare2]
+path_walk = bomzh_walk1
+path_look = bomzh_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000 | walker@scare1
+
+
+
+
+
+
+
+
+
+
+[meet]
+use = true
+use_wpn = true
+meet_talk_enabled = true
+victim = 3|nil
+victim_wpn = 3|nil
+meet_state = 3|hello@bomzh_hello|2|hello@bomzh_hello
+meet_state_wpn = 3|hello@bomzh_hello|2|hello@bomzh_hello
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@bomzh_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+;on_info = {=killed_by_actor} %=karma_down +bomzh_dead%
+on_info = %=karma_down +bomzh_dead%
+
+
+
+

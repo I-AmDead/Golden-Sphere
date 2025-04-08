@@ -1,0 +1,72 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = garb_shustriy_walk1
+path_look = garb_shustriy_look1
+on_timer = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+[walker@1]
+path_walk = garb_shustriy_walk1
+path_look = garb_shustriy_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+reketirs_zuda_work} walker@2 %=play_snd_from_obj(8491:characters_voice\human_01\bandit\fight\hit\hit_5)%
+on_info2 = {+garb_reketirs_fail} walker@5 %=unmake_invulnerable =killactor%
+
+[walker@2]
+path_walk = garb_shustriy_walk1
+path_look = garb_shustriy_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+garb_tirsa_dead} walker@3 %=unmake_invulnerable%
+
+
+;Тырса убит. Орем от страха:
+[walker@3]
+path_walk = garb_shustriy_walk1
+path_look = garb_shustriy_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 36000 | walker@4 %=play_snd_from_obj(8492:characters_voice\human_01\bandit\fight\tolls\tolls_2)%
+on_actor_dist_le_nvis = 35 | nil %=delme2%
+
+[walker@4]
+path_walk = garb_shustriy_walk1
+path_look = garb_shustriy_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 36000 | walker@3 %=play_snd_from_obj(8492:characters_voice\human_01\bandit\fight\tolls\tolls_3)%
+on_actor_dist_le_nvis = 35 | nil %=delme2%
+
+
+
+; Игрок засветил свою пукалку и мы на него сагрились:
+[walker@5]
+path_walk = garb_shustriy_walk1
+path_look = garb_shustriy_look1
+danger = danger_condition
+meet = no_meet
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+garb_shustriy_dead%
+

@@ -1,0 +1,156 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_kpp_kontrab_atacked} camper@1, {+predb_marod_base_end} kamp@base, {+predb_marouders_to_base} follower@1, {+predb_maroder_lager_done} walker@7, {+predb_marouder_search} walker@2, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_marouder3_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_marouder3_walk1
+path_look = predb_marouder3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = predb_marouder3_walk1
+path_look = predb_marouder3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_firest_maroud_mob9_dead +predb_firest_maroud_mob10_dead +predb_firest_maroud_mob11_dead +predb_firest_maroud_mob12_dead +predb_firest_maroud_mob13_dead +predb_firest_maroud_mob14_dead +predb_firest_maroud_mob15_dead} walker@1a
+
+[walker@1a]
+path_walk = predb_marouder3_walk1
+path_look = predb_marouder3_look1_1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouder_search} walker@1b
+
+[walker@1b]
+path_walk = predb_marouder3_walk1
+path_look = predb_marouder3_look1_1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 8000|walker@2 %=play_snd_on_me(characters_voice\human_03\stalker\talk\raid\reaction\loner_3)%
+
+
+; Занимаемся поисками лута:
+[walker@2]
+path_walk = predb_marouder3_walk2
+path_look = predb_marouder3_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@6
+on_signal       = arrived|walker@3
+
+[walker@3]
+path_walk = predb_marouder3_walk2
+path_look = predb_marouder3_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@6
+on_timer = 20000|walker@4
+
+
+[walker@4]
+path_walk = predb_marouder3_walk3
+path_look = predb_marouder3_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@6
+on_signal       = arrived|walker@5
+
+[walker@5]
+path_walk = predb_marouder3_walk3
+path_look = predb_marouder3_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@6
+on_timer = 20000|walker@2
+
+
+; У двери в подвал:
+[walker@6]
+path_walk = predb_marouder3_walk4
+path_look = predb_marouder3_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@6_1
+
+[walker@6_1]
+path_walk = predb_marouder3_walk4
+path_look = predb_marouder3_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_maroder_lager_done} walker@7 %=play_snd_on_me(characters_voice\human_01\bandit\fight\searching_enemy\search_15)%
+
+; Получили отмычки:
+[walker@7]
+path_walk = predb_marouder3_walk4
+path_look = predb_marouder3_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 60000|walker@8 %+predb_marouder_door_open =spawn_predb_firest_rust_anomaly =send_tip(predb_marouder_firest_door_open_tip:stalker)%
+
+[walker@8]
+path_walk = predb_marouder3_walk4
+path_look = predb_marouder3_look4_2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_base} follower@1 %=make_invulnerable%
+
+[follower@1]
+leader = 8957
+formation_line = false
+distance = 2
+anim_sprint = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marod_base_end} kamp@base
+
+; Отдыхаем на базе:
+[kamp@base]
+center_point = predb_marouders_base_camp
+radius = 2 
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+
+
+
+
+; Если ГГ за военных:
+[camper@1]
+path_walk = predb_marouder3_yard_walk
+path_look = predb_marouder3_yard_look
+;sniper = true
+def_state_campering = specnaz_hide
+def_state_campering_fire = hide_fire
+radius = 55
+danger = danger_condition
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+
+[threshold@predb_marouder3_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_marouder3_dead%
+

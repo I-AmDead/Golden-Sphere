@@ -1,0 +1,443 @@
+local snd_gasmask = sound_object('interface\\item_usage\\gasmask_swipe')
+local snd_torch = sound_object('interface\\item_usage\\headflash_switch')
+local snd_pickup = sound_object('interface\\item_usage\\pickup')
+local snd_harvest = sound_object('interface\\item_usage\\harvest_use')
+local snd_loot = sound_object('interface\\item_usage\\harvest_loot')
+local snd_hand_bore = sound_object('interface\\item_usage\\outfit_inspect')
+local hide_hand_speed = 1.5
+local anim_plays
+local speed_k = 1.0
+
+local key_release = false
+local bugfix_detector = false
+
+local lowered_anm_kinds = {
+    ["w_sniper"] = true,
+    ["w_rifle"] = true,
+    ["w_smg"] = true,
+    ["w_shotgun"] = true
+}
+
+local lowered_anm_classes = {
+    ["WP_VAL"] = true,
+    ["WP_AK74"] = true,
+    ["WP_LR300"] = true,
+    ["WP_BM16"] = true,
+    ["WP_SVD"] = true,
+    ["WP_SVU"] = true,
+    ["WP_GROZA"] = true,
+    ["WP_SHOTG"] = true,
+    ["WP_RG6"] = true,
+    ["WP_RPG7"] = true,
+    ["D_PDA"] = true
+}
+
+local function animation_exist(hud_section, animation, default)
+    if get_line_exist(hud_section, animation) then
+        return animation
+    end
+    return default
+end
+
+local function detector_hide(anm_time)
+    if bugfix_detector and anm_time then
+        dsh.timeout(anm_time, function() get_actor_obj():DetectorToogle(true) end)
+        bugfix_detector = false
+    else
+        if get_actor_obj():IsDetectorActive() then
+            get_actor_obj():DetectorToogle(true)
+            bugfix_detector = true
+        end
+    end
+end
+
+function allow_animation()
+    local active_item = db.actor:active_item()
+    local allow_all = game.hud_motion_allowed() and not level.only_allow_movekeys()
+    if active_item then
+        local aim_allow = active_item:is_weapon_magazined() and not ogse_wpn_utils.is_aiming_complete(active_item)
+        return active_item:get_hud_item_state() == 0 and (aim_allow or not active_item:is_weapon_magazined()) and allow_all
+    else
+        return allow_all
+    end
+end
+
+local function get_anm_settings(def_name, def_length, name, length)
+    local anm_name = def_name
+    local anm_additional_length = def_length
+    local itm = db.actor:active_item()
+
+    if itm then
+        local kind = get_string(itm:section(), "kind")
+        local class = get_string(itm:section(), "class")
+        if ((kind and lowered_anm_kinds[kind]) or (class and lowered_anm_classes[class])) then
+            anm_name = name
+            anm_additional_length = length
+        end
+    end
+
+    return anm_name, anm_additional_length
+end
+
+-- EMULATION SWIPE RAIN DROPS
+local function swipe_mask()
+    detector_hide()
+    dsh.wait_condition(function() return not get_actor_obj():IsDetectorActive() end, 
+    function()
+        local anm_sec = "anim_mask_clean"
+        local animation = "anm_wipe"
+        local anm_speed = 1.0
+        local itm = db.actor:active_item()
+        if itm then
+            local hud_section = get_string(itm:section(), "hud")
+            local class = get_string(itm:section(), "class")
+            if class == "WP_BM16" then
+                animation = animation_exist(hud_section, "anm_gasmask_" .. itm:get_ammo_in_magazine(), animation)
+            else
+                animation = animation_exist(hud_section, "anm_gasmask", animation)
+                if itm:is_weapon_magazined() and itm:get_grenade_launcher_status() and ogse_wpn_utils.get_grenade_launcher_flag(itm) then
+                    animation = itm:get_gl_mode() and animation_exist(hud_section, animation .. "_g", animation) or animation_exist(hud_section, animation .. "_w_gl", animation)
+                end
+                animation = itm:get_ammo_in_magazine() == 0 and animation_exist(hud_section, animation .. "_empty", animation) or animation
+            end
+            anm_sec = animation ~= "anm_wipe" and hud_section or anm_sec
+        end
+
+        local anm_name, anm_additional_length = get_anm_settings("script\\clear_mask_right_hand.anm", 0.45, "script\\clear_mask_right_hand.anm", 0.75)
+        local new_speed, anm_time
+
+        animation_on()
+        if anm_sec == "anim_mask_clean" then
+            anm_time = game.play_hud_motion(db.actor:active_item() and 1 or 2, anm_sec, animation, true, anm_speed)
+        else
+            itm:set_hud_item_state(15)
+            anm_time = itm:play_hud_motion(animation, true, 15, anm_speed)
+        end
+
+        if anm_sec == "anim_mask_clean" then
+            game.play_hud_anm(anm_name, 0, 1, 2.0, false)
+            new_speed = game.set_hud_anm_time(anm_name, (anm_time) / 1000 + anm_additional_length)
+        end
+
+        snd_gasmask:play(db.actor, 0, sound_object.s2d)
+        snd_gasmask.frequency = anm_speed
+        level.add_cam_effector("camera_effects\\weapon\\mask.anm", 7538, false, "", 0, false)
+
+        dsh.timeout(anm_time * 0.36, 
+        function()
+            rain_drops_restart()
+        end)
+        dsh.timeout(anm_time - 200, 
+        function()
+            if new_speed and anm_sec == "anim_mask_clean" then
+                game.play_hud_anm(anm_name, 2, new_speed, 2.0, false, true)
+            end
+            dsh.timeout(450, animation_off)
+            detector_hide(400)
+        end)
+    end)
+end
+
+-- EMULATION TORCH AND NVG SWITCH
+function torch_and_nvg_switch(nvg)
+    detector_hide()
+    dsh.wait_condition(function() return not get_actor_obj():IsDetectorActive() end, 
+    function()
+        local anm_sec = "anim_headlamp"
+        local animation = "anm_switch"
+        local anm_speed = 1.0
+        local itm = db.actor:active_item()
+        if itm then
+            local hud_section = get_string(itm:section(), "hud")
+            local class = get_string(itm:section(), "class")
+            if class == "WP_BM16" then
+                animation = animation_exist(hud_section, "anm_switch_device_" .. itm:get_ammo_in_magazine(), animation)
+            else
+                animation = animation_exist(hud_section, "anm_switch_device", animation)
+                if itm:is_weapon_magazined() and itm:get_grenade_launcher_status() and ogse_wpn_utils.get_grenade_launcher_flag(itm) then
+                    animation = itm:get_gl_mode() and animation_exist(hud_section, animation .. "_g", animation) or animation_exist(hud_section, animation .. "_w_gl", animation)
+                end
+                animation = itm:get_ammo_in_magazine() == 0 and animation_exist(hud_section, animation .. "_empty", animation) or animation
+            end
+            anm_sec = animation ~= "anm_switch" and hud_section or anm_sec
+        end
+
+        local anm_name, anm_additional_length = get_anm_settings("script\\clear_mask_right_hand.anm", 0.45, "script\\clear_mask_right_hand.anm", 0.75)
+        local new_speed, anm_time, switch_time
+
+        if anm_sec == "anim_headlamp" then
+            anm_time = game.play_hud_motion(db.actor:active_item() and 1 or 2, anm_sec, animation, true, nvg and 1.2 or 1.0)
+            switch_time = anm_time - (nvg and 500 or 200)
+        else
+            itm:set_hud_item_state(15)
+            anm_time = itm:play_hud_motion(animation, true, 15, anm_speed)
+            switch_time = anm_time * (nvg and 0.25 or 0.35)
+        end
+
+        if anm_sec == "anim_headlamp" then
+            game.play_hud_anm(anm_name, 0, 1, 2.0, false)
+            new_speed = game.set_hud_anm_time(anm_name, (anm_time) / 1000 + anm_additional_length)
+        end
+
+        animation_on()
+        snd_torch:play(db.actor, 0, sound_object.s2d)
+        snd_torch.frequency = anm_speed
+        level.add_cam_effector("camera_effects\\headlamp.anm", 7539, false, "", 0, false)
+
+        dsh.timeout(switch_time, 
+        function()
+            if nvg then
+                ogsr_night_vision.call_pnv()
+            else
+                ogse_torch.on_switch()
+            end
+        end)
+        dsh.timeout(anm_time - 200, 
+        function()
+            if new_speed and anm_sec == "anim_headlamp" then
+                game.play_hud_anm(anm_name, 2, new_speed, 2.0, false, true)
+            end
+            dsh.timeout(450, animation_off)
+            detector_hide(400)
+        end)
+    end)
+end
+
+local force_crouch = false
+local force_crouch_subscribed = nil
+
+local function toggle_force_crouch()
+    if force_crouch then
+        ogsr_signals.get_mgr():unsubscribe(force_crouch_subscribed)
+        force_crouch_subscribed = nil
+        get_actor_obj():release_action(key_bindings.kCROUCH)
+        force_crouch = false
+    else
+        force_crouch = true
+        get_actor_obj():press_action(key_bindings.kCROUCH)
+        force_crouch_subscribed = {
+            signal = "on_update",
+            fun = function()
+                if force_crouch then
+                    get_actor_obj():hold_action(key_bindings.kCROUCH)
+                end
+            end
+        }
+        ogsr_signals.get_mgr():subscribe(force_crouch_subscribed)
+    end
+end
+
+-- EMULATION PICKUP
+local function multipickup(dist, radius, actor)
+    local pos = device().cam_pos
+    local dir = device().cam_dir
+    pos = pos:add(dir:mul(dist))
+    level.iterate_nearest(pos, dist, function(obj)
+        if obj:get_inventory_item() and obj:actor_can_take() and pos:distance_to(obj:position()) <= radius then
+            db.actor:transfer_item(obj, db.actor)
+        end
+    end)
+    pos, dir = nil, nil
+end
+
+local function take_delay(obj)
+    local actor = db.actor
+    db.actor:transfer_item(obj, db.actor)
+    multipickup(1.5, 0.75, actor)
+    multipickup(1, 0.5, actor)
+    multipickup(0.5, 0.25, actor)
+    snd_pickup:play(db.actor, 0, sound_object.s2d)
+    animation_off()
+    anim_plays = nil
+end
+
+local function on_item_before_pickup(obj)
+    if not allow_animation() then return end
+
+    local pickup_anm_sec = "anim_pickup"
+    local cam_pos = device().cam_pos
+    local cam_pos_y = cam_pos.y - 0.7
+    local obj_pos = obj:position()
+    local anm_name = "camera_effects\\weapon\\two_handed_weapon_effect.anm"
+    if not anim_plays then
+        detector_hide()
+        dsh.wait_condition(function() return not get_actor_obj():IsDetectorActive() end, 
+        function()
+            animation_on()
+            local pickup_anm_time = game.play_hud_motion(1, pickup_anm_sec, "anm_take", false, 1.4)
+            game.play_hud_anm(anm_name, 0, 1.4, 1, false)
+            if obj_pos.y <= cam_pos_y then
+                toggle_force_crouch()
+                dsh.timeout(pickup_anm_time - 100, function() toggle_force_crouch() end)
+            end
+            dsh.timeout(pickup_anm_time - 300, function() take_delay(obj) end)
+            detector_hide(pickup_anm_time + 100)
+            anim_plays = true
+        end)
+    end
+end
+
+-- EMULATION HARVEST
+function harvest(on_take)
+    if not allow_animation() then return end
+
+    local harvest_anm_sec = "anim_harvest"
+    local loot_anm_sec = "anim_loot"
+
+    local prev_slot = db.actor:active_slot()
+    db.actor:activate_slot(255)
+    detector_hide()
+
+    dsh.wait_condition(function() return not db.actor:active_item() end, 
+    function()
+        speed_k = has_alife_info("acv_gvdr") and 1.2 or 1.0
+        level.add_cam_effector("camera_effects\\harvest_cam_down.anm", 8999, false, "")
+        level.disable_input()
+        animation_on()
+        --toggle_force_crouch()
+        snd_harvest:play(db.actor, 0, sound_object.s2d)
+        snd_harvest.frequency = speed_k
+        local harvest_anm_time = game.play_hud_motion(2, harvest_anm_sec, "anm_harvest", true, speed_k)
+        dsh.timeout(harvest_anm_time + 100, 
+        function()
+            level.add_cam_effector("camera_effects\\harvest_loot.anm", 9000, false, "")
+            snd_loot:play(db.actor, 0, sound_object.s2d)
+            snd_loot.frequency = speed_k
+            local loot_anm_time = game.play_hud_motion(2, loot_anm_sec, "anm_loot", true, speed_k)
+            dsh.timeout(loot_anm_time - 500, 
+            function()
+                --toggle_force_crouch()
+                on_take()
+                level.enable_input()
+                archievements.acv_count_event("acv_gvdr", 100, game.translate_string("acv_gvdr"))
+            end)
+            dsh.timeout(loot_anm_time, 
+            function()
+                animation_off()
+                db.actor:activate_slot(prev_slot)
+            end)
+            detector_hide(loot_anm_time + 100)
+        end)
+    end)
+end
+
+local function lcalls(count, radius, sub)
+    local lcall
+    local add = 0
+    local cnt = count
+    raindrop_timer = true
+    lcall = level.add_call(
+    function()
+        cnt = cnt - 5
+        add = sub and cnt or add + 5
+        shader_set_custom_param("raindrop_restart", add / 100, 0, 0, 0)
+        lcall:set_pause(1)
+        return cnt == 0
+    end, 
+    function()
+        shader_set_custom_param("raindrop_restart", 0, 0, 0, 0)
+        cmd("r2_rain_drops_control off")
+        dsh.timeout(10, function() cmd("r2_rain_drops_control on") end)
+        raindrop_timer = nil
+    end)
+end
+
+-- RAIN DROPS RESTART
+function rain_drops_restart()
+    lcalls(100, 1, false)
+end
+
+local function anm_modification(anm_name, mod)
+
+end
+
+-- EMULATION SWIPE RAIN DROPS
+local function watch_wide()
+    if not allow_animation() then return end
+    local anm_name, anm_additional_length = get_anm_settings("script\\gasmask.anm", 0.45, "script\\gasmask.anm", 0.75)
+    local watch_anm_sec = "anim_watch"
+    local anm_in, anm_idle, anm_out = "anm_in", "anm_idle", "anm_out"
+    detector_hide()
+    dsh.wait_condition(function() return not get_actor_obj():IsDetectorActive() end, 
+    function()
+        local watch_anm_time = game.play_hud_motion(1, watch_anm_sec, anm_in, true, 1)
+        game.play_hud_anm(anm_name, 0, 0.5, 1, false)
+        animation_on()
+        dsh.timeout(watch_anm_time, function()
+            game.set_hud_anm_time(anm_name, 10000000)
+            game.play_hud_motion(db.actor:active_item() and 1 or 2, watch_anm_sec, anm_idle, true, 1)
+            dsh.wait_condition(function() return key_release end, 
+            function()
+                game.stop_hud_motion()
+                watch_anm_time = game.play_hud_motion(db.actor:active_item() and 1 or 2, watch_anm_sec, anm_out, true, 1)
+                game.set_hud_anm_time(anm_name, (watch_anm_time + 200) / 1000)
+                dsh.timeout(watch_anm_time, function() animation_off() end)
+                detector_hide(watch_anm_time + 100)
+            end)
+        end)
+    end)
+end
+
+local function hand_wide()
+    if db.actor:active_item() or not allow_animation() then return end
+    detector_hide()
+    dsh.wait_condition(function() return not get_actor_obj():IsDetectorActive() end, 
+    function()
+        local anm_time = game.play_hud_motion(2, "anim_hand_bore", "anm_bore", true, 1)
+        level.add_cam_effector("camera_effects\\weapon\\liz_outfit_inspect.anm", 7538, false, "", 0, false)
+        snd_hand_bore:play(db.actor, 0, sound_object.s2d)
+        animation_on()
+        dsh.timeout(anm_time, animation_off)
+        detector_hide(anm_time + 100)
+    end)
+end
+
+function animation_on()
+    level.only_allow_movekeys(true)
+    level.set_actor_allow_ladder(false)
+end
+
+function animation_off()
+    level.only_allow_movekeys(false)
+    level.set_actor_allow_ladder(true)
+end
+
+local function on_first_update()
+    animation_off()
+    shader_set_custom_param("raindrop_restart", 0, 1, 0, 0)
+end
+
+local function on_key_down(key, bind)
+    if level.main_input_receiver() or not db.actor:alive() or not allow_animation() then return end
+
+    local torch = db.actor:item_in_slot(9)
+    local pnv = db.actor:item_in_slot(11)
+
+    if bind == key_bindings.kSWIPE_MASK then
+        if not get_con_bool("r2_rain_drops_control") then return end
+        swipe_mask()
+    elseif (torch and bind == key_bindings.kHEADLAMP) or (pnv and bind == key_bindings.kNIGHTVISION) then
+        torch_and_nvg_switch(pnv and bind == key_bindings.kNIGHTVISION)
+    elseif bind == key_bindings.kWATCH then
+        key_release = false
+        watch_wide()
+    elseif bind == key_bindings.kBORE then
+        hand_wide()
+        --gv_table.gv_table()
+        --log3("lv count %s", level.vertex_count())
+    end
+end
+
+local function on_key_up(key, bind)
+    if level.main_input_receiver() or not db.actor:alive() then return end
+    if bind == key_bindings.kWATCH then
+        key_release = true
+    end
+end
+
+function attach(sm)
+    sm:subscribe({signal = "on_first_update",       fun = on_first_update})
+    sm:subscribe({signal = "on_key_down",           fun = on_key_down})
+    sm:subscribe({signal = "on_key_up",             fun = on_key_up})
+    sm:subscribe({signal = "on_item_before_pickup", fun = on_item_before_pickup})
+end

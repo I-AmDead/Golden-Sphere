@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<yan_sold_raciya2>	
+	<radio_face x="320" y="85" width="312" height="212" stretch="1">
+		<texture x="0" y="0" width="532" height="550">ui\radio_face</texture>
+	</radio_face>
+	<radio_name x="600" y="525" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="graffiti22">Рация сержанта</text>
+	</radio_name>
+	<dialog_table x="250" y="280" width="550" height="900" stretch="1">
+		<texture >ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+	<radio_talk_text1 x="280" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Прошу помощи! Я заблокирован в одном из зданий на территории завода. Припасы закончились.</text>
+	</radio_talk_text1>
+
+
+
+
+	<btn_1 x="300" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>1) Чем я могу помочь? Ворота завалены.</text>
+	</btn_1>
+
+
+</yan_sold_raciya2>
+

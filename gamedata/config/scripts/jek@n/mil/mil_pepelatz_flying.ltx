@@ -1,0 +1,16 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_force
+
+[ph_idle]
+on_timer = 100|ph_force
+
+[ph_force]
+force = 10000
+time = 500000
+delay = 0
+point = mil_gravit_anomaly_point1
+point_index = 0
+on_actor_dist_ge_nvis = 200|%=delme%

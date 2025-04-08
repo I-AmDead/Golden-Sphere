@@ -1,0 +1,29 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_actor_dist_le_nvis = 3| ph_idle@2 %=disable_input =run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 2000|ph_idle@3 %=run_postprocess(deadcity_wake) =play_snd_on_me(characters_voice\human_01\military\states\panic_monster\panic_monster_3)%
+
+[ph_idle@3]
+on_timer = 2000|ph_idle@4 %=run_postprocess(agr_u_fade) =play_snd_on_me(characters_voice\human_01\military\states\panic_monster\panic_monster_1)%
+
+[ph_idle@4]
+on_timer = 2500|ph_idle@5 %=run_postprocess(agr_u_fade) =play_snd_on_me(monsters\himera\attack_3)%
+
+[ph_idle@5]
+on_timer = 2500|nil %=enable_input =run_postprocess(agr_u_fade) =play_snd(soundtrack\agroprom_following_krot) =predb_base_body_spawns =delme2%
+
+
+
+
+
+
+
+
+

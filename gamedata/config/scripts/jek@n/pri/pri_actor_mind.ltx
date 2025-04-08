@@ -1,0 +1,76 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+threshold = threshold@pri_actor_mind_threshold
+trade = misc\trade_nothing.ltx
+
+[walker@start]
+path_walk = pri_actor_mind_walk1
+path_look = pri_actor_mind_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = pri_actor_mind_walk2
+path_look = pri_actor_mind_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+actor_mind_fight} walker@2_1 %=pri_rooftop_battle_doll_tip%
+
+
+; Сидим, боимся призраков и орём:
+[walker@2_1]
+path_walk = pri_actor_mind_walk2
+path_look = pri_actor_mind_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+pri_actors_mind_dead} remark@death %=play_particle_on_path(anomaly2\group_items\psi_glow:pri_actor_mind_walk2) =play_snd_on_me(characters_voice\human_01\newbie\help\wounded_heavy\help_1)%
+on_info2 = {+pri_rooftop_battle_end} nil %=delme2%
+on_timer = 8000|walker@2_2 %=play_snd_on_me(characters_voice\human_01\newbie\states\panic_monster\panic_monster_2)%
+
+[walker@2_2]
+path_walk = pri_actor_mind_walk2
+path_look = pri_actor_mind_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+pri_actors_mind_dead} remark@death %=play_particle_on_path(anomaly2\group_items\psi_glow:pri_actor_mind_walk2) =play_snd_on_me(characters_voice\human_01\newbie\help\wounded_heavy\help_11)%
+on_info2 = {+pri_rooftop_battle_end} nil %=delme2%
+on_timer = 11000|walker@2_1 %=play_snd_on_me(characters_voice\human_01\newbie\states\panic_monster\panic_monster_7)%
+
+
+; Призраки нас достали:
+[remark@death]
+anim = psy_pain
+;snd = help
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end|nil %=delme2%
+
+
+
+
+[threshold@pri_actor_mind_threshold]
+max_ignore_distance = 1
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+
+

@@ -1,0 +1,201 @@
+[playe_r]:identity_immunities
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn    		= "food and drugs\antirad"
+$prefetch   	= 32
+class		 	= II_ANTIR
+cform           = skeleton
+visual          = equipments\item_pda1.ogf
+radius			= 1
+belt = 0
+eat_health = 0
+eat_satiety = 0
+eat_power = 0
+eat_radiation = 0
+eat_alcohol = 0
+wounds_heal_perc = 0
+eat_portions_num = 1
+animation_slot  = 4
+
+
+[bomba]:explosive_barrel
+visual          = equipments\item_rukzak.ogf
+inv_name			= "Взрывчатка"
+inv_name_short		= "Взрывчатка"
+description		= "Для взрыва необходим детонатор. Лучшее оружие сапера, киллера или террориста. Уничтожит все в радиусе нескольких десятков метров."
+inv_weight			= 1.7
+inv_grid_width  = 1
+inv_grid_height  = 2
+inv_grid_x   = 6
+inv_grid_y   = 19
+can_take			= true
+cost				= 7000
+blast				= 10.00
+blast_r				= 10
+blast_impulse		= 200
+frags				= 10
+up_throw_factor		= 0.2
+explode_particles		 = explosions\explosion_01c
+light_color		         = 1.9,1.3,0.5
+light_range		         = 3.0
+light_time 		         = 1.5
+snd_explode = weapons\explo\dynamite_boom
+immunities_sect			= bomba_babah
+
+
+[bomba_big]:explosive_barrel
+visual          = equipments\item_rukzak.ogf
+inv_name			= "Рюкзак со взрывчаткой"
+inv_name_short		= "Рюкзак со взрывчаткой"
+description		= "Для взрыва необходим детонатор. По силе равен связке гранат Ф1."
+inv_weight			= 3.4
+inv_grid_width  = 2
+inv_grid_height  = 2
+inv_grid_x   = 16
+inv_grid_y   = 30
+can_take			= true
+cost				= 9000
+blast					= 15
+blast_r					= 14
+blast_impulse			= 250
+frags					= 20
+frags_r					= 30
+frag_hit				= 2.0
+frag_hit_impulse		= 100
+hit_type 					= explosion
+hit_type_blast			= explosion
+hit_type_frag			= explosion
+up_throw_factor		= 0.2
+explode_particles		 =explosions\explosion_01
+light_color		         = 1.9,1.3,0.5
+light_range		         = 3.0
+light_time 		         = 1.5
+snd_explode = weapons\explo\t_f1_explosion 
+immunities_sect			= bomba_babah
+
+
+[detonator]:playe_r
+visual				= equipments\item_fmradio.ogf
+inv_name			= "Детонатор"
+inv_name_short		= "Детонатор"
+description		= "Детонатор для взрывчатки. Радиус действия - 50 метров."
+inv_weight			= 0.1
+inv_grid_width  = 1
+inv_grid_height  = 1
+inv_grid_x   =6
+inv_grid_y   =21
+cost				= 3000
+
+
+[detonator_2]:playe_r
+visual				= equipments\item_fmradio.ogf
+inv_name			= "Детонатор усиленный"
+inv_name_short		= "Детонатор усиленный"
+description		= "Улучшенный вариант детонатора. Увеличен радиус действия до 150 метров."
+inv_weight			= 0.2
+inv_grid_width  = 1
+inv_grid_height  = 1
+inv_grid_x   =6
+inv_grid_y   =21
+cost				= 5000
+
+
+
+
+
+
+[dynamite_bomb]:explosive_barrel
+visual          = physics\equipment_cache\equipment_instrument_case_01_case.ogf 
+inv_name			= "Заряд"
+inv_name_short		= "Заряд"
+description		= "Заряд"
+inv_weight			= 0
+inv_grid_width  = 1
+inv_grid_height  = 1
+inv_grid_x   = 40
+inv_grid_y   = 40
+can_take			= false
+cost				= 0
+blast					= 25
+blast_r					= 30
+blast_impulse			= 650
+frags					= 50
+frags_r					= 35
+frag_hit				= 1.50
+frag_hit_impulse		= 100
+hit_type 					= strike
+hit_type_blast			= explosion
+hit_type_frag			= strike
+up_throw_factor		= 0.2
+explode_particles	= 1935\explosion_01a
+light_color		 = 1.9,1.4,0.6
+light_range		 = 65.0
+light_time 		 = 35
+snd_explode = addon\dynamite_boom
+immunities_sect			= bomba_babah
+
+
+[dynamite_bomb2]:explosive_barrel
+visual          = physics\equipment_cache\equipment_instrument_case_01_case.ogf 
+inv_name			= "Заряд"
+inv_name_short		= "Заряд"
+description		= "Заряд"
+inv_weight			= 0
+inv_grid_width  = 1
+inv_grid_height  = 1
+inv_grid_x   = 40
+inv_grid_y   = 40
+can_take			= false
+cost				= 0
+blast					= 15
+blast_r					= 13
+blast_impulse			= 200
+frags					= 20
+frags_r					= 13
+frag_hit				= 1.20
+frag_hit_impulse		= 100
+hit_type 				= strike
+hit_type_blast			= explosion
+hit_type_frag			= strike
+up_throw_factor		= 0.2
+explode_particles	= 1935\explosion_01a
+light_color		 = 1.9,1.4,0.6
+light_range		 = 65.0
+light_time 		 = 35
+snd_explode = weapons\explosive\fuelcan_boom
+immunities_sect			= bomba_babah
+
+
+[rad_ambush_bomb]:explosive_barrel
+visual          = physics\equipment_cache\equipment_instrument_case_01_case.ogf 
+inv_name			= "Заряд"
+inv_name_short		= "Заряд"
+description		= "Заряд"
+inv_weight			= 0
+inv_grid_width  = 1
+inv_grid_height  = 1
+inv_grid_x   = 40
+inv_grid_y   = 40
+can_take			= false
+cost				= 0
+blast					= 0
+blast_r					= 0
+blast_impulse			= 0
+frags					= 0
+frags_r					= 0
+frag_hit				= 0.0
+frag_hit_impulse		= 0
+hit_type 				= strike
+hit_type_blast			= explosion
+hit_type_frag			= strike
+up_throw_factor		= 0.2
+explode_particles	= 1935\explosion_01a
+light_color		 = 1.9,1.4,0.6
+light_range		 = 25.0
+light_time 		 = 35
+snd_explode 		= weapons\grenade\grenade_vog25p_boom
+immunities_sect		= bomba_babah
+
+
+
+

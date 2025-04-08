@@ -1,0 +1,25 @@
+[logic]
+active = sr_particle@1
+
+[sr_particle@1]
+name = ghoul\anomal_circle_blue
+path = agrund_dooranomaly_particle_zone2_point
+mode = 2
+looped = true
+on_actor_inside = {=actor_has_item(agrund_questart2)} sr_particle@2 %=remove_item(agrund_questart2) +agrund_dooranomaly_zone2_clear =play_snd(ambient\x18\x18_hit_6)%
+
+
+[sr_particle@2]
+name = ghoul\anomal_circle_blue
+path = agrund_dooranomaly_particle_zone2_point1
+mode = 2
+looped = true
+on_info = {+agrund_dooranomaly_zone1_clear +agrund_dooranomaly_zone2_clear +agrund_dooranomaly_zone3_clear} nil
+
+
+
+
+
+
+
+

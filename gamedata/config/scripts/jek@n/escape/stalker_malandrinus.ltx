@@ -1,0 +1,193 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+skidan_control_task_reward} walker@after_atp, {+malandrinus_first_talk} walker@sleep2, walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = malandrinus_walk1
+path_look = malandrinus_look1
+on_timer = 10 | walker1 %=make_invulnerable%
+
+
+[walker1]
+path_walk = malandrinus_walk1
+path_look = malandrinus_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 30|walker2 %=send_tip(malandrinus_hello_tip:maland:8116)%
+
+[walker2]
+path_walk = malandrinus_walk1
+path_look = malandrinus_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+malandrinus_first_talk} walker@to_rest
+on_info2 = {+malandrinus_goto_atp} walker@before_atp
+
+[walker@to_rest]
+path_walk = malandrinus_walk2
+path_look = malandrinus_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@sleep
+
+[walker@sleep]
+path_walk = malandrinus_walk2
+path_look = malandrinus_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+sanya_first_talk} walker@sleep2
+
+[walker@sleep2]
+path_walk = malandrinus_walk2
+path_look = malandrinus_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+village_nighthunter_task} walker@to_ambush %=play_snd_from_obj(8116:characters_voice\human_03\stalker\talk\raid\reaction\loner_1)%
+
+
+
+; Идем на кровососа:
+[walker@to_ambush]
+path_walk = malandrinus_walk3
+path_look = malandrinus_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@ambush
+
+[walker@ambush]
+path_walk = malandrinus_walk3
+path_look = malandrinus_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+musorka_monstr_spawn} walker@to_monstr
+
+[walker@to_monstr]
+;path_walk = esc_musorka_point
+;path_look = esc_musorka_point
+path_walk = malandrinus_walk2
+path_look = malandrinus_look2
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+musorka_monstr_finish} walker@after_monstr
+
+[walker@after_monstr]
+path_walk = malandrinus_walk2
+path_look = malandrinus_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+malandrinus_goto_graveyard -malandrinus_gravedigger} walker@grave
+
+
+
+; Идем хоронить друга:
+[walker@grave]
+path_walk = malandrinus_walk4
+path_look = malandrinus_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@grave2
+
+[walker@grave2]
+path_walk = malandrinus_walk4
+path_look = malandrinus_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+malandrinus_goto_body} remark@body
+
+[follower@body]
+leader = 8142
+formation_line = false
+distance = 1
+anim_sprint = walk
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_game_timer = 1000|remark@body
+
+[remark@body]
+anim = dynamite
+;snd = kulg_agent_meet
+;snd_anim_sync = true
+no_move = true
+target = 8142
+meet = no_meet
+on_timer = 6000|walker@grave3 %=malandrinus_gravedigger +malandrinus_gravedigger%
+
+[walker@grave3]
+path_walk = malandrinus_walk4
+path_look = malandrinus_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+malandrinus_body_task_finish} walker@after_body
+
+[walker@after_body]
+path_walk = malandrinus_walk2
+path_look = malandrinus_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+malandrinus_goto_atp} walker@before_atp
+
+
+;Следим за контролёром на АТП
+[walker@before_atp]
+path_walk = malandrinus_walk5
+path_look = malandrinus_look5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@before_atp2 %+malandrinus_done%
+
+[walker@before_atp2]
+path_walk = malandrinus_walk5
+path_look = malandrinus_look5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+malandrinus_goto_village} walker@after_atp
+on_info = {+skidan_control_task_reward} walker@after_atp
+
+[walker@after_atp]
+path_walk = malandrinus_walk2
+path_look = malandrinus_look2
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+[meet]
+meet_state = 17|hello
+meet_state_wpn = 17|hello
+victim = 17|nil
+victim_wpn = 17|nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+malandrinus_dead%
+
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor}  %=spawn_zombie_at_pos =send_tip(target_zombied:default) =delme2%
+

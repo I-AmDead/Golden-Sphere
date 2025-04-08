@@ -1,0 +1,650 @@
+function attach( sm )
+  sm:subscribe({ signal = "on_hit",    fun = this.on_hit })
+  sm:subscribe({ signal = "on_update", fun = this.on_update })
+  sm:subscribe({ signal = "on_key_down", fun = this.quicksave })
+  sm:subscribe({ signal = "on_key_down", fun = this.quickload })
+  sm:subscribe({ signal = "on_before_first_update", fun = this.fix_keypress_on_start })
+end
+
+function fix_keypress_on_start()
+  if db.actor:dont_has_info("story_task2") then
+    cmd( "keypress_on_start off" )
+  else
+    cmd( "keypress_on_start on" )
+  end
+end
+
+function quicksave(key, bind)
+if level.main_input_receiver() and not db.actor:alive() then return end
+  if key == bind_to_dik(key_bindings.kQUICK_SAVE) then
+  local cnt = ogse.load_var( "dsh.next_quicksave", 0 )
+  if cnt == 9 then
+    cnt = 1
+  else
+    cnt = cnt + 1
+  end
+  ogse.save_var( "dsh.next_quicksave", cnt, "u8" )
+  local next_save = string.format( "%s_quicksave_%u", user_name(), cnt )
+  cmd( "save", next_save )
+
+  local karma = starvation.get_karma()
+	if karma<0.4 then
+  	soundtrack.save_game_replics1()
+  else 
+  	soundtrack.save_game_replics2()
+  end
+end
+end
+
+function quickload(key, bind)
+  if level.main_input_receiver() then return end
+    if key == bind_to_dik(key_bindings.kQUICK_LOAD) then
+      if db.actor:alive() then
+        do_quick_load()
+      else
+        cmd("load_last_save")
+      end
+    end
+end
+
+function do_quick_load()
+  local d = quick_load_dialog()
+  level.start_stop_menu( d, true )
+  d:show_message_box()
+end
+
+
+class "quick_load_dialog" ( dsh_ui.dshCUIScriptWnd )
+function quick_load_dialog:__init() super()
+  -- Положение и размеры окна
+  self:Init( 0, 0, 1024, 768 )
+  self.message_box = CUIMessageBoxEx()
+  self:Register( self.message_box, "message_box" )
+  self:AddCallback( "message_box", ui_events.MESSAGE_BOX_YES_CLICKED, self.OnMsgYes, self )
+  self:AddCallback( "message_box", ui_events.MESSAGE_BOX_NO_CLICKED, self.on_quit, self )
+  self.message_box:Init( "message_box_confirm_load_save" )
+end
+
+
+function quick_load_dialog:show_message_box()
+  self:GetHolder():start_stop_menu( self.message_box, true )
+end
+
+
+function quick_load_dialog:Update()
+  CUIScriptWnd.Update( self )
+  if not self.message_box:IsShown() then
+    self:on_quit()
+  end
+end
+
+
+function quick_load_dialog:OnMsgYes()
+  self:on_quit()
+  cmd("load_last_save")
+end
+
+
+function quick_load_dialog:on_quit()
+  self:GetHolder():start_stop_menu( self, true )
+  self:dsh_unregister_self()
+end
+
+
+function on_hit( obj, amount, local_direction, who, bone_index )
+
+if who and who:id()~=db.actor:id() and amount > 0 then
+
+local p = 0.3	--	порог урона, выше которого мы получаем травму;
+local h=hit()
+local diff = level.get_game_difficulty()
+
+if diff == 0 then hit_diff = 1.0
+elseif diff == 1 then hit_diff = 1.2
+elseif diff == 2 then hit_diff = 1.3
+elseif diff == 3 then hit_diff = 1.4 
+end
+
+if has_alife_info("arts_powerup_neutral") then
+ psy_pwr = 0.25
+else
+ psy_pwr = 0.55
+end
+
+
+-- Любой хит: ----------------------------------
+if db.actor:dont_has_info("arts_powerup_stone") then
+	if amount > 0.08 then
+	end
+elseif has_alife_info("arts_powerup_stone") then
+	local addhealth = amount*0.5
+	local hlth = db.actor.health
+		if hlth < 1 then
+			db.actor.health = hlth + addhealth
+			db.actor:heal_wounds(1.5)
+		end
+end
+
+-- Артефакт "Кожа": ----------------------------------------
+if inventory.on_belt( "af_skin" ) and amount > 0.01 then
+	local item_s6 = db.actor:item_in_slot(6)
+	if item_s6 then
+	cond6 = item_s6:condition()
+		if cond6 < 0.999 and cond6 > 0.10 then
+			item_s6:set_condition(cond6+0.08)
+		end
+
+	end
+end
+
+-- Арбалет: ----------------------------
+if who and who.active_item and who:active_item() and who:active_item():section()=="wpn_crossbow" then
+    addon_dialogs.rad_crossbow_seek_effect()
+end
+
+-- Пси-винтовка: ----------------------------
+if who and who.active_item and who:active_item() and who:active_item():section()=="wpn_psy" then 
+	if db.actor.psy_health > 0.45 then
+         h.type = hit.telepatic
+	 h.power = psy_pwr
+         h.impulse = 0
+         h.draftsman = db.actor
+	 h.bone = "bip01_spine"	--	должна учитываться защита комбеза
+         h.direction = vector():set(0,0,0)
+         db.actor:hit(h) 
+	starvation.add_head(-(amount * 0.4))
+	elseif db.actor.psy_health < 0.45 then
+		if db.actor:dont_has_info("actor_psy_death") then
+			db.actor:give_info_portion ("actor_psy_death")
+		end
+		db.actor:kill(db.actor)
+	end
+end
+
+-- Лазер: ----------------------------
+if who and who.active_item and who:active_item() and who:active_item():section()=="wpn_laser" then
+         h.type = hit.burn
+         h.power = 0.25
+         h.impulse = 0
+         h.draftsman = db.actor
+	 h.bone = "bip01_spine"	--	должна учитываться защита комбеза
+         h.direction = vector():set(0,0,0) 
+         db.actor:hit(h) 
+	 addon.laser_hit_effect()
+	 starvation.add_head(-(amount * 0.4))
+end
+
+-- Огнестрел общий(по методу исключения) ----------------------------
+if who and who.active_item and who:active_item() and IsStalker(who) and who:active_item():section()~="wpn_psy" and who:active_item():section()~="wpn_laser" and who:active_item():section()~="wpn_crossbow" then
+         h.type = hit.fire_wound
+         h.power = 0.5*hit_diff
+         h.impulse = 0
+         h.draftsman = db.actor
+         h.direction = db.actor:position():sub(who:position()) 
+	 h.bone = "bip01_spine"	-- должна учитываться защита комбеза
+         db.actor:hit(h)
+	 starvation.add_head(-(amount * 0.4))
+end
+
+-- Экспериментальный костюм: --------------------------------------------------------------------
+if IsMonster(who) and xr_conditions.actor_wears_secret_outfit() == true then
+react = sound_object("anomaly\\electra_hit")  
+react:play_at_pos(who, who:position(), sound_object.s2d)
+react.volume = 1.0
+local pos = db.actor:position()
+local fx_particle = particles_object("anomaly2\\electra2_blast_01")
+fx_particle:play_at_pos(pos)	
+        h.type = hit.shock
+        h.power = 0.6
+        h.impulse = 0
+        h.draftsman = who
+        h.direction = vector():set(0,0,0) 
+        who:hit(h) 
+end
+
+-- Артефакт "Медь": --------------------------------------------------------------------
+if IsAnomaly(who) and inventory.on_belt( "af_bobbin" ) then
+	local addhealth = amount*0.6
+	local hlth = db.actor.health
+		if hlth < 1 then
+			db.actor.health = hlth + addhealth
+
+		end
+end
+
+-- Модифицированный комбез агентов: --------------------------------------------------------------------
+if IsAnomaly(who) and xr_conditions.actor_wears_headhunter_m1outfit() == true then
+	local addhealth = amount*0.5
+	local hlth = db.actor.health
+		if hlth < 1 then
+			db.actor.health = hlth + addhealth
+		end
+end
+
+-- Артефакт "Желчь": --------------------------------------------------------------------
+if IsMonster(who) and inventory.on_belt( "af_bile" ) then
+local mob_id = class_id or get_clsid (who)
+	if ( mob_id == clsid.poltergeist_s or mob_id == clsid.zombie_s ) then
+		local addhealth = amount*0.6
+		local hlth = db.actor.health
+			if hlth < 1 then
+				db.actor.health = hlth + addhealth
+			end
+	end
+end
+
+-- Артефакт "Шерсть": --------------------------------------------------------------------
+if IsMonster(who) and inventory.on_belt( "af_fur" ) then
+local mob_id = class_id or get_clsid (who)
+	if ( mob_id == clsid.dog_s or mob_id == clsid.pseudodog_s ) then
+        h.type = hit.wound
+        h.power = 1.1
+        h.impulse = 0
+        h.draftsman = who
+        h.direction = vector():set(0,0,0) 
+        who:hit(h) 
+	end
+end
+
+-- ИНДИКАЦИЯ: -------------------------------------------------------
+
+-- Трамплин, Ведьмин студень и Электра(ноги):
+if IsAnomaly(who) then
+local zone_id = class_id or get_clsid (who)
+	if ( zone_id == clsid.zone_mbald_s ) then
+		if amount < p then
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		elseif amount > p then
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		end
+	end
+-- Жарка, Мясорубка и Карусель(ноги, грудь):
+	if ( zone_id == clsid.zone_mincer_s ) then
+		if amount < p then
+		rnd = math.random(1, 2)
+		if rnd == 1 then 
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		end
+		if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+		end
+		elseif amount > p then
+		rnd = math.random(1, 2)
+		if rnd == 1 then 
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		end
+		if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+		end
+		end
+	end
+-- Бродяга Дик, Полынь-звезда, Рой(грудь, живот):
+	if ( zone_id == clsid.zone_torrid_s ) then
+		if amount < p then
+			starvation.add_tors(-(amount * 0.4)) 
+		elseif amount > p then
+			starvation.add_tors(-(amount * 0.4)) 
+		end
+	end
+-- Амёба, Лиана, Ржавые волосы(грудь, голова, руки):
+	if ( zone_id == clsid.zone_ameba_s or zone_id == clsid.zone_bfuzz_s ) then
+		if amount < p then
+rnd = math.random(1, 3)
+	if rnd == 1 then 
+			starvation.add_head(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+	if rnd == 3 then 
+			starvation.add_right_hand(-(amount * 0.4)) 
+			starvation.add_left_hand(-(amount * 0.4)) 
+	end
+		elseif amount > p then
+rnd = math.random(1, 3)
+	if rnd == 1 then 
+			starvation.add_head(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+	if rnd == 3 then 
+			starvation.add_right_hand(-(amount * 0.4)) 
+			starvation.add_left_hand(-(amount * 0.4)) 
+	end
+		end
+	end
+end
+
+-- Слепыши, крысы, тушканы(ноги):
+if IsMonster(who) then
+local mob_id = class_id or get_clsid (who)
+	if ( mob_id == clsid.dog_s or mob_id == clsid.tushkano_s ) then
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+	end
+	if mob_id == clsid.rat_s then
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		if inventory.on_belt( "af_rat" ) then addon_2.small_add_karma() end
+	end
+-- Псевдопсы, снорки, коты(ноги, живот):
+	if ( mob_id == clsid.pseudodog_s or mob_id == clsid.psy_dog_s or mob_id == clsid.snork_s or mob_id == clsid.cat_s ) then
+		if amount < p then
+		rnd = math.random(1, 2)
+		if rnd == 1 then 
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		end
+		if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+		end
+		elseif amount > p then
+		rnd = math.random(1, 2)
+		if rnd == 1 then 
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+		end
+		if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+		end
+		end
+	end
+-- Кабаны, плоти, бюреры(грудь, живот):
+	if ( mob_id == clsid.boar_s or mob_id == clsid.flesh_s ) then
+		if amount < p then
+			starvation.add_tors(-(amount * 0.4)) 
+		elseif amount > p then
+			starvation.add_tors(-(amount * 0.4)) 
+		end
+	end
+-- Зомби, изломы, кровососы(голова, грудь, руки):
+	if ( mob_id == clsid.zombie_s or mob_id == clsid.fracture_s or mob_id == clsid.bloodsucker_s ) then
+		if amount < p then
+rnd = math.random(1, 3)
+	if rnd == 1 then 
+			starvation.add_head(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+	if rnd == 3 then 
+			starvation.add_left_hand(-(amount * 0.4)) 
+			starvation.add_right_hand(-(amount * 0.4)) 
+	end
+		elseif amount > p then
+rnd = math.random(1, 3)
+	if rnd == 1 then 
+			starvation.add_head(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+	if rnd == 3 then 
+			starvation.add_left_hand(-(amount * 0.4)) 
+			starvation.add_right_hand(-(amount * 0.4)) 
+	end
+		end
+	end
+-- Псевдогиганты(грудь, ноги):
+	if ( mob_id == clsid.gigant_s ) then
+		if amount < p then
+rnd = math.random(1, 2)
+	if rnd == 1 then 
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+		elseif amount > p then
+rnd = math.random(1, 2)
+	if rnd == 1 then 
+			starvation.add_right_leg(-(amount * 0.4)) 
+			starvation.add_left_leg(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+		end
+	end
+-- Химеры(грудь, руки):
+	if ( mob_id == clsid.chimera_s ) then
+		if amount < p then
+rnd = math.random(1, 2)
+	if rnd == 1 then 
+			starvation.add_left_hand(-(amount * 0.4)) 
+			starvation.add_right_hand(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+		elseif amount > p then
+rnd = math.random(1, 2)
+	if rnd == 1 then 
+			starvation.add_left_hand(-(amount * 0.4)) 
+			starvation.add_right_hand(-(amount * 0.4)) 
+	end
+	if rnd == 2 then 
+			starvation.add_tors(-(amount * 0.4)) 
+	end
+		end
+	end
+-- Контролёр(голова):
+	if ( mob_id == clsid.controller_s ) then
+		if amount < p then
+			starvation.add_head(-(amount * 0.4)) 
+		elseif amount > p then
+			starvation.add_head(-(amount * 0.4)) 
+		end
+	end
+end
+
+	if amount > 0.2 and bone_index and bone_index > 0 then
+		local str = " "
+		if bone_index < 5 and xr_conditions.actor_wears_legs_resist() ~= true then
+			str = " попадание в левую ногу "
+			starvation.add_left_leg(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\hit_back_left.anm", 100, false, "")
+     elseif (bone_index >= 5 and bone_index < 9) and xr_conditions.actor_wears_legs_resist() ~= true then
+			str = " попадание в правую ногу "
+			starvation.add_right_leg(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\hit_back_right.anm", 100, false, "")
+     elseif (bone_index >= 9 and bone_index < 11) and xr_conditions.actor_wears_torso_resist() ~= true then
+			str = " попадание в туловище "
+			starvation.add_tors(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\hit_front.anm", 100, false, "")
+     elseif (bone_index >= 11 and bone_index < 18) and xr_conditions.actor_wears_head_resist() ~= true then	
+			str = " попадание в голову "
+			starvation.add_head(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\head_shot.anm", 100, false, "")
+			else
+			starvation.add_right_leg(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\hit_front.anm", 100, false, "")
+			end
+     elseif (bone_index >= 18 and bone_index < 31) and xr_conditions.actor_wears_arms_resist() ~= true then	
+			str = " попадание в левую руку "
+			starvation.add_left_hand(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\hit_front_left.anm", 100, false, "")
+     elseif (bone_index >= 31 and bone_index < 40) and xr_conditions.actor_wears_arms_resist() ~= true then	
+			str = " попадание в правую руку "
+			starvation.add_right_leg(-(amount * 0.2)) 
+			level.add_cam_effector("camera_effects\\hit_front_right.anm", 100, false, "")
+
+			if ((bone_index >= 34) and (bone_index <= 38)) then
+				-- по кисти или пальцам
+				r = math.random()*100
+				need_drop = (r<70)
+			end
+				local active_item = db.actor:active_item()
+				if active_item and active_item:section()~= "bolt" and not active_item:is_knife() then
+					db.actor:drop_item(active_item)
+				end			
+		end
+	end
+
+end
+
+function sprint_blocked_true()
+  get_actor_obj().condition.cant_spint_power_begin = 1
+  get_actor_obj().condition.cant_spint_power_end   = 1
+end
+
+function sprint_blocked_false()
+  get_actor_obj().condition.cant_spint_power_begin = 0
+  get_actor_obj().condition.cant_spint_power_end   = 0
+end
+
+function walk_blocked_true()
+  get_actor_obj().condition.cant_walk_power_begin = 1
+  get_actor_obj().condition.cant_walk_power_end   = 1
+end
+
+function walk_blocked_false()
+  get_actor_obj().condition.cant_walk_power_begin = 0
+  get_actor_obj().condition.cant_walk_power_end   = 0
+end
+
+function is_night()
+  local htime = level.get_time_hours()
+  return ( htime <= 4 or htime >= 23 )
+end
+
+function spawn_teleport_reserv()
+
+	if db.actor:dont_has_info("garb_3shperes_task") then return end
+
+	if db.actor:dont_has_info("teleport_reserv_spawn") and is_night() then
+
+		db.actor:give_info_portion("teleport_reserv_spawn")
+		local sim = alife()
+		local sobj = alife():create("garb_reserv_teleport", vector():set (-222.193,-7.284,-147.900), 117922, 281)
+		sim:assign_story_id(sobj.id, story_ids.garb_reserv_teleport)
+	end
+
+	if db.actor:has_info("teleport_reserv_spawn") and not is_night() then
+	local obj = alife():story_object(9000)
+	alife():release(obj , true)
+	db.actor:disable_info_portion("teleport_reserv_spawn")
+	end
+end
+
+function on_update()
+
+spawn_teleport_reserv()
+
+
+if db.actor:has_info("ibuprophen_used") then
+  get_actor_obj().condition.cant_spint_power_begin = 0
+  get_actor_obj().condition.cant_spint_power_end   = 0
+  get_actor_obj().condition.cant_walk_power_begin = 0
+  get_actor_obj().condition.cant_walk_power_end   = 0
+  bind_stalker.restore_weapon()
+end
+
+if db.actor:has_info("ibuprophen_used") then return end
+
+local head = starvation.get_head()
+local left_hand = starvation.get_left_hand()
+local right_hand = starvation.get_right_hand()
+local tors = starvation.get_tors()
+local left_leg = starvation.get_left_leg()
+local right_leg = starvation.get_right_leg()
+
+if head > 1 then
+starvation.set_head(1)
+elseif head <= 1 and head > 0.75 then
+
+elseif head <= 0.75 and head > 0.5 then
+
+elseif head <= 0.5 and head > 0.3 then
+
+elseif head < 0.3 then
+	db.actor:kill(db.actor)
+end
+
+if left_hand > 1 then
+starvation.set_left_hand(1)
+elseif left_hand <= 0.75 and left_hand > 0.5 then
+
+elseif left_hand <= 0.5 and left_hand > 0.3 then
+
+elseif left_hand < 0.3 then
+
+end
+
+if right_hand > 1 then
+starvation.set_right_hand(1)
+elseif right_hand <= 0.75 and right_hand > 0.5 then
+
+elseif right_hand <= 0.5 and right_hand > 0.3 then
+
+elseif right_hand < 0.3 then
+end
+
+if tors > 1 then
+starvation.set_tors(1)
+elseif tors <= 1 and tors > 0.75 then
+
+elseif tors <= 0.75 and tors > 0.5 then
+
+elseif tors <= 0.5 and tors > 0.3 then
+
+elseif tors < 0.3 then
+	db.actor:kill(db.actor)
+end
+
+if left_leg > 1 then
+starvation.set_left_leg(1)
+
+elseif left_leg <= 1 and left_leg > 0.75 then
+sprint_blocked_false()
+
+elseif left_leg <= 0.75 and left_leg > 0.5 then
+sprint_blocked_false()
+
+elseif left_leg <= 0.5 and left_leg > 0.3 then
+sprint_blocked_false()
+
+elseif left_leg < 0.3 then
+sprint_blocked_true()
+
+end
+
+if right_leg > 1 then
+starvation.set_right_leg(1)
+
+elseif right_leg <= 1 and right_leg > 0.75 then
+sprint_blocked_false()
+
+elseif right_leg <= 0.75 and right_leg > 0.5 then
+sprint_blocked_false()
+
+elseif right_leg <= 0.5 and right_leg > 0.3 then
+sprint_blocked_false()
+
+elseif right_leg < 0.3 then
+sprint_blocked_true()
+
+end
+
+
+if (left_leg <= 1 and left_leg > 0.75) and (right_leg <= 1 and right_leg > 0.75) then
+sprint_blocked_false()
+walk_blocked_false()
+elseif (left_leg <= 0.75 and left_leg > 0.5) and (right_leg <= 0.75 and right_leg > 0.5) then
+sprint_blocked_true()
+walk_blocked_false()
+elseif (left_leg <= 0.5 and left_leg > 0.3) and (right_leg <= 0.5 and right_leg > 0.3) then
+sprint_blocked_true()
+walk_blocked_false()
+elseif left_leg < 0.3 and right_leg < 0.3 then
+sprint_blocked_true()
+walk_blocked_true()
+end
+
+end

@@ -1,0 +1,81 @@
+; Сергей, Долина
+
+[smart_terrains]
+none = true
+
+[logic]
+active = {+hunter4_goto_koridor} walker@koridor3, {+hunter4_in_vagon} walker@vagon, walker@start
+
+[walker@start]
+path_walk = dar_hunter_walk1
+path_look = dar_hunter_look1
+on_info = {+hunter4_in_vagon} walker@vagon
+on_timer      = 1 | walker@entrance1 %=make_invulnerable%
+trade = misc\trade_hunter4.ltx
+
+[walker@entrance1]
+path_walk = dar_hunter_walk1
+path_look = dar_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter4_in_vagon} walker@vagon
+on_actor_dist_le = 20 | walker@entrance2 %=send_tip(hunter4_hello_tip:stalker:8059)%
+
+[walker@entrance2]
+path_walk = dar_hunter_walk1
+path_look = dar_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter4_goto_vagon} walker@to_vagon
+
+[walker@to_vagon]
+path_walk = dar_hunter_walk2
+path_look = dar_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@vagon %+hunter4_in_vagon%
+
+[walker@vagon]
+path_walk = dar_hunter_walk2
+path_look = dar_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_nedostroyka_task} walker@koridor1 %=make_invulnerable%
+
+[walker@koridor1]
+path_walk = dar_hunter_walk3
+path_look = dar_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@koridor2 %+hunter4_behind_koridor%
+
+[walker@koridor2]
+path_walk = dar_hunter_walk3
+path_look = dar_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter4_goto_koridor} walker@koridor3 %=run_postprocess(agr_u_fade)%
+
+[walker@koridor3]
+path_walk = dar_hunter_walk3
+path_look = dar_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | nil %=actor_teleport_to_dar_koridor =delme2%
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+hunter4_dead%

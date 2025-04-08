@@ -1,0 +1,13 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+aes_radstorm} sr_sound_act
+
+[sr_sound_act]
+snd = anomaly\blowout
+on_info = {-aes_radstorm} sr_idle@1
+
+
+
+

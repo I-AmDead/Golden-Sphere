@@ -1,0 +1,53 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@mil
+threshold = threshold
+
+
+[walker@mil]
+path_walk = client1guard1_mil_walk1
+path_look = client1guard1_mil_look1
+on_timer = 1 | walker@mil_1 %=make_invulnerable =disable_trading%
+
+[walker@mil_1]
+path_walk = client1guard1_mil_walk1
+path_look = client1guard1_mil_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@mil_2
+
+[walker@mil_2]
+path_walk = client1guard1_mil_walk1
+path_look = client1guard1_mil_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+notebook_client1task1_reward} walker@mil_3
+on_info2 = {+notebook_client1task2_reward} walker@mil_3
+on_info3 = {+notebook_client1task3_reward} walker@mil_3
+
+[walker@mil_3]
+path_walk = client1_mil_walk2
+path_look = client1_mil_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | %+mil_hue_heli_back2 =delme%
+
+
+[threshold]
+max_ignore_distance = 5
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+

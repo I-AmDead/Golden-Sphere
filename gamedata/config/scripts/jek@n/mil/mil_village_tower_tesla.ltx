@@ -1,0 +1,13 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+
+[mob_home]
+path_home = mil_village_tower_tesla_point
+home_min_radius = 3
+home_max_radius = 6
+on_info = {+mil_icon_finded} %=delme%
+on_actor_dist_le_nvis = 2 | %=electric_hit_obj(37:bip01_spine:0.5:10) =play_shock_on_actor%
+

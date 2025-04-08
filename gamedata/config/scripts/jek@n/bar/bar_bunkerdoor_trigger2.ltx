@@ -1,0 +1,14 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = bar_bunkerdoor_trigger_use
+on_use    = {=actor_has_item(bar_bunkerdoor_key)} ph_idle@2 %=bar_bunkerdoor_trigger1_use1%
+
+[ph_idle@2]
+on_timer = 4000|ph_idle@1 %=bar_bunkerdoor_trigger2_use2 =play_snd(device\metal_small_open)%
+
+

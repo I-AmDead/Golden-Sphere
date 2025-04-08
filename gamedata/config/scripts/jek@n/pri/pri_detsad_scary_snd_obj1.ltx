@@ -1,0 +1,15 @@
+[logic]
+active = ph_sound@1
+
+[ph_sound@1]
+snd = pri_detsad_cry
+looped = true
+on_info = {+pri_brownie1_spawn} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+
+
+
+ 

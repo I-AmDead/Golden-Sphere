@@ -1,0 +1,104 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = post_soldier4_walk1
+path_look = post_soldier4_look1
+on_timer = 10 | walker1 %=make_invulnerable%
+
+
+[walker1]
+path_walk = post_soldier4_walk1
+path_look = post_soldier4_look1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = always
+on_info = {+blokpost_alarm} follower@actor1
+
+[follower@actor1]
+leader = 37
+formation_line = false
+distance = 2
+anim_sprint = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+blokpost_alarm_off} walker3
+on_actor_dist_le_nvis = 5 | follower@actor2
+
+[follower@actor2]
+leader = 37
+formation_line = false
+distance = 2
+anim_sprint = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+blokpost_alarm_off} walker3
+on_actor_dist_le_nvis = 4 | walker3 %=actor_goto_post_prison%
+
+[walker3]
+path_walk = post_soldier4_walk1
+path_look = post_soldier4_look1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_actor_dist_le = 11 | %=blokpost_enemy%
+on_info = {+skidan_post_stels_task} walker@when_actor_at_bpost_again
+
+
+
+
+
+; После взятия квеста "Выкрасть костюм из арсенала".
+[walker@when_actor_at_bpost_again]
+path_walk = post_soldier4_walk1
+path_look = post_soldier4_look1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = {-blokpost_alarm3}
+on_actor_dist_le = 15 | walker@when_actor_at_bpost_again_alarm %=blokpost_alarm3%
+on_info = {+blokpost_alarm3} walker@when_actor_at_bpost_again_alarm
+
+[walker@when_actor_at_bpost_again_alarm]
+path_walk = post_soldier4_walk1
+path_look = post_soldier4_look1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = {-blokpost_alarm3}
+on_timer = 20000 | walker@when_actor_at_bpost_again %-blokpost_alarm3%
+
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+post_soldier4_dead%
+

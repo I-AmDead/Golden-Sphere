@@ -1,0 +1,25 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_remark@idle
+
+
+[mob_remark@idle]
+anim = stand_idle_0
+braindead = true
+target = 8703
+on_info = {+x16_burers_hile} mob_remark@zig_hail1 %=set_look(8703)%
+
+;Зигуем:
+[mob_remark@zig_hail1]
+anim = stand_tele_0
+braindead = true
+target = 8703
+on_timer = 3000|mob_remark@zig_hail2 %=play_snd_from_obj(8718:characters_voice\scenario\burer_kingdom\burer_talk_3)%
+
+[mob_remark@zig_hail2]
+anim = stand_tele_2
+braindead = true
+target = 8703
+on_timer = 2000|mob_remark@idle %-x16_burers_hile =set_look(8703)%

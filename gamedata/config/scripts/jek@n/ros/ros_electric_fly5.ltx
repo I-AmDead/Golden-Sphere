@@ -1,0 +1,33 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+ros_rescuers_atack} mob_home@hunt, {+ros_hunter_in_building} mob_home@hunt, mob_walker@norm
+
+[mob_walker@norm]
+path_walk = ros_electric_fly1_home
+path_look = ros_electric_fly1_home
+braindead = true
+on_info = {+ros_tunnel_vetryak_off} %=delme%
+on_actor_dist_le_nvis = 13 | mob_home@agress
+
+[mob_home@agress]
+path_home = ros_electric_fly1_home
+home_min_radius = 1
+home_max_radius = 4
+braindead = true
+on_info = {+ros_tunnel_vetryak_off} %=delme%
+on_actor_dist_le_nvis = 2 | %=electric_hit_obj(37:bip01_spine:1.0:10) =play_shock_on_actor%
+on_timer = 10000 | mob_walker@norm
+
+
+[mob_home@hunt]
+path_home = ros_electric_fly1_home
+home_min_radius = 10
+home_max_radius = 50
+braindead = true
+on_info = {+ros_tunnel_vetryak_off} %=delme%
+on_actor_dist_le_nvis = 2 | %=electric_hit_obj(37:bip01_spine:1.0:10) =play_shock_on_actor%
+on_timer = 10000 | mob_walker@norm
+
+

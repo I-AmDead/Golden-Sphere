@@ -1,0 +1,20 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+agr_fabrik_pumps1_on +agr_fabrik_pumps2_on} ph_button@1
+
+[ph_button@1]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = agr_fabrik_teleport_switcher_use
+on_press    = ph_button@2 %=play_snd(ambient\switch_1) +agr_receiver_shield_off%
+
+[ph_button@2]
+anim_blend  = true
+anim        = lab_primary_switcher_off
+tooltip     = agr_fabrik_teleport_switcher_use
+on_press    = nil

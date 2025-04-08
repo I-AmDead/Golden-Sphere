@@ -1,0 +1,77 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_rogue_threshold
+
+[walker@start]
+path_walk = predb_rogue_walk1
+path_look = predb_rogue_look1
+on_timer = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+[walker@1]
+path_walk = predb_rogue_walk1
+path_look = predb_rogue_look1
+danger = danger_condition
+combat_ignore_cond = always
+show_spot = false
+on_info = {+predb_village_rogue_finded} walker@2
+
+[walker@2]
+path_walk = predb_rogue_walk1
+path_look = predb_rogue_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@dont_shoot
+on_info = {+predb_village_rogue_free} walker@kill1 %=unmake_invulnerable%
+on_info2 = {+predb_village_rogue_punish} walker@kill2 %=unmake_invulnerable%
+
+
+; Дохнем в аномалии:
+[walker@kill1]
+path_walk = predb_rogue_walk_kill
+path_look = predb_rogue_look_kill
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+
+; Ждём расстрела:
+[walker@kill2]
+path_walk = predb_rogue_walk1
+path_look = predb_rogue_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@dont_shoot
+
+
+
+[meet@dont_shoot]
+meet_state = 5|hide_no_wpn@dont_shoot
+meet_state_wpn = 5|hide_no_wpn@dont_shoot
+victim = 5|actor
+victim_wpn = 5|actor
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_rogue_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = {=killed_by_actor} %+predb_rogue_dead =karma_down%, {!killed_by_actor} %+predb_rogue_dead =karma_up%
+

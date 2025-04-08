@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = predb_fabrik_garage_door_trigger2_use
+on_use    = ph_idle@2 %=disable_ui =run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 4000|ph_idle@1 %=predb_fabrik_garage_door_trigger2use =enable_ui =play_snd(device\wood_large_open)%
+
+
+ 

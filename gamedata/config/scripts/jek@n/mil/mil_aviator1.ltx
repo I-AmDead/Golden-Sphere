@@ -1,0 +1,58 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_aviatrs_fail} walker@2, walker@start
+combat_ignore = combat_ignore
+threshold = threshold@mil_aviator1_threshold
+on_hit = hit
+on_death = death
+
+[walker@start]
+path_walk = mil_aviator1_walk1
+path_look = mil_aviator1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = mil_aviator1_walk1
+path_look = mil_aviator1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_grav_off} %=delme2%
+
+
+; Если стреляли по собаке:
+[walker@2]
+path_walk = mil_aviator1_walk1
+path_look = mil_aviator1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@3 %=killactor =play_snd(characters_voice\human_01\newbie\reactions\box\box_3)%
+
+[walker@3]
+path_walk = mil_aviator1_walk1
+path_look = mil_aviator1_look1
+meet = no_meet
+
+
+
+[threshold@mil_aviator1_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=hit_by_actor} nil %=karma_down%
+
+[death]
+on_info = %=mil_aviator1spawn_in%

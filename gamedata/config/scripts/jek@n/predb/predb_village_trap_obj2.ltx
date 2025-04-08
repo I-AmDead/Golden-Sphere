@@ -1,0 +1,14 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+predb_village_rogue_finded} nil
+on_timer = 1|ph_sound %=add_self_spot(green_location:predb_village_trap_obj_mark_text)%
+
+[ph_sound]
+snd = predb_village_trap_snd
+min_idle = 1000
+max_idle = 5000
+looped = true
+on_actor_dist_le_nvis = 6|nil %=spawn_predb_village_trap_obj3 =delme2%
+

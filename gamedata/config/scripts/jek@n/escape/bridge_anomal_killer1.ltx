@@ -1,0 +1,66 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = bridge_anomal_killer1_walk1
+path_look = bridge_anomal_killer1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1 | walker@bridge %=make_invulnerable =send_tip(bridge_anomal_killers_tip1:stalker:8179) =add_self_spot(green_location:bridge_anomal_killer_mark_text)%
+
+
+[walker@bridge]
+path_walk = bridge_anomal_killer1_walk1
+path_look = bridge_anomal_killer1_look1
+danger = danger_condition
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+combat_ignore_cond = always
+on_signal       = arrived | walker@wait %+bridge_anomal_killer_on_place%
+
+[walker@wait]
+path_walk = bridge_anomal_killer1_walk1
+path_look = bridge_anomal_killer1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 25 | walker@anomaly %=send_tip(bridge_anomal_killers_tip2:killer:8179) =play_snd_from_obj(8179:script_sound\threat\stop\soldier\soldier_stop_2)%
+
+[walker@anomaly]
+path_walk = bridge_anomal_killer1_walk2
+path_look = bridge_anomal_killer1_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | %=remove_with_meet +bridge_anomal_killer1_dead =play_snd_from_obj(8075:ambient\random\rnd_scr9)%
+
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+bridge_anomal_killer1_dead%
+

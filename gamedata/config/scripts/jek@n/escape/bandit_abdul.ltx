@@ -1,0 +1,147 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = abdul_walk1
+path_look = abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10 | walker@pray1 %=make_invulnerable%
+
+
+; Сидим и молимся:
+[walker@pray1]
+path_walk = abdul_walk1
+path_look = abdul_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_info = {+esc_kpp_band_hitted} remark@strike %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_1) =abdul_roundfly%
+on_info2 = {+abdup_kpp_prepare} remark@strike2 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2) =abdul_roundfly%
+on_info3 = {+abdul_change_prioritets} remark@strike3 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2)%
+on_timer = 10000 | walker@pray2 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_pray_1)%
+
+[walker@pray2]
+path_walk = abdul_walk2
+path_look = abdul_look2
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_info = {+esc_kpp_band_hitted} remark@strike %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_1) =abdul_roundfly%
+on_info2 = {+abdup_kpp_prepare} remark@strike2 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2) =abdul_roundfly%
+on_info3 = {+abdul_change_prioritets} remark@strike3 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2)%
+on_timer = 10000 | walker@pray3 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_pray_2)%
+
+[walker@pray3]
+path_walk = abdul_walk1
+path_look = abdul_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_info = {+esc_kpp_band_hitted} remark@strike %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_1) =abdul_roundfly%
+on_info2 = {+abdup_kpp_prepare} remark@strike2 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2) =abdul_roundfly%
+on_info3 = {+abdul_change_prioritets} remark@strike3 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2)%
+on_timer = 10000 | walker@pray4 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_pray_3)%
+
+[walker@pray4]
+path_walk = abdul_walk2
+path_look = abdul_look2
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_info = {+esc_kpp_band_hitted} remark@strike %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_1) =abdul_roundfly%
+on_info2 = {+abdup_kpp_prepare} remark@strike2 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2) =abdul_roundfly%
+on_info3 = {+abdul_change_prioritets} remark@strike3 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_fight_2)%
+on_timer = 10000 | walker@pray1 %=play_snd_from_obj(8070:characters_voice\scenario\abdul_pray_4)%
+
+
+
+
+; Мочим ГГ пси-ударом
+[remark@strike]
+anim = hide
+target = actor
+no_move = true
+meet = no_meet
+combat_ignore_cond = always
+danger = danger_condition
+on_timer = 6500 | walker@pray1 %=play_strike_on_me =play_snd_from_obj(8070:characters_voice\scenario\abdul_kill_2) -esc_kpp_band_hitted%
+
+; Это сюжетная ремарка пси-удара, он не убивает ГГ, но сбивает с ног сталкеров
+[remark@strike2]
+anim = hide
+target = actor
+no_move = true
+meet = no_meet
+combat_ignore_cond = always
+danger = danger_condition
+on_timer = 6500 | walker@pray1 %=play_strike_on_me2 =play_snd_from_obj(8070:characters_voice\scenario\abdul_kill) =play_snd_from_obj(8193:characters_voice\human_01\military\fight\hit\hit_5) =play_snd_from_obj(8056:characters_voice\human_01\stalker\fight\hit\hit_2) =actor_light_hit +abdul_kpp_strike -abdup_kpp_prepare%
+
+; Мочим пси-ударом уже бандюков
+[remark@strike3]
+anim = hide
+target = 8068
+no_move = true
+meet = no_meet
+combat_ignore_cond = always
+danger = danger_condition
+on_timer = 6500 | walker@free %=play_strike_on_me2 =play_snd_from_obj(8070:characters_voice\scenario\abdul_kill) =play_snd_from_obj(8068:characters_voice\human_01\bandit\fight\hit\hit_6) =play_snd_from_obj(8069:characters_voice\human_01\bandit\fight\hit\hit_8) +abdul_strikes_bandits%
+
+; Освободились от ига и улетаем
+[walker@free]
+path_walk = abdul_walk1
+path_look = abdul_look_free
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+abdul_goodbye} %=remove_with_teleport%
+
+
+
+
+
+
+
+
+
+
+
+[meet]
+meet_state = 1| trans
+meet_state = 1| trans
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+abdul_dead%
+
+[hit]
+on_info = %=abdul_wound_effect =health_up =abdul_roundfly%

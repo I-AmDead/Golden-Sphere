@@ -1,0 +1,13 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer = 8000 | ph_idle@2
+
+[ph_idle@2]
+on_actor_dist_le_nvis = 100 | %=hit_obj(37:bip01_spine:0:550) =hit_obj(8466:bip01_spine:0:260) =play_snd_from_obj(37:ambient\suck1)%
+on_timer = 40000 | %+garb_ufo_task_done =spawn_garb_hangar_ufo3 =delme%
+on_info = {=garb_ufo_actor_capture} %=kill_actor%

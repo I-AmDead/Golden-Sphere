@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+
+<!--garb_colonna_body-->
+	<specific_character id="garb_colonna_body" team_default="1">
+		<name>Ассистент Трошин</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<bio>val_bandit_veteran_bio</bio>
+		
+		<class>garb_colonna_body</class>
+		<community>stalker_stalker</community>
+		
+		<rank>108</rank>
+		<reputation>-132</reputation>
+
+		<visual>actors\ecolog\stalker_ecolog</visual>
+		<snd_config>characters_voice\human_03\ecolog\</snd_config>
+		<crouch_type>1</crouch_type>
+		<supplies>
+			[spawn] \n
+			garb_convoy_scientist_pda \n
+		</supplies>
+
+                </specific_character>
+
+<!--garb_ovrah2-->
+	<specific_character id="garb_ovrah2" team_default = "1">
+		<name>Майор Оврах</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_ovrah2</class>
+		<community>stalker_army</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="3000" max="15000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_spetsnaz</visual>
+		<supplies>
+			[spawn] \n
+
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>helicrash_survival_start_dialog</start_dialog>
+		<actor_dialog>helicrash_survival_dialog2</actor_dialog>
+
+		<actor_dialog>helicrash_survival_kpp_dialog1</actor_dialog>
+
+		<actor_dialog>helicrash_survival_garb_dialog1</actor_dialog>
+
+		<actor_dialog>helicrash_survival_provodnik_dialog</actor_dialog>
+
+	</specific_character>
+
+<!--hunter_1_2-->
+	<specific_character id="hunter_1_2" team_default = "1">
+		<name>Андрей</name>
+		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_1_2</class>
+		<community>hunter</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="10000" max="19000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\hunter_1</visual>
+		<supplies>
+			[spawn] \n
+
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>hunter1_start_dialog</start_dialog>
+		<actor_dialog>hunter1_dialog2</actor_dialog>
+		<actor_dialog>hunter1_dialog3</actor_dialog>
+		<actor_dialog>hunter1_dialog4</actor_dialog>
+		<actor_dialog>hunter1_dialog5</actor_dialog>
+		<actor_dialog>hunter1_dialog6</actor_dialog>
+		<actor_dialog>hunter1_dialog7</actor_dialog>
+		<actor_dialog>hunter1_dialog8</actor_dialog>
+
+		<actor_dialog>hunter1_kpp_dialog1</actor_dialog>
+		<actor_dialog>hunter1_kpp_dialog2</actor_dialog>
+		<actor_dialog>hunter1_kpp_dialog3</actor_dialog>
+
+		<actor_dialog>hunter1_garb_dialog1</actor_dialog>
+		<actor_dialog>hunter1_vasil_dialog</actor_dialog>
+		<actor_dialog>hunter1_garb_dialog2</actor_dialog>
+
+		<actor_dialog>hunter1_dollsecret_dialog</actor_dialog>
+
+		<actor_dialog>hunter1_art_cheat_dialog</actor_dialog>
+
+	</specific_character>
+
+<!--hunter_2_2-->
+	<specific_character id="hunter_2_2" team_default = "1">
+		<name>Василий</name>
+		<icon>ui_npc_u_stalker_2_ochki</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_2_2</class>
+		<community>hunter</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="10000" max="15000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\hunter_2</visual>
+		<supplies>
+			[spawn] \n
+			device_torch \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>hunter2_start_dialog</actor_dialog>
+		<actor_dialog>hunter2_dialog1</actor_dialog>
+		<actor_dialog>hunter2_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_dialog3</actor_dialog>
+		<actor_dialog>hunter2_dialog4</actor_dialog>
+		<actor_dialog>hunter2_dialog5</actor_dialog>
+
+		<actor_dialog>hunter2_deathlamp_dialog1</actor_dialog>
+		<actor_dialog>hunter2_deathlamp_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_foto_dialog</actor_dialog>
+		<actor_dialog>hunter2_foto_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_rescue_dialog1</actor_dialog>
+		<actor_dialog>hunter2_rescue_dialog2</actor_dialog>
+
+		<actor_dialog>hunter1_art_cheat_dialog</actor_dialog>
+
+	</specific_character>
+
+<!--reketirs_assistant-->
+	<specific_character id="reketirs_assistant" team_default = "1">
+		<name>Сеня</name>
+		<icon>ui_npc_u_stalker_bandit_4</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>reketirs_assistant</class>
+		<community>bandit</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\bandit\stalker_bandit_3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ump \n
+			ammo_11.43x23_fmj \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_shustriy-->
+	<specific_character id="garb_shustriy" team_default = "1">
+		<name>Шустрила</name>
+		<icon>ui_npc_u_stalker_bandit_3</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_shustriy</class>
+		<community>stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\bandit\stalker_bandit_3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_ap \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_tirsa-->
+	<specific_character id="garb_tirsa" team_default = "1">
+		<name>Тырса</name>
+		<icon>ui_npc_u_stalker_bandit_veteran</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_tirsa</class>
+		<community>stalker</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\bandit\stalker_bandit_veteran</visual>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x70_buck \n
+			device_torch \n
+			tirsa_pda \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>dar_tirsa_dialog1</start_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_abdul-->
+	<specific_character id="garb_abdul" team_default = "1">
+		<name>Абдуль</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_abdul</class>
+		<community>stalker</community>
+
+		<rank>696</rank>
+		<reputation>0</reputation>
+		<money min="1" max="100" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<panic_treshold>0</panic_treshold>
+
+		<visual>actors\pmc3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_sks = 1, scope \n
+			ammo_7.62x39_ap \n
+			device_torch \n
+			wpn_binoc \n
+		</supplies>
+		<actor_dialog>abdul_anomal_radio_dialog</actor_dialog>
+
+		<actor_dialog>abdul_wishmaster_dialog</actor_dialog>
+
+		<start_dialog>dar_abdul_dialog5</start_dialog>
+		<actor_dialog>dar_abdul_dialog6</actor_dialog>
+
+		<actor_dialog>bar_abdul_dialog1</actor_dialog>
+		<actor_dialog>bar_abdul_dialog2</actor_dialog>
+		<actor_dialog>bar_abdul_dialog3</actor_dialog>
+		<actor_dialog>bar_abdul_dialog4</actor_dialog>
+		<actor_dialog>bar_abdul_dialog5</actor_dialog>
+		<actor_dialog>bar_abdul_dialog6</actor_dialog>
+		<actor_dialog>bar_abdul_dialog7</actor_dialog>
+
+
+	</specific_character>
+
+<!--garb_body10-->
+	<specific_character id="garb_body10" team_default = "1">
+		<name>Петя Порох</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body10</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--garb_body9-->
+	<specific_character id="garb_body9" team_default = "1">
+		<name>Клим</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body9</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			fotocamera \n
+		</supplies>
+	</specific_character>
+
+
+<!--dyatlovs_group_man1-->
+	<specific_character id="dyatlovs_group_man1" team_default = "1">
+		<name>Рустем</name>
+		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dyatlovs_group_man1</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_neytral_hood_uzor</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--dyatlovs_group_man2-->
+	<specific_character id="dyatlovs_group_man2" team_default = "1">
+		<name>Золотарёв</name>
+		<icon>ui_npc_u_stalker_neytral_balon_8</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dyatlovs_group_man2</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_neytral_balon_8</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--dyatlovs_group_man3-->
+	<specific_character id="dyatlovs_group_man3" team_default = "1">
+		<name>Тибо</name>
+		<icon>ui_npc_u_stalker_4_rozh3</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dyatlovs_group_man3</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_4_rozh3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u_m1 \n
+			ammo_5.45x39_ap \n
+			casette_9 \n
+		</supplies>
+	</specific_character>
+
+
+
+<!--garb_minefield_body1-->
+	<specific_character id="garb_minefield_body1" team_default = "1">
+		<name>Борщ</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_minefield_body1</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--garb_minefield_body2-->
+	<specific_character id="garb_minefield_body2" team_default = "1">
+		<name>Изя</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_minefield_body2</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--garb_minefield_body3-->
+	<specific_character id="garb_minefield_body3" team_default = "1">
+		<name>Хитрец</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_minefield_body3</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--garb_minefield_body4-->
+	<specific_character id="garb_minefield_body4" team_default = "1">
+		<name>Попандопало</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_minefield_body4</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--garb_reservuar_body-->
+	<specific_character id="garb_reservuar_body" team_default = "1">
+		<name>Шмыга</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_reservuar_body</class>
+		<community>latchkey</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			matches \n
+			armor_remkit \n
+			mikstura \n
+			wpn_binoc \n
+			vint \n
+		</supplies>
+	</specific_character>
+
+<!--garb_benzovoz_body-->
+	<specific_character id="garb_benzovoz_body" team_default = "1">
+		<name>Сержант Бочкин</name>
+		<icon>ui_npc_u_soldier_spetsnaz</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_benzovoz_body</class>
+		<community>stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_spetsnaz</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n	
+		</supplies>
+	</specific_character>
+
+<!--garb_excavator_body1-->
+	<specific_character id="garb_excavator_body1" team_default = "1">
+		<name>Артур</name>
+		<icon>ui_npc_u_green_stalker_7</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_excavator_body1</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_excavator_body2-->
+	<specific_character id="garb_excavator_body2" team_default = "1">
+		<name>Гоблин</name>
+		<icon>ui_npc_u_green_stalker_7</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_excavator_body2</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_4</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_excavator_body3-->
+	<specific_character id="garb_excavator_body3" team_default = "1">
+		<name>Сенька Шнур</name>
+		<icon>ui_npc_u_green_stalker_7</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_excavator_body3</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body1-->
+	<specific_character id="garb_body1" team_default = "1">
+		<name>Гарик Жиробас</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body1</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body2-->
+	<specific_character id="garb_body2" team_default = "1">
+		<name>Кнопыч</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body2</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			anomal_map_garbage \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body3-->
+	<specific_character id="garb_body3" team_default = "1">
+		<name>Толпыга</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body3</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_bizon \n
+                                                ammo_9x18_fmj = 3 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body4-->
+	<specific_character id="garb_body4" team_default = "1">
+		<name>Илья Бздун</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body4</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body5-->
+	<specific_character id="garb_body5" team_default = "1">
+		<name>Живодер</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body5</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body6-->
+	<specific_character id="garb_body6" team_default = "1">
+		<name>Юзя</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body6</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body7-->
+	<specific_character id="garb_body7" team_default = "1">
+		<name>Дилон</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body7</class>
+		<community>stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\ct_gsg9</visual>
+		<supplies>
+			[spawn] \n
+			wpn_aug_broken \n
+			equipment_bag \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--garb_body8-->
+	<specific_character id="garb_body8" team_default = "1">
+		<name>Сорокот</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>garb_body8</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--hunter_2-->
+	<specific_character id="hunter_2" team_default = "1">
+		<name>Василий</name>
+		<icon>ui_npc_u_stalker_2_ochki</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_2</class>
+		<community>hunter</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="10000" max="15000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\hunter_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_k98 \n
+			ammo_7.62x54_7h1 \n
+			device_torch \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>hunter2_start_dialog</actor_dialog>
+		<actor_dialog>hunter2_dialog1</actor_dialog>
+		<actor_dialog>hunter2_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_dialog3</actor_dialog>
+		<actor_dialog>hunter2_dialog4</actor_dialog>
+		<actor_dialog>hunter2_dialog5</actor_dialog>
+
+		<actor_dialog>hunter2_deathlamp_dialog1</actor_dialog>
+		<actor_dialog>hunter2_deathlamp_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_foto_dialog</actor_dialog>
+		<actor_dialog>hunter2_foto_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_rescue_dialog1</actor_dialog>
+		<actor_dialog>hunter2_rescue_dialog2</actor_dialog>
+
+		<actor_dialog>hunter2_shadow_zone_dialog</actor_dialog>
+
+		<actor_dialog>hunter2_art_cheat_dialog</actor_dialog>
+
+	</specific_character>
+
+
+</xml>

@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips = standart_treasure_use
+on_use = {=actor_has_item(predb_firestation_komander_key)} ph_idle@open %=remove_item(predb_firestation_komander_key) +predb_firest_weap_seif_open%
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure

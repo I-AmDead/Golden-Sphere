@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+agrund_ventilyator_on} sr_timer
+
+[sr_timer]
+type = dec
+start_value = 100000
+on_value = 0 | nil %+agrund_gaz_clear%
+string = agrund_gaz_countdown
+
+
+
+
+
+

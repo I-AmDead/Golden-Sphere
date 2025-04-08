@@ -1,0 +1,16 @@
+[logic]
+active = ph_code
+
+[ph_code]
+code = 3336570
+on_code = {+mil_antenne_activate_task2} ph_idle@1 %=play_snd_on_me(characters_voice\scenario\radio_noise1) +mil_antenna_on%
+tips = mil_base_antenna_pult_use
+
+[ph_idle@1]
+on_timer = 15000|ph_idle@2 %=play_snd_on_me(characters_voice\scenario\radio_noise1) =send_tip(mil_antenna_scan_tip:default)%
+
+[ph_idle@2]
+on_timer = 6000|ph_idle@3 %=play_snd_on_me(characters_voice\scenario\radio_noise2) =send_tip(mil_vsu_radio_tip:default)%
+
+[ph_idle@3]
+on_timer = 6000|nil %=play_snd_on_me(characters_voice\scenario\radio_noise2) =send_tip(mil_separ_radio_tip:default)%

@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+
+
+<dialog id="mil_abdul_dialog1" priority="-1">
+	<has_info>abdul_goto_military</has_info>
+	<dont_has_info>mil_abdul_goto_gravianomaly</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_abdul_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_abdul_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_abdul_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_abdul_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_abdul_dialog1_phrase_5</text>
+	<give_info>mil_abdul_goto_gravianomaly</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_abdul_dialog2">
+	<has_info>mil_abdul_behind_gravit</has_info>
+	<dont_has_info>mil_abdul_goto_barier</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_abdul_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_abdul_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_abdul_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_abdul_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_abdul_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_abdul_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_abdul_dialog2_phrase_7</text>
+	<give_info>mil_abdul_goto_barier</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_abdul_dialog3">
+	<has_info>mil_abdul_on_barier</has_info>
+	<dont_has_info>mil_streak_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_abdul_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_abdul_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_abdul_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_abdul_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_abdul_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_abdul_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_abdul_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_abdul_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_abdul_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_abdul_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_abdul_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_abdul_dialog3_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_abdul_dialog3_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_abdul_dialog3_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_abdul_dialog3_phrase_15</text>
+	<give_info>mil_streak_task</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_freak_dialog1">
+	<has_info>mil_freak_alarm</has_info>
+	<has_info>mil_freak_dog1_dead</has_info>
+	<has_info>mil_freak_dog2_dead</has_info>
+	<dont_has_info>mil_freak_panik1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_freak_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_freak_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_freak_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_freak_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_freak_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_freak_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_freak_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_freak_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_freak_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_freak_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_freak_dialog1_phrase_11</text>
+	<give_info>mil_freak_panik1</give_info>
+	<action>addon_dialogs.mil_kazarma1key_in</action>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_dedok_start_dialog">
+	<has_info>mil_ded_house_find</has_info>
+	<dont_has_info>mil_dedok_hello</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_start_dialog_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_start_dialog_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_start_dialog_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_start_dialog_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_dedok_start_dialog_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_dedok_start_dialog_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_dedok_start_dialog_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_dedok_start_dialog_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_dedok_start_dialog_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_dedok_start_dialog_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_dedok_start_dialog_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_dedok_start_dialog_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_dedok_start_dialog_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_dedok_start_dialog_phrase_15</text>
+              <next>15</next>
+              </phrase>
+            <phrase id="15">
+                <text>mil_dedok_start_dialog_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>mil_dedok_start_dialog_phrase_17</text>
+	<next>17</next>
+     	    </phrase>
+            <phrase id="17">
+                <text>mil_dedok_start_dialog_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>mil_dedok_start_dialog_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>mil_dedok_start_dialog_phrase_20</text>
+	<give_info>mil_dedok_hello</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_dedok_dialog1">
+	<has_info>mil_dedok_hello</has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog1_phrase_5</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_dedok_dialog1_1">
+	<has_info>mil_dedok_hello</has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog1_1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog1_1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog1_1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog1_1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog1_1_phrase_5</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_dedok_dialog1_2">
+	<has_info>mil_dedok_hello</has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog1_2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog1_2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog1_2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog1_2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog1_2_phrase_5</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_dedok_dialog2">
+	<has_info>mil_dedok_hello</has_info>
+	<dont_has_info>mil_find_icon_task1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_dedok_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_dedok_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_dedok_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_dedok_dialog2_phrase_9</text>
+	<give_info>mil_find_icon_task1</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_dedok_dialog3">
+	<dont_has_info>mil_find_icon_task2</dont_has_info>
+	<precondition>addon_dialogs.have_mil_hatchet</precondition>
+	<precondition>addon_dialogs.have_mil_hatchet</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_dedok_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_dedok_dialog3_phrase_7</text>
+	<action>addon_dialogs.mil_village_portsigar_out</action>
+	<give_info>mil_find_icon_task2</give_info>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_dedok_dialog3_phrase_8</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_dedok_dialog4">
+	<dont_has_info>mil_find_icon_task3</dont_has_info>
+	<precondition>addon_dialogs.have_mil_kuzma_items</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog4_phrase_3</text>
+	<action>addon_dialogs.mil_letter_money_out</action>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_dedok_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_dedok_dialog4_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_dedok_dialog4_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_dedok_dialog4_phrase_9</text>
+	<give_info>mil_find_icon_task3</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_dedok_dialog5">
+	<has_info>mil_village_docks_info</has_info>
+	<dont_has_info>mil_find_icon_task3_done</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog5_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog5_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog5_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_dedok_dialog5_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_dedok_dialog5_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_dedok_dialog5_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_dedok_dialog5_phrase_8</text>
+              <next>8</next>
+              <next>9</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_dedok_dialog5_phrase_9</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_dedok_dialog5_phrase_10</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_dedok_dialog5_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_dedok_dialog5_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_dedok_dialog5_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_dedok_dialog5_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_dedok_dialog5_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>mil_dedok_dialog5_phrase_16</text>
+	<give_info>mil_find_icon_task4</give_info>
+	<give_info>mil_find_icon_task3_done</give_info>
+              </phrase>
+           <phrase id="16">
+                <text>mil_dedok_dialog5_phrase_17</text>
+              <next>17</next>
+            </phrase>
+           <phrase id="17">
+                <text>mil_dedok_dialog5_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>mil_dedok_dialog5_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>mil_dedok_dialog5_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>mil_dedok_dialog5_phrase_21</text>
+              <next>21</next>
+            </phrase>
+           <phrase id="21">
+                <text>mil_dedok_dialog5_phrase_22</text>
+	<give_info>mil_village_antenna_task</give_info>
+	<give_info>mil_find_icon_task3_done</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_dedok_dialog5_1">
+	<dont_has_info>mil_find_icon_task5</dont_has_info>
+	<precondition>addon_dialogs.have_mil_tabak_box</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_dedok_dialog5_1_phrase_1</text>
+	<action>addon_dialogs.tabak_box_out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_dedok_dialog5_1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_dedok_dialog5_1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_dedok_dialog5_1_phrase_4</text>
+	<give_info>mil_find_icon_task4_done</give_info>
+	<give_info>mil_find_icon_task5</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_freak_dialog2">
+	<has_info>mil_antenne_activate_task1</has_info>
+	<dont_has_info>mil_antenne_activate_task2</dont_has_info>
+	<precondition>addon_dialogs.have_mil_pribor</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_freak_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_freak_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_freak_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_freak_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_freak_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_freak_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_freak_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_freak_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_freak_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_freak_dialog2_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_freak_dialog2_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_freak_dialog2_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_freak_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_freak_dialog2_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_freak_dialog2_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>mil_freak_dialog2_phrase_16</text>
+              <next>16</next>
+              </phrase>
+           <phrase id="16">
+                <text>mil_freak_dialog2_phrase_17</text>
+              <next>17</next>
+              </phrase>
+           <phrase id="17">
+                <text>mil_freak_dialog2_phrase_18</text>
+              <next>18</next>
+              </phrase>
+           <phrase id="18">
+                <text>mil_freak_dialog2_phrase_19</text>
+              <next>19</next>
+              </phrase>
+           <phrase id="19">
+                <text>mil_freak_dialog2_phrase_20</text>
+              <next>20</next>
+              </phrase>
+           <phrase id="20">
+                <text>mil_freak_dialog2_phrase_21</text>
+              <next>21</next>
+              </phrase>
+           <phrase id="21">
+                <text>mil_freak_dialog2_phrase_22</text>
+              <next>22</next>
+              </phrase>
+           <phrase id="22">
+                <text>mil_freak_dialog2_phrase_23</text>
+	<give_info>mil_antenne_activate_task2</give_info>
+	<action>addon_dialogs.mil_stalker_freak_exchange</action>
+              <next>23</next>
+              </phrase>
+           <phrase id="23">
+                <text>mil_freak_dialog2_phrase_24</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_abdul_dialog4">
+	<has_info>mil_antenna_on</has_info>
+	<dont_has_info>mil_abdul_goto_radar</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_abdul_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_abdul_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_abdul_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_abdul_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_abdul_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_abdul_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_abdul_dialog4_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_abdul_dialog4_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_abdul_dialog4_phrase_9</text>
+	<give_info>mil_abdul_goto_radar</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_freak_dialog3">
+	<has_info>mil_antenne_activate_task2</has_info>
+	<dont_has_info>mil_freak_pasport_task</dont_has_info>
+	<dont_has_info>mil_freak_enemy</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_freak_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_freak_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_freak_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_freak_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_freak_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_freak_dialog3_phrase_6</text>
+              <next>6</next>
+              <next>7</next>
+              <next>71</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_freak_dialog3_phrase_7</text>
+	<action>addon_dialogs.mil_stalker_freak_doll_help</action>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+           <phrase id="7">
+	<has_info>arts_powerup_neutral</has_info>
+                <text>mil_freak_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="71">
+                <text>mil_freak_dialog3_phrase_81</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_freak_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_freak_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_freak_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_freak_dialog3_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_freak_dialog3_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_freak_dialog3_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_freak_dialog3_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>mil_freak_dialog3_phrase_16</text>
+	<give_info>mil_freak_pasport_task</give_info>
+              </phrase>
+           <phrase id="16">
+                <text>mil_freak_dialog3_phrase_17</text>
+              <next>17</next>
+              </phrase>
+           <phrase id="17">
+                <text>mil_freak_dialog3_phrase_18</text>
+              <next>18</next>
+              </phrase>
+           <phrase id="18">
+                <text>mil_freak_dialog3_phrase_19</text>
+              <next>19</next>
+              </phrase>
+           <phrase id="19">
+                <text>mil_freak_dialog3_phrase_20</text>
+	<give_info>mil_freak_enemy</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_freak_dialog4">
+	<has_info>mil_freak_pasport_in</has_info>
+	<dont_has_info>mil_freak_pasport_done</dont_has_info>
+	<precondition>addon_dialogs.have_50000_for_prapor</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_freak_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_freak_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_freak_dialog4_phrase_3</text>
+  	<give_info>mil_freak_pasport_done</give_info>
+	<action>addon_dialogs.prapor_pasport_and_money_out</action>
+	<action>addon_dialogs.prapor_give_us_key_from_shtab</action>
+	<action>xr_effects.karma_up</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_freak_dialog5">
+	<has_info>mil_antenne_activate_task2</has_info>
+	<dont_has_info>mil_grocery_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_freak_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_freak_dialog5_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_freak_dialog5_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_freak_dialog5_phrase_4</text>
+              <next>4</next>
+              <next>5</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_freak_dialog5_phrase_5</text>
+	<action>addon_dialogs.mil_grocery_key_in</action>
+	<give_info>mil_grocery_task</give_info>
+            </phrase>
+           <phrase id="5">
+                <text>mil_freak_dialog5_phrase_6</text>
+                </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_freak_dialog6">
+	<precondition>addon_dialogs.have_tuschano_king_head</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_freak_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_freak_dialog6_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_freak_dialog6_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_freak_dialog6_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_freak_dialog6_phrase_5</text>
+	<action>addon_dialogs.tuschano_king_head_reward</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_separ_commander_dialog1">
+	<has_info>mil_separ_acess</has_info>
+	<dont_has_info>separ_peace</dont_has_info>
+	<dont_has_info>separ_war</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_separ_commander_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_separ_commander_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_separ_commander_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_separ_commander_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_separ_commander_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_separ_commander_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_separ_commander_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_separ_commander_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_separ_commander_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_separ_commander_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_separ_commander_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_separ_commander_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_separ_commander_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_separ_commander_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_separ_commander_dialog1_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>mil_separ_commander_dialog1_phrase_16</text>
+              <next>16</next>
+              <next>17</next>
+            </phrase>
+           <phrase id="16">
+                <text>mil_separ_commander_dialog1_phrase_17</text>
+	<give_info>separ_war</give_info>
+	<action>addon_dialogs.separ_war_doll_hint</action>
+              <next>18</next>
+            </phrase>
+           <phrase id="17">
+                <text>mil_separ_commander_dialog1_phrase_18</text>
+	<give_info>separ_peace</give_info>
+              <next>19</next>
+            </phrase>
+           <phrase id="18">
+                <text>mil_separ_commander_dialog1_phrase_19</text>
+            </phrase>
+           <phrase id="19">
+                <text>mil_separ_commander_dialog1_phrase_20</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="hunter7_dialog1">
+	<dont_has_info>mil_aviators_spwn</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter7_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter7_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter7_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter7_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter7_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter7_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter7_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter7_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter7_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter7_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter7_dialog1_phrase_11</text>
+	<give_info>mil_aviators_spwn</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_aviator1_dialog1">
+	<dont_has_info>mil_aviators_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_aviator1_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_aviator1_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_aviator1_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_aviator1_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_aviator1_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_aviator1_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_aviator1_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_aviator1_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_aviator1_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_aviator1_dialog1_phrase_10</text>
+              <next>10</next>
+              <next>11</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_aviator1_dialog1_phrase_11</text>
+            </phrase>
+           <phrase id="11">
+                <text>mil_aviator1_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_aviator1_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_aviator1_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_aviator1_dialog1_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>mil_aviator1_dialog1_phrase_16</text>
+	<give_info>mil_aviators_task</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_aviator1_dialog2">
+	<precondition>addon_dialogs.have_mil_dalnomer</precondition>
+	<dont_has_info>mil_aviators_rwrd</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_aviator1_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_aviator1_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_aviator1_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_aviator1_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_aviator1_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_aviator1_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_aviator1_dialog2_phrase_7</text>
+  	<give_info>mil_aviators_rwrd</give_info>
+	<action>addon_dialogs.mil_aviators_reward</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_aviator1_dialog3">
+	<has_info>separ_peace</has_info>
+	<dont_has_info>mil_fuel_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_aviator1_dialog3_phrase_1</text>
+                <next>1</next>
+                <next>2</next>
+            </phrase>
+            <phrase id="1">
+	<has_info>mil_aviators_rwrd</has_info>
+                <text>mil_aviator1_dialog3_phrase_2</text>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+	<dont_has_info>mil_aviators_rwrd</dont_has_info>
+                <text>mil_aviator1_dialog3_phrase_3</text>
+            </phrase>
+           <phrase id="3">
+                <text>mil_aviator1_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_aviator1_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_aviator1_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_aviator1_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_aviator1_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_aviator1_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_aviator1_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_aviator1_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_aviator1_dialog3_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>mil_aviator1_dialog3_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_aviator1_dialog3_phrase_14</text>
+  	<give_info>mil_fuel_task</give_info>
+	<action>addon_dialogs.kanistra_in</action>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_aviator1_dialog3_phrase_15</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_aviator1_dialog4">
+	<precondition>addon_dialogs.have_mil_fuel</precondition>
+	<dont_has_info>mil_aviators_rwrd2</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_aviator1_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_aviator1_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_aviator1_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_aviator1_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_aviator1_dialog4_phrase_5</text>
+  	<give_info>mil_aviators_rwrd2</give_info>
+	<action>addon_dialogs.mil_fuel_out</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter7_dialog2">
+	<has_info>mil_grav_off</has_info>
+	<dont_has_info>mil_hntr_vagon_acess</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter7_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter7_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter7_dialog2_phrase_3</text>
+  	<give_info>mil_hntr_vagon_acess</give_info>
+	<action>addon_dialogs.mil_vagon_key_in</action>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter7_dialog2_phrase_4</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_separ_commander_dialog2">
+	<has_info>mil_deadsold1_info</has_info>
+	<precondition>addon_dialogs.have_mil_electron_component</precondition>
+	<dont_has_info>mil_separ_explor</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_separ_commander_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_separ_commander_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_separ_commander_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_separ_commander_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_separ_commander_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_separ_commander_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_separ_commander_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_separ_commander_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_separ_commander_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_separ_commander_dialog2_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_separ_commander_dialog2_phrase_11</text>
+ 	<give_info>mil_separ_explor</give_info>
+	<action>addon_dialogs.minefinder_in</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_vsu_sold5_dialog1">
+	<has_info>mil_separ_explor</has_info>
+	<!--precondition>addon_dialogs.have_mil_electron_component</precondition-->
+	<dont_has_info>mil_vsu_fail2</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_vsu_sold5_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_vsu_sold5_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_vsu_sold5_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_vsu_sold5_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_vsu_sold5_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_vsu_sold5_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_vsu_sold5_dialog1_phrase_7</text>
+	<give_info>mil_vsu_fail2</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_vsu_sold1_dialog1">
+	<has_info>mil_vsu_fail</has_info>
+	<dont_has_info>mil_vsu_medics</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_vsu_sold1_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_vsu_sold1_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_vsu_sold1_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_vsu_sold1_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_vsu_sold1_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_vsu_sold1_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_vsu_sold1_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_vsu_sold1_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_vsu_sold1_dialog1_phrase_9</text>
+	<give_info>mil_vsu_medics</give_info>
+	<action>addon_dialogs.mil_vsu_medics_tip</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_vsu_commander_dialog1">
+	<precondition>addon_dialogs.have_mil_electron_component</precondition>
+	<precondition>addon_dialogs.have_mil_stimulator</precondition>
+	<dont_has_info>mil_vsu_end</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_vsu_commander_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_vsu_commander_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_vsu_commander_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_vsu_commander_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_vsu_commander_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_vsu_commander_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_vsu_commander_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_vsu_commander_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_vsu_commander_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_vsu_commander_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_vsu_commander_dialog1_phrase_11</text>
+	<give_info>mil_vsu_end</give_info>
+	<action>addon_dialogs.mil_vsu_items_out</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_separ_commander_dialog3">
+	<has_info>mil_vsu_end</has_info>
+	<dont_has_info>mil_separ_end</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_separ_commander_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_separ_commander_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_separ_commander_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_separ_commander_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_separ_commander_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_separ_commander_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_separ_commander_dialog3_phrase_7</text>
+	<action>addon_dialogs.mil_separs_reward</action>
+	<give_info>mil_separ_end</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_separ_commander_dialog4">
+	<precondition>addon_dialogs.mil_vsu_dead</precondition>
+	<dont_has_info>mil_separ_vsu_rwrd</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_separ_commander_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_separ_commander_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_separ_commander_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_separ_commander_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_separ_commander_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_separ_commander_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_separ_commander_dialog4_phrase_7</text>
+	<action>addon_dialogs.mil_separs_reward2</action>
+	<give_info>mil_separ_vsu_rwrd</give_info>
+	<give_info>mil_separ_end</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="mil_vsu_sold5_dialog2">
+	<has_info>mil_vsu_acess</has_info>
+	<dont_has_info>mil_separ_explor</dont_has_info>
+	<dont_has_info>mil_vsu_war</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_vsu_sold5_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_vsu_sold5_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_vsu_sold5_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_vsu_sold5_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_vsu_sold5_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_vsu_sold5_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_vsu_sold5_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_vsu_sold5_dialog2_phrase_8</text>
+              <next>8</next>
+              <next>9</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_vsu_sold5_dialog2_phrase_9</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="9">
+                <text>mil_vsu_sold5_dialog2_phrase_10</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="10">
+                <text>mil_vsu_sold5_dialog2_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>mil_vsu_sold5_dialog2_phrase_12</text>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+           <phrase id="12">
+                <text>mil_vsu_sold5_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>mil_vsu_sold5_dialog2_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>mil_vsu_sold5_dialog2_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>mil_vsu_sold5_dialog2_phrase_16</text>
+              <next>16</next>
+              </phrase>
+           <phrase id="16">
+                <text>mil_vsu_sold5_dialog2_phrase_17</text>
+              <next>17</next>
+              </phrase>
+           <phrase id="17">
+                <text>mil_vsu_sold5_dialog2_phrase_18</text>
+              <next>18</next>
+              </phrase>
+           <phrase id="18">
+                <text>mil_vsu_sold5_dialog2_phrase_19</text>
+              <next>19</next>
+              </phrase>
+           <phrase id="19">
+                <text>mil_vsu_sold5_dialog2_phrase_20</text>
+	<give_info>mil_vsu_war</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="mil_vsu_commander_dialog2">
+	<precondition>addon_dialogs.mil_separ_dead</precondition>
+	<has_info>separ_if_fire</has_info>
+	<dont_has_info>mil_vsu_end</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>mil_vsu_commander_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>mil_vsu_commander_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>mil_vsu_commander_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>mil_vsu_commander_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>mil_vsu_commander_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>mil_vsu_commander_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>mil_vsu_commander_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>mil_vsu_commander_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>mil_vsu_commander_dialog2_phrase_9</text>
+	<give_info>mil_vsu_end</give_info>
+	<action>addon_dialogs.mil_vsu_reward</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+
+
+</game_dialogs>

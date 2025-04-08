@@ -1,0 +1,75 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+underbridge_task_sucess} walker@fight, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = bridge_anomal_killer3_walk1
+path_look = bridge_anomal_killer3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10 | follower@bridge %=make_invulnerable =add_self_spot(green_location:bridge_anomal_killer_mark_text)%
+
+
+[follower@bridge]
+leader = 8179
+formation_line = false
+distance = 2
+anim_sprint = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bridge_anomal_killer_on_place} walker@wait
+
+
+
+[walker@bridge]
+path_walk = bridge_anomal_killer3_walk1
+path_look = bridge_anomal_killer3_look1
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+combat_ignore_cond = always
+on_signal       = arrived | walker@wait
+
+
+
+
+[walker@wait]
+path_walk = bridge_anomal_killer3_walk1
+path_look = bridge_anomal_killer3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 30 | walker@fight %=killactor =unmake_invulnerable%
+
+[walker@fight]
+path_walk = bridge_anomal_killer2_walk1
+path_look = bridge_anomal_killer2_look1
+danger = danger_condition
+on_info = {+underbridge_task_sucess} %=delme2%
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+bridge_anomal_killer3_dead%
+

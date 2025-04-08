@@ -1,0 +1,10 @@
+[logic]
+active = sr_particle
+
+[sr_particle]
+name = industrial_particles\exhaust_isparenie_01
+path = agr_nii_radiators3_points
+mode = 2
+looped = true
+on_actor_inside = %=hit_obj(37:bip01_spine:0.1:0) =run_postprocess(fire_hit)%
+

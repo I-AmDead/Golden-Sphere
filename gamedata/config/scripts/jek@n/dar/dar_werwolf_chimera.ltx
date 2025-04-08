@@ -1,0 +1,25 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@start
+on_death = mob_death
+
+
+[mob_home@start]
+path_home = dar_werwolf_point
+home_min_radius = 5
+home_max_radius = 10
+on_timer = 1 | mob_home@1 %=dar_boar_werwolf_release%
+
+[mob_home@1]
+path_home = dar_werwolf_point
+home_min_radius = 5
+home_max_radius = 10
+
+
+
+[mob_death]
+on_info = %=dar_chimera_werwolf_transformation%
+
+

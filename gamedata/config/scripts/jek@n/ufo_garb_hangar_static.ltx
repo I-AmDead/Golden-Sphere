@@ -1,0 +1,9 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+garb_hangar_anomaly_foto} %=spawn_garb_hangar_ufo2 =delme%
+on_actor_dist_le_nvis = 30 | %+garb_ufo_task_fail =delme%

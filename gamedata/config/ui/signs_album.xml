@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<signs_album>
+
+<ramka x="220" y="170" width="900" height="600" stretch="1">
+	<texture>ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Коллекция значков</text>
+</name>
+
+	<image1 x="280" y="280" width="40" height="40" stretch="1">
+		<texture>ui\sssr\sssr_sign1</texture>
+	</image1>
+	<image2 x="340" y="260" width="90" height="90" stretch="1">
+		<texture>ui\sssr\sssr_sign2</texture>
+	</image2>
+	<image3 x="440" y="265" width="70" height="85" stretch="1">
+		<texture>ui\sssr\sssr_sign3</texture>
+	</image3>
+	<image4 x="520" y="270" width="60" height="65" stretch="1">
+		<texture>ui\sssr\sssr_sign4</texture>
+	</image4>
+	<image5 x="600" y="270" width="70" height="80" stretch="1">
+		<texture>ui\sssr\sssr_sign5</texture>
+	</image5>
+
+	<image6 x="280" y="410" width="65" height="65" stretch="1">
+		<texture>ui\sssr\sssr_sign6</texture>
+	</image6>
+	<image7 x="360" y="410" width="75" height="75" stretch="1">
+		<texture>ui\sssr\sssr_sign7</texture>
+	</image7>
+	<image8 x="445" y="402" width="60" height="75" stretch="1">
+		<texture>ui\sssr\sssr_sign8</texture>
+	</image8>
+	<image9 x="520" y="410" width="50" height="65" stretch="1">
+		<texture>ui\sssr\sssr_sign9</texture>
+	</image9>
+	<image10 x="600" y="410" width="50" height="65" stretch="1">
+		<texture>ui\sssr\sssr_sign10</texture>
+	</image10>
+
+
+	<btn_quit x="460" y="540" width="18" height="18">
+		<text r="225" g="58" b="58" font="letterica16">Закрыть</text>
+	</btn_quit>
+
+
+</signs_album>
+

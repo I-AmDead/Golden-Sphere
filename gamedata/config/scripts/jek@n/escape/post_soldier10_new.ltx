@@ -1,0 +1,156 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+sold10_goto_podval} walker@podval1, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = post_soldier10_walk8
+path_look = post_soldier10_look8
+on_timer = 10 | walker@1 %=make_invulnerable%
+
+
+; Сидим у дерева и ждем команды от ГГ
+[walker@1]
+path_walk = post_soldier10_walk8
+path_look = post_soldier10_look8
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+sold10_goto_point1} walker@2 %=make_invulnerable%
+
+
+; Лезем по точкам:
+[walker@2]
+path_walk = post_soldier10_walk9
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@3
+
+[walker@3]
+path_walk = post_soldier10_walk10
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@4
+
+[walker@4]
+path_walk = post_soldier10_walk11
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+;on_signal       = arrived | walker@boars_alarm1 %=esc_sold10_boars_spawn =unmake_invulnerable%
+on_signal       = arrived | walker@boars_alarm1 %=esc_sold10_boars_spawn%
+
+
+
+; Стоим и боимся кабанов:
+[walker@boars_alarm1]
+path_walk = post_soldier10_walk11
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 8000 | walker@boars_alarm2 %=play_snd_from_obj(8283:characters_voice\human_01\military\states\panic_monster\panic_monster_1)%
+on_info = {+esc_sold10_boar1_dead +esc_sold10_boar2_dead +esc_sold10_boar3_dead} walker@to_village %=make_invulnerable%
+
+[walker@boars_alarm2]
+path_walk = post_soldier10_walk11
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 8000 | walker@boars_alarm1 %=play_snd_from_obj(8283:characters_voice\human_01\military\states\panic_monster\panic_monster_3)%
+on_info = {+esc_sold10_boar1_dead +esc_sold10_boar2_dead +esc_sold10_boar3_dead} walker@to_village %=make_invulnerable%
+
+
+
+; Идем в деревню:
+[walker@to_village]
+path_walk = post_soldier10_walk12
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@in_village_wait %+esc_sold10_in_village%
+
+
+;Ждем у костра, пока ГГ договорится с местными:
+[walker@in_village_wait]
+path_walk = post_soldier10_walk12
+path_look = post_soldier10_look12
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+sold10_goto_podval} walker@podval1
+
+
+;В подвальчике сидим:
+[walker@podval1]
+path_walk = post_soldier10_walk13
+path_look = post_soldier10_look13
+danger = danger_condition
+combat_ignore_cond = always
+;on_info = {=actor_returns_after_garbage} walker@podval2 %=send_tip(sold10_after_garbage_tip:soldier:8283)%
+
+[walker@podval2]
+path_walk = post_soldier10_walk13
+path_look = post_soldier10_look13
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+post_soldier10_dead%

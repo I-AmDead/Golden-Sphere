@@ -1,0 +1,83 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+;on_death = death
+threshold = threshold@predb_catwoman_threshold
+;meet = meet@catwoman
+
+[walker@start]
+path_walk = predb_catwoman_walk1
+path_look = predb_catwoman_look1
+on_timer = 1|walker@1 %=make_invulnerable =disable_trading%
+
+[walker@1]
+path_walk = predb_catwoman_walk1
+path_look = predb_catwoman_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 55|walker@2 %=send_tip(predb_catwoman_help_tip:stalker) =add_self_spot(blue_location:predb_catwoman_mark_text)%
+
+[walker@2]
+path_walk = predb_catwoman_walk1
+path_look = predb_catwoman_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@catwoman
+on_actor_dist_le_nvis = 5|walker@3
+
+[walker@3]
+path_walk = predb_catwoman_walk1
+path_look = predb_catwoman_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_catwoman_perv} remark@laught %=disable_input =play_snd_on_me(characters_voice\scenario\catwoman_laught)%
+
+[remark@laught]
+;snd = catwoman_laught
+anim = smeh
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end|walker@4 %=run_postprocess(agr_u_fade) =play_snd_on_me(monsters\mew)%
+
+[walker@4]
+path_walk = predb_catwoman_walk1
+path_look = predb_catwoman_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 2500|nil %=enable_input =spawn_predb_cat_queen =delme2%
+
+
+
+[meet@catwoman]
+meet_state = 10|wounded_heavy@meet@catwoman_help|5|wounded_heavy@catwoman_help
+meet_state_wpn = 10|wounded_heavy@catwoman_help|5|wounded_heavy@catwoman_help
+victim = 1|nil
+victim_wpn = 1|nil
+use = true
+use_wpn = false
+abuse = false
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_catwoman_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_catwoman_dead%
+

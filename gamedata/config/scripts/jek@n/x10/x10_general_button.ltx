@@ -1,0 +1,18 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_button@off
+
+[ph_button@off]
+anim_blend = true
+anim = lab_primary_switcher_off
+tooltip     = x10_button_use
+on_press = {+x10_abdul_button_info} ph_button@on %=play_snd(ambient\switch_1) +x10_button_switch%
+
+[ph_button@on]
+anim_blend = true
+anim = lab_primary_switcher_idle
+;tooltip     = agrund_ventilyator_motor_use2
+on_press = nil
+

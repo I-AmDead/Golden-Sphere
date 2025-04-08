@@ -1,0 +1,15 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_force
+
+[ph_idle]
+on_timer = 8000|ph_force %=play_snd_on_me(characters_voice\scenario\ufo_sound)%
+ 
+[ph_force]
+force = 4500
+time = 500000
+delay = 0
+point = esc_ufo_target
+point_index = 0

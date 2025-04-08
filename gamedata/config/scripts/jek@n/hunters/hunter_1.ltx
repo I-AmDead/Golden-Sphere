@@ -1,0 +1,265 @@
+; Андрей, Кордон
+
+[smart_terrains]
+none = true
+
+[logic]
+active = {+tirsa_pda_info} walker@garb_hostage, {+garbage_companions_on_place} kamp@behind_vagon, {+spawn_garbage_companions} walker@garb_start, {-spawn_garbage_companions} walker@start
+;trade = misc\trade_hunters.ltx
+on_death = death
+
+[walker@start]
+path_walk = esc_hunter_walk1
+path_look = esc_hunter_look1
+on_timer      = 1 | walker@farm1 %=make_invulnerable%
+
+[walker@farm1]
+path_walk = esc_hunter_walk1
+path_look = esc_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 13000 | walker@farm2
+on_info = {+esc_farm_boars_attak} walker@farm3
+
+[walker@farm2]
+path_walk = esc_hunter_walk1
+path_look = esc_hunter_look1_2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 13000 | walker@farm1
+on_info = {+esc_farm_boars_attak} walker@farm3
+
+
+[walker@farm3]
+path_walk = esc_hunter_walk1
+path_look = esc_hunter_look1_3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+esc_farm_attak_boar1_dead +esc_farm_attak_boar2_dead +esc_farm_attak_boar3_dead} walker@farm4
+
+[walker@farm4]
+path_walk = esc_hunter_walk1
+path_look = esc_hunter_look1_4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_goto_house} walker@house
+
+[walker@house]
+path_walk = esc_hunter_walk2
+path_look = esc_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_signal       = arrived | walker@house2 %+hunter1_in_house%
+
+[walker@house2]
+path_walk = esc_hunter_walk2
+path_look = esc_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+esc_helicrash_survival_spawn} walker@house3
+
+[walker@house3]
+path_walk = esc_hunter_walk2
+path_look = esc_hunter_look2_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+helicrash_survival_on_place} walker@house4
+
+[walker@house4]
+path_walk = esc_hunter_walk2_2
+path_look = esc_hunter_look2_2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_enemy} walker@enemy %=unmake_invulnerable%, {=actor_has_item(helicrash_survival_art)} walker@house5
+
+[walker@enemy]
+path_walk = esc_hunter_walk2_2
+path_look = esc_hunter_look2_2
+
+
+[walker@house5]
+path_walk = esc_hunter_walk2
+path_look = esc_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+helicrash_survival_ready_to_go} walker@to_kpp1 %=play_snd_from_obj(8056:characters_voice\human_03\stalker\talk\raid\init\loner_1)%
+
+[walker@to_kpp1]
+path_walk = esc_hunter_walk_kpp1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@to_kpp2 %+hunter1_on_kpp_way%
+
+[walker@to_kpp2]
+path_walk = esc_hunter_walk_kpp1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_to_kamaz} walker@to_kamaz
+
+[walker@to_kamaz]
+path_walk = esc_hunter_walk_kpp_kamaz
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@kamaz %+hunter1_behind_kamaz%
+
+[walker@kamaz]
+path_walk = esc_hunter_walk_kpp_kamaz
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_to_kpp_room} walker@to_kpp_room
+
+[walker@to_kpp_room]
+path_walk = esc_hunter_walk_kpp_room
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@kpp_room %+hunter1_in_kpp_room%
+
+[walker@kpp_room]
+path_walk = esc_hunter_walk_kpp_room
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_kpp_agress} walker@kpp_agress %=play_snd_from_obj(8056:characters_voice\human_01\stalker\fight\attack\attack_3) +abdup_kpp_prepare%
+
+; Агримся на бандитов в КПП
+[walker@kpp_agress]
+path_walk = esc_hunter_walk_kpp_room
+path_look = esc_hunter_look_kpp_room_agress
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+abdul_kpp_strike} walker@kpp_wounded1
+
+
+; Падаем и плачем от удара Абдуля
+[walker@kpp_wounded1]
+path_walk = esc_hunter_walk_kpp_room
+path_look = esc_hunter_look_kpp_room_wounded
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 13000 | walker@kpp_wounded2 %=play_snd_from_obj(8056:characters_voice\human_01\stalker\help\wounded_heavy\help_2)%
+on_info = {+abdul_strikes_bandits} walker@kpp_free
+
+[walker@kpp_wounded2]
+path_walk = esc_hunter_walk_kpp_room
+path_look = esc_hunter_look_kpp_room_wounded
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 13000 | walker@kpp_wounded1 %=play_snd_from_obj(8056:characters_voice\human_01\stalker\help\wounded_heavy\help_3)%
+on_info = {+abdul_strikes_bandits} walker@kpp_free
+
+
+; Встали и снова радуемся жизни
+[walker@kpp_free]
+path_walk = esc_hunter_walk_kpp_room
+path_look = esc_hunter_look_kpp_room
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_bandits_away} walker@to_tirsa
+
+[walker@to_tirsa]
+path_walk = esc_hunter_walk_kpp_tirsa
+path_look = esc_hunter_look_kpp_tirsa
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | remark@to_tirsa
+
+[remark@to_tirsa]
+anim = caution
+snd = hunter1_to_tirsa
+snd_anim_sync = true
+target = 8068
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end | walker@kpp_rest %+hunter1_kpp_rest%
+
+[walker@kpp_rest]
+path_walk = tirsa_walk1
+path_look = tirsa_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@sit_chair
+
+
+
+; Теперь мы на Свалке:
+
+[walker@garb_start]
+path_walk = garb_hunter1_walk1
+path_look = garb_hunter1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+garbage_companions_on_place} kamp@behind_vagon %=make_invulnerable%, {+not_all_garbage_companions_on_place} kamp@behind_vagon %=make_invulnerable%
+
+[kamp@behind_vagon]
+center_point = garb_vagon_outside_kamp
+radius = 2
+def_state_moving = walk
+danger = danger_condition
+on_info = {+garb_hunters_door_unlocked} walker@in_vagon
+
+[walker@in_vagon]
+path_walk = garb_hunter1_in_garb_vagon_walk
+path_look = garb_hunter1_in_garb_vagon_look
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+; В плену у бандитов:
+[walker@garb_hostage]
+path_walk = garb_hunter1_walk3
+path_look = garb_hunter1_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@garb_hostage1
+
+[walker@garb_hostage1]
+path_walk = garb_hunter1_walk3
+path_look = garb_hunter1_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+garb_hostages_kill} %=die%
+on_info2 = {+hunter2_retun_to_hideway} walker@return1 %=make_invulnerable%
+
+[walker@return1]
+path_walk = garb_hunter1_in_garb_vagon_walk
+path_look = garb_hunter1_in_garb_vagon_look
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+[meet]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[meet@sit_chair]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = {-garbage_door_opened} %+esc_hunter_dead%, {+garbage_door_opened} %+esc_hunter_dead =survival_garb_report%

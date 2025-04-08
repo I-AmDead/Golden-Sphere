@@ -1,0 +1,19 @@
+[logic]
+active = {=actor_behind_headhunters_shron} ph_sound@anomal, ph_sound@normal
+
+[ph_sound@normal]
+snd = anomal_radio_music1
+looped = true
+;on_info = {-anomal_radio_play} ph_sound@stop
+on_info = {=actor_has_item(anomal_radio)} ph_sound@stop
+
+[ph_sound@anomal]
+snd = anomal_radio_music2
+looped = true
+;on_info = {-anomal_radio_play} ph_sound@stop
+on_info = {=actor_has_item(anomal_radio)} ph_sound@stop
+
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=delme%

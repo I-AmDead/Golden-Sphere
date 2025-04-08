@@ -1,0 +1,20 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker
+
+[mob_walker]
+path_walk = camerer_box_guardian_point2
+path_look = camerer_box_guardian_point2
+braindead = true
+on_actor_dist_le_nvis = 6 | mob_home
+
+[mob_home]
+path_home = camerer_box_guardian_point1
+home_min_radius = 1
+home_max_radius = 3
+braindead = true
+on_actor_dist_le_nvis = 2 | %=camerer_box_guardian_atack%
+on_timer = 10000 | mob_walker
+

@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+
+
+<dialog id="hunter3_dialog1">
+        <dont_has_info>agr_brownie2_dead</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog1_phrase_3</text>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog2">
+        <has_info>agr_brownie2_dead</has_info>
+        <dont_has_info>find_agr_undeground_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog2_phrase_10</text>
+              <next>10</next>
+              <next>11</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog2_phrase_11</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="11">
+                <text>hunter3_dialog2_phrase_12</text>
+            </phrase>
+           <phrase id="12">
+                <text>hunter3_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>hunter3_dialog2_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>hunter3_dialog2_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>hunter3_dialog2_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>hunter3_dialog2_phrase_17</text>
+              <next>17</next>
+            </phrase>
+           <phrase id="17">
+                <text>hunter3_dialog2_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>hunter3_dialog2_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>hunter3_dialog2_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>hunter3_dialog2_phrase_21</text>
+              <next>21</next>
+            </phrase>
+           <phrase id="21">
+                <text>hunter3_dialog2_phrase_22</text>
+	<give_info>find_agr_undeground_task</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog3">
+        <has_info>find_agr_undeground_task</has_info>
+        <dont_has_info>agr_fabrik_electroshema_search</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>hunter3_dialog3_phrase_12</text>
+ 	<give_info>agr_fabrik_electroshema_search</give_info>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog4">
+             <precondition>addon_dialogs.have_agr_fabrik_elshema</precondition>
+               <dont_has_info>agr_fabrik_elshema_done</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog4_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog4_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog4_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog4_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog4_phrase_11</text>
+	<give_info>agr_fabrik_elshema_done</give_info>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog5">
+        <has_info>agr_fabrik_pumps1_on</has_info>
+        <has_info>agr_fabrik_pumps2_on</has_info>
+        <dont_has_info>yuriy_fabrik_reward1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog5_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog5_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog5_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog5_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog5_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog5_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog5_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog5_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog5_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog5_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>hunter3_dialog5_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>hunter3_dialog5_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>hunter3_dialog5_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>hunter3_dialog5_phrase_15</text>
+	<give_info>yuriy_fabrik_reward1</give_info>
+	<action>addon_dialogs.yuriy_reward1</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog6">
+             <precondition>addon_dialogs.have_agr_fabrik_keys</precondition>
+	<dont_has_info>yuriy_fabrik_back_to_seif</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog6_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog6_phrase_3</text>
+	<action>addon_dialogs.agr_seif_keys_out</action>
+	<give_info>yuriy_fabrik_back_to_seif</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog7">
+        <has_info>hunter3_behind_seif</has_info>
+        <dont_has_info>yuriy_got_seif_keys</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog7_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog7_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog7_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog7_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog7_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog7_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog7_phrase_7</text>
+	<give_info>yuriy_got_seif_keys</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog7_1">
+        <has_info>yuriy_seif_vzloman</has_info>
+        <dont_has_info>yuriy_goto_yard</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog7_1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog7_1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog7_1_phrase_3</text>
+ 	<give_info>yuriy_goto_yard</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog8">
+        <has_info>yuriy_behind_lestnitsa</has_info>
+        <dont_has_info>yuriy_goto_search</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog8_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog8_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog8_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog8_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog8_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog8_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog8_phrase_7</text>
+	<action>addon_dialogs.yuriy_reward2</action>
+	<give_info>yuriy_goto_search</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog9">
+        <has_info>hunter3_fabrik_wounded</has_info>
+        <dont_has_info>hunter3_fabrik_healing</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog9_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog9_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+	<precondition>addon_dialogs.have_medkit</precondition>
+                <text>hunter3_dialog9_phrase_3</text>
+	<action>addon_dialogs.medkit_out</action>
+	<give_info>hunter3_fabrik_healing</give_info>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog9_phrase_4</text>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog10">
+        <has_info>hunter3_find_agr_katakombs_entry</has_info>
+        <dont_has_info>hunter3_bring_nii_dynamite</dont_has_info>
+        <dont_has_info>hunter3_bring_esc_dynamite</dont_has_info>
+        <dont_has_info>hunter3_plant_fabrik_dynamite</dont_has_info>
+        <dont_has_info>actor_plant_fabrik_dynamite</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog10_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog10_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog10_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog10_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog10_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog10_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog10_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog10_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog10_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog10_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog10_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>hunter3_dialog10_phrase_12</text>
+              <next>12</next>
+              <!--next>13</next-->
+              <!--next>22</next-->
+            </phrase>
+           <phrase id="12">
+                <text>hunter3_dialog10_phrase_13</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="13">
+        <has_info>sanya_got_esc_dynamite</has_info>
+                <text>hunter3_dialog10_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>hunter3_dialog10_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>hunter3_dialog10_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>hunter3_dialog10_phrase_17</text>
+              <next>17</next>
+            </phrase>
+           <phrase id="17">
+                <text>hunter3_dialog10_phrase_18</text>
+	<give_info>hunter3_bring_nii_dynamite</give_info>
+            </phrase>
+           <phrase id="18">
+                <text>hunter3_dialog10_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>hunter3_dialog10_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>hunter3_dialog10_phrase_21</text>
+              <next>21</next>
+            </phrase>
+           <phrase id="21">
+                <text>hunter3_dialog10_phrase_22</text>
+	<give_info>hunter3_bring_esc_dynamite</give_info>
+            </phrase>
+
+           <phrase id="22">
+             <precondition>addon_dialogs.have_dynamite_pack</precondition>
+                <text>hunter3_dialog10_phrase_23</text>
+              <next>23</next>
+            </phrase>
+           <phrase id="23">
+                <text>hunter3_dialog10_phrase_24</text>
+              <next>24</next>
+            </phrase>
+           <phrase id="24">
+                <text>hunter3_dialog10_phrase_25</text>
+              <next>25</next>
+            </phrase>
+           <phrase id="25">
+                <text>hunter3_dialog10_phrase_26</text>
+              <next>26</next>
+              <!--next>27</next-->
+            </phrase>
+           <phrase id="26">
+                <text>hunter3_dialog10_phrase_27</text>
+              <next>28</next>
+            </phrase>
+           <phrase id="27">
+                <text>hunter3_dialog10_phrase_28</text>
+	<give_info>hunter3_plant_fabrik_dynamite</give_info>
+            </phrase>
+           <phrase id="28">
+                <text>hunter3_dialog10_phrase_29</text>
+              <next>29</next>
+            </phrase>
+           <phrase id="29">
+                <text>hunter3_dialog10_phrase_30</text>
+	<give_info>actor_plant_fabrik_dynamite</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog11">
+        <has_info>hunter3_behind_nii_entry</has_info>
+        <dont_has_info>hunter3_suits_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog11_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog11_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog11_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog11_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog11_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog11_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog11_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog11_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog11_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog11_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog11_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>hunter3_dialog11_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>hunter3_dialog11_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>hunter3_dialog11_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>hunter3_dialog11_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>hunter3_dialog11_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>hunter3_dialog11_phrase_17</text>
+	<give_info>hunter3_suits_task</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="redrik_dialog1">
+        <dont_has_info>redrik_warning1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>redrik_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>redrik_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>redrik_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>redrik_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>redrik_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>redrik_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>redrik_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>redrik_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>redrik_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>redrik_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>redrik_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>redrik_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>redrik_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>redrik_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>redrik_dialog1_phrase_15</text>
+	<give_info>redrik_warning1</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog12">
+        <has_info>redrik_warning1</has_info>
+        <dont_has_info>yuriy_germetic_suit_done</dont_has_info>
+             <precondition>addon_dialogs.two_germetic_suits_finded</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog12_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog12_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog12_phrase_3</text>
+	<action>addon_dialogs.ecolog_suit_out</action>
+	<give_info>yuriy_germetic_suit_done</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog13">
+        <has_info>agr_polkovnik_suicide</has_info>
+        <has_info>agr_body14_info</has_info>
+        <dont_has_info>yuriy_back_to_agrund_blocks</dont_has_info>
+             <precondition>addon_dialogs.have_dynamite_pack</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog13_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog13_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog13_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog13_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog13_phrase_5</text>
+ 	<give_info>yuriy_back_to_agrund_blocks</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="agr_polkovnik_dialog">
+             <precondition>addon_dialogs.two_agr_polkovnik_pogons_finded</precondition>
+	<dont_has_info>agr_polkovnik_suicide</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>agr_polkovnik_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>agr_polkovnik_dialog_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>agr_polkovnik_dialog_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>agr_polkovnik_dialog_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>agr_polkovnik_dialog_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>agr_polkovnik_dialog_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>agr_polkovnik_dialog_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>agr_polkovnik_dialog_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>agr_polkovnik_dialog_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>agr_polkovnik_dialog_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>agr_polkovnik_dialog_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>agr_polkovnik_dialog_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>agr_polkovnik_dialog_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>agr_polkovnik_dialog_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>agr_polkovnik_dialog_phrase_15</text>
+	<action>addon_dialogs.agr_polkovnik_pogons_out</action>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>agr_polkovnik_dialog_phrase_16</text>
+	<give_info>agr_polkovnik_suicide</give_info>
+
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="agr_polkovnik_dialog0">
+             <precondition>addon_dialogs.two_agr_polkovnik_pogons_not_finded</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>agr_polkovnik_dialog0_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>agr_polkovnik_dialog0_phrase_2</text>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog14">
+        <has_info>spawn_agrund_hunter</has_info>
+        <dont_has_info>agrund_hunter_info1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog14_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog14_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog14_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog14_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog14_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog14_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog14_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog14_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog14_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog14_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog14_phrase_11</text>
+	<give_info>agrund_hunter_info1</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog15">
+        <has_info>agrund_hunter_behind_door</has_info>
+        <dont_has_info>agrund_door_opened</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog15_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog15_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog15_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog15_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog15_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog15_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog15_phrase_7</text>
+             </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog16">
+        <has_info>agrund_hunter_behind_ventilator</has_info>
+        <dont_has_info>agrund_hunter_info2</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog16_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog16_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog16_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog16_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog16_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog16_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog16_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>hunter3_dialog16_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>hunter3_dialog16_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>hunter3_dialog16_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>hunter3_dialog16_phrase_11</text>
+	<give_info>agrund_hunter_info2</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="hunter3_dialog17">
+        <has_info>agrund_hunter_in_upper_room</has_info>
+        <dont_has_info>agrund_hunter_info3</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>hunter3_dialog17_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>hunter3_dialog17_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>hunter3_dialog17_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>hunter3_dialog17_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>hunter3_dialog17_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>hunter3_dialog17_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>hunter3_dialog17_phrase_7</text>
+	<give_info>agrund_hunter_info3</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="agrund_redrik_dialog1">
+        <dont_has_info>agrund_redrik_info1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>agrund_redrik_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>agrund_redrik_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>agrund_redrik_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>agrund_redrik_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>agrund_redrik_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>agrund_redrik_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>agrund_redrik_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>agrund_redrik_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>agrund_redrik_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>agrund_redrik_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>agrund_redrik_dialog1_phrase_11</text>
+	<give_info>agrund_redrik_info1</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="agrund_redrik_dialog2">
+        <has_info>agrund_flying_acid_redrik_hit</has_info>
+        <dont_has_info>agrund_redrik_info2</dont_has_info>
+        <dont_has_info>agrund_redrik_vakcin_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>agrund_redrik_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>agrund_redrik_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>agrund_redrik_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>agrund_redrik_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>agrund_redrik_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>agrund_redrik_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>agrund_redrik_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>agrund_redrik_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>agrund_redrik_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>agrund_redrik_dialog2_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>agrund_redrik_dialog2_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>agrund_redrik_dialog2_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>agrund_redrik_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>agrund_redrik_dialog2_phrase_14</text>
+              <next>14</next>
+              <next>15</next>
+            </phrase>
+           <phrase id="14">
+                <text>agrund_redrik_dialog2_phrase_15</text>
+	<give_info>agrund_redrik_vakcin_info</give_info>
+            </phrase>
+           <phrase id="15">
+                <text>agrund_redrik_dialog2_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>agrund_redrik_dialog2_phrase_17</text>
+              <next>17</next>
+            </phrase>
+           <phrase id="17">
+                <text>agrund_redrik_dialog2_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>agrund_redrik_dialog2_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>agrund_redrik_dialog2_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>agrund_redrik_dialog2_phrase_21</text>
+              <next>21</next>
+            </phrase>
+           <phrase id="21">
+                <text>agrund_redrik_dialog2_phrase_22</text>
+	<give_info>agrund_redrik_info2</give_info>
+	<action>addon_dialogs.spawn_agrund_motor_table</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="redrik_dialog2">
+        <has_info>spawn_agr_redrik2</has_info>
+        <dont_has_info>agr_redrik_goto_vagon</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>redrik_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>redrik_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>redrik_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>redrik_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>redrik_dialog2_phrase_5</text>
+	<give_info>agr_redrik_goto_vagon</give_info>
+	<give_info>agrund_redrik_vakcin_info</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="redrik_dialog3">
+        <has_info>agr_redrik_in_vagon</has_info>
+        <dont_has_info>redrik_about_nii_scientists_info</dont_has_info>
+        <dont_has_info>agr_nii_ecolog_goto_vagon</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>redrik_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>redrik_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>redrik_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>redrik_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>redrik_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>redrik_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>redrik_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>redrik_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>redrik_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>redrik_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>redrik_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>redrik_dialog3_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>redrik_dialog3_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>redrik_dialog3_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>redrik_dialog3_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>redrik_dialog3_phrase_16</text>
+              <next>16</next>
+              <next>16_1</next>
+            </phrase>
+           <phrase id="16">
+        <dont_has_info>af_nii_art77_destroyed</dont_has_info>
+                <text>redrik_dialog3_phrase_17</text>
+              <next>17</next>
+            </phrase>
+           <phrase id="16_1">
+        <dont_has_info>af_nii_art77_destroyed</dont_has_info>
+                <text>redrik_dialog3_phrase_17</text>
+            </phrase>
+           <phrase id="17">
+                <text>redrik_dialog3_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>redrik_dialog3_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>redrik_dialog3_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>redrik_dialog3_phrase_21</text>
+	<give_info>redrik_about_nii_scientists_info</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="agr_nii_ecolog_dialog1">
+        <dont_has_info>agr_nii_ecolog_goto_yard</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>agr_nii_ecolog_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>agr_nii_ecolog_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>agr_nii_ecolog_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>agr_nii_ecolog_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>agr_nii_ecolog_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>agr_nii_ecolog_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>agr_nii_ecolog_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>agr_nii_ecolog_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>agr_nii_ecolog_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>agr_nii_ecolog_dialog1_phrase_10</text>
+	<give_info>agr_nii_ecolog_goto_yard</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="agr_nii_ecolog_dialog2">
+        <has_info>agr_nii_ecolog_bloodsucker1_dead</has_info>
+        <dont_has_info>agr_nii_ecolog_goto_vagon</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>agr_nii_ecolog_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>agr_nii_ecolog_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>agr_nii_ecolog_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>agr_nii_ecolog_dialog2_phrase_4</text>
+	<give_info>agr_nii_ecolog_goto_vagon</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="redrik_dialog4">
+        <has_info>agr_nii_ecolog_in_vagon</has_info>
+        <dont_has_info>agr_nii_ecolog_reward</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>redrik_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>redrik_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>redrik_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>redrik_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>redrik_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>redrik_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>redrik_dialog4_phrase_7</text>
+	<action>addon_dialogs.agr_nii_ecolog_reward</action>
+ 	<give_info>agr_nii_ecolog_reward</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+</game_dialogs>
+
+
+
+
+

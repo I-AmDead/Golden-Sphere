@@ -1,0 +1,17 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+hit_on_bone = 1 | %=play_particle_on_path(anomaly2\gravi_anomaly_00:cristall_receiver1_point:70) =play_particle_on_path(explosions\group_items\expl_10_sparks:cristall_receiver1_point:70)%
+hit_on_bone = 2 | %=play_particle_on_path(anomaly2\gravi_anomaly_00:cristall_receiver1_point:70) =play_particle_on_path(explosions\group_items\expl_10_sparks:cristall_receiver1_point:70)%
+on_info = {-cristall_receiver1_shield_off} ph_idle@2
+
+[ph_idle@2]
+hit_on_bone = 1 | %=release_crictall_receiver1 +cristall_receiver1_destroyed%
+hit_on_bone = 2 | %=release_crictall_receiver1 +cristall_receiver1_destroyed%
+
+
+
+[ph_on_death]
+on_info = %+cristall_receiver1_destroyed%
+

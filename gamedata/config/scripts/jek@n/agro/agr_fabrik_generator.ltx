@@ -1,0 +1,16 @@
+[logic]
+active = ph_sound
+
+[ph_button]
+anim_blend  = true
+anim        = idle
+tooltip     = generator_off
+on_press    = %+dar_receiver_shield_off =send_tip(test_tip:default)% nil
+
+[ph_idle]
+tips = generator_off
+on_use    = %+agr_receiver_shield_off% nil
+
+[ph_sound]
+snd = horror_radio_voise_1
+looped = true

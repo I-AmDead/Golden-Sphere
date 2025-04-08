@@ -1,0 +1,747 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+<!--ros_rescuer1-->
+	<specific_character id="ros_rescuer1" team_default = "1">
+		<name>Виктор</name>
+		<icon>ui_npc_u_stalker_militari_antigas_2</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>ros_rescuer1</class>
+		<community>hunter</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="2000" max="30000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\militari\stalker_militari_antigas_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_fort500 \n	
+			ammo_12x76_zhekan  \n
+			device_torch \n
+			wpn_binoc \n
+			mre \n
+			flyaga_full \n
+			antirad \n
+			medkit_army \n
+			bandage \n
+			sigarets \n
+		</supplies>
+		<start_dialog>ros_rescuer1_dialog1</start_dialog>
+		<actor_dialog>ros_rescuer1_dialog2</actor_dialog>
+
+		<actor_dialog>ros_rescuer1_dialog3</actor_dialog>
+
+	</specific_character>
+
+<!--ros_rescuer2-->
+	<specific_character id="ros_rescuer2" team_default = "1">
+		<name>Константин</name>
+		<icon>ui_npc_u_stalker_militari_1</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>ros_rescuer2</class>
+		<community>hunter</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="2000" max="30000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\militari\stalker_militari_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_svd \n	
+			ammo_7.62x54_ap  \n
+			device_torch \n
+			mre = 2 \n
+			flyaga_full \n
+			antirad \n
+			medkit_army \n
+			medic_bag \n
+			dix \n
+		</supplies>
+
+	</specific_character>
+
+<!--ros_rescuer3-->
+	<specific_character id="ros_rescuer3" team_default = "1">
+		<name>Леонид</name>
+		<icon>ui_npc_u_stalker_militari_1</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>ros_rescuer3</class>
+		<community>hunter</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="2000" max="30000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\militari\stalker_militari_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_aks74 = 1, scope, launcher, silencer \n	
+			ammo_5.45x39_ap \n
+			device_torch \n
+			energy_drink \n
+			irp-b \n
+			ibuprophen \n
+			medkomplekt \n
+			lighter \n
+			mikstura \n
+			armor_remkit \n
+			weapon_remkit \n
+		</supplies>
+
+	</specific_character>
+
+<!--ros_suslik-->
+	<specific_character id="ros_suslik" team_default = "1">
+		<name>Суслик</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>ros_suslik</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="2000" max="30000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>ros_suslik_dialog1</actor_dialog>
+
+	</specific_character>
+
+<!--ros_dym-->
+	<specific_character id="ros_dym" team_default = "1">
+		<name>Дым</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>ros_dym</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="2000" max="30000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--ros_dead_hunter-->
+	<specific_character id="ros_dead_hunter" team_default = "1">
+		<name>Михаил</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>ros_dead_hunter</class>
+		<community>hunter</community>
+		<!--community>stalker</community-->
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_2_gas</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_tt \n
+		</supplies>
+
+	</specific_character>
+
+
+<!--hunter_6-->
+	<specific_character id="hunter_6" team_default = "1">
+		<name>Григорий</name>
+		<icon>ui_npc_u_stalker_2_usi</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_6</class>
+		<community>hunter</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="1" max="1900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_2_usi</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_cz75 \n			
+                                                ammo_9x19_fmj \n
+                                                vodka = 5 \n
+                                                ros_gate_key \n
+                                                ros_hunters_flash \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<start_dialog>hunter_6_dialog1</start_dialog>
+		<actor_dialog>hunter_6_dialog2</actor_dialog>
+		<actor_dialog>hunter_6_dialog3</actor_dialog>
+		<actor_dialog>hunter_6_dialog4</actor_dialog>
+		<actor_dialog>hunter_6_after_master_dialog</actor_dialog>
+		<actor_dialog>hunter_6_after_master_dialog2</actor_dialog>
+		<actor_dialog>hunter_6_after_master_dialog3</actor_dialog>
+
+		<actor_dialog>hunter_6_dialog5</actor_dialog>
+
+		<actor_dialog>hunter_6_dialog6</actor_dialog>
+		<actor_dialog>hunter_6_dialog7</actor_dialog>
+
+		<actor_dialog>hunter6_art_cheat_dialog</actor_dialog>
+
+	</specific_character>
+
+
+
+
+
+<!--bar_lost_man-->
+	<specific_character id="bar_lost_man" team_default = "1">
+		<name>Сергей Михайлов</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_lost_man</class>
+		<community>stalker</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="1" max="10" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<panic_treshold>0</panic_treshold>
+
+		<visual>actors\new_stalker1</visual>
+		<supplies>
+			[spawn] \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>bar_lost_man_dialog1</actor_dialog>
+
+	</specific_character>
+
+<!--bar_abdul-->
+	<specific_character id="bar_abdul" team_default = "1">
+		<name>Абдуль</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_abdul</class>
+		<community>stalker</community>
+
+		<rank>696</rank>
+		<reputation>0</reputation>
+		<money min="1" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<panic_treshold>0</panic_treshold>
+
+		<visual>actors\pmc3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_sks = 1, scope \n
+			ammo_7.62x39_ap \n
+			wpn_gsh \n
+			ammo_9x19_fmj \n
+			device_torch \n
+			wpn_binoc \n
+		</supplies>
+		<actor_dialog>abdul_anomal_radio_dialog</actor_dialog>
+
+		<actor_dialog>abdul_wishmaster_dialog</actor_dialog>
+
+		<actor_dialog>bar_abdul_dialog1</actor_dialog>
+		<actor_dialog>bar_abdul_dialog10</actor_dialog>
+		<actor_dialog>bar_abdul_dialog2</actor_dialog>
+		<actor_dialog>bar_abdul_dialog3</actor_dialog>
+		<actor_dialog>bar_abdul_dialog4</actor_dialog>
+		<actor_dialog>bar_abdul_dialog5</actor_dialog>
+		<actor_dialog>bar_abdul_dialog6</actor_dialog>
+		<actor_dialog>bar_abdul_dialog7</actor_dialog>
+
+		<actor_dialog>bar_abdul_dialog8</actor_dialog>
+		<actor_dialog>bar_abdul_dialog9</actor_dialog>
+
+	</specific_character>
+
+<!--bar_scientist-->
+	<specific_character id="bar_scientist" team_default = "1">
+		<name>Алан</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_scientist</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\hunter_5</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ppsh \n
+			ammo_7.62x25_p \n
+			wpn_binoc \n
+			device_torch \n
+			antirad = 10 \n	
+			matches \n
+			dix \n
+			yod = 5 \n
+			medkit = 2 \n
+			
+		</supplies>
+		<start_dialog>bar_scientist_dialog1</start_dialog>
+		<actor_dialog>bar_scientist_dialog2</actor_dialog>
+
+		<actor_dialog>bar_scientist_dialog3</actor_dialog>
+		<actor_dialog>bar_scientist_dialog4</actor_dialog>
+		<actor_dialog>bar_scientist_dialog5</actor_dialog>
+		<actor_dialog>bar_scientist_dialog6</actor_dialog>
+
+		<actor_dialog>bar_scientist_art_cheat_dialog</actor_dialog>
+
+	</specific_character>
+
+<!--bar_tehnik-->
+	<specific_character id="bar_tehnik" team_default = "1">
+		<name>Павел</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_tehnik</class>
+		<community>stalker_stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\nauchniy\nauchniy_1</visual>
+		<supplies>
+			[spawn] \n
+                                                bar_bunkerdoor_key \n			
+		</supplies>
+
+	</specific_character>
+
+<!--bar_dead_soldier4-->
+	<specific_character id="bar_dead_soldier4" team_default = "1">
+		<name>Рядовой Мазур</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_dead_soldier4</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--bar_dead_soldier3-->
+	<specific_character id="bar_dead_soldier3" team_default = "1">
+		<name>Рядовой Никитин</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_dead_soldier3</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+		</supplies>
+	</specific_character>
+
+<!--bar_dead_soldier2-->
+	<specific_character id="bar_dead_soldier2" team_default = "1">
+		<name>Рядовой Ксёнз</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_dead_soldier2</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+		</supplies>
+	</specific_character>
+
+<!--bar_dead_soldier1-->
+	<specific_character id="bar_dead_soldier1" team_default = "1">
+		<name>Сержант Вилкул</name>
+		<icon>ui_npc_u_soldier_spetsnaz</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_dead_soldier1</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_spetsnaz</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--bar_body1-->
+	<specific_character id="bar_body1" team_default = "1">
+		<name>Дэн Ракета</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_body1</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			ibuprophen = 4 \n
+			af_top \n	
+			ammo_samopal \n
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--bar_body2-->
+	<specific_character id="bar_body2" team_default = "1">
+		<name>Зизон</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_body2</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--hunter_5-->
+	<specific_character id="hunter_5" team_default = "1">
+		<name>Владимир</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_5</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\nauchniy\nauchniy_1</visual>
+		<!--visual>actors\hunter_5</visual-->
+		<supplies>
+			[spawn] \n
+                                                wpn_tt \n			
+                                                ammo_7.62x25_ps \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>hunter_5_dialog1</start_dialog>
+		<actor_dialog>hunter_5_dialog2</actor_dialog>
+		<actor_dialog>hunter_5_dialog3</actor_dialog>
+		<actor_dialog>hunter_5_dialog4</actor_dialog>
+
+	</specific_character>
+
+
+
+
+<!--bar_bunkerzombie_boss-->
+	<specific_character id="bar_bunkerzombie_boss" team_default = "1">
+		<name>Дездор</name>
+		<icon>ui_npc_u_stalker_zombie3</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie_boss</class>
+		<community>zombied</community>
+
+		<rank>596</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi\stalker_zombie3</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_tt \n
+                                                ammo_7.62x25_ps \n
+                                                bar_bunkerzombie_pda \n
+                                                casette_10 \n
+		</supplies>
+	</specific_character>
+
+<!--bar_bunkerzombie1-->
+	<specific_character id="bar_bunkerzombie1" team_default = "1">
+		<name>Сталбар</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie1</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm2</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_ak74u \n
+                                                ammo_5.45x39_fmj \n
+		</supplies>
+	</specific_character>
+
+<!--bar_bunkerzombie2-->
+	<specific_character id="bar_bunkerzombie2" team_default = "1">
+		<name>Фаберже</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie2</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm1</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_uzi \n
+                                                ammo_9x19_fmj \n
+		</supplies>
+	</specific_character>
+
+
+<!--bar_bunkerzombie3-->
+	<specific_character id="bar_bunkerzombie3" team_default = "1">
+		<name>К.Д.</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie3</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm1</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_uzi \n
+                                                ammo_9x19_fmj \n
+		</supplies>
+	</specific_character>
+
+<!--bar_bunkerzombie4-->
+	<specific_character id="bar_bunkerzombie4" team_default = "1">
+		<name>Камикадзе</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie4</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm1</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_ak12 \n
+                                                ammo_5.45x39_fmj \n
+		</supplies>
+	</specific_character>
+
+<!--bar_bunkerzombie5-->
+	<specific_character id="bar_bunkerzombie5" team_default = "1">
+		<name>Просто Юра</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie5</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm1</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_pp2000 \n
+                                                ammo_9x19_pbp  \n
+		</supplies>
+	</specific_character>
+
+<!--bar_bunkerzombie6-->
+	<specific_character id="bar_bunkerzombie6" team_default = "1">
+		<name>Абрам</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie6</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm1</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_aks74 \n
+                                                ammo_5.45x39_fmj \n
+		</supplies>
+	</specific_character>
+
+<!--bar_bunkerzombie7-->
+	<specific_character id="bar_bunkerzombie7" team_default = "1">
+		<name>Филон</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>bar_bunkerzombie7</class>
+		<community>zombied</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="900" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi_norm1</visual>
+		<supplies>
+			[spawn] \n
+                                                wpn_bm16_full \n
+                                                ammo_12x70_buck \n
+		</supplies>
+	</specific_character>
+	
+</xml>

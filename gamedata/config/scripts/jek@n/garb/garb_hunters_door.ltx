@@ -1,0 +1,74 @@
+[logic]
+active = ph_door@locked
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@open
+on_info = {+dar_abdul_off} ph_door@open_fixed2
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@close
+on_info = {+dar_abdul_off} ph_door@open_fixed
+
+
+[ph_door@locked]
+closed = true
+locked = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = garb_hunters_door_locked
+on_info = {+garb_hunters_door_unlocked} ph_door@open_fixed
+
+[ph_door@open_fixed]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@open_fixed
+on_info = {+hunter2_deadly_wind_info} ph_door@close
+
+[ph_door@open_fixed2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@open_fixed
+on_info = {+hunter2_retun_to_hideway} ph_door@close2
+
+[ph_door@close2]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@open2
+
+
+[ph_door@open2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@close2
+
+[ph_door@free]
+locked = false
+closed = true
+no_force = true
+on_use = ph_door@free
+on_info = {+hunter2_deadly_wind_info} ph_door@close
+

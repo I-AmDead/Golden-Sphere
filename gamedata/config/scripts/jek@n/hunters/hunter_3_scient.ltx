@@ -1,0 +1,75 @@
+; Юрий, Агропром
+
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+on_death = death
+threshold = threshold@hunter3_threshold
+
+[walker@start]
+path_walk = agr_hunter_walk_nii2
+path_look = agr_hunter_look_nii2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 1 | walker@nii1 %=make_invulnerable%
+
+
+[walker@nii1]
+path_walk = agr_hunter_walk_nii2
+path_look = agr_hunter_look_nii2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000 | walker@nii2
+
+[walker@nii2]
+path_walk = agr_hunter_walk_nii3
+path_look = agr_hunter_look_nii3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@nii3
+
+; Приперлися к первой казарме и смотрим на порог:
+[walker@nii3]
+path_walk = agr_hunter_walk_nii3
+path_look = agr_hunter_look_nii3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yuriy_back_to_agrund_blocks} walker@blocks1
+
+[walker@blocks1]
+path_walk = agr_hunter_walk_fabric444
+path_look = agr_hunter_look_fabric444
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+meet = no_meet
+
+
+
+
+
+
+
+
+
+
+
+[threshold@hunter3_threshold]
+max_ignore_distance = 3
+;ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+agr_hunter_dead%

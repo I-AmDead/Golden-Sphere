@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = sr_idle@2 %=nii_top_zone_out =hit_obj(37:bip01_spine:0:700) =play_snd(ambient\cold_wind_12) =run_cam_effector(shell_shock) =run_postprocess(controller_hit) =play_snd_from_obj(8256:characters_voice\human_01\stalker\help\wounded_heavy\help_2) =play_snd_from_obj(8258:characters_voice\human_01\military\help\not_wounded\help_2) =play_snd_from_obj(8259:characters_voice\human_01\military\help\not_wounded\help_3)%
+on_info = {+af_nii_art77_destroyed} nil
+
+[sr_idle@2]
+on_timer = 200 | sr_idle@1 %=agr_nii_obj77zone_dollhelp_tip%
+on_info = {+af_nii_art77_destroyed} nil
+
+

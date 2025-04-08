@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<biboran_list4>	
+	<book_text x="200" y="85" width="550" height="512" stretch="1">
+		<texture >ui\books\biboran_list4</texture>
+	</book_text>
+
+
+	<btn_1 x="180" y="550" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Назад</text>
+	</btn_1>
+	<btn_2 x="570" y="550" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Далее</text>
+	</btn_2>
+
+	<btn_quit x="400" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>	</text>
+	</btn_quit>
+
+
+</biboran_list4>
+

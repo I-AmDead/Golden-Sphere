@@ -1,0 +1,3643 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+		<string id="barman_document_description">
+		<text>Содержит карты, фотографии и дискету</text>
+	</string>
+	<string id="barman_document">
+		<text>Документы бармена</text>
+	</string>
+	<string id="item test1">
+		<text>Это тестовая строка для вещмешка.</text>
+	</string>
+	<string id="item test2">
+		<text>Это ещё одна тестовая строка для вещмешка.</text>
+	</string>
+	<string id="item_case_esc_desc">
+		<text>Кейс с документами. Сделан из огнеупорного материала.</text>
+	</string>
+	<string id="item_decoder_desc">
+		<text>Нечто вроде мощной электронной отмычки. Похоже, что она создавалась с целью взломать какой-то специфический электронный замок. Как ни странно, конструкция не подразумевает универсальности - она создавалась для конкретного замка и не способна взламывать какие-либо другие коды.</text>
+	</string>
+	<string id="item_decoder_name">
+		<text>Декодер</text>
+	</string>
+	<string id="item_detector_yantar_desc">
+		<text>Устройство для замеров пси-излучения.</text>
+	</string>
+	<string id="item_detector_yantar_name">
+		<text>Сенсор ПП-4а</text>
+	</string>
+	<string id="item_doc_x16_desc">
+		<text>Полиэтиленовый файл с документами. Без учёной степени по биологии сложно что-то в них понять.</text>
+	</string>
+	<string id="item_doc_x16_name">
+		<text>Документы из лаборатории Х-16</text>
+	</string>
+	<string id="item_doc_x18_desc">
+		<text>Толстая стопка научных бумаг. Сплошные термины, формулы и диаграммы.</text>
+	</string>
+	<string id="item_doc_x18p1_name">
+		<text>Документы из Х-18, часть 1</text>
+	</string>
+	<string id="item_doc_x18p2_name">
+		<text>Документы из Х-18, часть 2</text>
+	</string>
+	<string id="item_doc_x18p3_name">
+		<text>Документы из Х-18, часть 3</text>
+	</string>
+	<string id="item_doc_x18p4_name">
+		<text>Документы из Х-18, часть 4</text>
+	</string>
+	<string id="item_doc_x18p5_name">
+		<text>Документы из Х-18, часть 5</text>
+	</string>
+	<string id="item_docs_hiden_pri_desc">
+		<text>Потёртая рукопись в кожаной обложке. Написана самим Стрелком. Судя по заглавиям, в ней раскрываются некоторые загадки Зоны.</text>
+	</string>
+	<string id="item_docs_hiden_pri_name">
+		<text>Документы из Припяти</text>
+	</string>
+	<string id="item_dynamite_esc_desc">
+		<text>Тяжёлый деревянный ящик с надписями «Взрывоопасно» на нескольких языках.</text>
+	</string>
+	<string id="item_dynamite_esc_name">
+		<text>Ящик с динамитом</text>
+	</string>
+	<string id="item_flash_crazy_mil_desc">
+		<text>Флэш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_crazy_mil_name">
+		<text>Флэшка сумасшедшего</text>
+	</string>
+	<string id="item_flash_eco_rost_desc">
+		<text>Флэш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_eco_rost_name">
+		<text>Флэшка профессора Круглова</text>
+	</string>
+	<string id="item_flash_esc_desc">
+		<text>Флэш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_esc_name">
+		<text>Флэшка пленного</text>
+	</string>
+	<string id="item_flash_gslinger_agro_desc">
+		<text>Флэш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_gslinger_agro_name">
+		<text>Флэшка Стрелка</text>
+	</string>
+	<string id="item_key_x18_desc">
+		<text>Электронный ключ от подземной лаборатории Х-18.</text>
+	</string>
+	<string id="item_key_x18_name">
+		<text>Ключ Борова</text>
+	</string>
+	<string id="item_krot_flash">
+		<text>Флэшка Крота</text>
+	</string>
+	<string id="item_PDA_lucky_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_PDA_lucky_name">
+		<text>КПК Счастливчика</text>
+	</string>
+	<string id="item_PDA_tiran_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_PDA_tiran_name">
+		<text>КПК Тирана</text>
+	</string>
+	<string id="item_quest_case_02_desc">
+		<text>Кейс с документами. Сделан из огнеупорного материала.</text>
+	</string>
+	<string id="item_quest_case_02_name">
+		<text>Документы военных</text>
+	</string>
+	<string id="item_case_esc_name">
+		<text>Документы с блокпоста</text>
+	</string>
+	<string id="yan_bad_psy_helmet_desc">
+		<text>Ненастроенный прототип, разработанный учёными для защиты от ПСИ-излучения.</text>
+	</string>
+	<string id="yan_bad_psy_helmet_name">
+		<text>Ненастроенный пси-шлем</text>
+	</string>
+	<string id="yan_good_psy_helmet_desc">
+		<text>Настроенный прототип, разработанный учёными для защиты от ПСИ-излучения.</text>
+	</string>
+	<string id="yan_good_psy_helmet_name">
+		<text>Настроенный пси-шлем</text>
+	</string>
+	<string id="amk_metka">
+		<text>GPS-маячок</text>
+	</string>
+	<string id="amk_metka_s">
+		<text>GPS-маячок</text>
+	</string>
+	<string id="enc_amk_metka">
+		<text>Небольшая электронная хреновина. Служит для фиксации координат на карте в виде метки с произвольным текстом. Имеет приемлемую цену за счёт китайского производителя. Чтобы поставить метку в точке своего нахождения, нужно выбросить маячок из инвентаря и ввести желаемый текст.</text>
+	</string>
+	<string id="treasure_detector_name">
+		<text>Детекторы</text>
+	</string>
+	<string id="treasure_abundant_artefact_name">
+		<text>Часто встречающиеся артефакты</text>
+	</string>
+	<string id="treasure_scarce_artefact_name">
+		<text>Редкие артефакты</text>
+	</string>
+	<string id="treasure_rarity_artefact_name">
+		<text>Редчайшие артефакты</text>
+	</string>
+	<string id="treasure_medecine_name">
+		<text>Медикаменты</text>
+	</string>
+	<string id="treasure_grenade_name">
+		<text>Гранаты</text>
+	</string>
+	<string id="treasure_wpngrenade_name">
+		<text>Гранаты для подствольника</text>
+	</string>
+	<string id="treasure_drink_name">
+		<text>Напитки</text>
+	</string>
+	<string id="treasure_ammo_name">
+		<text>Патроны</text>
+	</string>
+	<string id="treasure_mutant_name">
+		<text>Части монстров</text>
+	</string>
+	<string id="treasure_addon_name">
+		<text>Аддоны к оружию</text>
+	</string>
+	<string id="treasure_eat_name">
+		<text>Еда</text>
+	</string>
+	<string id="item_fedka_bloknot_name">
+		<text>Дневник Федьки</text>
+	</string>
+	<string id="item_fedka_bloknot_desc">
+		<text>Небольшой блокнот в кожанной обложке. Половина записей сильно пострадала от влаги, но на последних страницах можно разобрать следующее: \n Запись 1. \n "Почему бы не подзаработать таким путем, который предложил мне Вован? Сидор этот - барыга и жмот по жизни, он все равно после такого дела быстро восстановит свой бизнес. А я без лишних проблем раздобуду себе неплохую снарягу, да еще и деньжат подзаработаю, - Вован сказал, что возьмет всю добычу по неплохой цене. Надо бы помозговать на тем, как бы это все провернуть без риска для своей жопы." \n Запись2. \n "Так, кажеться есть идея. Надо бы приобщить к моему делу этого простака Изгоя. Все равно с ним никто кроме меня в лагере не дружит, все только насмехаються над его нерасторопностью. А мне это может стать подспорьем..." \n Запись3, \n "Сегодня окончательно все продумал. Если удасться выкурить Сидора и обнести его бункер, то сразу буду драпать в Темную долину. А там примкну к бандитам и хрен кто из сталкерской братии меня найдет, да и Вован подсуетиться, если что. Этого лоха Изгоя подставлю вместо себя - пускай все подумают, что он мой сообщник, и вымещивают злобу на нем!"</text>
+	</string>
+	<string id="item_medalyon2">
+		<text>Металлический жетон на цепочке.</text>
+	</string>
+	<string id="item_medalyon2_desc">
+		<text>Металлический жетон на цепочке. На жетоне выгравирована цифра "2".</text>
+	</string>
+	<string id="item_medalyon">
+		<text>Металлический жетон на цепочке.</text>
+	</string>
+	<string id="item_medalyon_desc">
+		<text>Металлический жетон на цепочке. На жетоне выгравирована цифра "3".</text>
+	</string>
+	<string id="item_fleshka_map_desc">
+		<text>Флешка, принадлежавшая неизвестному, убитому на Кордоне. Данные из нее можно скачать в свой ПДА.</text>
+	</string>
+	<string id="item_fleshka_map">
+		<text>Флешка неизвестного.</text>
+	</string>
+	<string id="item_zapiska_01_desc">
+		<text>Третий, мы оставляем эти вещи тебе. Ждать тебя у нас нет времени, поэтому мы направляемся на Агропром - там один сталкер по кличке Махновец подскажет нам где может находиться логово Стрелка. Если ты ранен или у тебя проблемы - оставайся на Кордоне и попытайся связаться с агентом, он в данный момент находиться в Баре и в курсе всех дел. Удачи. \n Водяной.</text>
+	</string>
+	<string id="item_zapiska_02_desc">
+		<text>Второй, отправляйся на Бар и проследи за теми бездарями, которых мы наняли для ликвидации агента. Если что - подстрахуешь их. Когда справишься сразу же не задерживаясь отправляйся на Армейские склады, в наш лагерь. Клиент должен скоро подойти. Удачи. \n Водяной.</text>
+	</string>
+	<string id="vovan_pda_desc">
+		<text>Прибор в крайне плохом состоянии: экран раздавлен, клавиатура стерта, задняя крышка отсутствует. При попытке включить девайс ничего не происходит.</text>
+	</string>
+	<string id="vovan_pda">
+		<text>ПДА Вована</text>
+	</string>
+	<string id="sidor_habar_desc">
+		<text>Большой рюкзак, плотно набитый разной утварью: патронами, аптечками, консервами и другими вещами. Все это принадлежит торговцу.</text>
+	</string>
+	<string id="sidor_habar">
+		<text>Хабар Сидоровича</text>
+	</string>
+	<string id="basta_chasy">
+		<text>Часы Басты</text>
+	</string>
+	<string id="basta_chasy_desc">
+		<text>Наручные часы, принадлежавшие сталкеру по кличке Баста.</text>
+	</string>
+	<string id="item_fleshka2_desc">
+		<text>Флешка, принадлежавшая неизвестному снайперу. Данные из нее можно скачать в свой ПДА.</text>
+	</string>
+	<string id="item_fleshka2">
+		<text>Флешка снайпера.</text>
+	</string>
+	<string id="cvetok">
+		<text>"Цветок папоротника"</text>
+	</string>
+	<string id="cvetok_desc">
+		<text>Очередное творение Зоны - цветок неизвестного науке вида. Подобного рода образцом могут быть заинтересованы ученые. Свойства абсолютно не изучены, следует быть осторожным в обращении.</text>
+	</string>
+	<string id="item_rukzak">
+		<text>Переносной рюкзак из плотной непромокаемой ткани. Его можно оборудовать как персональный тайник.</text>
+	</string>
+	<string id="vint_desc">
+		<text>Морфин относиться к группе алкалоидов. Используеться для облегчения боли. Широкое применение морфина во время Американской гражданской войны привело к возникновению морфиновой зависимости у более 400 тысяч человек. Стоит избегать передозировки.  %c[255,255,128,128]Препарат дает повышенную живучесть на короткое время%c[default]</text>
+	</string>
+	<string id="vint_name">
+		<text>Морфин</text>
+	</string>
+	<string id="shevron_desc">
+		<text>Медальйон со странным символом в виде солнца, крыла и ленты с надписью "Монолит".</text>
+	</string>
+	<string id="af_nightvision_1">
+		<text>ПНВ II поколения</text>
+	</string>
+	<string id="af_nightvision_1_desc">
+		<text>Прибор ночного виденья второго поколения. В конструкцию входит электронно-лучевой усилитель с микроканальной пластиной, за счет которого происходит усиление попадаемого в обьектив прибора излучения. С помощью прибора можно разглядеть обьекты в условиях очень плохого освещения, например, в безлунную ночь.</text>
+	</string>
+	<string id="af_nightvision_2">
+		<text>ПНВ III поколения</text>
+	</string>
+	<string id="af_nightvision_2_desc">
+		<text>Прибор ночного виденья третьего поколения. Отличаеться от приборов второго поколения более качественным изображением и большей чувствительностью. Достигнуть этого удалось за счет использования полупроводникового материала арсенида галлия, который ускоряет процесс преобразования фотонов в электроны. Подобные приборы в настоящее время используються американскими военными.</text>
+	</string>
+	<string id="af_nightvision_3">
+		<text>ПНВ IV поколения</text>
+	</string>
+	<string id="af_nightvision_3_desc">
+		<text>Прибор ночного виденья четвертого поколения. Имеет встроенный стробируемый усилитель за счет, которого прибор может подстраиваться под резкие изменения степени освещенности путем включения или отключения напряжения на фотокатоде. Дает наилучшее усиление и качество изображения.</text>
+	</string>
+	<string id="voron_notebook">
+		<text>Ноутбук Ворона</text>
+	</string>
+	<string id="voron_notebook_desc">
+		<text>Ноутбук Panasonic TOUGHBOOK CF-52. Данная модель выполнена в защищенном исполнении, что позволяет ноутбуку выдерживать падения и быть устойчивым к вибрациям, попаданию пыли и влаги. Вход в систему заблокирован паролем.</text>
+	</string>
+	<string id="item_pda_lucky_name">
+		<text>ПДА Счастливчика</text>
+	</string>
+	<string id="item_pda_lucky_desc">
+		<text>Карманный компьютер, принадлежащий Счастливчику. Содержит много специализированной информации, понятной только програмисту со стажем.</text>
+	</string>
+	<string id="alan_disc">
+		<text>"Аномальный альбом"</text>
+	</string>
+	<string id="alan_disc_desc">
+		<text>Alan Waters - "Аномальный альбом"</text>
+	</string>
+	<string id="manowar_guitar">
+		<text>Гитара Музыканта</text>
+	</string>
+	<string id="manowar_guitar_desc">
+		<text>Старая потертая советская гитара-шестиструнка. На деке полустертая надпись "Manowar".</text>
+	</string>
+	<string id="goldsphere_part_1">
+		<text>Первая часть "Золотого Шара"</text>
+	</string>
+	<string id="goldsphere_part_1_desc">
+		<text>Первая часть легендарного артефакта "Золотой Шар"</text>
+	</string>
+	<string id="goldsphere_part_2">
+		<text>Вторая часть "Золотого Шара"</text>
+	</string>
+	<string id="goldsphere_part_2_desc">
+		<text>Вторая часть легендарного артефакта "Золотой Шар"</text>
+	</string>
+	<string id="goldsphere_part_3">
+		<text>Третья часть "Золотого Шара"</text>
+	</string>
+	<string id="goldsphere_part_3_desc">
+		<text>Третья часть легендарного артефакта "Золотой Шар"</text>
+	</string>
+	<string id="monolit_zapiska">
+		<text>Записка Харона</text>
+	</string>
+	<string id="monolit_zapiska_desc">
+		<text>Харон: "Мне пришлось забрать третью часть Сферы Солнца из этого тайника, так велел мне Пророк Тесей. Я видел его во сне, он обратился ко мне и сказал, что я должен передать ему часть Сферы, потому что скоро варвары придут в Вечный Город и она не должна попасть в их руки. Пророк сказал, что будет ждать меня севернее ЧАЭС. Туда я и отправлюсь, предварительно помолившись Великому Монолиту"</text>
+	</string>
+	<string id="jekan_rukopis">
+		<text>Рукопись.</text>
+	</string>
+	<string id="jekan_rukopis_desc">
+		<text>Похоже, что перед нами попытка одного из сталкеров собрать местный фолькльор в один сборник.</text>
+	</string>
+	<string id="razved_sila_zapiska_desc">
+		<text>"... Да прибудет сила Великого Монолита со всеми теми, кто бореться во имя Его! Да не коснеться тень сомнения верных слуг Его, посланных в чужие варварские земли! Помни, о послушник: если пред тобой станет выбор - быть разоблаченным или погибнуть, то смело выбирай смерть, - за это Великий Монолит вознесет тебя на небеса. Нет прощения трусам, выбравшим плен, ибо уделом их никчемной жизни станет позор. Священные слова да упомнит избранный для великого дела: "Сила побеждает"!"</text>
+	</string>
+	<string id="black_magnetto">
+		<text>Чёрный магнит</text>
+	</string>
+	<string id="black_magnetto_desc">
+		<text>Таинственный предмет, который по легенде Зона подбрасывает мародерам вместо ценных артефактов в тела убитых сталкеров. Ветераны говорят, что она подобным образом "наказывает" тех, кто слишком часто обворовывает мертвых, потому что "Чёрный магнит" отбирает у своего владельца жизненные силы и энергию, кроме того, от него очень трудно избавиться. Что касаеться ученых, то у них есть своя точка зрения: доктором Петровым была разработана теория о т.н. "артефакте-хамелеоне" - организме-паразите, который может принимать облик обычного артефакта и питаться лимфой своего хозяина, впитывая ее через кожный покров. В любом случае, избавиться от "Магнита" можно только в том случае, если кто-то добровольно согласиться забрать его у незадачливого владельца</text>
+	</string>
+	<string id="maslo_desc">
+		<text>Пузырек с машинным маслом. За неимением ружейной смазки сталкеры используют его для обслуживания совего оружия.</text>
+	</string>
+	<string id="maslo">
+		<text>Машинное масло</text>
+	</string>
+	<string id="konteiner_desc">
+		<text>Металлический контейнер, запертый на замок. Внутри что-то тяжелое и твердое. Самостоятельно открыть контeйнер не получиться, возможно, стоит обратиться за помощью к тем, кто владеет нужным инструментом, или же просто отыскать владельца сего добра, у которого найдеться ключ.</text>
+	</string>
+	<string id="key_desc">
+		<text>Ключ от контейнера.</text>
+	</string>
+	<string id="mercs_zapiska_desc">
+		<text>"...Ара, этот контейнер - посылка нашему другу в Припять. Позаботься о том, чтобы она дошла до него в целости и сохранности. Клиента сообщил, что собирался устроить лагерь в развалинах, севернее Автобусной станции. С ним будут еще 2 человека. Оплата - на месте."</text>
+	</string>
+	<string id="mercs_zapiska">
+		<text>Записка с инструкцией.</text>
+	</string>
+	<string id="crazy_diary">
+		<text>Дневник снайпера.</text>
+	</string>
+	<string id="crazy_diary_desc">
+		<text>Вчера мне назначил встречу этот Ворон. Когда мы встретились с ним, он дал мне какой-то сверток. Мое задание будет заключаться в том, чтобы передать его нужному человеку, который через день будет на условленном месте - у старой избушке посреди болотца. Еще он просил, чтобы я поменьше о нашей сделке распостранялся и за секретность информации выдал мне аж два редких артефакта: "Слюду" и какое-то "Око", - сказал, что от болей в спине неплохо помогает, надо будет попробовать...</text>
+	</string>
+	<string id="grigor_planshet">
+		<text>Планшет Григоровича</text>
+	</string>
+	<string id="grigor_planshet_desc">
+		<text>Походный планшет с документами. В основном, это карты знакомых территорий с различными пометками, смысл которых известен только их владельцу. Есть несколько фотографий артефактов, а также списки непонятных сокращений и цифр.</text>
+	</string>
+
+	<string id="esc_cheramic_box_desc">
+		<text>Прочный герметичный контейнер, покрытый керамической оболочкой. Такое покрытие служит для защиты от агрессивной среды, вроде кислоты или токов высокого напряжения. Крышка прочно закрыта. %c[255,255,128,128]Следует дважды подумать перед тем, как пытаться открывать его.%c[default]</text>
+	</string>
+
+	<string id="bomzh_last_zapiska_descr">
+		<text>Тому, кто нашел эту записку: знай - я не убийца, я - человек, который хотел предотвратить большую беду, но сам в нее попал. Если меня разыскивают за убийство невинного человека - это ошибка. На самом деле погибший от моей (признаюсь в этом) руки человек являлся агентом подпольной организации "Кардигановские лаборатории", которая по слухам финансируется одной из ведущих стран мира и занимается изучением аномальных образований в плане разработки новых методов вооружения. Иными словами - это люди, которые исследуют аномальные образования и артефакты в плане разработки нового оружия. Я являюсь сотрудником одного из отделов безопасности Хармонтского Центра Защиты Земли. Мы занимаемся защитой Человечества от воздействия Зоны Отчуждения. Один из методов - это преграждение проникновения во внешний мир т.н. "артефактов" и различных образцов аномальной природы. Ничто чужое и злое не должно покидать границ Зоны, поскольку, таким образом Зона просто заражает внешний мир своими "семенами", которые в один прекрасный момент "прорастут" прямо в лабораториях и погубят всю земную науку. Конкретная задача нашего отдела - мешать первопроходцам выносить из Зоны артефакты и образцы. Несколько недель назад к нам поступила информация о том, что "Кардигановские лаборатории" послали своего агента для заполучения образца аномалии "Ведьмин студень". Я внедрился в сообщество новичков-первопроходцев, жил в местном лагере и ждал, пока агент прибудет сюда. Когда же он прибыл, я напросился к нему в проводники. Однако агент Кардигановских лабораторий был прекрастно осведомлен о том, что ему попытаются помешать. Он сразу понял, что я - именно тот, кто захочет остановить его, ведь я первым попросился к нему в напарники. Как только мы получили образец аномалии, он напал на меня. Силы оказались слишком неравными. Я был ослаблен длительным проживанием в экстремальных условиях: плохое питание и отсутствие тренировок дали о себе знать. Как только я почувствовал, что агент стал меня одолевать, я схитрил: изо всех сил ударил коленом по контейнеру с образцом "Студня", который висел на поясе у противника и отскочил в сторону. Крышка контейнера открылась, вязкая жижа выплеснулась на землю и на тело агента. Он умер в страшных мучениях... В том месте, где разлилось содержимое контейнера и образовался очередной "Студень" - это случилось недалеко от местного АТП, в кустах. После того, как "Студень" погубил агента, контейнер снова захлопнулся и судя по всему, в нем осталось некоторое колличество аномального вещества. Однако контейнер теперь был окружен кислотой и подобрать его я уже не смог. За меня это сделал ты. Прошу, уничтожь образец как можно быстрее. Этим ты поможешь не только нашему Отделу, а и всему человечеству в перспективе! О том, как это лучше всего сделать, спроси у Скидана.</text>
+	</string>
+
+	<string id="wonder_doll_descr">
+		<text>Старая выцветшая игрушка, наделенная аномальными свойствами. %c[255,255,128,128]Чтобы взаимодействовать с предметом, используйте его в инвентаре.%c[default]</text>
+	</string>
+
+	<string id="anomaly_dezintegrator_descr">
+		<text>Дезинтегратор ДАН-15. Уникальный и очень ценный прибор. %c[255,255,128,128]С его помощью можно нейтрализировать "Захоронения" альфа-вещества, встречающиеся в Зоне. Для этого нужно установить прибор на расстоянии 10-12м. от захоронения и подождать завершения процессе разрядки.%c[default]</text>
+	</string>
+
+	<string id="sigaret_descr">
+		<text>Сигареты "Мечта". Разведчики курят их, если хотят расслабится после тяжелых походов, снизить стресс от пережитых смертельных опасностей или же когда нет закуски к спиртному. Минздрав предупреждает: курение приносит ущерб вашему здоровью.</text>
+	</string>
+
+	<string id="biboran_descr">
+		<text>С виду - старый лабораторный журнал в кожанном переплете. Половниа страниц вырвана, на оставшихся чистых листах от руки написан некий текст. %c[255,255,128,128]Чтобы прочесть книгу, нужно использовать предмет в инвентаре.%c[default]</text>
+	</string>
+
+	<string id="medkomplekt_name">
+		<text>Медкомплект</text>
+	</string>
+	<string id="medkomplekt_descr">
+		<text>Набор простых и эффективных средств для борьбы с критическим или просто тяжелым кровотечением. В составе имеется антисептик и болеутоляющее, а также некоторые медицинские инструменты. %c[255,255,128,128]Необходим для лечения травм.%c[default]</text>
+	</string>
+
+	<string id="otrezvin_name">
+		<text>Отрезвин</text>
+	</string>
+	<string id="otrezvin_descr">
+		<text>Бутылочка с пилюлями. Лекарство служит для лечения алкоголизма, а также устранения похмельного синдрома. Также прописывалось больным с легкими психическими расстройствами. %c[255,255,128,128]Очищает организм от алкоголя,а а также восстанавливает часть пси-здоровья.%c[default]</text>
+	</string>
+
+	<string id="saharov_medic_pack_name">
+		<text>Личный доктор</text>
+	</string>
+	<string id="saharov_medic_pack_descr">
+		<text>Электронное устройство, отслеживающее уровень адреналина и гемоглобина в крови и на основе этих данных получающее информацию о кровотечениях владельца. Работает на солнечных батареях, перезаряжается за 10-15 секунд. Для работы необходимо носить на поясе. %c[255,255,128,128]Автоматически лечит раны любой сложности 1 раз в 10 минут.%c[default]</text>
+	</string>
+
+
+	<string id="yan_losthunter_zapiska_descr">
+		<text>Эта записка написана разведчиком Антоном с Янтаря: \n "Я хочу рассказать о том, как всё произошло на самом деле. Пусть тот, кто найдёт эту записку, узнает правду.\n После того, как я нажал на кнопку прибора, мы втроём потеряли сознание и очнулись в маленькой чёрной комнате. В углу находилась дверь, которая была заперта. Откуда-то сверху доносился слабый шум механизмов. Через некоторое время прозвучал громкий металлический голос: "Социальный опыт №5" - сказал он, - вам не будут давать пищу и воду и приблизительно через пять дней последний из вас умрёт. Но если кто-то из вас захочет выбраться, то мы предлагаем вам способ. Убейте своих товарищей и получите свободу". После этого откуда-то сверху упала металлическая труба. Мы держались. Держались четыре дня... На пятый Тощий не выдержал, и пока я спал, задушил Башку, затем набросился на меня с трубой. Однако мне удалось отбиться... той-же трубой. Вскоре он тоже умер. После этого я потерял сознание и очнулся уже здесь. Не хочу, чтобы обо всём кто-то узнал. Да, я убил своего товарища и это будет мучить меня до конца дней. Нужно уйти из Зоны и всё забыть.\n Теперь этот бродяга, который освободил меня, хочет всё разнюхать. Надо притвориться одним из своих напарников, чтобы вопросов было меньше. Я буду водить его за нос и под шумок уйду. Главное - не забыть код от ящика с хабаром: 377541"</text>
+	</string>
+
+	<string id="rad_abdul_zapiska_descr">
+		<text>На забрызганном кровью клочке бумаги неровным почерком написаны координаты. Это место на карте соответствует входу в подземный комплекс.</text>
+	</string>
+
+	<string id="esc_post_zapiska_descr">
+		<text>Тому, кто это нашёл: прошу передать Фрицу, что Вадима повязали вояки, а свёрток находится в том месте, где месяц назад меня покусали слепыши.</text>
+	</string>
+
+	<string id="pri_avtostation_zapiska_descr">
+		<text>Сверху какие-то цифры, очевидно координаты. Чуть ниже подпись: "Купсула у нас. Приходи в указанное место, когда будешь готов. Можешь не бояться. Друзья."</text>
+	</string>
+
+	<string id="army_boots_name">
+		<text>Армейские берцы</text>
+	</string>
+	<string id="army_boots_descr">
+		<text>Парочка новеньких кожаных берцев, только со склада. %c[255,255,128,128]Даёт защиту ног независимо от надетого костюма.%c[default]</text>
+	</string>
+
+	<string id="antigas_name">
+		<text>Противогаз</text>
+	</string>
+	<string id="antigas_descr">
+		<text>Обычный резиновый противогаз. Немного защищает от радиации, не обеспечивает физическую защиту головы.</text>
+	</string>
+
+	<string id="stalker_boots_name">
+		<text>Ботинки разведчика</text>
+	</string>
+	<string id="stalker_boots_descr">
+		<text>Грамотно усовершенствованные армейские ботинки. Какой-то разведчик неплохо укрепил обувь и покрыл её защитными составами. %c[255,255,128,128]Даёт защиту ног независимо от одетого костюма.%c[default]</text>
+	</string>
+
+	<string id="army_helmet_name">
+		<text>Армейский шлем</text>
+	</string>
+	<string id="army_helmet_descr">
+		<text>Боевой армейский шлем с забралом. %c[255,255,128,128]Даёт защиту головы независимо от одетого костюма.%c[default]</text>
+	</string>
+
+	<string id="sciense_helmet_name">
+		<text>Научный шлем</text>
+	</string>
+	<string id="sciense_helmet_descr">
+		<text>Сделан из пластика и стекловолокна, а также покрыт противоаномальным составом. %c[255,255,128,128]Даёт защиту головы независимо от надетого костюма.%c[default]</text>
+	</string>
+
+	<string id="army_gloves_name">
+		<text>Тактические перчатки</text>
+	</string>
+	<string id="army_gloves_descr">
+		<text>Часть экипировки спецназа. Сделаны из крепкой кожи и синтетических материалов. %c[255,255,128,128]Дают защиту рук независимо от одетого костюма.%c[default]</text>
+	</string>
+
+	<string id="stalker_gloves_name">
+		<text>Байкерские перчатки</text>
+	</string>
+	<string id="stalker_gloves_descr">
+		<text>Кто-то явно увлекался творчеством группы "Ария" и любил погонять на своей "Яве" по тёмным сельским улицам, одев на руки эти перчатки. %c[255,255,128,128]Дают защиту рук независимо от надетого костюма.%c[default]</text>
+	</string>
+
+	<string id="anomal_gloves_name">
+		<text>Аномальные перчатки</text>
+	</string>
+	<string id="anomal_gloves_descr">
+		<text>Личные перчатки одного разведчика, котрый был мастером на все руки. %c[255,255,128,128]Дают защиту рук независимо от одетого костюма. При ремонте оружия, брони или автотранспорта повышается удача.%c[default]</text>
+	</string>
+
+	<string id="sssr_sign_name">
+		<text>Значок</text>
+	</string>
+	<string id="sssr_sign_descr">
+		<text>Нагрудный значок из какой-то коллекции. %c[255,255,128,128]Собери 10 штук в один альбом и получи бонус.%c[default]</text>
+	</string>
+
+	<string id="signs_albom_name">
+		<text>Аномальный альбом</text>
+	</string>
+	<string id="signs_albom_descr">
+		<text>Старый альбом для коллекционирования значков. Приобрёл аномальные свойства, однако не все ячейки в нём заполнены.</text>
+	</string>
+
+
+
+
+
+
+
+
+	<string id="inv_name_helicopter_missile">
+		<text>VOG-25</text>
+	</string>
+	<string id="inv_name_short_helicopter_missile">
+		<text>VOG-25</text>
+	</string>
+	<string id="inv_name_voda">
+		<text>Вода</text>
+	</string>
+	<string id="inv_name_short_voda">
+		<text>Вода</text>
+	</string>
+	<string id="inv_name_flyaga_bad">
+		<text>Фляга</text>
+	</string>
+	<string id="inv_name_short_flyaga_bad">
+		<text>Фляга</text>
+	</string>
+	<string id="description_mobile_changer">
+		<text>Телепортатор</text>
+	</string>
+	<string id="inv_name_mobile_changer">
+		<text>Телепортатор</text>
+	</string>
+	<string id="inv_name_short_mobile_changer">
+		<text>Телепортатор</text>
+	</string>
+	<string id="inv_name_mobile_changer_33">
+		<text>Рюкзак</text>
+	</string>
+	<string id="inv_name_short_mobile_changer_33">
+		<text>Рюкзак</text>
+	</string>
+	<string id="description_mikstura">
+		<text>Местные называют это Микстурой, но судя по всему в бутылочке вакцина от неизвестного вируса, под названием Чернобыльская чума.</text>
+	</string>
+	<string id="inv_name_mikstura">
+		<text>Микстура</text>
+	</string>
+	<string id="inv_name_short_mikstura">
+		<text>Микстура</text>
+	</string>
+	<string id="description_armor_remkit">
+		<text>Ремкомплект для брони. Сумка с такими предметами, как: прорезиненная такнь, клей, нитки, заклепки, бронепластины и другое.</text>
+	</string>
+	<string id="inv_name_armor_remkit">
+		<text>Мини-ремкомплект</text>
+	</string>
+	<string id="inv_name_short_armor_remkit">
+		<text>Мини-ремкомплект</text>
+	</string>
+	<string id="inv_name_knife_1">
+		<text>Охотничий нож</text>
+	</string>
+	<string id="inv_name_short_knife_1">
+		<text>Охотничий нож</text>
+	</string>
+	<string id="inv_name_knife_2">
+		<text>Штык-нож</text>
+	</string>
+	<string id="inv_name_short_knife_2">
+		<text>Штык-нож</text>
+	</string>
+	<string id="inv_name_knife_3">
+		<text>Нож спецназа</text>
+	</string>
+	<string id="inv_name_short_knife_3">
+		<text>Нож спецназа</text>
+	</string>
+	<string id="inv_name_knife_4">
+		<text>Нож КМ2000</text>
+	</string>
+	<string id="inv_name_short_knife_4">
+		<text>Нож КМ2000</text>
+	</string>
+	<string id="inv_name_knife_5">
+		<text>Самодельный нож</text>
+	</string>
+	<string id="inv_name_short_knife_5">
+		<text>Самодельный нож</text>
+	</string>
+	<string id="inv_name_knife_6">
+		<text>Армейский нож</text>
+	</string>
+	<string id="inv_name_short_knife_6">
+		<text>Армейский нож</text>
+	</string>
+	<string id="inv_name_montirovka">
+		<text>Монтировка</text>
+	</string>
+	<string id="inv_name_short_montirovka">
+		<text>Монтировка</text>
+	</string>
+	<string id="description_skrepka">
+		<text>Канцелярская скрепка. Иногда ее можно использовать в качестве отмычки.</text>
+	</string>
+	<string id="inv_name_skrepka">
+		<text>Скрепка</text>
+	</string>
+	<string id="inv_name_short_skrepka">
+		<text>Скрепка</text>
+	</string>
+	<string id="description_matches">
+		<text>Коробок спичек</text>
+	</string>
+	<string id="inv_name_matches">
+		<text>Спички</text>
+	</string>
+	<string id="inv_name_short_matches">
+		<text>Спички</text>
+	</string>
+	<string id="description_lighter">
+		<text>Зажигалка Zippo</text>
+	</string>
+	<string id="inv_name_lighter">
+		<text>Зажигалка</text>
+	</string>
+	<string id="inv_name_short_lighter">
+		<text>Зажигалка</text>
+	</string>
+	<string id="description_bowler">
+		<text>Пустой котелок</text>
+	</string>
+	<string id="inv_name_bowler">
+		<text>Котелок</text>
+	</string>
+	<string id="inv_name_short_bowler">
+		<text>Котелок</text>
+	</string>
+	<string id="description_teapot">
+		<text>Чайник. Предназначен для кипячения воды на костре.</text>
+	</string>
+	<string id="inv_name_teapot">
+		<text>Чайник</text>
+	</string>
+	<string id="inv_name_short_teapot">
+		<text>Чайник</text>
+	</string>
+	<string id="description_teapot_pack">
+		<text>Пачка черного цейлонского чая. Можно заварить в чайнике на костре.</text>
+	</string>
+	<string id="inv_name_teapot_pack">
+		<text>Чай</text>
+	</string>
+	<string id="inv_name_short_teapot_pack">
+		<text>Чай</text>
+	</string>
+	<string id="inv_name_flyaga_full">
+		<text>Фляга</text>
+	</string>
+	<string id="inv_name_short_flyaga_full">
+		<text>Фляга</text>
+	</string>
+	<string id="description_flyaga_empty">
+		<text>Пустая фляга</text>
+	</string>
+	<string id="inv_name_flyaga_empty">
+		<text>Фляга</text>
+	</string>
+	<string id="inv_name_short_flyaga_empty">
+		<text>Фляга</text>
+	</string>
+	<string id="description_afscanner">
+		<text>Импульсный сканнер. Судя по внешнему виду, явно смастерен из какого-то научного прибора. Предназначен для добывания артефактов в аномальных зонах.</text>
+	</string>
+	<string id="inv_name_afscanner">
+		<text>Сканнер</text>
+	</string>
+	<string id="inv_name_short_afscanner">
+		<text>Сканнер</text>
+	</string>
+	<string id="description_akumulator">
+		<text>Автомобильный аккумулятор</text>
+	</string>
+	<string id="inv_name_akumulator">
+		<text>Аккумулятор</text>
+	</string>
+	<string id="inv_name_short_akumulator">
+		<text>Аккумулятор</text>
+	</string>
+	<string id="description_wheel">
+		<text>Автомобильное колесо</text>
+	</string>
+	<string id="inv_name_wheel">
+		<text>Колесо</text>
+	</string>
+	<string id="inv_name_short_wheel">
+		<text>Колесо</text>
+	</string>
+	<string id="description_bearing">
+		<text>Подшипник. Используется для ремонта техники или для изготовления примитивных боеприпасов.</text>
+	</string>
+	<string id="inv_name_bearing">
+		<text>Подшипник</text>
+	</string>
+	<string id="inv_name_short_bearing">
+		<text>Подшипник</text>
+	</string>
+	<string id="description_mobile_tank_empty">
+		<text>Пустая канистра из-под бензина</text>
+	</string>
+	<string id="inv_name_mobile_tank_empty">
+		<text>Канистра</text>
+	</string>
+	<string id="inv_name_short_mobile_tank_empty">
+		<text>Канистра</text>
+	</string>
+	<string id="description_mobile_tank_full">
+		<text>Канистра с бензином</text>
+	</string>
+	<string id="inv_name_mobile_tank_full">
+		<text>Канистра</text>
+	</string>
+	<string id="inv_name_short_mobile_tank_full">
+		<text>Канистра</text>
+	</string>
+	<string id="description_avtomobile_tank">
+		<text>Бензобак</text>
+	</string>
+	<string id="inv_name_avtomobile_tank">
+		<text>Бензобак</text>
+	</string>
+	<string id="inv_name_short_avtomobile_tank">
+		<text>Бензобак</text>
+	</string>
+	<string id="description_electric_motor">
+		<text>Асинхронный электродвигатель. Состояние удовлетворительное.</text>
+	</string>
+	<string id="inv_name_electric_motor">
+		<text>Электродвигатель</text>
+	</string>
+	<string id="inv_name_short_electric_motor">
+		<text>Электродвигатель</text>
+	</string>
+	<string id="description_equipment_bag">
+		<text>Сумка с боеприпасами. Чтобы получить содержимое, необходимо использовать предмет в инвентаре.</text>
+	</string>
+	<string id="inv_name_equipment_bag">
+		<text>Сумка</text>
+	</string>
+	<string id="inv_name_short_equipment_bag">
+		<text>Сумка</text>
+	</string>
+	<string id="description_medic_bag">
+		<text>Сумка с медикаментами. Чтобы получить содержимое, необходимо использовать предмет в инвентаре.</text>
+	</string>
+	<string id="inv_name_medic_bag">
+		<text>Медицинский набор</text>
+	</string>
+	<string id="inv_name_short_medic_bag">
+		<text>Медицинский набор</text>
+	</string>
+	<string id="description_powder">
+		<text>Жестянка с порохом. Служит для изготовления примитивных зарядов для самодельного оружия.</text>
+	</string>
+	<string id="inv_name_powder">
+		<text>Порох</text>
+	</string>
+	<string id="inv_name_short_powder">
+		<text>Порох</text>
+	</string>
+	<string id="description_acid_box">
+		<text>Емкость с опасным веществом. Прикосновение к содержимому повлечет немедленную смерть.</text>
+	</string>
+	<string id="inv_name_acid_box">
+		<text>Емкость</text>
+	</string>
+	<string id="inv_name_short_acid_box">
+		<text>Емкость</text>
+	</string>
+	<string id="description_turret_box">
+		<text>В ящике находится сборная турель. Радиус огневого покрытия - 80м. Для стрельбы необходимо собрать и установить на ровной поверхности.</text>
+	</string>
+	<string id="inv_name_turret_box">
+		<text>Турель</text>
+	</string>
+	<string id="inv_name_short_turret_box">
+		<text>Турель</text>
+	</string>
+	<string id="description_weapon_remkit">
+		<text>Универсальный мини-набор для чистки оружия. Включает в себя латунный ершик, шомпол, бутылочку оружейного масла Rem Oil, щетку и прочее. Этот набор не поднимет состояние оружия до ста процентов, но поможет восстановить сильно поврежденный ствол.</text>
+	</string>
+	<string id="inv_name_weapon_remkit">
+		<text>Оружейный набор</text>
+	</string>
+	<string id="inv_name_short_weapon_remkit">
+		<text>Оружейный набор</text>
+	</string>
+	<string id="description_anomal_map_garbage">
+		<text>Карта одного из регионов Зоны, составленная разведчиком, с учетом местных достопримечательностей.</text>
+	</string>
+	<string id="inv_name_anomal_map_garbage">
+		<text>Карта Свалки</text>
+	</string>
+	<string id="inv_name_short_anomal_map_garbage">
+		<text>Карта Свалки</text>
+	</string>
+	<string id="description_wrecked_pkm">
+		<text>Это оружие сильно пострадало от огня и долгого пребывания под открытым небом. Вряд-ли его удастся починить.</text>
+	</string>
+	<string id="inv_name_wrecked_pkm">
+		<text>Поврежденный пулемет</text>
+	</string>
+	<string id="inv_name_short_wrecked_pkm">
+		<text>Поврежденный пулемет</text>
+	</string>
+	<string id="description_harmonica_unic">
+		<text>Губная гармошка, отличающаяся от обычной красивой гравировкой на корпусе.</text>
+	</string>
+	<string id="inv_name_harmonica_unic">
+		<text>Гармоника</text>
+	</string>
+	<string id="inv_name_short_harmonica_unic">
+		<text>Гармоника</text>
+	</string>
+	<string id="description_diesel_tank">
+		<text>Канистра с соляровым маслом, известным в простонародье как солярка. Не подходит для заправки большинства автомобилей, но может пригодиться в процессе приготовления самодельной смеси для огнемета.</text>
+	</string>
+	<string id="inv_name_diesel_tank">
+		<text>Солярка</text>
+	</string>
+	<string id="inv_name_short_diesel_tank">
+		<text>Солярка</text>
+	</string>
+	<string id="description_af_zuda_empty">
+		<text>Сейчас этот артефакт разряжен и не представляет особой ценности, но через некоторое время он сможет снова обрести полезные свойства.</text>
+	</string>
+	<string id="inv_name_af_zuda_empty">
+		<text>Пустая Зуда</text>
+	</string>
+	<string id="inv_name_short_af_zuda_empty">
+		<text>Пустая Зуда</text>
+	</string>
+	<string id="description_army_receiver">
+		<text>Армейский передатчик повышенной мощности. С помощью него можно вызывать оружейные, продовольственные и прочие поставки на Кордоне в условленном месте, помеченном на карте.</text>
+	</string>
+	<string id="inv_name_army_receiver">
+		<text>Армейский передатчик</text>
+	</string>
+	<string id="inv_name_short_army_receiver">
+		<text>Армейский передатчик</text>
+	</string>
+	<string id="description_redrik_vakcine">
+		<text>Экспериментальная вакцина против мутировавшего вируса H1N11. Эффективность действия не стопроцентная.</text>
+	</string>
+	<string id="inv_name_redrik_vakcine">
+		<text>Экспериментальная вакцина</text>
+	</string>
+	<string id="inv_name_short_redrik_vakcine">
+		<text>Экспериментальная вакцина</text>
+	</string>
+	<string id="description_rat_trap_full">
+		<text>Самодельная крысоловка с пойманной крысой внутри. Чтобы извлечь тушку, необходимо использовать предмет в инвентаре.</text>
+	</string>
+	<string id="inv_name_rat_trap_full">
+		<text>Крысоловка</text>
+	</string>
+	<string id="inv_name_short_rat_trap_full">
+		<text>Крысоловка</text>
+	</string>
+	<string id="description_ruined_docs">
+		<text>Пачка документов, сильно испорченных влагой. Разобрать можно разве что отдельные слова. Характер документа неясен.</text>
+	</string>
+	<string id="inv_name_ruined_docs">
+		<text>Испорченные документы</text>
+	</string>
+	<string id="inv_name_short_ruined_docs">
+		<text>Испорченные документы</text>
+	</string>
+	<string id="description_fotocamera">
+		<text>Любительская фотокамера среднего качества. В памяти имеются изображения, но они почему-то не открываются.</text>
+	</string>
+	<string id="inv_name_fotocamera">
+		<text>Фотокамера</text>
+	</string>
+	<string id="inv_name_short_fotocamera">
+		<text>Фотокамера</text>
+	</string>
+	<string id="description_t_akumulator1">
+		<text>Одноразовый аккумулятор для т-костюма, работающий на гамма-веществе. Предназначен для совершения однократной телепортации на малые и средние расстояния в заданную владельцем костюма точку.</text>
+	</string>
+	<string id="inv_name_t_akumulator1">
+		<text>Т-аккумулятор</text>
+	</string>
+	<string id="inv_name_short_t_akumulator1">
+		<text>Т-аккумулятор</text>
+	</string>
+	<string id="description_t_akumulator2">
+		<text>Одноразовый аккумулятор для т-костюма, работающий на гамма-веществе. Предназначен для совершения однократной телепортации на малые и средние расстояния в заданную владельцем костюма точку.</text>
+	</string>
+	<string id="inv_name_t_akumulator2">
+		<text>Т-аккумулятор</text>
+	</string>
+	<string id="inv_name_short_t_akumulator2">
+		<text>Т-аккумулятор</text>
+	</string>
+	<string id="description_anomal_radio">
+		<text>Переносной приемник Горизонт-219. Рассчитан на работу в ДВ, СВ, УКВ, а также в 5-ти растянутых KB диапазонах. При внимательном осмотре становится видно, что в конструкцию прибора вносились какие-то изменения, в частности, впаивались дополнительные модули.</text>
+	</string>
+	<string id="inv_name_anomal_radio">
+		<text>Приемник</text>
+	</string>
+	<string id="inv_name_short_anomal_radio">
+		<text>Приемник</text>
+	</string>
+	<string id="description_magnitofon_portable">
+		<text>Старый кассетный магнитофон Легенда-404. Довольно потертый, но в рабочем состоянии.</text>
+	</string>
+	<string id="inv_name_magnitofon_portable">
+		<text>Магнитофон</text>
+	</string>
+	<string id="inv_name_short_magnitofon_portable">
+		<text>Магнитофон</text>
+	</string>
+	<string id="description_casette_1">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_1">
+		<text>Касета №1</text>
+	</string>
+	<string id="inv_name_short_casette_1">
+		<text>Касета №1</text>
+	</string>
+	<string id="description_casette_2">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_2">
+		<text>Касета №2</text>
+	</string>
+	<string id="inv_name_short_casette_2">
+		<text>Касета №2</text>
+	</string>
+	<string id="description_casette_3">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_3">
+		<text>Касета №3</text>
+	</string>
+	<string id="inv_name_short_casette_3">
+		<text>Касета №3</text>
+	</string>
+	<string id="description_casette_4">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_4">
+		<text>Касета №4</text>
+	</string>
+	<string id="inv_name_short_casette_4">
+		<text>Касета №4</text>
+	</string>
+	<string id="description_casette_5">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_5">
+		<text>Касета №5</text>
+	</string>
+	<string id="inv_name_short_casette_5">
+		<text>Касета №5</text>
+	</string>
+	<string id="description_casette_6">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_6">
+		<text>Касета №6</text>
+	</string>
+	<string id="inv_name_short_casette_6">
+		<text>Касета №6</text>
+	</string>
+	<string id="description_casette_7">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_7">
+		<text>Касета №7</text>
+	</string>
+	<string id="inv_name_short_casette_7">
+		<text>Касета №7</text>
+	</string>
+	<string id="description_casette_8">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_8">
+		<text>Касета №8</text>
+	</string>
+	<string id="inv_name_short_casette_8">
+		<text>Касета №8</text>
+	</string>
+	<string id="description_casette_9">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_9">
+		<text>Касета №9</text>
+	</string>
+	<string id="inv_name_short_casette_9">
+		<text>Касета №9</text>
+	</string>
+	<string id="description_casette_10">
+		<text>Старая аудиокассета для магнитофона.</text>
+	</string>
+	<string id="inv_name_casette_10">
+		<text>Касета №10</text>
+	</string>
+	<string id="inv_name_short_casette_10">
+		<text>Касета №10</text>
+	</string>
+	<string id="inv_name_sigarets">
+		<text>Сигареты</text>
+	</string>
+	<string id="inv_name_short_sigarets">
+		<text>Сигареты</text>
+	</string>
+	<string id="description_mil_raciya">
+		<text>Коротковолновая рация, с помощью которой можно выйти на связь с обитателями военных складов.</text>
+	</string>
+	<string id="inv_name_mil_raciya">
+		<text>Рация Прапора</text>
+	</string>
+	<string id="inv_name_short_mil_raciya">
+		<text>Рация Прапора</text>
+	</string>
+	<string id="description_bucket">
+		<text>Старое оцинкованное ведро</text>
+	</string>
+	<string id="inv_name_bucket">
+		<text>Ведро</text>
+	</string>
+	<string id="inv_name_short_bucket">
+		<text>Ведро</text>
+	</string>
+	<string id="description_old_album">
+		<text>Неплохо сохранившийся альбом с большой коллекцией марок. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_album">
+		<text>Альбом с марками</text>
+	</string>
+	<string id="inv_name_short_old_album">
+		<text>Альбом с марками</text>
+	</string>
+	<string id="description_old_radio">
+		<text>Очень старый радиоприёмник. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_radio">
+		<text>Приёмник</text>
+	</string>
+	<string id="inv_name_short_old_radio">
+		<text>Приёмник</text>
+	</string>
+	<string id="description_old_music_box">
+		<text>Музыкальная шкатулка. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_music_box">
+		<text>Музыкальная шкатулка</text>
+	</string>
+	<string id="inv_name_short_old_music_box">
+		<text>Музыкальная шкатулка</text>
+	</string>
+	<string id="description_old_watch">
+		<text>Старинные карманные часы с позолотой и дарственной надписью. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_watch">
+		<text>Золотые часы</text>
+	</string>
+	<string id="inv_name_short_old_watch">
+		<text>Золотые часы</text>
+	</string>
+	<string id="description_old_book">
+		<text>Старинная книга-учебник для учащихся гимназии. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_book">
+		<text>Старинная книга</text>
+	</string>
+	<string id="inv_name_short_old_book">
+		<text>Старинная книга</text>
+	</string>
+	<string id="description_firewood">
+		<text>Вязанка дров.</text>
+	</string>
+	<string id="inv_name_firewood">
+		<text>Дрова</text>
+	</string>
+	<string id="inv_name_short_firewood">
+		<text>Дрова</text>
+	</string>
+	<string id="description_ak74_rust">
+		<text>Это оружие подверглось настолько сильной коррозии, что о восстановлении и речи быть не может.</text>
+	</string>
+	<string id="inv_name_ak74_rust">
+		<text>Ржавый автомат</text>
+	</string>
+	<string id="inv_name_short_ak74_rust">
+		<text>Ржавый автомат</text>
+	</string>
+	<string id="description_sks_rust">
+		<text>Это оружие подверглось настолько сильной коррозии, что о восстановлении и речи быть не может.</text>
+	</string>
+	<string id="inv_name_sks_rust">
+		<text>Ржавый карабин</text>
+	</string>
+	<string id="inv_name_short_sks_rust">
+		<text>Ржавый карабин</text>
+	</string>
+	<string id="description_pm_rust">
+		<text>Это оружие подверглось настолько сильной коррозии, что о восстановлении и речи быть не может.</text>
+	</string>
+	<string id="inv_name_pm_rust">
+		<text>Ржавый пистолет</text>
+	</string>
+	<string id="inv_name_short_pm_rust">
+		<text>Ржавый пистолет</text>
+	</string>
+	<string id="description_old_moneta">
+		<text>Старинная монета времён Николая II. Очевидно из чьей-то коллекции.</text>
+	</string>
+	<string id="inv_name_old_moneta">
+		<text>Царский червонец</text>
+	</string>
+	<string id="inv_name_short_old_moneta">
+		<text>Царский червонец</text>
+	</string>
+	<string id="description_predb_radio_part">
+		<text>Блок-усилитель для коротковолнового радиопередатчика. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_predb_radio_part">
+		<text>Компонент передатчика</text>
+	</string>
+	<string id="inv_name_short_predb_radio_part">
+		<text>Компонент передатчика</text>
+	</string>
+	<string id="description_old_collection_box">
+		<text>Коллекция старинных монет, украшений, прочего. Собиралась годами, к каждому экземпляру идёт описание. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_collection_box">
+		<text>Коллекция антиквариата</text>
+	</string>
+	<string id="inv_name_short_old_collection_box">
+		<text>Коллекция антиквариата</text>
+	</string>
+	<string id="description_anomal_lamp">
+		<text>С виду простая настольная лампа, но почему-то светится без источника электричества.</text>
+	</string>
+	<string id="inv_name_anomal_lamp">
+		<text>Необычная лампа</text>
+	</string>
+	<string id="inv_name_short_anomal_lamp">
+		<text>Необычная лампа</text>
+	</string>
+	<string id="description_predb_base_comp_parol_list">
+		<text>Записка с паролем системы безопасности военной базы.</text>
+	</string>
+	<string id="inv_name_predb_base_comp_parol_list">
+		<text>Пароль системы безопасности</text>
+	</string>
+	<string id="inv_name_short_predb_base_comp_parol_list">
+		<text>Пароль системы безопасности</text>
+	</string>
+	<string id="description_weapon_box">
+		<text>Набор запчастей для автоматов, пистолетов и карабинов отечественного производства. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_weapon_box">
+		<text>Набор оружейника</text>
+	</string>
+	<string id="inv_name_short_weapon_box">
+		<text>Набор оружейника</text>
+	</string>
+	<string id="description_electron_block">
+		<text>Электронный блок от какого-то вычислительного механизма. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_electron_block">
+		<text>Электронный блок</text>
+	</string>
+	<string id="inv_name_short_electron_block">
+		<text>Электронный блок</text>
+	</string>
+	<string id="inv_name_power_liquor">
+		<text>Собачья жизнь</text>
+	</string>
+	<string id="inv_name_short_power_liquor">
+		<text>Собачья жизнь</text>
+	</string>
+	<string id="inv_name_rage_liquor">
+		<text>Злая вода</text>
+	</string>
+	<string id="inv_name_short_rage_liquor">
+		<text>Злая вода</text>
+	</string>
+	<string id="inv_name_brain_liquor">
+		<text>Хитрая лапа</text>
+	</string>
+	<string id="inv_name_short_brain_liquor">
+		<text>Хитрая лапа</text>
+	</string>
+	<string id="inv_name_radiation_liquor">
+		<text>Мертвая вода</text>
+	</string>
+	<string id="inv_name_short_radiation_liquor">
+		<text>Мертвая вода</text>
+	</string>
+	<string id="description_broken_radiostation">
+		<text>Стационарная армейская радиостанция. Видимых повреждений не имеет, но всё-же неработоспособна. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_broken_radiostation">
+		<text>Радиостанция</text>
+	</string>
+	<string id="inv_name_short_broken_radiostation">
+		<text>Радиостанция</text>
+	</string>
+	<string id="description_old_komp_block">
+		<text>Системный блок от старого компьютера. Заинтересует разве что скупщиков барахла.</text>
+	</string>
+	<string id="inv_name_old_komp_block">
+		<text>Системный блок</text>
+	</string>
+	<string id="inv_name_short_old_komp_block">
+		<text>Системный блок</text>
+	</string>
+	<string id="description_btr_engine_kit">
+		<text>Набор для ревизии дизельных двигателей.</text>
+	</string>
+	<string id="inv_name_btr_engine_kit">
+		<text>Набор для ревизии</text>
+	</string>
+	<string id="inv_name_short_btr_engine_kit">
+		<text>Набор для ревизии</text>
+	</string>
+	<string id="description_tuschano_king_head">
+		<text>Голова тушканьего короля</text>
+	</string>
+	<string id="inv_name_tuschano_king_head">
+		<text>Голова тушканьего короля</text>
+	</string>
+	<string id="inv_name_short_tuschano_king_head">
+		<text>Голова тушканьего короля</text>
+	</string>
+	<string id="description_mil_bilet">
+		<text>Билет на автобус до г.Припять</text>
+	</string>
+	<string id="inv_name_mil_bilet">
+		<text>Старый билет</text>
+	</string>
+	<string id="inv_name_short_mil_bilet">
+		<text>Старый билет</text>
+	</string>
+	<string id="description_mil_hill_vagon_door_key">
+		<text>Ключ от убежища разведчика Ивана.</text>
+	</string>
+	<string id="inv_name_mil_hill_vagon_door_key">
+		<text>Ключ от убежища</text>
+	</string>
+	<string id="inv_name_short_mil_hill_vagon_door_key">
+		<text>Ключ от убежища</text>
+	</string>
+	<string id="inv_name_bomba">
+		<text>Взрывчатка</text>
+	</string>
+	<string id="inv_name_short_bomba">
+		<text>Взрывчатка</text>
+	</string>
+	<string id="description_bomba">
+		<text>Для взрыва необходим детонатор. Лучшее оружие сапера, киллера или террориста. Уничтожит все в радиусе нескольких десятков метров.</text>
+	</string>
+	<string id="inv_name_bomba_big">
+		<text>Рюкзак со взрывчаткой</text>
+	</string>
+	<string id="inv_name_short_bomba_big">
+		<text>Рюкзак со взрывчаткой</text>
+	</string>
+	<string id="description_bomba_big">
+		<text>Для взрыва необходим детонатор. По силе равен связке гранат Ф1.</text>
+	</string>
+	<string id="inv_name_detonator">
+		<text>Детонатор</text>
+	</string>
+	<string id="inv_name_short_detonator">
+		<text>Детонатор</text>
+	</string>
+	<string id="description_detonator">
+		<text>Детонатор для взрывчатки. Радиус действия - 100 метров.</text>
+	</string>
+	<string id="description_ibuprophen">
+		<text>Сильный обезболивающий препарат. Одним из побочных эффектов может быть учащенное сердцебиение.</text>
+	</string>
+	<string id="inv_name_ibuprophen">
+		<text>Ибупрофен</text>
+	</string>
+	<string id="inv_name_short_ibuprophen">
+		<text>Ибупрофен</text>
+	</string>
+	<string id="description_gidroperit">
+		<text>Таблетки используются для обеззараживания воды</text>
+	</string>
+	<string id="inv_name_gidroperit">
+		<text>Гидроперит</text>
+	</string>
+	<string id="inv_name_short_gidroperit">
+		<text>Гидроперит</text>
+	</string>
+	<string id="description_rat_trap_empty">
+		<text>Самодельная крысоловка. Для того, чтобы поймать в нее крысу, необходимо повесить инструмент на пояс и приблизится к животному на малое расстояние.</text>
+	</string>
+	<string id="inv_name_rat_trap_empty">
+		<text>Крысоловка</text>
+	</string>
+	<string id="inv_name_short_rat_trap_empty">
+		<text>Крысоловка</text>
+	</string>
+	<string id="description_dielectric_glove">
+		<text>Перчатка из специального резиноподобного материала, не пропускающего электричество. Предназначена для ремонтных работ в условиях риска поражения током. Чтобы задействовать предмет, повесьте его на пояс.</text>
+	</string>
+	<string id="inv_name_dielectric_glove">
+		<text>Диэлектрическая перчатка</text>
+	</string>
+	<string id="inv_name_short_dielectric_glove">
+		<text>Диэлектрическая перчатка</text>
+	</string>
+	<string id="description_fake_art1">
+		<text>Артефакт</text>
+	</string>
+	<string id="inv_name_fake_art1">
+		<text>Артефакт</text>
+	</string>
+	<string id="inv_name_short_fake_art1">
+		<text>Артефакт</text>
+	</string>
+	<string id="description_fake_art2">
+		<text>Артефакт</text>
+	</string>
+	<string id="inv_name_fake_art2">
+		<text>Артефакт</text>
+	</string>
+	<string id="inv_name_short_fake_art2">
+		<text>Артефакт</text>
+	</string>
+	<string id="description_fake_art3">
+		<text>Артефакт</text>
+	</string>
+	<string id="inv_name_fake_art3">
+		<text>Артефакт</text>
+	</string>
+	<string id="inv_name_short_fake_art3">
+		<text>Артефакт</text>
+	</string>
+	<string id="description_af_bolt">
+		<text>Люди бросают в аномалии болты, даже не догадываясь, что иногда они приобретают некоторые свойства.</text>
+	</string>
+	<string id="inv_name_af_bolt">
+		<text>Аномальный болт</text>
+	</string>
+	<string id="inv_name_short_af_bolt">
+		<text>Аномальный болт</text>
+	</string>
+	<string id="description_af_bone">
+		<text>Старая пожелтевшая кость. То ли звериная, то ли человеческая - непонятно. Имеет слабо выраженные аномальные свойства.</text>
+	</string>
+	<string id="inv_name_af_bone">
+		<text>Кость</text>
+	</string>
+	<string id="inv_name_short_af_bone">
+		<text>Кость</text>
+	</string>
+	<string id="description_kapsula_1">
+		<text>Небольших размеров капсула, по виду сделанная из пластика или керамики. Состоит из двух половинок, но разломить ее не получается. На поверхности нарисована маленькая синяя полоска.</text>
+	</string>
+	<string id="inv_name_kapsula_1">
+		<text>Синяя капсула</text>
+	</string>
+	<string id="inv_name_short_kapsula_1">
+		<text>Синяя капсула</text>
+	</string>
+	<string id="description_kapsula_2">
+		<text>Небольших размеров капсула, по виду сделанная из пластика или керамики. Состоит из двух половинок, но разломить ее не получается. На поверхности нарисована маленькая красная полоска.</text>
+	</string>
+	<string id="inv_name_kapsula_2">
+		<text>Красная капсула</text>
+	</string>
+	<string id="inv_name_short_kapsula_2">
+		<text>Красная капсула</text>
+	</string>
+	<string id="description_kapsula_3">
+		<text>Небольших размеров капсула, по виду сделанная из пластика или керамики. Состоит из двух половинок, но разломить ее не получается. На поверхности нарисована маленькая зеленая полоска.</text>
+	</string>
+	<string id="inv_name_kapsula_3">
+		<text>Зеленая капсула</text>
+	</string>
+	<string id="inv_name_short_kapsula_3">
+		<text>Зеленая капсула</text>
+	</string>
+	<string id="description_samopal">
+		<text>Смастерен из грубо обструганного куска дерева, трубок и изоленты. Сбоку нацарапано имя Витек.</text>
+	</string>
+	<string id="inv_name_samopal">
+		<text>Самопал Витьки</text>
+	</string>
+	<string id="inv_name_short_samopal">
+		<text>Самопал Витьки</text>
+	</string>
+	<string id="description_miln_key">
+		<text>Ключ от мельницы на Кордоне.</text>
+	</string>
+	<string id="inv_name_miln_key">
+		<text>Ключ</text>
+	</string>
+	<string id="inv_name_short_miln_key">
+		<text>Ключ от мельницы</text>
+	</string>
+	<string id="description_miln_strang_flash">
+		<text>Флешка, которая осталась от трех незнакомцев на Кордоне</text>
+	</string>
+	<string id="inv_name_miln_strang_flash">
+		<text>Флешка</text>
+	</string>
+	<string id="inv_name_short_miln_strang_flash">
+		<text>Флешка</text>
+	</string>
+	<string id="description_kamp_freezer_key">
+		<text>Ключ учёного Маркова.</text>
+	</string>
+	<string id="inv_name_kamp_freezer_key">
+		<text>Ключ Маркова</text>
+	</string>
+	<string id="inv_name_short_kamp_freezer_key">
+		<text>Ключ Маркова</text>
+	</string>
+	<string id="description_master_art">
+		<text>Имея на поясе этот артефакт, его владелец получает иммунитет от сильных всплесков пси-излучения, способных сжигать нейроны человеческого мозга. Таким образом, Череп контролёра не дает своему владельцу умереть от пси-излучения.</text>
+	</string>
+	<string id="inv_name_master_art">
+		<text>Череп контролёра</text>
+	</string>
+	<string id="inv_name_short_master_art">
+		<text>Череп контролёра</text>
+	</string>
+	<string id="description_book_list1">
+		<text>Пожелтевшая, смятая и запачканная страница из книги. Буквы сложно разобрать из-за повреждений, но можно понять, что это текст какого-то романа на русском языке.</text>
+	</string>
+	<string id="inv_name_book_list1">
+		<text>Страница</text>
+	</string>
+	<string id="inv_name_short_book_list1">
+		<text>Страница</text>
+	</string>
+	<string id="description_garbage_key">
+		<text>Ключ от двери на Свалку</text>
+	</string>
+	<string id="inv_name_garbage_key">
+		<text>Ключ Тырсы</text>
+	</string>
+	<string id="inv_name_short_garbage_key">
+		<text>Ключ Тырсы</text>
+	</string>
+	<string id="description_esc_tourist_pda">
+		<text>Этот электронный планшет пробит насквозь, возможно пулей. Если карта памяти не пострадала, то нам удастся выудить из него немного информации.</text>
+	</string>
+	<string id="inv_name_esc_tourist_pda">
+		<text>Планшет туриста</text>
+	</string>
+	<string id="inv_name_short_esc_tourist_pda">
+		<text>Планшет туриста</text>
+	</string>
+	<string id="inv_name_esc_cheramic_box">
+		<text>Керамический контейнер</text>
+	</string>
+	<string id="inv_name_short_esc_cheramic_box">
+		<text>Керамический контейнер</text>
+	</string>
+	<string id="description_lenin_bust">
+		<text>Старый гипсовый бюст В.И.Ленина. Внутри спрятан прототип ценного прибора, который был утерян. Эту штуку можно продать учёным или мафии за очень хорошие деньги.</text>
+	</string>
+	<string id="inv_name_lenin_bust">
+		<text>Ленин</text>
+	</string>
+	<string id="inv_name_short_lenin_bust">
+		<text>Ленин</text>
+	</string>
+	<string id="description_magnitofon">
+		<text>Кассетный магнитофон Легенда-404.</text>
+	</string>
+	<string id="inv_name_magnitofon">
+		<text>Магнитофон</text>
+	</string>
+	<string id="inv_name_short_magnitofon">
+		<text>Магнитофон</text>
+	</string>
+	<string id="description_dynamite_pack">
+		<text>Связка динамита. В комплекте самодельный взрыватель с таймером, изготовленный из обычных часов.</text>
+	</string>
+	<string id="inv_name_dynamite_pack">
+		<text>Динамит</text>
+	</string>
+	<string id="inv_name_short_dynamite_pack">
+		<text>Динамит</text>
+	</string>
+	<string id="description_saper_shovel">
+		<text>Старая саперная лопатка с потертой ручкой.</text>
+	</string>
+	<string id="inv_name_saper_shovel">
+		<text>Лопата</text>
+	</string>
+	<string id="inv_name_short_saper_shovel">
+		<text>Лопата</text>
+	</string>
+	<string id="description_deadman_head">
+		<text>Высохший череп, обтянутый кожей. Скорее всего, вырыт мутантами из какой-то могилы.</text>
+	</string>
+	<string id="inv_name_deadman_head">
+		<text>Башка</text>
+	</string>
+	<string id="inv_name_short_deadman_head">
+		<text>Башка</text>
+	</string>
+	<string id="description_village_house1_door_key">
+		<text>Ключ от подвала одного из домов в деревне на Кордоне.</text>
+	</string>
+	<string id="inv_name_village_house1_door_key">
+		<text>Ключ от подвала</text>
+	</string>
+	<string id="inv_name_short_village_house1_door_key">
+		<text>Ключ от подвала</text>
+	</string>
+	<string id="description_village_house2_door_key">
+		<text>Ключ, принадлежавший новичку по кличке Суслик</text>
+	</string>
+	<string id="inv_name_village_house2_door_key">
+		<text>Ключ Суслика</text>
+	</string>
+	<string id="inv_name_short_village_house2_door_key">
+		<text>Ключ Суслика</text>
+	</string>
+	<string id="description_suslik_pda">
+		<text>Этот ПДА сильно поврежден: раздавлен и пропитан насквозь засохшей кровью. Однако есть шанс, что карта памяти уцелела.</text>
+	</string>
+	<string id="inv_name_suslik_pda">
+		<text>ПДА Суслика</text>
+	</string>
+	<string id="inv_name_short_suslik_pda">
+		<text>ПДА Суслика</text>
+	</string>
+	<string id="description_ded_pihto_box">
+		<text>Старый затертый дипломат. Чтобы открыть его и ознакомиться с содержимым, следует использовать предмет в инвентаре.</text>
+	</string>
+	<string id="inv_name_ded_pihto_box">
+		<text>Дипломат</text>
+	</string>
+	<string id="inv_name_short_ded_pihto_box">
+		<text>Дипломат</text>
+	</string>
+	<string id="description_kazarma_door_key">
+		<text>Ключ от казармы блокпоста на Кордоне</text>
+	</string>
+	<string id="inv_name_kazarma_door_key">
+		<text>Ключ от казармы</text>
+	</string>
+	<string id="inv_name_short_kazarma_door_key">
+		<text>Ключ от казармы</text>
+	</string>
+	<string id="description_suslik_zapiska1">
+		<text>Дым, оставляю инструмент здесь. В деревню тащить его не хочу - наши уже начинают что-то подозревать и если я в очередной раз приду с лопатой, то наше дело может быть раскрыто. После твоей настойки мне немного лучше, но сегодня я не копал. Пойду к себе в избу, просплюсь. Если хочешь попытать счастья - можешь попробовать, лопата в ящике. Кстати, Башку я по твоему совету закопал обратно под Обелиск. Удачи.</text>
+	</string>
+	<string id="inv_name_suslik_zapiska1">
+		<text>Записка Суслика</text>
+	</string>
+	<string id="inv_name_short_suslik_zapiska1">
+		<text>Записка Суслика</text>
+	</string>
+	<string id="inv_name_bomzh_last_zapiska">
+		<text>Завещание Бомжа</text>
+	</string>
+	<string id="inv_name_short_bomzh_last_zapiska">
+		<text>Завещание Бомжа</text>
+	</string>
+	<string id="inv_name_wonder_doll">
+		<text>Кукла</text>
+	</string>
+	<string id="inv_name_short_wonder_doll">
+		<text>Кукла</text>
+	</string>
+	<string id="description_condensator">
+		<text>Конденсатор советского производства емкостью 0.07 Микрофарад.</text>
+	</string>
+	<string id="inv_name_condensator">
+		<text>Конденсатор</text>
+	</string>
+	<string id="inv_name_short_condensator">
+		<text>Конденсатор</text>
+	</string>
+	<string id="description_dar_explorors_zapiska1">
+		<text>Записка Крысобоя</text>
+	</string>
+	<string id="inv_name_dar_explorors_zapiska1">
+		<text>Записка</text>
+	</string>
+	<string id="inv_name_short_dar_explorors_zapiska1">
+		<text>Записка</text>
+	</string>
+	<string id="description_dar_explorers_key">
+		<text>Ключ от убежища Крысобоя</text>
+	</string>
+	<string id="inv_name_dar_explorers_key">
+		<text>Ключ</text>
+	</string>
+	<string id="inv_name_short_dar_explorers_key">
+		<text>Ключ</text>
+	</string>
+	<string id="description_madhunter_diary">
+		<text>Дневник сошедшего с ума новичка</text>
+	</string>
+	<string id="inv_name_madhunter_diary">
+		<text>Дневник Поехавшего</text>
+	</string>
+	<string id="inv_name_short_madhunter_diary">
+		<text>Дневник Поехавшего</text>
+	</string>
+	<string id="description_ratter_diary">
+		<text>Дневник разведчика Крысобоя.</text>
+	</string>
+	<string id="inv_name_ratter_diary">
+		<text>Дневник Крысобоя</text>
+	</string>
+	<string id="inv_name_short_ratter_diary">
+		<text>Дневник Крысобоя</text>
+	</string>
+	<string id="description_dar_fadric_ballon1">
+		<text>Баллон с остатками сжиженого газа пропана</text>
+	</string>
+	<string id="inv_name_dar_fadric_ballon1">
+		<text>Пропан</text>
+	</string>
+	<string id="inv_name_short_dar_fadric_ballon1">
+		<text>Пропан</text>
+	</string>
+	<string id="description_dar_fadric_ballon2">
+		<text>Баллон с остатками сжиженого кислорода</text>
+	</string>
+	<string id="inv_name_dar_fadric_ballon2">
+		<text>Кислород</text>
+	</string>
+	<string id="inv_name_short_dar_fadric_ballon2">
+		<text>Кислород</text>
+	</string>
+	<string id="description_dar_fadric_rezak">
+		<text>Газовый резак для проведения демонтажных работ. Для активации необходимы кислород и пропан.</text>
+	</string>
+	<string id="inv_name_dar_fadric_rezak">
+		<text>Резак</text>
+	</string>
+	<string id="inv_name_short_dar_fadric_rezak">
+		<text>Резак</text>
+	</string>
+	<string id="description_af_hive">
+		<text>Странный предмет, похожий на небольшой пчелиный улей. Наощупь теплый, если прислушаться, то можно услышать тихое гудение, исходящее изнутри.</text>
+	</string>
+	<string id="inv_name_af_hive">
+		<text>Улей</text>
+	</string>
+	<string id="inv_name_short_af_hive">
+		<text>Улей</text>
+	</string>
+	<string id="description_dar_zapravka_door_key">
+		<text>Ключ, принадлежавший покончившему с собой туристу.</text>
+	</string>
+	<string id="inv_name_dar_zapravka_door_key">
+		<text>Ключ Патрика</text>
+	</string>
+	<string id="inv_name_short_dar_zapravka_door_key">
+		<text>Ключ Патрика</text>
+	</string>
+	<string id="description_dar_zapravka_suicider_zapis">
+		<text>Дневник покончившего с собой туриста Патрика.</text>
+	</string>
+	<string id="inv_name_dar_zapravka_suicider_zapis">
+		<text>Дневник Патрика</text>
+	</string>
+	<string id="inv_name_short_dar_zapravka_suicider_zapis">
+		<text>Дневник Патрика</text>
+	</string>
+	<string id="description_dar_krane_sniper_diary">
+		<text>Записка, найденная в кабине строительного крана на фабрике в Долине. Судя по содержанию, принадлежала некому Ворпалу.</text>
+	</string>
+	<string id="inv_name_dar_krane_sniper_diary">
+		<text>Записка Ворпала</text>
+	</string>
+	<string id="inv_name_short_dar_krane_sniper_diary">
+		<text>Записка Ворпала</text>
+	</string>
+	<string id="description_dar_oficer_planshet">
+		<text>Планшет, принадлежавший погибшему от пси-излучения офицеру. Содержит некоторые документы и карту с какими-то пометками.</text>
+	</string>
+	<string id="inv_name_dar_oficer_planshet">
+		<text>Планшет офицера</text>
+	</string>
+	<string id="inv_name_short_dar_oficer_planshet">
+		<text>Планшет офицера</text>
+	</string>
+	<string id="description_dar_kamaz_box_key">
+		<text>Ключ, принадлежавший погибшему водителю грузовика, перевозившего ценный груз через Долину.</text>
+	</string>
+	<string id="inv_name_dar_kamaz_box_key">
+		<text>Ключ Павора</text>
+	</string>
+	<string id="inv_name_short_dar_kamaz_box_key">
+		<text>Ключ Павора</text>
+	</string>
+	<string id="description_radiostation_fake">
+		<text>Неработающая портативная радиостанция. Аккумулятор присутствует и заряжен, но ни прием, ни передача сигнала не работают.</text>
+	</string>
+	<string id="inv_name_radiostation_fake">
+		<text>Радиостанция</text>
+	</string>
+	<string id="inv_name_short_radiostation_fake">
+		<text>Радиостанция</text>
+	</string>
+	<string id="description_farm_renegades_box">
+		<text>Плотно заколоченный тяжелый ящик. Судя по внешнему виду сколочен из досок, но при осмотре становится заметно, что кто-то уже безуспешно пытался его вскрыть. Однако цель не была достигнута, так как под деревянной обшивкой виднеется вторая, более крепкая металлическая оболочка.</text>
+	</string>
+	<string id="inv_name_farm_renegades_box">
+		<text>Ящик с хабаром</text>
+	</string>
+	<string id="inv_name_short_farm_renegades_box">
+		<text>Ящик с хабаром</text>
+	</string>
+	<string id="description_dar_farm_seif_docs">
+		<text>Документы, проливающие свет на захоронения опасных материалов, расположенных в некоторых местах Зоны.</text>
+	</string>
+	<string id="inv_name_dar_farm_seif_docs">
+		<text>Отчет о захоронениях</text>
+	</string>
+	<string id="inv_name_short_dar_farm_seif_docs">
+		<text>Отчет о захоронениях</text>
+	</string>
+	<string id="description_dar_farm_seif_key">
+		<text>Ключ профессора Бадера. Отпирает прочный контейнер с ценным научным прибором, оставленный учёными на ферме в Долине.</text>
+	</string>
+	<string id="inv_name_dar_farm_seif_key">
+		<text>Ключ Бадера</text>
+	</string>
+	<string id="inv_name_short_dar_farm_seif_key">
+		<text>Ключ Бадера</text>
+	</string>
+	<string id="inv_name_deadzone_dezintegrator">
+		<text>Дезинтегратор ДАН-15</text>
+	</string>
+	<string id="inv_name_short_deadzone_dezintegrator">
+		<text>Дезинтегратор ДАН-15</text>
+	</string>
+	<string id="description_dyatlovs_group_man3_zapis">
+		<text>Записка, найденная в кабине строительного крана в ангаре на Свалке.</text>
+	</string>
+	<string id="inv_name_dyatlovs_group_man3_zapis">
+		<text>Записка Сёмы</text>
+	</string>
+	<string id="inv_name_short_dyatlovs_group_man3_zapis">
+		<text>Записка Сёмы</text>
+	</string>
+	<string id="description_dyatlovs_man_pda1">
+		<text>ПДА Сёмы</text>
+	</string>
+	<string id="inv_name_dyatlovs_man_pda1">
+		<text>ПДА Сёмы</text>
+	</string>
+	<string id="inv_name_short_dyatlovs_man_pda1">
+		<text>ПДА Сёмы</text>
+	</string>
+	<string id="description_dyatlovs_man_pda2">
+		<text>ПДА Кривого</text>
+	</string>
+	<string id="inv_name_dyatlovs_man_pda2">
+		<text>ПДА Кривого</text>
+	</string>
+	<string id="inv_name_short_dyatlovs_man_pda2">
+		<text>ПДА Кривого</text>
+	</string>
+	<string id="description_dyatlovs_seif">
+		<text>Средних размеров сейф из крепкого металла. Кодовый замок сильно заржавел, вряд-ли его можно открыть, даже зная код. Внутри что-то очень тяжелое.</text>
+	</string>
+	<string id="inv_name_dyatlovs_seif">
+		<text>Сейф мародёра</text>
+	</string>
+	<string id="inv_name_short_dyatlovs_seif">
+		<text>Сейф мародёра</text>
+	</string>
+	<string id="description_capsula_alpha">
+		<text>Колба из огнеупорного кислотостойкого материала. Внутри находится какое-то светлое полупрозрачное вещество.</text>
+	</string>
+	<string id="inv_name_capsula_alpha">
+		<text>Колба №1</text>
+	</string>
+	<string id="inv_name_short_capsula_alpha">
+		<text>Колба №1</text>
+	</string>
+	<string id="description_capsula_beta">
+		<text>Колба из огнеупорного кислотостойкого материала. Внутри находится какое-то желтое полупрозрачное вещество.</text>
+	</string>
+	<string id="inv_name_capsula_beta">
+		<text>Колба №2</text>
+	</string>
+	<string id="inv_name_short_capsula_beta">
+		<text>Колба №2</text>
+	</string>
+	<string id="description_capsula_gamma">
+		<text>Колба из огнеупорного кислотостойкого материала. Внутри находится какое-то зеленое полупрозрачное вещество.</text>
+	</string>
+	<string id="inv_name_capsula_gamma">
+		<text>Колба №3</text>
+	</string>
+	<string id="inv_name_short_capsula_gamma">
+		<text>Колба №3</text>
+	</string>
+	<string id="description_garb_zaz_key">
+		<text>Ключ от запорожца</text>
+	</string>
+	<string id="inv_name_garb_zaz_key">
+		<text>Ключ</text>
+	</string>
+	<string id="inv_name_short_garb_zaz_key">
+		<text>Ключ от запорожца</text>
+	</string>
+	<string id="description_agr_fabrik_papka">
+		<text>Папка с документами главного инженера фабрики на Агропроме.</text>
+	</string>
+	<string id="inv_name_agr_fabrik_papka">
+		<text>Папка главного инженера</text>
+	</string>
+	<string id="inv_name_short_agr_fabrik_papka">
+		<text>Папка главного инженера</text>
+	</string>
+	<string id="description_agr_fabrik_electroshema">
+		<text>Электрическая схема фабрики на Агропроме. Выполнена на бумаге. Из-за того, что долго пролежала в плохих условиях, обозначения на ней различимы с трудом.</text>
+	</string>
+	<string id="inv_name_agr_fabrik_electroshema">
+		<text>Электросхема</text>
+	</string>
+	<string id="inv_name_short_agr_fabrik_electroshema">
+		<text>Электросхема</text>
+	</string>
+	<string id="description_esc_btr_planshet">
+		<text>Электронный планшет в защитной оболочке. Поврежден, но работает. В памяти заложены карты военной экспедиции. Чтобы скачать их на ПДА, нужно использовать предмет в инвентаре.</text>
+	</string>
+	<string id="inv_name_esc_btr_planshet">
+		<text>Планшет</text>
+	</string>
+	<string id="inv_name_short_esc_btr_planshet">
+		<text>Планшет</text>
+	</string>
+	<string id="description_agr_fabrik_seif_key">
+		<text>Связка ключей от подсобных, бытовых и прочих помещений фабрики Агропрома. Присутствует ключ от сейфа с документами.</text>
+	</string>
+	<string id="inv_name_agr_fabrik_seif_key">
+		<text>Ключи</text>
+	</string>
+	<string id="inv_name_short_agr_fabrik_seif_key">
+		<text>Ключи</text>
+	</string>
+	<string id="description_garb_convoy_scientist_pda">
+		<text>ПДА, принадлежавший одному из учёных, эвакуированных из НИИ Агропром</text>
+	</string>
+	<string id="inv_name_garb_convoy_scientist_pda">
+		<text>ПДА учёного из НИИ</text>
+	</string>
+	<string id="inv_name_short_garb_convoy_scientist_pda">
+		<text>ПДА учёного из НИИ</text>
+	</string>
+	<string id="description_agrund_door1_key">
+		<text>Пластиковая ключ-карта, открывающая дверь в подземелье Агропрома.</text>
+	</string>
+	<string id="inv_name_agrund_door1_key">
+		<text>Ключ-карта</text>
+	</string>
+	<string id="inv_name_short_agrund_door1_key">
+		<text>Ключ-карта</text>
+	</string>
+	<string id="description_agrund_questart1">
+		<text>Шарик красного цвета из непонятного вещества, размером с теннисный мяч. Наощупь твердый и холодный. Довольно увесистый, словно бы сделан из свинца. Аномальных свойств не имеет.</text>
+	</string>
+	<string id="inv_name_agrund_questart1">
+		<text>Красный шарик</text>
+	</string>
+	<string id="inv_name_short_agrund_questart1">
+		<text>Красный шарик</text>
+	</string>
+	<string id="description_agrund_questart2">
+		<text>Шарик синего цвета из непонятного вещества, размером с теннисный мяч. Наощупь твердый и холодный. Довольно увесистый, словно бы сделан из свинца. Аномальных свойств не имеет.</text>
+	</string>
+	<string id="inv_name_agrund_questart2">
+		<text>Синий шарик</text>
+	</string>
+	<string id="inv_name_short_agrund_questart2">
+		<text>Синий шарик</text>
+	</string>
+	<string id="description_agrund_questart3">
+		<text>Шарик зеленого цвета из непонятного вещества, размером с теннисный мяч. Наощупь твердый и холодный. Довольно увесистый, словно бы сделан из свинца. Аномальных свойств не имеет.</text>
+	</string>
+	<string id="inv_name_agrund_questart3">
+		<text>Зеленый шарик</text>
+	</string>
+	<string id="inv_name_short_agrund_questart3">
+		<text>Зеленый шарик</text>
+	</string>
+	<string id="description_agr_vagon_key">
+		<text>Ключ от убежища разведчика на Агропроме</text>
+	</string>
+	<string id="inv_name_agr_vagon_key">
+		<text>Ключ разведчика</text>
+	</string>
+	<string id="inv_name_short_agr_vagon_key">
+		<text>Ключ разведчика</text>
+	</string>
+	<string id="description_unic_flyaga_empty">
+		<text>Металлическая фляга, принадлежавшая опытному разведчику. Побывав в когтях мутанта, предмет обрел некие аномальные свойства: выпитая из нее вода намного лучше утоляет жажду. Кроме того, грязная вода из луж и болот, набранная в нее, прямо на глазах становится чистой. Единственный недостаток - небольшой объем.</text>
+	</string>
+	<string id="inv_name_unic_flyaga_empty">
+		<text>Пустая фляжка</text>
+	</string>
+	<string id="inv_name_short_unic_flyaga_empty">
+		<text>Пустая фляжка</text>
+	</string>
+	<string id="description_wpn_aug_broken">
+		<text>Поврежденная аномалией винтовка Steyr AUG. Отсутствует часть ствола и затвора. Вряд-ли это оружие можно будет починить в полевых условиях, но вот как источник запчастей оно вполне подойдет.</text>
+	</string>
+	<string id="inv_name_wpn_aug_broken">
+		<text>Сломаная винтовка</text>
+	</string>
+	<string id="inv_name_short_wpn_aug_broken">
+		<text>Сломаная винтовка</text>
+	</string>
+	<string id="description_hammer">
+		<text>Слесарный молоток.</text>
+	</string>
+	<string id="inv_name_hammer">
+		<text>Молоток</text>
+	</string>
+	<string id="inv_name_short_hammer">
+		<text>Молоток</text>
+	</string>
+	<string id="description_screwdriver">
+		<text>Отвертка.</text>
+	</string>
+	<string id="inv_name_screwdriver">
+		<text>Отвертка</text>
+	</string>
+	<string id="inv_name_short_screwdriver">
+		<text>Отвертка</text>
+	</string>
+	<string id="description_wrench1">
+		<text>Гаечный ключ 24х30</text>
+	</string>
+	<string id="inv_name_wrench1">
+		<text>Гаечный ключ</text>
+	</string>
+	<string id="inv_name_short_wrench1">
+		<text>Гаечный ключ</text>
+	</string>
+	<string id="description_wrench2">
+		<text>Разводной ключ 3 номер.</text>
+	</string>
+	<string id="inv_name_wrench2">
+		<text>Разводной ключ</text>
+	</string>
+	<string id="inv_name_short_wrench2">
+		<text>Разводной ключ</text>
+	</string>
+	<string id="description_vise">
+		<text>Тиски переносные.</text>
+	</string>
+	<string id="inv_name_vise">
+		<text>Тиски</text>
+	</string>
+	<string id="inv_name_short_vise">
+		<text>Тиски</text>
+	</string>
+	<string id="description_pda_ochkaric">
+		<text>Этот ПДА долгое время пролежал под открытым небом. Батарея разряжена, микросхемы залиты водой - вряд-ли он заработает. Однако карта памяти вроде-бы цела.</text>
+	</string>
+	<string id="inv_name_pda_ochkaric">
+		<text>ПДА Очкарика</text>
+	</string>
+	<string id="inv_name_short_pda_ochkaric">
+		<text>ПДА Очкарика</text>
+	</string>
+	<string id="description_ochkarik_lamp_zapiska">
+		<text>Записка с координатами местонахождения т.н. Смерть-лампы, а также с инструкцией ее получения.</text>
+	</string>
+	<string id="inv_name_ochkarik_lamp_zapiska">
+		<text>Записка Очкарика</text>
+	</string>
+	<string id="inv_name_short_ochkarik_lamp_zapiska">
+		<text>Записка Очкарика</text>
+	</string>
+	<string id="description_item_deathlamp">
+		<text>С виду обычный старый прожектор, а на самом деле смертельно опасный артефакт. Представляет особую ценность для науки и некоторых других личностей.</text>
+	</string>
+	<string id="inv_name_item_deathlamp">
+		<text>Смерть-лампа</text>
+	</string>
+	<string id="inv_name_short_item_deathlamp">
+		<text>Смерть-лампа</text>
+	</string>
+	<string id="description_esc_madhunter_pda">
+		<text>ПДА Крысюка</text>
+	</string>
+	<string id="inv_name_esc_madhunter_pda">
+		<text>ПДА Крысюка</text>
+	</string>
+	<string id="inv_name_short_esc_madhunter_pda">
+		<text>ПДА Крысюка</text>
+	</string>
+	<string id="description_agr_kazarma_pogon1">
+		<text>Погон полковника левый</text>
+	</string>
+	<string id="inv_name_agr_kazarma_pogon1">
+		<text>Погон</text>
+	</string>
+	<string id="inv_name_short_agr_kazarma_pogon1">
+		<text>Погон</text>
+	</string>
+	<string id="description_agr_kazarma_pogon2">
+		<text>Погон полковника правый</text>
+	</string>
+	<string id="inv_name_agr_kazarma_pogon2">
+		<text>Погон</text>
+	</string>
+	<string id="inv_name_short_agr_kazarma_pogon2">
+		<text>Погон</text>
+	</string>
+	<string id="description_agr_kazarma_key">
+		<text>Ключ от одной из казарм на Агропроме</text>
+	</string>
+	<string id="inv_name_agr_kazarma_key">
+		<text>Ключ полковника</text>
+	</string>
+	<string id="inv_name_short_agr_kazarma_key">
+		<text>Ключ полковника</text>
+	</string>
+	<string id="description_agrund_hunter3_kolba">
+		<text>Колба с неизвестным веществом</text>
+	</string>
+	<string id="inv_name_agrund_hunter3_kolba">
+		<text>Колба</text>
+	</string>
+	<string id="inv_name_short_agrund_hunter3_kolba">
+		<text>Колба</text>
+	</string>
+	<string id="description_agrund_virus_konteyner">
+		<text>Белый пластиковый контейнер. Довольно увесистый, к тому же заперт на простой с виду замок, который можно открыть. На крышке напечатан номер 11-78.</text>
+	</string>
+	<string id="inv_name_agrund_virus_konteyner">
+		<text>Контейнер №11-78</text>
+	</string>
+	<string id="inv_name_short_agrund_virus_konteyner">
+		<text>Контейнер №11-78</text>
+	</string>
+	<string id="description_generator_candle">
+		<text>Свеча зажигания. Подходит как для отечественных автомобилей, так и для дизельных генераторов.</text>
+	</string>
+	<string id="inv_name_generator_candle">
+		<text>Свеча зажигания</text>
+	</string>
+	<string id="inv_name_short_generator_candle">
+		<text>Свеча зажигания</text>
+	</string>
+	<string id="description_radpit_manometr">
+		<text>Прибор, предназначенный для снятия показаний давления в энергетических установках.</text>
+	</string>
+	<string id="inv_name_radpit_manometr">
+		<text>Манометр</text>
+	</string>
+	<string id="inv_name_short_radpit_manometr">
+		<text>Манометр</text>
+	</string>
+	<string id="description_radpit_klapan">
+		<text>Деталь одной из энергетических установок.</text>
+	</string>
+	<string id="inv_name_radpit_klapan">
+		<text>Клапан</text>
+	</string>
+	<string id="inv_name_short_radpit_klapan">
+		<text>Клапан</text>
+	</string>
+	<string id="inv_name_biboran">
+		<text>Священный Биборан</text>
+	</string>
+	<string id="inv_name_short_biboran">
+		<text>Священный Биборан</text>
+	</string>
+	<string id="description_mushroom_nastoyka">
+		<text>Настойка на радиоактивных грибах. Для человека - яд, для подопытных - бодрящий напиток.</text>
+	</string>
+	<string id="inv_name_mushroom_nastoyka">
+		<text>Настойка</text>
+	</string>
+	<string id="inv_name_short_mushroom_nastoyka">
+		<text>Настойка</text>
+	</string>
+	<string id="description_x18coder">
+		<text>Прибор, с помощью которого можно задавать коды на кодовые замки.</text>
+	</string>
+	<string id="inv_name_x18coder">
+		<text>Кодер</text>
+	</string>
+	<string id="inv_name_short_x18coder">
+		<text>Кодер</text>
+	</string>
+	<string id="description_x18oficer_key">
+		<text>Ключ офицера безопасности из подземной лаборатории.</text>
+	</string>
+	<string id="inv_name_x18oficer_key">
+		<text>Ключ офицера</text>
+	</string>
+	<string id="inv_name_short_x18oficer_key">
+		<text>Ключ офицера</text>
+	</string>
+	<string id="description_x18komendant_key">
+		<text>Ключ коменданта из подземной лаборатории.</text>
+	</string>
+	<string id="inv_name_x18komendant_key">
+		<text>Ключ коменданта</text>
+	</string>
+	<string id="inv_name_short_x18komendant_key">
+		<text>Ключ коменданта</text>
+	</string>
+	<string id="description_x18oficer_book">
+		<text>Блокнот офицера безопасности из подземной лаборатории.</text>
+	</string>
+	<string id="inv_name_x18oficer_book">
+		<text>Блокнот офицера</text>
+	</string>
+	<string id="inv_name_short_x18oficer_book">
+		<text>Блокнот офицера</text>
+	</string>
+	<string id="description_x18_ruined_dokuments">
+		<text>Пачка документов, сильно испорченных крысами и влагой. Разобрать можно разве что отдельные слова. Характер документа непонятен.</text>
+	</string>
+	<string id="inv_name_x18_ruined_dokuments">
+		<text>Испорченные документы</text>
+	</string>
+	<string id="inv_name_short_x18_ruined_dokuments">
+		<text>Испорченные документы</text>
+	</string>
+	<string id="description_perfocard">
+		<text>Пластиковая карта, используемая в некоторых ЭВМ старого образца.</text>
+	</string>
+	<string id="inv_name_perfocard">
+		<text>Перфокарта</text>
+	</string>
+	<string id="inv_name_short_perfocard">
+		<text>Перфокарта</text>
+	</string>
+	<string id="description_esc_carcrash_pda">
+		<text>ПДА, доступ к памяти которого защищен паролем</text>
+	</string>
+	<string id="inv_name_esc_carcrash_pda">
+		<text>ПДА с паролем</text>
+	</string>
+	<string id="inv_name_short_esc_carcrash_pda">
+		<text>ПДА с паролем</text>
+	</string>
+	<string id="description_x18_disketa1">
+		<text>Старая дискета без маркировки. На поверхности карандашом написано число 23.</text>
+	</string>
+	<string id="inv_name_x18_disketa1">
+		<text>Дискета №23</text>
+	</string>
+	<string id="inv_name_short_x18_disketa1">
+		<text>Дискета №23</text>
+	</string>
+	<string id="description_x18_disketa2">
+		<text>Старая дискета без маркировки. На поверхности карандашом написано число 14.</text>
+	</string>
+	<string id="inv_name_x18_disketa2">
+		<text>Дискета №14</text>
+	</string>
+	<string id="inv_name_short_x18_disketa2">
+		<text>Дискета №14</text>
+	</string>
+	<string id="description_x18_disketa3">
+		<text>Старая дискета без маркировки. На поверхности карандашом написано число 8.</text>
+	</string>
+	<string id="inv_name_x18_disketa3">
+		<text>Дискета №8</text>
+	</string>
+	<string id="inv_name_short_x18_disketa3">
+		<text>Дискета №8</text>
+	</string>
+	<string id="description_x18_microshema1">
+		<text>Большая микросхемма-модуль. По видимому предназначена для некой вычислительной машины.</text>
+	</string>
+	<string id="inv_name_x18_microshema1">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="inv_name_short_x18_microshema1">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="description_x18_microshema2">
+		<text>Большая микросхемма-модуль. По видимому предназначена для некой вычислительной машины.</text>
+	</string>
+	<string id="inv_name_x18_microshema2">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="inv_name_short_x18_microshema2">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="description_x18_microshema3">
+		<text>Большая микросхемма-модуль. По видимому предназначена для некой вычислительной машины.</text>
+	</string>
+	<string id="inv_name_x18_microshema3">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="inv_name_short_x18_microshema3">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="description_x18_microshema4">
+		<text>Малая микросхемма-модуль. По видимому предназначена для некой вычислительной машины.</text>
+	</string>
+	<string id="inv_name_x18_microshema4">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="inv_name_short_x18_microshema4">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="description_x18_microshema5">
+		<text>Малая микросхемма-модуль. По видимому предназначена для некой вычислительной машины.</text>
+	</string>
+	<string id="inv_name_x18_microshema5">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="inv_name_short_x18_microshema5">
+		<text>Электронный модуль</text>
+	</string>
+	<string id="description_btr_reduktor">
+		<text>Редуктор от БТР-а. Не новый, но состояние удовлетворительное.</text>
+	</string>
+	<string id="inv_name_btr_reduktor">
+		<text>Редуктор</text>
+	</string>
+	<string id="inv_name_short_btr_reduktor">
+		<text>Редуктор</text>
+	</string>
+	<string id="description_pliers">
+		<text>Ручной инструмент, с помощью которого можно выполнять ремонт электрооборудования. Поскольку инструмент не заизолирован, то работать с ним желательно в диэлектрических перчатках.</text>
+	</string>
+	<string id="inv_name_pliers">
+		<text>Плоскогубцы</text>
+	</string>
+	<string id="inv_name_short_pliers">
+		<text>Плоскогубцы</text>
+	</string>
+	<string id="description_x18_door1_card">
+		<text>Ключ-карта от бронированной двери, ведущей ко второму уровню лаборатории.</text>
+	</string>
+	<string id="inv_name_x18_door1_card">
+		<text>Ключ-карта</text>
+	</string>
+	<string id="inv_name_short_x18_door1_card">
+		<text>Ключ-карта</text>
+	</string>
+	<string id="description_x18doctors_key">
+		<text>Ключ доктора Крылова из подземной лаборатории. Подходит к личному сейфу учёного, а также к кладовой, где содержатся конфискованные у разведчиков вещи.</text>
+	</string>
+	<string id="inv_name_x18doctors_key">
+		<text>Ключ доктора</text>
+	</string>
+	<string id="inv_name_short_x18doctors_key">
+		<text>Ключ доктора</text>
+	</string>
+	<string id="description_x18_subj_documents">
+		<text>Личные дела заключенных, над которыми проводились опыты в лаборатории Х-18.</text>
+	</string>
+	<string id="inv_name_x18_subj_documents">
+		<text>Документы подопытных</text>
+	</string>
+	<string id="inv_name_short_x18_subj_documents">
+		<text>Документы подопытных</text>
+	</string>
+	<string id="description_izlom_drugs">
+		<text>Лекарство от головной боли.</text>
+	</string>
+	<string id="inv_name_izlom_drugs">
+		<text>Лекарство</text>
+	</string>
+	<string id="inv_name_short_izlom_drugs">
+		<text>Лекарство</text>
+	</string>
+	<string id="description_dar_build_oficer_key">
+		<text>Ключ командира отряда агентов, засевшего в Недостройке в Долине. Открывает арсенал отряда на первом этаже.</text>
+	</string>
+	<string id="inv_name_dar_build_oficer_key">
+		<text>Ключ командира агентов</text>
+	</string>
+	<string id="inv_name_short_dar_build_oficer_key">
+		<text>Ключ командира агентов</text>
+	</string>
+	<string id="description_dar_build_tehnik_key">
+		<text>Ключ техника агентов, засевшего в Недостройке в Долине. Открывает дверь генераторной на верхнем этаже.</text>
+	</string>
+	<string id="inv_name_dar_build_tehnik_key">
+		<text>Ключ техника агентов</text>
+	</string>
+	<string id="inv_name_short_dar_build_tehnik_key">
+		<text>Ключ техника агентов</text>
+	</string>
+	<string id="description_reketirs_zapiska">
+		<text>Если ты хочешь увидеть своих корешей живыми, то бери один лимон бабла и приходи сам к чёрному леску, что за лужей. Приведешь кого - мы сразу корешей твоих придушим. Тырса.</text>
+	</string>
+	<string id="inv_name_reketirs_zapiska">
+		<text>Записка рекетиров</text>
+	</string>
+	<string id="inv_name_short_reketirs_zapiska">
+		<text>Записка рекетиров</text>
+	</string>
+	<string id="description_tirsa_pda">
+		<text>Личный ПДА Тырсы</text>
+	</string>
+	<string id="inv_name_tirsa_pda">
+		<text>ПДА Тырсы</text>
+	</string>
+	<string id="inv_name_short_tirsa_pda">
+		<text>ПДА Тырсы</text>
+	</string>
+	<string id="description_bar_raciya">
+		<text>Рация, найденная в окрестностях завода Росток.</text>
+	</string>
+	<string id="inv_name_bar_raciya">
+		<text>Рация</text>
+	</string>
+	<string id="inv_name_short_bar_raciya">
+		<text>Рация</text>
+	</string>
+	<string id="description_bar_bunkerzombie_pda">
+		<text>ПДА лидера группы разведчиков, засевших в подвале завода Росток</text>
+	</string>
+	<string id="inv_name_bar_bunkerzombie_pda">
+		<text>ПДА разведчиков с Ростка</text>
+	</string>
+	<string id="inv_name_short_bar_bunkerzombie_pda">
+		<text>ПДА разведчиков с Ростка</text>
+	</string>
+	<string id="description_bar_bunkerdoor_key">
+		<text>Ключ лидера группы разведчиков, засевших в подвале завода Росток</text>
+	</string>
+	<string id="inv_name_bar_bunkerdoor_key">
+		<text>Ключ разведчиков с Ростка</text>
+	</string>
+	<string id="inv_name_short_bar_bunkerdoor_key">
+		<text>Ключ разведчиков с Ростка</text>
+	</string>
+	<string id="description_cheburashka">
+		<text>Потрепанная плюшевая игрушка. С ее помощью можно приманить мутанта-карлика с завода Росток. Чтобы отдать игрушку мутанту, нужно подойти к нему на близкое расстояние и использовать ее в инвентаре.</text>
+	</string>
+	<string id="inv_name_cheburashka">
+		<text>Чебурашка</text>
+	</string>
+	<string id="inv_name_short_cheburashka">
+		<text>Чебурашка</text>
+	</string>
+	<string id="description_bar_sklad_seif_key">
+		<text>Ключ от сейфа-схрона выживших с завода Росток</text>
+	</string>
+	<string id="inv_name_bar_sklad_seif_key">
+		<text>Ключ от сейфа</text>
+	</string>
+	<string id="inv_name_short_bar_sklad_seif_key">
+		<text>Ключ от сейфа</text>
+	</string>
+	<string id="description_bar_vakcine_ballon">
+		<text>Герметичный баллон, в котором под давлением содержится вакцина от мутировавшего вируса, распостраненного на заводе Росток.</text>
+	</string>
+	<string id="inv_name_bar_vakcine_ballon">
+		<text>Баллон с вакциной</text>
+	</string>
+	<string id="inv_name_short_bar_vakcine_ballon">
+		<text>Баллон с вакциной</text>
+	</string>
+	<string id="description_camerer_box">
+		<text>Дипломат, принадлежащий Маскиму Камерреру.</text>
+	</string>
+	<string id="inv_name_camerer_box">
+		<text>Дипломат Камеррера</text>
+	</string>
+	<string id="inv_name_short_camerer_box">
+		<text>Дипломат Камеррера</text>
+	</string>
+	<string id="description_camerer_pda">
+		<text>ПДА ассистента Иванцова, помощника Максима Камеррера.</text>
+	</string>
+	<string id="inv_name_camerer_pda">
+		<text>ПДА ассистента</text>
+	</string>
+	<string id="inv_name_short_camerer_pda">
+		<text>ПДА ассистента</text>
+	</string>
+	<string id="description_agr_camerer_key">
+		<text>Ключ от кейса Камеррера</text>
+	</string>
+	<string id="inv_name_agr_camerer_key">
+		<text>Ключ от кейса</text>
+	</string>
+	<string id="inv_name_short_agr_camerer_key">
+		<text>Ключ от кейса</text>
+	</string>
+	<string id="description_camerer_docks">
+		<text>Документы, содержащие информацию о научной работе Максима Камеррера в НИИ Агропром. Содержат чисто научную информцию: таблицы, схемы, отчеты, графики. Без специального образования понять почти ничего нельзя, но создается впечатление, что Камеррер работал над изобретением какого-то нового лекарства.</text>
+	</string>
+	<string id="inv_name_camerer_docks">
+		<text>Документы Камеррера</text>
+	</string>
+	<string id="inv_name_short_camerer_docks">
+		<text>Документы Камеррера</text>
+	</string>
+	<string id="description_bar_karlik_docs1">
+		<text>Документы, содержащие информацию о черезвычайном происшествии, случившемся на заводе.</text>
+	</string>
+	<string id="inv_name_bar_karlik_docs1">
+		<text>Документы с завода Росток</text>
+	</string>
+	<string id="inv_name_short_bar_karlik_docs1">
+		<text>Документы с завода Росток</text>
+	</string>
+	<string id="description_bar_karlik_docs2">
+		<text>Документы, содержащие информацию о черезвычайном происшествии, случившемся на заводе.</text>
+	</string>
+	<string id="inv_name_bar_karlik_docs2">
+		<text>Документы с завода Росток</text>
+	</string>
+	<string id="inv_name_short_bar_karlik_docs2">
+		<text>Документы с завода Росток</text>
+	</string>
+	<string id="description_bar_komendant_key">
+		<text>Ключ от кабинета коменданта завода Росток. Также подходит к двери котельной.</text>
+	</string>
+	<string id="inv_name_bar_komendant_key">
+		<text>Ключ коменданта</text>
+	</string>
+	<string id="inv_name_short_bar_komendant_key">
+		<text>Ключ коменданта</text>
+	</string>
+	<string id="description_kondensator_big">
+		<text>Большой конденсатор советского производства емкостью 10 Микрофарад.</text>
+	</string>
+	<string id="inv_name_kondensator_big">
+		<text>Конденсатор</text>
+	</string>
+	<string id="inv_name_short_kondensator_big">
+		<text>Конденсатор</text>
+	</string>
+	<string id="description_kondensator_anomal">
+		<text>После того, как этот конденсатор вобрал в себя энергию аномалии, он заметно потеплел наощупь, а между контактами иногда стали проскакивать искры.</text>
+	</string>
+	<string id="inv_name_kondensator_anomal">
+		<text>Конденсатор</text>
+	</string>
+	<string id="inv_name_short_kondensator_anomal">
+		<text>Конденсатор</text>
+	</string>
+	<string id="description_ros_galery_key">
+		<text>Ключ галереи на заводе Росток</text>
+	</string>
+	<string id="inv_name_ros_galery_key">
+		<text>Ключ от галереи</text>
+	</string>
+	<string id="inv_name_short_ros_galery_key">
+		<text>Ключ от галереи</text>
+	</string>
+	<string id="description_ros_garage_key">
+		<text>Ключ гаража на заводе Росток</text>
+	</string>
+	<string id="inv_name_ros_garage_key">
+		<text>Ключ от гаража</text>
+	</string>
+	<string id="inv_name_short_ros_garage_key">
+		<text>Ключ от гаража</text>
+	</string>
+	<string id="description_ros_hunter2_diary1">
+		<text>Описание</text>
+	</string>
+	<string id="inv_name_ros_hunter2_diary1">
+		<text>Дневник Григория ч.1</text>
+	</string>
+	<string id="inv_name_short_ros_hunter2_diary1">
+		<text>Дневник Григория ч.1</text>
+	</string>
+	<string id="description_ros_acid_bottle">
+		<text>Плотно закупоренная бутылка с этикеткой, на которой имеется надпись: H2SO4.</text>
+	</string>
+	<string id="inv_name_ros_acid_bottle">
+		<text>Бутыль с кислотой</text>
+	</string>
+	<string id="inv_name_short_ros_acid_bottle">
+		<text>Бутыль с кислотой</text>
+	</string>
+	<string id="description_ros_house_keis">
+		<text>Кейс главного инженра завода Росток.</text>
+	</string>
+	<string id="inv_name_ros_house_keis">
+		<text>Кейс главного инженра</text>
+	</string>
+	<string id="inv_name_short_ros_house_keis">
+		<text>Кейс главного инженра</text>
+	</string>
+	<string id="description_ros_house_diary1">
+		<text>Записи директора завода Росток.</text>
+	</string>
+	<string id="inv_name_ros_house_diary1">
+		<text>Дневник директора завода</text>
+	</string>
+	<string id="inv_name_short_ros_house_diary1">
+		<text>Дневник директора завода</text>
+	</string>
+	<string id="description_ros_director_key">
+		<text>Ключ от кабинета директора завода Росток</text>
+	</string>
+	<string id="inv_name_ros_director_key">
+		<text>Ключ директора</text>
+	</string>
+	<string id="inv_name_short_ros_director_key">
+		<text>Ключ директора</text>
+	</string>
+	<string id="description_ros_master_note">
+		<text>Личный блокнот директора завода Росток.</text>
+	</string>
+	<string id="inv_name_ros_master_note">
+		<text>Блокнот директора</text>
+	</string>
+	<string id="inv_name_short_ros_master_note">
+		<text>Блокнот директора</text>
+	</string>
+	<string id="description_ros_gate_key">
+		<text>Ключ от ворот, преграждающих дорогу на Янтарь</text>
+	</string>
+	<string id="inv_name_ros_gate_key">
+		<text>Ключ от ворот</text>
+	</string>
+	<string id="inv_name_short_ros_gate_key">
+		<text>Ключ от ворот</text>
+	</string>
+	<string id="description_ros_hunters_mayak">
+		<text>Коротковолновый передатчик, по сигналу от которого учёные пришлют на выручку вертолёт. Код сигнала знает разведчик Григорий с Ростка.</text>
+	</string>
+	<string id="inv_name_ros_hunters_mayak">
+		<text>Маячок</text>
+	</string>
+	<string id="inv_name_short_ros_hunters_mayak">
+		<text>Маячок</text>
+	</string>
+	<string id="description_ros_pasport">
+		<text>Старый паспорт времён СССР. Выдан Плотникову Сергею Викторовичу в далёком 1946 году.</text>
+	</string>
+	<string id="inv_name_ros_pasport">
+		<text>Паспорт</text>
+	</string>
+	<string id="inv_name_short_ros_pasport">
+		<text>Паспорт</text>
+	</string>
+	<string id="description_ros_papirosi">
+		<text>Папиросы Беломорканал. Пачка чистая и непожелтевшая, табак сухой, как будто бы её купили недавно.</text>
+	</string>
+	<string id="inv_name_ros_papirosi">
+		<text>Пачка Беломора</text>
+	</string>
+	<string id="inv_name_short_ros_papirosi">
+		<text>Пачка Беломора</text>
+	</string>
+	<string id="description_ros_pen">
+		<text>Старая ручка с пером. Имеется позолоченная надпись: Плотникову С.В. от трудового коллектива в день 50-летия.</text>
+	</string>
+	<string id="inv_name_ros_pen">
+		<text>Ручка</text>
+	</string>
+	<string id="inv_name_short_ros_pen">
+		<text>Ручка</text>
+	</string>
+	<string id="description_predb_hutor_house1door_key">
+		<text>Ключ от одного из домов на хуторе у Окраины</text>
+	</string>
+	<string id="inv_name_predb_hutor_house1door_key">
+		<text>Ключ контрабандиста</text>
+	</string>
+	<string id="inv_name_short_predb_hutor_house1door_key">
+		<text>Ключ контрабандиста</text>
+	</string>
+	<string id="description_fake_capsula_1">
+		<text>С виду это артефакт. Он светится и левитирует, но видимых свойств не обнаруживает.</text>
+	</string>
+	<string id="inv_name_fake_capsula_1">
+		<text>Неизвестный артефакт</text>
+	</string>
+	<string id="inv_name_short_fake_capsula_1">
+		<text>Неизвестный артефакт</text>
+	</string>
+	<string id="description_predb_cave_room_door_key">
+		<text>Ключ от камеры в пещере на Окраине.</text>
+	</string>
+	<string id="inv_name_predb_cave_room_door_key">
+		<text>Ключ от камеры</text>
+	</string>
+	<string id="inv_name_short_predb_cave_room_door_key">
+		<text>Ключ камеры</text>
+	</string>
+	<string id="description_faint_man1_pda">
+		<text>ПДА отмычки Степана.</text>
+	</string>
+	<string id="inv_name_faint_man1_pda">
+		<text>ПДА Степки</text>
+	</string>
+	<string id="inv_name_short_faint_man1_pda">
+		<text>ПДА Степки</text>
+	</string>
+	<string id="description_esc_lost_man_pda">
+		<text>Неработающий ПДА, найденный на дороге среди брошенных вещей. Судя по надписи на корпусе, принадлежал новичку по имени Кирилл.</text>
+	</string>
+	<string id="inv_name_esc_lost_man_pda">
+		<text>ПДА Кирилла</text>
+	</string>
+	<string id="inv_name_short_esc_lost_man_pda">
+		<text>ПДА Кирилла</text>
+	</string>
+	<string id="description_yan_sold_raciya">
+		<text>Рация, найденная в окрестностях завода Янтарь.</text>
+	</string>
+	<string id="inv_name_yan_sold_raciya">
+		<text>Рация Егорова</text>
+	</string>
+	<string id="inv_name_short_yan_sold_raciya">
+		<text>Рация</text>
+	</string>
+	<string id="description_yan_sergant_rope">
+		<text>Верёвка с крюком для перелезания через высокие стены.</text>
+	</string>
+	<string id="inv_name_yan_sergant_rope">
+		<text>Веревка</text>
+	</string>
+	<string id="inv_name_short_yan_sergant_rope">
+		<text>Веревка</text>
+	</string>
+	<string id="description_x16_documents1">
+		<text>Документы, содержащие общую техническую информацию по проекту Мидас. Представляют собой формулы, графики и схемы, понятные только людям науки.</text>
+	</string>
+	<string id="inv_name_x16_documents1">
+		<text>Проект Мидас. Общие положения.</text>
+	</string>
+	<string id="inv_name_short_x16_documents1">
+		<text>Проект Мидас. Общие положения.</text>
+	</string>
+	<string id="description_x16_documents2">
+		<text>Документы, содержащие инструкции по эксплуатации установки Мидас. Представляют собой формулы, графики и схемы, понятные только людям науки.</text>
+	</string>
+	<string id="inv_name_x16_documents2">
+		<text>Проект Мидас. Эксплуатация.</text>
+	</string>
+	<string id="inv_name_short_x16_documents2">
+		<text>Проект Мидас. Эксплуатация.</text>
+	</string>
+	<string id="description_x16door_key">
+		<text>Ключ от комнаты в лаборатории, где лежат документы</text>
+	</string>
+	<string id="inv_name_x16door_key">
+		<text>Ключ</text>
+	</string>
+	<string id="inv_name_short_x16door_key">
+		<text>Ключ</text>
+	</string>
+	<string id="description_ros_hunters_flash">
+		<text>Флешка c научной информацией. На корпусе имеется наклейка с надписью: Передать профессору Сахарову.</text>
+	</string>
+	<string id="inv_name_ros_hunters_flash">
+		<text>Флешка Григория</text>
+	</string>
+	<string id="inv_name_short_ros_hunters_flash">
+		<text>Флешка Григория</text>
+	</string>
+	<string id="description_yan_hunters_flash">
+		<text>Флешка, которую разведчик Антон должен был отдать профессору Сахарову</text>
+	</string>
+	<string id="inv_name_yan_hunters_flash">
+		<text>Флешка Антона</text>
+	</string>
+	<string id="inv_name_short_yan_hunters_flash">
+		<text>Флешка Антона</text>
+	</string>
+	<string id="description_yan_car_crash_docks1">
+		<text>Документы, содержащие утерянную техническую информацию с завода Янтарь. Представляют собой формулы, графики и схемы, понятные и представляющие ценность только для людей науки.</text>
+	</string>
+	<string id="inv_name_yan_car_crash_docks1">
+		<text>Документы директора</text>
+	</string>
+	<string id="inv_name_short_yan_car_crash_docks1">
+		<text>Документы директора</text>
+	</string>
+	<string id="description_yan_car_crash_docks2">
+		<text>Документы, содержащие утерянную техническую информацию с завода Янтарь. Представляют собой формулы, графики и схемы, понятные и представляющие ценность только для людей науки.</text>
+	</string>
+	<string id="inv_name_yan_car_crash_docks2">
+		<text>Документы инженера</text>
+	</string>
+	<string id="inv_name_short_yan_car_crash_docks2">
+		<text>Документы инженера</text>
+	</string>
+	<string id="description_yan_anomaly_detector">
+		<text>Датчик, который собирает информацию о кислотности воды на болоте Янтаря.</text>
+	</string>
+	<string id="inv_name_yan_anomaly_detector">
+		<text>Датчик Васильева</text>
+	</string>
+	<string id="inv_name_short_yan_anomaly_detector">
+		<text>Датчик Васильева</text>
+	</string>
+	<string id="description_yan_lost_hunter_pda">
+		<text>ПДА, найденный в заброшенном лагере разведчиков на Янтаре.</text>
+	</string>
+	<string id="inv_name_yan_lost_hunter_pda">
+		<text>ПДА Антона</text>
+	</string>
+	<string id="inv_name_short_yan_lost_hunter_pda">
+		<text>ПДА АНтона</text>
+	</string>
+	<string id="description_yan_lost_scaner">
+		<text>Мини-сканнер с Янтаря</text>
+	</string>
+	<string id="inv_name_yan_lost_scaner">
+		<text>Мини-сканнер</text>
+	</string>
+	<string id="inv_name_short_yan_lost_scaner">
+		<text>Мини-сканнер</text>
+	</string>
+	<string id="description_yan_ammo_box">
+		<text>Плотно заколоченный тяжелый ящик. Внутри находятся боеприпасы, принадлежащие военным с Янтаря.</text>
+	</string>
+	<string id="inv_name_yan_ammo_box">
+		<text>Ящик с патронами</text>
+	</string>
+	<string id="inv_name_short_yan_ammo_box">
+		<text>Ящик с патронами</text>
+	</string>
+	<string id="description_yan_provision_box">
+		<text>Плотно заколоченный тяжелый ящик. Внутри находится провизия, принадлежащая военным с Янтаря.</text>
+	</string>
+	<string id="inv_name_yan_provision_box">
+		<text>Ящик с провизией</text>
+	</string>
+	<string id="inv_name_short_yan_provision_box">
+		<text>Ящик с провизией</text>
+	</string>
+	<string id="inv_name_yan_losthunter_zapiska">
+		<text>Записка Антона</text>
+	</string>
+	<string id="inv_name_short_yan_losthunter_zapiska">
+		<text>Записка Антона</text>
+	</string>
+	<string id="description_mil_kazarma1_key">
+		<text>На поверхности выцарапана надпись: В.Ч.422, Казарма 1.</text>
+	</string>
+	<string id="inv_name_mil_kazarma1_key">
+		<text>Ключ от казармы 1</text>
+	</string>
+	<string id="inv_name_short_mil_kazarma1_key">
+		<text>Ключ</text>
+	</string>
+	<string id="description_mil_kazarma2_key">
+		<text>На ключе выцарапана надпись: В.Ч.422, Казарма 2.</text>
+	</string>
+	<string id="inv_name_mil_kazarma2_key">
+		<text>Ключ от казармы</text>
+	</string>
+	<string id="inv_name_short_mil_kazarma2_key">
+		<text>Ключ</text>
+	</string>
+	<string id="description_mil_electron_component">
+		<text>Электронный накопитель с секретной информацией, принадлежащей военным.</text>
+	</string>
+	<string id="inv_name_mil_electron_component">
+		<text>Электронный накопитель</text>
+	</string>
+	<string id="inv_name_short_mil_electron_component">
+		<text>Электронный накопитель</text>
+	</string>
+	<string id="description_mil_electron_pribor">
+		<text>Электронный прибор непонятного назначения. На передней панели много кнопок, табло и лампочек, на задней имеется разъем.</text>
+	</string>
+	<string id="inv_name_mil_electron_pribor">
+		<text>Электронный прибор</text>
+	</string>
+	<string id="inv_name_short_mil_electron_pribor">
+		<text>Электронный прибор</text>
+	</string>
+	<string id="description_mil_military_docks1">
+		<text>Документы, оставленные военными при поспешной эвакуации с Армейских складов.</text>
+	</string>
+	<string id="inv_name_mil_military_docks1">
+		<text>Документы военных, часть 1</text>
+	</string>
+	<string id="inv_name_short_mil_military_docks1">
+		<text>Документы военных</text>
+	</string>
+	<string id="description_mil_military_docks2">
+		<text>Документы, оставленные военными при поспешной эвакуации с Армейских складов.</text>
+	</string>
+	<string id="inv_name_mil_military_docks2">
+		<text>Документы военных, часть 2</text>
+	</string>
+	<string id="inv_name_short_mil_military_docks2">
+		<text>Документы военных</text>
+	</string>
+	<string id="description_mil_freak_water">
+		<text>Бутылка из-под коньяка Наполеон. Внутри плещется какая-то странная мутная жидкость, пахнущая прелым сеном. Пить такое можно только на свой страх и риск.</text>
+	</string>
+	<string id="inv_name_mil_freak_water">
+		<text>Странная бутылка</text>
+	</string>
+	<string id="inv_name_short_mil_freak_water">
+		<text>Странная бутылка</text>
+	</string>
+	<string id="description_mil_shtab_key">
+		<text>Ключ командира части 422. Открывает его личный кабинет, а также арсенал.</text>
+	</string>
+	<string id="inv_name_mil_shtab_key">
+		<text>Ключ командира</text>
+	</string>
+	<string id="inv_name_short_mil_shtab_key">
+		<text>Ключ командира</text>
+	</string>
+	<string id="description_mil_money_pack">
+		<text>Крупная пачка советских рублей. За такую сумму когда-то можно было купить автомобиль.</text>
+	</string>
+	<string id="inv_name_mil_money_pack">
+		<text>Старые деньги</text>
+	</string>
+	<string id="inv_name_short_mil_money_pack">
+		<text>Старые деньги</text>
+	</string>
+	<string id="description_mil_damian_portsigar">
+		<text>Никелированный портсигар советских времён. На внутренней крышке надпись: Демьяну от Кузьмы в день юбилея.</text>
+	</string>
+	<string id="inv_name_mil_damian_portsigar">
+		<text>Портсигар</text>
+	</string>
+	<string id="inv_name_short_mil_damian_portsigar">
+		<text>Портсигар</text>
+	</string>
+	<string id="description_mil_kuzma_letter">
+		<text>Старое пожелтевшее письмо. Текст следующий: Уважаемый Кузьма Петрович, сообщаем Вам, что вынуждены отказаться от вашего предложения. Образец антиквариата, который вы нам предлагаете, не представляет ценности для госоподина Б-ского, так как в его коллекции содержатся вещи иного характера. С уважением, тов.Никитин.</text>
+	</string>
+	<string id="inv_name_mil_kuzma_letter">
+		<text>Письмо</text>
+	</string>
+	<string id="inv_name_short_mil_kuzma_letter">
+		<text>Письмо</text>
+	</string>
+	<string id="description_mil_hatchet">
+		<text>Старый ржавый топорик.</text>
+	</string>
+	<string id="inv_name_mil_hatchet">
+		<text>Топорик</text>
+	</string>
+	<string id="inv_name_short_mil_hatchet">
+		<text>Топорик</text>
+	</string>
+	<string id="description_mil_panteley_key">
+		<text>Ключ от запертой комнаты в доме Пантелея.</text>
+	</string>
+	<string id="inv_name_mil_panteley_key">
+		<text>Ключ Пантелея</text>
+	</string>
+	<string id="inv_name_short_mil_panteley_key">
+		<text>Ключ Пантелея</text>
+	</string>
+	<string id="description_tabak_box">
+		<text>Коробка с табаком-самосадом.</text>
+	</string>
+	<string id="inv_name_tabak_box">
+		<text>Коробка с табаком</text>
+	</string>
+	<string id="inv_name_short_tabak_box">
+		<text>Коробка с табаком</text>
+	</string>
+	<string id="description_icon_part1">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_icon_part1">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_short_icon_part1">
+		<text>Часть иконы</text>
+	</string>
+	<string id="description_icon_part2">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_icon_part2">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_short_icon_part2">
+		<text>Часть иконы</text>
+	</string>
+	<string id="description_icon_part3">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_icon_part3">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_short_icon_part3">
+		<text>Часть иконы</text>
+	</string>
+	<string id="description_icon_part4">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_icon_part4">
+		<text>Часть иконы</text>
+	</string>
+	<string id="inv_name_short_icon_part4">
+		<text>Часть иконы</text>
+	</string>
+	<string id="description_rad_lost_pda1">
+		<text>ПДА, найденный на окраине леса рядом с Припятью.</text>
+	</string>
+	<string id="inv_name_rad_lost_pda1">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="inv_name_short_rad_lost_pda1">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="description_rad_lost_pda2">
+		<text>ПДА, найденный на окраине леса рядом с Припятью.</text>
+	</string>
+	<string id="inv_name_rad_lost_pda2">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="inv_name_short_rad_lost_pda2">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="description_rad_lost_pda3">
+		<text>ПДА, найденный на окраине леса рядом с Припятью.</text>
+	</string>
+	<string id="inv_name_rad_lost_pda3">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="inv_name_short_rad_lost_pda3">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="description_rad_lost_pda4">
+		<text>ПДА, найденный на окраине леса рядом с Припятью.</text>
+	</string>
+	<string id="inv_name_rad_lost_pda4">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="inv_name_short_rad_lost_pda4">
+		<text>ПДА выжившего</text>
+	</string>
+	<string id="inv_name_rad_abdul_zapiska">
+		<text>Записка Абдуля</text>
+	</string>
+	<string id="inv_name_short_rad_abdul_zapiska">
+		<text>Записка Абдуля</text>
+	</string>
+	<string id="description_rad_vagon_door_key">
+		<text>Ключ от подземного комплекса на Радаре.</text>
+	</string>
+	<string id="inv_name_rad_vagon_door_key">
+		<text>Ключ от подземелья</text>
+	</string>
+	<string id="inv_name_short_rad_vagon_door_key">
+		<text>Ключ от подземелья</text>
+	</string>
+	<string id="description_rad_secret_docks">
+		<text>Документы, забытые обслуживающим персоналом антенной установки на Радаре.</text>
+	</string>
+	<string id="inv_name_rad_secret_docks">
+		<text>Документы с Радара</text>
+	</string>
+	<string id="inv_name_short_rad_secret_docks">
+		<text>Документы с Радара</text>
+	</string>
+	<string id="description_deadmask_diary1">
+		<text>Дневник неизвестного</text>
+	</string>
+	<string id="inv_name_deadmask_diary1">
+		<text>Страница дневника</text>
+	</string>
+	<string id="inv_name_short_deadmask_diary1">
+		<text>Страница дневника</text>
+	</string>
+	<string id="description_deadmask_diary2">
+		<text>Дневник неизвестного</text>
+	</string>
+	<string id="inv_name_deadmask_diary2">
+		<text>Страница дневника</text>
+	</string>
+	<string id="inv_name_short_deadmask_diary2">
+		<text>Страница дневника</text>
+	</string>
+	<string id="description_deadmask_diary3">
+		<text>Дневник неизвестного</text>
+	</string>
+	<string id="inv_name_deadmask_diary3">
+		<text>Страница дневника</text>
+	</string>
+	<string id="inv_name_short_deadmask_diary3">
+		<text>Страница дневника</text>
+	</string>
+	<string id="description_deadmask_diary4">
+		<text>Дневник неизвестного</text>
+	</string>
+	<string id="inv_name_deadmask_diary4">
+		<text>Страница дневника</text>
+	</string>
+	<string id="inv_name_short_deadmask_diary4">
+		<text>Страница дневника</text>
+	</string>
+	<string id="inv_name_esc_post_zapiska">
+		<text>Записка с блокпоста</text>
+	</string>
+	<string id="inv_name_short_esc_post_zapiska">
+		<text>Записка с блокпоста</text>
+	</string>
+	<string id="description_rad_base_house_key">
+		<text>Ключ от администрации антенного комплекса на Радаре.</text>
+	</string>
+	<string id="inv_name_rad_base_house_key">
+		<text>Ключ от администрации</text>
+	</string>
+	<string id="inv_name_short_rad_base_house_key">
+		<text>Ключ от администрации</text>
+	</string>
+	<string id="description_x10agent4pda">
+		<text>ПДА агента из подземелья. Содержит данные о кодовых замках.</text>
+	</string>
+	<string id="inv_name_x10agent4pda">
+		<text>ПДА агента из подземелья</text>
+	</string>
+	<string id="inv_name_short_x10agent4pda">
+		<text>ПДА агента из подземелья</text>
+	</string>
+	<string id="description_pri_detsad_gazeta">
+		<text>Старая пожелтевшая газета "Полесский рабочий" от 15 сентября 1985 года. Среди прочего есть упоминание об открытии в г.Припять нового стадиона Авангард и закладки по этому поводу капсулы времени, которую должна была доставить в город на автобусе группа пионеров.</text>
+	</string>
+	<string id="inv_name_pri_detsad_gazeta">
+		<text>Старая газета</text>
+	</string>
+	<string id="inv_name_short_pri_detsad_gazeta">
+		<text>Старая газета</text>
+	</string>
+	<string id="description_prapor_pasport">
+		<text>Поддельные документы на имя Щербакова И.П.</text>
+	</string>
+	<string id="inv_name_prapor_pasport">
+		<text>Документы</text>
+	</string>
+	<string id="inv_name_short_prapor_pasport">
+		<text>Документы</text>
+	</string>
+	<string id="description_pri_detsad_medroom_key">
+		<text>Ключ от медпункта детского сада №22 г.Припять.</text>
+	</string>
+	<string id="inv_name_pri_detsad_medroom_key">
+		<text>Ключ от медпункта</text>
+	</string>
+	<string id="inv_name_short_pri_detsad_medroom_key">
+		<text>Ключ от медпункта</text>
+	</string>
+	<string id="description_pri_detsad_freezer_key">
+		<text>Ключ от холодильника с продуктами детского сада №22 г.Припять.</text>
+	</string>
+	<string id="inv_name_pri_detsad_freezer_key">
+		<text>Ключ от холодильника</text>
+	</string>
+	<string id="inv_name_short_pri_detsad_freezer_key">
+		<text>Ключ от холодильника</text>
+	</string>
+	<string id="description_pri_detsad_bottle">
+		<text>Плотно закупоренная бутылочка с каким-то порошком. Вместо этикетки - бумажка с цифрой 22.</text>
+	</string>
+	<string id="inv_name_pri_detsad_bottle">
+		<text>Бутылочка</text>
+	</string>
+	<string id="inv_name_short_pri_detsad_bottle">
+		<text>Бутылочка</text>
+	</string>
+	<string id="description_pri_detsad_door_key">
+		<text>Ключ от входной двери детского сада №22 г.Припять.</text>
+	</string>
+	<string id="inv_name_pri_detsad_door_key">
+		<text>Ключ от детсада</text>
+	</string>
+	<string id="inv_name_short_pri_detsad_door_key">
+		<text>Ключ от детсада</text>
+	</string>
+	<string id="inv_name_pri_avtostation_zapiska">
+		<text>Записка с автостанции</text>
+	</string>
+	<string id="inv_name_short_pri_avtostation_zapiska">
+		<text>Записка с автостанции</text>
+	</string>
+	<string id="description_bloodsucker_nail">
+		<text>Коготь кровососа, который имел аномальные способности. Позволяет взламывать замки и тонкие механизмы.</text>
+	</string>
+	<string id="inv_name_bloodsucker_nail">
+		<text>Коготь аномального кровососа</text>
+	</string>
+	<string id="inv_name_short_bloodsucker_nail">
+		<text>Коготь аномального кровососа</text>
+	</string>
+	<string id="description_pri_detsad_car_dokuments">
+		<text>Документы, принадлежащие участковому милиционеру, когда-то работавшему в г.Припять.</text>
+	</string>
+	<string id="inv_name_pri_detsad_car_dokuments">
+		<text>Документы участкового</text>
+	</string>
+	<string id="inv_name_short_pri_detsad_car_dokuments">
+		<text>Документы участкового</text>
+	</string>
+	<string id="description_pri_anomal_ball">
+		<text>Старый баскетбольный мяч из Припяти. Видимых аномальных свойств не проявляет.</text>
+	</string>
+	<string id="inv_name_pri_anomal_ball">
+		<text>Мяч</text>
+	</string>
+	<string id="inv_name_short_pri_anomal_ball">
+		<text>Мяч</text>
+	</string>
+	<string id="description_pri_stadion_key">
+		<text>Ключ от ворот стадиона Авангард, г.Припять.</text>
+	</string>
+	<string id="inv_name_pri_stadion_key">
+		<text>Ключ от стадиона</text>
+	</string>
+	<string id="inv_name_short_pri_stadion_key">
+		<text>Ключ от стадиона</text>
+	</string>
+	<string id="description_pri_analog_chip">
+		<text>Древняя советская аналоговая микросхема. В далёком 1986-м являлась новаторской разработкой и использовалась в самых передовых ЭВМ.</text>
+	</string>
+	<string id="inv_name_pri_analog_chip">
+		<text>Микросхема</text>
+	</string>
+	<string id="inv_name_short_pri_analog_chip">
+		<text>Микросхема</text>
+	</string>
+	<string id="inv_name_pri_abdul_zapiska">
+		<text>Записка Абдуля</text>
+	</string>
+	<string id="inv_name_short_pri_abdul_zapiska">
+		<text>Записка Абдуля</text>
+	</string>
+	<string id="description_pri_agents_base_key">
+		<text>Ключ от подвала дома культуры г.Припять</text>
+	</string>
+	<string id="inv_name_pri_agents_base_key">
+		<text>Ключ от подвала</text>
+	</string>
+	<string id="inv_name_short_pri_agents_base_key">
+		<text>Ключ от подвала</text>
+	</string>
+	<string id="description_esc_rad_medicine">
+		<text>Заграничные таблетки от лучевой болезни. Принадлежат Маландринусу.</text>
+	</string>
+	<string id="inv_name_esc_rad_medicine">
+		<text>Лекарство</text>
+	</string>
+	<string id="inv_name_short_esc_rad_medicine">
+		<text>Лекарство</text>
+	</string>
+	<string id="description_aes_kristall">
+		<text>Осколок кристалла Гамма-вещества. Безвреден, так как выработал всю аккумулированную в нём пси-энергию, однако приобрёл иное свойство: защищает владельца от радиоактивных штормов ЧАЭС.</text>
+	</string>
+	<string id="inv_name_aes_kristall">
+		<text>Осколок Гамма-вещества</text>
+	</string>
+	<string id="inv_name_short_aes_kristall">
+		<text>Осколок Гамма-вещества</text>
+	</string>
+	<string id="description_mad_tuschano_head">
+		<text>Ценный охотничий трофей из Зоны, особенно для новичка. Экземпляр отличается повышенной клыкастостью. Можно повесить над кроватью и хвастаться перед знакомыми.</text>
+	</string>
+	<string id="inv_name_mad_tuschano_head">
+		<text>Голова бешеного тушкана</text>
+	</string>
+	<string id="inv_name_short_mad_tuschano_head">
+		<text>Голова бешеного тушкана</text>
+	</string>
+	<string id="description_hermit_pda">
+		<text>ПДА отмычки Битарда из подземелья. Содержит данные о ценном хабаре.</text>
+	</string>
+	<string id="inv_name_hermit_pda">
+		<text>ПДА Битарда</text>
+	</string>
+	<string id="inv_name_short_hermit_pda">
+		<text>ПДА Битрада</text>
+	</string>
+	<string id="description_kontrab4_pda">
+		<text>ПДА контрабандиста Болта</text>
+	</string>
+	<string id="inv_name_kontrab4_pda">
+		<text>ПДА Болта</text>
+	</string>
+	<string id="inv_name_short_kontrab4_pda">
+		<text>ПДА Болта</text>
+	</string>
+	<string id="description_village_grass">
+		<text>Дикорастущая трава, отвар из которой помогает при лучевой болезни.</text>
+	</string>
+	<string id="inv_name_village_grass">
+		<text>Травка</text>
+	</string>
+	<string id="inv_name_short_village_grass">
+		<text>Травка</text>
+	</string>
+	<string id="description_predb_kpp_seif_key">
+		<text>Ключ от личного сейфа капитана Чернова</text>
+	</string>
+	<string id="inv_name_predb_kpp_seif_key">
+		<text>Ключ капитана</text>
+	</string>
+	<string id="inv_name_short_predb_kpp_seif_key">
+		<text>Ключ капитана</text>
+	</string>
+	<string id="description_predb_fabrik_garage_key">
+		<text>Ключ от гаража на Окраине Зоны</text>
+	</string>
+	<string id="inv_name_predb_fabrik_garage_key">
+		<text>Ключ от гаража</text>
+	</string>
+	<string id="inv_name_short_predb_fabrik_garage_key">
+		<text>Ключ гаража</text>
+	</string>
+	<string id="description_sssr_moneta_1">
+		<text>Старая потемневшая советская монета в 5 копеек. Имеет уникальный дефект, из-за которого может считаться коллекционным предметом.</text>
+	</string>
+	<string id="inv_name_sssr_moneta_1">
+		<text>Монета</text>
+	</string>
+	<string id="inv_name_short_sssr_moneta_1">
+		<text>Монета</text>
+	</string>
+	<string id="description_predb_ponzil_item">
+		<text>Большая бочка, доверху заполненная ржавыми металлическими болтами, гайками и прочим хламом. Какому идиоту здесь такое могло понадобиться?</text>
+	</string>
+	<string id="inv_name_predb_ponzil_item">
+		<text>Металлолом</text>
+	</string>
+	<string id="inv_name_short_predb_ponzil_item">
+		<text>Металлолом</text>
+	</string>
+	<string id="description_predb_village_dead_friend_door_key">
+		<text>Связка ключей от всех дверей деревни на Окраине.</text>
+	</string>
+	<string id="inv_name_predb_village_dead_friend_door_key">
+		<text>Связка ключей</text>
+	</string>
+	<string id="inv_name_short_predb_village_dead_friend_door_key">
+		<text>Связка ключей</text>
+	</string>
+	<string id="description_af_manipulator">
+		<text>Старый чёрно-белый телевизор превратился в артефакт, с помощью которого можно управлять сознанием людей. Представляет большую ценность скорее для мафии и правительства чем для учёных</text>
+	</string>
+	<string id="inv_name_af_manipulator">
+		<text>Манипулятор</text>
+	</string>
+	<string id="inv_name_short_af_manipulator">
+		<text>Манипулятор</text>
+	</string>
+	<string id="description_kontrab_termos">
+		<text>Термос с отваром дурман-травы.</text>
+	</string>
+	<string id="inv_name_kontrab_termos">
+		<text>Термос</text>
+	</string>
+	<string id="inv_name_short_kontrab_termos">
+		<text>Термос</text>
+	</string>
+	<string id="description_predb_firestation_komander_key">
+		<text>Ключ начальника пожарной части. Открывает оружейную комнату в подвале.</text>
+	</string>
+	<string id="inv_name_predb_firestation_komander_key">
+		<text>Ключ начальника пожарной части</text>
+	</string>
+	<string id="inv_name_short_predb_firestation_komander_key">
+		<text>Ключ начальника пожарной части</text>
+	</string>
+	<string id="inv_name_predb_firest_komander_zapiska">
+		<text>Записка командира пожарной части</text>
+	</string>
+	<string id="inv_name_short_predb_firest_komander_zapiska">
+		<text>Записка командира пожарной части</text>
+	</string>
+	<string id="description_predb_army_maps">
+		<text>Планшет, принадлежавший погибшему летчику. Содержит карты с какими-то цифрами и пометками.</text>
+	</string>
+	<string id="inv_name_predb_army_maps">
+		<text>Планшет летчика</text>
+	</string>
+	<string id="inv_name_short_predb_army_maps">
+		<text>Планшет летчика</text>
+	</string>
+	<string id="description_predb_army_docks_1">
+		<text>Планшет, принадлежавший военному наблюдателю. Содержит отчёты о секретных объектах Зоны.</text>
+	</string>
+	<string id="inv_name_predb_army_docks_1">
+		<text>Планшет наблюдателя</text>
+	</string>
+	<string id="inv_name_short_predb_army_docks_1">
+		<text>Планшет наблюдателя</text>
+	</string>
+	<string id="description_predb_base_key1">
+		<text>Ключ от штаба военной базы на Окраине.</text>
+	</string>
+	<string id="inv_name_predb_base_key1">
+		<text>Ключ от штаба</text>
+	</string>
+	<string id="inv_name_short_predb_base_key1">
+		<text>Ключ от штаба</text>
+	</string>
+	<string id="description_predb_base_key2">
+		<text>Ключ от материального склада военной базы на Окраине.</text>
+	</string>
+	<string id="inv_name_predb_base_key2">
+		<text>Ключ от склада</text>
+	</string>
+	<string id="inv_name_short_predb_base_key2">
+		<text>Ключ от склада</text>
+	</string>
+	<string id="description_generator_oil">
+		<text>Бутылка с машинным маслом для генератора</text>
+	</string>
+	<string id="inv_name_generator_oil">
+		<text>Машинное масло</text>
+	</string>
+	<string id="inv_name_short_generator_oil">
+		<text>Машинное масло</text>
+	</string>
+	<string id="description_marouders_box">
+		<text>Джентельменский набор матёрого взломщика.</text>
+	</string>
+	<string id="inv_name_marouders_box">
+		<text>Набор отмычек</text>
+	</string>
+	<string id="inv_name_short_marouders_box">
+		<text>Набор отмычек</text>
+	</string>
+	<string id="inv_name_predb_king_zapiska">
+		<text>Записка Царя</text>
+	</string>
+	<string id="inv_name_short_predb_king_zapiska">
+		<text>Записка Царя</text>
+	</string>
+	<string id="description_predb_couriers_seif">
+		<text>Здоровенный металлический сейф, запертый на кодовый замок. Весит около центнера. Что внутри - неизвестно.</text>
+	</string>
+	<string id="inv_name_predb_couriers_seif">
+		<text>Груз контрабандистов</text>
+	</string>
+	<string id="inv_name_short_predb_couriers_seif">
+		<text>Груз контрабандистов</text>
+	</string>
+	<string id="description_predb_marod1_pda">
+		<text>ПДА мародёра Лёньки</text>
+	</string>
+	<string id="inv_name_predb_marod1_pda">
+		<text>ПДА мародёра</text>
+	</string>
+	<string id="inv_name_short_predb_marod1_pda">
+		<text>ПДА мародёра</text>
+	</string>
+	<string id="inv_name_predb_unkn_stalker_zapiska">
+		<text>Записка разведчика</text>
+	</string>
+	<string id="inv_name_short_predb_unkn_stalker_zapiska">
+		<text>Записка разведчика</text>
+	</string>
+	<string id="inv_name_predb_kontrab_bloknot">
+		<text>Блокнот контрабандиста</text>
+	</string>
+	<string id="inv_name_short_predb_kontrab_bloknot">
+		<text>Блокнот контрабандиста</text>
+	</string>
+	<string id="description_predb_kontrab_radio_list">
+		<text>Клочок бумаги со списком радиочастот, которые использовали контрабандисты для своих переговоров. Среди прочего есть упоминание о запасном убежище.</text>
+	</string>
+	<string id="inv_name_predb_kontrab_radio_list">
+		<text>Список радиочастот</text>
+	</string>
+	<string id="inv_name_short_predb_kontrab_radio_list">
+		<text>Список радиочастот</text>
+	</string>
+	<string id="description_predb_zaurus_pda">
+		<text>ПДА разведчика по кличке Заурус</text>
+	</string>
+	<string id="inv_name_predb_zaurus_pda">
+		<text>ПДА Зауруса</text>
+	</string>
+	<string id="inv_name_short_predb_zaurus_pda">
+		<text>ПДА Зауруса</text>
+	</string>
+	<string id="description_predb_kaban_pda">
+		<text>ПДА главаря контрабандистов Кабана</text>
+	</string>
+	<string id="inv_name_predb_kaban_pda">
+		<text>ПДА Кабана</text>
+	</string>
+	<string id="inv_name_short_predb_kaban_pda">
+		<text>ПДА Кабана</text>
+	</string>
+	<string id="description_mil_deadman_pda">
+		<text>ПДА разведчика, погибшего в огненной аномалии.</text>
+	</string>
+	<string id="inv_name_mil_deadman_pda">
+		<text>ПДА</text>
+	</string>
+	<string id="inv_name_short_mil_deadman_pda">
+		<text>ПДА</text>
+	</string>
+	<string id="inv_name_mil_swamper_zapiska">
+		<text>Записка Болотника</text>
+	</string>
+	<string id="inv_name_short_mil_swamper_zapiska">
+		<text>Записка Болотника</text>
+	</string>
+	<string id="description_mil_dalnomer">
+		<text>Оптический дальномер, добытый из какой-то военной техники.</text>
+	</string>
+	<string id="inv_name_mil_dalnomer">
+		<text>Дальномер</text>
+	</string>
+	<string id="inv_name_short_mil_dalnomer">
+		<text>Дальномер</text>
+	</string>
+	<string id="description_mil_fuel">
+		<text>Специальное вещество технического назначения.</text>
+	</string>
+	<string id="inv_name_mil_fuel">
+		<text>Компрессия</text>
+	</string>
+	<string id="inv_name_short_mil_fuel">
+		<text>Компрессия</text>
+	</string>
+	<string id="description_mil_grocery_key">
+		<text>Ключ от продуктового склада военной части 443.</text>
+	</string>
+	<string id="inv_name_mil_grocery_key">
+		<text>Ключ от склада</text>
+	</string>
+	<string id="inv_name_short_mil_grocery_key">
+		<text>Ключ от склада</text>
+	</string>
+	<string id="description_mil_stimulator">
+		<text>Сильный медицинский препарат, предназначенный для первой помощи при черепно-мозговых травмах</text>
+	</string>
+	<string id="inv_name_mil_stimulator">
+		<text>Стимулятор</text>
+	</string>
+	<string id="inv_name_short_mil_stimulator">
+		<text>Стимулятор</text>
+	</string>
+	<string id="description_dar_crash_btr_box_key">
+		<text>Ключ от ящика с боеприпасами у БТР-а в Долине.</text>
+	</string>
+	<string id="inv_name_dar_crash_btr_box_key">
+		<text>Ключ от ящика военных</text>
+	</string>
+	<string id="inv_name_short_dar_crash_btr_box_key">
+		<text>Ключ от ящика военных</text>
+	</string>
+	<string id="inv_name_bomba">
+		<text>Взрывчатка</text>
+	</string>
+	<string id="inv_name_short_bomba">
+		<text>Взрывчатка</text>
+	</string>
+	<string id="description_bomba">
+		<text>Для взрыва необходим детонатор. Лучшее оружие сапера, киллера или террориста. Уничтожит все в радиусе нескольких десятков метров.</text>
+	</string>
+	<string id="inv_name_bomba_big">
+		<text>Рюкзак со взрывчаткой</text>
+	</string>
+	<string id="inv_name_short_bomba_big">
+		<text>Рюкзак со взрывчаткой</text>
+	</string>
+	<string id="description_bomba_big">
+		<text>Для взрыва необходим детонатор. По силе равен связке гранат Ф1.</text>
+	</string>
+	<string id="inv_name_bomba_atom">
+		<text>Атомная бомба</text>
+	</string>
+	<string id="inv_name_short_bomba_atom">
+		<text>Атомная бомба</text>
+	</string>
+	<string id="description_bomba_atom">
+		<text>Ядерный заряд. Уничтожает все живое в радиусе 100м.</text>
+	</string>
+	<string id="inv_name_detonator">
+		<text>Детонатор</text>
+	</string>
+	<string id="inv_name_short_detonator">
+		<text>Детонатор</text>
+	</string>
+	<string id="description_detonator">
+		<text>Детонатор для взрывчатки. Радиус действия - 50 метров.</text>
+	</string>
+	<string id="inv_name_detonator_2">
+		<text>Детонатор усиленный</text>
+	</string>
+	<string id="inv_name_short_detonator_2">
+		<text>Детонатор усиленный</text>
+	</string>
+	<string id="description_detonator_2">
+		<text>Улучшенный вариант детонатора. Увеличен радиус действия до 150 метров.</text>
+	</string>
+	<string id="inv_name_dynamite_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_dynamite_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="description_dynamite_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_dynamite_bomb2">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_dynamite_bomb2">
+		<text>Заряд</text>
+	</string>
+	<string id="description_dynamite_bomb2">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_rad_ambush_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_rad_ambush_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="description_rad_ambush_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_attachable_item">
+		<text>Attachable item</text>
+	</string>
+	<string id="inv_name_short_attachable_item">
+		<text>Attachable item</text>
+	</string>
+	<string id="inv_name_new_attachable_item">
+		<text>Attachable item</text>
+	</string>
+	<string id="inv_name_short_new_attachable_item">
+		<text>Attachable item</text>
+	</string>
+	<string id="inv_name_script_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_script_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="description_script_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_script_bomb_big">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_script_bomb_big">
+		<text>Заряд</text>
+	</string>
+	<string id="description_script_bomb_big">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_rad_ambush_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_rad_ambush_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="description_rad_ambush_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_dynamite_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_dynamite_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="description_dynamite_bomb">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_dynamite_bomb2">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_dynamite_bomb2">
+		<text>Заряд</text>
+	</string>
+	<string id="description_dynamite_bomb2">
+		<text>Заряд</text>
+	</string>
+	<string id="inv_name_short_wpn_fake_missile2">
+		<text>M209</text>
+	</string>
+	<string id="inv_name_wpn_akm">
+		<text>АКМ</text>
+	</string>
+	<string id="inv_name_short_wpn_akm">
+		<text>АКМ</text>
+	</string>
+	<string id="inv_name_wpn_aps">
+		<text>АПС</text>
+	</string>
+	<string id="inv_name_short_wpn_aps">
+		<text>АПС</text>
+	</string>
+	<string id="inv_name_wpn_m16">
+		<text>М16А2</text>
+	</string>
+	<string id="inv_name_short_wpn_m16">
+		<text>М16А2</text>
+	</string>
+	<string id="inv_name_wpn_mosin">
+		<text>Kar98k</text>
+	</string>
+	<string id="inv_name_short_wpn_mosin">
+		<text>Kar98k</text>
+	</string>
+	<string id="inv_name_wpn_ppd40">
+		<text>ППШ-41</text>
+	</string>
+	<string id="inv_name_short_wpn_ppd40">
+		<text>ППШ-41</text>
+	</string>
+	<string id="inv_name_wpn_rpg7_missile">
+		<text>Og-7b</text>
+	</string>
+	<string id="inv_name_short_wpn_rpg7_missile">
+		<text>Og-7b</text>
+	</string>
+	<string id="inv_name_wpn_rpg7_missile">
+		<text>Og-7b</text>
+	</string>
+	<string id="inv_name_short_wpn_rpg7_missile">
+		<text>Og-7b</text>
+	</string>
+
+	<string id="pri_medal_name">
+		<text>Медаль</text>
+	</string>
+	<string id="pri_medal_descr">
+		<text>Медаль "Герою Советского Союза". Выдана посмертно в 1944 году.</text>
+	</string>
+
+	<string id="binocl_army_name">
+		<text>Армейский бинокль</text>
+	</string>
+	<string id="binocl_army_descr">
+		<text>Бинокль БГм-22. Усовершенствованная версия бинокля БГ-20, оснащенная дальномером, двадцатикратным увеличением и главной изюминкой - электронным идентификатором живых объектов. Крайне полезная вещь для скрытных операций, в которых необходимо заметить противника первым.</text>
+	</string>
+</string_table>

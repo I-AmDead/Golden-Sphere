@@ -1,0 +1,15 @@
+[logic]
+active = ph_car@idle
+
+[ph_car@idle]
+path_walk       = nil
+path_fire       = nil
+usable = {=actor_has_item(garb_zaz_key)}
+show_tips = true
+tip_use = garb_angar_zaz_use1
+tip_locked = garb_angar_zaz_use2
+invulnerable = false
+headlights = off
+auto_fire = true
+target          =  nil
+;on_death_info   = garb_btr_dead

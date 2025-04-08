@@ -1,0 +1,31 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {-dar_farm_deadzone_off} sr_idle@recharge %=dar_farm_deadzone_effect =play_snd_from_obj(8189:car\car_traktor)%
+
+[sr_idle@2]
+on_actor_inside = {-dar_farm_deadzone_off} sr_idle@recharge %=dar_farm_deadzone_effect =play_snd_from_obj(8189:car\car_traktor)%
+
+[sr_idle@3]
+on_actor_inside = {-dar_farm_deadzone_off} sr_idle@recharge %=dar_farm_deadzone_effect =play_snd_from_obj(8189:car\car_traktor)%
+
+[sr_idle@4]
+on_actor_inside = {-dar_farm_deadzone_off} sr_idle@recharge %=dar_farm_deadzone_effect =play_snd_from_obj(8189:car\car_traktor)%
+
+[sr_idle@5]
+on_actor_inside = {-dar_farm_deadzone_off} sr_idle@recharge %=dar_farm_deadzone_effect =play_snd_from_obj(8189:car\car_traktor)%
+
+
+
+[sr_idle@recharge]
+on_timer = 100 | {~20} sr_idle@1, {~30} sr_idle@2, {~40} sr_idle@3, {~50} sr_idle@4, {~60} sr_idle@5
+
+
+
+;  =play_particle_on_path(anomaly2\group_items\body_tear_blood_01:37)
+;  =run_cam_effector(head_shot)
+;  =run_cam_effector(hit_front_left)
+;  =run_cam_effector(hit_front_right)
+;  =run_cam_effector(hit_back_left)
+;  =run_cam_effector(hit_back_right)

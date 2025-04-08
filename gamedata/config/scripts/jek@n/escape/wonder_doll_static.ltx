@@ -1,0 +1,35 @@
+[logic]
+active = ph_idle@1
+
+[ph_sound]
+snd = script_doll_music
+looped = true
+on_info = {=actor_has_item(wonder_doll)} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=delme%
+
+
+[ph_idle@1]
+on_info = {=actor_has_item(wonder_doll)} nil
+on_actor_dist_le_nvis = 10|{~25} ph_idle@2 %=play_snd_on_me(characters_voice\woman\talk\use\no_weapon_5)%, {~45} ph_idle@3 %=play_snd_on_me(characters_voice\woman\talk\use\no_weapon_1)%, {~75} ph_idle@4 %=play_snd_on_me(characters_voice\woman\reactions\joke\reaction_joke_6)%, ph_idle@5 %=play_snd_on_me(characters_voice\woman\fight\attack\attack_5)%
+
+[ph_idle@2]
+on_actor_dist_ge_nvis = 15|ph_idle@1
+
+[ph_idle@3]
+on_actor_dist_ge_nvis = 15|ph_idle@1
+
+[ph_idle@4]
+on_actor_dist_ge_nvis = 15|ph_idle@1
+
+[ph_idle@5]
+on_actor_dist_ge_nvis = 15|ph_idle@1
+
+
+
+
+
+
+

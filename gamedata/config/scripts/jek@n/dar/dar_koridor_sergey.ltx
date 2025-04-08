@@ -1,0 +1,57 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = dar_koridor_sergey_walk1
+path_look = dar_koridor_sergey_walk1
+on_timer      = 1 | walker@1 %=make_invulnerable =disable_trading%
+;trade = misc\trade_hunter4.ltx
+
+[walker@1]
+path_walk = dar_koridor_sergey_walk1
+path_look = dar_koridor_sergey_walk1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sneak
+def_state_moving2 = sneak
+def_state_moving3 = sneak
+meet = no_meet
+on_timer      = 5000 | walker@2
+on_info = {+dar_build_guards_spawn} %=delme2%
+
+[walker@2]
+path_walk = dar_koridor_sergey_walk2
+path_look = dar_koridor_sergey_walk2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sneak
+def_state_moving2 = sneak
+def_state_moving3 = sneak
+meet = no_meet
+on_info = {+dar_build_guards_spawn} %=delme2%
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+
+[death]
+on_info = %+dar_sergey_dead%
+

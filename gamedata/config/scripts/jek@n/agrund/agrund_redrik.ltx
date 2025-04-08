@@ -1,0 +1,143 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start, {+agrund_redrik_info1} walker@5, {+agrund_redrik_unlock_door} walker@6_1
+on_death = death
+threshold = threshold
+
+[walker@start]
+path_walk = agrund_redrik_walk_1
+path_look = agrund_redrik_look_1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 4000 | walker@1 %=make_invulnerable =disable_trading%
+
+
+[walker@1]
+path_walk = agrund_redrik_walk_1
+path_look = agrund_redrik_look_1
+danger = danger_condition
+combat_ignore_cond = always
+on_signal       = arrived | walker@2 %=send_tip(agrund_redrik_help_tip:default)%
+
+[walker@2]
+path_walk = agrund_hunter_walk_nii7
+path_look = agrund_hunter_look_nii7
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 3 | walker@3 %=agrund_reservuar_redrik_rescue =play_snd_from_obj(8448:characters_voice\human_03\stalker\talk\trade\yes\yes_3) +agrund_redrik_rescue_actor%
+
+[walker@3]
+path_walk = agrund_redrik_walk_2
+path_look = agrund_redrik_look_2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@4
+
+[walker@4]
+path_walk = agrund_redrik_walk_2
+path_look = agrund_redrik_look_2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_redrik_info1} walker@5
+
+[walker@5]
+path_walk = agrund_redrik_walk_2
+path_look = agrund_redrik_look_2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 15000 | walker@5_1 %=play_snd_from_obj(8448:characters_voice\human_03\stalker\waiting\moveout\moveout_3)  =send_tip(agrund_redrik_help_tip2:default)%
+
+[walker@5_1]
+path_walk = agrund_redrik_walk_3
+path_look = agrund_redrik_look_3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 7000 | walker@6_1 %+agrund_redrik_unlock_door%
+
+[walker@6_1]
+path_walk = agrund_redrik_walk_3
+path_look = agrund_redrik_look_3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@7
+
+[walker@6]
+path_walk = agrund_redrik_walk_3
+path_look = agrund_redrik_look_3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+agrund_redrik_info1} walker@7
+
+[walker@7]
+path_walk = agrund_redrik_walk_4
+path_look = agrund_redrik_look_4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=agrund_flying_acid_redrik_hit} remark@wounded %+agrund_flying_acid_redrik_hit =play_snd_from_obj(8448:characters_voice\human_03\stalker\fight\hit\hit_9) =play_agrund_anomaly_particles%
+
+
+[remark@wounded]
+anim = wounded_heavy
+anim_reset = true
+no_move = true
+meet = meet@red
+combat_ignore_cond = always
+danger = danger_condition
+on_info = {+agrund_redrik_vakcin_info} walker@8 %=play_snd_from_obj(8448:characters_voice\human_03\stalker\talk\leave\leave_5)%
+on_info2 = {+agrund_gaz_clear} walker@9 %=play_snd_from_obj(8448:characters_voice\human_03\stalker\states\radiation\radiation_4)%
+
+; ГГ нас бросил. Стреляемся:
+[walker@8]
+path_walk = agrund_redrik_walk_4
+path_look = agrund_redrik_look_4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_actor_dist_ge_nvis = 20 | %=unmake_invulnerable =suicide%
+
+
+; ГГ нас не бросил. Идем к выходу:
+[walker@9]
+path_walk = agrund_redrik_walk_5
+path_look = agrund_redrik_look_5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@12 %+agrund_redrik_final%
+
+[walker@12]
+path_walk = agrund_redrik_walk_5
+path_look = agrund_redrik_look_5
+danger = danger_condition
+combat_ignore_cond = always
+
+[meet@red]
+meet_state = 2
+meet_state_wpn = 2
+victim = 1|nil
+victim_wpn = 1|nil
+use = true
+use_wpn = false
+abuse = false
+
+[threshold]
+max_ignore_distance = 3
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+agrund_redrik_dead%

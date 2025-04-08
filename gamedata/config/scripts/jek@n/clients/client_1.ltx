@@ -1,0 +1,123 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {=actor_on_level(l02_garbage)} walker@garb, {=actor_on_level(l03_agroprom)} walker@agr, {=actor_on_level(l04_darkvalley)} walker@dar
+
+[walker@garb]
+path_walk = client1_garb_walk1
+path_look = client1_garb_look1
+on_timer = 1|walker@garb1 %=make_invulnerable =disable_trading%
+
+[walker@garb1]
+path_walk = client1_garb_walk1
+path_look = client1_garb_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@garb2 %=play_snd(characters_voice\scenario\client1_hello_message) =send_tip(garb_hue_heli_desant_tip:hue:8064)%
+
+[walker@garb2]
+path_walk = client1_garb_walk1
+path_look = client1_garb_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+notebook_client1task1_reward} walker@garb3
+on_info2 = {+notebook_client1task2_reward} walker@garb3
+on_info3 = {+notebook_client1task3_reward} walker@garb3
+
+[walker@garb3]
+path_walk = client1_garb_walk1
+path_look = client1_garb_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10000|walker@garb4
+
+[walker@garb4]
+path_walk = client1_garb_walk2
+path_look = client1_garb_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|%-client1_art1_have -client1_garbage_traveling -notebook_client1task1_reward -notebook_client1task2_reward -notebook_client1task3_reward +garb_hue_heli_back1 =delme%
+
+
+[walker@agr]
+path_walk = client1_agr_walk1
+path_look = client1_agr_look1
+on_timer = 1|walker@agr1 %=make_invulnerable =disable_trading%
+
+[walker@agr1]
+path_walk = client1_agr_walk1
+path_look = client1_agr_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@agr2 %=play_snd(characters_voice\scenario\client1_hello_message) =send_tip(garb_hue_heli_desant_tip:hue:8064)%
+
+[walker@agr2]
+path_walk = client1_agr_walk1
+path_look = client1_agr_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+notebook_client1task1_reward} walker@agr3
+on_info2 = {+notebook_client1task2_reward} walker@agr3
+on_info3 = {+notebook_client1task3_reward} walker@agr3
+
+[walker@agr3]
+path_walk = client1_agr_walk1
+path_look = client1_agr_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10000|walker@agr4
+
+[walker@agr4]
+path_walk = client1_agr_walk2
+path_look = client1_agr_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|%-client1_art1_have -client1_agr_traveling -notebook_client1task1_reward -notebook_client1task2_reward -notebook_client1task3_reward +agr_hue_heli_back1 =delme%
+
+
+[walker@dar]
+path_walk = client1_dar_walk1
+path_look = client1_dar_look1
+on_timer = 1|walker@dar1 %=make_invulnerable =disable_trading%
+
+[walker@dar1]
+path_walk = client1_dar_walk1
+path_look = client1_dar_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@dar2 %=play_snd(characters_voice\scenario\client1_hello_message) =send_tip(garb_hue_heli_desant_tip:hue:8064)%
+
+[walker@dar2]
+path_walk = client1_dar_walk1
+path_look = client1_dar_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+notebook_client1task1_reward} walker@dar3
+on_info2 = {+notebook_client1task2_reward} walker@dar3
+on_info3 = {+notebook_client1task3_reward} walker@dar3
+
+[walker@dar3]
+path_walk = client1_dar_walk1
+path_look = client1_dar_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10000|walker@dar4
+
+[walker@dar4]
+path_walk = client1_dar_walk2
+path_look = client1_dar_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|%-client1_art1_have -client1_darkval_traveling -notebook_client1task1_reward -notebook_client1task2_reward -notebook_client1task3_reward +dar_hue_heli_back1 =delme%
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0

@@ -1,0 +1,18 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+
+[mob_home]
+path_home = agr_nii3floor_zone_point
+home_min_radius = 1
+home_max_radius = 3
+braindead = true
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:0.8:10) =run_postprocess(fire_hit)%
+on_timer = 30000 | %=delme%
+
+
+
+
+

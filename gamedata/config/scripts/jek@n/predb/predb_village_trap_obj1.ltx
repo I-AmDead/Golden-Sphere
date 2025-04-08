@@ -1,0 +1,24 @@
+[logic]
+active = ph_sound@1
+
+[ph_sound@1]
+snd = predb_village_trap_snd
+min_idle = 1000
+max_idle = 5000
+looped = true
+on_info = {+predb_village_rogue_finded} nil
+on_actor_dist_le_nvis = 35|ph_idle %=send_tip(predb_village_trap_help_tip:stalker)%
+
+[ph_idle]
+on_info = {+predb_village_rogue_finded} nil
+on_timer = 1000|ph_sound@2 %+predb_village_snd_trap1%
+
+[ph_sound@2]
+snd = predb_village_trap_snd
+min_idle = 1000
+max_idle = 5000
+looped = true
+on_info = {+predb_village_rogue_finded} nil
+on_actor_dist_le_nvis = 7|nil %=spawn_predb_village_trap_obj2 =delme2%
+
+ 

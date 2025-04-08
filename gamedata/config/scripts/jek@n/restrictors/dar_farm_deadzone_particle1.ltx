@@ -1,0 +1,20 @@
+[logic]
+active = nil
+
+[sr_particle@1]
+name = anomaly\storm_01
+path = adr_farm_anomaly_tail
+mode = 2
+looped = true
+on_timer = 15000 | sr_particle@2
+on_info = {+dar_farm_deadzone_off} nil
+
+[sr_particle@2]
+name = anomaly\smoke_00
+path = adr_farm_anomaly_tail
+mode = 2
+looped = true
+;on_timer = 15000 | sr_particle@1
+on_info = {+dar_farm_deadzone_off} nil
+
+

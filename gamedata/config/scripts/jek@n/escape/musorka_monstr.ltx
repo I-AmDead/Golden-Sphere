@@ -1,0 +1,28 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@1
+on_death = mob_death
+
+[mob_home@1]
+path_home = esc_musorka_point
+home_min_radius = 1
+home_max_radius = 7
+on_timer = 100 | mob_home@2
+
+[mob_home@2]
+path_home = esc_musorka_point
+home_min_radius = 1
+home_max_radius = 7
+on_actor_dist_le_nvis = 5 | %=musorka_monstr_slow%
+;on_actor_dist_le_nvis = 5 | mob_home@3 %=musorka_monstr_slow%
+
+[mob_home@3]
+path_home = esc_musorka_point
+home_min_radius = 1
+home_max_radius = 7
+on_actor_dist_le = 4 | mob_home@2 %=musorka_monstr_slow%
+
+[mob_death]
+on_info = %+musorka_monstr_dead%

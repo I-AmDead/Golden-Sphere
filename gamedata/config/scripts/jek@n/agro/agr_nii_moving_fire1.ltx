@@ -1,0 +1,34 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@norm
+
+[mob_walker@norm]
+path_walk = nii_moving_fire1_home
+path_look = nii_moving_fire1_home
+home_min_radius = 1
+home_max_radius = 3
+braindead = true
+on_info = {+af_nii_art77_destroyed} %=delme2%
+on_actor_dist_le_nvis = 4 | mob_home@agress
+
+[mob_camp@norm]
+path_home = nii_moving_fire1_home
+path_look = nii_moving_fire1_home
+home_min_radius = 1
+home_max_radius = 3
+braindead = true
+on_actor_dist_le_nvis = 4 | mob_home@agress
+
+[mob_home@agress]
+path_home = nii_moving_fire1_home
+home_min_radius = 1
+home_max_radius = 3
+braindead = true
+on_info = {+af_nii_art77_destroyed} %=delme2%
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:0.2:10) =run_postprocess(fire_hit)%
+on_actor_dist_ge_nvis = 20 | mob_walker@norm
+
+
+

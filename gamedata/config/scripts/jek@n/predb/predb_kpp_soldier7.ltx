@@ -1,0 +1,57 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+threshold = threshold@predb_kpp_soldier7_threshold
+
+[walker@start]
+path_walk = predb_kpp_soldier7_walk1
+path_look = predb_kpp_soldier7_look1
+on_info = {+predb_kpp_fight_start} walker@shooting
+
+[walker@shooting]
+path_walk = predb_kpp_soldier7_walk1
+path_look = predb_kpp_soldier7_shoot_kontrab
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_kpp_kontrab_atacked} kamp@1 %=set_enemies(8635:8636:8637)%
+on_info2 = {+predb_kpp_soldiers_atacked} kamp@1 %=set_enemies(8635:8636:8637) =killactor%
+
+
+[kamp@1]
+center_point = predb_kpp_soldier7_walk1
+radius = 2 
+def_state_moving = run
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+predb_kpp_fight_start} %=set_enemies(8635:8636:8637)%
+
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_kpp_soldier7_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {-predb_kpp_soldiers_atacked =hit_by_actor} %+predb_kpp_soldiers_atacked%
+
+[death]
+on_info = {=killed_by_actor} %+predb_kpp_soldier7_dead +predb_kpp_soldiers_atacked%, {!killed_by_actor} %+predb_kpp_soldier7_dead%
+

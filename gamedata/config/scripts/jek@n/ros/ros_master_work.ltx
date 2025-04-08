@@ -1,0 +1,72 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+spawn_ros_desant} nil, mob_walker@idle
+on_death = mob_death
+on_hit = mob_hit
+
+
+[mob_walker@idle]
+path_walk = ros_master_walk1
+path_look = ros_master_look1
+braindead = true
+on_timer = 1 | mob_remark@1
+
+; Здороваемся:
+[mob_remark@1]
+anim = death_init
+braindead = true
+target = nil
+on_info = {+ros_master_dead} nil
+on_actor_dist_le_nvis = 15 | mob_remark@2 %=ros_master_talk1_think =play_snd(monsters\poltergeist\attack_0)%
+
+
+[mob_remark@2]
+anim = death_init
+braindead = true
+target = nil
+on_actor_dist_le_nvis = 10 | mob_home@fight
+
+
+; Поздоровались и сваливаем:
+[mob_walker@idle0_1]
+path_walk = ros_master_walk1
+path_look = ros_master_look1
+braindead = true
+on_info = {+ros_master_dead} nil
+on_actor_dist_le_nvis = 7 | mob_home@fight
+
+
+[mob_home@fight]
+path_home = ros_master_yard_fight1
+home_min_radius = 5
+home_max_radius = 13
+braindead = true
+on_info = {+ros_master_dead} nil
+
+
+[mob_hit]
+;on_info = {=hit_by_actor} mob_remark@enemy
+
+[mob_death]
+on_info = %+ros_master_dead =ros_master_dead_spawn%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

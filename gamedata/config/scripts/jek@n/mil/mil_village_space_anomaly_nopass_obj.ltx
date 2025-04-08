@@ -1,0 +1,21 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+; Отталкиваем:
+[ph_idle@1]
+on_info = {+mil_freak_water_drink} ph_idle@2
+on_actor_in_zone = mil_village_space_anomaly_zone1|%=hit_obj_back(37:bip01_spine:0:600) =play_snd(ambient\whistling_wind1)%
+
+; Втягиваем:
+[ph_idle@2]
+on_info = {+mil_icon_finded} nil
+on_actor_not_in_zone = mil_village_space_anomaly_zone1|%=hit_obj(37:bip01_spine:0:600) =play_snd(ambient\whistling_wind1)%
+
+
+
+
+
+

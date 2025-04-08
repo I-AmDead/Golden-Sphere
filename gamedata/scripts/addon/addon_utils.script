@@ -1,0 +1,69 @@
+function get_object_number(npc, object_name)
+	object_num = 0
+	
+	if not npc then
+		return object_num
+	end
+	
+	local count_object = 
+		function(inventory_object)
+			if inventory_object:section() == object_name then
+				object_num = object_num + 1
+			end
+		end
+	
+	npc:inventory_for_each(count_object)
+	return object_num	
+end
+
+function give_object(giver, receiver, object_name, num_of_objects)
+	if giver and receiver and object_name then
+		
+		local num_of_objects_to_transfer = 1
+		if num_of_objects ~= nil and num_of_objects ~= 0 then
+			num_of_objects_to_transfer = num_of_objects
+		end
+		
+		counter = 0
+		signal = false
+		
+		local relocate_object = 
+		function(inventory_object)
+			if inventory_object:section() == object_name and not signal then
+				giver:transfer_item(inventory_object, receiver)
+				counter = counter + 1
+				if counter == num_of_objects_to_transfer then
+					signal = true
+					--break
+					--return
+				end
+			end
+		end
+	
+		giver:inventory_for_each(relocate_object)
+		
+		if signal then
+			--on_item_lost(object_name, counter)
+			on_item_lost(object_name, num_of_objects_to_transfer)
+		end
+		return signal
+	end
+	return false
+end
+
+function on_item_lost(item_name, num_of_items_lost)
+	local num_of_items = 1
+	if num_of_items_lost ~= nil and num_of_items_lost ~= 0 then
+		num_of_items = num_of_items_lost
+	end
+	
+	local task_texture, task_rect = get_texture_info("ui_iconsTotal_lost_thing")
+	local news_text = "%c[255,160,160,160]" .. game.translate_string("general_out_item") .. "\\n" ..
+	"%c[default]" .. tostring(num_of_items) .. "x " .. game.translate_string(news_manager.get_inv_name(item_name))		
+	
+	if db.actor:is_talking() then
+		db.actor:give_talk_message(news_text, task_texture, task_rect, "iconed_answer_item")
+	else
+		db.actor:give_game_news(news_text, task_texture, task_rect, 0, 10000)
+	end		
+end

@@ -1,0 +1,18 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+pri_detsad_medroom_docks_info} ph_sound
+
+[ph_sound]
+snd = pri_detsad_cry
+looped = true
+on_info = {+pri_brownie2_spawn} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+
+
+
+ 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="ogsm_stuff">
+		<text>Золотой Шар или приключения Жекана</text>
+	</string>
+
+	<string id="ogsm_lead">
+		<text>Автор:</text>
+	</string>
+
+	<string id="ogsm_dexxx">
+		<text>Jek@n_Lim0n\n(сюжет, квесты, прообраз главного героя)</text>
+	</string>
+
+	<string id="ogse_lead">
+		<text>Выражаю благодарность:</text>
+	</string>
+
+	<string id="ogse_stuff_1">
+		<text>Charsi - выступал в роли гуру и сенсэя вместе взятых.</text>
+	</string>	
+	<string id="ogse_stuff_2">
+		<text>Mega_Черьв - консультации по SDK</text>
+	</string>
+	<string id="ogse_stuff_3">
+		<text>Разработчикам дополнений для игрового движка v.10007</text>
+	</string>
+	<string id="ogse_stuff_4">
+		<text>Рафаэль, Андрей С., TehTron, Assol и Оля - тестеры</text>
+	</string>
+	<string id="ogse_stuff_5">
+		<text>Vlador и Pidzhoe - озвучивание фраз героев</text>
+	</string>
+	<string id="ogse_stuff_6">
+		<text>Phorumer, Ed_rez, Editor46 и Федот "qwqwqw" - модели оружия и нпс.</text>
+	</string>
+	<string id="ogse_stuff_7">
+		<text>Artos - скриптовые модули</text>
+	</string>
+	<string id="ogse_stuff_8">
+		<text>Voltmod - работа над звуками</text>
+	</string>
+	<string id="ogse_stuff_9">
+		<text>Создателям мода ОГСЕ 0692</text>
+	</string>
+	<string id="ogse_stuff_10">
+		<text>Компании GSC за культовую игру</text>
+	</string>
+	<string id="ogse_stuff_11">
+		<text>...и всем, кто скинулся Жекану на новую снарягу.</text>
+	</string>
+
+	<string id="ogse_testers">
+		<text>А также:</text>
+	</string>
+	<string id="ogse_testers_list">
+		<text>Oksana579(Zizon) - человек реально хотел помочь\nNikitostalker - тестирование\nStrelok71.71 - не помню за что, на всякий случай</text>
+	</string>
+
+	<string id="ogse_thanx">
+		<text>Спасибо за игру.</text>
+	</string>
+
+
+</string_table>

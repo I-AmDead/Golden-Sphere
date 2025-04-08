@@ -1,0 +1,26 @@
+[logic]
+active = ph_idle@1_1
+
+[ph_idle@1_1]
+tips = faint_body_use
+on_actor_dist_le_nvis = 40 | ph_idle@1_2 %=send_tip(faint_npc_help_tip:default) =add_self_spot(blue_location:faint_man1_mark_text) =hit_obj(8667:bip01_spine2:0.01:10)%
+
+[ph_idle@1_2]
+tips = faint_body_use
+nonscript_usable = true
+;on_actor_dist_ge_nvis = 120 | %=spawn_dead_npc1at_pos =delme%
+on_info = {+faint_body1_use_morphine} ph_idle@2 %=disable_input =run_postprocess(agr_u_fade)%
+on_info2 = {+faint_body1_finish} ph_idle@3 %=disable_input =run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 4400 | %=spawn_alive_npc1at_pos =enable_input =karma_up =delme%
+
+[ph_idle@3]
+on_timer = 4400 | %=spawn_dead_npc1at_pos =enable_input =karma_down =delme%
+
+
+
+
+
+
+

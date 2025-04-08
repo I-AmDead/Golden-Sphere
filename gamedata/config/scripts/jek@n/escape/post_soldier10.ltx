@@ -1,0 +1,209 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+skidan_post_stels_task} walker@in_room_arest, {+sold10_goto_room} walker@in_room, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = post_soldier10_walk1
+path_look = post_soldier10_look1
+on_timer = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+
+; Сторожим сейф:
+[walker@1]
+path_walk = post_soldier10_walk1
+path_look = post_soldier10_look1
+def_state_moving1 = walk
+def_state_moving2 = walk
+def_state_moving3 = walk
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_timer = 6000 | walker@1_2
+on_info = {+sold10_goto_room} walker@to_room
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+[walker@1_1]
+path_walk = post_soldier10_walk1
+path_look = post_soldier10_look1
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_signal       = arrived | walker@1
+on_info = {+sold10_goto_room} walker@to_room
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+
+
+; Промежуточная позиция у окна, чтоб м.б. начать диалог:
+[walker@1_2]
+path_walk = post_soldier10_walk2_3
+path_look = post_soldier10_look2_3
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_signal       = arrived | walker@2
+on_info = {+sold10_goto_room} walker@to_room %=play_snd_from_obj(8130:script_replics\bandit_1\replics\bandit_replic_7)%
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+[walker@2_1]
+path_walk = post_soldier10_walk2_3
+path_look = post_soldier10_look2_3
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_signal       = arrived | walker@1_1
+on_info = {+sold10_goto_room} walker@to_room %=play_snd_from_obj(8130:script_replics\bandit_1\replics\bandit_replic_7)%
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+
+
+; Сидим на параше:
+[walker@2]
+path_walk = post_soldier10_walk2
+path_look = post_soldier10_look2
+def_state_moving1 = walk
+def_state_moving2 = walk
+def_state_moving3 = walk
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_signal       = arrived | walker@2_2
+on_info = {+sold10_goto_room} walker@to_room
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+[walker@2_2]
+path_walk = post_soldier10_walk2
+path_look = post_soldier10_look2
+danger = danger_condition
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_timer = 12000 | walker@2_1
+on_info = {+sold10_goto_room} walker@to_room 
+on_actor_dist_le = 11 | %=blokpost_enemy%
+
+
+
+; Идем в комнату по вызову ГГ:
+[walker@to_room]
+path_walk = post_soldier10_walk3
+path_look = post_soldier10_look3
+danger = danger_condition
+meet = no_meet
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_signal       = arrived | walker@in_room %=blokpost_alarm_timer_start +kazarma_door_open =post_kazarma_door_shans_think%
+
+; Мы в комнате:
+[walker@in_room]
+path_walk = post_soldier10_walk4
+path_look = post_soldier10_look4
+danger = danger_condition
+meet = no_meet
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_signal       = arrived | walker@in_room2 %=play_snd_from_obj(8130:characters_voice\human_01\military\reactions\dead_enemy\dead_enemy_2)%
+
+[walker@in_room2]
+path_walk = post_soldier10_walk4
+path_look = post_soldier10_look4
+danger = danger_condition
+meet = no_meet
+combat_ignore_cond = {-blokpost_alarm2 -kazarma_door_broken}
+on_info = {+skidan_post_stels_task} walker@in_room_arest
+
+
+
+
+; Нас арестовали. Стоим у окна и ждем ГГ-вызволителя
+[walker@in_room_arest]
+path_walk = post_soldier10_walk5
+path_look = post_soldier10_look5
+danger = danger_condition
+on_actor_dist_le_nvis = 10 | walker@in_room_arest_call1
+
+
+[walker@in_room_arest_call1]
+path_walk = post_soldier10_walk5
+path_look = post_soldier10_look5_1
+danger = danger_condition
+on_timer = 5000 | walker@in_room_arest_call2
+on_actor_dist_ge_nvis = 10 | walker@in_room_arest
+on_info = {+kazarma_door_key_door_opened_again} walker@after_room_arest
+
+[walker@in_room_arest_call2]
+path_walk = post_soldier10_walk5
+path_look = post_soldier10_look5_2
+danger = danger_condition
+on_timer = 5000 | walker@in_room_arest_call1
+on_actor_dist_ge_nvis = 10 | walker@in_room_arest
+on_info = {+kazarma_door_key_door_opened_again} walker@after_room_arest
+
+
+
+
+[walker@after_room_arest]
+path_walk = post_soldier10_walk6
+path_look = post_soldier10_look6
+danger = danger_condition
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+meet = no_meet
+on_signal       = arrived | walker@after_room_arest2
+
+[walker@after_room_arest2]
+path_walk = post_soldier10_walk6
+path_look = post_soldier10_look6
+danger = danger_condition
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+on_info = {+sold10_doing_to_fence} walker@to_fence
+
+
+[walker@to_fence]
+path_walk = post_soldier10_walk7
+path_look = post_soldier10_look7
+danger = danger_condition
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+meet = no_meet
+on_signal       = arrived | walker@to_fence2 %+sold10_before_fence%
+
+[walker@to_fence2]
+path_walk = post_soldier10_walk7
+path_look = post_soldier10_look7
+danger = danger_condition
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+on_info = {+sold10_going_to_tree} walker@to_tree %=run_postprocess(agr_u_fade)%
+
+[walker@to_tree]
+path_walk = post_soldier10_walk7
+path_look = post_soldier10_look7
+danger = danger_condition
+meet = no_meet
+on_timer = 2000 | %=actor_teleport_to_post_tree =delme2%
+
+
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+post_soldier10_dead%
+

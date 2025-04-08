@@ -1,0 +1,23 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@idle
+
+[ph_idle@idle]
+on_info = {+esc_chickenblind_zone_off} %+esc_lathkey_spawn =delme%
+tips = esc_village_stoned_body2_use
+on_actor_dist_le_nvis = 20 | ph_idle@scream1
+
+
+[ph_idle@scream1]
+tips = esc_village_stoned_body2_use
+on_timer = 6000 | ph_idle@scream2 %=play_snd_from_obj(8443:characters_voice\human_01\newbie\help\wounded_heavy\help_7)%
+on_actor_dist_ge_nvis = 20 | ph_idle@idle
+on_info = {+esc_chickenblind_zone_off} %+esc_lathkey_spawn =delme2%
+
+[ph_idle@scream2]
+tips = esc_village_stoned_body2_use
+on_timer = 8500 | ph_idle@scream1 %=play_snd_from_obj(8443:characters_voice\human_01\newbie\help\wounded_heavy\help_8)%
+on_actor_dist_ge_nvis = 20 | ph_idle@idle
+on_info = {+esc_chickenblind_zone_off} %+esc_lathkey_spawn =delme2%

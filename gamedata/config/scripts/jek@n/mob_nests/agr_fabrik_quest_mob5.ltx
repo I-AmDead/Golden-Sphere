@@ -1,0 +1,14 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+on_death = mob_death
+
+[mob_home]
+path_home = agr_quest_mobs_fabrika_home
+home_min_radius  = 5
+home_max_radius = 10
+
+[mob_death]
+on_info = %=spawn_fabrik_quest_mobs_tribe4%

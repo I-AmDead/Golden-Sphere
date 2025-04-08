@@ -1,0 +1,25 @@
+[logic]
+active = sr_particle@1
+
+[sr_particle@1]
+name = parpar\particle_paradise_expsmoke_00
+path = esc_chicken_blindness_zone_point
+mode = 2
+looped = false
+on_actor_in_zone = esc_chicken_blindness_zone2 | sr_particle@2 %=show_indicators =stop_postprocess(deadcity_wake_old:677:true)%
+on_actor_inside = %=run_postprocess(deadcity_wake_old:677:false) =chicken_blindzone_rotation%
+on_actor_outside = %=stop_postprocess(deadcity_wake_old:677:true)%
+on_info = {+esc_lathkey_spawn} sr_idle
+
+[sr_particle@2]
+name = parpar\particle_paradise_expsmoke_00
+path = esc_chicken_blindness_zone_point
+mode = 2
+looped = false
+on_actor_not_in_zone = esc_chicken_blindness_zone2 | sr_particle@1
+on_info = {+esc_lathkey_spawn} sr_idle
+
+
+[sr_idle]
+;on_actor_inside = %=actor_position(308.34:14.85:273.36:569288:246)%
+

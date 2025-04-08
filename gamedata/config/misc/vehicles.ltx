@@ -1,0 +1,171 @@
+;-- Транспорт 
+[vehicle]
+GroupControlSection	= spawn_group
+class			    = SCRPTCAR
+cform               = skeleton
+ef_equipment_type	= 3
+
+;-- Багги.
+[vehicle_baggi]:vehicle
+$spawn 			= "vehicles\vehicle_niva"
+visual          = physics\vehicles\baggi\baggi.ogf
+actor_visual	= physics\vehicles\baggi\baggi.ogf
+
+;-- Нива.
+[vehicle_niva]:vehicle
+$spawn 			= "vehicles\vehicle_niva"
+visual          = physics\vehicles\niva\veh_niva_u_01.ogf
+actor_visual	= physics\vehicles\niva\veh_niva_u_01.ogf
+
+;-- Еще Нива.
+[vehicle_niva2]:vehicle
+$spawn 			= "vehicles\vehicle_niva2"
+visual          = physics\vehicles\niva\veh_niva_u_02.ogf
+actor_visual	= physics\vehicles\niva\veh_niva_u_02.ogf
+
+;-- Москвич.
+[vehicle_moskvich]:vehicle
+$spawn 			= "vehicles\vehicle_moskvich"
+visual          = physics\vehicles\moskvich\veh_moskvitch_u_01.ogf
+actor_visual	= physics\vehicles\moskvich\veh_moskvitch_u_01.ogf
+
+;-- Зеленый
+[vehicle_moskvich2]:vehicle
+$spawn 			= "vehicles\vehicle_moskvich"
+visual          = physics\vehicles\moskvich\veh_moskvitch_u_02.ogf
+actor_visual	= physics\vehicles\moskvich\veh_moskvitch_u_02.ogf
+
+;-- УАЗ. Новый
+[vehicle_uaz]:vehicle
+$spawn 			= "vehicles\vehicle_uaz"
+visual          = physics\vehicles\uaz\veh_uaz_u_01.ogf
+actor_visual	= physics\vehicles\uaz\veh_uaz_u_01.ogf
+
+;-- УАЗ. Старый
+[vehicle_uaz2]:vehicle
+$spawn 			= "vehicles\vehicle_uaz"
+visual          = physics\vehicles\uaz\veh_uaz_u_02.ogf
+actor_visual	= physics\vehicles\uaz\veh_uaz_u_02.ogf
+
+;-- Запорожец. Горбатый
+[vehicle_zaz]:vehicle
+$spawn 			= "vehicles\vehicle_zaz"
+visual          = physics\vehicles\zaz\veh_zaz_u_01.ogf
+actor_visual	= physics\vehicles\zaz\veh_zaz_u_01.ogf
+
+;-- Запорожец. Ушастый
+[vehicle_zaz968]:vehicle
+$spawn 			= "vehicles\vehicle_zaz968"
+visual          = physics\vehicles\zaz968\veh_zaz_968.ogf
+actor_visual	= physics\vehicles\zaz968\veh_zaz_968.ogf
+
+;-- ВАЗ 2106.
+[vehicle_2106]:vehicle
+$spawn 			= "vehicles\vehicle_2106"
+visual          = physics\vehicles\vaz_2106\2106.ogf
+actor_visual	= physics\vehicles\vaz_2106\2106.ogf
+
+;-- УАЗ буханка.
+[vehicle_uazbuhanka]:vehicle
+$spawn 			= "vehicles\vehicle_uazbuhanka"
+visual          = physics\vehicles\uaz_buhanka\uaz_buhanka.ogf
+actor_visual	= physics\vehicles\uaz_buhanka\uaz_buhanka.ogf
+
+;-- Автобус ЛАЗ.
+[vehicle_avtobuslaz]:vehicle
+$spawn 			= "vehicles\vehicle_avtobuslaz"
+visual          = physics\vehicles\avtobus_laz\avtobus_laz.ogf
+actor_visual	= physics\vehicles\avtobus_laz\avtobus_laz.ogf
+
+;-- Автобус ГАЗ-53.
+[vehicle_avtobuszil]:vehicle
+$spawn 			= "vehicles\vehicle_avtobuszil"
+visual          = physics\vehicles\avtobus_gaz\avtobus_gaz.ogf
+actor_visual	= physics\vehicles\avtobus_gaz\avtobus_gaz.ogf
+
+;-- Грузовик ЗИЛ ММЗ.
+[vehicle_zil_mmz]:vehicle
+$spawn 			= "vehicles\vehicle_zil_mmz"
+visual          = physics\vehicles\zil_mmz\zil_mmz.ogf
+actor_visual	= physics\vehicles\zil_mmz\zil_mmz.ogf
+
+;-- Грузовик ЗИЛ 131.
+[vehicle_zil131]:vehicle
+$spawn 			= "vehicles\vehicle_zil131"
+visual          = physics\vehicles\zil_131\zil_131.ogf
+actor_visual	= physics\vehicles\zil_131\zil_131.ogf
+
+;-- Камаз
+[vehicle_kamaz]:vehicle
+$spawn 			= "vehicles\vehicle_kamaz"
+visual          = physics\vehicles\kamaz\veh_kamaz_u_01.ogf
+actor_visual	= physics\vehicles\kamaz\veh_kamaz_u_01.ogf
+
+;-- Камаз без прицепа.
+[vehicle_kamaz_nopricep]:vehicle
+$spawn 			= "vehicles\vehicle_kamaz_nopricep"
+visual          = physics\vehicles\kamaz\veh_kamaz_nopricep_u_01.ogf
+actor_visual	= physics\vehicles\kamaz\veh_kamaz_nopricep_u_01.ogf
+
+;-- ГАЗ 66.
+[vehicle_gaz66]:vehicle
+$spawn 			= "vehicles\vehicle_gaz66"
+visual          = physics\vehicles\gaz66\gaz66.ogf
+actor_visual	= physics\vehicles\gaz66\gaz66.ogf
+
+;-- Трактор.
+[vehicle_tr13]:vehicle
+$spawn 			= "vehicles\vehicle_tr13"
+visual          = physics\vehicles\tr13\veh_tr13_u_01.ogf
+actor_visual	= physics\vehicles\tr13\veh_tr13_u_01.ogf
+
+;-- БТР.
+[vehicle_btr]:vehicle
+$spawn 			= "vehicles\vehicle_btr"
+visual          = physics\vehicles\btr\veh_btr_u_09.ogf
+actor_visual	= physics\vehicles\btr\veh_btr_u_09.ogf
+
+[esc_vehicle_btr]:vehicle
+$spawn          = "vehicles\esc_vehicle_btr"
+visual          = physics\vehicles\btr\veh_btr_u_01.ogf
+actor_visual    = physics\vehicles\btr\veh_btr_u_01.ogf
+script_binding  = bind_physic_object.init
+custom_data     = scripts\esc\esc_btr_unmove.ltx
+
+
+;-- БТР Ричарда Нунана:
+;[client2_btr]:vehicle
+;$spawn          = "vehicles\esc_vehicle_btr"
+;visual          = physics\vehicles\btr\veh_btr_u_01.ogf
+;actor_visual    = physics\vehicles\btr\veh_btr_u_01.ogf
+;script_binding  = bind_physic_object.init
+;custom_data     = scripts\jek@n\clients\client2_btr.ltx
+
+;-- Автомобиль доктора Пильмана:
+;[client3_car]:vehicle
+;visual          = physics\vehicles\niva\veh_niva_u_02.ogf
+;actor_visual    = physics\vehicles\niva\veh_niva_u_02.ogf
+;script_binding  = bind_physic_object.init
+;custom_data     = scripts\jek@n\clients\client3_car.ltx
+
+
+
+;-- БТР у минного поля на Свалке:
+[garb_minefield_btr]:vehicle
+$spawn          = "vehicles\esc_vehicle_btr"
+visual          = physics\vehicles\btr\veh_btr_u_01.ogf
+;visual          = physics\vehicles\btr\veh_btr_u_09.ogf
+actor_visual    = physics\vehicles\btr\veh_btr_u_01.ogf
+script_binding  = bind_physic_object.init
+;custom_data     = scripts\jek@n\garb\garb_minefield_btr.ltx
+
+;-- Запор во дворе ангара на Свалке:
+[garb_angar_zaz968]:vehicle
+visual          = physics\vehicles\zaz968\veh_zaz_968.ogf
+actor_visual	= physics\vehicles\zaz968\veh_zaz_968.ogf
+script_binding  = bind_physic_object.init
+custom_data     = scripts\jek@n\garb\garb_angar_zaz968.ltx
+
+
+
+

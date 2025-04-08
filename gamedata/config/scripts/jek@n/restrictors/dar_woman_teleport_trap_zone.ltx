@@ -1,0 +1,38 @@
+[logic]
+active = sr_idle@1
+
+[sr_particle@1]
+name = amk\snow_effect_00
+path = dar_woman_teleport_trap_point
+mode = 2
+looped = true
+on_info = {+actor_find_dar_woman_teleport} sr_particle@2
+on_actor_inside = {-actor_find_dar_woman} %=dar_woman_trap_zone_out%
+
+[sr_particle@2]
+name = amk\snow_effect_00
+path = dar_woman_teleport_trap_point
+mode = 2
+looped = true
+on_info = {+actor_find_dar_woman_process} sr_particle@3
+on_actor_inside = {+actor_find_dar_woman_teleport} %=actor_teleport_to_dar_trap%
+
+[sr_particle@3]
+name = amk\snow_effect_00
+path = dar_woman_teleport_trap_point
+mode = 2
+looped = true
+on_info = {+dar_trap_teleport1_dead +dar_trap_teleport2_dead +dar_trap_teleport3_dead} nil
+on_actor_outside = %=dar_woman_trap_zone_goback%
+
+[sr_idle@1]
+on_info = {+actor_find_dar_woman_teleport} sr_idle@2
+on_actor_inside = {-actor_find_dar_woman} %=dar_woman_trap_zone_out%
+
+[sr_idle@2]
+on_info = {+actor_find_dar_woman_process} sr_idle@3
+on_actor_inside = {+actor_find_dar_woman_teleport} %=actor_teleport_to_dar_trap%
+
+[sr_idle@3]
+on_info = {+dar_trap_teleport1_dead +dar_trap_teleport2_dead +dar_trap_teleport3_dead} nil
+on_actor_outside = %=dar_woman_trap_zone_goback%

@@ -1,0 +1,55 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+esc_helicrash_secret_info} walker@3, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = esc_lathkey_walk1
+path_look = esc_lathkey_look1
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = esc_lathkey_walk1
+path_look = esc_lathkey_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|walker@2 %=play_snd_from_obj(8444:characters_voice\human_01\newbie\help\wounded_thanx\thanx_3)%
+
+[walker@2]
+path_walk = esc_lathkey_walk1
+path_look = esc_lathkey_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+esc_helicrash_secret_info} walker@3
+
+[walker@3]
+path_walk = esc_lathkey_walk2
+path_look = esc_lathkey_look2
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+
+[death]
+on_info = %+esc_lathkey_dead%
+

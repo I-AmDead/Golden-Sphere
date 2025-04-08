@@ -1,0 +1,88 @@
+[logic]
+active = ph_door@locked
+
+
+; Стартовое состояние:
+[ph_door@locked]
+closed = true
+locked = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x16_burers_atack} ph_door@open1
+on_use = {=actor_has_item(x16door_key)} ph_door@open1 %=remove_item(x16door_key)%
+
+
+; Промежуточное состояние:
+[ph_door@open1]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x16_saharov_in_room} ph_door@open2
+
+
+; Закрытое состояние(защита от бюреров):
+[ph_door@open2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@close1 %+x16_saharov_door_closed%
+
+
+; Бюреры ломают дверь:
+[ph_door@close1]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x16_fuel_blow} ph_door@open3 %=play_snd_from_obj(8735:material\metal_box\collide\big_metal_2) =x16burers_door_break_think =delme2%
+on_timer = 4000 | ph_door@close2 %=play_snd_from_obj(8735:material\barrel\collide\hithard01hl)%
+
+[ph_door@close2]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x16_fuel_blow} ph_door@open3 %=play_snd_from_obj(8735:material\metal_box\collide\big_metal_2) =x16burers_door_break_think =delme2%
+on_timer = 4800 | ph_door@close3 %=play_snd_from_obj(8735:monsters\burer2\burer_attack_3)%
+
+[ph_door@close3]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x16_fuel_blow} ph_door@open3 %=play_snd_from_obj(8735:material\metal_box\collide\big_metal_2) =x16burers_door_break_think =delme2%
+on_timer = 4500 | ph_door@close4 %=play_snd_from_obj(8735:material\barrel\collide\hithard03hl)%
+
+[ph_door@close4]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x16_fuel_blow} ph_door@open3 %=play_snd_from_obj(8735:material\metal_box\collide\big_metal_2) =x16burers_door_break_think =delme2%
+on_timer = 4500 | ph_door@close1 %=play_snd_from_obj(8735:characters_voice\scenario\burer_kingdom\burer_talk_3)%
+
+
+; Бюреры взломали дверь:
+[ph_door@open3]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+
+
+
+[ph_door@free]
+locked = false
+closed = true
+no_force = true
+on_use = ph_door@open

@@ -1,0 +1,19 @@
+[logic]
+active = ph_code
+ 
+[ph_code]
+code = 384520
+on_code = {+esc_dead_scientist_info} ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = kamp_seif_text1
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+
+[ph_idle@hand]
+tips = safe_use_with_maroders_hand
+on_use = ph_idle@open %=play_snd(device\metal_small_close_stop) =karma_down%
+on_info = {!actor_has_item_on_belt(af_marouders_hand)} ph_code
+
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure

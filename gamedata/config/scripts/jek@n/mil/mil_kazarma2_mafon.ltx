@@ -1,0 +1,19 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = mil_kazarma2_mafon_use
+on_use = ph_sound %=play_snd(characters_voice\scenario\afscanner_off)%
+
+[ph_sound]
+snd = mil_kazarma2mafon
+looped = true
+on_info = {+mil_kazarm_portzones_off} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+
+
+
+ 

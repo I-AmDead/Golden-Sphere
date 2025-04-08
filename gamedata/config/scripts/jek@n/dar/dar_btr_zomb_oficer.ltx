@@ -1,0 +1,42 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold
+
+[walker@start]
+path_walk = dar_dar_btr_zombies_camp1
+path_look = dar_dar_btr_zombies_camp1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_build_guards_spawn} %=delme2%
+
+
+
+[meet]
+meet_state = 2| idle
+meet_state = 2| idle
+victim = 2| nil
+victim_wpn = 2| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[threshold]
+max_ignore_distance = 1
+;ignore_monster = 0
+
+[death]
+on_info = %+dar_btr_zomb_oficer_dead%
+

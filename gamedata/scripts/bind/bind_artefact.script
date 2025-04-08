@@ -1,0 +1,39 @@
+
+--*
+
+local ltx = system_ini()
+function artefact_init(artefact) artefact:bind_object(artefact_binder(artefact)) end
+-------------------------------------------------------
+class "artefact_binder" (object_binder)
+function artefact_binder:__init (obj) super(obj) end
+-------------------------------------------------------
+function artefact_binder:net_spawn(sobj)
+    if not object_binder.net_spawn(self,sobj) then return false end
+
+	self.last_pos = self.object:position()
+	self.gravi_moded = false
+    return true
+end
+-------------------------------------------------------
+function artefact_binder:net_destroy()
+    object_binder.net_destroy(self)
+end
+--------------------------------------------------------
+function artefact_binder:update(delta)
+	local pos = self.object:position()
+	local dh = pos.y - self.last_pos.y 	-- приращение высоты за апдейт
+	local vh = dh * 1000 / delta 		-- вертикальная скорость, м/с
+	self.last_pos = pos
+	
+	if vh > 0.2 or self.gravi_moded then 
+	local apa = self.object:get_physics_shell()
+	if apa then
+		--log('%s%i:%3.3f,%3.3f,%3.3f', self.object:section(), self.object:id(), pos.x, pos.y, pos.z)
+		apa:apply_force(math.random()*100, -10000, math.random()*100)
+		if not self.object:parent() then
+			self.gravi_moded = true
+		else
+			self.gravi_moded = false
+	end end end
+end
+

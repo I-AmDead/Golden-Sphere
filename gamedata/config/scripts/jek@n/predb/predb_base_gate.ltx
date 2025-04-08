@@ -1,0 +1,64 @@
+[logic]
+active = {+predb_base_docks3_info +predb_base_chimera_dead} ph_door@open3, ph_door@locked
+
+[ph_door@locked]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = predb_army_gate_use
+on_use = {-predb_base_door_unlocked} ph_door@locked2 %=spawn_predb_base_guard_turret =play_snd(characters_voice\scenario\siren1)%, {+predb_base_door_unlocked} ph_door@open
+
+[ph_door@locked2]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = predb_army_gate_use
+
+
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = predb_army_gate_use2
+on_info = {+predb_base_docks3_info +predb_base_chimera_dead} ph_door@open2
+on_info2 = {=actor_near_predb_marouder1 +predb_maroresr_base -predb_marod_base2} %=start_predb_marouder1base_dialog%
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {=actor_in_predb_base_zone +predb_maroresr_base} ph_door@close
+
+[ph_door@open2]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_timer = 10000|ph_door@open3 %=send_tip(predb_base_door_open_tip:stalker)%
+
+[ph_door@open3]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+
+
+[ph_door@free]
+locked = false
+closed = true
+no_force = true
+on_use = ph_door@open

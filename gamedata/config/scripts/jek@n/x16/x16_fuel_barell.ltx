@@ -1,0 +1,21 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+x16_fuel_detonate} ph_idle@2
+
+[ph_idle@2]
+tips     = x16_fuel_barell_use
+on_use = {=actor_has_item(matches)} ph_idle@3 %=remove_item(matches) =play_snd(characters_voice\scenario\matches) =disable_ui%
+
+[ph_idle@3]
+on_timer = 1000 | ph_idle@4 %=play_particle_on_path(explosions\expl_car_smoke_small:x16_fuel_barell_point) =spawn_x16barell_explosion =enable_ui =play_snd_from_obj(8678:characters_voice\human_03\stalker\threat\back_off\backoff_3)%
+
+[ph_idle@4]
+on_timer = 4000 | ph_idle@5 %=hit_obj(8734:kost:10:10)%
+
+[ph_idle@5]
+on_timer = 1500 | %+x16_fuel_blow =delme2%

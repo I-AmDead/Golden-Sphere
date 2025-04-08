@@ -1,0 +1,14 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+notebook_client3travel} sr_idle@2
+
+[sr_idle@2]
+on_timer = 10 | sr_idle@3 %=mark_client3agent_place%
+
+[sr_idle@3]
+on_actor_inside = sr_idle@4 %=send_tip(client3_agent_welcome_tip:ecolog)%
+
+[sr_idle@4]
+on_actor_outside = {-notebook_client3travel} sr_idle@1 %=garb_client3_crew_delete%

@@ -1,0 +1,23 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_camp@idle
+
+[mob_camp@idle]
+path_home = garb_electric_fly3_home
+path_look = garb_electric_fly3_home
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_actor_dist_le_nvis = 9 | mob_home@agress
+
+[mob_home@agress]
+path_home = garb_electric_fly3_home
+home_min_radius = 1
+home_max_radius = 7
+braindead = true
+on_actor_dist_le_nvis = 2 | %=electric_hit_obj(37:bip01_spine:1.0:10) =play_shock_on_actor%
+on_timer = 10000 | mob_camp@idle
+
+

@@ -1,0 +1,11 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer = 4000|ph_idle@2 %=play_arena_particle_on_me%
+
+[ph_idle@2]
+on_timer = 4000|ph_idle@1 %=play_arena_particle_on_me%

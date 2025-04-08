@@ -1,0 +1,292 @@
+function attach( sm ) -- для менеджера сигналов
+  sm:subscribe({ signal = "on_spawn",       fun = this.on_spawn})
+  sm:subscribe({ signal = "on_use",       fun = this.check_medkit})
+  sm:subscribe({ signal = "on_update",       fun = this.on_update})
+end
+
+local drug_timer = 0
+
+function on_update()
+
+	achieve_all_preparation()
+
+	if healing then 
+		local drug_check_timer = time_global()
+		if drug_check_timer > drug_timer then 
+			healing.check_all_preparation()
+			drug_timer = drug_timer + 5000 
+		end 		
+	end
+end
+
+function on_spawn()
+	---восстанавливаем время лекарств
+	healing.grug_time["yod_end"] 		= ogse.load_var( "yod_end", 0 )
+	healing.grug_time["vodka_end"] 		= ogse.load_var( "vodka_end", 0 )
+	healing.grug_time["dix_end"] 		= ogse.load_var( "dix_end", 0 )
+	healing.grug_time["bipsizon_end"]	= ogse.load_var( "bipsizon_end", 0 )
+	healing.grug_time["vint_end"]	        = ogse.load_var( "vint_end", 0 )
+end
+
+
+function check_medkit(obj) 
+	local f = obj and healing["use_"..obj:section()]
+	if f then f() end
+end
+
+
+function use_medkit()
+  dsh.level_timeout( 4350, function() use_timer_medkit() end )
+end
+
+function use_timer_medkit()
+ starvation.add_head(0.07)
+ starvation.add_left_hand(0.07)
+ starvation.add_right_hand(0.07)
+ starvation.add_tors(0.07)
+ starvation.add_left_leg(0.07)
+ starvation.add_right_leg(0.07)
+if xr_conditions.actor_wears_forester_outfit() == true then
+local hlth = db.actor.health
+db.actor.health = hlth + 0.3
+end
+end
+
+function use_medkit_army()
+  dsh.level_timeout( 4350, function() use_timer_medkit_army() end )
+end
+
+function use_timer_medkit_army()
+ starvation.add_head(0.09)
+ starvation.add_left_hand(0.09)
+ starvation.add_right_hand(0.09)
+ starvation.add_tors(0.09)
+ starvation.add_left_leg(0.09)
+ starvation.add_right_leg(0.09)
+if xr_conditions.actor_wears_forester_outfit() == true then
+local hlth = db.actor.health
+db.actor.health = hlth + 0.3
+end
+end
+
+function use_medkit_sci()
+  dsh.level_timeout( 4350, function() use_timer_medkit_sci() end )
+end
+
+function use_timer_medkit_sci()
+ starvation.add_head(0.1)
+ starvation.add_left_hand(0.1)
+ starvation.add_right_hand(0.1)
+ starvation.add_tors(0.1)
+ starvation.add_left_leg(0.1)
+ starvation.add_right_leg(0.1)
+if xr_conditions.actor_wears_forester_outfit() == true then
+local hlth = db.actor.health
+db.actor.health = hlth + 0.3
+end
+end
+
+function use_bandage()
+  dsh.level_timeout( 2150, function() use_timer_bandage() end )
+end
+
+function use_timer_bandage()
+ starvation.add_head(0.03)
+ starvation.add_left_hand(0.03)
+ starvation.add_right_hand(0.03)
+ starvation.add_tors(0.03)
+ starvation.add_left_leg(0.03)
+ starvation.add_right_leg(0.03)
+end
+
+
+function use_yod()
+  dsh.level_timeout( 2150, function() use_timer_yod() end )
+end
+
+function use_timer_yod()
+		if not has_alife_info("using_yod") then
+			local rad_time = game.time()
+			grug_time["yod_end"] = rad_time + 300 * 1000
+			ogse.save_var( "yod_end",rad_time + 300 * 1000 )
+			db.actor:give_info_portion("using_yod")
+		end
+end
+
+function use_vodka(pid)
+	if db.actor.radiation == 0 then
+		local tmp = ogse.load_var( "vodka_end", 0 )
+		if tmp == 0 then
+			local rad_time = game.time()
+			grug_time["vodka_end"] = rad_time + 150 * 1000
+			ogse.save_var( "vodka_end",rad_time + 150 * 1000 )
+			db.actor:give_info_portion("using_vodka")
+		else
+			local rad_time = game.time()
+			ogse.delete_var( "vodka_end" )
+			ogse.save_var( "vodka_end",rad_time + 150 * 1000 )
+			db.actor:give_info_portion("using_vodka")			
+		end
+	else
+
+	end
+end
+
+
+function use_dix()
+  dsh.level_timeout( 2150, function() use_timer_dix() end )
+end
+
+function use_timer_dix()
+	if not has_alife_info("using_dix") then
+		local rad_time = game.time()
+		grug_time["dix_end"] = rad_time + 60 * 1000
+		ogse.save_var( "dix_end",rad_time + 60 * 1000 )
+		db.actor:give_info_portion("using_dix")
+	else
+		local text = "Ваш организм не вынес повторного применения препарата через небольшой промежуток времени..."
+		db.actor:give_game_news(text, "ui\\ui_iconsTotal", Frect():set(0,188,83,47), 0, 3000)
+		db.actor:kill(db.actor)
+	end
+end
+
+
+function use_bipsizon()
+  dsh.level_timeout( 2150, function() use_timer_bipsizon() end )
+end
+
+function use_timer_bipsizon()
+	if not has_alife_info("using_bipsizon") then
+		local rad_time = game.time()
+		grug_time["bipsizon_end"] = rad_time + 60 * 1000
+		ogse.save_var( "bipsizon_end",rad_time + 60 * 1000 )
+		db.actor:give_info_portion("using_bipsizon")
+	else
+		local text = "Ваш организм не вынес повторного применения препарата через небольшой промежуток времени..."
+		db.actor:give_game_news(text, "ui\\ui_iconsTotal", Frect():set(0,188,83,47), 0, 3000)
+		db.actor:kill(db.actor)
+	end
+end
+
+
+function use_vint()
+  dsh.level_timeout( 2150, function() use_timer_vint() end )
+end
+
+function use_timer_vint()
+	if not has_alife_info("using_vint") then
+		local rad_time = game.time()
+		grug_time["vint_end"] = rad_time + 60 * 1000
+		ogse.save_var( "vint_end",rad_time + 60 * 1000 )
+		db.actor:give_info_portion("using_vint")
+	else
+		local text = "Вы погибли от передозировки морфием."
+		db.actor:give_game_news(text, "ui\\ui_iconsTotal", Frect():set(0,188,83,47), 0, 3000)
+		db.actor:kill(db.actor)
+	end
+end
+
+function use_flyaga_bad()
+  dsh.level_timeout( 6200, function() use_timer_flyaga_bad() end )
+end
+
+function use_timer_flyaga_bad()
+	ogse.spawn_item_in_inv("flyaga_empty")
+	addon.sickness()
+end
+
+function use_flyaga_full()
+  dsh.level_timeout( 6200, function() use_timer_flyaga_full() end )
+end
+
+function use_timer_flyaga_full()
+	ogse.spawn_item_in_inv("flyaga_empty")
+end
+
+function use_unic_flyaga_full()
+  dsh.level_timeout( 6200, function() use_timer_unic_flyaga_full() end )
+end
+
+function use_timer_unic_flyaga_full()
+	ogse.spawn_item_in_inv("unic_flyaga_empty")
+end
+
+grug_time = {
+["yod_end"] 		= 0,
+["vodka_end"] 		= 0,
+["dix_end"] 		= 0,
+["bipsizon_end"]	= 0,
+["vint_end"]	        = 0
+}
+
+function check_var(what, default)
+	if grug_time[what] and grug_time[what] > 0 then
+		return grug_time[what]
+	else	
+		return default or 0
+	end
+end
+
+function check_using(what,infpor)
+	local check = check_var(what,0)
+	if game.time() > check then -- закончилось действие или нет?
+		db.actor:disable_info_portion(infpor)
+		ogse.delete_var( what )
+	end
+end
+
+function check_all_preparation()
+	check_using("yod_end","using_yod")
+	check_using("vodka_end","using_vodka")
+	check_using("dix_end","using_dix")
+	check_using("bipsizon_end","using_bipsizon")
+	check_using("vint_end","using_vint")
+end
+
+function achieve_all_preparation()
+	achieve_effect_radiation("using_yod",-0.00075)
+	achieve_effect_radiation("using_vodka",-0.000375)
+	achieve_effect_power("using_dix",0.05)
+	achieve_effect_psi("using_bipsizon",0.003)
+	achieve_effect_health("using_vint",0.3)
+end
+
+-- Предмет проверки, предемет изменения, на сколько изменяем
+function achieve_effect_radiation(what,change_count) 
+	if what and change_count then
+		 if has_alife_info(what) and db.actor.radiation > 0 then db.actor.radiation = change_count end
+	end
+end
+
+function achieve_effect_power(what,change_count)
+	if what and change_count then
+		 if has_alife_info(what) and db.actor.power < 1 then 
+			db.actor.power = change_count 
+		end
+	end
+end
+
+function achieve_effect_psi(what,change_count)
+	if what and change_count then
+		if has_alife_info(what) and db.actor.psy_health < 1 then
+			db.actor.psy_health = change_count
+		end
+	end
+end
+
+function achieve_effect_health(what,change_count)
+	if what and change_count then
+		if has_alife_info(what) and db.actor.health < 1 then
+			db.actor.health = change_count
+		end
+	end
+end
+
+function clear_time_var(time_array)
+	if time_array then
+		for k,v in pairs(time_array) do
+			local tmp = ogse.load_var( v, 0 )
+			if tmp ~= 0 then ogse.delete_var( v ) end
+		end
+	end
+end

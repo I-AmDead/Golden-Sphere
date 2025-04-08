@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<x18archive_journal>	
+	<book_text x="200" y="85" width="550" height="512" stretch="1">
+		<texture>ui\books\x18_journal_list1</texture>
+	</book_text>
+
+	<btn_quit x="400" y="630" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Закрыть</text>
+	</btn_quit>
+
+
+</x18archive_journal>
+

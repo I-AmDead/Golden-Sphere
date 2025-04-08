@@ -1,0 +1,1006 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+<!--random_zombied-->
+	<specific_character id="random_zombied" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>random_zombied</class>
+		<community>zombied</community>
+
+		<rank>130</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie1</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+			wpn_knife \n
+		#include "gameplay\character_zombies_loot.xml" \n
+		</supplies>
+	</specific_character>
+
+
+<!--actor_clone1-->
+	<specific_character id="actor_clone1" team_default = "1">
+		<name>Жекан</name>
+		<icon>ui_npc_u_actor</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>actor_clone1</class>
+		<community>stalker</community>
+
+		<rank>221</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<!--visual>actors\pmc4</visual-->
+		<supplies>
+			[spawn] \n
+			device_torch \n
+			wpn_binoc \n
+			wpn_knife \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>actor_clone_dialog1</start_dialog>
+
+	</specific_character>
+
+
+<!--headhunter1-->
+	<specific_character id="headhunter1" team_default = "1">
+		<name>Неизвестный</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>headhunter1</class>
+		<community>headhunter</community>
+
+		<rank>621</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\pmc4</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>headhunters_dialog1</start_dialog>
+
+	</specific_character>
+
+<!--headhunter2-->
+	<specific_character id="headhunter2" team_default = "1">
+		<name>Неизвестный</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>headhunter2</class>
+		<community>headhunter</community>
+
+		<rank>530</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\pmc3</visual>
+		<!--visual>actors\neutral_in_helmet</visual-->
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>headhunters_dialog1</start_dialog>
+
+	</specific_character>
+
+<!--headhunter3-->
+	<specific_character id="headhunter3" team_default = "1">
+		<name>Неизвестный</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>headhunter3</class>
+		<community>headhunter</community>
+
+		<rank>530</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\ubcs2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>headhunters_dialog1</start_dialog>
+
+	</specific_character>
+
+
+
+<!--headhunter4-->
+	<specific_character id="headhunter4" team_default = "1">
+		<name>Неизвестный</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>headhunter4</class>
+		<community>headhunter</community>
+
+		<rank>530</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\ubcs3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>headhunters_dialog1</start_dialog>
+
+	</specific_character>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ZOMBIED STALKER-->
+
+<!--ZOMBIED NOVICE-->
+	<specific_character id="sim_zombied_novice_default1" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+
+		<rank>130</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie1</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+
+			ammo_7.62x25_p \n
+		</supplies>
+		
+	</specific_character>
+
+	<specific_character id="sim_zombied_novice_default2" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie2</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+	
+		<rank>160</rank>
+		<reputation>-189</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie2</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x70_buck \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_novice_default3" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie3</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>89</rank>
+		<reputation>-213</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie3</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x70_buck \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_novice_default4" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie4</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>126</rank>
+		<reputation>-312</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie4</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x70_buck \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_novice_default5" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie5</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>164</rank>
+		<reputation>-351</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie5</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_novice_default6" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie7</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+	
+		<rank>89</rank>
+		<reputation>-364</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie7</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+
+			ammo_9x18_fmj \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_novice_default7" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie8</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+
+		<class>sim_zombied_novice</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>64</rank>
+		<reputation>-412</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie8</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x76_zhekan \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+<!--ZOMBIED VETERANS-->
+	<specific_character id="sim_zombied_veteran_default1" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie2</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_veteran_bio</bio>
+
+		<class>sim_Zombied_veteran</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>256</rank>
+		<reputation>-500</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie2</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_uzi \n
+			ammo_9x19_fmj \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_veteran_default2" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie3</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_veteran_bio</bio>
+
+		<class>sim_Zombied_veteran</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>321</rank>
+		<reputation>-546</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie3</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_veteran_default3" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie4</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_veteran_bio</bio>
+
+		<class>sim_Zombied_veteran</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>221</rank>
+		<reputation>-612</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie4</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+			device_torch \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_veteran_default4" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie5</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_veteran_bio</bio>
+
+		<class>sim_Zombied_veteran</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>510</rank>
+		<reputation>-645</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie5</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+			device_torch \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="sim_zombied_veteran_default5" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_stalker_zombie6</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_veteran_bio</bio>
+
+		<class>sim_Zombied_veteran</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>580</rank>
+		<reputation>-723</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie6</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x70_buck \n
+			device_torch \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+<!--ZOMBIED MASTER-->
+	<specific_character id="sim_zombied_master_1" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_zombie_exoskeleton</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_master_bio</bio>
+
+		<class>sim_Zombied_master</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>899</rank>
+		<reputation>-864</reputation>
+
+		<visual>actors\stalker_zombi\zombie_exoskeleton</visual>
+		<snd_config>characters_voice\human_03\zombied\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+
+			ammo_12x70_buck \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+<!--FRESH ZOMBIED STALKERS-->
+	<specific_character id="sim_fresh_Zombied_stalker_1" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_zombie_fresh_0</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_fresh_Zombied_bio</bio>
+
+		<class>sim_fresh_Zombied</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>631</rank>
+		<reputation>-856</reputation>
+
+		<visual>actors\stalker_zombi\zombie_fresh_0</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+
+			ammo_12x70_buck \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+
+	<specific_character id="sim_fresh_Zombied_stalker_2" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_zombie_fresh_0</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_fresh_Zombied_bio</bio>
+
+		<class>sim_fresh_Zombied</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>864</rank>
+		<reputation>-923</reputation>
+
+		<visual>actors\stalker_zombi\zombie_fresh_0</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_uzi \n
+			ammo_9x19_fmj \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+
+	<specific_character id="sim_fresh_Zombied_stalker_3" team_default = "1">
+		<name>zombie_name</name>
+		<icon>ui_npc_u_zombie_fresh_2</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_fresh_Zombied_bio</bio>
+
+		<class>sim_fresh_Zombied</class>
+		<community>zombied</community> <terrain_sect>stalker_zombied_terrain</terrain_sect>
+		
+		<rank>889</rank>
+		<reputation>-984</reputation>
+
+		<visual>actors\stalker_zombi\zombie_fresh_2</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_uzi \n
+			ammo_9x19_fmj \n
+		</supplies>
+		
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+
+
+<specific_character id="pervert_zombied" team_default = "1">
+		<name>Зомби</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>pervert_zombied</class>
+		<community>zombied</community>
+
+		<rank>130</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie7</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_knife \n
+
+		</supplies>
+		<actor_dialog>headhunters_dialog2</actor_dialog>
+	</specific_character>
+
+<specific_character id="actor_zombied" team_default = "1">
+		<name>Зомби</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>pervert_zombied</class>
+		<community>zombied</community>
+
+		<rank>130</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie7</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_knife \n
+		</supplies>
+		<actor_dialog>headhunters_dialog2</actor_dialog>
+	</specific_character>
+
+<specific_character id="pervert_zombied2" team_default = "1">
+		<name>Серега</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>pervert_zombied2</class>
+		<community>zombied</community>
+
+		<rank>330</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie7</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			matches \n
+			wpn_knife \n
+		</supplies>
+
+	</specific_character>
+
+<specific_character id="dar_build_podval_trup1" team_default = "1">
+		<name>Константин</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>dar_build_podval_trup1</class>
+		<community>zombied</community>
+
+		<rank>230</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie4</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_knife3 \n
+			af_mine \n
+		</supplies>
+
+	</specific_character>
+
+<specific_character id="dar_build_podval_trup2" team_default = "1">
+		<name>Игорь</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>sim_zombied_novice_bio</bio>
+		
+		<class>dar_build_podval_trup2</class>
+		<community>zombied</community>
+
+		<rank>230</rank>
+		<reputation>-153</reputation>
+
+		<visual>actors\stalker_zombi\stalker_zombie4</visual>
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_binoc \n
+			syrok \n
+		</supplies>
+
+	</specific_character>
+
+
+
+
+<!--client_1-->
+	<specific_character id="client_1" team_default = "1">
+		<name>Хрипатый Хью</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>client_1</class>
+		<community>stalker_stalker</community>
+
+		<rank>621</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\killer\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\neytral\stalker_neytral_nauchniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_colt1911 \n
+			ammo_11.43x23_hydro \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>hue_task1_dialog</actor_dialog>
+		<actor_dialog>hue_task2_dialog</actor_dialog>
+		<actor_dialog>hue_task3_dialog</actor_dialog>
+
+		<actor_dialog>hue_deathlamp_dialog</actor_dialog>
+		<actor_dialog>hue_pasport_dialog1</actor_dialog>
+		<actor_dialog>hue_pasport_dialog2</actor_dialog>
+
+	</specific_character>
+
+<!--client_1_guard1-->
+	<specific_character id="client_1_guard1" team_default = "1">
+		<name>Беркем Эль Атоми</name>
+		<icon>ui_npc_u_stalker_ki_mask</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>client_1_guard1</class>
+		<community>stalker_killer</community>
+
+		<rank>430</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_01\killer\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\killer\stalker_ki_mask</visual>
+		<supplies>
+			[spawn] \n
+			wpn_m4a1 = 1, scope \n
+			ammo_5.56x45_ap \n
+			device_torch \n
+		</supplies>
+	</specific_character>
+
+<!--client_1_guard2-->
+	<specific_character id="client_1_guard2" team_default = "1">
+		<name>Луис Марулло</name>
+		<icon>ui_npc_u_stalker_ki_mask</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>client_1_guard2</class>
+		<community>stalker_killer</community>
+
+		<rank>330</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_01\killer\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\killer\stalker_ki_mask</visual>
+		<supplies>
+			[spawn] \n
+			wpn_protecta \n
+			ammo_12x70_buck \n
+			device_torch \n
+		</supplies>
+	</specific_character>
+
+
+
+<!--client2_agent-->
+	<specific_character id="client2_agent" team_default = "1">
+		<name>Мосол</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>client2_agent</class>
+		<community>stalker_stalker</community>
+
+		<rank>121</rank>
+		<reputation>-63</reputation>
+		<money min="9300" max="15000" infinitive="1"></money>
+		
+		<snd_config>characters_voice\human_03\killer\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\mosol</visual>
+		<supplies>
+			[spawn] \n
+			wpn_uzi \n
+			ammo_9x19_fmj \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>mosol_dialog1</actor_dialog>
+
+	</specific_character>
+
+
+	<specific_character id="client2_guard1" team_default = "1">
+		<name>Майор Богатырёв</name>
+		<icon>ui_npc_u_soldier_beret_1</icon>
+		<bio>esc_soldier_commander_bio</bio>
+
+		<class>client2_guard1</class>
+		<community>stalker_army</community>
+
+		<rank>364</rank>
+		<reputation>-15</reputation>
+
+		<snd_config>characters_voice\human_02\military\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<visual>actors\soldier\soldier_beret_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_gsh \n
+			ammo_9x19_fmj \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>client2_guard1_dialog1</actor_dialog>
+	</specific_character>
+
+	<specific_character id="client2_guard2" team_default = "1">
+		<name>Рядовой Пупкин</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_soldier_regular_bio</bio>
+
+		<class>client2_guard2</class>
+		<community>stalker_army</community>
+
+		<rank>123</rank>
+		<reputation>6</reputation>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+			device_torch \n
+		</supplies>
+	</specific_character>
+
+	<specific_character id="client2_guard3" team_default = "1">
+		<name>Рядовой Рогов</name>
+		<icon>ui_npc_u_soldier_bandana_1</icon>
+		<bio>esc_soldier_regular_bio</bio>
+
+		<class>client2_guard3</class>
+		<community>stalker_army</community>
+
+		<rank>123</rank>
+		<reputation>6</reputation>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<visual>actors\soldier\soldier_bandana_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_rpg7 \n
+			ammo_og-7b \n
+			device_torch \n
+		</supplies>
+	</specific_character>
+
+
+
+<!--client3_agent-->
+	<specific_character id="client3_agent" team_default = "1">
+		<name>Доцент Блинков</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>client3_agent</class>
+		<community>ecolog</community>
+
+		<rank>121</rank>
+		<reputation>23</reputation>
+		<money min="500000" max="700000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_03\killer\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\ecolog\stalker_ecolog</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj \n
+			device_torch \n
+		</supplies>
+		<start_dialog>client3_agent_dialog1</start_dialog>
+		<actor_dialog>client3_deathlamp_dialog</actor_dialog>
+		<actor_dialog>client3_colba1_dialog</actor_dialog>
+		<actor_dialog>client3_colba2_dialog</actor_dialog>
+
+		<actor_dialog>client3_izlom_drugs_dialog</actor_dialog>
+
+	</specific_character>
+
+
+	<specific_character id="client3_guard1" team_default = "1">
+		<name>Тендер</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_soldier_commander_bio</bio>
+
+		<class>client3_guard1</class>
+		<community>stalker_stalker</community>
+
+		<rank>364</rank>
+		<reputation>-15</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\military\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<visual>actors\renegade2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_akm \n
+			ammo_7.62x39_ap \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>client3_guard1_dialog1</actor_dialog>
+	</specific_character>
+
+	<specific_character id="client3_guard2" team_default = "1">
+		<name>Проводник Коля</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_soldier_regular_bio</bio>
+
+		<class>client3_guard2</class>
+		<community>stalker_stalker</community>
+
+		<rank>923</rank>
+		<reputation>6</reputation>
+		<money min="10000" max="30000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<visual>actors\tankist</visual>
+		<supplies>
+			[spawn] \n
+			wpn_galil \n
+			ammo_7.62x51_ap \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>client3_guard2_dialog1</actor_dialog>
+	</specific_character>
+
+
+	<specific_character id="test_stalker" team_default = "1">
+		<name>Костя</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_soldier_regular_bio</bio>
+
+		<class>test_stalker</class>
+		<community>stalker_stalker</community>
+
+		<rank>323</rank>
+		<reputation>6</reputation>
+		<money min="1000" max="3000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<visual>actors\stalker_boroda</visual>
+		<supplies>
+			[spawn] \n
+			wpn_galil \n
+			ammo_7.62x51_ap \n
+			device_torch \n
+		</supplies>
+
+	</specific_character>
+
+
+</xml>

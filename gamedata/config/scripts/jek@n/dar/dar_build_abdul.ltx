@@ -1,0 +1,148 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+abdul_goto_hideaway} walker@8, walker@start
+trade = misc\trade_nothing.ltx
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = dar_build_abdul_walk1
+path_look = dar_build_abdul_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = dar_build_abdul_walk1
+path_look = dar_build_abdul_look1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_info     = {+dar_sergey_dead} walker@2 
+
+[walker@2]
+path_walk = dar_build_abdul_walk1
+path_look = dar_build_abdul_look1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_timer = 4000 | walker@3 %=play_snd_from_obj(8480:characters_voice\human_03\stalker\reactions\dead_neutral\dead_neutral_2)%
+
+[walker@3]
+path_walk = dar_build_abdul_walk1
+path_look = dar_build_abdul_look1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_timer = 4000 | walker@4 %=play_snd_from_obj(8480:characters_voice\human_03\stalker\reactions\dead_friend\dead_friend_2)%
+
+[walker@4]
+path_walk = dar_build_abdul_walk1
+path_look = dar_build_abdul_look1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_info = {+val_prisoner_door_unlocked} walker@5
+
+
+; Начинаем драпать из клетки:
+[walker@5]
+path_walk = dar_build_abdul_walk2
+path_look = dar_build_abdul_look2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_signal       = arrived | walker@6 %=play_snd_from_obj(8480:characters_voice\human_03\stalker\hail\hail_1)%
+
+
+;Свалили и сидим в тёмном углу:
+[walker@6]
+path_walk = dar_build_abdul_walk2
+path_look = dar_build_abdul_look2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_timer = 3000 | walker@7 %=play_snd_from_obj(8480:characters_voice\human_03\stalker\hail\hail_3)%
+
+[walker@7]
+path_walk = dar_build_abdul_walk2
+path_look = dar_build_abdul_look2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+on_info = {+abdul_goto_hideaway} walker@8 %=check_dar_build_guard_violence%
+
+[walker@8]
+path_walk = dar_build_abdul_walk3
+path_look = dar_build_abdul_look3
+combat_ignore_cond = always
+danger = danger_condition
+meet = no_meet
+on_signal       = arrived | walker@9
+
+[walker@9]
+path_walk = dar_build_abdul_walk3
+path_look = dar_build_abdul_look3
+combat_ignore_cond = always
+danger = danger_condition
+meet = no_meet
+on_signal       = arrived | walker@10 %=make_invulnerable =play_snd_from_obj(8480:characters_voice\human_03\stalker\talk\raid\init\loner_1)%
+
+[walker@10]
+path_walk = dar_hunter_walk2
+path_look = dar_hunter_look2
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+abdul_goto_garbage} walker@11
+
+[walker@11]
+path_walk = dar_build_abdul_walk4
+path_look = dar_build_abdul_look4
+combat_ignore_cond = always
+danger = danger_condition
+meet = no_meet
+on_signal       = arrived | %+dar_abdul_off =delme2%
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+
+[death]
+on_info = %+dar_abdul_dead%
+

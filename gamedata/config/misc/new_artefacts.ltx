@@ -1,0 +1,2980 @@
+; Уголёк
+[af_coal]:af_base
+visual				= physics\sap\sap_art4.ogf  
+
+description			= af_coal_desc
+inv_name			= af_coal_name
+inv_name_short		= af_coal_name
+inv_weight			= 0.4
+
+inv_grid_x			= 14
+inv_grid_y			= 15
+
+cost				= 10000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\campfire_05_vacuum
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= -0.0007
+satiety_restore_speed		= 0.0
+power_restore_speed		= -0.001
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_coal_absorbation
+
+
+[af_coal_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.9
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Окалина
+[af_scale]:af_base
+visual				= physics\sap\sap_art2.ogf  
+
+description			= af_scale_desc
+inv_name			= af_scale_name
+inv_name_short		= af_scale_name
+inv_weight			= 0.5
+
+inv_grid_x			= 14
+inv_grid_y			= 17
+
+cost				= 15000
+
+jump_height			= 0.5
+
+particles			= explosions\group_items\campfire_05_vacuum
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= -0.0009
+satiety_restore_speed		= 0.0
+power_restore_speed			= - 0.0005
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_scale_absorbation
+
+
+[af_scale_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.85
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Смола
+[af_bitum]:af_base
+visual				= physics\sap\sap_art18.ogf  
+
+description			= af_bitum_desc
+inv_name			= af_bitum_name
+inv_name_short		= af_bitum_name
+inv_weight			= 0.4
+
+inv_grid_x			= 15
+inv_grid_y			= 18
+
+cost				= 20000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\campfire_05_vacuum
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= -0.0015
+satiety_restore_speed		= 0.0
+power_restore_speed		= -0.001
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_bitum_absorbation
+
+[af_bitum_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.8
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+
+; Щебень
+[af_ballast]:af_base
+visual				= physics\sap\sap_art1.ogf  
+
+description			= af_ballast_desc
+inv_name			= af_ballast_name
+inv_name_short		= af_ballast_name
+inv_weight			= 0.6
+
+inv_grid_x			= 15
+inv_grid_y			= 17
+
+cost				= 9000
+
+jump_height			= 0.5
+
+particles			= explosions\group_items\expl_car_sparks_00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= -0.007			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_ballast_absorbation
+
+
+[af_ballast_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 0.97
+fire_wound_immunity 	=	0.98
+
+
+; Клубок
+[af_roll]:af_base
+visual				= physics\sap\sap_art7.ogf  
+
+description			= af_roll_desc
+inv_name			= af_roll_name
+inv_name_short		= af_roll_name
+inv_weight			= 0.6
+
+inv_grid_x			= 16
+inv_grid_y			= 15
+
+cost				= 11000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\expl_car_sparks_00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= -0.005			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_roll_absorbation
+
+
+[af_roll_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 0.95
+fire_wound_immunity 	=	0.96
+
+
+; Куриный бог
+[af_chicken_god]:af_base
+visual				= physics\sap\sap_art9.ogf  
+
+description			= af_chicken_god_desc
+inv_name			= af_chicken_god_name
+inv_name_short		= af_chicken_god_name
+inv_weight			= 0.6
+
+inv_grid_x			= 14
+inv_grid_y			= 16
+
+cost				= 15000
+
+jump_height			= 0.5
+
+particles			= explosions\group_items\expl_car_sparks_00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= -0.00010			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= chicken_god_absorbation
+
+
+[chicken_god_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 0.92
+fire_wound_immunity 	=	0.94
+
+
+
+
+
+; Железный орех
+[af_steel_nut]:af_base
+visual				= physics\sap\sap_art5.ogf  
+
+description			= af_steel_nut_desc
+inv_name			= af_steel_nut_name
+inv_name_short		= af_steel_nut_name
+inv_weight			= 0.6
+
+inv_grid_x			= 13
+inv_grid_y			= 15
+
+cost				= 8000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\heli_trace_flame
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_steel_nut_absorbation
+
+
+[af_steel_nut_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 0.96
+shock_immunity = 1.1
+wound_immunity = 0.97		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Кольцо
+[af_bearing]:af_base
+visual				= physics\sap\sap_art12.ogf
+
+description			= af_bearing_desc
+inv_name			= af_bearing_name
+inv_name_short		= af_bearing_name
+inv_weight			= 0.4
+
+inv_grid_x			= 16
+inv_grid_y			= 16
+
+cost				= 12000
+
+jump_height			= 0.2
+
+particles			= explosions\group_items\heli_trace_flame
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_bearing_absorbation
+
+
+[af_bearing_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 0.94
+shock_immunity = 1.05
+wound_immunity = 0.95		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Корона
+[af_crown]:af_base
+visual				= physics\sap\sap_art19.ogf  
+
+description			= af_crown_desc
+inv_name			= af_crown_name
+inv_name_short		= af_crown_name
+inv_weight			= 0.5
+
+inv_grid_x			= 17
+inv_grid_y			= 18
+
+cost				= 19000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\heli_trace_flame
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_crown_absorbation
+
+[af_crown_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 0.92
+shock_immunity = 1.02
+wound_immunity = 0.93		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+; Жаба
+[af_frog]:af_base
+visual				= physics\sap\sap_art6.ogf  
+
+description			= af_frog_desc
+inv_name			= af_frog_name
+inv_name_short		= af_frog_name
+inv_weight			= 0.5
+
+inv_grid_x			= 15
+inv_grid_y			= 15
+
+cost				= 8000
+
+jump_height			= 0.4
+
+particles			= anomaly2\group_items\pe00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0003
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0004
+hit_absorbation_sect		= af_frog_absorbation
+
+
+[af_frog_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.96
+chemical_burn_immunity = 0.95
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Каштан
+[af_chestnut]:af_base
+visual				= physics\sap\sap_art8.ogf  
+
+description			= af_chestnut_desc
+inv_name			= af_chestnut_name
+inv_name_short		= af_chestnut_name
+inv_weight			= 0.5
+
+inv_grid_x			= 13
+inv_grid_y			= 16
+
+cost				= 11000
+
+jump_height			= 0.5
+
+particles			= anomaly2\group_items\pe00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0002
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0005
+hit_absorbation_sect		= af_chestnut_absorbation
+
+
+[af_chestnut_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.95
+chemical_burn_immunity = 0.93
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Полынь
+[af_sagebrush]:af_base
+visual				= physics\sap\sap_art10.ogf  
+
+description			= af_sagebrush_desc
+inv_name			= af_sagebrush_name
+inv_name_short		= af_sagebrush_name
+inv_weight			= 0.3
+
+inv_grid_x			= 15
+inv_grid_y			= 16
+
+cost				= 15000
+
+jump_height			= 0.5
+
+particles			= anomaly2\group_items\pe00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0001
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0006
+hit_absorbation_sect		= af_sagebrush_absorbation
+
+
+[af_sagebrush_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.91
+chemical_burn_immunity = 0.9
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; Гриб
+[af_mushroom]:af_base
+visual				= physics\sap\sap_art3.ogf  
+
+description			= af_mushroom_desc
+inv_name			= af_mushroom_name
+inv_name_short		= af_mushroom_name
+inv_weight			= 0.5
+
+inv_grid_x			= 16
+inv_grid_y			= 17
+
+cost				= 18000
+
+jump_height			= 0.2
+
+particles			= anomaly2\group_items\pe00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.00005
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0007
+hit_absorbation_sect		= af_mushroom_absorbation
+
+
+[af_mushroom_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.89
+chemical_burn_immunity = 0.89
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Стекляшка
+[af_glass]:af_base
+visual				= physics\sap\sap_art11.ogf  
+
+description			= af_glass_desc
+inv_name			= af_glass_name
+inv_name_short		= af_glass_name
+inv_weight			= 0.35
+
+inv_grid_x			= 17
+inv_grid_y			= 15
+
+cost				= 9000
+
+jump_height			= 0.9
+
+particles			= ghoul\fx-06-blue-glow
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_glass_absorbation
+
+
+[af_glass_absorbation]
+burn_immunity = 0.96				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 0.98
+wound_immunity = 1.0		
+radiation_immunity = 1.1
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Слеза
+[af_teardrop]:af_base
+visual				= physics\sap\sap_art17.ogf  
+
+description			= af_teardrop_desc
+inv_name			= af_teardrop_name
+inv_name_short		= af_teardrop_name
+inv_weight			= 0.3
+
+inv_grid_x			= 13
+inv_grid_y			= 18
+
+cost				= 14000
+
+jump_height			= 0.4
+
+particles			= ghoul\fx-06-blue-glow
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_teardrop_absorbation
+
+
+[af_teardrop_absorbation]
+burn_immunity = 0.94				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 0.96
+wound_immunity = 1.0		
+radiation_immunity = 1.05
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Линза
+[af_lens]:af_base
+visual				= physics\sap\sap_art16.ogf  
+
+description			= af_lens_desc
+inv_name			= af_lens_name
+inv_name_short		= af_lens_name
+inv_weight			= 0.5
+
+inv_grid_x			= 16
+inv_grid_y			= 18
+
+cost				= 18000
+
+jump_height			= 0.4
+
+particles			= ghoul\fx-06-blue-glow
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_lens_absorbation
+
+
+[af_lens_absorbation]
+burn_immunity = 0.91				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 0.93
+wound_immunity = 1.0		
+radiation_immunity = 1.02
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+
+; Спираль
+[af_spiral]:af_base
+visual				= physics\sap\sap_art13.ogf  
+
+description			= af_spiral_desc
+inv_name			= af_spiral_name
+inv_name_short		= af_spiral_name
+inv_weight			= 0.4
+
+inv_grid_x			= 17
+inv_grid_y			= 16
+
+cost				= 9000
+
+jump_height			= 0.5
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.004			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_spiral_absorbation
+
+additional_inventory_weight    = 5
+additional_inventory_weight2    = 5
+
+
+[af_spiral_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.06
+fire_wound_immunity 	=	1.05
+
+
+; Хрусталь
+[af_cristallic]:af_base
+visual				= physics\sap\sap_art15.ogf  
+
+description			= af_cristallic_desc
+inv_name			= af_cristallic_name
+inv_name_short		= af_cristallic_name
+inv_weight			= 0.3
+
+inv_grid_x			= 13
+inv_grid_y			= 17
+
+cost				= 14000
+
+jump_height			= 0.4
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.005			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_cristallic_absorbation
+
+additional_inventory_weight    = 8
+additional_inventory_weight2    = 8
+
+
+[af_cristallic_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.04
+fire_wound_immunity 	=	1.03
+
+
+; Улитка
+[af_snail]:af_base
+visual				= physics\sap\sap_art14.ogf  
+
+description			= af_snail_desc
+inv_name			= af_snail_name
+inv_name_short		= af_snail_name
+inv_weight			= 0.4
+
+inv_grid_x			= 17
+inv_grid_y			= 17
+
+cost				= 20000
+
+jump_height			= 0.2
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.007
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_snail_absorbation
+
+additional_inventory_weight    = 10
+additional_inventory_weight2    = 10
+
+[af_snail_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+; Бублик
+[af_hole]:af_base
+visual				= physics\sap\sap_art21.ogf  
+
+description			= af_hole_desc
+inv_name			= af_hole_name
+inv_name_short		= af_hole_name
+inv_weight			= 0.4
+
+inv_grid_x			= 14
+inv_grid_y			= 19
+
+cost				= 7500
+
+jump_height			= 0.3
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0006
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_hole_absorbation
+
+additional_inventory_weight    = 3
+additional_inventory_weight2    = 3
+
+[af_hole_absorbation]
+burn_immunity = 1.06				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.07
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+; Чёртово яйцо
+[af_egg]:af_base
+visual				= physics\sap\sap_art20.ogf  
+
+description			= af_egg_desc
+inv_name			= af_egg_name
+inv_name_short		= af_egg_name
+inv_weight			= 0.3
+
+inv_grid_x			= 13
+inv_grid_y			= 19
+
+cost				= 18000
+
+jump_height			= 0.3
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0009
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_egg_absorbation
+
+[af_egg_absorbation]
+burn_immunity = 1.04				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.03
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+
+
+
+[fake_art1]:af_base
+visual				= physics\anomaly\artefact_electra3.ogf
+description			= description_fake_art1
+inv_name			= inv_name_fake_art1
+inv_name_short		= inv_name_fake_art1
+inv_weight			= 0.5
+inv_grid_x			= 4
+inv_grid_y			= 15
+cost				= 0
+jump_height			= 1.0
+particles			= anomaly2\group_items\poltereffect
+lights_enabled = false
+trail_light_color = 0.1,0.1,0.8
+trail_light_range = 1.0
+
+;artefact_activation_seq		= af_activation_mincer
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = fake_art1_absorbation
+
+[fake_art1_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+[fake_art2]:af_base
+visual				= physics\anomaly\artefact_electra3.ogf
+description			= description_fake_art1
+inv_name			= inv_name_fake_art1
+inv_name_short		= inv_name_fake_art1
+inv_weight			= 0.5
+inv_grid_x			= 4
+inv_grid_y			= 15
+cost				= 0
+jump_height			= 1.0
+particles			= explosions\group_items\expl_car_sparks_00
+lights_enabled = true
+trail_light_color = 0.1,0.8,0.1
+trail_light_range = 3.0
+
+;artefact_activation_seq		= af_activation_mincer
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = fake_art2_absorbation
+
+[fake_art2_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+[fake_art3]:af_base
+visual				= physics\anomaly\artefact_electra3.ogf
+description			= description_fake_art1
+inv_name			= inv_name_fake_art1
+inv_name_short		= inv_name_fake_art1
+inv_weight			= 0.5
+inv_grid_x			= 4
+inv_grid_y			= 15
+cost				= 0
+jump_height			= 1.0
+particles			= vehiclefx\niva_damagedexhaust_01
+lights_enabled = true
+trail_light_color = 0.8,0.1,0.1
+trail_light_range = 3.0
+
+;artefact_activation_seq		= af_activation_mincer
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = fake_art3_absorbation
+
+[fake_art3_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+[af_bolt]:af_base
+visual				= dynamics\devices\dev_bolt\dev_bolt
+description			= description_af_bolt
+inv_name			= inv_name_af_bolt
+inv_name_short		= inv_name_af_bolt
+inv_weight			= 0.0
+inv_grid_x			= 12
+inv_grid_y			= 29
+cost				= 0
+jump_height			= 0.1
+particles			= monsters\group\phantom_trail
+lights_enabled = true
+trail_light_color = 0.5,0.5,0.5
+trail_light_range = 2.0
+
+;artefact_activation_seq		= af_activation_mincer
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = - 0.0002
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = af_bolt_absorbation
+
+[af_bolt_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 0.99
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+[af_bone]:af_base
+visual				= physics\dead_body\skelet_foot2.ogf
+description			= description_af_bone
+inv_name			= inv_name_af_bone
+inv_name_short		= inv_name_af_bone
+inv_weight			= 0.1
+inv_grid_x			= 10
+inv_grid_y			= 29
+inv_grid_width		= 2
+inv_grid_height		= 1
+cost				= 0
+jump_height			= 0.1
+particles			= monsters\group\phantom_trail
+lights_enabled = true
+trail_light_color = 0.5,0.5,0.5
+trail_light_range = 2.0
+
+;artefact_activation_seq		= af_activation_mincer
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.001
+
+hit_absorbation_sect = af_bone_absorbation
+
+[af_bone_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+
+
+; ХАМЕЛЕОН:
+
+[af_chamelleon]:af_base
+visual				= physics\sap\sap_art24.ogf
+description		= af_chameleon_descr
+inv_name		= af_chameleon_name
+inv_name_short	= af_chameleon_name
+inv_weight			= 0.4
+inv_grid_x			= 12
+inv_grid_y			= 17
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 25000
+jump_height			= 0.1
+particles			= monsters\group\phantom_trail
+lights_enabled = true
+trail_light_color = 0.5,0.5,0.5
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = af_chamelleon_absorbation
+
+[af_chamelleon_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; ГЛАЗ:
+
+[af_eye]:af_base
+visual				= physics\sap\sap_art24.ogf
+description		= af_eye_descr
+inv_name		= af_eye_name
+inv_name_short	= af_eye_name
+inv_weight			= 0.4
+inv_grid_x			= 16
+inv_grid_y			= 20
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 20000
+jump_height			= 0.2
+particles			= monsters\group\phantom_trail
+lights_enabled = true
+trail_light_color = 0.1,0.1,0.6
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = af_eye_absorbation
+
+[af_eye_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.85
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; ИЗУМРУД:
+
+[af_emerald]:af_base
+visual				= physics\sap\others\art5.ogf
+description		= af_emerald_descr
+inv_name		= af_emerald_name
+inv_name_short	= af_emerald_name
+inv_weight			= 0.6
+inv_grid_x			= 19
+inv_grid_y			= 21
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 100000
+jump_height			= 0.0
+particles			= amk\fx-06-blue-glow_00
+lights_enabled = true
+trail_light_color = 0.1,0.7,0.1
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = af_emerald_absorbation
+
+[af_emerald_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.05
+wound_immunity    = 1.0		
+radiation_immunity = 0.9
+telepatic_immunity = 1.0
+chemical_burn_immunity = 0.8
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+; ЭЛЕКТРИЧЕСКИЙ ОРЕХ:
+
+[af_electro_nut]:af_base
+visual				= physics\sap\others\art6.ogf
+description		= electro_nut_descr
+inv_name		= electro_nut_name
+inv_name_short	= electro_nut_name
+inv_weight			= 0.5
+inv_grid_x			= 19
+inv_grid_y			= 20
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 70000
+jump_height			= 0.1
+particles			= amk\electrohimera
+lights_enabled = true
+trail_light_color = 0.1,0.1,0.7
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0015
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0001
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = electro_nut_absorbation
+
+[electro_nut_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 0.5
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; КАМЕННОЕ ЯЙЦО:
+
+[af_magic_egg]:af_base
+visual				= additions\garb_tree_art.ogf
+description		= af_magic_egg_descr
+inv_name		= af_magic_egg_name
+inv_name_short	= af_magic_egg_name
+inv_weight			= 0.7
+inv_grid_x			= 18
+inv_grid_y			= 19
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 50000
+jump_height			= 0.0
+particles			= explosions\group_items\heli_trace_flame
+lights_enabled = true
+trail_light_color = 0.1,0.1,0.7
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.002
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = af_magic_egg_absorbation
+
+[af_magic_egg_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 0.9		
+radiation_immunity = 0.9
+telepatic_immunity = 1.1
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; СНЕЖОК:
+
+[af_snowball]:af_base
+visual				= additions\garb_tree_art.ogf
+description		= af_snowball_descr
+inv_name		= af_snowball_name
+inv_name_short	= af_snowball_name
+inv_weight			= 0.4
+inv_grid_x			= 19
+inv_grid_y			= 13
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 45000
+jump_height			= 0.2
+particles			= explosions\group_items\heli_trace_flame
+lights_enabled = true
+trail_light_color = 0.1,0.1,0.7
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = -0.0003
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed =	0.0
+
+hit_absorbation_sect = af_snowball_absorbation
+
+additional_inventory_weight    = -5
+additional_inventory_weight2    = -5
+
+[af_snowball_absorbation]
+burn_immunity     = 0.7				;коэффициенты иммунитета 
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+; ПАНЦИРЬ:
+
+[af_shell]:af_base
+visual				= additions\garb_tree_art.ogf
+description		= af_shell_descr
+inv_name		= af_shell_name
+inv_name_short	= af_shell_name
+inv_weight			= 0.5
+inv_grid_x			= 17
+inv_grid_y			= 13
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 48000
+jump_height			= 0.1
+particles			= explosions\group_items\heli_trace_flame
+lights_enabled = true
+trail_light_color = 0.2,0.5,0.2
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0002
+satiety_restore_speed = 0.0
+health_restore_speed = 0.0
+
+hit_absorbation_sect = af_shell_absorbation
+
+additional_inventory_weight    = -8
+additional_inventory_weight2    = -8
+
+[af_shell_absorbation]
+burn_immunity     = 1.0				;коэффициенты иммунитета 
+strike_immunity   = 0.7
+shock_immunity    = 1.0
+wound_immunity    = 0.9		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 0.7
+fire_wound_immunity  = 1.0
+
+
+; ЦВЕТОК:
+
+[af_flower]:af_base
+visual				= equipments\anomaly_plant.ogf
+description		= af_flower_descr
+inv_name		= af_flower_name
+inv_name_short	= af_flower_name
+inv_weight			= 0.1
+inv_grid_x			= 18
+inv_grid_y			= 17
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 50000
+jump_height			= 0.2
+particles			= explosions\group_items\heli_trace_flame
+lights_enabled = true
+trail_light_color = 0.2,0.5,0.2
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed = 0.0
+
+hit_absorbation_sect = af_flower_absorbation
+
+additional_inventory_weight    = -10
+additional_inventory_weight2    = -10
+
+[af_flower_absorbation]
+burn_immunity     = 1.0
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; РЕПЕЙ:
+
+[af_bur]:af_base
+visual				= physics\anomaly\amk_repei.ogf
+description		= af_bur_descr
+inv_name		= af_bur_name
+inv_name_short	= af_bur_name
+inv_weight			= 0.1
+inv_grid_x			= 12
+inv_grid_y			= 18
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 30000
+jump_height			= 0.2
+particles			= anomaly2\group_items\pe00
+lights_enabled = true
+trail_light_color = 0.1,0.5,0.1
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed = 0.0
+
+hit_absorbation_sect = af_bur_absorbation
+
+[af_bur_absorbation]
+burn_immunity     = 1.0
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; БУТЫЛКА:
+
+[af_bottle]:af_base
+visual				= physics\decor\butilka_2.ogf
+description		= af_bottle_descr
+inv_name		= af_bottle_name
+inv_name_short	= af_bottle_name
+inv_weight			= 0.3
+inv_grid_x			= 17
+inv_grid_y			= 12
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 35000
+jump_height			= 0.2
+particles			= anomaly2\group_items\poltereffect
+lights_enabled = true
+trail_light_color = 0.1,0.5,0.1
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = -0.0009
+satiety_restore_speed = 0.0
+health_restore_speed = 0.0
+
+hit_absorbation_sect = af_bottle_absorbation
+
+[af_bottle_absorbation]
+burn_immunity     = 1.0
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 0.9
+telepatic_immunity = 1.0
+chemical_burn_immunity = 0.9
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+; ПАУК
+
+[af_spider]:af_base
+visual				= physics\sap\sap_art1.ogf  
+description		= af_spider_descr
+inv_name		= af_spider_name
+inv_name_short	= af_spider_name
+inv_weight			= 0.2
+inv_grid_x			= 19
+inv_grid_y			= 12
+inv_grid_width		= 1
+inv_grid_height		= 1
+cost				= 55000
+jump_height			= 0.2
+particles			= anomaly2\group_items\poltereffect
+lights_enabled = true
+trail_light_color = 0.1,0.5,0.1
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+power_restore_speed = 0.0
+bleeding_restore_speed = 0.0
+radiation_restore_speed = 0.0
+satiety_restore_speed = 0.0
+health_restore_speed = 0.0
+
+hit_absorbation_sect = af_spider_absorbation
+
+[af_spider_absorbation]
+burn_immunity     = 1.0
+strike_immunity   = 1.0
+shock_immunity    = 1.0
+wound_immunity    = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+; ПЕМЗА
+[af_pumice]:af_base
+visual				= physics\anomaly\artefact_electra3.ogf 
+
+description			= af_pumice_desc
+inv_name			= af_pumice_name
+inv_name_short		= af_pumice_name
+inv_weight			= 0.5
+
+inv_grid_x			= 16
+inv_grid_y			= 12
+
+cost				= 58000
+
+jump_height			= 0.4
+
+particles			= ghoul\fx-06-blue-glow
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_pumice_absorbation
+
+additional_inventory_weight    = 5
+additional_inventory_weight2    = 5
+
+[af_pumice_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+
+; ЧЁРТОВ ПАЛЕЦ
+[af_fist]:af_base
+visual				= physics\sap\others\art3.ogf 
+
+description			= af_fist_desc
+inv_name			= af_fist_name
+inv_name_short		= af_fist_name
+inv_weight			= 0.1
+
+inv_grid_x			= 11
+inv_grid_y			= 21
+
+cost				= 50000
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = true
+trail_light_color = 0.5,0.5,0.5
+trail_light_range = 2.0
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_fist_absorbation
+
+
+[af_fist_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+
+; ЛАМПОЧКА ИЛЬИЧА
+[af_lamp]:af_base
+visual				= weapons\grenade\wpn_gr_light.ogf
+
+description			= af_lamp_desc
+inv_name			= af_lamp_name
+inv_name_short		= af_lamp_name
+inv_weight			= 0.2
+
+inv_grid_x			= 15
+inv_grid_y			= 12
+
+cost				= 50000
+
+jump_height			= 0.5
+
+particles			= ghoul\fx-06-blue-glow
+
+lights_enabled = true
+trail_light_color = 0.5,0.5,0.5
+trail_light_range = 25.0
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_lamp_absorbation
+
+
+[af_lamp_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+; ОСКОЛОК ОБЪЕКТА 44-К
+[af_chip]:af_base
+visual				= monster_items\poltergeist_glas.ogf
+
+description			= af_chip_desc
+inv_name			= af_chip_name
+inv_name_short		= af_chip_name
+inv_weight			= 0.1
+
+inv_grid_x			= 12
+inv_grid_y			= 20
+
+cost				= 5000
+
+jump_height			= 0.3
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_chip_absorbation
+
+
+[af_chip_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; АНОМАЛЬНЫЙ БАТОН
+[af_baton]:af_base
+visual				= dynamics\weapons\wpn_eat\world_models\food\wpn_bread.ogf
+
+description			= af_baton_desc
+inv_name			= af_baton_name
+inv_name_short		= af_baton_name
+inv_weight			= 0.2
+
+inv_grid_x			= 18
+inv_grid_y			= 18
+
+cost				= 20000
+
+jump_height			= 0.3
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_baton_absorbation
+
+additional_inventory_weight    = -5
+additional_inventory_weight2    = -5
+
+
+[af_baton_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+; Маска порчи
+[af_deadmask]:af_base
+visual				= equipments\gasmask2.ogf
+description			= af_deadmask_desc
+inv_name			= af_deadmask_name
+inv_name_short		= af_deadmask_name
+inv_weight			= 0.1
+
+inv_grid_x			= 18
+inv_grid_y			= 4
+
+cost				= 1
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+slot			= 10
+
+belt			= false
+
+default_to_ruck		= true
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_deadmask_absorbation
+
+
+[af_deadmask_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+; Маска порчи 2:
+[af_deadmask_2]:af_base
+visual				= equipments\gasmask2.ogf
+description			= af_deadmask_2_desc
+inv_name			= af_deadmask_2_name
+inv_name_short		= af_deadmask_2_name
+inv_weight			= 0.1
+
+inv_grid_x			= 18
+inv_grid_y			= 4
+
+cost				= 1
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_deadmask_2_absorbation
+
+
+[af_deadmask_2_absorbation]
+burn_immunity = 1.0				
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.85
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+; ПАУТИНА:
+[af_spiderweb]:af_base
+visual				= physics\sap\sap_art1.ogf 
+description			= af_spiderweb_desc
+inv_name			= af_spiderweb_name
+inv_name_short		= af_spiderweb_name
+inv_weight			= 0.1
+
+inv_grid_x			= 18
+inv_grid_y			= 5
+
+cost				= 30000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0006
+hit_absorbation_sect		= af_spiderweb_absorbation
+
+
+[af_spiderweb_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.9
+telepatic_immunity = 1.0
+chemical_burn_immunity = 0.7
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+; ЯБЛОКО:
+[af_apple]:af_base
+visual				= physics\sap\sap_art1.ogf 
+description			= af_apple_desc
+inv_name			= af_apple_name
+inv_name_short		= af_apple_name
+inv_weight			= 0.5
+
+inv_grid_x			= 19
+inv_grid_y			= 14
+
+cost				= 55000
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0003			
+radiation_restore_speed		= -0.003
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.001
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_apple_absorbation
+
+additional_inventory_weight    = 7
+additional_inventory_weight2    = 7
+
+
+[af_apple_absorbation]
+burn_immunity = 0.8				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 0.8
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 0.75
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+; ПЕРЕКАТИПОЛЕ:
+[af_tumbleweed]:af_base
+visual				= physics\sap\sap_art1.ogf 
+description			= af_tumbleweed_desc
+inv_name			= af_tumbleweed_name
+inv_name_short		= af_tumbleweed_name
+inv_weight			= 0.3
+
+inv_grid_x			= 19
+inv_grid_y			= 10
+
+cost				= 40000
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_tumbleweed_absorbation
+
+additional_inventory_weight    = 6
+additional_inventory_weight2    = 6
+
+
+[af_tumbleweed_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.6
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity  = 1.0
+
+
+
+
+; ЖЕЛЕЗНЫЙ ЩЕБЕНЬ (железный орех + щебень):
+[af_mutant1]:af_base
+visual				= physics\sap\sap_art1.ogf  
+description			= af_mutant1_desc
+inv_name			= af_mutant1_name
+inv_name_short		= af_mutant1_name
+inv_weight			= 0.5
+
+inv_grid_x			= 37
+inv_grid_y			= 30
+
+cost				= 50000
+
+jump_height			= 0.2
+
+particles			= explosions\group_items\heli_trace_flame
+
+lights_enabled = false
+
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= -0.0003			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_mutant1_absorbation
+
+
+[af_mutant1_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 0.96
+shock_immunity = 1.1
+wound_immunity = 0.97		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 0.97
+fire_wound_immunity 	=	0.98
+
+
+
+; ЧЕРТОВА ЖАБА (чертово яйцо + жаба)
+[af_mutant2]:af_base
+visual				= physics\sap\sap_art6.ogf  
+
+description			= af_mutant2_desc
+inv_name			= af_mutant2_name
+inv_name_short		= af_mutant2_name
+inv_weight			= 0.5
+
+inv_grid_x			= 38
+inv_grid_y			= 30
+
+cost				= 16000
+
+jump_height			= 0.4
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= 0.0003
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0009
+bleeding_restore_speed		= 0.0004
+hit_absorbation_sect		= af_mutant2_absorbation
+
+
+[af_mutant2_absorbation]
+burn_immunity = 1.04				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.03
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.96
+chemical_burn_immunity = 0.95
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ХРУСТАЛЬНОЕ КОЛЬЦО (хрусталь + кольцо)
+[af_mutant3]:af_base
+visual				= physics\sap\sap_art15.ogf  
+
+description			= af_mutant3_desc
+inv_name			= af_mutant3_name
+inv_name_short		= af_mutant3_name
+inv_weight			= 0.3
+
+inv_grid_x			= 39
+inv_grid_y			= 30
+
+cost				= 35000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\heli_trace_flame
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0005			
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_mutant3_absorbation
+
+additional_inventory_weight    = 8
+additional_inventory_weight2    = 8
+
+
+[af_mutant3_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 0.94
+shock_immunity = 1.05
+wound_immunity = 0.95		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.04
+fire_wound_immunity 	=	1.03
+
+
+
+; СМОЛЯНОЙ ГРИБ (Гриб + Смола)
+[af_mutant4]:af_base
+visual				= physics\sap\sap_art3.ogf  
+
+description			= af_mutant4_desc
+inv_name			= af_mutant4_name
+inv_name_short		= af_mutant4_name
+inv_weight			= 0.6
+
+inv_grid_x			= 40
+inv_grid_y			= 30
+
+cost				= 18000
+
+jump_height			= 0.2
+
+particles			= anomaly2\group_items\pe00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed		= -0.0015
+satiety_restore_speed		= 0.0
+power_restore_speed		= -0.001
+bleeding_restore_speed		= 0.0007
+hit_absorbation_sect		= af_mutant4_absorbation
+
+
+[af_mutant4_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.8
+telepatic_immunity = 0.89
+chemical_burn_immunity = 0.89
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; КУРИНАЯ СЛЕЗА (слеза + куриный бог)
+[af_mutant5]:af_base
+visual				= physics\sap\sap_art17.ogf  
+
+description			= af_mutant5_desc
+inv_name			= af_mutant5_name
+inv_name_short		= af_mutant5_name
+inv_weight			= 0.3
+
+inv_grid_x			= 40
+inv_grid_y			= 29
+
+cost				= 40000
+
+jump_height			= 0.4
+
+particles			= explosions\group_items\expl_car_sparks_00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= -0.0002				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_mutant5_absorbation
+
+
+[af_mutant5_absorbation]
+burn_immunity = 0.94				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 0.96
+wound_immunity = 1.0		
+radiation_immunity = 1.05
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 0.92
+fire_wound_immunity 	=	0.94
+
+
+
+
+; МЕДЬ
+[af_bobbin]:af_base
+visual				= physics\sap\sap_art17.ogf  
+
+description			= af_bobbin_desc
+inv_name			= af_bobbin_name
+inv_name_short		= af_bobbin_name
+inv_weight			= 0.2
+
+inv_grid_x			= 19
+inv_grid_y			= 4
+
+cost				= 20000
+
+jump_height			= 0.2
+
+particles			= explosions\group_items\expl_car_sparks_00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_bobbin_absorbation
+
+
+[af_bobbin_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ЖЕЛЧЬ
+[af_bile]:af_base
+visual				= physics\anomaly\artefact_myasorubka1.ogf  
+
+description			= af_bile_desc
+inv_name			= af_bile_name
+inv_name_short		= af_bile_name
+inv_weight			= 0.2
+
+inv_grid_x			= 39
+inv_grid_y			= 28
+
+cost				= 30000
+
+jump_height			= 0.2
+
+particles			= explosions\group_items\expl_car_sparks_00
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= -0.0016
+satiety_restore_speed		= 0.0
+power_restore_speed		= -0.0008
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_bile_absorbation
+
+
+[af_bile_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 0.8
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+
+; СТОПКА
+[af_drink]:af_base
+visual				= physics\decor\bottle_bar_stakan.ogf  
+
+description			= af_drink_desc
+inv_name			= af_drink_name
+inv_name_short		= af_drink_name
+inv_weight			= 0.1
+
+inv_grid_x			= 39
+inv_grid_y			= 29
+
+cost				= 32000
+
+jump_height			= 0.0
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0006				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_drink_absorbation
+
+
+[af_drink_absorbation]
+burn_immunity = 0.95				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+; КОЖА
+[af_skin]:af_base
+visual				= physics\sap\sap_art1.ogf 
+
+description			= af_skin_desc
+inv_name			= af_skin_name
+inv_name_short		= af_skin_name
+inv_weight			= 0.4
+
+inv_grid_x			= 38
+inv_grid_y			= 25
+
+cost				= 43000
+
+jump_height			= 0.0
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_skin_absorbation
+
+
+[af_skin_absorbation]
+burn_immunity = 0.92				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 0.9
+wound_immunity = 0.85		
+radiation_immunity = 0.87
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; КЛУБЕНЬ
+[af_potato]:af_base
+visual				= physics\sap\sap_art1.ogf 
+
+description			= af_potato_desc
+inv_name			= af_potato_name
+inv_name_short		= af_potato_name
+inv_weight			= 0.2
+
+inv_grid_x			= 40
+inv_grid_y			= 24
+
+cost				= 38000
+
+jump_height			= 0.0
+
+particles			= anomaly2\group_items\poltereffect
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_potato_absorbation
+
+additional_inventory_weight    = -5
+additional_inventory_weight2    = -5
+
+
+[af_potato_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ОГОНЁК
+[af_homefire]:af_base
+visual				= artefacts\artefact_kaply.ogf
+
+description			= af_homefire_desc
+inv_name			= af_homefire_name
+inv_name_short		= af_homefire_name
+inv_weight			= 0.3
+
+inv_grid_x			= 40
+inv_grid_y			= 22
+
+cost				= 45000
+
+jump_height			= 0.1
+
+particles			= explosions\group_items\campfire_05_vacuum
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0006
+hit_absorbation_sect		= af_homefire_absorbation
+
+
+[af_homefire_absorbation]
+burn_immunity = 0.6				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+
+; ПАЧКА
+[af_sigarets]:af_base
+visual				= artefacts\artefact_kaply.ogf
+
+description			= af_sigarets_desc
+inv_name			= af_sigarets_name
+inv_name_short		= af_sigarets_name
+inv_weight			= 0.1
+
+inv_grid_x			= 34
+inv_grid_y			= 17
+
+cost				= 35000
+
+jump_height			= 0.2
+
+particles			= explosions\group_items\campfire_05_vacuum
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= -0.00006
+satiety_restore_speed		= 0.0
+power_restore_speed		= -0.00006
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_sigarets_absorbation
+
+
+[af_sigarets_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ТУШКА
+[af_rat]:af_base
+visual				= artefacts\artefact_kaply.ogf
+
+description			= af_rat_desc
+inv_name			= af_rat_name
+inv_name_short		= af_rat_name
+inv_weight			= 0.2
+
+inv_grid_x			= 37
+inv_grid_y			= 25
+
+cost				= 38000
+
+jump_height			= 0.3
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_rat_absorbation
+
+
+[af_rat_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ШАРИК
+[af_ball]:af_base
+visual				= artefacts\artefact_kaply.ogf
+
+description			= af_ball_desc
+inv_name			= af_ball_name
+inv_name_short		= af_ball_name
+inv_weight			= 0.2
+
+inv_grid_x			= 15
+inv_grid_y			= 19
+
+cost				= 40000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_ball_absorbation
+
+
+[af_ball_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ЗЕЛЁНКА
+[af_green]:af_base
+visual				= physics\anomaly\artefact_electra3.ogf
+
+description			= af_green_desc
+inv_name			= af_green_name
+inv_name_short		= af_green_name
+inv_weight			= 0.3
+
+inv_grid_x			= 40
+inv_grid_y			= 33
+
+cost				= 44000
+
+jump_height			= 0.2
+
+particles			= alwen\artefact_kaktus
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0008
+hit_absorbation_sect		= af_green_absorbation
+
+
+[af_green_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 0.6
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; МОЗГ
+[af_brain]:af_base
+visual				= physics\anomaly\artefact_electra3.ogf
+
+description			= af_brain_desc
+inv_name			= af_brain_name
+inv_name_short		= af_brain_name
+inv_weight			= 0.3
+
+inv_grid_x			= 19
+inv_grid_y			= 19
+
+cost				= 50000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_brain_absorbation
+
+
+[af_brain_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.1
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 0.85
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; ШЕРСТЬ
+[af_fur]:af_base
+visual				= physics\anomaly\artefact_rusty_hairs.ogf
+
+description			= af_fur_desc
+inv_name			= af_fur_name
+inv_name_short		= af_fur_name
+inv_weight			= 0.2
+
+inv_grid_x			= 40
+inv_grid_y			= 27
+
+cost				= 32000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_fur_absorbation
+
+
+[af_fur_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 0.9
+shock_immunity = 1.1
+wound_immunity = 0.9		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	=	1.0
+
+
+
+; СТРУЖКА
+[af_scroll]:af_base
+visual				= physics\anomaly\artefact_ameba3.ogf
+
+description			= af_scroll_desc
+inv_name			= af_scroll_name
+inv_name_short		= af_scroll_name
+inv_weight			= 0.15
+
+inv_grid_x			= 40
+inv_grid_y			= 28
+
+cost				= 30000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= -0.0008
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_scroll_absorbation
+
+
+[af_scroll_absorbation]
+burn_immunity = 1.1				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.1
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	= 1.0
+
+
+
+; ЧУХНЯ
+[af_yuck]:af_base
+visual				= physics\anomaly\artefact_ameba3.ogf
+
+description			= af_yuck_desc
+inv_name			= af_yuck_name
+inv_name_short		= af_yuck_name
+inv_weight			= 0.35
+
+inv_grid_x			= 40
+inv_grid_y			= 40
+
+cost				= 20000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_yuck_absorbation
+
+
+[af_yuck_absorbation]
+burn_immunity = 0.9				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 0.8
+explosion_immunity = 1.0
+fire_wound_immunity 	= 1.0
+
+
+
+; УПАВШАЯ ЗВЕЗДА
+[af_fallen_star]:af_base
+visual				= physics\anomaly\artefact_ameba3.ogf
+
+description			= af_fallen_star_desc
+inv_name			= af_fallen_star_name
+inv_name_short		= af_fallen_star_name
+inv_weight			= 0.35
+
+inv_grid_x			= 37
+inv_grid_y			= 38
+
+cost				= 1000000
+
+jump_height			= 0.1
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.005				
+radiation_restore_speed		= -0.0004
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0003
+bleeding_restore_speed		= 0.0002
+hit_absorbation_sect		= af_fallen_star_absorbation
+
+additional_inventory_weight    = 50
+additional_inventory_weight2    = 50
+
+
+[af_fallen_star_absorbation]
+burn_immunity = 0.9				;коэффициенты иммунитета 
+strike_immunity = 0.8
+shock_immunity = 0.92
+wound_immunity = 0.88		
+radiation_immunity = 0.79
+telepatic_immunity = 0.9
+chemical_burn_immunity = 0.84
+explosion_immunity = 0.94
+fire_wound_immunity 	= 0.7
+
+
+
+
+
+; ГРАВИЦАППА
+[af_gravitsappa]:af_base
+visual				= physics\anomaly\artefact_ameba3.ogf
+
+description			= af_gravitsappa_desc
+inv_name			= af_gravitsappa_name
+inv_name_short		= af_gravitsappa_name
+inv_weight			= 0.25
+
+inv_grid_x			= 37
+inv_grid_y			= 33
+
+cost				= 50000
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= -0.0003
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0003
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_gravitsappa_absorbation
+
+additional_inventory_weight    = 10
+additional_inventory_weight2    = 10
+
+
+[af_gravitsappa_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	= 1.0
+
+
+
+; ПОРЧА
+[af_waste]:af_base
+visual				= physics\anomaly\artefact_ameba3.ogf
+
+description			= af_waste_desc
+inv_name			= af_waste_name
+inv_name_short		= af_waste_name
+inv_weight			= 0.3
+
+inv_grid_x			= 36
+inv_grid_y			= 31
+
+cost				= 40000
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0				
+radiation_restore_speed		= 0.0002
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_waste_absorbation
+
+
+[af_waste_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	= 1.0
+
+
+
+; ТАБЛЕТКА
+[af_pill]:af_base
+visual				= physics\anomaly\artefact_ameba3.ogf
+
+description			= af_pill_desc
+inv_name			= af_pill_name
+inv_name_short		= af_pill_name
+inv_weight			= 0.2
+
+inv_grid_x			= 36
+inv_grid_y			= 32
+
+cost				= 48000
+
+jump_height			= 0.2
+
+particles			= monsters\group\phantom_trail
+
+lights_enabled = false
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.001				
+radiation_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed		= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_pill_absorbation
+
+
+[af_pill_absorbation]
+burn_immunity = 1.0				;коэффициенты иммунитета 
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity 	= 1.0
+
+
+
+
+
+
+
+
+
+
+

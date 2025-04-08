@@ -1,0 +1,23 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@1
+on_death = mob_death
+
+[mob_home@1]
+path_home = predb_mega_boar_point1
+home_min_radius  = 5
+home_max_radius = 25
+on_info = {=predb_mega_boar_health_low} mob_home@2 %=make_invulnerable =predb_megaboar_health_think =play_snd_on_me(monsters\boar\boar_anomaly_death_0)%
+
+[mob_home@2]
+path_home = predb_mega_boar_point2
+home_min_radius  = 5
+home_max_radius = 20
+on_info = {=predb_megaboar_lost_condition -predb_mega_boar_dead} %+predb_mega_boar_lost =delme2%
+on_npc_in_zone = 8968|predb_mega_boar_zone2|%=unmake_invulnerable%
+
+
+[mob_death]
+on_info = %+predb_mega_boar_dead%

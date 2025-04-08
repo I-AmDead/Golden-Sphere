@@ -1,0 +1,33 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = nil
+
+[mob_home]
+path_home = nil
+home_min_radius = 5
+home_max_radius = 10
+;on_actor_dist_le_nvis = 2 | %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%
+;on_info = {=glowworm_capture} %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%
+
+[mob_camp]
+path_home = nil
+path_look = nil
+on_actor_dist_le_nvis = 2 | %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%
+
+[mob_walker]
+path_walk = nil
+path_look = nil
+on_actor_dist_le_nvis = 2 | %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%
+
+[mob_remark]
+anim = $editor
+target = actor
+no_move = true
+;on_actor_dist_le_nvis = 2 | %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%
+on_info = {=glowworm_capture} %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%
+
+[mob_eluder]
+path = nil
+on_actor_dist_le_nvis = 2 | %=glowworm_effect =play_snd(soundtrack\x18_laugh) =delme%

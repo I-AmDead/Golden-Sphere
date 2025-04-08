@@ -1,0 +1,76 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+-- Отрезание запчастей монстров ножом c анимацией.
+
+function attach( sm )
+  sm:subscribe({ signal = "on_body_hide", fun = this.on_body_hide })
+  sm:subscribe({ signal = "on_body_open", fun = this.on_body_open })
+end
+
+
+local monster, subscribed
+function on_body_hide()
+  monster = nil
+  if subscribed then
+    ogse_signals.get_mgr():unsubscribe( subscribed )
+    subscribed = nil
+  end
+end
+
+
+function on_body_open( npc )
+  local obj = level.get_target_obj()
+  if obj:is_monster() and not obj:alive() then
+    monster = obj
+    if not subscribed then
+      subscribed = { signal = "on_take", fun = this.on_part_take }
+      ogse_signals.get_mgr():subscribe( subscribed )
+    end
+  else
+    monster = nil
+  end
+end
+
+
+local snd
+function on_part_take( obj )
+  if not monster then return end
+  if not get_bool( obj:section(), "monster_part", false ) then return end
+  local spawn = get_string( monster:section(), "Spawn_Inventory_Item_Section" )
+  if not spawn then return end
+  local t = parse_names( spawn )
+  local known = false
+  for i = 1, table.getn( t ), 2 do
+    if t[ i ] == obj:section() then
+      known = true
+      break
+    end
+  end
+  if not known then return end
+	addon.addon.actor_disable_inventory()
+level.disable_input()
+    level.add_cam_effector( "itemuse_anm_effects\\harvest_lean_down_main.anm", 8559, false, "" )
+	local knifeslot = db.actor:item_in_slot(0)
+	if knifeslot then
+  local knife_return = 0
+if knifeslot:section() == "wpn_knife" or knifeslot:section() == "wpn_knife_up1" then
+      knife_return = 1
+elseif knifeslot:section() == "wpn_knife2" or knifeslot:section() == "wpn_knife2_up1" then
+      knife_return = 2
+elseif knifeslot:section() == "wpn_knife3" or knifeslot:section() == "wpn_knife3_up1" then
+      knife_return = 3
+elseif knifeslot:section() == "wpn_knife4" or knifeslot:section() == "wpn_knife4_up1" then
+      knife_return = 4
+elseif knifeslot:section() == "wpn_knife5" or knifeslot:section() == "wpn_knife5_up1" then
+      knife_return = 5
+elseif knifeslot:section() == "wpn_knife6" or knifeslot:section() == "wpn_knife6_up1" then
+      knife_return = 6
+end
+  local sobj = alife():create( "harvest"..knife_return, vector():set( 0, 0, 0 ), 0, 0, 0 )
+  level.client_spawn_manager():add(
+    sobj.id, -1, function( id, obj )
+      dsh.exec_on_update( function() db.actor:eat( obj ) end )
+    end
+  )
+db.actor:give_info_portion("harvest")
+end
+end

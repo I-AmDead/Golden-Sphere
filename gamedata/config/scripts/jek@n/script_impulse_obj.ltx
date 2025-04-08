@@ -1,0 +1,9 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_actor_dist_le_nvis = 100 | %=hit_obj(37:bip01_spine:0:350)%
+on_timer = 100 | %=delme%

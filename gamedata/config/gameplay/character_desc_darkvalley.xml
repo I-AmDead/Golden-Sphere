@@ -1,0 +1,1100 @@
+<?xml version='1.0' encoding="windows-1251" ?>
+<xml>
+
+<!--dar_headhunter_boss-->
+	<specific_character id="dar_headhunter_boss" team_default = "1">
+		<name>Агент-командир</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>dar_headhunter_boss</class>
+		<community>headhunter</community>
+
+		<rank>530</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\ubcs2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		</supplies>
+
+	</specific_character>
+
+<!--dar_headhunter_tehnik-->
+	<specific_character id="dar_headhunter_tehnik" team_default = "1">
+		<name>Агент-техник</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>dar_headhunter_tehnik</class>
+		<community>headhunter</community>
+
+		<rank>330</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\ubcs3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		</supplies>
+
+	</specific_character>
+
+<!--dar_abdul-->
+	<specific_character id="dar_abdul" team_default = "1">
+		<name>Абдуль</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_abdul</class>
+		<community>stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="1" max="100" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\pmc3</visual>
+		<supplies>
+			[spawn] \n		
+		</supplies>
+		<actor_dialog>dar_abdul_dialog1</actor_dialog>
+		<actor_dialog>dar_abdul_dialog2</actor_dialog>
+		<actor_dialog>dar_abdul_dialog3</actor_dialog>
+		<actor_dialog>dar_abdul_dialog4</actor_dialog>
+
+		<actor_dialog>abdul_anomal_radio_dialog</actor_dialog>
+
+		<actor_dialog>abdul_wishmaster_dialog</actor_dialog>
+
+	</specific_character>
+
+<!--x18_general_doktor-->
+	<specific_character id="x18_general_doktor" team_default = "1">
+		<name>Доктор Крылов</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>x18_general_doktor</class>
+		<community>ecolog</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_03\ecolog\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\ucheniy\ucheniy_1</visual>
+		<supplies>
+			[spawn] \n
+			x18doctors_key \n
+			kapsula_3 \n
+			wpn_pm \n
+		</supplies>
+		<actor_dialog>x18_general_doktor_dialog1</actor_dialog>
+	</specific_character>
+
+<!--subject_strong_1-->
+	<specific_character id="subject_strong_1" team_default = "1">
+		<name>Второй</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_strong_1</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+	</specific_character>
+
+<!--subject_strong_2-->
+	<specific_character id="subject_strong_2" team_default = "1">
+		<name>Четвертый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_strong_2</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+	</specific_character>
+
+<!--subject_strong_3-->
+	<specific_character id="subject_strong_3" team_default = "1">
+		<name>Пятый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_strong_3</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+	</specific_character>
+
+<!--subject_strong_4-->
+	<specific_character id="subject_strong_4" team_default = "1">
+		<name>Девятый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_strong_4</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+	</specific_character>
+
+<!--subject_strong_5-->
+	<specific_character id="subject_strong_5" team_default = "1">
+		<name>Шестнадцатый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_strong_5</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+	</specific_character>
+
+<!--subject_strong_6-->
+	<specific_character id="subject_strong_6" team_default = "1">
+		<name>Семнадцатый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_strong_6</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+	</specific_character>
+
+
+<!--x18_cattle1-->
+	<specific_character id="x18_cattle1" team_default = "1">
+		<name>Таракан</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>x18_cattle1</class>
+		<community>hunter</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contrich_human</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>x18_cattle1_dialog1</actor_dialog>
+		<actor_dialog>x18_cattle1_dialog2</actor_dialog>
+
+	</specific_character>
+
+<!--x18_cattle2-->
+	<specific_character id="x18_cattle2" team_default = "1">
+		<name>Гнус</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>x18_cattle2</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\zombi_chernomor</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+
+	</specific_character>
+
+
+<!--dar_btr_zomb_oficer-->
+	<specific_character id="dar_btr_zomb_oficer" team_default = "1">
+		<name>Капитан Овечкин</name>
+		<icon>ui_npc_u_soldier_beret</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_btr_zomb_oficer</class>
+		<community>stalker_army</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_beret</visual>
+		<supplies>
+			[spawn] \n
+			wpn_aps \n
+			ammo_9x18_pmm \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>dar_btr_zomb_oficer_dialog1</actor_dialog>
+		<actor_dialog>dar_btr_zomb_oficer_dialog2</actor_dialog>
+
+	</specific_character>
+
+<!--dar_btr_zomb_soldier1-->
+	<specific_character id="dar_btr_zomb_soldier1" team_default = "1">
+		<name>Рядовой Джунь</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_btr_zomb_soldier1</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>dar_btr_zomb_soldier_dialog1</actor_dialog>
+
+	</specific_character>
+
+<!--dar_btr_zomb_soldier2-->
+	<specific_character id="dar_btr_zomb_soldier2" team_default = "1">
+		<name>Рядовой</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_btr_zomb_soldier2</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\zombied\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+
+
+<!--dar_suicider_man-->
+	<specific_character id="dar_suicider_man" team_default = "1">
+		<name>Патрик</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_suicider_man</class>
+		<community>stalker</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_antigas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_colt1911 \n
+			ammo_11.43x23_hydro \n
+			dar_zapravka_door_key \n
+			dar_zapravka_suicider_zapis \n
+		</supplies>
+	</specific_character>
+
+<!--dar_suicider_woman-->
+	<specific_character id="dar_suicider_woman" team_default = "1">
+		<name>Анжела</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_suicider_woman</class>
+		<community>woman</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\woman\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\woman\girl</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>dar_woman_dialog1</actor_dialog>
+		<actor_dialog>dar_woman_dialog2</actor_dialog>
+		<actor_dialog>dar_woman_dialog3</actor_dialog>
+		<actor_dialog>dar_woman_dialog4</actor_dialog>
+		<actor_dialog>dar_woman_dialog5</actor_dialog>
+
+		<actor_dialog>dar_woman_dialog6</actor_dialog>
+		<actor_dialog>dar_woman_dialog7</actor_dialog>
+
+		<actor_dialog>dar_woman_dialog8</actor_dialog>
+		<actor_dialog>dar_woman_dialog9</actor_dialog>
+		<actor_dialog>dar_woman_dialog10</actor_dialog>
+		<actor_dialog>dar_woman_dialog11</actor_dialog>
+	</specific_character>
+
+
+
+
+<!--dar_body1-->
+	<specific_character id="dar_body1" team_default = "1">
+		<name>Яшка</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body1</class>
+		<community>stalker</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_tt \n
+			ammo_7.62x25_p = 50
+		</supplies>
+	</specific_character>
+
+<!--dar_body2-->
+	<specific_character id="dar_body2" team_default = "1">
+		<name>Вовка</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body1</class>
+		<community>stalker</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			mobile_tank_empty \n
+		</supplies>
+	</specific_character>
+
+<!--dar_body3-->
+	<specific_character id="dar_body3" team_default = "1">
+		<name>Борян</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body1</class>
+		<community>stalker</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_3</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--dar_body4-->
+	<specific_character id="dar_body4" team_default = "1">
+		<name>Проныра</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body1</class>
+		<community>stalker</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_4</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--dar_body5-->
+	<specific_character id="dar_body5" team_default = "1">
+		<name>Капитан Лобода</name>
+		<icon>ui_npc_u_soldier_beret</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body5</class>
+		<community>stalker_army</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_beret</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+	</specific_character>
+
+<!--dar_body6-->
+	<specific_character id="dar_body6" team_default = "1">
+		<name>Рядовой Смирнов</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body6</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+	</specific_character>
+
+<!--dar_body7-->
+	<specific_character id="dar_body7" team_default = "1">
+		<name>Сержант Москаль</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body7</class>
+		<community>stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+	</specific_character>
+
+<!--dar_body8-->
+	<specific_character id="dar_body8" team_default = "1">
+		<name>Рядовой Павлов</name>
+		<icon>ui_npc_u_soldier_bandana</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body8</class>
+		<community>stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_bandana</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+	</specific_character>
+
+
+<!--dar_body9-->
+	<specific_character id="dar_body9" team_default = "1">
+		<name>Тузик</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body9</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+	</specific_character>
+
+<!--dar_body10-->
+	<specific_character id="dar_body10" team_default = "1">
+		<name>Штык</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body10</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+<!--dar_body11-->
+	<specific_character id="dar_body11" team_default = "1">
+		<name>Щукин</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body11</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+<!--dar_body12-->
+	<specific_character id="dar_body12" team_default = "1">
+		<name>Дима Блох</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body12</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+	</specific_character>
+
+<!--dar_body13-->
+	<specific_character id="dar_body13" team_default = "1">
+		<name>Гена Бурков</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_body13</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="4000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+	</specific_character>
+
+
+
+
+
+
+<!--subject_weak_1-->
+	<specific_character id="subject_weak_1" team_default = "1">
+		<name>Двадцатый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_1</class>
+		<community>pervert</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contruch</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>subject_weak_1_dialog1</actor_dialog>
+		<actor_dialog>subject_weak_1_dialog2</actor_dialog>
+		<actor_dialog>subject_weak_1_dialog3</actor_dialog>
+		<actor_dialog>subject_weak_1_dialog4</actor_dialog>
+		<actor_dialog>subject_weak_1_dialog5</actor_dialog>
+
+	</specific_character>
+
+<!--subject_weak_2-->
+	<specific_character id="subject_weak_2" team_default = "1">
+		<name>Восьмой</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_2</class>
+		<community>pervert</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contruch</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>subject_weak_2_dialog1</actor_dialog>
+		<actor_dialog>subject_weak_2_dialog2</actor_dialog>
+		<actor_dialog>subject_weak_2_dialog3</actor_dialog>
+		<actor_dialog>subject_weak_2_dialog4</actor_dialog>
+
+	</specific_character>
+
+<!--subject_weak_3-->
+	<specific_character id="subject_weak_3" team_default = "1">
+		<name>Десятый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_3</class>
+		<community>pervert</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contruch</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>subject_weak_3_dialog1</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog2</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog3</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog4</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog5</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog6</actor_dialog>
+
+		<actor_dialog>subject_weak_3_dialog7</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog8</actor_dialog>
+		<actor_dialog>subject_weak_3_dialog9</actor_dialog>
+
+		<actor_dialog>subject_weak_3_dialog10</actor_dialog>
+
+	</specific_character>
+
+<!--subject_weak_4-->
+	<specific_character id="subject_weak_4" team_default = "1">
+		<name>Тринадцатый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_4</class>
+		<community>pervert</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\controler_in_hood</visual>
+		<supplies>
+			[spawn] \n
+			x18_door1_card \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>subject4_dialog1</start_dialog>
+		<actor_dialog>subject4_dialog2</actor_dialog>
+		<actor_dialog>subject4_dialog3</actor_dialog>
+
+		<actor_dialog>subject4_dialog4</actor_dialog>
+		<actor_dialog>subject4_dialog5</actor_dialog>
+
+	</specific_character>
+
+<!--subject_weak_5-->
+	<specific_character id="subject_weak_5" team_default = "1">
+		<name>Девятнадцатый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_5</class>
+		<community>pervert</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contruch</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>subject5_dialog1</actor_dialog>
+		<actor_dialog>subject5_dialog2</actor_dialog>
+		<actor_dialog>subject5_dialog3</actor_dialog>
+
+	</specific_character>
+
+<!--subject_weak_6-->
+	<specific_character id="subject_weak_6" team_default = "1">
+		<name>Седьмой</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_6</class>
+		<community>pervert</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contruch</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>subject6_dialog1</actor_dialog>
+		<actor_dialog>subject6_dialog2</actor_dialog>
+		<actor_dialog>subject6_dialog3</actor_dialog>
+		<actor_dialog>subject6_dialog4</actor_dialog>
+
+		<actor_dialog>subject6_dialog5</actor_dialog>
+		<actor_dialog>subject6_dialog6</actor_dialog>
+
+	</specific_character>
+
+<!--subject_weak_7-->
+	<specific_character id="subject_weak_7" team_default = "1">
+		<name>Одиннадцатый</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>subject_weak_7</class>
+		<community>pervert</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="0" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_07\pervert\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\contruch</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>subject7_dialog1</actor_dialog>
+		<actor_dialog>subject7_dialog2</actor_dialog>
+		<actor_dialog>subject7_dialog3</actor_dialog>
+		<actor_dialog>subject7_water_dialog</actor_dialog>
+
+	</specific_character>
+
+
+
+
+
+<!--hunter_4-->
+	<specific_character id="hunter_4" team_default = "1">
+		<name>Серега</name>
+		<icon>ui_npc_u_stalker_2_gas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_4</class>
+		<community>stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="1" max="100" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\hunter_4</visual>
+		<supplies>
+			[spawn] \n
+			wpn_fort500 \n
+			ammo_12x70_buck \n
+		</supplies>
+		<start_dialog>hunter4_start_dialog</start_dialog>
+		<actor_dialog>hunter4_dialog1</actor_dialog>
+		<actor_dialog>hunter4_vorpal_dialog1</actor_dialog>
+		<actor_dialog>hunter4_vorpal_dialog2</actor_dialog>
+
+		<actor_dialog>hunter4_lostgirl_dialog1</actor_dialog>
+
+		<actor_dialog>hunter4_emitting_dialog</actor_dialog>
+
+		<actor_dialog>hunter4_afterlab_dialog1</actor_dialog>
+		<actor_dialog>hunter4_afterlab_dialog2</actor_dialog>
+		<actor_dialog>hunter4_afterlab_dialog3</actor_dialog>
+
+		<actor_dialog>hunter4_rostok_dialog1</actor_dialog>
+
+		<actor_dialog>hunter4_art_cheat_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+
+	</specific_character>
+
+
+<!--hunter_4_2-->
+	<specific_character id="hunter_4_2" team_default = "1">
+		<name>Серега</name>
+		<icon>ui_npc_u_stalker_2_gas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>hunter_4_2</class>
+		<community>stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="1" max="100" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<!--visual>actors\hunter_4</visual-->
+		<visual>actors\hunter_4</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+
+	</specific_character>
+
+
+
+
+<!--dar_renegade1-->
+	<specific_character id="dar_renegade1" team_default = "1">
+		<name>Боря</name>
+		<icon>ui_npc_u_stalker_bandit_master</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_renegade1</class>
+		<community>stalker_stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="1" max="100" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\ct_gsg9</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pp2000 \n
+			ammo_9x19_pbp \n
+			wpn_binoc \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>dar_renegade1_start_dialog</start_dialog>
+		<actor_dialog>dar_renegade1_dialog2</actor_dialog>
+		<actor_dialog>dar_renegade1_dialog3</actor_dialog>
+		<actor_dialog>dar_renegade1_surrender_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+
+	</specific_character>
+
+<!--dar_renegade2-->
+	<specific_character id="dar_renegade2" team_default = "1">
+		<name>Жора</name>
+		<icon>ui_npc_u_stalker_bandit_1</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>dar_renegade2</class>
+		<community>stalker_stalker</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1" max="100" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\ct_gsg9</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>dar_renegade2_dialog1</actor_dialog>
+		<actor_dialog>dar_renegade2_surrender_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+</xml>

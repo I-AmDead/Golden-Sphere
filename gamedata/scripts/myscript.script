@@ -1,0 +1,15 @@
+  function action_timer()
+news_manager.send_tip(db.actor,"Жекан, это Абдуль. Совсем забыл тебе сказать, что обратная дорога на Свалку открыта. Скидываю тебе информацию по безопасной тропке в тех окрестностях. Не болей.", nil, nil, 10000)
+     myscript2.start_timer()  
+   end
+ 
+  function start_timer()
+      local iTimer = time_global() + 6000
+ 
+
+  local function check_timer()
+         return time_global() > iTimer
+      end
+ 
+      level.add_call(check_timer, action_timer)
+   end

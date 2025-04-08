@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<king_dialog7>	
+	<face x="420" y="85" width="312" height="212" stretch="1">
+		<texture x="0" y="1" width="932" height="250">ui\burer_face</texture>
+	</face>
+	<izlom_name x="600" y="525" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="graffiti22">Король</text>
+	</izlom_name>
+	<dialog_table x="250" y="280" width="550" height="900" stretch="1">
+		<texture >ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+	<izlom_talk_text1 x="280" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Что ты можешь об этом знать, ничтожество? Но слушай дальше! Поскольку только мы, бюреры, потомки Марийцев, имеем право проживать на Земле, то ваша жалкая порода людей должна быть уничтожена. Это первое.</text>
+	</izlom_talk_text1>
+
+
+
+
+	<btn_1 x="400" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>1) Интересно, как ты и кучка твоих "подданых" планируете это сделать.</text>
+	</btn_1>
+
+
+</king_dialog7>
+

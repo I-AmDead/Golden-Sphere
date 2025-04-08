@@ -1,0 +1,71 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+first_habar_done} walker@2, walker@start
+trade = misc\trade_skidan.ltx
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@skidan_threshold
+meet = meet
+
+[walker@start]
+path_walk = skidan_walk1
+path_look = skidan_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = skidan_walk1
+path_look = skidan_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@idle1
+on_info = {+first_habar_done} walker@2
+
+[walker@2]
+path_walk = skidan_walk1
+path_look = skidan_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@idle2
+
+
+
+
+
+[meet@idle1]
+meet_state = 3|sit_stul@skidan_hello1
+meet_state_wpn = 3|sit_stul@skidan_hello1
+victim = 1|actor
+victim_wpn = 1|actor
+use = true
+use_wpn = false
+abuse = false
+
+[meet@idle2]
+meet_state = 3|sit_stul@skidan_hello2
+meet_state_wpn = 3|sit_stul@skidan_hello2
+victim = 1|actor
+victim_wpn = 1|actor
+use = true
+use_wpn = false
+abuse = false
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@skidan_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+skidan_dead%
+

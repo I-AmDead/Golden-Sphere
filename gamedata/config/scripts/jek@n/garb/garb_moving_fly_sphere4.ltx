@@ -1,0 +1,22 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@agress
+
+[mob_walker@norm]
+path_walk = garb_moving_fly_darkvalley4
+path_look = garb_moving_fly_darkvalley4
+braindead = true
+on_actor_dist_le_nvis = 4 | mob_home@agress
+
+[mob_home@agress]
+path_home = garb_moving_fly_darkvalley4
+home_min_radius = 2
+home_max_radius = 7
+braindead = true
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:1.3:10) =run_postprocess(fire_hit) =play_fire_on_actor%
+;on_actor_dist_ge_nvis = 35 | %=delme%
+;on_timer = 55000 | mob_walker@norm %=delme%
+
+

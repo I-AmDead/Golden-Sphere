@@ -1,0 +1,27 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = mon_general_komp_block_use
+on_use = {=actor_has_item(pri_analog_chip)} ph_idle@2 %=play_snd(scripts\remkit\ui_repairweapon_01) =remove_item(pri_analog_chip) =hide_weapon%
+
+[ph_idle@2]
+on_timer = 2000|ph_idle@3 %+mon_general_komp_on%
+
+[ph_idle@3]
+on_info = {+goldsphere_blow} ph_sound
+
+[ph_sound]
+snd = rupor_sirena
+looped = true
+on_info = {+end_game} ph_sound@stop
+on_info2 = {+goldsphere_used} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end | nil
+
+
+
+
+ 

@@ -1,0 +1,79 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+trade = misc\trade_nothing.ltx
+on_death = death
+
+[walker@start]
+path_walk = agr_polkovnik_walk1
+path_look = agr_polkovnik_look1
+on_timer      = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+[walker@1]
+path_walk = agr_polkovnik_walk1
+path_look = agr_polkovnik_look1
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_timer      = 10000 | walker@2 %=play_snd_from_obj(8431:characters_voice\human_01\military\help\wounded_heavy\help_1)%
+;on_info = {=actor_has_item(agr_kazarma_pogon1) =actor_has_item(agr_kazarma_pogon2)} walker@4 %=play_snd_from_obj(8431:characters_voice\human_01\military\talk\use\yes_kamp_3)%
+on_info = {+agr_polkovnik_suicide} walker@5
+
+[walker@2]
+path_walk = agr_polkovnik_walk1
+path_look = agr_polkovnik_look1
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_timer      = 9000 | walker@3 %=play_snd_from_obj(8431:characters_voice\human_01\military\help\wounded_heavy\help_2)%
+;on_info = {=actor_has_item(agr_kazarma_pogon1) =actor_has_item(agr_kazarma_pogon2)} walker@4 %=play_snd_from_obj(8431:characters_voice\human_01\military\talk\use\yes_kamp_3)%
+on_info = {+agr_polkovnik_suicide} walker@5
+
+
+
+[walker@3]
+path_walk = agr_polkovnik_walk1
+path_look = agr_polkovnik_look1
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_timer      = 10000 | walker@1 %=play_snd_from_obj(8431:characters_voice\human_01\military\help\wounded_heavy\help_3)%
+on_info = {=actor_has_item(agr_kazarma_pogon1) =actor_has_item(agr_kazarma_pogon2)} walker@4 %=play_snd_from_obj(8431:characters_voice\human_01\military\talk\use\yes_kamp_3)%
+
+
+[walker@4]
+path_walk = agr_polkovnik_walk1
+path_look = agr_polkovnik_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agr_polkovnik_suicide} walker@5
+
+[walker@5]
+path_walk = agr_polkovnik_walk1
+path_look = agr_polkovnik_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 5000 | remark@suicide %=unmake_invulnerable%
+
+[remark@suicide]
+no_move = true
+no_rotate = true
+anim = suicide
+;snd = val_suicide_before_death
+;snd_anim_sync = true
+meet = no_meet
+on_signal = anim_end | nil %=suicide%
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+agr_polkovnik_dead =agr_polkovnik_spawn_in%

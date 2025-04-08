@@ -1,0 +1,306 @@
+; Юрий, Агропром
+
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+on_death = death
+threshold = threshold@hunter3_threshold
+;trade = misc\trade_hunter3.ltx
+
+[walker@start]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 1 | walker@wounded_sos1 %=make_invulnerable%
+
+[walker@wounded_sos1]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le = 3 | walker@wounded_wait %=play_snd_from_obj(8058:script_replics\stalker_1\talk\stalker_help_3) =send_tip(hunter3_sos3_tip:stalker)%
+on_timer      = 8000 | walker@wounded_sos2 %=hunter3sos1tip%
+
+[walker@wounded_sos2]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le = 3 | walker@wounded_wait %=play_snd_from_obj(8058:script_replics\stalker_1\talk\stalker_help_3) =send_tip(hunter3_sos3_tip:stalker)%
+on_timer      = 9000 | walker@wounded_sos1 %=hunter3sos2tip%
+
+
+
+[walker@wounded_wait]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agr_brownie2_dead} walker@stand
+
+[walker@stand]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agr_fabrik_electroshema_search} walker@to_seif
+
+[walker@to_seif]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yuriy_fabrik_reward1} walker@rooftop
+on_info2 = {+yuriy_fabrik_to_help} walker@to_help
+
+; Стоим на крыше с биноклем:
+[walker@rooftop]
+path_walk = agr_hunter_walk_fabric5
+path_look = agr_hunter_look_fabric5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yuriy_fabrik_to_help} walker@to_help
+
+; Бежим к ГГ на помощь:
+[walker@to_help]
+path_walk = agr_hunter_walk_fabric6
+path_look = agr_hunter_look_fabric6
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+on_info = {+yuriy_fabrik_back_to_seif} walker@back_to_seif
+
+; Возвращаемся обратно к сейфу:
+[walker@back_to_seif]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@back_to_seif2 %+hunter3_behind_seif =play_snd_from_obj(8058:characters_voice\human_01\stalker\states\panic_human\panic_human_2)%
+
+[walker@back_to_seif2]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yuriy_got_seif_keys} walker@seif_vzlom
+
+; Возимся с сейфом:
+[walker@seif_vzlom]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric3_2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 10000 | walker@after_vzlom %=play_snd_from_obj(8058:script_sound\reactions\see_something\soldier\soldier_see_2) =play_snd_from_obj(8058:device\metal_small_close_stop) +yuriy_seif_vzloman =agr_fabrik_seif_release =agr_fabrik_seif_spawn%
+
+; Открыли сейф:
+[walker@after_vzlom]
+path_walk = agr_hunter_walk_fabric1
+path_look = agr_hunter_look_fabric2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yuriy_goto_yard} walker@lestnitsa1
+
+[walker@lestnitsa1]
+path_walk = agr_hunter_walk_fabric7_1
+path_look = agr_hunter_look_fabric7_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@lestnitsa2 %+yuriy_behind_lestnitsa%
+
+; Стоим у лестницы:
+[walker@lestnitsa2]
+path_walk = agr_hunter_walk_fabric7_1
+path_look = agr_hunter_look_fabric7_1
+danger = danger_condition
+combat_ignore_cond = always
+;on_info = {+yuriy_goto_search} walker@search1
+on_actor_in_zone = agr_fabrik_rooftop_snipernest_zone | walker@search1 %=send_tip(hunter3_start_search1_tip:stalker)%
+
+
+; Начинаем рыскать по двору, пока актор нас прикрывает с крыши:
+[walker@search1]
+path_walk = agr_hunter_walk_fabric7
+path_look = agr_hunter_look_fabric7
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_signal       = arrived | walker@search2
+on_actor_not_in_zone = agr_fabrik_rooftop_snipernest_zone | %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death2) =play_snd_from_obj(8401:weapons\w2000\w2000_shoot) =hunter3_sniper_death_think =kill%
+
+[walker@search2]
+path_walk = agr_hunter_walk_fabric7
+path_look = agr_hunter_look_fabric7
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_timer      = 6000 | walker@search3 %=send_tip(hunter3_start_search2_tip:stalker)%
+on_actor_not_in_zone = agr_fabrik_rooftop_snipernest_zone | %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death2) =play_snd_from_obj(8367:weapons\w2000\w2000_shoot) =hunter3_sniper_death_think =kill%
+
+; Возле баков:
+[walker@search3]
+path_walk = agr_hunter_walk_fabric8
+path_look = agr_hunter_look_fabric8
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_signal       = arrived | walker@search4 %+spawn_agr_fabrik_sniper%
+on_actor_not_in_zone = agr_fabrik_rooftop_snipernest_zone | %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death2) =play_snd_from_obj(8367:weapons\w2000\w2000_shoot) =hunter3_sniper_death_think =kill%
+
+[walker@search4]
+path_walk = agr_hunter_walk_fabric8
+path_look = agr_hunter_look_fabric8
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_timer      = 6000 | walker@search5 %=send_tip(hunter3_start_search3_tip:stalker) +agr_fabrik_sniper_start_hunt%
+on_actor_not_in_zone = agr_fabrik_rooftop_snipernest_zone | %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death2) =play_snd_from_obj(8367:weapons\w2000\w2000_shoot) =hunter3_sniper_death_think =kill%
+
+[walker@search5]
+path_walk = agr_hunter_walk_fabric8
+path_look = agr_hunter_look_fabric8
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_timer      = 14000 | remark@wounded1 %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death) =send_tip(hunter3_start_search4_tip:stalker) +hunter3_fabrik_wounded%
+on_actor_not_in_zone = agr_fabrik_rooftop_snipernest_zone | %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death2) =play_snd_from_obj(8367:weapons\w2000\w2000_shoot) =hunter3_sniper_death_think =kill%
+on_info = {+agr_fabrik_sniper_dead} walker@search6
+
+
+[remark@wounded1]
+anim = wounded_heavy
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 9000 | {-agr_fabrik_sniper_dead} %=play_snd(characters_voice\scenario\agr_hunter3_fabrik_death) =play_snd_from_obj(8367:weapons\w2000\w2000_shoot) =hunter3_sniper_death_think =kill%
+on_info = {+agr_fabrik_sniper_dead} remark@wounded2
+
+[remark@wounded2]
+anim = wounded_heavy
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter3_fabrik_healing} walker@search6
+
+
+[walker@search6]
+path_walk = agr_hunter_walk_fabric9
+path_look = agr_hunter_look_fabric9
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+meet = no_meet
+on_signal       = arrived | walker@search7 %=send_tip(hunter3_start_search5_tip:stalker) +hunter3_find_agr_katakombs_entry%
+
+[walker@search7]
+path_walk = agr_hunter_walk_fabric9
+path_look = agr_hunter_look_fabric9_1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+on_info = {+hunter3_bring_nii_dynamite} walker@nii1
+on_info2 = {+actor_plant_fabrik_dynamite} walker@dynamite_hide
+
+; Спрятались и ждем, пока ГГ подорвет плиты:
+[walker@dynamite_hide]
+path_walk = agr_hunter_walk_fabric444
+path_look = agr_hunter_look_fabric444
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+
+
+
+
+
+;Премся в НИИ искать динамит:
+[walker@nii1]
+path_walk = agr_hunter_walk_nii1
+path_look = agr_hunter_look_nii1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@nii2 %+hunter3_behind_nii_entry%
+
+[walker@nii2]
+path_walk = agr_hunter_walk_nii1
+path_look = agr_hunter_look_nii1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter3_suits_task} walker@nii3
+
+; Сидим в сторожке у входа:
+[walker@nii3]
+path_walk = agr_hunter_walk_nii2
+path_look = agr_hunter_look_nii2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yuriy_germetic_suit_done} walker@nii4 %=run_postprocess(agr_u_fade)%
+
+; Получили гермокостюм и и исчезаем:
+[walker@nii4]
+path_walk = agr_hunter_walk_nii2
+path_look = agr_hunter_look_nii2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | nil %=spawn_new_hunter3 =delme2%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[threshold@hunter3_threshold]
+max_ignore_distance = 3
+;ignore_monster = 0.1
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_sound = 4
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+agr_hunter_dead%

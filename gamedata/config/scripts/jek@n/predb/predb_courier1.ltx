@@ -1,0 +1,185 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_courier_goto_hutor} walker@3, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_courier1_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_courier1_walk1
+path_look = predb_courier1_look1
+on_timer = 1 | walker@1_1 %=make_invulnerable%
+
+
+[walker@1_1]
+path_walk = predb_courier1_walk1
+path_look = predb_courier1_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+predb_courier_goto_hutor} walker@1_2
+
+[walker@1_2]
+path_walk = predb_courier1_walk2
+path_look = predb_courier1_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=predb_courier_near_hutor} walker@2 %=add_self_spot(green_location:predb_courier_mark_text) =send_tip(predb_courier_habar_finded_tip:stalker)%
+
+; Идём к Мойше на хутор:
+[walker@2]
+path_walk = predb_courier1_walk2
+path_look = predb_courier1_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@3 %=play_snd_from_obj(8625:characters_voice\human_03\stalker\states\fatique\fatique_1)%
+
+; Прибыли на хутор:
+[walker@3]
+path_walk = predb_courier1_walk2
+path_look = predb_courier1_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_courier_go} walker@4
+
+
+; Пора в путь-дорогу:
+[walker@4]
+path_walk = predb_courier1_walk3
+path_look = predb_courier1_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@5 %=unmake_invulnerable%
+
+[walker@5]
+path_walk = predb_courier1_walk3
+path_look = predb_courier1_look3
+;danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 5000|walker@6 %=make_invulnerable%
+
+
+[walker@6]
+path_walk = predb_courier1_walk4
+path_look = predb_courier1_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@7 %=predb_courier_ambush1 =unmake_invulnerable%
+
+[walker@7]
+path_walk = predb_courier1_walk5
+path_look = predb_courier1_look5
+;danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 60000|walker@8 %=make_invulnerable%
+
+
+[walker@8]
+path_walk = predb_courier1_walk5
+path_look = predb_courier1_look5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@9 %=predb_courier_ambush2 =unmake_invulnerable%
+
+[walker@9]
+path_walk = predb_courier1_walk5
+path_look = predb_courier1_look5
+;danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 60000|walker@10 %=make_invulnerable%
+
+
+[walker@10]
+path_walk = predb_courier1_walk6
+path_look = predb_courier1_look6
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@11 %=predb_courier_ambush3 =unmake_invulnerable%
+
+[walker@11]
+path_walk = predb_courier1_walk6
+path_look = predb_courier1_look6
+;danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 60000|walker@12 %=make_invulnerable%
+
+
+[walker@12]
+path_walk = predb_courier1_walk7
+path_look = predb_courier1_look7
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@13
+
+[walker@13]
+path_walk = predb_courier1_walk7
+path_look = predb_courier1_look7
+;danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 60000|walker@14
+
+
+[walker@14]
+path_walk = predb_courier1_walk8
+path_look = predb_courier1_look8
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@15 %=predb_courier_ambush4 =unmake_invulnerable%
+
+[walker@15]
+path_walk = predb_courier1_walk8
+path_look = predb_courier1_look8
+;danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 60000|walker@16 %=make_invulnerable%
+
+
+[walker@16]
+path_walk = predb_courier1_walk9
+path_look = predb_courier1_look9
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@17 %+predb_courier_on_place%
+
+[walker@17]
+path_walk = predb_courier1_walk7
+path_look = predb_courier1_look7
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_ge_nvis = 80|%=delme2 +predb_courier_goodbye%
+
+
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_courier1_threshold]
+max_ignore_distance = 10
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_courier1_dead =predb_courier1spawn_in%
+

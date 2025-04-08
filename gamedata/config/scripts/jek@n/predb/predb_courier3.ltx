@@ -1,0 +1,79 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_courier3_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_courier3_walk1
+path_look = predb_courier3_look1
+on_timer = 1|follower@1
+
+
+[follower@1]
+leader = 8625
+formation_line = false
+distance = 2
+anim_sprint = sprint_p
+;danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+predb_courier1_dead} remark@1
+on_info2 = {+predb_courier_on_place} kamp
+
+[remark@1]
+snd = predb_courier_guard_speech
+anim = refuse
+target = 8625
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end|walker@1
+
+
+[walker@1]
+path_walk = predb_courier1_walk9
+path_look = predb_courier1_look9
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived|%=die%
+
+
+[kamp]
+center_point = predb_courier1_look9
+radius = 3 
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_ge_nvis = 80|%=delme2%
+
+
+
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_courier3_threshold]
+max_ignore_distance = 10
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_courier3_dead%
+

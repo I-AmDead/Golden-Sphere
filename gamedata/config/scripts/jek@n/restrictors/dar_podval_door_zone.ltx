@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {+ratter_diary_info -dar_fabric_door_to_x18_unblocked} sr_idle@2 %=dar_podval_door_think%
+
+[sr_idle@2]
+on_actor_outside = sr_idle@1

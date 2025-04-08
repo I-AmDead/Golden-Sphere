@@ -1,0 +1,82 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+bar_abdul_to_alan_talk} walker@5, {+spawn_bar_alan} walker@4, walker@start
+combat_ignore = combat_ignore
+threshold = threshold@bar_scientist_threshold
+on_death = death
+
+
+[walker@start]
+path_walk = bar_scientist_walk1
+path_look = bar_scientist_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = bar_scientist_walk1
+path_look = bar_scientist_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bar_arena_seif_open} walker@2 %=play_snd_from_obj(8518:characters_voice\human_03\stalker\hail\hail_6)%
+
+[walker@2]
+path_walk = bar_scientist_walk1
+path_look = bar_scientist_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 3000 | walker@3 %=play_snd_from_obj(8518:characters_voice\scenario\newbie_on_garbage\newbie_on_garbage_1)%
+
+[walker@3]
+path_walk = bar_scientist_walk1
+path_look = bar_scientist_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bar_heli_start} %=delme2%
+
+
+
+
+; Вертолёт улетел и теперь мы в башне:
+[walker@4]
+path_walk = bar_scientist_walk2
+path_look = bar_scientist_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+bar_abdul_to_alan_talk} walker@5 %=play_snd_from_obj(8539:script_replics\stalker_1\talk\stalker_talk_9) =make_invulnerable%
+
+[walker@5]
+path_walk = bar_scientist_walk2
+path_look = bar_scientist_look2
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+
+
+
+
+[threshold@bar_scientist_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+bar_scientist_dead%
+

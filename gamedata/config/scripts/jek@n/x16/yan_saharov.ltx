@@ -1,0 +1,135 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+yan_sold_comander_reward} walker@8, {+yan_saharov_escape} walker@6, walker@start
+combat_ignore = combat_ignore
+on_death = death
+trade = misc\trade_saharov.ltx
+
+
+[walker@start]
+path_walk = yan_saharov_walk1
+path_look = yan_saharov_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = yan_saharov_walk1
+path_look = yan_saharov_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+x16_brain_saharov_hit} remark@psy_pain
+on_info2 = {+x16_burers_atack} remark@burers_atack %=play_snd_from_obj(8678:characters_voice\human_01\ecolog\help\not_wounded\help_2)%
+
+[remark@psy_pain]
+snd = wounded_psy
+anim = psy_pain
+target = 8728
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 7000 | nil %=kill%
+
+
+; Дерёмся с бюрерами, а потом сваливаем:
+[remark@burers_atack]
+snd = wounded_psy
+anim = hide
+target = 8733
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | walker@2 %=play_snd_from_obj(8730:characters_voice\scenario\burer_kingdom\burer_talk_13) =send_tip(x16_saharov_run_out_tip:saharov:8678)%
+
+[walker@2]
+path_walk = yan_saharov_walk3
+path_look = yan_saharov_look3
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_signal       = arrived | walker@3 %+x16_saharov_in_room%
+
+[walker@3]
+path_walk = yan_saharov_walk3
+path_look = yan_saharov_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+x16_fuel_detonate} walker@4
+
+
+; Ныкаемся от взрыва:
+[walker@4]
+path_walk = yan_saharov_walk4
+path_look = yan_saharov_look4
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {+x16_fuel_blow} walker@5
+
+
+; Стоим перед выходом:
+[walker@5]
+path_walk = yan_saharov_walk3
+path_look = yan_saharov_look3
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+
+
+; В начале туннеля, после побега:
+[walker@6]
+path_walk = yan_saharov_walk5
+path_look = yan_saharov_look5
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_no_wpn
+def_state_moving2 = sneak_no_wpn
+def_state_moving3 = sneak_no_wpn
+on_info = {+yan_saharov_on_base} walker@7
+
+[walker@7]
+path_walk = yan_sold6_look3
+path_look = yan_sold6_walk3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yan_sold_comander_reward} %=delme2%
+
+
+; В бункере:
+[walker@8]
+path_walk = yan_saharov_walk6
+path_look = yan_saharov_look6
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1 | walker@9 %=make_invulnerable%
+
+[walker@9]
+path_walk = yan_saharov_walk6
+path_look = yan_saharov_look6
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+yan_saharov_dead%

@@ -1,0 +1,65 @@
+; Владимир, Бар
+
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+on_death = death
+threshold = threshold@hunter5_threshold
+
+
+[walker@start]
+path_walk = bar_hunter_walk1
+path_look = bar_hunter_look1
+on_timer      = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = bar_hunter_walk1
+path_look = bar_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bar_heli_start} walker@2
+
+[walker@2]
+path_walk = bar_hunter_walk1
+path_look = bar_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 1000 | walker@3 %=disable_ui =play_snd_from_obj(8060:characters_voice\human_03\stalker\talk\leave\leave_1)%
+
+[walker@3]
+path_walk = bar_hunter_walk1
+path_look = bar_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | walker@4 %=run_postprocess(agr_u_fade)%
+
+[walker@4]
+path_walk = bar_hunter_walk1
+path_look = bar_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | %=actor_goto_bar_yard =enable_ui =delme2%
+
+
+
+
+
+[threshold@hunter5_threshold]
+max_ignore_distance = 3
+;ignore_monster = 0.1
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_sound = 4
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+bar_hunter_dead%

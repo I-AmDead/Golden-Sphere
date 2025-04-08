@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<agr_grave_cross_intrface>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture>ui\bowler_intrface_agr</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22"></text>
+</name>
+
+<text1 x="280" y="280" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22"></text>
+</text1>
+<text2 x="280" y="320" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22"></text>
+</text2>
+<text3 x="280" y="360" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22"></text>
+</text3>
+<text4 x="280" y="400" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22"></text>
+</text4>
+
+	<btn_quit x="400" y="510" width="330" height="300">
+		<text align="c" x="-90" y="90" r="225" g="58" b="58" font="graffiti40"></text>
+	</btn_quit>
+
+</agr_grave_cross_intrface>
+

@@ -1,0 +1,14 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+agr_fabrik_elshema_done} ph_idle@2 %=add_self_spot(green_location:agr_fabr_powerbox)%
+
+[ph_idle@2]
+tips     = agr_fabr_powerbox
+on_info = {+agr_fabrik_power_box_trap1 +agr_fabrik_power_box_trap2 +agr_fabrik_power_box_trap3} nil %=remowe_self_spot(green_location:agr_fabr_powerbox)%
+on_use = nil %=play_snd(ambient\switch_2) =agr_powerbox_using =remowe_self_spot(green_location:agr_fabr_powerbox)%
+

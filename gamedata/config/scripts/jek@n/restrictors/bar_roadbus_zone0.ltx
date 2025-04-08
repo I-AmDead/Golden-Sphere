@@ -1,0 +1,12 @@
+[logic]
+active = sr_particle@1
+
+[sr_particle@1]
+name = monsters\group\polter_trail_dist_00
+path = bar_roadbus_zone_point2
+mode = 2
+looped = true
+on_info = {+bar_road_bus_off} nil
+on_actor_outside = %=stop_postprocess(psychic:1777:false)%
+on_actor_inside = {=actor_alive} %=bar_roadbus_zone_effect1 =run_postprocess(psychic:1777:false)%
+

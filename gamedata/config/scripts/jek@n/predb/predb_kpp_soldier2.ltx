@@ -1,0 +1,84 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+threshold = threshold@predb_kpp_soldier2_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kpp_soldier2_walk1
+path_look = predb_kpp_soldier2_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_kpp_fight_start} walker@shooting
+
+[walker@shooting]
+path_walk = predb_kpp_soldier2_walk1
+path_look = predb_kpp_soldier2_shoot_kontrab
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_kpp_kontrab_atacked} walker@1 %=set_enemies(8635:8636:8637)%
+on_info2 = {+predb_kpp_soldiers_atacked} walker@1 %=set_enemies(8635:8636:8637) =killactor%
+
+
+
+
+[walker@1]
+path_walk = predb_kpp_soldier2_walk1
+path_look = predb_kpp_soldier2_look1
+danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 30000 | walker@2
+on_info = {+predb_kpp_fight_start} %=set_enemies(8635:8636:8637)%
+
+[walker@2]
+path_walk = predb_kpp_soldier2_walk2
+path_look = predb_kpp_soldier2_look2
+danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 30000 | walker@3
+on_info = {+predb_kpp_fight_start} %=set_enemies(8635:8636:8637)%
+
+[walker@3]
+path_walk = predb_kpp_soldier2_walk3
+path_look = predb_kpp_soldier2_look3
+danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 30000 | walker@4
+on_info = {+predb_kpp_fight_start} %=set_enemies(8635:8636:8637)%
+
+[walker@4]
+path_walk = predb_kpp_soldier2_walk4
+path_look = predb_kpp_soldier2_look4
+danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 30000 | walker@1
+on_info = {+predb_kpp_fight_start} %=set_enemies(8635:8636:8637)%
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_kpp_soldier2_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {-predb_kpp_soldiers_atacked =hit_by_actor} %+predb_kpp_soldiers_atacked%
+
+[death]
+on_info = {=killed_by_actor} %+predb_kpp_soldier2_dead +predb_kpp_soldiers_atacked%, {!killed_by_actor} %+predb_kpp_soldier2_dead%
+

@@ -1,0 +1,15 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+aes_radstorm} ph_idle@2
+
+[ph_idle@2]
+on_info = {-aes_radstorm} ph_idle@1
+on_info2 = {!actor_in_aes_safe_zones !actor_has_item(aes_kristall)} %=hit_obj(37:bip01_spine:0:100) =play_snd(ambient\whistling_wind1) =run_postprocess(radiation:1777:false)%
+
+
+
+
+
+ 

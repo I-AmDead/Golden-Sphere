@@ -1,0 +1,24 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_camp@home
+
+[mob_camp@home]
+path_home = dar_swamp_teleport_home
+path_look = dar_swamp_teleport_home
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_actor_dist_le_nvis = 15 | {~10} mob_camp@1 %=play_snd_from_obj(8355:characters_voice\woman\help\wounded_heavy\help_5)%
+on_info = {=dar_movig_teleport_capture} %=actor_teleport_to_dar_trap =delme%
+
+
+[mob_camp@1]
+path_home = dar_swamp_teleport_point1
+path_look = dar_swamp_teleport_point1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_actor_dist_le_nvis = 1 | %=actor_teleport_to_dar_trap =delme%
+on_info = {=dar_movig_teleport_capture} %=actor_teleport_to_dar_trap =delme%

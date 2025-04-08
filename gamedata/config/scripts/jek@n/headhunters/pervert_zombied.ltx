@@ -1,0 +1,27 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = remark@idle
+
+[remark@idle]
+anim = psycho_pain
+target = nil
+no_move = true
+danger = danger_condition@paralyze
+combat_ignore_cond = always
+on_info = {+headhunters_robbery} remark@suicide
+on_timer = 120000|remark@suicide
+
+[remark@suicide]
+anim = wounded_heavy
+target = nil
+no_move = true
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end|nil %=kill -headhunter_suicide%
+
+
+

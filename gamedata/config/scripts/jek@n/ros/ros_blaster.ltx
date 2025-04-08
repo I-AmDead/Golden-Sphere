@@ -1,0 +1,59 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@idle
+on_death = mob_death
+on_hit = mob_hit
+
+
+[mob_walker@idle]
+path_walk = ros_master_walk1
+path_look = ros_master_look1
+braindead = true
+on_timer = 1 | mob_home@1
+
+
+[mob_home@1]
+path_home = ros_master_walk8
+path_look = ros_master_look8
+home_min_radius = 10
+home_max_radius = 100
+on_info = {=actor_see_ros_blaster} %=ros_master_psy_hit%
+on_info2 = {=actor_has_item(ros_master_heart)} mob_walker@calm %=ros_master_talk3_think%
+
+
+
+;ГГ нашел артефакт, ждем, пока он нам ее принесет:
+[mob_walker@calm]
+path_walk = ros_master_walk8
+path_look = ros_master_look8
+braindead = true
+
+
+
+
+[mob_hit]
+;on_info = {=hit_by_actor} mob_remark@enemy
+
+[mob_death]
+on_info = %+ros_blaster_dead =ros_blaster_spawn_in%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

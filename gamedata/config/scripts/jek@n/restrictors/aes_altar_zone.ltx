@@ -1,0 +1,17 @@
+[logic]
+active = sr_particle@1
+
+[sr_particle@1]
+name = parpar\group_items\pe01_03_big
+path = aes_pagan_altar_point
+mode = 2
+looped = true
+on_info = {=actor_has_item(aes_kristall)} sr_particle@2 %=play_snd(anomaly\teleport_incoming) +aes_altar_off%
+
+[sr_particle@2]
+name = parpar\group_items\pe01_00
+path = aes_pagan_altar_point2
+mode = 2
+looped = false
+on_signal = particle_end | nil
+

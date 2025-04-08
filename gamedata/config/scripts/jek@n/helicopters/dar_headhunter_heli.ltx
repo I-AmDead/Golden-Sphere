@@ -1,0 +1,76 @@
+[logic]
+active = {+abdul_goto_garbage} heli_move@back, heli_move@waiting
+
+; Висим за локацией и ждем, пока игрок не потрындит с Абдулём и не вылезет из Недосторйки:
+[heli_move@waiting]
+path_move = dar_headhunter_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+abdul_goto_hideaway} heli_move@to_place
+
+; ГГ высунул своё рыло наружу, взлетаем:
+[heli_move@to_place]
+path_move = dar_headhunter_heli_point1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_timer = 50000 | heli_move@on_place1 %=play_snd(helicopter\see_enemy_7)%
+
+
+; Летим к точке над Недостройкой:
+[heli_move@on_place1]
+path_move = dar_headhunter_heli_point2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 15
+on_signal = arrived | heli_move@on_place2 %=play_snd(helicopter\see_enemy_3)%
+
+
+; Прилетели. Переключаемся из одного состояния в другое, поочередно шмаляя то по ГГ, то по Абдулю:
+[heli_move@on_place2]
+path_move = dar_headhunter_heli_point2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_timer = 8000 | heli_move@on_place3 
+on_actor_in_zone = dar_kamp_koster1_sound_zone | heli_move@back
+
+[heli_move@on_place3]
+path_move = dar_headhunter_heli_point3
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_timer = 15000 | heli_move@on_place2 
+on_actor_in_zone = dar_kamp_koster1_sound_zone | heli_move@back
+
+
+; ГГ добрался до убежища. Сваливаем за локу:
+[heli_move@back]
+path_move = dar_headhunter_heli_point4
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 15
+on_signal = arrived | %=delme2%
+
+
+
+

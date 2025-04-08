@@ -1,0 +1,21 @@
+[logic]
+active = ph_idle
+on_hit = hit
+
+[ph_idle]
+on_info = {+story_task1} ph_sound@idle
+
+[ph_sound@idle]
+snd = rupor_idle
+on_info = {+blokpost_alarm} ph_sound@alarm
+on_info2 = {+post_matugalnik_off} nil
+
+[ph_sound@alarm]
+snd = rupor_alarm
+on_info = {+post_matugalnik_off} nil
+
+
+
+
+[hit]
+on_info = %+post_matugalnik_off%

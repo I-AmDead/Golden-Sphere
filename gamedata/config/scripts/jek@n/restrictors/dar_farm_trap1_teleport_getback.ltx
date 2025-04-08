@@ -1,0 +1,15 @@
+[logic]
+active = sr_particle
+
+[sr_particle]
+name = anomaly2\teleport_idle
+path = dar_farm_trap_zone_getback1_point
+mode = 2
+looped = true
+on_actor_inside = {+dar_farm_anomaly_task +dar_farm_trap_teleport_stage1 +dar_farm_trap_teleport_stage2 +dar_farm_trap_teleport_stage3 +dar_farm_trap_teleport_stage4} %=dar_farm_trap_teleport_trawell2%, %=dar_farm_trap_teleport_trawell1 -dar_farm_trap_teleport_stage1 -dar_farm_trap_teleport_stage2 -dar_farm_trap_teleport_stage3 -dar_farm_trap_teleport_stage4%
+
+[sr_idle]
+on_info = {-dar_farm_trap_teleport_stage1 -dar_farm_trap_teleport_stage2 -dar_farm_trap_teleport_stage3 -dar_farm_trap_teleport_stage4} sr_particle
+
+
+

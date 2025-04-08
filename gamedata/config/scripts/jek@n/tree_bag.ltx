@@ -1,0 +1,13 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips = take_ruck
+on_use = %=tree_bags_unpack =delme%
+on_actor_dist_le_nvis = 30|{=actor_has_item(wonder_doll) +wonderdoll_first_talk} ph_idle@2 %=add_self_spot(find_item_location:tree_bag_mark_text) =wonderdoll_tree_bags_see%
+
+[ph_idle@2]
+tips = take_ruck
+on_use = %=tree_bags_unpack =delme%
+
+

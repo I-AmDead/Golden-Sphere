@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+predb_rogue_dead} ph_idle@open %=add_self_spot(green_location:predb_village_rogue_shron_mark_text)%
+
+[ph_idle@open]
+on_use = %=remowe_self_spot(green_location:predb_village_rogue_shron_mark_text)%
+nonscript_usable = true
+tips = st_search_treasure

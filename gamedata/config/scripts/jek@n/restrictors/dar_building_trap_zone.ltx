@@ -1,0 +1,14 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {+hunter4_goto_koridor} sr_idle@2 %=play_snd(weapons\generic_close)%
+
+[sr_idle@2]
+on_timer = 300 | sr_idle@3 %=play_snd(weapons\f1_explode2) =run_cam_effector(fusker)%
+
+[sr_idle@3]
+on_timer = 300 | nil %=run_postprocess(deadcity_wake_old:677:false) =actor_goto_building_trap +dar_build_guards_spawn =release_dar_hunter%
+
+
+

@@ -1,0 +1,217 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start, {+agrund_hunter_behind_door} walker@2, {+agrund_hunter_in_upper_room} walker@13
+on_death = death
+threshold = threshold
+
+[walker@start]
+path_walk = agrund_hunter_walk_nii1
+path_look = agrund_hunter_look_nii1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+
+[walker@1]
+path_walk = agrund_hunter_walk_nii1
+path_look = agrund_hunter_look_nii1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_hunter_info1} walker@2
+
+
+; Сели у первой двери:
+[walker@2]
+path_walk = agrund_hunter_walk_nii2
+path_look = agrund_hunter_look_nii2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@3 %+agrund_hunter_behind_door%
+
+
+; Спускаемся к главному залу:
+[walker@3]
+path_walk = agrund_hunter_walk_nii2
+path_look = agrund_hunter_look_nii2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_door_opened} walker@4
+
+[walker@4]
+path_walk = agrund_hunter_walk_nii3
+path_look = agrund_hunter_look_nii3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@5 %+agrund_hunter_behind_holl =play_snd_from_obj(8447:characters_voice\human_03\stalker\reactions\hear_something\hear_3) =unmake_invulnerable%
+
+
+; Сидим на пороге главного зала, материмся и ждем снорков:
+[walker@5]
+path_walk = agrund_hunter_walk_nii3
+path_look = agrund_hunter_look_nii3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+agrund_ambush_snork1_dead +agrund_ambush_snork2_dead +agrund_ambush_snork3_dead +agrund_ambush_snork4_dead +agrund_ambush_snork5_dead +agrund_ambush_snork6_dead} walker@7 %=make_invulnerable%
+;on_timer      = 7000 | walker@6 %=make_invulnerable =play_snd_from_obj(8447:characters_voice\human_03\stalker\reactions\hear_something\hear_2)%
+
+[walker@6]
+path_walk = agrund_hunter_walk_nii3
+path_look = agrund_hunter_look_nii3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+agrund_ambush_snork1_dead +agrund_ambush_snork2_dead +agrund_ambush_snork3_dead +agrund_ambush_snork4_dead +agrund_ambush_snork5_dead +agrund_ambush_snork6_dead} walker@7 %=make_invulnerable%
+on_timer      = 7000 | walker@5 %=make_invulnerable =play_snd_from_obj(8447:characters_voice\human_03\stalker\reactions\hear_something\hear_2)%
+
+
+; Останавливаемся возле вентилятора и смотрим:
+[walker@7]
+path_walk = agrund_hunter_walk_nii4
+path_look = agrund_hunter_look_nii4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@8 %+agrund_hunter_behind_ventilator%
+
+[walker@8]
+path_walk = agrund_hunter_walk_nii4
+path_look = agrund_hunter_look_nii4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_hunter_info2} walker@9
+
+[walker@9]
+path_walk = agrund_hunter_walk_nii5
+path_look = agrund_hunter_look_nii5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@10  %=unmake_invulnerable%
+
+
+; Уселись в коридорчике и орём на вторых снорков:
+[walker@10]
+path_walk = agrund_hunter_walk_nii5
+path_look = agrund_hunter_look_nii5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_ambush_snork7_dead +agrund_ambush_snork8_dead +agrund_ambush_snork9_dead +agrund_ambush_snork10_dead +agrund_ambush_snork11_dead} walker@12  %=make_invulnerable%
+on_timer      = 7000 | walker@11 %=make_invulnerable =play_snd_from_obj(8447:characters_voice\human_03\stalker\reactions\hear_something\hear_2)%
+
+[walker@11]
+path_walk = agrund_hunter_walk_nii5
+path_look = agrund_hunter_look_nii5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_ambush_snork7_dead +agrund_ambush_snork8_dead +agrund_ambush_snork9_dead +agrund_ambush_snork10_dead +agrund_ambush_snork11_dead} walker@12 %=make_invulnerable%
+on_timer      = 7000 | walker@10 %=make_invulnerable =play_snd_from_obj(8447:characters_voice\human_03\stalker\reactions\hear_something\hear_2)%
+
+
+; У двух баков, внизу:
+[walker@12]
+path_walk = agrund_hunter_walk_nii6
+path_look = agrund_hunter_look_nii6
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@13 %+agrund_hunter_in_upper_room%
+
+[walker@13]
+path_walk = agrund_hunter_walk_nii6
+path_look = agrund_hunter_look_nii6
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_in_zone = agrund_reservuar_trap_zone1 | walker@14_1
+
+
+[walker@14_1]
+path_walk = agrund_hunter_walk_nii7
+path_look = agrund_hunter_look_nii7
+danger = danger_condition
+combat_ignore_cond = always
+on_signal       = arrived | walker@14 %+hunter3_kontainer_wait%
+
+
+; У двух баков, сверху, смотрим на ГГ:
+[walker@14]
+path_walk = agrund_hunter_walk_nii7
+path_look = agrund_hunter_look_nii7
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_virus_konteyner_finded} walker@15_1
+
+[walker@15_1]
+path_walk = agrund_hunter_walk_nii7
+path_look = agrund_hunter_look_nii7
+danger = danger_condition
+combat_ignore_cond = always
+on_signal       = arrived | walker@15 %+hunter3_kontainer_wait%
+
+
+; ГГ подобрал контейнер. Стоим и орем на него сверху:
+[walker@15]
+path_walk = agrund_hunter_walk_nii7
+path_look = agrund_hunter_look_nii7
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_virus_konteyner_opened} walker@17 %=play_snd_from_obj(8447:characters_voice\human_03\stalker\fight\threat\threat_close_1) =send_tip(agrund_hunter3_trap_tip3:default)%
+on_info2 = {+agrund_virus_konteyner_lost} walker@18 %=play_snd_from_obj(8447:characters_voice\scenario\val\escort_threat_1)%
+on_timer      = 6000 | walker@16 %=play_snd_from_obj(8447:characters_voice\human_03\stalker\hail\hail_1) =agrund_hunter_jump_think%
+
+[walker@16]
+path_walk = agrund_hunter_walk_nii7
+path_look = agrund_hunter_look_nii7
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+agrund_virus_konteyner_opened} walker@17 %=play_snd_from_obj(8447:characters_voice\human_03\stalker\fight\threat\threat_close_1) =send_tip(agrund_hunter3_trap_tip3:default)%
+on_info2 = {+agrund_virus_konteyner_lost} walker@18 %=play_snd_from_obj(8447:characters_voice\scenario\val\escort_threat_1)%
+on_timer      = 6000 | walker@15 %=play_snd_from_obj(8447:characters_voice\human_03\stalker\hail\hail_3) =agrund_hunter_jump_think%
+
+
+; ГГ открыл контейнер. Валим нахрен и исчезаем.
+[walker@17]
+path_walk = agrund_hunter_walk_nii8
+path_look = agrund_hunter_look_nii8
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | nil %=send_tip(agrund_hunter3_goodbye_tip1:default) +agrund_hunter_dead +agrund_redrik_spawn =delme2%
+
+
+; ГГ отдал нам контейнер. Валим нахрен и исчезаем.
+[walker@18]
+path_walk = agrund_hunter_walk_nii8
+path_look = agrund_hunter_look_nii8
+danger = danger_condition
+combat_ignore_cond = always
+on_signal       = arrived | nil %=send_tip(agrund_hunter3_goodbye_tip2:default) +agrund_hunter_dead =delme2%
+
+
+
+
+
+
+
+
+
+
+[threshold]
+max_ignore_distance = 3
+;ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+agrund_hunter_dead%

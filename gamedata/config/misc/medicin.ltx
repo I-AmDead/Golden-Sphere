@@ -1,0 +1,654 @@
+;-------------------------------------------------------
+; Аптечки и медпрепараты
+;-------------------------------------------------------
+[medicin]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+cform           = skeleton
+$prefetch 		= 32
+; food item
+animation_slot		= 4
+
+use_sound = items_sounds\inv_medic
+
+[antirad]:medicin
+$spawn 			= "food and drugs\antirad"
+class			= II_ANTIR
+visual          = dynamics\weapons\wpn_eat\world_models\injectors\injector_big_world.ogf
+description		= enc_equipment_medi_antirad1
+
+inv_name			= Antirad
+inv_name_short		= Antirad
+inv_weight			= 0.1
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 11
+inv_grid_y			= 0
+cost				= 250
+
+; eatable item
+eat_health = -0.01
+eat_satiety = 0
+eat_power = 0
+eat_radiation = -0.75
+wounds_heal_perc = 0
+eat_portions_num = 1
+
+item_used_timing                         = 4150
+item_used_timing_exo                     = 2200
+snd_use                                  = interface\item_usage\antirad_use
+snd_use_anm                              = interface\item_usage\antirad_use
+snd_use_exo_anm                          = interface\item_usage\medkit_exo_alt
+
+hud                                      = antirad_hud
+hud_exo                                  = antirad_exo_hud
+
+cam_effect                               = camera_effects\weapon\antirad.anm
+cam_effect_exo                           = camera_effects\weapon\antirad_exo.anm
+
+;trash_section                            = antirad_trash
+;trash_spawn_timing                       = 6100
+
+[antirad_hud]:hud_base
+item_visual                              = gwr\equipment\antirad\antirad_hud.ogf
+hands_orientation                        = 0.000000, 0.000000, 0.000000
+hands_orientation_16x9                   = 0.000000, 0.000000, 0.000000
+hands_position                           = 0.000000, 0.011600, 0.015000
+hands_position_16x9                      = 0.000000, 0.011600, 0.015000
+
+hud_fov                                  = 0.65
+
+anm_use                                  = antirad
+
+[antirad_exo_hud]:hud_base
+item_visual                              = gwr\equipment\medkit_exo\medkit_exo_hud.ogf
+hands_position                           = -0.009825,-0.014400,-0.001100
+hands_position_16x9                      = -0.009825,-0.014400,-0.001100
+hands_orientation                        = 0.0, 0.0, 0.0
+hands_orientation_16x9                   = 0.0, 0.0, 0.0
+
+hud_fov                                  = 0.65
+
+item_position                            = 0.0, 0.0, 0.0
+item_orientation                         = 0.0, 0.0, 0.0
+
+anm_use                                  = antirad_exo
+
+[dix]:medicin
+$spawn 			= "food and drugs\dix"
+class			= II_BOTTL
+visual			= dynamics\weapons\wpn_eat\world_models\tabletki\tabletki_antidot_world.ogf 
+description		= enc_equipment_D-IX
+
+inv_name			= D-IX
+inv_name_short		= D-IX
+inv_weight			= 0.1
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 12
+inv_grid_y			= 0
+cost				= 800
+
+; eatable item
+eat_health          = -0.09
+eat_satiety			= 0
+eat_power			= 1
+eat_alcohol			= 0.1
+eat_radiation		= 0
+wounds_heal_perc	= 0
+eat_portions_num	= 1
+eat_max_power		= 0.2
+
+item_used_timing                         = 2300
+snd_use                                  = items_sounds\inv_food
+snd_use_anm                              = interface\item_usage\pills_use
+
+hud                                      = dix_hud
+
+cam_effect                               = camera_effects\weapon\drugs.anm
+
+;trash_section                            = dix_trash
+;trash_spawn_timing                       = 1800
+
+boost_time                               = 30
+boost_telepat_protection                 = 1
+boost_psy_health_restore                 = 0.1
+
+[dix_hud]:hud_base
+hud_fov                                  = 0.65
+hands_orientation                        = 0.000000,0.000000,0.000000
+hands_orientation_16x9                   = 0.000000,0.000000,0.000000
+hands_position                           = 0.007700,-0.010000,0.005000
+hands_position_16x9                      = 0.007700,-0.010000,0.005000
+item_visual                              = gwr\equipment\pills\pills_dix
+
+anm_use                                  = drugs, drugs_hud
+
+[bipsizon]:medicin
+$spawn 			= "food and drugs\bipsizon"
+class			= II_BOTTL
+visual			= dynamics\weapons\wpn_eat\world_models\tabletki\tabletki_radioprotector_world.ogf 
+description		= enc_equipment_bipsizon
+
+inv_name			= bipsizon
+inv_name_short		= bipsizon
+inv_weight			= 0.1
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 11
+inv_grid_y			= 1
+cost				= 3500
+
+; eatable item
+eat_health          = -0.05
+eat_satiety			= 0
+eat_power			= 0
+eat_alcohol			= 0.1
+eat_radiation		= 0
+wounds_heal_perc	= 0
+eat_portions_num	= 1
+eat_max_power		= 0
+
+item_used_timing                         = 2300
+snd_use                                  = items_sounds\inv_food
+snd_use_anm                              = interface\item_usage\pills_use
+
+hud                                      = bipsizon_hud
+
+cam_effect                               = camera_effects\weapon\drugs.anm
+
+;trash_section                            = bipsizon_trash
+;trash_spawn_timing                       = 1800
+
+boost_time                               = 30
+boost_telepat_protection                 = 1
+boost_psy_health_restore                 = 0.1
+
+[bipsizon_hud]:hud_base
+hud_fov                                  = 0.65
+hands_orientation                        = 0.000000,0.000000,0.000000
+hands_orientation_16x9                   = 0.000000,0.000000,0.000000
+hands_position                           = 0.007700,-0.010000,0.005000
+hands_position_16x9                      = 0.007700,-0.010000,0.005000
+item_visual                              = gwr\equipment\pills\pills_bipsizon
+
+anm_use                                  = drugs, drugs_hud
+
+[yod]:medicin
+$spawn 			= "food and drugs\yod"
+class			= II_BOTTL
+visual			= dynamics\weapons\wpn_eat\world_models\tabletki\tabletki_coagulant_world.ogf
+description		= enc_equipment_yod
+
+inv_name			= yod
+inv_name_short		= yod
+inv_weight			= 0.1
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 12
+inv_grid_y			= 1
+cost				= 500
+
+; eatable item
+eat_health          = -0.05
+eat_satiety			= 0
+eat_power			= 0
+eat_alcohol			= 0.01
+eat_radiation		= 0
+wounds_heal_perc	= 0
+eat_portions_num	= 1
+eat_max_power		= 0
+
+item_used_timing                         = 2300
+snd_use                                  = items_sounds\inv_food
+snd_use_anm                              = interface\item_usage\pills_use
+
+hud                                      = yod_hud
+
+cam_effect                               = camera_effects\weapon\drugs.anm
+
+;trash_section                            = yod_trash
+;trash_spawn_timing                       = 1800
+
+boost_time                               = 30
+boost_telepat_protection                 = 1
+boost_psy_health_restore                 = 0.1
+
+[yod_hud]:hud_base
+hud_fov                                  = 0.65
+hands_orientation                        = 0.000000,0.000000,0.000000
+hands_orientation_16x9                   = 0.000000,0.000000,0.000000
+hands_position                           = 0.007700,-0.010000,0.005000
+hands_position_16x9                      = 0.007700,-0.010000,0.005000
+item_visual                              = gwr\equipment\pills\pills_yod
+
+anm_use                                  = drugs, drugs_hud
+
+[medkit]:medicin
+$spawn 				= "food and drugs\medkit"
+class				= II_MEDKI
+visual				= dynamics\weapons\wpn_eat\world_models\aptechki\aptechka_basic_world.ogf
+description			= enc_equipment_medi_medkit1
+inv_name			= Medkit
+inv_name_short		= Medkit
+inv_weight			= 0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 0
+cost				= 250
+
+; eatable item
+eat_health			= 0.7
+eat_satiety			= 0
+eat_power			= -0.1
+eat_radiation		= -0.05
+wounds_heal_perc	= 0.3
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
+item_used_timing                         = 2500
+item_used_timing_exo                     = 2200
+snd_use                                  = items_sounds\inv_medic
+snd_use_anm                              = interface\item_usage\medkit_use
+snd_use_exo_anm                          = interface\item_usage\medkit_exo_alt
+
+hud                                      = medkit_hud
+hud_exo                                  = medkit_exo_hud
+
+cam_effect                               = camera_effects\weapon\apteka.anm
+cam_effect_exo                           = camera_effects\weapon\apteka_exo.anm
+
+;trash_section                            = medkit_trash
+;trash_spawn_timing                       = 2800
+
+[medkit_hud]:hud_base
+item_visual                              = gwr\equipment\medkit\medkit_hud.ogf
+hands_orientation                        = 0.000000, 0.000000, 0.000000
+hands_orientation_16x9                   = 0.000000, 0.000000, 0.000000
+hands_position                           = 0.000000, -0.010000, 0.030000
+hands_position_16x9                      = 0.000000, -0.010000, 0.030000
+
+hud_fov                                  = 0.65
+
+anm_use                                  = apteka
+
+[medkit_exo_hud]:antirad_exo_hud
+anm_use                                  = apteka_exo
+
+[medkit_army]:medicin
+$spawn 				= "food and drugs\medkit_army"
+class				= II_MEDKI
+visual				= dynamics\weapons\wpn_eat\world_models\aptechki\aptechka_army_world.ogf
+description			= enc_equipment_medi_medkit2
+inv_name			= Medkit_army
+inv_name_short		= Medkit_army
+inv_weight			= 0.3
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 14
+inv_grid_y			= 0
+cost				= 450
+
+; eatable item
+eat_health			= 0.8
+eat_satiety			= 0
+eat_power			= 0.5
+eat_radiation		= -0.2
+wounds_heal_perc	= 1.0
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
+item_used_timing                         = 2500
+item_used_timing_exo                     = 2200
+snd_use                                  = items_sounds\inv_medic
+snd_use_anm                              = interface\item_usage\medkit_use
+snd_use_exo_anm                          = interface\item_usage\medkit_exo_alt
+
+hud                                      = medkit_army_hud
+hud_exo                                  = medkit_army_exo_hud
+
+cam_effect                               = camera_effects\weapon\apteka.anm
+cam_effect_exo                           = camera_effects\weapon\apteka_blue_exo.anm
+
+;trash_section                            = medkit_trash
+;trash_spawn_timing                       = 2800
+
+[medkit_army_hud]:medkit_hud
+item_visual                              = gwr\equipment\medkit_army\medkit_army_hud.ogf
+
+[medkit_army_exo_hud]:medkit_exo_hud
+anm_use                                  = apteka_blue_exo
+
+[medkit_scientic]:medicin
+$spawn 				= "food and drugs\medkit_scientic"
+class				= II_MEDKI
+visual				= dynamics\weapons\wpn_eat\world_models\aptechki\aptechka_scientific_world.ogf
+description			= enc_equipment_medi_medkit3
+inv_name			= Medkit_scientific
+inv_name_short		= Medkit_scientific
+inv_weight			= 0.4	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 15
+inv_grid_y			= 0
+cost				= 650
+
+; eatable item
+eat_health			= 0.9
+eat_satiety			= 0
+eat_power			= -0.1
+eat_radiation		= -0.8
+wounds_heal_perc	= 0.3
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
+item_used_timing                         = 2500
+item_used_timing_exo                     = 2200
+snd_use                                  = items_sounds\inv_medic
+snd_use_anm                              = interface\item_usage\medkit_use
+snd_use_exo_anm                          = interface\item_usage\medkit_exo_alt
+
+hud                                      = medkit_scientic_hud
+hud_exo                                  = medkit_scientic_exo_hud
+
+cam_effect                               = camera_effects\weapon\apteka.anm
+cam_effect_exo                           = camera_effects\weapon\apteka_yellow_exo.anm
+
+;trash_section                            = medkit_trash
+;trash_spawn_timing                       = 2800
+
+[medkit_scientic_hud]:medkit_hud
+item_visual                              = gwr\equipment\medkit_sci\medkit_sci_hud.ogf
+
+[medkit_scientic_exo_hud]:medkit_exo_hud
+anm_use                                  = apteka_yellow_exo
+
+[bandage]:medicin
+$spawn 				= "food and drugs\bandage"
+class				= II_BANDG
+visual			= dynamics\weapons\wpn_eat\world_models\bints\bint_basic_world
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.05
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 1
+cost				= 50
+
+; eatable item
+eat_health          = 0.0
+eat_satiety         = 0
+eat_power           = 0.0
+eat_radiation       = 0.0
+wounds_heal_perc    = 1.0
+eat_portions_num    = 1
+
+item_used_timing                         = 4000
+snd_use                                  = items_sounds\inv_bandage
+snd_use_anm                              = interface\item_usage\bandage_use
+
+hud                                      = bandage_hud
+
+cam_effect                               = camera_effects\weapon\bint.anm
+
+;trash_spawn_timing                       = 1000
+;trash_section                            = bandage_trash
+
+[bandage_hud]:hud_base
+item_visual                              = gwr\equipment\bandage\bandage_hud.ogf
+hands_position                           = 0.0, -0.02, 0.14
+hands_orientation                        = 0, 0, 0
+hands_position_16x9                      = 0.0, -0.02, 0.14
+hands_orientation_16x9                   = 0, 0, 0
+
+hud_fov                                  = 0.65
+
+anm_use                                  = bint
+
+[bandage1]:medicin
+$spawn 				= "food and drugs\bandage"
+class				= II_BANDG
+visual			= dynamics\weapons\wpn_eat\world_models\bints\bint_basic_world
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 1
+cost				= 50
+
+; eatable item
+eat_health         = 0
+eat_satiety        = 0
+eat_power          = 0.0
+eat_radiation      = 0.0
+wounds_heal_perc   = 0.7
+eat_portions_num   = 1	;100
+
+item_used_timing                         = 4000
+snd_use                                  = items_sounds\inv_bandage
+snd_use_anm                              = interface\item_usage\bandage_use
+
+hud                                      = bandage_hud
+
+cam_effect                               = camera_effects\weapon\bint.anm
+
+;trash_spawn_timing                       = 1000
+;trash_section                            = bandage_trash
+
+
+[vint]:medicin
+$spawn 			= "food and drugs\dix"
+class			= II_BOTTL
+visual				= dynamics\weapons\wpn_eat\world_models\injectors\injector_big_world 
+description		= vint_desc
+
+inv_name			= vint_name
+inv_name_short		= vint_name
+inv_weight			= 0.1
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 16
+inv_grid_y			= 1
+cost				= 5000
+
+; eatable item
+eat_health          = 0
+eat_satiety			= 0
+eat_power			= -1.0
+eat_alcohol			= 0.3
+eat_radiation		= 0
+wounds_heal_perc	= 0
+eat_portions_num	= 1
+eat_max_power		= 0
+
+item_used_timing                         = 1500
+snd_use                                  = items_sounds\inv_food
+snd_use_anm                              = interface\item_usage\stimulator_use
+
+hud                                      = vint_hud
+
+cam_effect                               = camera_effects\weapon\stimulator.anm
+
+;trash_section                            = vint_trash
+;trash_spawn_timing                       = 1800
+
+boost_time                               = 30
+boost_telepat_protection                 = 1
+boost_psy_health_restore                 = 0.1
+
+[vint_hud]:hud_base
+hud_fov                                  = 0.65
+hands_orientation                        = 0.000000, -0.010000, 0.000000
+hands_orientation_16x9                   = 0.000000, -0.010000, 0.000000
+hands_position                           = 0.000000, 0.000000, 0.000000
+hands_position_16x9                      = 0.000000, 0.000000, 0.000000
+item_visual                              = gwr\equipment\injector\psy_injector_hud
+
+anm_use                                  = stimulator, stimulator_hud
+
+[anabiotik]:medicin
+$spawn 			= "food and drugs\antirad"
+class			= II_ANTIR
+visual          = dynamics\weapons\wpn_eat\world_models\vodki\vodka_kazaki_world.ogf
+description		= anabiotik_descr
+
+inv_name			= anabiotik_name
+inv_name_short		= anabiotik_name
+inv_weight			= 0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 12
+inv_grid_y			= 4
+cost				= 1250
+
+; eatable item
+eat_health = -0.09
+eat_satiety = 1.0
+eat_power = 0
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = 1
+
+
+[ibuprophen]:medicin
+$spawn 			= "food and drugs\antirad"
+class			= II_ANTIR
+visual			= dynamics\weapons\wpn_eat\world_models\tabletki\tabletki_coagulant_world
+description		= description_ibuprophen
+
+inv_name			= inv_name_ibuprophen
+inv_name_short		= inv_name_ibuprophen
+inv_weight			= 0.05
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 16
+inv_grid_y			= 0
+cost				= 300
+
+; eatable item
+eat_health = 0
+eat_satiety = 0
+eat_power = 0
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = 1
+
+item_used_timing                         = 2300
+snd_use                                  = items_sounds\inv_food
+snd_use_anm                              = interface\item_usage\pills_use
+
+hud                                      = ibuprophen_hud
+
+cam_effect                               = camera_effects\weapon\drugs.anm
+
+;trash_section                            = ibuprophen_trash
+;trash_spawn_timing                       = 1800
+
+boost_time                               = 30
+boost_telepat_protection                 = 1
+boost_psy_health_restore                 = 0.1
+
+[ibuprophen_hud]:hud_base
+hud_fov                                  = 0.65
+hands_orientation                        = 0.000000,0.000000,0.000000
+hands_orientation_16x9                   = 0.000000,0.000000,0.000000
+hands_position                           = 0.007700,-0.010000,0.005000
+hands_position_16x9                      = 0.007700,-0.010000,0.005000
+item_visual                              = gwr\equipment\pills\pills_ibuprophen
+
+anm_use                                  = drugs, drugs_hud
+
+[gidroperit]:medicin
+$spawn 			= "food and drugs\antirad"
+class			= II_ANTIR
+visual		= dynamics\weapons\wpn_eat\world_models\tabletki\tabletki_radioprotector_world
+description		= description_gidroperit
+
+inv_name			= inv_name_gidroperit
+inv_name_short		= inv_name_gidroperit
+inv_weight			= 0.05
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 14
+inv_grid_y			= 1
+cost				= 100
+
+; eatable item
+eat_health = 0
+eat_satiety = 0
+eat_power = 0
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = 1
+
+
+[medkomplekt]:medicin
+$spawn				= "food and drugs\antirad"
+class			= II_ANTIR
+visual                  			= equipments\planshetka.ogf
+description			= medkomplekt_descr
+inv_name			= medkomplekt_name
+inv_name_short		= medkomplekt_name
+inv_weight			= 0.4
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 11
+inv_grid_y			= 3
+cost				= 450
+eat_portions_num			= 1000000
+eat_health = 0
+eat_satiety = 0
+eat_power = 0
+eat_radiation = 0
+wounds_heal_perc = 0
+
+use_sound = interface\inv_open
+
+[medkit1]:medicin
+$spawn 				= "food and drugs\medkit_scientic"
+class				= II_MEDKI
+visual				= equipments\item_aptechka2.ogf
+description			= enc_equipment_medi_medkit3
+inv_name			= Medkit_scientific
+inv_name_short		= Medkit_scientific
+inv_weight			= 0.4	;0.2
+
+inv_grid_width		= 2
+
+
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 0
+cost				= 650
+
+; eatable item
+eat_health			= 0.9
+eat_satiety			= 0
+eat_power			= 0
+eat_radiation		= -0.6
+wounds_heal_perc	= 0.3
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
+use_sound = interface\inv_open

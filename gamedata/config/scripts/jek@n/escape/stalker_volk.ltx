@@ -1,0 +1,174 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+sanya_volk_apologized} walker@apologized, walker@start
+combat_ignore = combat_ignore
+on_death = death
+;meet = meet
+
+[walker@start]
+path_walk = volk_walk1
+path_look = volk_look1
+on_timer = 10 | walker@miln1 %=make_invulnerable%
+
+[walker@miln1]
+path_walk = volk_walk1
+path_look = volk_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+miln_door_unlock} walker@miln2
+
+[walker@miln2]
+path_walk = volk_walk2
+path_look = volk_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@miln3
+
+[walker@miln3]
+path_walk = volk_walk2
+path_look = volk_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+volk_hide_zone} walker@hide1
+
+[walker@hide1]
+path_walk = volk_walk3
+path_look = volk_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {=actor_has_item(miln_strang_flash)} walker@hide2
+
+[walker@hide2]
+path_walk = volk_walk3
+path_look = volk_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+volk_goto_village} walker@to_village
+
+[walker@to_village]
+path_walk = volk_walk4
+path_look = volk_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+on_signal       = arrived | walker@village %+volk_in_the_village%
+
+[walker@village]
+path_walk = volk_walk4
+path_look = volk_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+volk_to_nighthunters_place} walker@to_nighthunters_place
+
+
+; Идем к месту обитания соса:
+[walker@to_nighthunters_place]
+path_walk = volk_walk5
+path_look = volk_look5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@on_nighthunters_place %+volk_on_nighthunters_place%
+
+[walker@on_nighthunters_place]
+path_walk = volk_walk5
+path_look = volk_look5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dog_see_nighthunter} walker@fight_nighthunter1
+
+
+; Палим по сосычу(неприцельно, чтоб у ГГ был шанс застрелить его лично)
+[walker@fight_nighthunter1]
+path_walk = volk_walk5
+path_look = volk_look5_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 7000 | walker@fight_nighthunter2 %=play_snd_from_obj(8157:characters_voice\human_01\newbie\fight\attack\attack_one_5)%
+on_info = {+esc_nighthunter_dead} walker@after_nighthunter1
+
+[walker@fight_nighthunter2]
+path_walk = volk_walk5
+path_look = volk_look5_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 6000 | walker@fight_nighthunter1 %=play_snd_from_obj(8157:characters_voice\human_01\newbie\fight\attack\attack_one_3)%
+on_info = {+esc_nighthunter_dead} walker@after_nighthunter1
+
+
+
+; Сос убит. Надо осмотреть место преступления:
+[walker@after_nighthunter1]
+path_walk = volk_walk6
+path_look = volk_look6
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@after_nighthunter2 %+volk_find_krivoy_item%
+
+[walker@after_nighthunter2]
+path_walk = volk_walk6
+path_look = volk_look6
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+volk_go_home_after_hunt} walker@after_nighthunter3
+
+
+; Вернулись после охоты в подвал 1:
+[walker@after_nighthunter3]
+path_walk = volk_walk4
+path_look = volk_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+sanya_volk_apologized} walker@apologized
+
+
+; Нас простили и мы переселились в подвал 2:
+[walker@apologized]
+path_walk = volk_walk7
+path_look = volk_look7
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+
+
+
+
+
+
+[meet]
+use = true
+use_wpn = true
+meet_talk_enabled = true
+victim = 4|actor
+victim_wpn = 4|actor
+meet_state = 4|hello@volk_help
+meet_state_wpn = 4|hello@volk_help
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+volk_dead%
+

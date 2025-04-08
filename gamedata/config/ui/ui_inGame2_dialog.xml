@@ -1,0 +1,17 @@
+<ui_texture>
+
+<file_name>ui\textures_descr\ui_inGame2_dialog</file_name>
+
+
+            <texture id="ui_inGame2_dialog_texture" x="0" y="0" width="634" height="761" />
+
+	<texture id="ui_inGame2_dialog_test_b"     x="0" y="863" width="2" height="50" />
+	<texture id="ui_inGame2_dialog_test_back"  x="50" y="863" width="73" height="50" />
+	<texture id="ui_inGame2_dialog_test_e"     x="100" y="863" width="2" height="50" />
+
+
+
+</ui_texture>
+
+
+

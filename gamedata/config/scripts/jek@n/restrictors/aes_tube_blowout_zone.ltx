@@ -1,0 +1,28 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+aes_tube_blowout} sr_idle@2
+
+[sr_idle@2]
+on_timer = 18000|sr_timer@1 %=aes_storm_dollhelp%
+
+[sr_timer@1]
+type = dec
+start_value = 33000
+on_value = 0 | sr_idle@3 %+aes_radstorm =play_aes_radstorm_particle%
+string = aes_blowout_countdown
+
+
+;Шторм:
+[sr_idle@3]
+on_timer = 33000|sr_timer@2 %-aes_radstorm =set_aes_radstorm_weather2%
+
+;Затишье:
+[sr_timer@2]
+type = dec
+start_value = 110000
+on_value = 0 | sr_idle@3 %+aes_radstorm =play_aes_radstorm_particle =set_aes_radstorm_weather1%
+string = aes_blowout_countdown
+
+

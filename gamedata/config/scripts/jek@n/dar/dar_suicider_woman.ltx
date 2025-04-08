@@ -1,0 +1,190 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_meet = meet
+on_hit = hit
+trade = misc\trade_nothing.ltx
+
+[walker@start]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look1
+on_timer = 1 | walker@idle1 %=make_invulnerable =disable_trading%
+
+
+
+[walker@idle1]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 25 | walker@idle2 %=send_tip(dar_suicider_woman_help_tip:stalker:8334)%
+on_actor_dist_le = 4 | walker@idle3
+
+[walker@idle2]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_ge_nvis = 25 | walker@idle1
+on_actor_dist_le = 4 | walker@idle3
+
+
+
+[walker@idle3]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_woman_first_talk} remark@cry1
+
+
+; Плачемся по потерянному мужу:
+[remark@cry1]
+snd = dar_suicider_woman_cry1
+anim = psy_pain
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end | remark@cry2
+
+[remark@cry2]
+snd = dar_suicider_woman_cry2
+anim = psy_pain
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end | walker@idle4
+
+
+
+
+[walker@idle4]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_zapravka_bloodsuckers_spawn} walker@idle5 %=play_snd_from_obj(8333:monsters\bloodsucker\bloodsucker_script_attack_0) =unmake_invulnerable%
+
+
+
+; Сидим, боимся кровососов, ждем, пока ГГ их отстреляет:
+[walker@idle5]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000 | walker@idle6 %=play_snd_from_obj(8334:characters_voice\woman\states\panic_monster\panic_monster_4)%
+on_info = {+dar_zapravka_bloodsucker1_dead +dar_zapravka_bloodsucker2_dead +dar_zapravka_bloodsucker3_dead} walker@idle7 %=atp_controler_health_up%
+
+[walker@idle6]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000 | walker@idle5 %=play_snd_from_obj(8334:characters_voice\woman\help\wounded_heavy\help_5)%
+on_info = {+dar_zapravka_bloodsucker1_dead +dar_zapravka_bloodsucker2_dead +dar_zapravka_bloodsucker3_dead} walker@idle7 %=atp_controler_health_up%
+
+
+; Кровососы убиты, можно говорить дальше:
+[walker@idle7]
+path_walk = dar_suicider_woman_walk1
+path_look = dar_suicider_woman_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_woman_goto_house_gate} walker@idle8
+
+
+; Начинаем путешествие к убежищу:
+[walker@idle8]
+path_walk = dar_suicider_woman_walk3
+path_look = dar_suicider_woman_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@idle8_1 %+dar_woman_at_house_gate%
+
+[walker@idle8_1]
+path_walk = dar_suicider_woman_walk3
+path_look = dar_suicider_woman_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_woman_goto_wall} walker@idle9
+
+[walker@idle9]
+path_walk = dar_suicider_woman_walk4
+path_look = dar_suicider_woman_look4
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+meet = no_meet
+on_signal       = arrived | walker@idle9_1 %+dar_woman_behind_wall%
+
+[walker@idle9_1]
+path_walk = dar_suicider_woman_walk4
+path_look = dar_suicider_woman_look4
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+on_info = {+dar_woman_release} walker@idle10 %=run_postprocess(agr_u_fade)%
+
+
+
+[walker@idle10]
+path_walk = dar_suicider_woman_walk4
+path_look = dar_suicider_woman_look4
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+meet = no_meet
+on_timer = 3000 | nil %=actor_teleport_for_zapravka_wall =delme2%
+
+
+
+
+
+
+
+
+
+
+
+
+[meet]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) +dar_suicider_woman_dead =delme2%
+
+[death]
+on_info = %+dar_suicider_woman_dead%
+

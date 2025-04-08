@@ -1,0 +1,1685 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+<!--predb_komandr_agent-->
+	<specific_character id="predb_komandr_agent" team_default = "1">
+		<name>Разведчик Саша</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_komandr_agent</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="100" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_komandr_agent_dialog1</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_village_sold-->
+	<specific_character id="predb_village_sold" team_default = "1">
+		<name>Позывной "Сокол"</name>
+		<icon>ui_npc_u_soldier_spetsnaz</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_village_sold</class>
+		<community>stalker_army</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="10" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_spetsnaz</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u_m1 \n	
+			ammo_5.45x39_fmj \n
+			device_torch \n
+			energy_drink \n
+			irp-b \n
+			ibuprophen \n
+			medkomplekt \n
+			lighter \n
+			sigarets \n
+			armor_remkit \n
+			weapon_remkit \n
+		</supplies>
+		<actor_dialog>companion_hire_dialog</actor_dialog>
+		<actor_dialog>companion_management_dialog</actor_dialog>
+		<actor_dialog>companion_release_dialog</actor_dialog>
+
+		<actor_dialog>predb_village_sold_dialog1</actor_dialog>
+		<actor_dialog>predb_village_sold_dialog2</actor_dialog>
+		<actor_dialog>predb_village_sold_dialog3</actor_dialog>
+
+	</specific_character>
+
+
+
+<!--predb_dead_tourist1-->
+	<specific_character id="predb_dead_tourist1" team_default = "1">
+		<name>Тимка</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_tourist1</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_tourist2-->
+	<specific_character id="predb_dead_tourist2" team_default = "1">
+		<name>Комар</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_tourist2</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_3</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_tourist3-->
+	<specific_character id="predb_dead_tourist3" team_default = "1">
+		<name>Бульба</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_tourist3</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_catwoman-->
+	<specific_character id="predb_catwoman" team_default = "1">
+		<name>Маришка</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_catwoman</class>
+		<community>woman</community>
+
+		<rank>100</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\woman\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\woman\girl_tourist</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_catwoman_dialog1</actor_dialog>
+
+	</specific_character>
+
+<!--predb_king-->
+	<specific_character id="predb_king" team_default = "1">
+		<name>Царь</name>
+		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_king</class>
+		<community>stalker</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_neytral_hood_uzor</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<start_dialog>predb_king_dialog1</start_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_marouder1-->
+	<specific_character id="predb_marouder1" team_default = "1">
+		<name>Лёнька</name>
+		<icon>ui_npc_u_stalker_bar_security</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_marouder1</class>
+		<community>marauder</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_bar_security</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<start_dialog>predb_marouder1_dialog1</start_dialog>
+		<actor_dialog>predb_marouder1_dialog2</actor_dialog>
+		<actor_dialog>predb_marouder1_dialog3</actor_dialog>
+		<actor_dialog>predb_marouder1_dialog4</actor_dialog>
+		<actor_dialog>predb_marouder1_dialog5</actor_dialog>
+		<actor_dialog>predb_marouder1_dialog6</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_marouder2-->
+	<specific_character id="predb_marouder2" team_default = "1">
+		<name>Стаканыч</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_marouder2</class>
+		<community>marauder</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_antigas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+			guitar_a \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_marouder3-->
+	<specific_character id="predb_marouder3" team_default = "1">
+		<name>Жучара</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_marouder3</class>
+		<community>marauder</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+			vodka \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_marouder3_dialog1</actor_dialog>
+		<actor_dialog>predb_marouder3_dialog2</actor_dialog>
+		<actor_dialog>predb_marouder3_dialog3</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+
+<!--predb_marouder1_1-->
+	<specific_character id="predb_marouder1_1" team_default = "1">
+		<name>Лёнька</name>
+		<icon>ui_npc_u_stalker_bar_security</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_marouder1_1</class>
+		<community>marauder</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\bandit\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_bar_security</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_marouder2_1-->
+	<specific_character id="predb_marouder2_1" team_default = "1">
+		<name>Стаканыч</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_marouder2_1</class>
+		<community>marauder</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_antigas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			guitar_a \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_marouder3_1-->
+	<specific_character id="predb_marouder3_1" team_default = "1">
+		<name>Жучара</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_marouder3_1</class>
+		<community>marauder</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			vodka \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+
+<!--predb_dead_friend-->
+	<specific_character id="predb_dead_friend" team_default = "1">
+		<name>Марат</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_friend</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+			predb_village_dead_friend_door_key \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<specific_character id="predb_rogue_npc" team_default="1">
+		<name>Невидимка</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_stalker_general_bio</bio>
+
+		<class>predb_rogue_npc</class>
+		<community>pervert</community> 
+		
+		<rank>301</rank>
+		<reputation>38</reputation>
+		<money min="1" max="2" infinitive="0"></money>
+		
+		<snd_config>characters_voice\human_04\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\nevidimka</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<start_dialog>predb_rogue_npc_dialog1</start_dialog>
+		<actor_dialog>predb_rogue_npc_dialog2</actor_dialog>
+		<actor_dialog>predb_rogue_npc_dialog3</actor_dialog>	
+
+</specific_character>
+
+<!--predb_ponzil-->
+	<specific_character id="predb_ponzil" team_default = "1">
+		<name>Понзыль</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_ponzil</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+			predb_ponzil_item \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_rogue-->
+	<specific_character id="predb_rogue" team_default = "1">
+		<name>Яшка</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_rogue</class>
+		<community>latchkey</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<start_dialog>predb_rogue_start_dialog</start_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_hermit-->
+	<specific_character id="predb_hermit" team_default = "1">
+		<name>Битард</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_hermit</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_6</visual>
+		<supplies>
+			[spawn] \n
+			hermit_pda \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_hermit_start_dialog</actor_dialog>
+		<actor_dialog>predb_hermit_change_dialog1</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_cave_body1-->
+	<specific_character id="predb_cave_body1" team_default = "1">
+		<name>Руслан</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_cave_body1</class>
+		<community>stalker</community>
+
+		<rank>596</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_4_gas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n
+			ammo_12x70_buck \n
+			wpn_knife2 \n
+			device_torch \n
+			predb_cave_room_door_key \n
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_cave_body2-->
+	<specific_character id="predb_cave_body2" team_default = "1">
+		<name>Тишка</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_cave_body2</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n
+			medkit \n
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_cave_body3-->
+	<specific_character id="predb_cave_body3" team_default = "1">
+		<name>Башмак</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_cave_body3</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_10</visual>
+		<supplies>
+			[spawn] \n
+			detector_simple \n
+			antirad \n
+
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_cave_body4-->
+	<specific_character id="predb_cave_body4" team_default = "1">
+		<name>Рожа</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_cave_body4</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_9</visual>
+		<supplies>
+			[spawn] \n
+			sigaret \n
+			vodka \n
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_cave_body5-->
+	<specific_character id="predb_cave_body5" team_default = "1">
+		<name>Михей</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_cave_body5</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="0" max="1" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_5</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n
+			mobile_changer_33 \n
+			mikstura \n
+		</supplies>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_trader-->
+	<specific_character id="predb_trader" team_default = "1">
+		<name>Мойша</name>
+		<icon>ui_npc_predb_trader</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_trader</class>
+		<community>smuggler</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="100000" max="200000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\stalker_bandit_1</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<start_dialog>predb_trader_start_dialog</start_dialog>
+		<actor_dialog>predb_trader_junk_dialog</actor_dialog>
+		<actor_dialog>predb_trader_dialog1</actor_dialog>
+		<actor_dialog>predb_trader_dialog2</actor_dialog>
+		<actor_dialog>predb_trader_dialog3</actor_dialog>
+		<actor_dialog>predb_trader_dialog4</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kontrabander1-->
+	<specific_character id="predb_kontrabander1" team_default = "1">
+		<name>Никита</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander1</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_kontrabander1_start_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_kontrabander2-->
+	<specific_character id="predb_kontrabander2" team_default = "1">
+		<name>Михалыч</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander2</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\ecolog\stalker_ecolog</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_kontrabander2_start_dialog</actor_dialog>
+		<actor_dialog>predb_kontrabander2_dialog1</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_kontrabander3-->
+	<specific_character id="predb_kontrabander3" team_default = "1">
+		<name>Кабан</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander3</class>
+		<community>smuggler</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\bandit_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+			wpn_binoc \n
+			device_torch \n
+			predb_kaban_pda \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>predb_kontrabander3_dialog1</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog2</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog3</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog4</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog5</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog6</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog7</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog8</actor_dialog>
+		<actor_dialog>predb_kontrabander3_dialog9</actor_dialog>
+
+		<actor_dialog>kontrabander3_art_cheat_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_kontrabander4-->
+	<specific_character id="predb_kontrabander4" team_default = "1">
+		<name>Болт</name>
+		<icon>ui_npc_u_stalker_zombie1</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander4</class>
+		<community>smuggler</community>
+
+		<rank>396</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\stalker_zombi\stalker_zombie7</visual>
+		<supplies>
+			[spawn] \n
+			wpn_crossbow \n	
+			ammo_arbolt \n
+			kontrab4_pda \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<start_dialog>predb_kontrabander4_start_dialog</start_dialog>
+		<actor_dialog>predb_kontrabander4_dialog2</actor_dialog>
+		<actor_dialog>predb_kontrabander4_dialog3</actor_dialog>
+
+		<actor_dialog>predb_kontrabander4_dialog4</actor_dialog>
+		<actor_dialog>predb_kontrabander4_dialog5</actor_dialog>
+
+		<actor_dialog>kontrabander4_art_cheat_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_kontrabander5-->
+	<specific_character id="predb_kontrabander5" team_default = "1">
+		<name>Ванька Косой</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander5</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\green_stalker_13</visual>
+		<supplies>
+			[spawn] \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_kontrabander5_dialog1</actor_dialog>
+		<actor_dialog>predb_kontrabander5_dialog2</actor_dialog>
+		<actor_dialog>predb_kontrabander5_dialog3</actor_dialog>
+		<actor_dialog>predb_kontrabander5_dialog4</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+
+<!--predb_courier1-->
+	<specific_character id="predb_courier1" team_default = "1">
+		<name>Курьер</name>
+		<icon>ui_npc_u_stalker_neytral_exoskeleton</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_courier1</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\exo_tank</visual>
+		<supplies>
+			[spawn] \n
+			wpn_gsh \n	
+			ammo_9x19_fmj \n
+			wpn_binoc \n
+			device_torch \n
+			predb_couriers_seif \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_courier_dialog1</actor_dialog>
+		<actor_dialog>predb_courier_dialog2</actor_dialog>
+		<actor_dialog>predb_courier_dialog3</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_courier2-->
+	<specific_character id="predb_courier2" team_default = "1">
+		<name>Охранник</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_courier2</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\green_stalker_15</visual>
+		<supplies>
+			[spawn] \n
+			wpn_bm16_full \n	
+			ammo_12x70_buck \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>predb_courier_guard_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_courier3-->
+	<specific_character id="predb_courier3" team_default = "1">
+		<name>Охранник</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_courier3</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\green_stalker_14</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ump \n	
+			ammo_11.43x23_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>predb_courier_guard_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kpp_soldier1-->
+	<specific_character id="predb_kpp_soldier1" team_default = "1">
+		<name>Рядовой Беляев</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier1</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="5000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<!--actor_dialog>predb_kpp_soldier1_dialog1</actor_dialog-->
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_kpp_soldier2-->
+	<specific_character id="predb_kpp_soldier2" team_default = "1">
+		<name>Рядовой Цовнеров</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier2</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="5000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<!--actor_dialog>predb_kpp_soldier2_dialog1</actor_dialog-->
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kpp_soldier3-->
+	<specific_character id="predb_kpp_soldier3" team_default = "1">
+		<name>Сержант Александров</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier3</class>
+		<community>stalker_army</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="5000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_kpp_soldier3_dialog2</actor_dialog>
+		<actor_dialog>predb_kpp_soldier3_dialog3</actor_dialog>
+		<actor_dialog>predb_kpp_soldier3_dialog4</actor_dialog>
+		<actor_dialog>predb_kpp_soldier3_dialog5</actor_dialog>
+
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kpp_soldier4-->
+	<specific_character id="predb_kpp_soldier4" team_default = "1">
+		<name>Рядовой Семашко</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier4</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="5000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<!--actor_dialog>predb_kpp_soldier4_dialog1</actor_dialog-->
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kpp_soldier5-->
+	<specific_character id="predb_kpp_soldier5" team_default = "1">
+		<name>Капитан Чернов</name>
+		<icon>ui_npc_u_soldier_beret_1</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier5</class>
+		<community>stalker_army</community>
+
+		<rank>496</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="5000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_beret_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj \n
+			wpn_binoc \n
+			device_torch \n
+			predb_kpp_seif_key \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<start_dialog>predb_kpp_soldier5_dialog1</start_dialog>
+		<actor_dialog>predb_kpp_soldier5_dialog2</actor_dialog>
+		<actor_dialog>predb_kpp_soldier5_dialog3</actor_dialog>
+		<actor_dialog>predb_kpp_soldier5_dialog4</actor_dialog>
+		<actor_dialog>predb_kpp_soldier5_dialog5</actor_dialog>
+		<actor_dialog>predb_kpp_soldier5_dialog6</actor_dialog>
+		<actor_dialog>predb_kpp_soldier5_dialog7</actor_dialog>
+
+		<actor_dialog>kpp_soldier5_art_cheat_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_kpp_soldier6-->
+	<specific_character id="predb_kpp_soldier6" team_default = "1">
+		<name>Прапорщик Джеджула</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier6</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="50000" max="100000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		<actor_dialog>predb_kpp_soldier3_dialog1</actor_dialog>
+		<actor_dialog>predb_soldier_junk_dialog</actor_dialog>
+		<actor_dialog>predb_kpp_soldier6_dialog1</actor_dialog>
+		<actor_dialog>predb_kpp_soldier6_dialog2</actor_dialog>
+		<actor_dialog>predb_kpp_soldier6_dialog3</actor_dialog>
+
+		<actor_dialog>kpp_soldier6_art_cheat_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kpp_soldier7-->
+	<specific_character id="predb_kpp_soldier7" team_default = "1">
+		<name>Рядовой Качура</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kpp_soldier7</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="5000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n	
+			ammo_5.45x39_fmj \n
+			wpn_binoc \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<!--actor_dialog>predb_kpp_soldier7_dialog1</actor_dialog-->
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kontrabander6-->
+	<specific_character id="predb_kontrabander6" team_default = "1">
+		<name>Савик Шустрый</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander6</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\green_stalker_18</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+			guitar_a \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>predb_kontrabander6_start_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kontrabander7-->
+	<specific_character id="predb_kontrabander7" team_default = "1">
+		<name>Глеб</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander7</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\stalker_bandit_10</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<!--actor_dialog>predb_kontrabander7_start_dialog</actor_dialog-->
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--predb_kontrabander8-->
+	<specific_character id="predb_kontrabander8" team_default = "1">
+		<name>Олег</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_kontrabander8</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\new_models\stalker_bandit_15</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<!--actor_dialog>predb_kontrabander8_start_dialog</actor_dialog-->
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body1-->
+	<specific_character id="predb_dead_body1" team_default = "1">
+		<name>Костик</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body1</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body2-->
+	<specific_character id="predb_dead_body2" team_default = "1">
+		<name>Зуб</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body2</class>
+		<community>smuggler</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+			fake_capsula_1 \n
+			predb_hutor_house1door_key \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body3-->
+	<specific_character id="predb_dead_body3" team_default = "1">
+		<name>Щур</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body3</class>
+		<community>latchkey</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+
+<!--predb_dead_body4-->
+	<specific_character id="predb_dead_body4" team_default = "1">
+		<name>Веня</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body4</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body5-->
+	<specific_character id="predb_dead_body5" team_default = "1">
+		<name>Дуб</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body5</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body6-->
+	<specific_character id="predb_dead_body6" team_default = "1">
+		<name>Митёк</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body6</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body7-->
+	<specific_character id="predb_dead_body7" team_default = "1">
+		<name>Фима</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body7</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body8-->
+	<specific_character id="predb_dead_body8" team_default = "1">
+		<name>Жмых</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body8</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body9-->
+	<specific_character id="predb_dead_body9" team_default = "1">
+		<name>Хмырь</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body9</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body10-->
+	<specific_character id="predb_dead_body10" team_default = "1">
+		<name>Швондер</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body10</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body11-->
+	<specific_character id="predb_dead_body11" team_default = "1">
+		<name>Усатый</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body11</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body12-->
+	<specific_character id="predb_dead_body12" team_default = "1">
+		<name>Сиплый</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body12</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body13-->
+	<specific_character id="predb_dead_body13" team_default = "1">
+		<name>Француз</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body13</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body14-->
+	<specific_character id="predb_dead_body14" team_default = "1">
+		<name>Квас</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body14</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--predb_dead_body15-->
+	<specific_character id="predb_dead_body15" team_default = "1">
+		<name>Червяк</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>predb_dead_body15</class>
+		<community>smuggler</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="5000" max="10000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\novice\green_stalker_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n	
+			ammo_samopal \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+
+	
+</xml>

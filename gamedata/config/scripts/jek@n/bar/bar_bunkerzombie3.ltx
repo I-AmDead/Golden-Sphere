@@ -1,0 +1,29 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@patrol1
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@patrol1]
+path_walk = bar_bunker_patrol_walk1
+path_look = bar_bunker_patrol_walk1
+;on_timer = 100000 | walker@patrol2
+
+[walker@patrol2]
+path_walk = bar_bunker_patrol_walk2
+path_look = bar_bunker_patrol_walk2
+danger = danger_condition
+on_timer = 100000 | walker@patrol3
+
+[walker@patrol3]
+path_walk = bar_bunker_patrol_walk3
+path_look = bar_bunker_patrol_walk3
+danger = danger_condition
+on_timer = 100000 | walker@patrol1
+
+
+[death]
+on_info = %+bar_bunkerzombie3_dead%
+

@@ -1,0 +1,23 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+deadmask_escape_info} nil, {+deadmask_teleport} sr_idle@2
+
+[sr_idle@2]
+on_timer = 2000 | sr_idle@3 %=play_snd(soundtrack\controller\5)%
+on_actor_inside = {=actor_alive} %=run_postprocess(radiation:1877:false) =close_dialog%
+on_actor_outside = %=esc_deadmask_trap_zone_goback%
+
+[sr_idle@3]
+on_timer = 11000 | sr_idle@4 %=play_snd(characters_voice\scenario\deadmask\deadmask_voice_1)%
+on_actor_inside = {=actor_alive} %=run_postprocess(radiation:1877:false)  =close_dialog%
+on_actor_outside = %=esc_deadmask_trap_zone_goback%
+
+[sr_idle@4]
+on_timer = 4000 | sr_idle@5 %=play_snd(soundtrack\x18_code2)%
+on_actor_inside = {=actor_alive} %=run_postprocess(radiation:1877:false)  =close_dialog%
+on_actor_outside = %=esc_deadmask_trap_zone_goback%
+
+[sr_idle@5]
+on_timer = 4000 | nil %=run_postprocess(deadcity_wake_old:657:false) =esc_deadmask_actor_back +deadmask_escape_info =spawn_esc_deadmask_habar%

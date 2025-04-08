@@ -1,0 +1,42 @@
+[smart_terrains]
+none = true
+
+
+[logic]
+active = mob_home@calm
+on_death = mob_death
+on_hit = mob_hit
+
+; Патрулирование:
+[mob_home@calm]
+path_home = mil_village_bloodsucker1_home
+home_min_radius  = 3
+home_max_radius = 6
+on_info = {+mil_icon_finded} %=delme2%
+on_actor_dist_le = 45|mob_home@agress %=play_snd_on_me(monsters\bloodsucker\bloodsucker_script_attack_0) =mil_village_bloodsuckers_doll_tip%
+
+; Увидели ГГ:
+[mob_home@agress]
+path_home = mil_village_bloodsucker1_home
+home_min_radius  = 5
+home_max_radius = 55
+on_info = {=actor_in_mil_village_safezones} mob_home@relax
+;on_actor_in_zone = mil_village_ded_house_zone|mob_home@relax
+
+; Успокаиваемся:
+[mob_home@relax]
+path_home = mil_village_bloodsucker1_home
+home_min_radius  = 3
+home_max_radius = 6
+braindead = true
+on_timer = 10000|mob_home@calm
+
+[mob_hit]
+on_info = {=hit_by_actor} mob_home@agress
+
+[mob_death]
+on_info = %=mil_village_first_bloodsucker1respawn%
+
+
+
+

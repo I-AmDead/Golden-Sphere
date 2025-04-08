@@ -1,0 +1,139 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+threshold = threshold@pri_abdul_threshold
+on_death = death
+
+[walker@start]
+path_walk = pri_abdul_walk1
+path_look = pri_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = pri_abdul_walk1
+path_look = pri_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 2 | walker@1_1 %=pri_abdul_init_dialod%
+
+[walker@1_1]
+path_walk = pri_abdul_walk1
+path_look = pri_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+pri_abdul_goto_sniper} walker@2 %=play_snd_on_me(characters_voice\scenario\pri_abdul_goto_sniper)%
+
+[walker@2]
+path_walk = pri_abdul_walk2
+path_look = pri_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sneak_run
+def_state_moving2 = sneak_run
+def_state_moving3 = sneak_run
+on_signal       = arrived | walker@3 %+pri_abdul_behind_sniper%
+
+[walker@3]
+path_walk = pri_abdul_walk2
+path_look = pri_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+pri_abdul_last_talk1} walker@3_1 %=unmake_invulnerable%
+
+[walker@3_1]
+path_walk = pri_abdul_walk2
+path_look = pri_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 2000|walker@4 %=hit_obj(8886:bip01_spine:0.7:0)%
+
+[walker@4]
+path_walk = pri_abdul_walk2
+path_look = pri_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+;wounded = wounded
+on_timer = 3000|remark@wounded1
+;on_timer = 3000|%=health_down%
+
+
+
+[wounded]
+hp_state = 40|wounded_heavy@help_heavy|30|wounded_heavy@help_heavy
+hp_state_see = 40|wounded_heavy@help_heavy|30|wounded_heavy@help_heavy
+hp_victim = 40|actor|30|actor
+hp_cover = 40|false|30|false
+hp_fight = 40|false|30|false
+help_dialog = pri_abdul_dialog3
+on_info = {+pri_abdul_last_talk2} remark@wounded3
+
+
+
+
+
+[remark@wounded1]
+anim = wounded_heavy
+snd = help_see
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@wounded
+on_info = {+pri_abdul_sniper_dead} remark@wounded2
+
+[remark@wounded2]
+anim = wounded_heavy
+snd = help_see
+target = nil
+no_move = true
+meet = meet@wounded
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+pri_abdul_last_talk2} remark@wounded3
+
+[remark@wounded3]
+anim = wounded_heavy
+snd = help_see
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|nil %=kill%
+
+
+
+
+[meet@wounded]
+meet_state = 2|wounded_heavy@help_heavy|1|wounded_heavy@help_heavy
+meet_state_wpn = 2|wounded_heavy@help_heavy|1|wounded_heavy@help_heavy
+victim = 1|nil
+victim_wpn = 1|nil
+use = true
+use_wpn = false
+abuse = false
+
+[threshold@pri_abdul_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+pri_abdul_dead%
+

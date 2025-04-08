@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<equipmentbag_use2>	
+	<ramka x="250" y="90" width="812" height="812" stretch="1">
+		<texture x="0" y="0" width="650" height="550">ui\equipmentbag_use_ramka</texture>
+	</ramka>
+
+	<bag_icon x="360" y="160" width="260" height="400" stretch="1">
+		<texture x="0" y="0" width="650" height="550">ui\bag_icon</texture>
+	</bag_icon>
+
+	<text x="280" y="100" width="420" height="500" stretch="1">
+		<text font="graffiti22">Что там у нас?</text>
+	</text>
+
+
+	<btn_1 x="300" y="430" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>5.45х39 - 90 шт.</text>
+	</btn_1>
+
+	<btn_2 x="300" y="470" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>5.56х45 - 90 шт.</text>
+	</btn_2>
+
+	<btn_3 x="300" y="510" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Дробь - 40 шт.</text>
+	</btn_3>
+
+	<btn_4 x="300" y="550" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>7.62х54 - 45 шт.</text>
+	</btn_4>
+
+	<btn_5 x="300" y="590" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>7.62х51 - 45 шт.</text>
+	</btn_5>
+
+	<btn_6 x="300" y="630" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>7.62х39 - 90 шт.</text>
+	</btn_6>
+
+
+
+	<btn_7 x="500" y="430" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>9х18, 9х19 - 60 шт.</text>
+	</btn_7>
+
+	<btn_8 x="500" y="470" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>СП6 - 50 шт.</text>
+	</btn_8>
+
+	<btn_9 x="500" y="510" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Ф-1 - 4 шт.</text>
+	</btn_9>
+
+	<btn_10 x="500" y="550" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>ТБГ-7В - 3 шт.</text>
+	</btn_10>
+
+	<btn_11 x="500" y="590" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>11.43х23 - 70 шт.</text>
+	</btn_11>
+
+	<btn_12 x="500" y="630" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>7.62х25 - 80 шт.</text>
+	</btn_12>
+
+</equipmentbag_use2>
+

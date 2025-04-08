@@ -1,0 +1,247 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+tirsa_pda_info} walker@garb_hostage, {+garbage_companions_on_place} kamp@behind_vagon,{+spawn_garbage_companions} walker@garb_start, {-spawn_garbage_companions} walker@start
+combat_ignore = combat_ignore
+threshold = threshold@survival_threshold
+on_death = death
+
+[walker@start]
+path_walk = helicrash_survival_walk1
+path_look = helicrash_survival_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = helicrash_survival_walk0
+path_look = helicrash_survival_look1
+danger = danger_condition
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@2
+
+[walker@2]
+path_walk = helicrash_survival_walk1
+path_look = helicrash_survival_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint
+def_state_moving2 = sprint
+def_state_moving3 = sprint
+meet = no_meet
+on_signal       = arrived | walker@3 %+helicrash_survival_on_place =play_snd_from_obj(8193:characters_voice\human_01\military\help\wounded_not_see_helper\help_4)%
+
+; Лежим и молчим, пока ГГ сбегает за артом
+[walker@3]
+path_walk = helicrash_survival_walk1
+path_look = helicrash_survival_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+helicrash_survival_art_have} walker@4
+
+; ГГ вернулся с артефактом, сидим и молчим
+[walker@4]
+path_walk = helicrash_survival_walk1
+path_look = helicrash_survival_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+helicrash_survival_art_in} walker@5
+
+; Встали и готовы поболтать
+[walker@5]
+path_walk = helicrash_survival_walk1_1
+path_look = helicrash_survival_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {helicrash_survival_ready_to_go} follower@1
+
+; Бежим за Андреем на КПП
+[follower@1]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+helicrash_survival_ready_to_go} follower@2
+
+[follower@2]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+hunter1_on_kpp_way} follower@3
+
+[follower@3]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+hunter1_to_kamaz} follower@4
+
+[follower@4]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+hunter1_behind_kamaz} follower@5
+
+[follower@5]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+hunter1_to_kpp_room} follower@6
+
+[follower@6]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+hunter1_in_kpp_room} follower@7
+
+[follower@7]
+leader = 8056
+; formation_line = true
+; distance = 2
+; anim_sprint = sprint_p
+; danger = danger_condition
+; combat_ignore_cond = always
+; meet = no_meet
+on_info = {+abdul_kpp_strike} walker@kpp_wounded1
+
+
+; Падаем и плачем от удара Абдуля
+[walker@kpp_wounded1]
+path_walk = survival_walk_kpp_room
+path_look = esc_hunter_look_kpp_room_wounded
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 15000 | walker@kpp_wounded2 %=play_snd_from_obj(8193:characters_voice\human_01\military\help\wounded_heavy\help_3)%
+on_info = {+abdul_strikes_bandits} walker@kpp_free
+
+[walker@kpp_wounded2]
+path_walk = survival_walk_kpp_room
+path_look = esc_hunter_look_kpp_room_wounded
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 17000 | walker@kpp_wounded1 %=play_snd_from_obj(8193:characters_voice\human_01\military\help\wounded_heavy\help_4)%
+on_info = {+abdul_strikes_bandits} walker@kpp_free
+
+
+; Встали и снова радуемся жизни
+[walker@kpp_free]
+path_walk = survival_walk_kpp_room
+path_look = esc_hunter_look_kpp_room
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter1_kpp_rest} walker@kpp_rest
+
+[walker@kpp_rest]
+path_walk = shustrila_walk1
+path_look = shustrila_look1
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+; Теперь мы на Свалке:
+
+[walker@garb_start]
+path_walk = garb_survival_walk1
+path_look = garb_hunter1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+garbage_companions_on_place} kamp@behind_vagon %=make_invulnerable%, {+not_all_garbage_companions_on_place} kamp@behind_vagon %=make_invulnerable%
+
+[kamp@behind_vagon]
+center_point = garb_vagon_outside_kamp
+radius = 2
+def_state_moving = walk
+danger = danger_condition
+on_info = {+garb_hunters_door_unlocked} walker@in_vagon
+
+[walker@in_vagon]
+path_walk = survival_in_garb_vagon_walk
+path_look = survival_in_garb_vagon_look
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+; В плену у бандитов:
+[walker@garb_hostage]
+path_walk = garb_survival_walk2
+path_look = garb_survival_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@garb_hostage1
+
+[walker@garb_hostage1]
+path_walk = garb_survival_walk2
+path_look = garb_survival_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+garb_hostages_kill} %=die%
+on_info2 = {+hunter2_retun_to_hideway} walker@return1 %=make_invulnerable%
+
+[walker@return1]
+path_walk = survival_in_garb_vagon_walk
+path_look = survival_in_garb_vagon_look
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+
+
+[threshold@survival_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[meet]
+meet_state = 1| wounded_heavy
+meet_state = 1| wounded_heavy
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = {-garbage_door_opened} %+helicrash_survival_dead%, {+garbage_door_opened} %+helicrash_survival_dead =hunter1_garb_report%

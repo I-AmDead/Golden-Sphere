@@ -1,0 +1,89 @@
+ [smart_terrains]
+none = true
+
+[logic]
+active = {+esc_nighthunter_dead} mob_camp@4, mob_camp@1
+on_death = mob_death
+on_hit = mob_hit
+
+
+[mob_camp@1]
+path_home = esc_village_dog_walk1
+path_look = esc_village_dog_look1
+braindead = true
+home_min_radius = 0
+home_max_radius = 0
+on_actor_dist_le_nvis = 3 | {~10} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_idle_1)%, {~20} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_idle_2)%, {~30} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_idle_3)%, {~40} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_idle_4)%, {~50} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_groan_0)%, {~60} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_groan_1)%, {~70} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_groan_2)%, {~80} mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_attack_1)%, mob_remark@bark %=play_snd_from_obj(8413:monsters\dog\bdog_attack_2)%
+on_info = {+volk_to_nighthunters_place} mob_walker@2 %=make_invulnerable =add_self_spot(green_location:esc_bobik_mark_text)%
+on_info2 = {=is_dead(8413)} nil
+
+[mob_remark@bark]
+anim = stand_idle_threaten_0
+;snd = dog_bark
+target = actor
+no_move = true
+braindead = true
+on_actor_dist_ge_nvis = 3 | mob_camp@1
+
+[mob_remark@enemy]
+anim = _sit_idle_1
+target = actor
+actor_friendly = false
+
+
+; Ждем, пока заспавнится сос:
+[mob_walker@2]
+path_walk = willage_dog_nighunter_walk_1
+path_look = willage_dog_nighunter_look_1
+home_min_radius = 0
+home_max_radius = 0
+braindead = true
+on_info = {+dog_see_nighthunter} mob_remark@1 %=play_snd_from_obj(8413:monsters\dog\bdog_groan_2)%
+on_info2 = {=is_dead(8413)} nil
+
+
+; Рычим на кровососа:
+[mob_remark@1]
+anim = stand_idle_threaten_0
+target = 8418
+no_move = true
+braindead = true
+on_info = {+nighthunter_spawn} mob_camp@3 %=play_snd_from_obj(8157:characters_voice\human_01\newbie\states\panic_monster\panic_monster_7) =unmake_invulnerable%
+on_timer = 5000 | mob_remark@2 %=play_snd_from_obj(8413:monsters\dog\bdog_idle_1)%
+
+[mob_remark@2]
+anim = stand_idle_threaten_0
+target = 8418
+no_move = true
+braindead = true
+on_info = {+nighthunter_spawn} mob_camp@3 %=play_snd_from_obj(8157:characters_voice\human_01\newbie\states\panic_monster\panic_monster_7) =unmake_invulnerable%
+on_timer = 4000 | mob_remark@1 %=play_snd_from_obj(8413:monsters\dog\bdog_groan_0)%
+
+
+; Нападаем на кровососа:
+[mob_camp@3]
+path_home = willage_dog_nighunter_walk_2
+path_look = willage_dog_nighunter_look_2
+home_min_radius = 0
+home_max_radius = 0
+braindead = false
+on_info = {+esc_nighthunter_dead} mob_camp@4 %=remowe_self_spot(green_location:esc_bobik_mark_text)%
+
+
+; Сосыч сдох, можно валить домой:
+[mob_camp@4]
+path_home = esc_village_dog_walk1
+path_look = esc_village_dog_look1
+braindead = true
+home_min_radius = 0
+home_max_radius = 0
+on_info = {=is_dead(8413)} nil
+
+
+
+
+[mob_hit]
+
+
+[mob_death]
+on_info = {=killed_by_actor} %+esc_village_dog_killed_by_actor =play_snd_from_obj(8067:script_replics\soldier_1\replics\bobik_replic_4) =esc_village_dog_killed_by_actor_tip =karma_down%

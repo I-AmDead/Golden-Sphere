@@ -1,0 +1,59 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active =  walker@start
+combat_ignore = combat_ignore
+threshold = threshold@bar_lost_man_threshold
+on_death = death
+trade = misc\trade_nothing.ltx
+
+[walker@start]
+path_walk = bar_lost_man_walk1
+path_look = bar_lost_man_look1
+show_spot = false
+on_timer = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+
+[walker@1]
+path_walk = bar_lost_man_walk1
+path_look = bar_lost_man_look1
+danger = danger_condition
+combat_ignore_cond = always
+show_spot = false
+on_info = {+bar_komendant_door_open} %=delme2 =spawn_big_condensator =spawn_bones_at_pos%
+on_timer = 15000 | walker@2 %=play_snd_from_obj(8543:characters_voice\scenario\scared_stalker_underground\scared_stalker_underground_2)%
+
+
+[walker@2]
+path_walk = bar_lost_man_walk1
+path_look = bar_lost_man_look1
+danger = danger_condition
+combat_ignore_cond = always
+show_spot = false
+on_info = {+bar_komendant_door_open} %=delme2 =spawn_big_condensator =spawn_bones_at_pos%
+on_timer = 18000 | walker@1 %=play_snd_from_obj(8543:characters_voice\scenario\scared_stalker_underground\scared_stalker_underground_4)%
+
+
+
+
+
+
+
+
+[threshold@bar_lost_man_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+bar_lost_man_dead%
+

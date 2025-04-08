@@ -1,0 +1,53 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_hermit_threshold
+meet = meet
+trade = misc\trade_nothing.ltx
+
+[walker@start]
+path_walk = predb_hermit_walk1
+path_look = predb_hermit_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = predb_hermit_walk1
+path_look = predb_hermit_look1
+danger = danger_condition
+combat_ignore_cond = always
+show_spot = false
+on_info = {+predb_hermit_execute} remark@execute %=unmake_invulnerable%
+
+[remark@execute]
+snd = hermit_talk
+anim = prisoner
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_hermit_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_hermit_dead =predb_hermit_spawn_in%
+

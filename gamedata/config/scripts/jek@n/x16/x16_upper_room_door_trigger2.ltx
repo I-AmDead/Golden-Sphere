@@ -1,0 +1,14 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = x16_brain_door_use
+on_use    = {+x16_brain_temperature} ph_idle@2 %=run_postprocess(agr_u_fade) =disable_ui%
+
+[ph_idle@2]
+on_timer = 4000|ph_idle@1 %=x16upper_room_door_trigger1use2 =enable_ui =play_snd(device\metal_small_open)%
+
+

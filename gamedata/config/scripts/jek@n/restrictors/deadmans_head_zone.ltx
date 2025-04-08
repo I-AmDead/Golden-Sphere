@@ -1,0 +1,16 @@
+[logic]
+active = sr_sound@1
+
+[sr_sound@1]
+snd = ambient\random\rnd_moan1
+position = esc_obelisk_centr
+on_signal = sound_end | sr_sound@2
+on_info = {=actor_has_item(deadman_head)} nil
+
+[sr_sound@2]
+snd = ambient\random\rnd_moan5
+position = esc_obelisk_centr
+on_signal = sound_end | sr_sound@1
+on_info = {=actor_has_item(deadman_head)} nil
+
+[sr_idle]

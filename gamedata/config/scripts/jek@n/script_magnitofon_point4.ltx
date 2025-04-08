@@ -1,0 +1,12 @@
+[logic]
+active = ph_sound
+
+
+[ph_sound]
+snd = script_magnitofon_music4
+looped = true
+on_info = {=actor_has_item(magnitofon_portable)} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=delme%

@@ -1,0 +1,3569 @@
+#include "food.ltx"
+#include "medicin.ltx"
+
+[attch_a]:identity_immunities ;то, что неписи держат в руках
+GroupControlSection	= spawn_group
+discovery_dependency	=
+cform               = skeleton
+class				= II_ATTCH
+auto_attach			= false
+
+[antir_f]:identity_immunities ;то, что ГГ может использовать
+GroupControlSection	= spawn_group
+discovery_dependency	=
+cform               = skeleton
+class				= II_ANTIR
+; eatable item
+eat_health 			= 0
+eat_satiety 		= 0
+eat_power 			= 0
+eat_radiation 		= 0
+eat_alcohol 		= 0
+wounds_heal_perc 	= 0
+eat_portions_num 	= 1
+
+; food item
+animation_slot  	= 4
+
+;-------------------------------------------------------
+; Музыкальный инструмент
+;-------------------------------------------------------
+[guitar_a]:attch_a
+$spawn				= "food and drugs\guitar_a"
+visual              = Equipments\item_guitar.ogf
+description			= enc_equipment_food_guitar1
+cost				= 700
+inv_name			= guitar
+inv_name_short		= guitar
+inv_weight			= 1.5
+inv_grid_width		= 4
+inv_grid_height		= 2
+inv_grid_x			= 10
+inv_grid_y			= 35
+attach_angle_offset		= -1.651084, -1.341824, 1.200789
+attach_position_offset	= 0.077492, -0.030020, 0.090059
+attach_bone_name	= bip01_l_hand
+
+[guitar_f]:antir_f
+$spawn				= "food and drugs\antirad"
+visual              = equipments\item_guitar.ogf
+description         = enc_equipment_food_guitar1
+cost				= 700
+inv_name			= guitar
+inv_name_short		= guitar
+inv_weight			= 1.5
+inv_grid_width		= 4
+inv_grid_height		= 2
+inv_grid_x			= 10
+inv_grid_y			= 35
+
+[harmonica_a]:attch_a
+$spawn					= "food and drugs\harmonica_a"
+visual                  = Equipments\item_harmonica.ogf
+description             = enc_equipment_food_harmonica1
+cost					= 200
+inv_name				= harmonica
+inv_name_short			= harmonica
+inv_weight				= 0.15
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 14
+inv_grid_y				= 35
+attach_angle_offset		= 0.000000, -1.204452, -1.262921
+attach_position_offset	= 0.081856, -0.035081, 0.011694
+attach_bone_name		= bip01_l_hand
+
+[harmonica_f]:antir_f
+$spawn					= "food and drugs\antirad"
+visual                  = equipments\item_harmonica.ogf
+description             = enc_equipment_food_harmonica1
+cost					= 200
+inv_name				= harmonica
+inv_name_short			= harmonica
+inv_weight				= 0.15
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 14
+inv_grid_y				= 35
+
+;-------------------------------------------------------
+;	Устройства
+;-------------------------------------------------------
+[binocular_a]:attch_a
+$spawn				= "devices\binocular_a"
+visual              = dynamics\devices\dev_binoculars\dev_binoculars.ogf
+cost				= 0
+inv_name			= "binocular"
+inv_name_short		= "binocular"
+inv_weight			= 0.5
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 9
+inv_grid_y			= 9
+attach_angle_offset	= 3.080506,-1.493053,-1.202040   ;устанавливается в радианах Angle*PI/180
+attach_position_offset	        = 0.080000,0.021273,0.100000
+attach_bone_name	= bip01_r_hand
+
+; Рация для НПС (в инвентори идет как сломанная)
+[hand_radio]:attch_a
+$spawn				= "equipment\hand_radio"
+visual              = equipments\item_fmradio.ogf
+description         = enc_equipment_devic_hand_radio1
+cost				= 100
+inv_name			= hand_radio1
+inv_name_short		= hand_radio1
+inv_weight			= 0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 15
+inv_grid_y			= 24
+attach_angle_offset	= -1.5708,0.1919,3.1416    ;устанавливается в радианах Angle*PI/180
+attach_position_offset	= 0.075, 0.066, 0.023
+attach_bone_name	= bip01_l_hand
+
+; Рация для ГГ
+[hand_radio_f]:antir_f
+visual              = equipments\item_fmradio.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description         = enc_equipment_devic_hand_radio
+inv_name			= hand_radio
+inv_name_short		= hand_radio
+cost				= 750
+inv_weight			= 0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 15
+inv_grid_y			= 24
+
+
+[device_pda]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency=
+$spawn 				= "devices\pda"
+$prefetch 			= 16
+class				= D_PDA
+cform				= skeleton
+visual				= equipments\item_pda.ogf
+description			= enc_equipment_devic_device-PDA1
+radius				= 50;0 ;75
+slot				= 7
+
+default_to_ruck = false
+
+inv_name			= device-PDA
+inv_name_short		= device-PDA
+inv_weight			= 0.3	;0.2
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 22
+cost				= 20
+attach_angle_offset		= 3.080506,-1.493053,-1.202040   ;устанавливается в радианах Angle*PI/180
+attach_position_offset	= 0.080000,0.021273,0.100000
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+quest_item			= true
+is_pda				= true
+
+[device_torch]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn				= "devices\torch"
+$prefetch 			= 32
+class				= TORCH_S
+cform				= skeleton
+visual				= equipments\light_night2.ogf
+description			= enc_equipment_devic_device-torch2
+cost				= 1000
+inv_name			= device-torch2
+inv_name_short		= device-torch2
+inv_weight			= 0.01
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 9
+inv_grid_y			= 25
+
+is_torch				= true
+
+;вещью нельзя торговать
+can_trade			= true
+
+default_to_ruck = false
+
+position			= 0.35,0.25,0.0
+light_trace_bone	= cone_bone
+attach_angle_offset		= 3.062, 0.008, -1.532 ;0, -3.14, 1.6
+attach_position_offset		= 0.134, -0.007, 0.09  ;0.115, 0.00, 0.07
+attach_bone_name		= bip01_head
+auto_attach				= false
+
+night_vision		= on
+night_vision_texture		= wpn\wpn_night
+night_vision_effector		= postprocess_night
+
+snd_night_vision_on		= weapons\nv_start
+snd_night_vision_off		= weapons\nv_off
+snd_night_vision_idle		= weapons\nv_loop
+snd_night_vision_broken		= weapons\nv_off
+
+night_vision_recharge_time	= 6		;(c) время зарядки аккамулятора
+night_vision_recharge_time_min	= 2		;(c) мин. время зарядки аккамулятора, после которого уст-во уже может работать
+night_vision_discharge_time	= 20	;(c) время разрядки (работы) устройства после полной зарядки
+slot				= 9
+disabled_maps			= ai_test,ai_test2, andy_test_
+
+[device_torch2]:device_torch
+
+
+; Начало описания детекторов
+[detector_simple]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "devices\detector_simple"
+;$prefetch 			= 32
+class				= D_SIMDET
+cform				= skeleton
+visual				= equipments\item_datchik1.ogf
+description			= enc_equipment_devic_detect1
+radius				= 10	;15
+buzzer_radius		= 1.5
+noise				= zone_mosquito_bald       ;detectors\geiger_noise_loop
+buzzer				= zone_mosquito_bald       ;detectors\DA-2_alarm_loop
+slot				= 12
+ef_detector_type	= 1
+
+inv_name			= detect
+inv_name_short		= detect
+inv_weight			= 0.1
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 11
+inv_grid_y			= 22
+cost				= 1500
+belt				= false
+default_to_ruck		= true
+
+detect_actor_radiation = true
+
+;описание распознаваемых детектором зон
+zone_class_1		= zone_mosquito_bald
+zone_sound_1_		= $no_sound
+zone_min_freq_1		= 0.1	;0.5
+zone_max_freq_1		= 40
+
+zone_class_2		= zone_mincer
+zone_sound_2_		= $no_sound
+zone_min_freq_2		= 0.1
+zone_max_freq_2		= 20
+
+zone_class_3		= zone_radioactive
+;zone_sound_3_		= detectors\DA-2_beep1
+zone_sound_3_		= detectors\geiger_1
+zone_sound_3_1		= detectors\geiger_2
+zone_sound_3_2		= detectors\geiger_3
+zone_sound_3_3		= detectors\geiger_4
+zone_sound_3_4		= detectors\geiger_5
+zone_sound_3_5		= detectors\geiger_6
+zone_sound_3_6		= detectors\geiger_1
+zone_sound_3_7		= detectors\geiger_1
+zone_sound_3_8		= detectors\geiger_1
+zone_min_freq_3		= 1
+zone_max_freq_3		= 20
+
+zone_class_4		= zone_gravi_zone
+zone_sound_4_		= $no_sound
+zone_min_freq_4		= 0.5
+zone_max_freq_4		= 30
+
+zone_class_5		= zone_zharka_static
+zone_sound_5_		= $no_sound
+zone_min_freq_5		= 0.5
+zone_max_freq_5		= 30
+
+zone_class_6		= zone_buzz
+zone_sound_6_		= $no_sound
+zone_min_freq_6		= 0.5
+zone_max_freq_6		= 30
+
+zone_class_7		= zone_burning_fuzz
+zone_sound_7_		= $no_sound
+zone_min_freq_7		= 0.5
+zone_max_freq_7		= 30
+
+[detector_advances]:detector_simple
+$spawn 				= "devices\detector_advanced"
+visual				= equipments\item_datchik2.ogf
+description			= enc_equipment_devic_st_detector1
+
+;описание распознаваемых детектором зон
+zone_class_1		= zone_mosquito_bald
+zone_sound_1_		= detectors\DA-2_beep1
+zone_min_freq_1		= 0.1	;0.5
+zone_max_freq_1		= 40
+
+zone_class_2		= zone_mincer
+zone_sound_2_		= detectors\DA-2_beep1
+zone_min_freq_2		= 0.1
+zone_max_freq_2		= 20
+
+zone_class_3		= zone_radioactive
+zone_sound_3_		= detectors\geiger_1
+zone_sound_3_1		= detectors\geiger_2
+zone_sound_3_2		= detectors\geiger_3
+zone_sound_3_3		= detectors\geiger_4
+zone_sound_3_4		= detectors\geiger_5
+zone_sound_3_5		= detectors\geiger_6
+zone_sound_3_6		= detectors\geiger_1
+zone_sound_3_7		= detectors\geiger_1
+zone_sound_3_8		= detectors\geiger_1
+zone_min_freq_3		= 1
+zone_max_freq_3		= 20
+
+zone_class_4		= zone_gravi_zone
+zone_sound_4_		= detectors\DA-2_beep1
+zone_min_freq_4		= 0.5
+zone_max_freq_4		= 30
+
+zone_class_5		= zone_zharka_static
+zone_sound_5_		= $no_sound
+zone_min_freq_5		= 0.5
+zone_max_freq_5		= 30
+
+zone_class_6		= zone_buzz
+zone_sound_6_		= $no_sound
+zone_min_freq_6		= 0.5
+zone_max_freq_6		= 30
+
+zone_class_7		= zone_burning_fuzz
+zone_sound_7_		= $no_sound
+zone_min_freq_7		= 0.5
+zone_max_freq_7		= 30
+
+inv_name			= st_detector
+inv_name_short		= st_detector
+inv_weight			= 0.2
+
+inv_grid_x			= 12
+inv_grid_y			= 24
+cost				= 5500
+
+[detector_elite]:detector_simple
+$spawn 				= "devices\detector_elite"
+visual				= detectors\detector3.ogf 
+description         = enc_equipment_devic_detector1
+
+;описание распознаваемых детектором зон
+;Трамплин
+zone_class_1		= zone_mosquito_bald
+zone_sound_1_		= detectors\DA-2_beep1
+zone_min_freq_1		= 0.1	;0.5
+zone_max_freq_1		= 40
+zone_map_location_1 = anomaly_bald_location
+
+;Карусель
+zone_class_2		= zone_mincer
+zone_sound_2_		= detectors\DA-2_beep1
+zone_min_freq_2		= 0.1
+zone_max_freq_2		= 20
+zone_map_location_2 = anomaly_minc_location
+
+;Очаг радиоактивности
+zone_class_3		= zone_radioactive
+zone_sound_3_		= detectors\geiger_1
+zone_sound_3_1		= detectors\geiger_2
+zone_sound_3_2		= detectors\geiger_3
+zone_sound_3_3		= detectors\geiger_4
+zone_sound_3_4		= detectors\geiger_5
+zone_sound_3_5		= detectors\geiger_6
+zone_sound_3_6		= detectors\geiger_1
+zone_sound_3_7		= detectors\geiger_1
+zone_sound_3_8		= detectors\geiger_1
+zone_min_freq_3		= 1
+zone_max_freq_3		= 20
+zone_map_location_3 = radio_zone_location
+
+;Воронка
+zone_class_4		= zone_gravi_zone
+zone_sound_4_		= detectors\DA-2_beep1
+zone_min_freq_4		= 0.5
+zone_max_freq_4		= 30
+zone_map_location_4 = anomaly_grav_location
+
+;Электра
+zone_class_5 		= zone_witches_galantine
+zone_sound_5_ 		= detectors\DA-2_beep1
+zone_min_freq_5 	= 0.1
+zone_max_freq_5 	= 30
+zone_map_location_5 = anomaly_elec_location
+
+;Жарка
+zone_class_6		= zone_zharka_static
+zone_sound_6_		= detectors\DA-2_beep1
+zone_min_freq_6		= 0.5
+zone_max_freq_6		= 30
+zone_map_location_6 = anomaly_burn_location
+
+zone_class_7		= zone_buzz
+zone_sound_7_		= detectors\DA-2_beep1
+zone_min_freq_7		= 0.5
+zone_max_freq_7		= 30
+zone_map_location_7 = anomaly_buzz_location
+
+zone_class_8		= zone_burning_fuzz
+zone_sound_8_		= $no_sound
+zone_min_freq_8		= 0.5
+zone_max_freq_8		= 30
+zone_map_location_8 = anomaly_burning_fuzz_location
+
+zone_class_9		= zone_hvatalka
+zone_sound_9_		= $no_sound
+zone_min_freq_9 	= 0.5
+zone_max_freq_9		= 30
+zone_map_location_9 = anomaly_hvat_location
+
+;Ветер смерти
+zone_class_10		= deadly_wind_zone
+zone_sound_10_		= detectors\DA-2_beep1
+zone_min_freq_10		= 0.5
+zone_max_freq_10		= 45
+zone_map_location_10 = anomaly_grav_location
+
+;Полынь-звезда
+zone_class_11		= star_zone_weak
+zone_sound_11_		= detectors\DA-2_beep1
+zone_min_freq_11		= 0.5
+zone_max_freq_11		= 45
+zone_map_location_11 = anomaly_zone_location
+
+zone_class_12		= star_zone_normal
+zone_sound_12_		= detectors\DA-2_beep1
+zone_min_freq_12		= 0.5
+zone_max_freq_12		= 45
+zone_map_location_12 = anomaly_zone_location
+
+inv_name			= detector
+inv_name_short		= detector
+inv_weight			= 0.3
+
+inv_grid_x			= 13
+inv_grid_y			= 23
+cost				= 12000
+
+attach_angle_offset		= -0.160570,-1.425061,-0.361283
+attach_position_offset	= 0.160570,-0.060214,0.020071
+attach_bone_name		= bip01_l_hand
+auto_attach				= false
+
+[detector_mine_finder]:detector_simple
+$spawn 				= "devices\detector_mine_finder"
+visual				= equipments\motion_tracker.ogf 
+description			= enc_equipment_devic_minefinder
+radius				= 7
+
+inv_name			= detector_minefinder
+inv_name_short		= detector_minefinder_s
+inv_weight			= 0.3
+
+inv_grid_x			= 12
+inv_grid_y			= 23
+cost				= 7500	
+
+attach_angle_offset	= 3.080506,-1.493053,-1.202040   
+attach_position_offset	= 0.080000,0.021273,0.100000
+attach_bone_name	= bip01_r_hand
+
+auto_attach			= false
+
+;описание распознаваемых детектором зон
+
+zone_class_1			= zone_mine_field
+zone_sound_1_			= weapons\mine\mine_find
+zone_min_freq_1			= 1
+zone_max_freq_1			= 50
+zone_map_location_1 	= anomaly_mine_location
+
+zone_class_2			= caps_mine_field
+zone_sound_2_			= weapons\mine\mine_find
+zone_min_freq_2			= 1
+zone_max_freq_2			= 50
+zone_map_location_2 	= anomaly_mine_location
+
+
+[separator]:bread
+inv_grid_width		= 0
+inv_grid_height		= 0
+inv_weight			= 0
+
+
+[bio]:identity_immunities
+animation_slot				= 11
+allow_inertion				= true
+attach_angle_offset			= 0,0,0
+attach_position_offset		= -0.1,-0.1,0
+attach_bone_name			= bip01_root
+inv_grid_width				= 1
+inv_grid_height				= 1
+belt						= false
+af_actor_properties			= on
+actor_properties			= on
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed 	= 0.0 
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_bio
+inventory_radiation		    = 0.0
+
+;коэффициенты иммунитета 
+[af_bio]
+burn_immunity = 1.0				
+strike_immunity = 1.0
+shock_immunity = 1.0
+wound_immunity = 1.0		
+radiation_immunity = 1.0
+telepatic_immunity = 1.0
+chemical_burn_immunity = 1.0
+explosion_immunity = 1.0
+fire_wound_immunity = 1.0 
+
+
+; Окончание описания детекторов
+
+;автоаптечка
+[saharov_medbox]:bio
+GroupControlSection	= spawn_group
+$spawn				= "devices\autodoctor"
+cform				= skeleton
+class				= II_ANTIR ;ARTEFACT
+
+visual				= dynamics\weapons\wpn_eat\world_models\aptechki\aptechka_basic_world.ogf
+description			= enc_autodoctor
+inv_name			= autodoctor
+inv_name_short		= autodoctor
+inv_weight 			= 1.0
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 34
+inv_grid_y			= 36
+
+cost 				= 17000
+lights_enabled      = false
+
+belt				= true
+default_to_ruck		= true
+
+; eatable item
+eat_health 			= 0
+eat_satiety 		= 0
+eat_power 			= 0
+eat_radiation 		= 0
+eat_alcohol 		= 0
+wounds_heal_perc 	= 0
+eat_portions_num 	= 10000
+
+;animation_slot = 4
+
+; params for healing.script
+; Merc13
+ad_full_charges	= 20	; Полное количество зарядов препаратов
+ad_health_dlt		= 0.5	; Шаг лечения
+ad_stamina_dlt		= 0.5	; Шаг восстановления энергии
+ad_radiation_dlt	= 0.7	; Шаг уменьшения радиации
+
+ad_health_max_charge     = 10.0	; Максимальный заряд лечения
+ad_power_max_charge      = 10.0	; Максимальный заряд энергии
+ad_antirad_max_charge    = 14.0	; Максимальный заряд антирада
+
+; скорости изменения параметров заданы с учётом фактора времени 6
+; т.е. уменьшены в 6 раз, чтобы соответствовать реальному времени при таком факторе
+; также принимается, что время полного излечения - 20 секунд реального времени
+; таким образом, скорость изменения соответствующего параметра будет:
+; 1.0/(6 * 20.0) == 0.00833
+
+ad_health_restore_rate   = 0.00833	; Шаг лечения (единиц/сек)
+; скорость уменьшения кровотечения будет определяться как (ad_health_restore_rate*ad_bleading_bleeding_rate_k)
+; масштабирубщий фактор введён потому, что кровотечение не ограничено сверху единицой и может быть много больше
+ad_bleading_bleeding_rate_k = 2.0
+ad_power_restore_rate    = 0.00833	; Шаг восстановления энергии (единиц/сек)
+ad_radiation_reduce_rate = 0.00833	; Шаг уменьшения радиации (единиц/сек)
+
+ad_threshold_h		= 0.5	; Порог включения процедуры лечения
+ad_threshold_s		= 0.15; Порог включения процедуры энергонакачки
+ad_threshold_r		= 0.9	; Порог срабатывания процедуры ввода антирада
+ad_threshold_r_min= 0.1	; Мин. доза радиации, при воздействии которой дольше времени max_radiated_seconds, ИДЛК введёт антирад
+ad_max_rad_seconds= 15	; Макс. время воздействия радиации, превышающей значение threshold_r_min, но меньше ad_threshold_r
+
+;картридж для автоаптечки. Заполняет все три системы
+[cartridge_a]:antir_f
+$spawn			= "devices\autodoctor"
+visual			= equipments\item_amk_gps.ogf
+radius			= 1
+description		= enc_cart_a
+inv_name		= cart_a
+inv_name_short		= cart_a
+inv_weight		= 0.01
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 8
+inv_grid_y		= 25
+cost			= 10000
+
+;картридж для автоаптечки. Содержит препарат лечения ран
+[cartridge_h]:antir_f
+$spawn			= "devices\autodoctor"
+visual			= equipments\item_amk_gps.ogf
+radius			= 1
+description		= enc_cart_h
+inv_name		= cart_h
+inv_name_short		= cart_h
+inv_weight		= 0.01
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 8
+inv_grid_y		= 26
+cost			= 5000
+
+;картридж для автоаптечки. Содержит препарат-энергетик
+[cartridge_s]:antir_f
+$spawn			= "devices\autodoctor"
+visual			= equipments\item_amk_gps.ogf
+radius			= 1
+description		= enc_cart_s
+inv_name		= cart_s
+inv_name_short		= cart_s
+inv_weight		= 0.01
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 8
+inv_grid_y		= 27
+cost			= 750
+
+;картридж для автоаптечки. Содержит препарат вывода радиации
+[cartridge_r]:antir_f
+$spawn			= "devices\autodoctor"
+visual			= equipments\item_amk_gps.ogf
+radius			= 1
+description		= enc_cart_r
+inv_name		= cart_r
+inv_name_short		= cart_r
+inv_weight		= 0.01
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 8
+inv_grid_y		= 28
+cost			= 2500
+
+
+[amk_metka]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "devices\amk_metka" ; option for Level Editor
+class			= AMMO
+cform           = skeleton
+visual          = equipments\item_amk_gps.ogf
+description		= enc_amk_metka
+$prefetch 		= 64
+
+cost			= 2100
+is_gps		= true
+box_size		= 1
+
+inv_name		= amk_metka
+inv_name_short	= amk_metka_s
+inv_weight		= 0.05
+
+inv_grid_width	= 1
+inv_grid_height	= 1
+inv_grid_x		= 11
+inv_grid_y		= 24
+
+k_dist			= 1
+k_disp			= 3
+k_hit			= 1.4
+k_impulse		= 1.2
+k_pierce		= 1.35
+impair			= 1.15
+buck_shot		= 1
+tracer			= off
+wm_size         = 0.05
+
+
+[sigaret]:attch_a
+$spawn				= "food and drugs\sigaret"
+visual              = weapons\sigaret\sigaret.ogf
+description		    = enc_equipment_sigaret
+
+cost					= 50
+inv_name				= sigaret
+inv_name_short			= sigaret
+inv_weight				= 0.07
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 12
+inv_grid_y				= 28
+
+attach_angle_offset		= 9.0, 0.0, 0.0
+attach_position_offset	= 0.025, -0.02, 0.0
+attach_bone_name		= bip01_r_finger11
+auto_attach				= false
+
+; eatable item
+eat_health = 0.05
+eat_satiety = 0.2
+eat_power = 0
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = -1
+
+; food item
+animation_slot		= 4
+
+[matras]:antir_f
+$spawn    	= "food and drugs\matras"
+visual      = ogse\sleeping_bag.ogf
+description = enc_amk_matras
+
+inv_name   = amk_matras
+inv_name_short  = amk_matras_s
+inv_weight   = 1
+
+inv_grid_width  = 2
+inv_grid_height  = 2
+inv_grid_x   = 26
+inv_grid_y   = 31
+cost    = 5000
+eat_portions_num = 1000000
+
+
+
+[repair_kit]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\repbox.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+class				= II_ATTCH
+description		= enc_equipment_repairkit
+inv_name		= repairkit
+inv_name_short		= repairkit
+cform				= skeleton
+radius				= 1
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 8
+inv_grid_y			= 36
+inv_weight		= 3.5
+cost				= 7000
+
+
+[mobile_changer]:identity_immunities
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn			= "devices\mobile_changer"
+$prefetch   	= 32
+class			= II_FOOD
+cform           = skeleton
+visual          = equipments\item_pda.ogf
+radius			= 1
+description  	= description_mobile_changer
+inv_name   		= description_mobile_changer
+inv_name_short  = description_mobile_changer
+inv_weight   	= 0.2
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 16
+inv_grid_y			= 26
+quest_item			= false
+cost    = 1
+
+; eatable item
+eat_health = 0
+eat_satiety = 0
+eat_power = 0
+eat_radiation = 0
+eat_alcohol = 0
+wounds_heal_perc = 0
+eat_portions_num = -1
+
+; food item
+animation_slot  = 4
+
+
+[mobile_changer_33]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\mobile_changer"
+visual				= equipments\item_rukzak.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= item_rukzak
+cost				= 5000
+inv_name			= inv_name_mobile_changer_33
+inv_name_short			= inv_name_mobile_changer_33
+inv_weight			= 1
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 8
+inv_grid_y		= 33
+
+
+[mikstura]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\mobile_changer"
+visual				= physics\decor\butilka_2.ogf 
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_mikstura
+cost				= 5000
+inv_name			= inv_name_mikstura
+inv_name_short			= inv_name_mikstura
+inv_weight			= 0.1
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 33
+inv_grid_y		= 0
+
+use_sound_anm = interface\item_usage\drug_use
+
+[armor_remkit]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\armor_remkit"
+visual				= equipments\item_rukzak.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_armor_remkit
+cost				= 2000
+inv_name			= inv_name_armor_remkit
+inv_name_short			= inv_name_armor_remkit
+inv_weight			= 1.0
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 8
+inv_grid_y		= 35
+eat_portions_num	= 1000000
+
+[montirovka]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\knife_3"
+visual				= weapons\montirovka\wpn_montirovka.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= enc_weapons_wpn-crowbar_descr
+cost				= 3000
+inv_name			= inv_name_montirovka
+inv_name_short			= inv_name_montirovka
+inv_weight			= 1.0
+inv_grid_width		= 3
+inv_grid_height		= 1
+inv_grid_x		= 20
+inv_grid_y		= 33
+eat_portions_num	= 1000000
+
+
+[skrepka]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\flare_2"
+visual				= equipments\light_night.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_skrepka
+cost				= 0
+inv_name			= inv_name_skrepka
+inv_name_short		= inv_name_skrepka
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 37
+eat_portions_num	= 1000000
+
+[matches]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\spi4ki.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_matches
+cost				= 10
+inv_name			= inv_name_matches
+inv_name_short		= inv_name_matches
+inv_weight			= 0.01
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 10
+inv_grid_y			= 32
+eat_portions_num	= 1000
+
+[lighter]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\zajigalka.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_lighter
+cost				= 90
+inv_name			= inv_name_lighter
+inv_name_short		= inv_name_lighter
+inv_weight			= 0.02
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 13
+inv_grid_y			= 32
+eat_portions_num	= 1000
+
+
+[bowler]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description			= description_bowler
+cost				= 300
+inv_name			= inv_name_bowler
+inv_name_short		= inv_name_bowler
+inv_weight			= 0.3
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 6
+inv_grid_y			= 39
+
+[teapot]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= physics\decor\teapot_1.ogf
+$prefetch			= 32
+cform				= skeleton
+class				= II_ATTCH
+radius				= 1
+description			= description_teapot
+cost				= 300
+inv_name			= inv_name_teapot
+inv_name_short		= inv_name_teapot
+inv_weight			= 0.4
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 30
+inv_grid_y			= 36
+
+
+[teapot_full]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= physics\decor\teapot_1.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= teapot_full_descr
+cost				= 300
+inv_name			= teapot_full
+inv_name_short		= teapot_full
+inv_weight			= 0.5
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 32
+inv_grid_y			= 36
+eat_portions_num	= -1
+eat_thirst		= 0.9
+
+use_sound = addon\inv_softdrink
+
+[teapot_pack]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= food\konserva_yantar.ogf
+$prefetch			= 32
+cform				= skeleton
+class				= II_ATTCH
+radius				= 1
+description			= description_teapot_pack
+cost				= 300
+inv_name			= inv_name_teapot_pack
+inv_name_short		= inv_name_teapot_pack
+inv_weight			= 0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 29
+inv_grid_y			= 36
+;eat_portions_num	= 1000000
+
+
+[flyaga_full]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= flyaga_full_descr
+cost				= 100
+inv_name			= inv_name_flyaga_full
+inv_name_short		= inv_name_flyaga_full
+inv_weight			= 0.4
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 14
+inv_grid_y			= 5
+eat_portions_num	= -1
+eat_thirst			= 0.8
+
+use_sound = interface\item_usage\inv_flaska
+use_sound_anm = interface\item_usage\inv_flaska
+
+[flyaga_empty]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_flyaga_empty
+inv_name			= inv_name_flyaga_empty
+inv_name_short			= inv_name_flyaga_empty
+inv_weight			= 0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 15
+inv_grid_y			= 1
+cost				= 50
+eat_portions_num	= 1000000
+
+[afscanner_common]:identity_immunities
+GroupControlSection	= spawn_group
+$prefetch 			= 64
+cform				= skeleton
+class				= ARTEFACT
+
+slot			= 4
+
+animation_slot				= 11
+allow_inertion				= true
+attach_angle_offset			= 0,0,0
+attach_position_offset		= -0.1,-0.1,0
+attach_bone_name			= bip01_root
+inv_grid_width				= 1
+inv_grid_height				= 1
+belt						= false
+af_actor_properties			= on
+actor_properties			= on
+
+;скорости увеличения (уменьшения) 
+health_restore_speed		= 0.0			
+radiation_restore_speed 	= 0.0 
+thirst_restore_speed		= 0.0
+satiety_restore_speed		= 0.0
+power_restore_speed			= 0.0
+bleeding_restore_speed		= 0.0
+hit_absorbation_sect		= af_bio
+inventory_radiation		    = 0.0
+
+;подсветка арта
+lights_enabled = false	
+trail_light_color = 2.5, 2.4, 0
+trail_light_range = 1.0
+;belt				= false
+default_to_ruck		= true
+
+jump_height			= 0
+
+
+[afscanner]:afscanner_common
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= detectors\i_detector_3.ogf  
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_afscanner
+inv_name			= inv_name_afscanner
+inv_name_short			= inv_name_afscanner
+inv_weight			= 0.1
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 14
+inv_grid_y			= 24
+cost				= 5000
+
+
+[akumulator]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_akkumuliator.ogf
+radius				= 1
+description			= description_akumulator
+inv_name			= inv_name_akumulator
+inv_name_short			= inv_name_akumulator
+inv_weight = 		3.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 14
+inv_grid_y		= 40
+cost				= 1000
+quest_item			= false
+can_trade			= true
+
+[wheel]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_koleso.ogf
+radius				= 1
+description			= description_wheel
+inv_name			= inv_name_wheel
+inv_name_short			= inv_name_wheel
+inv_weight = 		7.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 16
+inv_grid_y		= 37
+cost				= 5000
+quest_item			= false
+can_trade			= true
+
+
+[bearing]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_podshipnik.ogf
+radius				= 1
+description			= description_bearing
+inv_name			= inv_name_bearing
+inv_name_short			= inv_name_bearing
+inv_weight = 		0.3
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 15
+inv_grid_y		= 40
+cost				= 150
+quest_item			= false
+can_trade			= true
+
+
+[mobile_tank_empty]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\decor\butil_3.ogf
+radius				= 1
+description			= description_mobile_tank_empty
+inv_name			= inv_name_mobile_tank_empty
+inv_name_short			= inv_name_mobile_tank_empty
+inv_weight = 		1.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 10
+inv_grid_y		= 38
+cost				= 300
+quest_item			= false
+can_trade			= true
+
+[mobile_tank_full]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\decor\butil_3.ogf
+radius				= 1
+description			= description_mobile_tank_full
+inv_name			= inv_name_mobile_tank_full
+inv_name_short			= inv_name_mobile_tank_full
+inv_weight = 		5.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 12
+inv_grid_y		= 38
+cost				= 800
+quest_item			= false
+can_trade			= true
+
+[avtomobile_tank]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\large_trash\garbage_11.ogf
+radius				= 1
+description			= description_avtomobile_tank
+inv_name			= inv_name_avtomobile_tank
+inv_name_short			= inv_name_avtomobile_tank
+inv_weight = 		10.0
+inv_grid_width		= 4
+inv_grid_height		= 2
+inv_grid_x		= 10
+inv_grid_y		= 33
+cost				= 800
+quest_item			= false
+can_trade			= true
+
+
+[electric_motor]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= additions\electric_motor.ogf
+radius				= 1
+description			= description_electric_motor
+inv_name			= inv_name_electric_motor
+inv_name_short			= inv_name_electric_motor
+inv_weight = 		8.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 16
+inv_grid_y		= 39
+cost				= 1000
+quest_item			= false
+can_trade			= true
+
+
+[equipment_bag]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= additions\bag.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_equipment_bag
+inv_name			= inv_name_equipment_bag
+inv_name_short			= inv_name_equipment_bag
+inv_weight			= 4.5
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 18
+inv_grid_y			= 31
+cost				= 45000
+eat_portions_num	= 1000000
+
+
+[medic_bag]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= additions\medpack.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_medic_bag
+inv_name			= inv_name_medic_bag
+inv_name_short			= inv_name_medic_bag
+inv_weight			= 2.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 20
+inv_grid_y			= 31
+cost				= 3700
+eat_portions_num	= 1000000
+
+
+[powder]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= physics\decor\banka_kraski_1.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_powder
+inv_name			= inv_name_powder
+inv_name_short			= inv_name_powder
+inv_weight			= 0.4
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 15
+inv_grid_y			= 37
+cost				= 100
+eat_portions_num	= 1000000
+;eat_portions_num	= -1
+
+
+[acid_box]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\balon\bomb_01.ogf
+radius				= 1
+description			= description_acid_box
+inv_name			= inv_name_acid_box
+inv_name_short			= inv_name_acid_box
+inv_weight = 		4.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 15
+inv_grid_y		= 35
+cost				= 0
+quest_item			= false
+can_trade			= false
+
+
+[turret_box]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= additions\inv_box_zelen.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_turret_box
+inv_name			= inv_name_turret_box
+inv_name_short			= inv_name_turret_box
+inv_weight			= 15
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 14
+inv_grid_y			= 29
+cost				= 40000
+
+
+
+[weapon_remkit]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\weapon_remkit"
+visual				= equipments\item_rukzak.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_weapon_remkit
+cost				= 1500
+inv_name			= inv_name_weapon_remkit
+inv_name_short			= inv_name_weapon_remkit
+inv_weight			= 1.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 17
+inv_grid_y		= 32
+eat_portions_num	= 1000000
+
+
+[anomal_map_garbage]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_zapiska.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= description_anomal_map_garbage
+cost				= 1500
+inv_name			= inv_name_anomal_map_garbage
+inv_name_short			= inv_name_anomal_map_garbage
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 14
+inv_grid_y		= 7
+eat_portions_num	= 1000000
+
+[wrecked_pkm]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= weapons\pkm\pkm.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description			= description_wrecked_pkm
+inv_name			= inv_name_wrecked_pkm
+inv_name_short			= inv_name_wrecked_pkm
+inv_weight			= 3.4
+inv_grid_width		= 6
+inv_grid_height		= 2
+inv_grid_x			= 0
+inv_grid_y			= 4
+cost				= 10
+
+
+[harmonica_unic]:antir_f
+$spawn					= "food and drugs\antirad"
+visual                  = equipments\item_harmonica.ogf
+description             = description_harmonica_unic
+cost					= 250
+inv_name				= inv_name_harmonica_unic
+inv_name_short			= inv_name_harmonica_unic
+inv_weight				= 0.15
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 10
+inv_grid_y				= 40
+
+
+[diesel_tank]:antir_f
+$spawn					= "food and drugs\antirad"
+visual                  = physics\decor\butil_3.ogf
+description             = description_diesel_tank
+cost					= 700
+inv_name				= inv_name_diesel_tank
+inv_name_short			= inv_name_diesel_tank
+inv_weight				= 8.5
+inv_grid_width			= 2
+inv_grid_height			= 2
+inv_grid_x				= 14
+inv_grid_y				= 38
+eat_portions_num	= 10000000
+
+
+[af_zuda]:antir_f
+visual                  = monster_items\poltergeist_glas.ogf
+description             = af_zuda_desc
+cost					= 46000
+inv_name				= af_zuda_name
+inv_name_short			= af_zuda_name
+inv_weight				= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 12
+inv_grid_y				= 21
+
+
+[af_zuda_empty]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= monster_items\poltergeist_glas.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= true
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description			= description_af_zuda_empty
+inv_name			= inv_name_af_zuda_empty
+inv_name_short			= inv_name_af_zuda_empty
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 12
+inv_grid_y				= 21
+cost				= 100
+
+
+
+[army_receiver]:antir_f
+$spawn					= "food and drugs\antirad"
+visual                  = equipments\item_fmradio.ogf
+description             = description_army_receiver
+cost					= 1000
+inv_name				= inv_name_army_receiver
+inv_name_short			= inv_name_army_receiver
+inv_weight				= 1
+inv_grid_width			= 1
+inv_grid_height			= 2
+inv_grid_x				= 23
+inv_grid_y				= 25
+eat_portions_num	= 10000000
+
+
+[redrik_vakcine]:antir_f
+$spawn					= "food and drugs\antirad"
+visual                  = physics\decor\butilka_2.ogf 
+description             = description_redrik_vakcine
+cost					= 1000
+inv_name				= inv_name_redrik_vakcine
+inv_name_short			= inv_name_redrik_vakcine
+inv_weight				= 0.3
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 25
+inv_grid_y				= 37
+
+use_sound = addon\inv_softdrink
+
+[rat_trap_full]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= physics\box\box_lab_01.ogf
+description             			= description_rat_trap_full
+cost				= 100
+inv_name				= inv_name_rat_trap_full
+inv_name_short			= inv_name_rat_trap_full
+inv_weight				= 1.4
+inv_grid_width			= 2
+inv_grid_height			= 1
+inv_grid_x			= 31
+inv_grid_y			= 38
+
+
+[af_licvidator]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= physics\sap\sap_art24.ogf
+description		= af_licvidator_descr
+inv_name		= af_licvidator_name
+inv_name_short	= af_licvidator_name
+inv_weight			= 0.5
+inv_grid_x			= 17
+inv_grid_y			= 20
+cost				= 30000
+inv_grid_width			= 1
+inv_grid_height			= 1
+;eat_portions_num			= 10000000
+
+
+[af_licvidator_empty]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= physics\sap\sap_art24.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= true
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= af_licvidator_empty_descr
+inv_name		= af_licvidator_empty_name
+inv_name_short	= af_licvidator_empty_name
+inv_weight			= 0.1
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 12
+inv_grid_y			= 15
+cost				= 100
+
+
+
+[ruined_docs]:antir_f
+$spawn				= "food and drugs\antirad"
+visual				= equipments\item_zapiska.ogf
+description			= description_ruined_docs
+inv_name			= inv_name_ruined_docs
+inv_name_short			= inv_name_ruined_docs
+inv_weight			= 0.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 17
+inv_grid_y		= 6
+cost				= 0
+quest_item			= false
+eat_portions_num			= 10000000
+
+
+[fotocamera]:antir_f
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= additions\item_fotocamera.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+can_trade			= false
+description		= description_fotocamera
+inv_name			= inv_name_fotocamera
+inv_name_short		= inv_name_fotocamera
+inv_weight			= 0.4
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 18
+inv_grid_y			= 37
+cost				= 1000
+eat_portions_num			= 10000000
+
+
+
+[t_akumulator1]:antir_f
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+description		= description_t_akumulator1
+inv_name			= inv_name_t_akumulator1
+inv_name_short		= inv_name_t_akumulator1
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 14
+inv_grid_y			= 27
+cost				= 100
+;eat_portions_num			= 10000000
+
+
+[t_akumulator2]:antir_f
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+description		= description_t_akumulator2
+inv_name			= inv_name_t_akumulator2
+inv_name_short		= inv_name_t_akumulator2
+inv_weight			= 0.1
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 15
+inv_grid_y			= 27
+cost				= 100
+;eat_portions_num			= 10000000
+
+
+[anomal_radio]:antir_f
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= physics\decor\priemnik_gorizont.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false
+description		= description_anomal_radio
+inv_name			= inv_name_anomal_radio
+inv_name_short		= inv_name_anomal_radio
+inv_weight			= 1.0
+inv_grid_width			= 2
+inv_grid_height			= 2
+inv_grid_x			= 35
+inv_grid_y			= 39
+cost				= 150
+;eat_portions_num			= 10000000
+
+
+
+[magnitofon_portable]:antir_f
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= additions\item_legenda_404.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false
+description		= description_magnitofon_portable
+inv_name			= inv_name_magnitofon_portable
+inv_name_short		= inv_name_magnitofon_portable
+inv_weight			= 1.2
+inv_grid_width			= 2
+inv_grid_height			= 2
+inv_grid_x			= 18
+inv_grid_y			= 34
+cost				= 250
+eat_portions_num			= 10000000
+
+
+[casette_1]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_1
+inv_name_short	= inv_name_casette_1
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_2]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_2
+inv_name_short	= inv_name_casette_2
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_3]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_3
+inv_name_short	= inv_name_casette_3
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_4]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_4
+inv_name_short	= inv_name_casette_4
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_5]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_5
+inv_name_short	= inv_name_casette_5
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_6]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_6
+inv_name_short	= inv_name_casette_6
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_7]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_7
+inv_name_short	= inv_name_casette_7
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+[casette_8]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_8
+inv_name_short	= inv_name_casette_8
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+
+[casette_9]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_9
+inv_name_short	= inv_name_casette_9
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+
+[casette_10]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= equipments\item_minipda.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= false 
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= description_casette_1
+inv_name		= inv_name_casette_10
+inv_name_short	= inv_name_casette_10
+inv_weight			= 0.2
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 30
+inv_grid_y			= 35
+cost				= 50
+
+
+
+[af_top]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= physics\sap\sap_art24.ogf
+description		= af_top_descr
+inv_name		= af_top_name
+inv_name_short	= af_top_name
+inv_weight			= 0.4
+inv_grid_x			= 16
+inv_grid_y			= 21
+cost				= 60000
+inv_grid_width			= 1
+inv_grid_height			= 1
+quest_item			= true
+;eat_portions_num			= 10000000
+
+
+[af_watch]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= physics\sap\sap_art24.ogf
+description		= af_watch_descr
+inv_name		= af_watch_name
+inv_name_short	= af_watch_name
+inv_weight			= 0.2
+inv_grid_x			= 19
+inv_grid_y			= 37
+cost				= 55000
+inv_grid_width			= 1
+inv_grid_height			= 1
+eat_portions_num			= 1
+
+
+[af_watch_empty]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+visual				= physics\sap\sap_art24.ogf
+;$prefetch 			= 32
+;script_binding		= stalker.object_init
+quest_item			= true
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+description		= af_watch_empty_descr
+inv_name		= af_watch_name
+inv_name_short	= af_watch_name
+inv_weight			= 0.1
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 19
+inv_grid_y			= 37
+cost				= 100
+
+
+
+[kartoshka]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= food\kartofel.ogf
+radius				= 1
+description			= kartoshka_descr
+inv_name			= kartoshka
+inv_name_short			= kartoshka
+inv_weight = 		0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 14
+inv_grid_y		= 3
+cost				= 1
+quest_item			= false
+can_trade			= true
+
+
+[kartoshka_bad]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= food\kartofel.ogf
+radius				= 1
+description			= kartoshka_descr
+inv_name			= kartoshka
+inv_name_short			= kartoshka
+inv_weight = 		0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 14
+inv_grid_y		= 3
+cost				= 1
+quest_item			= false
+can_trade			= true
+
+
+
+[sigarets]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= weapons\sigaret\sigaret.ogf
+description		= sigaret_descr
+inv_name		= inv_name_sigarets
+inv_name_short	= inv_name_sigarets
+inv_weight			= 0.1
+inv_grid_x			= 10
+inv_grid_y			= 1
+cost				= 150
+inv_grid_width			= 1
+inv_grid_height			= 1
+eat_portions_num			= 1000000
+
+
+[mil_raciya]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= equipments\item_fmradio.ogf
+description		= description_mil_raciya
+inv_name		= inv_name_mil_raciya
+inv_name_short	= inv_name_mil_raciya
+inv_weight			= 0.6
+inv_grid_x			= 24
+inv_grid_y			= 25
+cost				= 150
+inv_grid_width			= 1
+inv_grid_height			= 2
+eat_portions_num			= 1000000
+
+
+[af_pult]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= physics\anomaly\artefact_blackdrip.ogf 
+description			= af_pult_desc
+inv_name			= af_pult_name
+inv_name_short		= af_pult_name
+inv_weight			= 0.4
+inv_grid_x			= 38
+inv_grid_y			= 28
+cost				= 5000
+inv_grid_width			= 1
+inv_grid_height			= 1
+eat_portions_num			= 1
+quest_item			= true
+can_trade				= false
+
+
+
+[bucket]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\decor\vedro_01.ogf
+radius				= 1
+description			= description_bucket
+inv_name			= inv_name_bucket
+inv_name_short			= inv_name_bucket
+inv_weight 		= 0.5
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 38
+inv_grid_y		= 22
+cost				= 10
+quest_item			= false
+can_trade			= false
+
+
+[old_album]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_book_01.ogf
+radius				= 1
+description			= description_old_album
+inv_name			= inv_name_old_album
+inv_name_short			= inv_name_old_album
+inv_weight 		= 1.5
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 15
+inv_grid_y		= 8
+cost				= 150
+quest_item			= false
+can_trade			= false
+
+
+
+[old_radio]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\decor\priemnik_gorizont.ogf
+radius				= 1
+description			= description_old_radio
+inv_name			= inv_name_old_radio
+inv_name_short			= inv_name_old_radio
+inv_weight 		= 2.5
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 34
+inv_grid_y		= 37
+cost				= 50
+quest_item			= false
+can_trade			= false
+
+
+[old_music_box]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\box\box_lab_01.ogf
+radius				= 1
+description			= description_old_music_box
+inv_name			= inv_name_old_music_box
+inv_name_short			= inv_name_old_music_box
+inv_weight 		= 1.0
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 36
+inv_grid_y		= 22
+cost				= 50
+quest_item			= false
+can_trade			= false
+
+
+[old_watch]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\klyu4.ogf
+radius				= 1
+description			= description_old_watch
+inv_name			= inv_name_old_watch
+inv_name_short			= inv_name_old_watch
+inv_weight                               = 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 40
+inv_grid_y		= 23
+quest_item			= false
+cost				= 5000
+can_trade			= false
+
+
+[old_book]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_book_01.ogf
+radius				= 1
+description			= description_old_book
+inv_name			= inv_name_old_book
+inv_name_short			= inv_name_old_book
+inv_weight                               = 0.1
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 17
+inv_grid_y		= 34
+quest_item			= false
+cost				= 3000
+can_trade			= false
+
+
+[firewood]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_book_01.ogf
+radius				= 1
+description			= description_firewood
+inv_name			= inv_name_firewood
+inv_name_short			= inv_name_firewood
+inv_weight                               = 3.0
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 35
+inv_grid_y		= 21
+quest_item			= false
+cost				= 100
+can_trade			= false
+
+
+
+[ak74_rust]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= dynamics\weapons\wpn_ak74\wpn_ak74.ogf
+radius				= 1
+description			= description_ak74_rust
+inv_name			= inv_name_ak74_rust
+inv_name_short			= inv_name_ak74_rust
+inv_weight                               = 3.4
+inv_grid_width		= 5
+inv_grid_height		= 2
+inv_grid_x		= 36
+inv_grid_y		= 18
+quest_item		= false
+cost			= 10
+can_trade			= true
+
+
+[sks_rust]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= dynamics\weapons\wpn_sks\wpn_sks.ogf
+radius				= 1
+description			= description_sks_rust
+inv_name			= inv_name_sks_rust
+inv_name_short			= inv_name_sks_rust
+inv_weight                               = 3.8
+inv_grid_width		= 6
+inv_grid_height		= 2
+inv_grid_x		= 35
+inv_grid_y		= 16
+quest_item		= false
+cost			= 10
+can_trade			= true
+
+
+[pm_rust]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= dynamics\weapons\wpn_pm\wpn_pm.ogf
+radius				= 1
+description			= description_pm_rust
+inv_name			= inv_name_pm_rust
+inv_name_short			= inv_name_pm_rust
+inv_weight                               = 0.7
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 34
+inv_grid_y		= 18
+quest_item		= false
+cost			= 10
+can_trade			= true
+
+
+[old_moneta]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_book_01.ogf
+radius				= 1
+description			= description_old_moneta
+inv_name			= inv_name_old_moneta
+inv_name_short			= inv_name_old_moneta
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 33
+inv_grid_y		= 17
+quest_item		= false
+cost			= 1000
+can_trade			= false
+
+
+[predb_radio_part]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= additions\pribor_1a.ogf
+radius				= 1
+description			= description_predb_radio_part
+inv_name			= inv_name_predb_radio_part
+inv_name_short			= inv_name_predb_radio_part
+inv_weight                               = 1.0
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 34
+inv_grid_y		= 33
+quest_item		= false
+cost			= 1000
+can_trade			= false
+
+
+[old_collection_box]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\box\box_lab_01.ogf
+radius				= 1
+description			= description_old_collection_box
+inv_name			= inv_name_old_collection_box
+inv_name_short			= inv_name_old_collection_box
+inv_weight		= 1.6
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 39
+inv_grid_y		= 14
+cost				= 100
+quest_item			= false
+can_trade			= false
+
+
+
+[anomal_lamp]:antir_f
+$spawn				= "food and drugs\antirad"
+visual                  			= physics\light\lampa_01_on.ogf
+description			= description_anomal_lamp
+inv_name			= inv_name_anomal_lamp
+inv_name_short			= inv_name_anomal_lamp
+inv_weight			= 0.8
+inv_grid_x			= 36
+inv_grid_y			= 33
+cost				= 20
+inv_grid_width			= 1
+inv_grid_height			= 2
+quest_item			= false
+can_trade				= false
+eat_portions_num			= 100000000
+
+
+
+[predb_base_comp_parol_list]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_zapiska.ogf
+radius				= 1
+description			= description_predb_base_comp_parol_list
+inv_name			= inv_name_predb_base_comp_parol_list
+inv_name_short			= inv_name_predb_base_comp_parol_list
+inv_weight                               = 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 13
+inv_grid_y		= 11
+quest_item			= true
+cost				= 0
+can_trade			= false
+
+
+
+[weapon_box]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\box\box_lab_01.ogf
+radius				= 1
+description			= description_weapon_box
+inv_name			= inv_name_weapon_box
+inv_name_short			= inv_name_weapon_box
+inv_weight		= 2.5
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 27
+inv_grid_y		= 38
+cost				= 1000
+quest_item			= false
+can_trade			= false
+
+
+[electron_block]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\box\box_lab_01.ogf
+radius				= 1
+description			= description_electron_block
+inv_name			= inv_name_electron_block
+inv_name_short			= inv_name_electron_block
+inv_weight		= 1.5
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 32
+inv_grid_y		= 35
+cost			= 500
+quest_item		= false
+can_trade			= false
+
+
+
+[power_liquor]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= power_liquor_descr
+cost				= 150
+inv_name			= inv_name_power_liquor
+inv_name_short		= inv_name_power_liquor
+inv_weight			= 0.4
+inv_grid_width		= 1
+inv_grid_height		= 2
+inv_grid_x			= 33
+inv_grid_y			= 18
+eat_portions_num	= -1
+
+use_sound = addon\inv_softdrink
+
+[rage_liquor]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= rage_liquor_descr
+cost				= 150
+inv_name			= inv_name_rage_liquor
+inv_name_short		= inv_name_rage_liquor
+inv_weight			= 0.4
+inv_grid_width		= 1
+inv_grid_height		= 2
+inv_grid_x			= 32
+inv_grid_y			= 18
+eat_portions_num	= -1
+
+use_sound = addon\inv_softdrink
+
+[brain_liquor]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= brain_liquor_descr
+cost				= 160
+inv_name			= inv_name_brain_liquor
+inv_name_short		= inv_name_brain_liquor
+inv_weight			= 0.4
+inv_grid_width		= 1
+inv_grid_height		= 2
+inv_grid_x			= 31
+inv_grid_y			= 18
+eat_portions_num	= -1
+
+use_sound = addon\inv_softdrink
+
+[radiation_liquor]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+visual				= equipments\flaga
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= radiation_liquor_descr
+cost				= 160
+inv_name			= inv_name_radiation_liquor
+inv_name_short		= inv_name_radiation_liquor
+inv_weight			= 0.4
+inv_grid_width		= 1
+inv_grid_height		= 2
+inv_grid_x			= 30
+inv_grid_y			= 18
+eat_portions_num	= -1
+
+use_sound = addon\inv_softdrink
+
+[broken_radiostation]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_transiver.ogf
+radius				= 1
+description			= description_broken_radiostation
+inv_name			= inv_name_broken_radiostation
+inv_name_short			= inv_name_broken_radiostation
+inv_weight                               = 4
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 12
+inv_grid_y		= 30
+quest_item			= false
+cost				= 500
+can_trade			= false
+
+
+[old_komp_block]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\technica\komp_block.ogf
+radius				= 1
+description			= description_old_komp_block
+inv_name			= inv_name_old_komp_block
+inv_name_short			= inv_name_old_komp_block
+inv_weight                               = 4
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 21
+inv_grid_y		= 39
+quest_item			= false
+cost				= 500
+can_trade			= false
+
+
+[btr_engine_kit]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_merger.ogf
+radius				= 1
+description			= description_btr_engine_kit
+inv_name			= inv_name_btr_engine_kit
+inv_name_short			= inv_name_btr_engine_kit
+inv_weight                               = 2
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 37
+inv_grid_y		= 14
+quest_item			= false
+cost				= 0
+can_trade			= true
+
+
+[tuschano_king_head]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\face_tushkano.ogf
+radius				= 1
+description			= description_tuschano_king_head
+inv_name			= inv_name_tuschano_king_head
+inv_name_short			= inv_name_tuschano_king_head
+inv_weight                               = 1
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 38
+inv_grid_y		= 38
+quest_item			= false
+cost				= 300
+can_trade			= false
+
+
+[mil_bilet]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_zapiska.ogf
+radius				= 1
+description			= description_mil_bilet
+inv_name			= inv_name_mil_bilet
+inv_name_short			= inv_name_mil_bilet
+inv_weight                               = 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 16
+inv_grid_y		= 7
+quest_item			= false
+cost				= 0
+can_trade			= false
+
+
+[mil_hill_vagon_door_key]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\klyu4.ogf
+radius				= 1
+description			= description_mil_hill_vagon_door_key
+inv_name			= inv_name_mil_hill_vagon_door_key
+inv_name_short			= inv_name_mil_hill_vagon_door_key
+inv_weight                               = 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 33
+inv_grid_y		= 33
+quest_item			= true
+cost				= 0
+can_trade			= true
+
+
+
+
+
+
+
+
+[glauncher_vog]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_grenade_launcher.ogf
+radius				= 1
+description			= enc_weapons1_wpn-addon-grenade-launcher
+inv_name			= wpn-addon-grenade-launcher
+inv_name_short			= wpn-addon-grenade-launcher
+inv_weight                               = 1.3
+inv_grid_width	= 2
+inv_grid_height	= 1
+inv_grid_x		= 5
+inv_grid_y		= 6
+cost				= 1500
+
+
+[glauncher_m203]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_grenade_launcher_m203.ogf
+radius				= 1
+description			= enc_weapons1_wpn-addon-grenade-launcher-m203
+inv_name			= wpn-addon-grenade-launcher-m203
+inv_name_short			= wpn-addon-grenade-launcher-m203
+inv_weight                               = 1.5
+inv_grid_width	= 2
+inv_grid_height	= 1
+inv_grid_x		= 5
+inv_grid_y		= 0
+cost				= 2000
+
+
+[silencer_1143]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\addons\sil_1143_p.ogf
+radius				= 1
+description			= enc_arsenal_sil_1143_p
+inv_name			= ars-sil_1143_p
+inv_name_short			= ars-sil_1143_p
+inv_weight                               = 0.3
+inv_grid_width	= 1
+inv_grid_height	= 1
+inv_grid_x		= 9
+inv_grid_y		= 2
+cost		= 1750
+
+
+[silencer_545]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\addons\sil_545_ar.ogf
+radius				= 1
+description			= enc_arsenal_sil_545_ar
+inv_name			= ars-sil_545_ar
+inv_name_short			= ars-sil_545_ar
+inv_weight                               = 0.5
+inv_grid_width	= 2
+inv_grid_height	= 1
+inv_grid_x		= 6
+inv_grid_y		= 5
+cost		= 950
+
+
+[silencer_556]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\addons\sil_556_ar.ogf
+radius				= 1
+description			= enc_arsenal_sil_556_ar
+inv_name			= ars-sil_556_ar
+inv_name_short			= ars-sil_556_ar
+inv_weight                               = 0.6
+inv_grid_width	= 2
+inv_grid_height	= 1
+inv_grid_x		= 5
+inv_grid_y		= 7
+cost		= 1250
+
+
+[silencer_762]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\addons\sil_762_ar.ogf
+radius				= 1
+description			= enc_arsenal_sil_762_ar
+inv_name			= ars-sil_762_ar
+inv_name_short			= ars-sil_762_ar
+inv_weight                               = 0.5
+inv_grid_width	= 2
+inv_grid_height	= 1
+inv_grid_x		= 6
+inv_grid_y		= 4
+cost		= 1330
+
+
+[silencer]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_silencer.ogf
+radius				= 1
+description			= enc_weapons1_wpn-addon-silencer
+inv_name			= wpn-addon-silencer
+inv_name_short			= wpn-addon-silencer
+inv_weight                               = 0.3
+inv_grid_width	= 1
+inv_grid_height	= 1
+inv_grid_x		= 5
+inv_grid_y		= 7
+cost		= 600
+
+
+[silencer_9mm]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_silencer_9mm_nato.ogf
+radius				= 1
+description			= enc_weapons1_wpn-9mm_nato-silencer
+inv_name			= wpn-9mm_nato-silencer
+inv_name_short			= wpn-9mm_nato-silencer
+inv_weight                               = 0.3
+inv_grid_width	= 1
+inv_grid_height	= 1
+inv_grid_x		= 6
+inv_grid_y		= 18
+cost		= 900
+
+
+
+[scope_pso]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_scope.ogf
+radius				= 1
+description			= enc_addon_scope
+inv_name			= addon_scope
+inv_name_short			= addon_scope
+inv_weight                               = 0.4
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 5
+inv_grid_y			= 8
+cost		= 5000
+
+
+[scope_acog]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\addons\acog.ogf
+radius				= 1
+description			= enc_addon_scope_acog
+inv_name			= addon_scope_acog
+inv_name_short			= addon_scope_acog
+inv_weight                               = 0.35
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 7
+cost		= 8000
+
+
+[scope_m16]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\addons\scope2.ogf
+radius				= 1
+description			= enc_addon_scope2
+inv_name			= addon_scope2
+inv_name_short			= addon_scope2
+inv_weight                               = 0.45
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 7
+inv_grid_y			= 7
+cost		= 8500
+
+
+[scope_mosin]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_scope.ogf
+radius				= 1
+description			= wpn_scope_mosin_descr
+inv_name			= wpn_scope_mosin
+inv_name_short			= wpn_scope_mosin
+inv_weight                               = 0.4
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 7
+inv_grid_y			= 6
+cost		= 5000
+
+
+[scope_sks]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_scope.ogf
+radius				= 1
+description			= wpn_addon_scope_sks_descr
+inv_name			= wpn_addon_scope_sks
+inv_name_short			= wpn_addon_scope_sks
+inv_weight                               = 0.42
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 9
+cost		= 5500
+
+
+[scope_susat]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_scope_susat.ogf
+radius				= 1
+description			= enc_addon_scope_susat
+inv_name			= addon_scope_susat
+inv_name_short			= addon_scope_susat
+inv_weight                               = 0.4
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 5
+inv_grid_y			= 9
+cost		= 3400
+
+
+[scope_aksu]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= weapons\upgrade\wpn_scope.ogf
+radius				= 1
+description			= addon_scope_aksu_descr
+inv_name			= addon_scope_aksu_name
+inv_name_short			= addon_scope_aksu_name
+inv_weight                               = 0.38
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 9
+inv_grid_y			= 29
+cost		= 3000
+
+
+
+
+[tutorial_sng_scopes]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= tutorial_sng_scopes_descr
+cost				= 5000
+inv_name			= tutorial_book_name
+inv_name_short			= tutorial_book_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 35
+inv_grid_y		= 20
+eat_portions_num	= 1
+
+
+[tutorial_nato_scopes]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= tutorial_nato_scopes_descr
+cost				= 5000
+inv_name			= tutorial_book_name
+inv_name_short			= tutorial_book_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 35
+inv_grid_y		= 20
+eat_portions_num	= 1
+
+
+[tutorial_sng_sil]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= tutorial_sng_sil_descr
+cost				= 5000
+inv_name			= tutorial_book_name
+inv_name_short			= tutorial_book_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 37
+inv_grid_y		= 20
+eat_portions_num	= 1
+
+
+[tutorial_nato_sil]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= tutorial_nato_sil_descr
+cost				= 5000
+inv_name			= tutorial_book_name
+inv_name_short			= tutorial_book_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 36
+inv_grid_y		= 20
+eat_portions_num	= 1
+
+
+[tutorial_sng_grenl]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= tutorial_sng_grenl_descr
+cost				= 5000
+inv_name			= tutorial_book_name
+inv_name_short			= tutorial_book_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 37
+inv_grid_y		= 20
+eat_portions_num	= 1
+
+
+[tutorial_nato_grenl]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= tutorial_nato_grenl_descr
+cost				= 5000
+inv_name			= tutorial_book_name
+inv_name_short			= tutorial_book_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 37
+inv_grid_y		= 20
+eat_portions_num	= 1
+
+
+
+[dummy]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= food\kartofel.ogf
+radius				= 1
+description			= dummy_descr
+inv_name				= dummy_name
+inv_name_short			= dummy_name
+inv_weight                               = 0.4
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 36
+inv_grid_y			= 35
+cost		= 0
+
+
+[sssr_sign1]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign2]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign3]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign4]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign5]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign6]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign7]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign8]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign9]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+[sssr_sign10]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= sssr_sign_descr
+inv_name				= sssr_sign_name
+inv_name_short			= sssr_sign_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 36
+cost		= 1
+
+
+[signs_albom]:antir_f
+GroupControlSection		= spawn_group
+discovery_dependency		=
+$spawn				= "devices\anomal_map_garbage"
+visual				= equipments\item_book_01.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+description			= signs_albom_descr
+cost				= 10
+inv_name			= signs_albom_name
+inv_name_short			= signs_albom_name
+inv_weight			= 0.2
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x		= 37
+inv_grid_y		= 21
+eat_portions_num	= 10000
+
+
+[bomba]:antir_f
+visual				= equipments\item_rukzak.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+inv_name			= inv_name_bomba
+inv_name_short		= inv_name_bomba
+description		= description_bomba
+cost				= 5000
+inv_weight			= 1.0
+inv_grid_width		= 1
+inv_grid_height		= 2
+inv_grid_x		= 6
+inv_grid_y		= 19
+
+
+[bomba_big]:antir_f
+visual				= equipments\item_rukzak.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+inv_name			= inv_name_bomba_big
+inv_name_short		= inv_name_bomba_big
+description		= description_bomba_big
+cost				= 8000
+inv_weight			= 2.0
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x		= 16
+inv_grid_y		= 30
+
+
+[detonator]:antir_f
+visual				= equipments\item_fmradio.ogf
+$prefetch			= 32
+cform				= skeleton
+radius				= 1
+inv_name			= inv_name_detonator
+inv_name_short		= inv_name_detonator
+description		= description_detonator
+cost				= 100
+inv_weight			= 0.2
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x		= 6
+inv_grid_y		= 21
+eat_portions_num	= 10000
+
+
+[pri_medal]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency		= 
+$spawn 				= "devices\quest_items\decoder_documents"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= monster_items\poltergeist_glas.ogf
+radius				= 1
+description			= pri_medal_descr
+inv_name				= pri_medal_name
+inv_name_short			= pri_medal_name
+inv_weight                               = 0.0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 35
+inv_grid_y			= 22
+cost		= 1
+
+
+[harvest]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\bandage"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= dynamics\weapons\wpn_eat\fake_item.ogf
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 18
+cost				= 30
+
+; eatable item
+eat_health = 	0
+eat_satiety         = 0
+eat_power           = 0
+eat_radiation       = 0
+wounds_heal_perc    = 0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
+
+use_sound = items_sounds\inv_bandage
+use_sound_anm = interface\item_usage\harvest_use
+
+[harvest1]:harvest
+[harvest2]:harvest
+[harvest3]:harvest
+[harvest4]:harvest
+[harvest5]:harvest
+[harvest6]:harvest
+
+[meat]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\bandage"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= dynamics\weapons\wpn_eat\fake_item.ogf
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 18
+cost				= 30
+
+; eatable item
+eat_health = 	0
+eat_satiety         = 0
+eat_power           = 0
+eat_radiation       = 0
+wounds_heal_perc    = 0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
+
+use_sound = items_sounds\inv_bandage
+use_sound_anm = interface\item_usage\harvest_use_success
+
+[torch_use]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\bandage"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= dynamics\weapons\wpn_eat\fake_item.ogf
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 18
+cost				= 30
+
+; eatable item
+eat_health = 	0
+eat_satiety         = 0
+eat_power           = 0
+eat_radiation       = 0
+wounds_heal_perc    = 0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
+
+use_sound = items_sounds\inv_bandage
+use_sound_anm = device\bad_box
+
+[anm_torch]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\bandage"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= dynamics\weapons\wpn_eat\fake_item.ogf
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 18
+cost				= 30
+
+; eatable item
+eat_health = 	0
+eat_satiety         = 0
+eat_power           = 0
+eat_radiation       = 0
+wounds_heal_perc    = 0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
+
+[nv_use]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\bandage"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= dynamics\weapons\wpn_eat\fake_item.ogf
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 18
+cost				= 30
+
+; eatable item
+eat_health = 	0
+eat_satiety         = 0
+eat_power           = 0
+eat_radiation       = 0
+wounds_heal_perc    = 0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
+
+use_sound = items_sounds\inv_bandage
+use_sound_anm = device\bad_box
+
+[swipe_use]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\bandage"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= dynamics\weapons\wpn_eat\fake_item.ogf
+description			= enc_equipment_medi_bandage1
+
+inv_name			= bandage
+inv_name_short		= bandage
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 18
+cost				= 30
+
+; eatable item
+eat_health = 	0
+eat_satiety         = 0
+eat_power           = 0
+eat_radiation       = 0
+wounds_heal_perc    = 0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
+
+use_sound = items_sounds\inv_bandage
+use_sound_anm = interface\item_usage\gasmask_swipe

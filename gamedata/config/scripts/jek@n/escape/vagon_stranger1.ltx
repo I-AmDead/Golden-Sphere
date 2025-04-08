@@ -1,0 +1,121 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look1
+on_timer = 1 | walker@0 %=make_invulnerable =disable_trading%
+
+
+; Лежим в вагончике и стонем:
+[walker@0]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 25|walker@1 %=send_tip(vagon_stranger_tip:stalker:8163) =play_snd(characters_voice\scenario\rostok\heli_crush\professor_pda_help_1)%
+
+[walker@1]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 6000|walker@2
+on_info = {+esc_vagon_ambush} walker@alarm1 %=play_snd_from_obj(8163:script_sound\reactions\enemy\soldier\soldier_enemy_3)%
+
+[walker@2]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 6000|walker@1
+on_info = {+esc_vagon_ambush} walker@alarm1 %=play_snd_from_obj(8163:script_sound\reactions\enemy\soldier\soldier_enemy_3)%
+
+
+; Зовём агентов:
+[walker@alarm1]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+vagon_stranger2_dead +vagon_stranger3_dead} walker@panic1
+on_actor_dist_ge_nvis = 50|%+vagon_stranger1_go_avay =remove_with_teleport%
+on_timer = 8000|walker@alarm2 %=play_snd_from_obj(8163:script_sound\reactions\enemy\soldier\soldier_enemy_3)%
+
+[walker@alarm2]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+vagon_stranger2_dead +vagon_stranger3_dead} walker@panic1
+on_actor_dist_ge_nvis = 50|%+vagon_stranger1_go_avay =remove_with_teleport%
+on_timer = 8000|walker@alarm3 %=play_snd_from_obj(8163:script_sound\reactions\enemy\soldier\soldier_enemy_4)%
+
+[walker@alarm3]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+vagon_stranger2_dead +vagon_stranger3_dead} walker@panic1
+on_actor_dist_ge_nvis = 50|%+vagon_stranger1_go_avay =remove_with_teleport%
+on_timer = 8000|walker@alarm1 %=play_snd_from_obj(8163:script_sound\reactions\enemy\soldier\soldier_enemy_9)%
+
+
+
+; Агенты перебиты:
+[walker@panic1]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 5000|walker@panic2 %=play_snd_from_obj(8163:monsters\stalker\surrender\em1_surrender3)%
+on_info = {+vagon_stranger1_go_avay} walker@away
+
+[walker@panic2]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 5000|walker@panic1 %=play_snd_from_obj(8163:monsters\stalker\surrender\em1_surrender4)%
+on_info = {+vagon_stranger1_go_avay} walker@away
+
+
+; Валим:
+[walker@away]
+path_walk = vagon_stranger1_walk1
+path_look = vagon_stranger1_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 2000|%=remove_with_teleport%
+
+
+
+
+[meet]
+meet_state = 1| wounded_heavy_3
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+vagon_stranger1_dead%
+

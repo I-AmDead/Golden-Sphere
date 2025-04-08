@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<encyclopedia>
+
+    <article id="tutorial_sng_scopes_id_books" name="tutorial_book_name_descr" group="read_books">
+        <text>tutorial_sng_scopes_descr_descr</text>
+    </article>
+    <article id="tutorial_nato_scopes_id_books" name="tutorial_book_name_descr" group="read_books">
+        <text>tutorial_nato_scopes_descr_descr</text>
+    </article>
+    <article id="tutorial_sng_sil_id_books" name="tutorial_book_name_descr" group="read_books">
+        <text>tutorial_sng_sil_descr_descr</text>
+    </article>	
+    <article id="tutorial_nato_sil_id_books" name="tutorial_book_name_descr" group="read_books">
+        <text>tutorial_nato_sil_descr_descr</text>
+    </article>
+    <article id="tutorial_sng_grenl_id_books" name="tutorial_book_name_descr" group="read_books">
+        <text>tutorial_sng_grenl_descr_descr</text>
+    </article>
+    <article id="tutorial_nato_grenl_id_books" name="tutorial_book_name_descr" group="read_books">
+        <text>tutorial_nato_grenl_descr_descr</text>
+    </article>	
+ 
+
+</encyclopedia>
+

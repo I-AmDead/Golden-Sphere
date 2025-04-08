@@ -1,0 +1,22 @@
+[logic]
+active = sr_idle
+
+[sr_particle]
+name = anomaly2\teleport_idle
+path = dar_farm_trap2_zone_getback1_point
+mode = 2
+looped = true
+on_info = {+dar_farm_trap_teleport_stage1 +dar_farm_trap_teleport_stage2 +dar_farm_trap_teleport_stage3 +dar_farm_trap_teleport_stage4 +dar_farm_trap_teleport_stage5 +dar_farm_trap_teleport_stage6 +dar_farm_trap_teleport_stage7 +dar_farm_trap_teleport_stage8} nil %=play_snd(characters_voice\scenario\dar_farm_bandits_request)%
+on_actor_inside = {+dar_farm_trap_teleport_stage5 +dar_farm_trap_teleport_stage6 +dar_farm_trap_teleport_stage7 +dar_farm_trap_teleport_stage8} %=dar_farm_trap_teleport_trawell3%, %=dar_farm_trap_teleport_trawell4 -dar_farm_trap_teleport_stage5 -dar_farm_trap_teleport_stage6 -dar_farm_trap_teleport_stage7 -dar_farm_trap_teleport_stage8%
+
+
+[sr_idle]
+on_info = {+dar_farm_trap_teleport_stage1 +dar_farm_trap_teleport_stage2 +dar_farm_trap_teleport_stage3 +dar_farm_trap_teleport_stage4 +dar_farm_trap_teleport_stage5 +dar_farm_trap_teleport_stage6 +dar_farm_trap_teleport_stage7 +dar_farm_trap_teleport_stage8} nil %=play_snd(characters_voice\scenario\dar_farm_bandits_request)%
+on_actor_inside = {+dar_farm_trap_teleport_stage5 +dar_farm_trap_teleport_stage6 +dar_farm_trap_teleport_stage7 +dar_farm_trap_teleport_stage8} %=dar_farm_trap_teleport_trawell3%, %=dar_farm_trap_teleport_trawell4 -dar_farm_trap_teleport_stage5 -dar_farm_trap_teleport_stage6 -dar_farm_trap_teleport_stage7 -dar_farm_trap_teleport_stage8%
+
+
+
+
+
+
+

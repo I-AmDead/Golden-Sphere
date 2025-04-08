@@ -1,0 +1,38 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = nil
+combat_ignore = combat_ignore
+on_death = death
+trade = misc\trade_nothing.ltx
+
+[remark@start]
+;snd = 
+anim = threat
+target = 37
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+show_spot = false
+on_timer = 1|remark@1 %=make_invulnerable%
+
+[remark@1]
+anim = threat
+target = 37
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+show_spot = false
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+777%

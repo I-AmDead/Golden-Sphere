@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+
+<dialog id="yan_sold_comandr_dialog1">
+	<has_info>yan_bunker_sold_acess</has_info>
+	<dont_has_info>yan_sold_comandr_first_talk</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold_comandr_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold_comandr_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold_comandr_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold_comandr_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold_comandr_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold_comandr_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold_comandr_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold_comandr_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_sold_comandr_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold_comandr_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold_comandr_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_sold_comandr_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>yan_sold_comandr_dialog1_phrase_15</text>
+	<give_info>yan_sold_comandr_first_talk</give_info>
+	<give_info>yan_bunker_atack_start</give_info>
+	<action>xr_effects.spawn_yan_bunker_atack_mobs</action>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_sold2_dialog1">
+	<has_info>yan_bunker_sold_secret_talk</has_info>
+	<dont_has_info>yan_bunker_scout_hunt</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold2_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold2_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold2_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold2_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold2_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold2_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold2_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold2_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold2_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold2_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_sold2_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold2_dialog1_phrase_12</text>
+              <next>12</next>
+              <next>13</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold2_dialog1_phrase_13</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_sold2_dialog1_phrase_14</text>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+           <phrase id="14">
+                <text>yan_sold2_dialog1_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>yan_sold2_dialog1_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>yan_sold2_dialog1_phrase_17</text>
+              <next>17</next>
+              <next>18</next>
+            </phrase>
+           <phrase id="17">
+                <text>yan_sold2_dialog1_phrase_18</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="18">
+                <text>yan_sold2_dialog1_phrase_19</text>
+              <next>21</next>
+            </phrase>
+           <phrase id="19">
+                <text>yan_sold2_dialog1_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>yan_sold2_dialog1_phrase_21</text>
+	<give_info>yan_bunker_scout_hunt</give_info>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+           <phrase id="21">
+                <text>yan_sold2_dialog1_phrase_22</text>
+              <next>22</next>
+            </phrase>
+           <phrase id="22">
+                <text>yan_sold2_dialog1_phrase_23</text>
+  	<give_info>yan_bunker_scout_hunt</give_info>
+	<action>addon_dialogs.mark_yan_sold7body</action>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold_comandr_dialog2">
+	<has_info>yan_bunker_mob1dead</has_info>
+	<has_info>yan_bunker_mob2dead</has_info>
+	<has_info>yan_bunker_mob3dead</has_info>
+	<has_info>yan_bunker_mob4dead</has_info>
+	<has_info>yan_bunker_mob5dead</has_info>
+	<has_info>yan_bunker_mob6dead</has_info>
+	<has_info>yan_bunker_mob7dead</has_info>
+	<has_info>yan_bunker_mob8dead</has_info>
+	<has_info>yan_bunker_mob9dead</has_info>
+	<has_info>yan_bunker_mob10dead</has_info>
+	<dont_has_info>yan_zavod_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold_comandr_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold_comandr_dialog2_phrase_4</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold_comandr_dialog4">
+	<precondition>xr_conditions.yan_burer_scout_body_on_place</precondition>
+	<has_info>yan_bunker_scout_hunt</has_info>
+	<dont_has_info>yan_zavod_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold_comandr_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold_comandr_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold_comandr_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold_comandr_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold_comandr_dialog4_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold_comandr_dialog4_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold_comandr_dialog4_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold_comandr_dialog4_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_sold_comandr_dialog4_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold_comandr_dialog4_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold_comandr_dialog4_phrase_13</text>
+	<give_info>yan_zavod_task</give_info>
+	<action>addon_dialogs.mark_yan_raciya_zone</action>
+	<action>addon_dialogs.yan_cold_comandr_reward1</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold1_dialog1">
+	<dont_has_info>yan_bunker_sold_acess</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold1_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold1_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold1_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold1_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold1_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold1_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold1_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold1_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold1_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold1_dialog1_phrase_10</text>
+              <next>10</next>
+              <next>11</next>
+            </phrase>
+           <phrase id="10">
+	<precondition>addon_dialogs.have5000money</precondition>
+                <text>yan_sold1_dialog1_phrase_11</text>
+	<give_info>yan_bunker_sold_acess</give_info>
+	<action>addon_dialogs.money5000out</action>
+              <next>12</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold1_dialog1_phrase_12</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold1_dialog1_phrase_13</text>
+
+            </phrase>
+           <phrase id="13">
+                <text>yan_sold1_dialog1_phrase_14</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold6_dialog1">
+	<has_info>yan_sold_raciya_info</has_info>
+	<dont_has_info>yan_zavod_kill_burers</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold6_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold6_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold6_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold6_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold6_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold6_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold6_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold6_dialog1_phrase_8</text>
+              <next>8</next>
+              <next>9</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold6_dialog1_phrase_9</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold6_dialog1_phrase_10</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_sold6_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold6_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold6_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_sold6_dialog1_phrase_14</text>
+	<give_info>yan_zavod_kill_burers</give_info>
+	<give_info>yan_sold6_on_position</give_info>
+            </phrase>
+           <phrase id="14">
+                <text>yan_sold6_dialog1_phrase_15</text>
+	<give_info>yan_zavod_kill_burers</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+
+<dialog id="yan_saharov_dialog1">
+	<has_info>x16_adviser_walk2</has_info>
+	<dont_has_info>x16_find_brain_docks1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>yan_saharov_dialog1_phrase_15</text>
+	<give_info>x16_find_brain_docks1</give_info>
+	<action>addon_dialogs.spawn_x16docks_box</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog2">
+	<precondition>addon_dialogs.x16brain_docks1have</precondition>
+	<has_info>x16_find_brain_docks1</has_info>
+	<dont_has_info>x16_find_brain_docks2</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog2_phrase_1</text>
+	<action>addon_dialogs.x16brain_docks_out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog2_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog2_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog2_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog2_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>yan_saharov_dialog2_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>yan_saharov_dialog2_phrase_16</text>
+              <next>16</next>
+              </phrase>
+           <phrase id="16">
+                <text>yan_saharov_dialog2_phrase_17</text>
+	<give_info>x16_find_brain_docks2</give_info>
+	<action>addon_dialogs.spawn_x16docks_box2</action>
+	<action>addon_dialogs.x16door_key_in</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog3">
+	<precondition>addon_dialogs.x16brain_docks2have</precondition>
+	<has_info>x16_find_brain_docks2</has_info>
+	<dont_has_info>x16_brain_temperature</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog3_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog3_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog3_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>yan_saharov_dialog3_phrase_15</text>
+              <next>15</next>
+              </phrase>
+           <phrase id="15">
+                <text>yan_saharov_dialog3_phrase_16</text>
+              <next>16</next>
+              </phrase>
+           <phrase id="16">
+                <text>yan_saharov_dialog3_phrase_17</text>
+              <next>17</next>
+              </phrase>
+           <phrase id="17">
+                <text>yan_saharov_dialog3_phrase_18</text>
+              <next>18</next>
+              </phrase>
+           <phrase id="18">
+                <text>yan_saharov_dialog3_phrase_19</text>
+	<give_info>x16_brain_temperature</give_info>
+	<action>addon_dialogs.x16brain_docks2out</action>
+	<!--action>addon_dialogs.spawn_x16docks_box2</action-->
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog31">
+	<has_info>x16_brain_talk1</has_info>
+	<dont_has_info>x16_power_on</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog31_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog31_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog31_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog31_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog31_phrase_5</text>
+              <next>5</next>
+               </phrase>
+            <phrase id="5">
+                <text>yan_saharov_dialog31_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>yan_saharov_dialog31_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>yan_saharov_dialog31_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>yan_saharov_dialog31_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>yan_saharov_dialog31_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>yan_saharov_dialog31_phrase_11</text>
+	<give_info>x16_power_on</give_info>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="x16brain_dialog1">
+	<dont_has_info>x16_brain_talk1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>x16brain_dialog1_phrase_1</text>
+	<action>soundtrack.x16brain_hello</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>x16brain_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>x16brain_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>x16brain_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>x16brain_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>x16brain_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>x16brain_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>x16brain_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>x16brain_dialog1_phrase_9</text>
+	<give_info>x16_brain_talk1</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog4">
+	<has_info>x16_brain_talk1</has_info>
+	<has_info>x16_power1</has_info>
+	<has_info>x16_power2</has_info>
+	<has_info>x16_power3</has_info>
+	<dont_has_info>x16_talk_to_brain_again</dont_has_info>
+	<dont_has_info>x16_rubilnik_vabank</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog4_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog4_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog4_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog4_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog4_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog4_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog4_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog4_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog4_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog4_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog4_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog4_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog4_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>yan_saharov_dialog4_phrase_15</text>
+              <next>15</next>
+              </phrase>
+            <phrase id="15">
+                <text>yan_saharov_dialog4_phrase_16</text>
+                <next>16</next>
+                <next>17</next>
+            </phrase>
+            <phrase id="16">
+                <text>yan_saharov_dialog4_phrase_17</text>
+	<next>18</next>
+     	    </phrase>
+            <phrase id="17">
+                <text>yan_saharov_dialog4_phrase_18</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="18">
+                <text>yan_saharov_dialog4_phrase_19</text>
+	<give_info>x16_rubilnik_vabank</give_info>
+            </phrase>
+           <phrase id="19">
+                <text>yan_saharov_dialog4_phrase_20</text>
+              <next>20</next>
+            </phrase>
+           <phrase id="20">
+                <text>yan_saharov_dialog4_phrase_21</text>
+              <next>21</next>
+            </phrase>
+           <phrase id="21">
+                <text>yan_saharov_dialog4_phrase_22</text>
+              <next>22</next>
+            </phrase>
+           <phrase id="22">
+                <text>yan_saharov_dialog4_phrase_23</text>
+	<give_info>x16_talk_to_brain_again</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="x16brain_dialog2">
+	<has_info>x16_talk_to_brain_again</has_info>
+	<dont_has_info>x16_brain_talk2</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>x16brain_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>x16brain_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>x16brain_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>x16brain_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>x16brain_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>x16brain_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>x16brain_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>x16brain_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>x16brain_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>x16brain_dialog2_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>x16brain_dialog2_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>x16brain_dialog2_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>x16brain_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>x16brain_dialog2_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>x16brain_dialog2_phrase_15</text>
+	<give_info>x16_brain_talk2</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_saharov_dialog5">
+	<has_info>x16_brain_talk2</has_info>
+	<dont_has_info>x16_burers_visit</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog5_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog5_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog5_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog5_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog5_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog5_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog5_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog5_phrase_9</text>
+	<action>dialogs.break_dialog</action>
+	<give_info>x16_burers_visit</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog6">
+	<has_info>x16_saharov_in_room</has_info>
+	<dont_has_info>x16_saharov_door_closed</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog6_phrase_2</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog7">
+	<has_info>x16_saharov_door_closed</has_info>
+	<dont_has_info>x16_fuel_detonate</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog7_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog7_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog7_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog7_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog7_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog7_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog7_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog7_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog7_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog7_phrase_10</text>
+              <next>10</next>
+              <next>11</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog7_phrase_11</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog7_phrase_12</text>
+	<give_info>x16_fuel_detonate</give_info>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog7_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog7_phrase_14</text>
+	<action>addon_dialogs.matches_in</action>
+	<give_info>x16_fuel_detonate</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog8">
+	<has_info>x16_fuel_blow</has_info>
+	<dont_has_info>x16_exit_done</dont_has_info>
+	<dont_has_info>yan_saharov_escape</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog8_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog8_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog8_phrase_3</text>
+	<give_info>x16_exit_done</give_info>
+	<action>dialogs.break_dialog</action>
+	<action>xr_effects.x16burers_door_break_think</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog9">
+	<has_info>yan_saharov_escape</has_info>
+	<dont_has_info>yan_saharov_companion</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog9_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog9_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog9_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog9_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog9_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog9_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog9_phrase_7</text>
+	<action>addon_dialogs.set_yan_saharov_companion</action>
+	<give_info>yan_saharov_companion</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_sold_comandr_dialog5">
+	<has_info>yan_saharov_on_base</has_info>
+	<dont_has_info>yan_sold_comander_reward</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog5_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold_comandr_dialog5_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold_comandr_dialog5_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold_comandr_dialog5_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold_comandr_dialog5_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold_comandr_dialog5_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold_comandr_dialog5_phrase_8</text>
+              <next>8</next>
+              <next>9</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold_comandr_dialog5_phrase_9</text>
+	<give_info>yan_sold_comander_reward</give_info>
+	<give_info>yan_sold_comander_arsenal_acess</give_info>
+	<action>addon_dialogs.yan_sold_comander_reward</action>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold_comandr_dialog5_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_sold_comandr_dialog5_phrase_11</text>
+              <next>11</next>
+              <next>12</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold_comandr_dialog5_phrase_12</text>
+	<give_info>yan_sold_comander_reward</give_info>
+	<give_info>yan_sold_comander_arsenal_acess</give_info>
+	<action>addon_dialogs.yan_sold_comander_reward</action>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold_comandr_dialog5_phrase_13</text>
+	<give_info>yan_sold_comander_reward</give_info>
+	<action>xr_effects.karma_up</action>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_saharov_dialog10">
+	<has_info>yan_sold_comander_reward</has_info>
+	<dont_has_info>yan_saharov_burers_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog10_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog10_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog10_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog10_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog10_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog10_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog10_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog10_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog10_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog10_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog10_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog10_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog10_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog10_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>yan_saharov_dialog10_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>yan_saharov_dialog10_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>yan_saharov_dialog10_phrase_17</text>
+	<give_info>yan_saharov_burers_info</give_info>
+	<give_info>saharov_medbox_ready</give_info>
+	<action>addon_dialogs.saharov_for_lab_reward</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold6_dialog2">
+	<has_info>yan_sold_comander_reward</has_info>
+	<dont_has_info>yan_our_items_back</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold6_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold6_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold6_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold6_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold6_dialog2_phrase_5</text>
+	<give_info>yan_our_items_back</give_info>
+	<action>addon_dialogs.yan_our_items_back</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog11">
+	<has_info>yan_sold_comander_reward</has_info>
+	<dont_has_info>yan_swamp_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog11_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog11_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog11_phrase_3</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog11_phrase_4</text>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog11_phrase_5</text>
+	<give_info>yan_swamp_task</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog12">
+	<has_info>yan_sold_comander_reward</has_info>
+	<precondition>addon_dialogs.yan_carcrash_docks1have</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog12_phrase_1</text>
+	<action>addon_dialogs.yan_carcrash_docks1out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog12_phrase_2</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog13">
+	<has_info>yan_sold_comander_reward</has_info>
+	<precondition>addon_dialogs.yan_carcrash_docks2have</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog13_phrase_1</text>
+	<action>addon_dialogs.yan_carcrash_docks2out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog13_phrase_2</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_vasiliev_dialog1">
+	<has_info>yan_swamp_task</has_info>
+	<dont_has_info>yan_vasiliev_anomaly_talk</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_vasiliev_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_vasiliev_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_vasiliev_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_vasiliev_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_vasiliev_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_vasiliev_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_vasiliev_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_vasiliev_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_vasiliev_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_vasiliev_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_vasiliev_dialog1_phrase_11</text>
+	<give_info>yan_vasiliev_anomaly_talk</give_info>
+	<action>addon_dialogs.yan_vasiliev_swamp_pribor_in</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_saharov_dialog14">
+	<has_info>yan_anomaly_charge</has_info>
+	<dont_has_info>yan_anomaly_reward</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog14_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog14_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_saharov_dialog14_phrase_3</text>
+	<give_info>yan_anomaly_reward</give_info>
+	<action>addon_dialogs.yan_saharov_swamp_reward1</action>
+              <next>4</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog14_phrase_4</text>
+	<give_info>yan_anomaly_reward</give_info>
+	<action>addon_dialogs.yan_saharov_swamp_reward2</action>
+	<action>xr_effects.karma_up</action>
+              <next>5</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog14_phrase_5</text>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog14_phrase_6</text>
+               </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_sold5_dialog1">
+	<has_info>yan_bunker_sold_acess</has_info>
+	<dont_has_info>yan_sold5_details</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold5_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold5_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold5_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold5_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold5_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold5_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_sold5_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold5_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold5_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_sold5_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_sold5_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_sold5_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_sold5_dialog1_phrase_13</text>
+	<give_info>yan_sold5_details</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold5_dialog2">
+	<has_info>yan_sold5_details</has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold5_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold5_dialog2_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+	<next>4</next>
+	<next>5</next>
+	<next>6</next>
+	<next>7</next>
+     	    </phrase>
+            <phrase id="2">
+	<precondition>addon_dialogs.have_wheel</precondition>
+                <text>yan_sold5_dialog2_phrase_3</text>
+	<action>addon_dialogs.wheel_out</action>
+              <next>8</next>
+            </phrase>
+           <phrase id="3">
+	<precondition>addon_dialogs.have_car_tank</precondition>
+                <text>yan_sold5_dialog2_phrase_4</text>
+	<action>addon_dialogs.car_tank_out</action>
+              <next>8</next>
+            </phrase>
+           <phrase id="4">
+	<precondition>addon_dialogs.have_akumulator</precondition>
+                <text>yan_sold5_dialog2_phrase_5</text>
+	<action>addon_dialogs.akumulator_out</action>
+              <next>8</next>
+            </phrase>
+           <phrase id="5">
+	<precondition>addon_dialogs.have_bearings</precondition>
+                <text>yan_sold5_dialog2_phrase_6</text>
+	<action>addon_dialogs.bearings_out</action>
+              <next>8</next>
+            </phrase>
+           <phrase id="6">
+	<precondition>addon_dialogs.have_electromotor</precondition>
+                <text>yan_sold5_dialog2_phrase_7</text>
+	<action>addon_dialogs.electromotor_out</action>
+              <next>8</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_sold5_dialog2_phrase_8</text>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+           <phrase id="8">
+                <text>yan_sold5_dialog2_phrase_9</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_saharov_dialog15">
+	<has_info>saharov_flash_task</has_info>
+	<has_info>yan_sold_comander_reward</has_info>
+	<dont_has_info>yan_lost_hunter_task</dont_has_info>
+	<precondition>addon_dialogs.have_saharov_flash</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog15_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog15_phrase_2</text>
+	<next>2</next>
+	<next>2_1</next>
+     	    </phrase>
+            <phrase id="2">
+	<dont_has_info>ros_hunter_dead</dont_has_info>
+                <text>yan_saharov_dialog15_phrase_3</text>
+              <next>3</next>
+            </phrase>
+            <phrase id="2_1">
+	<has_info>ros_hunter_dead</has_info>
+                <text>yan_saharov_dialog15_phrase_3_1</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_saharov_dialog15_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog15_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog15_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>yan_saharov_dialog15_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>yan_saharov_dialog15_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>yan_saharov_dialog15_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>yan_saharov_dialog15_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>yan_saharov_dialog15_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>yan_saharov_dialog15_phrase_12</text>
+              <next>12</next>
+              <next>13</next>
+            </phrase>
+           <phrase id="12">
+                <text>yan_saharov_dialog15_phrase_13</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="13">
+                <text>yan_saharov_dialog15_phrase_14</text>
+            </phrase>
+           <phrase id="14">
+                <text>yan_saharov_dialog15_phrase_15</text>
+              <next>15</next>
+              </phrase>
+          <phrase id="15">
+                <text>yan_saharov_dialog15_phrase_16</text>
+              <next>16</next>
+              </phrase>
+          <phrase id="16">
+                <text>yan_saharov_dialog15_phrase_17</text>
+              <next>17</next>
+              </phrase>
+          <phrase id="17">
+                <text>yan_saharov_dialog15_phrase_18</text>
+	<give_info>yan_lost_hunter_task</give_info>
+	<action>addon_dialogs.saharov_flash_out</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="faint_npc2_dialog1">
+	<dont_has_info>faint_man2_companion</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>faint_npc2_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>faint_npc2_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>faint_npc2_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>faint_npc2_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>faint_npc2_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>faint_npc2_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>faint_npc2_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>faint_npc2_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>faint_npc2_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>faint_npc2_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>faint_npc2_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>faint_npc2_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>faint_npc2_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>faint_npc2_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>faint_npc2_dialog1_phrase_15</text>
+	<action>addon_dialogs.set_faint_man2companion</action>
+	<give_info>faint_man2_companion</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="faint_npc2_dialog2">
+	<has_info>yan_faint_on_base</has_info>
+	<dont_has_info>yan_hunter_habar_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>faint_npc2_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>faint_npc2_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>faint_npc2_dialog2_phrase_3</text>
+	<give_info>yan_hunter_habar_info</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="yan_sold_comandr_dialog6">
+	<has_info>actor_yan_hunter_habar_trap</has_info>
+	<dont_has_info>yan_comandr_losthunter_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog6_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold_comandr_dialog6_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold_comandr_dialog6_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold_comandr_dialog6_phrase_5</text>
+	<give_info>yan_comandr_losthunter_info</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="faint_npc2_dialog3">
+	<has_info>yan_comandr_losthunter_info</has_info>
+	<dont_has_info>yan_losthunter_excuse</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>faint_npc2_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>faint_npc2_dialog3_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>faint_npc2_dialog3_phrase_3</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="3">
+                <text>faint_npc2_dialog3_phrase_4</text>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+           <phrase id="4">
+                <text>faint_npc2_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>faint_npc2_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>faint_npc2_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>faint_npc2_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>faint_npc2_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>faint_npc2_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>faint_npc2_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>faint_npc2_dialog3_phrase_12</text>
+	<give_info>yan_losthunter_excuse</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold_comandr_dialog7">
+	<has_info>yan_sold_comander_reward</has_info>
+	<dont_has_info>yan_lost_cargo_task</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog7_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog7_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>yan_sold_comandr_dialog7_phrase_3</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="3">
+                <text>yan_sold_comandr_dialog7_phrase_4</text>
+            </phrase>
+           <phrase id="4">
+                <text>yan_sold_comandr_dialog7_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>yan_sold_comandr_dialog7_phrase_6</text>
+	<give_info>yan_lost_cargo_task</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="yan_sold_comandr_dialog8">
+	<has_info>yan_lost_cargo_task</has_info>
+	<dont_has_info>yan_lost_cargo_task_reward</dont_has_info>
+	<precondition>addon_dialogs.have_yan_ammo_box</precondition>
+	<precondition>addon_dialogs.have_yan_provision_box</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_sold_comandr_dialog8_phrase_1</text>
+	<give_info>yan_lost_cargo_task_reward</give_info>
+	<action>addon_dialogs.yan_lost_cargo_out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_sold_comandr_dialog8_phrase_2</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+
+<dialog id="yan_saharov_dialog16">
+	<has_info>yan_lost_hunter_task</has_info>
+	<dont_has_info>yan_lost_hunter_task_reward</dont_has_info>
+	<precondition>addon_dialogs.have_yan_hunter_flash</precondition>
+                <phrase_list>
+            <phrase id="0">
+                <text>yan_saharov_dialog16_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>yan_saharov_dialog16_phrase_2</text>
+	<next>2</next>
+	<next>3</next>
+     	    </phrase>
+            <phrase id="2">
+	<has_info>yan_losthunter_dead</has_info>
+                <text>yan_saharov_dialog16_phrase_3</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="3">
+	<dont_has_info>yan_losthunter_dead</dont_has_info>
+                <text>yan_saharov_dialog16_phrase_4</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="4">
+                <text>yan_saharov_dialog16_phrase_5</text>
+ 	<action>addon_dialogs.yan_lost_hunter_task_reward1</action>
+	<give_info>yan_lost_hunter_task_reward</give_info>
+              </phrase>
+           <phrase id="5">
+                <text>yan_saharov_dialog16_phrase_6</text>
+ 	<action>addon_dialogs.yan_lost_hunter_task_reward2</action>
+	<give_info>yan_lost_hunter_task_reward</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+
+</game_dialogs>

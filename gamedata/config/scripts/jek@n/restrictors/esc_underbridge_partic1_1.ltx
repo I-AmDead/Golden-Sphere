@@ -1,0 +1,13 @@
+[logic]
+active = nil
+
+[sr_idle]
+on_info = {-underbridge_zone_uncharged} sr_particle@1
+
+[sr_particle@1]
+name = anomaly2\group_items\sarcofag_face_align_03
+path = underbridge_anomaly_point1_1
+mode = 2
+looped = true
+on_info = {+underbridge_zone_uncharged} sr_idle
+

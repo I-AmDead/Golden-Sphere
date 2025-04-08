@@ -1,0 +1,90 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker2
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker1]
+path_walk = shustrila_walk1
+path_look = shustrila_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10 | walker2 %=make_invulnerable%
+
+[walker2]
+path_walk = shustrila_walk1
+path_look = shustrila_look1
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+esc_kpp_band_hitted} camper %=killactor%
+on_info2 = {+abdul_strikes_bandits} walker@wounded %=play_snd_from_obj(8069:characters_voice\human_01\bandit\help\wounded_heavy\help_7) =make_invulnerable%
+
+
+; Стонем:
+[walker@wounded]
+path_walk = shustrila_walk1
+path_look = tirsa_look_wounded
+danger = danger_condition
+combat_ignore_cond = always
+danger = danger_condition
+meet = no_meet
+on_info = {+hunter1_kpp_rest} walker@run_forest_run
+
+
+; Валим нах с КПП
+[walker@run_forest_run]
+path_walk = tirsa_walk_away
+path_look = tirsa_walk_away
+danger = danger_condition
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_signal       = arrived | %=delme2%
+
+
+
+
+
+
+
+
+
+
+[camper]
+path_walk = shustrila_walk1
+path_look = shustrila_look1
+danger = danger_condition
+def_state_campering = threat
+radius = 2
+on_timer = 10000 |  walker2 %-esc_kpp_band_hitted%
+
+
+
+[meet]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = {!killed_by_actor} %+shustrila_dead%, {=killed_by_actor} %+esc_kpp_band_hitted +shustrila_dead%
+
+[hit]
+on_info = {=hit_by_actor} %+esc_kpp_band_hitted%

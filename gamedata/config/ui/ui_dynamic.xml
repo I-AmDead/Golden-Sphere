@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<autodoc>
+  <main_wnd y="100" x="100" height="457" width="591.46120058565" />
+  <background x="0" stretch="1" y="0" height="457" width="591.46120058565">
+    <texture>ui_ad_box</texture>
+  </background>
+  <led x="61.469985358712" stretch="1" y="42" height="28" width="20.989751098097">
+    <texture>ui_ad_led</texture>
+  </led>
+  <btn_main_static x="101.95021961933" stretch="1" y="26" height="57" width="104.94875549048">
+    <texture>ui_ad_btn_main</texture>
+  </btn_main_static>
+  <btn_main y="26" x="101.95021961933" height="57" width="104.94875549048" />
+  <btn_h y="143" x="501.50512445095" height="45" width="59.221083455344" />
+  <btn_h_static x="501.50512445095" stretch="1" y="143" height="45" width="59.221083455344">
+    <texture>ui_ad_btn_kind</texture>
+  </btn_h_static>
+  <btn_s y="233" x="501.50512445095" height="45" width="59.221083455344" />
+  <btn_s_static x="501.50512445095" stretch="1" y="233" height="45" width="59.221083455344">
+    <texture>ui_ad_btn_kind</texture>
+  </btn_s_static>
+  <btn_r y="324" x="501.50512445095" height="45" width="59.221083455344" />
+  <btn_r_static x="501.50512445095" stretch="1" y="324" height="45" width="59.221083455344">
+    <texture>ui_ad_btn_kind</texture>
+  </btn_r_static>
+  <bar_empty_h x="70.465592972182" stretch="1" y="139" height="54" width="421.29428989751">
+    <texture>ui_ad_bar_empty</texture>
+  </bar_empty_h>
+  <bar_empty_s x="70.465592972182" stretch="1" y="229" height="54" width="421.29428989751">
+    <texture>ui_ad_bar_empty</texture>
+  </bar_empty_s>
+  <bar_empty_r x="70.465592972182" stretch="1" y="320" height="54" width="421.29428989751">
+    <texture>ui_ad_bar_empty</texture>
+  </bar_empty_r>
+  <bar_transp y="12" x="8.99560761347" height="32" width="401.80380673499" />
+  <bar_full x="0" stretch="1" y="0" height="32" width="401.80380673499">
+    <texture>ui_ad_bar_full1</texture>
+  </bar_full>
+</autodoc>

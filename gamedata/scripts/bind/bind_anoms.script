@@ -1,0 +1,131 @@
+
+local all_updated_anoms = {}
+local fast_updated_anoms = {}
+local ltx = system_ini()
+local temp_effect = nil
+
+function anom_init(anom) anom:bind_object(anom_binder(anom)) end
+-------------------------------------------------------
+class "anom_binder" (object_binder)
+function anom_binder:__init (obj) super(obj) 
+	self.custom_script_name = nil
+	self.last_time = nil
+	self.custom_script_period = nil
+end
+-------------------------------------------------------
+function anom_binder:net_spawn(sobj)
+    if not object_binder.net_spawn(self,sobj) then return false end
+    local id = self.object:id()
+	local sect = self.object:section()
+	--log("net_spawn anomaly: "..sect)
+    hdetect.add_anomaly_data(id)
+
+	local section = sobj:section_name()
+	if ltx:line_exist(section, "need_update") then
+	local need_upd = ltx:r_bool(section, "need_update")
+		if need_upd == true then
+			all_updated_anoms[id] = self
+			self.custom_script_name = ltx:r_string(section, "script_by_inside")
+			self.custom_script_period = ltx:r_s32(section, "awaking_time") + ltx:r_s32(section, "blowout_time")
+			self.last_time = 0 -- ready
+		end
+	end
+	-- Debug
+			if sobj.get_custom_zone then
+				local cz_sobj = sobj:get_custom_zone()
+				--log("anom_binder:net_spawn(s3681):%s%i:%i,%i,%i", sobj:section_name(), sobj.id, cz_sobj.m_enabled_time, cz_sobj.m_disabled_time, cz_sobj.m_start_time_shift)
+				--debug
+				--[[if (cz_sobj.m_enabled_time > 0 and cz_sobj.m_disabled_time > 0 and cz_sobj.m_start_time_shift > 0) then
+					level.map_add_object_spot_ser(sobj.id, "level_changer", sobj:section_name())
+				end]]
+			elseif sobj.cz_enabled_time then
+				--log("anom_binder:net_spawn(s3686):%s%i:%i,%i,%i", sobj:section_name(), sobj.id, sobj.cz_enabled_time, sobj.cz_disabled_time, sobj.cz_start_time_shift)
+			else
+				log("!anom_binder:net_spawn(s3688): FAIL : sobj:get_custom_zone not found(%s)", sobj:section_name())
+			end
+    return true
+end
+-------------------------------------------------------
+function anom_binder:net_destroy()
+    local id = self.object:id()
+    hdetect.del_anomaly_data(id)
+    object_binder.net_destroy(self)
+	all_updated_anoms[id] = nil
+	fast_updated_anoms[id] = nil
+end
+
+function anom_binder:inside_action()
+	self.last_time = self.custom_script_period
+	local f = _G.bind_anoms[self.custom_script_name]
+	if f then f() end
+end
+
+function slow_update(delta, actor_pos)
+	if not actor_pos then return end
+	for k, v in pairs(all_updated_anoms) do if v then
+		local obj = v.object
+		if obj then
+			local pos = obj:position()
+			local dist = pos:distance_to(actor_pos)
+			if dist < 40 then -- подписаться на быстрый апдейт
+				fast_updated_anoms[k] = v
+			else -- снять себя с быстрого апдейта
+				fast_updated_anoms[k] = nil
+			end
+		else
+			fast_updated_anoms[k] = nil
+		end
+		if v.last_time and v.last_time > 0 then
+			v.last_time = v.last_time - delta
+			if v.last_time < 0 then v.last_time = 0 end
+		end
+	end end
+end
+
+function fast_update(delta, actor_pos)
+	if not actor_pos then return end
+	for k, v in pairs(fast_updated_anoms) do
+		local obj = v.object
+		if obj then
+			if obj:inside(actor_pos) and v.last_time == 0 then
+				v:inside_action(delta)
+			end
+		end
+	end
+end
+
+function cerv_action()
+	spawn.inv("cerv_effector")
+	temp_effect = sr_sz.CervEffect()
+end
+
+function gaz_action() 
+	local pnv_devices = mag_ref_support.get_stat()
+	local helmet_id = pnv_devices[2]
+	if helmet_id then
+	local h_info = mag_ref_support.id_to_iteminfo(helmet_id)
+	local h_obj = level.object_by_id(helmet_id)
+	local h_sect = h_obj:section()
+	if h_obj and h_sect then
+		local upgrade_systems
+		if ltx:line_exist(section, 'upgrade_installed') then
+		local ust = ltx:r_string(section, 'upgrade_installed')
+		upgrade_systems = zander_utils.string_uncompress(ust, ',')
+		local def_system = false
+		if type(upgrade_systems) == 'table' then
+			for k, v in pairs(upgrade_systems) do
+				if v == 'r2' then def_system = true end
+				if v == 'r3' then def_system = true end
+			end
+			if def_system and new_power_system.Get_Charge() > 0 then
+				local msg = "Система защиты дыхания: В воздухе за пределами костюма обнаружена смертельная концентрация ядовитых веществ. Активирована замкнутая система регенерации воздуха."
+				news_manager.send_tip(db.actor, msg, nil, nil, 10000)
+				return
+			end
+		end
+		end
+	end
+	end
+	spawn.inv("gaz_anomaly_effector")
+	temp_effect = sr_sz.GazEffect()
+end

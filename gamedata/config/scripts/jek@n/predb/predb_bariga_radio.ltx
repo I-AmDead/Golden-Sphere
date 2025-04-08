@@ -1,0 +1,13 @@
+[logic]
+active = ph_sound@day
+
+[ph_sound@day]
+snd = predb_bariga_radio_music
+on_info = {+predb_kpp_kontrab_atacked} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+
+
+

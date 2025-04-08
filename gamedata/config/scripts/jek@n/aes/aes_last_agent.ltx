@@ -1,0 +1,173 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+aes_body4_info} walker@5, walker@start
+combat_ignore = combat_ignore
+on_death = death
+;on_hit = hit
+
+
+; Начальная секция:
+[walker@start]
+path_walk = aes_last_agent_walk1
+path_look = aes_last_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_actor_dist_le_nvis = 20|walker@1a %+aes_last_agent_meet =play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_6) =make_invulnerable =disable_trading%
+
+
+; Основная беготня:
+[walker@1a]
+path_walk = aes_last_agent_walk1
+path_look = aes_last_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {+aes_altar_off} remark@storm2
+on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+on_timer = 15000|walker@1
+
+[walker@1]
+path_walk = aes_last_agent_walk1
+path_look = aes_last_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {=aes_last_agent_run_init} walker@2 %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_1)%, {+aes_altar_off} remark@storm2, {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info = {+aes_altar_off} remark@storm2
+;on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info3 = {=aes_last_agent_run_init} walker@2 %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_1)%
+
+
+[walker@2]
+path_walk = aes_last_agent_walk2
+path_look = aes_last_agent_look2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {=aes_last_agent_run_init} walker@3a %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_3)%, {+aes_altar_off} remark@storm2, {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info = {+aes_altar_off} remark@storm2
+;on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info3 = {=aes_last_agent_run_init} walker@3a %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_3)%
+
+
+[walker@3a]
+path_walk = aes_last_agent_walk3
+path_look = aes_last_agent_look3
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {+aes_altar_off} remark@storm2
+on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+on_timer = 15000|walker@3
+
+[walker@3]
+path_walk = aes_last_agent_walk3
+path_look = aes_last_agent_look3
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {=aes_last_agent_run_init} walker@4a %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_4)%, {+aes_altar_off} remark@storm2, {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info = {+aes_altar_off} remark@storm2
+;on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info3 = {=aes_last_agent_run_init} walker@4a %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_4)%
+
+
+[walker@4a]
+path_walk = aes_last_agent_walk4
+path_look = aes_last_agent_look4
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {+aes_altar_off} remark@storm2
+on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+on_timer = 15000|walker@4
+
+[walker@4]
+path_walk = aes_last_agent_walk4
+path_look = aes_last_agent_look4
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_info = {=aes_last_agent_run_init} walker@1 %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_5)%, {+aes_altar_off} remark@storm2, {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info = {+aes_altar_off} remark@storm2
+;on_info2 = {+aes_radstorm -aes_altar_off} remark@storm1
+;on_info3 = {=aes_last_agent_run_init} walker@1 %=play_snd_from_obj(8937:characters_voice\human_03\stalker\states\panic_human\panic_human_5)%
+
+
+; Штормит:
+[remark@storm1]
+anim = psycho_pain
+snd = help_see
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {-aes_radstorm} walker@1
+
+[remark@storm2]
+anim = psycho_pain
+snd = help_see
+target = nil
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+aes_body4_info} walker@5
+
+
+; Получили кристалл и успокоились:
+[walker@5]
+path_walk = aes_last_agent_walk1
+path_look = aes_last_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+
+
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=hit_by_actor} %=make_invulnerable =remove_with_teleport =respawn_aes_last_agent%
+
+[death]
+on_info = %+aes_last_agent_dead%
+
+
+
+
+
+

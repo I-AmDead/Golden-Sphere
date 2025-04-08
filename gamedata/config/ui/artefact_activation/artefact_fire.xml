@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<artefact_fire>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture>ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="58" y="7" r="225" g="218" b="118" font="letterica25">Огненная группа</text>
+</name>
+
+<image x="270" y="230" width="150" height="160" stretch="1">
+	<texture>ui\artefact_activation_logo1</texture>
+</image>
+
+<text_general x="270" y="420" width="420" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">При распаде артефактов огненной группы выделяется тепловая энергия. Это сила огня, живительная для владельца и в то же самое время разрушительная для всех окружающих. Вокруг человека образуется зона повышенной температуры, наносящая урон противникам. Бонусы: \nОгненный урон мутантам и враждебным людям в радиусе 5м.; \nВозможность готовить пищу в котелке без костра; \nВозможность прикуривать без спичек.</text>
+</text_general>
+
+<text1 x="570" y="275" width="370" height="35">
+	<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16"> - 1 минута</text>
+</text1>
+<text2 x="570" y="310" width="370" height="35">
+	<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16"> - 2 минуты</text>
+</text2>
+<text3 x="570" y="350" width="370" height="35">
+	<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16"> - 3 минуты</text>
+</text3>
+
+	<btn_1 x="440" y="270" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>"Уголёк"</text>
+	</btn_1>
+
+	<btn_2 x="440" y="310" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>"Окалина"</text>
+	</btn_2>
+
+	<btn_3 x="440" y="350" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>"Смола"</text>
+	</btn_3>
+
+	<btn_4 x="320" y="633" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+	    <texture_t>ui_button_ordinary_t</texture_t>
+	    <texture_h>ui_button_ordinary_h</texture_h>
+		<text x="0" y="0" r="255" g="85" b="0" font="letterica16">Назад</text>
+	</btn_4>
+
+	<btn_quit x="510" y="633" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+	    <texture_t>ui_button_ordinary_t</texture_t>
+        <texture_h>ui_button_ordinary_h</texture_h>
+    	<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Отмена</text>
+    </btn_quit>
+	
+</artefact_fire>
+

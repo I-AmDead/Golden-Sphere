@@ -1,0 +1,15 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = sr_cutscene %=start_aes_tube_timer%
+
+[sr_cutscene]
+point = aes_gate_point
+look = aes_radwind_point31
+cam_effector = aes_to_tube_fly
+on_signal = cameff_end | sr_idle@2
+
+[sr_idle@2]
+on_info = {!actor_in_aes_safe_zones +aes_radstorm} %=aes_radstorm%
+

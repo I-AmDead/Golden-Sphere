@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_timer = 300000 | sr_idle@2 %=run_postprocess(psy_antenna_indoor:1777:false) =play_snd(ambient\radar_1) =small_telepatic_hit_actor%
+on_info = {+dar_cristall_destroyed} nil
+
+[sr_idle@2]
+on_timer = 300000 | sr_idle@1 %=run_postprocess(psy_antenna_indoor:1777:false) =play_snd(ambient\radar_1) =small_telepatic_hit_actor%
+on_info = {+dar_cristall_destroyed} nil
+
+

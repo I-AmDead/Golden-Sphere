@@ -1,0 +1,35 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+pri_avtost_mob_fight} mob_camp@fight, mob_camp@idle
+on_death = mob_death
+
+[mob_camp@idle]
+path_home = pri_avtostation_mob_point1
+path_look = pri_avtostation_mob_point1
+home_min_radius  = 0
+home_max_radius = 0
+on_timer = 1|mob_camp@run %=alien_control(true) =make_invulnerable =play_snd_from_obj(8904:monsters\bloodsucker\sucker_growl_2)%
+
+[mob_camp@run]
+path_home = pri_avtostation_mob_point2
+path_look = pri_avtostation_mob_point2
+home_min_radius  = 0
+home_max_radius = 0
+on_actor_dist_le_nvis = 15|mob_camp@fight %=alien_control(false) =unmake_invulnerable +pri_avtost_mob_fight%
+
+
+[mob_camp@fight]
+path_home = pri_avtostation_mob_point2
+path_look = pri_avtostation_mob_point2
+home_min_radius  = 2
+home_max_radius = 5
+on_info = {+pri_avtostaion_mob_delete} %=remove_with_shield%
+
+
+
+
+[mob_death]
+on_info = %+pri_avtostation_mob_dead =pri_avtostation_mob_spawn_in%
+

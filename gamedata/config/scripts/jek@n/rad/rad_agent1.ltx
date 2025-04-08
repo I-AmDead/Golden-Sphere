@@ -1,0 +1,40 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@1
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+; Воюем с ГГ:
+[walker@1]
+path_walk = rad_agent1_walk1
+path_look = rad_agent1_look1
+danger = danger_condition
+on_info = {+rad_antenna_on} %=kill%
+on_info2 = {=antigas_on_belt} walker@2
+
+; ГГ типа свой:
+[walker@2]
+path_walk = rad_agent1_walk1
+path_look = rad_agent1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+rad_antenna_on} %=kill%
+on_info2 = {!antigas_on_belt} walker@1
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=hit_by_actor -rad_headhunters_actor_alarm} %+rad_headhunters_actor_alarm%
+
+[death]
+on_info = %+rad_agent1_dead%
+

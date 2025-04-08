@@ -1,0 +1,129 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = dar_renegade2_walk1
+path_look = dar_renegade2_look1
+on_timer = 10 | walker@idle %=make_invulnerable%
+
+[walker@idle]
+path_walk = dar_renegade2_walk1
+path_look = dar_renegade2_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+farm_renegades_box_finded} walker@idle2
+
+[walker@idle2]
+path_walk = dar_renegade2_walk2
+path_look = dar_renegade2_look2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+farm_renegades_box_finded} walker@to_gate
+
+[walker@to_gate]
+path_walk = dar_renegades_gate
+path_look = dar_renegades_gate
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_signal       = arrived | walker@gate
+on_actor_not_in_zone = dar_farm_renegades_enemy_zone | walker@enemy %=unmake_invulnerable =killactor +dar_renegades_box_proval%
+on_info = {+dar_farm_box_opened} walker@enemy %=unmake_invulnerable =killactor%
+
+[walker@gate]
+path_walk = dar_renegade2_walk2
+path_look = dar_renegade2_look2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_actor_not_in_zone = dar_farm_renegades_enemy_zone | walker@enemy %=unmake_invulnerable =killactor%
+on_info = {+dar_farm_box_opened} walker@enemy %=unmake_invulnerable =killactor%
+on_info2 = {+dar_renegades_reward} walker@go_away
+
+
+; Обиделись:
+[walker@enemy]
+path_walk = dar_renegade2_walk2
+path_look = dar_renegade2_look2
+on_info = {+dar_renegade1_dead} remark@dontshoot1 %=set_neutral =clearAbuse =make_invulnerable =play_snd_from_obj(8188:characters_voice\scenario\bandit_help) =send_tip(dar_renegade_surrender_tip:bandit)%
+
+
+; ГГ грохнул напарника, теперь надо сдаваться:
+[remark@dontshoot1]
+anim = prisoner
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 38000 | remark@dontshoot2 %=play_snd_from_obj(8188:characters_voice\scenario\bandit_help)%
+on_info = {+dar_renegade1_go_away} walker@go_away %=drop_npc_item(wpn_pp2000)%
+
+[remark@dontshoot2]
+anim = prisoner
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 38000 | remark@dontshoot1 %=play_snd_from_obj(8188:characters_voice\scenario\bandit_help)%
+on_info = {+dar_renegade1_go_away} walker@go_away %=drop_npc_item(wpn_pp2000)%
+
+
+
+; добрый ГГ нажал на педаль - ренегат умчался в вонючую даль:
+[walker@go_away]
+path_walk = dar_renegade1_walk3
+path_look = dar_renegade1_walk3
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_signal       = arrived | %=delme2%
+
+
+
+
+
+
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) +dar_renegade2_dead =delme%
+
+[death]
+on_info = %+dar_renegade2_dead =dar_renegad2_spawn_in%
+

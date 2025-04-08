@@ -1,0 +1,58 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@1
+combat_ignore = combat_ignore
+threshold = threshold@mil_vsu_sold1_threshold
+on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = mil_vsu_sold1_walk0
+path_look = mil_vsu_saray_point
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@2 %=make_invulnerable%
+
+[walker@2]
+path_walk = mil_vsu_sold1_walk0
+path_look = mil_vsu_saray_point
+danger = danger_condition
+combat_ignore_cond = {-separ_war} always
+on_info = {+mil_vsu_medics} walker@3
+on_info2 = {+separ_war} %=set_enemies(8787:8793:8794:8795:8796:8797:8798) =unmake_invulnerable =set_enemy%
+on_actor_dist_le = 30|%=mil_sold1init_dialog%
+
+[walker@3]
+path_walk = mil_vsu_commander_look1
+path_look = mil_vsu_sold2_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+mil_separ_end} %=delme2%
+
+
+
+
+
+[threshold@mil_vsu_sold1_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_vsu_sold1_dead%
+
+[hit]
+;on_info = {=hit_by_actor} %+777%
+
+

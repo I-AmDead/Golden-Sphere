@@ -1,0 +1,21 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+predb_village_trap} ph_idle@2
+on_info2 = {+predb_village_trap_punish} ph_idle@4 %=play_snd(monsters\controller_act\bet_laugh1)%
+
+[ph_idle@2]
+on_info = {+predb_village_rogue_finded} nil
+on_actor_dist_ge_nvis = 130|ph_idle@3 %=polter_voice_alarm_snd =predb_village_polter_alarm_think%
+
+[ph_idle@3]
+on_info = {+predb_village_rogue_finded} nil
+; актор вернулся обратно в зону влияния:
+on_actor_dist_le_nvis = 125|ph_idle@2
+; актор побежал ещё дальше:
+on_actor_dist_ge_nvis = 140|nil %=polter_voice_kill_snd =predb_village_polter_kill_think =kill_actor =telepatic_hit_obj(37:bip01_spine:1.0:0)%
+
+; сразу нагрубил - казним:
+[ph_idle@4]
+on_timer = 6000|%=telepatic_hit_obj(37:bip01_spine:0.1:0)%

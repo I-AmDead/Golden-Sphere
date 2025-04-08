@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle
+ 
+[sr_idle]
+on_info = {=actor_has_item(agr_fabrik_seif_key)} sr_cutscene %=send_tip(yuriy_after_keys_tip:stalker) =spawn_fabrik_quest_mobs_tribe1 +yuriy_fabrik_to_help =play_snd(characters_voice\scenario\agr_yuriy_see_mutants1)%
+ 
+[sr_cutscene]
+point = agr_brownie_fabrika_home4
+look = agr_brownie_fabrika_home4
+cam_effector = agr_fabrika_quest_fly1
+on_signal = cameff_end | nil

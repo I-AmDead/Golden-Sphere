@@ -1,0 +1,30 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = ros_house_radiola_music
+looped = true
+on_info = {+lenin_bust_gathered} ph_sound@stop, {+lenin_bust_destroyed} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|ph_idle@1
+
+[ph_idle@1]
+on_timer = 3000 | ph_idle@2 %=run_postprocess(agr_u_fade) =disable_ui =play_snd(soundtrack\mil_controller_dead)%
+
+[ph_idle@2]
+on_timer = 3000 | ph_idle@3 %=ros_after_lenin_think%
+
+[ph_idle@3]
+on_timer = 3000 | nil %=enable_ui +ros_master_kill_task%
+
+
+
+
+
+
+
+
+
+

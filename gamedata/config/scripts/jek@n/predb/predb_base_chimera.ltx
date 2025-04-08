@@ -1,0 +1,21 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@1
+on_death = mob_death
+
+[mob_home@1]
+path_home = predb_base_chimera_boss_point1
+home_min_radius  = 5
+home_max_radius = 25
+on_info = {=predb_base_chimera_near -predb_base_chimera_dead} mob_home@2 %=electric_hit_obj(37:bip01_spine:0.8:10) =play_shock_on_actor%
+
+[mob_home@2]
+path_home = predb_base_chimera_boss_point1
+home_min_radius  = 5
+home_max_radius = 25
+on_timer = 5000|mob_home@1 %=play_snd_on_me(monsters\himera1\attack_2)%
+
+[mob_death]
+on_info = %+predb_base_chimera_dead%

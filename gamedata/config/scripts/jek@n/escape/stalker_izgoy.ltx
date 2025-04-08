@@ -1,0 +1,255 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+skidan_habar_info} kamp@after_anomal, kamp
+on_combat = combat
+on_death = death
+
+[combat]
+combat_type = camper
+
+[kamp]
+center_point = izgoy_start_point
+radius = 3 
+on_timer = 10 | kamp@1 %=make_invulnerable%
+
+[kamp@1]
+center_point = izgoy_start_point
+radius = 2 
+def_state_moving = run
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+village_nighthunter_task} walker@to_ambush
+on_info2 = {+izgoy_tutorial_start} walker@to_anomaly1
+
+
+; Идем на кровососа:
+[walker@to_ambush]
+path_walk = izgoy_walk1
+path_look = izgoy_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@ambush
+
+[walker@ambush]
+path_walk = izgoy_walk1
+path_look = izgoy_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+musorka_monstr_spawn} walker@to_monstr
+
+[walker@to_monstr]
+path_walk = esc_musorka_point
+path_look = esc_musorka_point
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+;on_info = {+musorka_monstr_finish} kamp@after_monstr
+on_info = {+musorka_monstr_dead} kamp@after_monstr
+
+[kamp@after_monstr]
+center_point = izgoy_start_point
+radius = 3 
+def_state_moving = run
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+izgoy_tutorial_start} walker@to_anomaly1
+
+
+
+; Учим ГГ добывать артефакты:
+[walker@to_anomaly1]
+path_walk = izgoy_walk2
+path_look = izgoy_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@to_anomaly1_2 %+izgoy_before_anomaly%
+
+[walker@to_anomaly1_2]
+path_walk = izgoy_walk2
+path_look = izgoy_look2
+danger = danger_condition
+combat_ignore_cond = always
+;on_info = {+izgoy_crouch} walker@to_anomaly4
+on_info = {+izgoy_crouch} walker@in_anomaly 
+
+[walker@to_anomaly2]
+path_walk = izgoy_walk3
+path_look = izgoy_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sneak_no_wpn
+def_state_moving2 = sneak_no_wpn
+def_state_moving3 = sneak_no_wpn
+on_signal       = arrived | walker@to_anomaly3
+
+[walker@to_anomaly3]
+path_walk = izgoy_walk4
+path_look = izgoy_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | walker@to_anomaly4
+
+[walker@to_anomaly4]
+path_walk = izgoy_walk5
+path_look = izgoy_look5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | walker@in_anomaly 
+
+; Мы в Аномальной зоне
+[walker@in_anomaly]
+path_walk = izgoy_walk6
+path_look = izgoy_look6
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_signal       = arrived | walker@in_anomaly2 %+izgoy_in_anomaly%
+
+[walker@in_anomaly2]
+path_walk = izgoy_walk6
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_info = {+izgoy_go_home} walker@to_home1
+
+; Ползем из аномалии обратно
+[walker@to_home1]
+path_walk = izgoy_walk7
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | walker@to_home2
+
+[walker@to_home2]
+path_walk = izgoy_walk8
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | walker@to_home3
+
+[walker@to_home3]
+path_walk = izgoy_walk9
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | walker@to_home4
+
+[walker@to_home4]
+path_walk = izgoy_walk2
+path_look = izgoy_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | kamp@after_anomal
+
+[kamp@after_anomal]
+center_point = izgoy_start_point
+radius = 3 
+def_state_moving = run
+danger = danger_condition
+combat_ignore_cond = always
+;on_info = {+izgoy_go_courier} walker@courier1
+
+
+; Сидим и ждем, пока у Скидана станет менее 5000 денег:
+[kamp@after_anomal2]
+center_point = izgoy_start_point
+radius = 3 
+def_state_moving = run
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {=skidan_money_low} walker@courier1 %=send_tip(izgoy_goto_money_tip:stalker) =give_first_habar_info%
+
+
+
+
+
+
+; Курьерствуем:
+[walker@courier1]
+path_walk = izgoy_walk_courier1
+path_look = izgoy_look_courier1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@courier2
+
+[walker@courier2]
+path_walk = izgoy_walk_courier2
+path_look = izgoy_look_courier2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | walker@courier3
+
+[walker@courier3]
+path_walk = izgoy_walk_courier2
+path_look = izgoy_look_courier2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 180000 | walker@courier4 %-izgoy_go_courier%
+
+[walker@courier4]
+path_walk = izgoy_walk_courier1
+path_look = izgoy_look_courier1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_signal       = arrived | kamp@after_anomal3 %=send_tip(skidan_habar_money_tip:stalker) =skidan_get_money =give_first_habar_info%
+
+
+
+[kamp@after_anomal3]
+center_point = izgoy_start_point
+radius = 3 
+def_state_moving = run
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 20
+
+[death]
+on_info = %+esc_izgoy_dead%

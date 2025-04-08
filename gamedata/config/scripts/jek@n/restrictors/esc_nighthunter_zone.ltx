@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+esc_nighthunter_task +volk_on_nighthunters_place} sr_idle@2
+
+[sr_idle@2]
+on_info = {+dog_see_nighthunter} sr_idle@3 %=play_snd_from_obj(8418:monsters\bloodsucker\vampire_sucking)%
+
+[sr_idle@3]
+on_actor_inside = {+esc_nighthunter_task +dog_see_nighthunter} nil %=spawn_esc_nighthunter =play_snd_from_obj(8418:monsters\bloodsucker\sucker_growl_3) +nighthunter_spawn%
+

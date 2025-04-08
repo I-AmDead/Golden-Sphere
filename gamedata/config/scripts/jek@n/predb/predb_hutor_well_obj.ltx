@@ -1,0 +1,19 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = predb_hutor_well_obj_use
+on_use = {=actor_has_item(bucket)} ph_idle@2 %=disable_input =run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 2000|ph_idle@3 %=play_snd(characters_voice\scenario\weel_use)%
+
+[ph_idle@3]
+on_timer = 2000|nil %=spawn_predb_hutor_weel_ghost +hutor_weel_ghost =enable_input%
+
+
+
+

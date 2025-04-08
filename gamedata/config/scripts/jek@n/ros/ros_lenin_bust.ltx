@@ -1,0 +1,11 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips      = ros_lenin_bust_use
+on_info = {+lenin_bust_gathered} %=delme2%
+on_info2 = {+lenin_bust_destroyed} %=play_snd(material\bottle\collide\bottle_break_1) =delme2%
+on_use    = %=ros_lenin_bust_use_interface%

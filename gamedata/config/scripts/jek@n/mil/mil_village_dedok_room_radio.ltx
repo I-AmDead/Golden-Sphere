@@ -1,0 +1,16 @@
+[logic]
+active = ph_sound@day
+
+[ph_sound@day]
+snd = mil_village_dedok_radio_music
+on_info = {+mil_icon_finded} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=delme2%
+
+
+
+
+
+

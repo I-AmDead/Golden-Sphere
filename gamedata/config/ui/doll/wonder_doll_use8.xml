@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<wonder_doll_use8>	
+	<face x="380" y="88" width="210" height="212" stretch="1">
+		<texture>ui\doll\doll_face</texture>
+	</face>
+
+	<dialog_table x="150" y="277" width="530" height="900" stretch="1">
+		<texture>ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+
+	<doll_talk_text x="180" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="255" font="letterica16">Зовут его Максим Камеррер. Он работал в одной из секретных лабораторий, которые размещались в Зоне Отчуждения. После аварии он вместе с большей частью персонала пропал без вести. Примет его я тебе сказать к сожелению не могу - уж извини. Однако затем ты и возмешь меня с собой, чтобы я смогла узнать его при встрече.</text>
+	</doll_talk_text>
+
+
+
+
+	<btn_1 x="300" y="580" width="200" height="17">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Секретная лаборатория в Чернобыльской Зоне? Даже</text>
+	</btn_1>
+	<btn_2 x="300" y="600" width="200" height="17">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>если так, то Максим твой давно мертв.</text>
+	</btn_2>
+
+</wonder_doll_use8>
+

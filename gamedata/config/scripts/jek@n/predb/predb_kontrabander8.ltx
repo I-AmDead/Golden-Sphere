@@ -1,0 +1,81 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_courier_goodbye} walker@3, {+kpp_kontrab_goto_hutor} kamp@1, walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+threshold = threshold@predb_kontrabander8_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kontrabander8_walk1
+path_look = predb_kontrabander8_look1
+on_info = {+predb_kpp_fight_start} walker@shooting
+
+[walker@shooting]
+path_walk = predb_kontrabander8_walk1
+path_look = predb_kontrabander8_look1shoot_kpp
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_kpp_soldiers_atacked} walker@2 %=set_enemies(8628:8629:8630:8631:8632:8633:8634)%
+on_info2 = {+predb_kpp_kontrab_atacked} walker@2 %=set_enemies(8628:8629:8630:8631:8632:8633:8634) =killactor%
+
+[walker@1]
+path_walk = predb_kontrabander8_walk1
+path_look = predb_kontrabander8_look1
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+predb_kpp_fight_start} walker@2 %=set_enemies(8628:8629:8630:8631:8632:8633:8634)%
+
+[walker@2]
+path_walk = predb_kontrabander8_walk2
+path_look = predb_kontrabander8_look2
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+kpp_kontrab_goto_hutor} kamp@1
+
+[kamp@1]
+center_point = predb_kontrab_hutor_kamp
+radius = 2 
+def_state_moving = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+predb_courier_goodbye} walker@3
+
+; Набухались:
+[walker@3]
+path_walk = predb_kontrabander8_walk3
+path_look = predb_kontrabander6_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+
+[threshold@predb_kontrabander8_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {-predb_kpp_kontrab_atacked =hit_by_actor} %+predb_kpp_kontrab_atacked%
+
+[death]
+on_info = {=killed_by_actor} %+predb_kontrabander8_dead +predb_kpp_kontrab_atacked%, {!killed_by_actor} %+predb_kontrabander8_dead%
+

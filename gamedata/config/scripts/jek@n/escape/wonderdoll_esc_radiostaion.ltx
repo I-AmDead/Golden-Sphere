@@ -1,0 +1,30 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_button@1
+
+; Ставим конденастор:
+[ph_button@1]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = esc_radiostation_repare1
+on_press    = {=actor_has_item(condensator)} ph_button@2 %=remove_item(condensator) =give_dolltip1 +wonder_task_done2%
+
+; Ставим аккумулятор:
+[ph_button@2]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = esc_radiostation_repare2
+on_press    = {=actor_has_item(akumulator)} ph_sound %=remove_item(akumulator) =give_dolltip1%
+
+
+[ph_sound]
+snd = esc_radiostation
+on_signal = sound_end| ph_button@3 %=wonder_task_done3%
+
+[ph_button@3]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = esc_radiostation_use
+on_press    = ph_sound

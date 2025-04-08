@@ -1,0 +1,40 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_camp@1
+
+
+
+[mob_camp@1]
+path_home = dar_ovrag_teleport_house
+path_look = dar_ovrag_teleport_house
+home_min_radius  = 0
+home_max_radius = 0
+on_info = {=dar_woman_is_near7meters} mob_camp@2
+
+[mob_camp@2]
+path_home = dar_ovrag_teleport_house
+path_look = dar_ovrag_teleport_house
+home_min_radius  = 0
+home_max_radius = 0
+on_info = {=dar_woman_is_near4meters} mob_camp@3 %+dar_woman_stolen =play_snd_from_obj(8343:anomaly\teleport_work_2) =delme%
+
+[mob_camp@3]
+path_home = dar_suicider_woman_walk8
+path_look = dar_suicider_woman_look8
+home_min_radius  = 0
+home_max_radius = 0
+on_info = {=dar_woman_is_near4meters} %+dar_woman_stolen =play_snd_from_obj(8343:anomaly\teleport_work_2) =delme%
+
+
+
+
+
+[mob_home@3]
+path_home = dar_suicider_woman_walk8
+path_look = dar_suicider_woman_look8
+home_min_radius = 1
+home_max_radius = 3
+on_info = {=dar_woman_is_near4meters} %+dar_woman_stolen =play_snd_from_obj(8343:anomaly\teleport_work_2) =delme%
+

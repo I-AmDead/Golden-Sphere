@@ -1,0 +1,53 @@
+; Динамит, взрывающий завал на Агропроме:
+
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer = 2000 | ph_idle@2 %=send_tip(dynamite_timer_tip1:default)%
+
+[ph_idle@2]
+on_timer = 2000 | ph_idle@3 %=send_tip(dynamite_timer_tip2:default)%
+
+[ph_idle@3]
+on_timer = 2000 | ph_idle@4 %=send_tip(dynamite_timer_tip3:default)%
+
+[ph_idle@4]
+on_timer = 2000 | ph_idle@5 %=send_tip(dynamite_timer_tip4:default)%
+
+[ph_idle@5]
+on_timer = 2000 | ph_idle@6 %=send_tip(dynamite_timer_tip5:default)%
+
+[ph_idle@6]
+on_timer = 2000 | ph_idle@7 %=send_tip(dynamite_timer_tip6:default)%
+
+[ph_idle@7]
+on_timer = 2000 | ph_idle@8 %=send_tip(dynamite_timer_tip7:default)%
+
+[ph_idle@8]
+on_timer = 2000 | ph_idle@9 %=send_tip(dynamite_timer_tip8:default)%
+
+[ph_idle@9]
+on_timer = 2000 | ph_idle@10 %=send_tip(dynamite_timer_tip9:default)%
+
+[ph_idle@10]
+on_timer = 2000 | ph_idle@blow1 %=send_tip(dynamite_timer_tip10:default)%
+
+[ph_idle@blow1]
+on_timer = 1000 | ph_idle@blow2 %=dynamite_bomb_spawn%
+
+[ph_idle@blow2]
+on_timer = 800 | ph_idle@blow3 %=hit_obj(8404:kost:10:10)%
+
+[ph_idle@blow3]
+on_timer = 800 | %=agr_blocks_destroy =play_particle_on_path(explosions\expl_wall:agr_blocks_point) =delme%
+
+
+
+
+
+
+

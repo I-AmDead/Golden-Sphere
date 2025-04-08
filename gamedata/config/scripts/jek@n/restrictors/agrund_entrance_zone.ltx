@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {+yuriy_germetic_suit_done} sr_idle@2 %=delete_agr_hunter1 =delete_agr_hunter2 +spawn_agrund_hunter%
+
+[sr_idle@2]
+on_actor_inside = {+agrund_redrik_final} nil %+spawn_agr_redrik2%
+
+
+

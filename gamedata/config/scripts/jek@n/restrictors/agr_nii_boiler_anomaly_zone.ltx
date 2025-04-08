@@ -1,0 +1,12 @@
+[logic]
+active = nil
+
+[sr_particle@1]
+name = anomaly2\heat_04
+path = agr_nii_boiler_anomaly_zone_point1
+mode = 2
+looped = true
+on_actor_inside = %=hit_obj(37:bip01_spine:0.3:0) =run_postprocess(fire_hit)%
+
+
+

@@ -1,0 +1,21 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+
+function get_storage(id,name)
+	if not id then
+		return
+	end
+	local st = db.storage[id]
+	if not st then
+		return
+	end
+	if not st.rx_ai then
+		st.rx_ai = {}
+	end
+	if not name then
+		return st.rx_ai
+	end
+	if not st.rx_ai[name] then
+		st.rx_ai[name] = {}
+	end
+	return st.rx_ai[name]
+end

@@ -1,0 +1,23 @@
+--'*******************************************************************************
+--'   **   **   **   **   **    **   **   **   **    AMK_METKA     **   **   **   **   **    **   **   **   **
+--'*******************************************************************************
+
+local beakons={}
+function check_beacon_drop(obj)
+	if obj:section()=="amk_metka" then
+		beakons[obj:id()]=true
+	end
+end
+
+function check_metka()
+	for id,v in pairs(beakons) do
+		local obj=level.object_by_id(id)
+		if obj then
+			beakons[id]=nil
+			if obj:parent()==nil then
+				local spwn=ui_dots.dots(get_hud(),id)
+				level.start_stop_menu(spwn,true)
+			end
+		end
+	end  
+end

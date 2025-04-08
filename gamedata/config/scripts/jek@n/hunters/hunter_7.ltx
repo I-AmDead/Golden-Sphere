@@ -1,0 +1,63 @@
+; Иван, Милитари
+
+[smart_terrains]
+none = true
+
+[logic]
+active = {+mil_aviators_spwn} walker@4, walker@start
+on_death = death
+threshold = threshold@hunter7_threshold
+meet = meet
+
+[walker@start]
+path_walk = mil_hunter_walk1
+path_look = mil_hunter_look1
+on_timer      = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = mil_hunter_walk1
+path_look = mil_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_aviators_spwn} walker@2
+
+[walker@2]
+path_walk = mil_hunter_walk2
+path_look = mil_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@3 %=mil_hunter_dog_tip =give_items(wpn_toz194)%
+
+[walker@3]
+path_walk = mil_hunter_walk3
+path_look = mil_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@4
+
+[walker@4]
+path_walk = mil_hunter_walk3
+path_look = mil_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+[threshold@hunter7_threshold]
+max_ignore_distance = 5
+
+
+[danger_condition]
+ignore_distance = 10
+ignore_distance_corpse = 0
+ignore_distance_sound = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_hunter_dead%

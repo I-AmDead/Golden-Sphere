@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<pri_sold_monument>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture x="0" y="0" width="1020" height="626">ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Надпись на табличке:</text>
+</name>
+
+
+	<text1 x="280" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="225" g="218" b="118" a="158" font="graffiti22">Вечная слава бойцам 379-й мотострелковой дивизии в декабре-ноябре 1944г. освободившим полесье от немецко-фашистских захватчиков.</text>
+	</text1>
+
+	<text2 x="280" y="410" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Ниже дописано детской рукой:</text>
+	</text2>
+
+	<text3 x="280" y="440" width="380" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Дедушка, мы уезжаим, я хотел принести тибе твою мидаль но мама забрала и положила в чимодан. Пока.</text>
+	</text3>
+
+
+	<btn_quit x="310" y="550" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Выход</text>
+	</btn_quit>
+
+</pri_sold_monument>
+

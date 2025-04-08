@@ -1,0 +1,11 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = magnitofon_use
+on_use = %+bar_road_bus_off =run_postprocess(deadcity_wake_old:677:false) =give_items_to_actor(magnitofon_portable) =play_snd(ambient\random\rnd_horror3) =bar_roadbus_teleport =delme2%
+
+
+
+
+

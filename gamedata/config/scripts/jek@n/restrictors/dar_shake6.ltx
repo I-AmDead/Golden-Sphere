@@ -1,0 +1,9 @@
+[logic]
+active = nil
+
+[sr_particle]
+name = ghoul\snow_effect
+path = dar_shake6_point
+mode = 2
+looped = false
+on_actor_inside = %=hit_obj(37:bip01_spine:0:50) =run_cam_effector(earthquake) =drop_npc_item2(37:dar_shake6_point) =play_snd(ambient\rnd_outdoor\rnd_darkwind5)%

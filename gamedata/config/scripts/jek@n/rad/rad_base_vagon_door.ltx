@@ -1,0 +1,36 @@
+[logic]
+active = ph_door@locked
+
+[ph_door@locked]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = rad_vagon_door_use
+on_info = {+x10_button_switch} nil %=delme2%
+on_use = {=actor_has_item(rad_vagon_door_key)} ph_door@open %=remove_item(rad_vagon_door_key)%
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+;tip_open = dar_building_generator_door_use
+on_use = ph_door@open
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+x10_button_switch} nil %=delme2%
+
+
+
+
+

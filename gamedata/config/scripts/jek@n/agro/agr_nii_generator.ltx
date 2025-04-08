@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips = agr_nii_generator_on
+on_use    = {=actor_has_item(generator_candle)} ph_sound %+agr_nii_generator_on =remove_item(generator_candle) =agr_nii_buttons_power_on_think%
+
+[ph_sound]
+snd = diesel_generator_work
+looped = true

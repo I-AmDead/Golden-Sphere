@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle0
+
+[sr_idle0]
+; мы побывали в тюрьме и сумели убежать:
+on_info = {+actor_blokpost_leave} sr_idle1
+; мы настолько хитрожопы, что сумели проскочить мимо вояк и поэтому заслуживаем кары:
+on_actor_inside =  nil %=esc_post_sniperkill =play_snd_from_obj(37:weapons\svu_shoot)%
+
+[sr_idle1]
+on_timer = 30000 | sr_idle2
+
+[sr_idle2]
+on_actor_inside = {=actor_wears_mask_outfit} sr_idle3, {!actor_wears_mask_outfit +blokpost_alarm2} nil %=esc_post_sniperkill =play_snd_from_obj(37:weapons\svu_shoot)%
+
+[sr_idle3]
+on_timer = 10 | sr_idle2

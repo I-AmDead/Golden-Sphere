@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {=actor_has_item_on_belt(af_eye) +af_eye_info -dar_trap_teleports_spawn} sr_idle@2 %=play_snd(ambient\owl_1) +dar_teleport_trap_recharge1%
+
+[sr_idle@2]
+on_info = {-dar_teleport_trap_recharge1} sr_idle@1
+
+
+
+
+
+
+
+
+

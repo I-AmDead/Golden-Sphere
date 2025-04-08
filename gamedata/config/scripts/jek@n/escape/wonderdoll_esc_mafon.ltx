@@ -1,0 +1,10 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+wonder_task_done1} nil
+on_use  = nil %=condensator_give =send_tip(condensator_give_tip:default) =give_dolltip1 +wonder_task_done1%
+tips = esc_mafon_destroy

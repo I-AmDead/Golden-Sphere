@@ -1,0 +1,66 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@1
+combat_ignore = combat_ignore
+;on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = dar_build_sergey_walk1
+path_look = dar_build_sergey_look1
+combat_ignore_cond = always
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+meet = no_meet
+on_timer = 5000|remark@prisoner %=play_snd_from_obj(8481:characters_voice\human_01\stalker\help\wounded_heavy\help_4)%
+
+[remark@prisoner]
+no_move = true
+anim = prisoner
+target = 8483
+meet = no_meet
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {=hit_by_dar_build_guard1} remark@zombie %+dar_sergey_dead%
+
+
+; Нас зомбировали из пси-оружия:
+[remark@zombie]
+no_move = true
+anim = wounded
+snd = zombied_idle
+target = nil
+meet = no_meet
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 70000|%=kill%
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=hit_by_dar_build_guard1} remark@zombie %+dar_sergey_dead%
+;on_info = %+dar_sergey_dead =spawn_zombie2_at_pos =delme2%
+
+[death]
+on_info = %+dar_sergey_dead%
+;on_info = %+dar_sergey_dead =spawn_zombie2_at_pos =delme2%
+
+
+
+

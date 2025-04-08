@@ -1,0 +1,16 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = hunter_7_help
+min_idle = 5000
+max_idle = 9000
+looped = true
+on_info = {+mil_hntr_dog1 +mil_hntr_dog2 +mil_hntr_dog3} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+
+
+ 

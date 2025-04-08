@@ -1,0 +1,18 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+x16_rubilnik_vabank} ph_button
+
+[ph_button]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = x16_pult_general_use
+on_press = ph_button@deactivate %=play_snd(ambient\switch_2)%
+
+[ph_button@deactivate]
+anim = lab_primary_switcher_off
+on_timer = 500 | nil %=turn_on(8739) +x16_brain_kill%

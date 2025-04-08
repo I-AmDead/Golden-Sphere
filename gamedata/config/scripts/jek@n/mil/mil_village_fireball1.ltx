@@ -1,0 +1,16 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+
+[mob_home]
+path_home = mil_village_fireball_point1
+home_min_radius  = 4
+home_max_radius = 8
+braindead = true
+on_info = {+mil_find_icon_task5} %=delme2%
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:0.1:10) =run_postprocess(fire_hit)%
+
+
+

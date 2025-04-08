@@ -1,0 +1,22 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info    = {=actor_has_item(pri_detsad_medroom_key)} ph_idle@2 %=pri_detsad_help_think1%
+
+[ph_idle@2]
+on_info    = {=actor_has_item(pri_detsad_freezer_key)} ph_idle@3 %=pri_detsad_help_think2%
+
+[ph_idle@3]
+on_info    = {=actor_has_item(pri_detsad_bottle)} ph_idle@4 %=pri_detsad_help_think3%
+
+
+[ph_idle@4]
+tips     = pri_detsad_director_door_trigger_use
+on_use    = {=actor_has_item(pri_detsad_gazeta)} ph_idle@5 %=disable_ui =run_postprocess(agr_u_fade)%
+
+[ph_idle@5]
+on_timer = 4000|nil %=pri_detsad_director_door_trigger_use =enable_ui =play_snd(soundtrack\horror_time\38)%
+
+
+ 

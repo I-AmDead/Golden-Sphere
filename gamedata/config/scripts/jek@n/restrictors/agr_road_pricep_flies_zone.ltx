@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle
+ 
+[sr_idle]
+on_actor_inside = sr_idle@2 %=spawn_agr_road_pricep_flies%
+
+[sr_idle@2]
+on_actor_outside = sr_idle
+
+
+
+[sr_particle]
+name = parpar\particle_paradise_expsmoke_00
+path = agr_moving_fly_pricep_nest
+mode = 2
+looped = false
+on_actor_outside = sr_idle

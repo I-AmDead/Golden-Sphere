@@ -1,0 +1,23 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips = af_top_use
+on_use = %=release_af_top_zone =give_items_to_actor(af_top) =delme%
+on_timer = 3000 | ph_idle@2 %=play_snd_from_obj(8511:anomaly\anomaly_gravy_blast00) =play_particle_on_af_top%
+
+[ph_idle@2]
+tips = af_top_use
+on_use = %=release_af_top_zone =give_items_to_actor(af_top) =delme%
+on_timer = 3000 | ph_idle@1 %=play_snd_from_obj(8511:anomaly\anomaly_gravy_blast00) =play_particle_on_af_top%
+
+
+
+
+
+
+
+

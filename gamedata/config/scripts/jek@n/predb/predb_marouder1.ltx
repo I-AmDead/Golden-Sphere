@@ -1,0 +1,163 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_kpp_kontrab_atacked} camper@1, {+predb_marod_base_end} kamp@base, {+predb_maroresr_base} walker@9, {+predb_marouders_to_base} walker@8, {+predb_marouders_to_door} walker@7, {+predb_marouder_search} walker@3, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_marouder1_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_marouder1_walk1
+path_look = predb_marouder1_look1
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = predb_marouder1_walk1
+path_look = predb_marouder1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_firest_maroud_mob1_dead +predb_firest_maroud_mob2_dead +predb_firest_maroud_mob3_dead +predb_firest_maroud_mob4_dead +predb_firest_maroud_mob5_dead +predb_firest_maroud_mob6_dead +predb_firest_maroud_mob7_dead +predb_firest_maroud_mob8_dead +predb_firest_maroud_mob9_dead +predb_firest_maroud_mob10_dead +predb_firest_maroud_mob11_dead +predb_firest_maroud_mob12_dead +predb_firest_maroud_mob13_dead +predb_firest_maroud_mob14_dead +predb_firest_maroud_mob15_dead} walker@2 %=send_tip(predb_marouder_wellcome_tip:stalker)%
+
+[walker@2]
+path_walk = predb_marouder1_walk1
+path_look = predb_marouder1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouder_search} remark@search
+
+[remark@search]
+snd = marouder_to_search
+anim = caution
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end|walker@3
+
+
+; Занимаемся поисками лута:
+[walker@3]
+path_walk = predb_marouder1_walk2
+path_look = predb_marouder1_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@7 %=predb_marouder_mobs_spawn%
+on_signal       = arrived|walker@4
+
+[walker@4]
+path_walk = predb_marouder1_walk2
+path_look = predb_marouder1_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@7 %=predb_marouder_mobs_spawn%
+on_timer = 20000|walker@5
+
+
+[walker@5]
+path_walk = predb_marouder1_walk3
+path_look = predb_marouder1_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@7 %=predb_marouder_mobs_spawn%
+on_signal       = arrived|walker@6
+
+[walker@6]
+path_walk = predb_marouder1_walk3
+path_look = predb_marouder1_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_marouders_to_door} walker@7 %=predb_marouder_mobs_spawn%
+on_timer = 20000|walker@3
+
+
+; У двери в подвал:
+[walker@7]
+path_walk = predb_marouder1_walk4
+path_look = predb_marouder1_look4
+danger = danger_condition
+;combat_ignore_cond = always
+;meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+predb_marouders_to_base} walker@8 %=make_invulnerable%
+
+
+; Топаем к военной базе:
+[walker@8]
+path_walk = predb_marouder1_walk5
+path_look = predb_marouder1_look5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@9 %+predb_maroresr_base%
+
+[walker@9]
+path_walk = predb_marouder1_walk5
+path_look = predb_marouder1_look5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_base_docks3_info +predb_base_chimera_dead} walker@9_1
+
+[walker@9_1]
+path_walk = predb_marouder1_walk5
+path_look = predb_marouder1_look5
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 5000|walker@10
+
+; Врываемся на базу:
+[walker@10]
+path_walk = predb_marouder1_walk6
+path_look = predb_marouder1_look6
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+predb_marod_base_end} kamp@base
+
+; Отдыхаем на базе:
+[kamp@base]
+center_point = predb_marouders_base_camp
+radius = 3 
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+; Если ГГ за военных:
+[camper@1]
+path_walk = predb_marouder1_tower_walk
+path_look = predb_marouder1_tower_look
+;sniper = true
+def_state_campering = specnaz
+def_state_campering_fire = specnaz
+radius = 6
+danger = danger_condition
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+
+[threshold@predb_marouder1_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_marouder1_dead =predb_marod1spawn_in%
+

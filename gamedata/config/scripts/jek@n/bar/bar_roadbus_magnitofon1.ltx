@@ -1,0 +1,15 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = bar_magnitofon_music
+looped = true
+on_info = {+bar_road_bus_off} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=delme2%
+
+
+
+

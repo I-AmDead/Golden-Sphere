@@ -1,0 +1,11 @@
+[collide]
+ignore_static
+
+[logic]
+active = nil
+
+[ph_idle@1]
+on_info = {+ros_tunnel_vetryak_off} nil
+on_actor_in_zone = ros_tunnel_entrance_zone | %=hit_obj(37:bip01_spine:0:2600) =play_snd_from_obj(37:ambient\whistling_wind_22)%
+
+

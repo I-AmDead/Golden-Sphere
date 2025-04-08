@@ -1,0 +1,118 @@
+; Григорий, Росток
+
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start, {+ros_hunter_behind_rescuer} walker@5
+on_death = death
+
+[walker@start]
+path_walk = ros_hunter_walk1
+path_look = ros_hunter_look1
+on_timer      = 1|walker@1 %=make_invulnerable%
+
+
+; Сидим в пьяном состоянии:
+[walker@1]
+path_walk = ros_hunter_walk1
+path_look = ros_hunter_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+spawn_ros_desant +ros_hunter_goto_rescuer} walker@2
+on_info2 = {+ros_hunter_shron2_info} walker@c
+
+; Немного протрезвели:
+[walker@c]
+path_walk = ros_hunter_walk1
+path_look = ros_hunter_look1_1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+spawn_ros_desant +ros_hunter_goto_rescuer} walker@2
+
+
+; Бежим к военным сталкерам:
+[walker@2]
+path_walk = ros_hunter_walk2
+path_look = ros_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@3 %=ros_hunter_behind_rescuer =play_snd_from_obj(8061:characters_voice\human_03\stalker\hail\hail_6)%
+
+[walker@3]
+path_walk = ros_hunter_walk2
+path_look = ros_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+lenin_bust_gathered} walker@a
+on_info2 = {+lenin_bust_destroyed} walker@b
+
+[walker@a]
+path_walk = ros_hunter_walk2
+path_look = ros_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 21000 | walker@4 
+
+[walker@b]
+path_walk = ros_hunter_walk2
+path_look = ros_hunter_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+ros_rescuers_robbery} %=die%
+
+
+; В недостроенном здании:
+[walker@4]
+path_walk = ros_hunter_walk3
+path_look = ros_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@5 %+ros_hunter_in_building =send_tip(hunter_in_building_tip:stalker)%
+
+[walker@5]
+path_walk = ros_hunter_walk3
+path_look = ros_hunter_look3
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+
+[meet]
+meet_state = 6| idle
+meet_state = 5| idle
+victim = 6| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+
+
+[threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+
+[danger_condition]
+ignore_distance = 10
+ignore_distance_corpse = 0
+ignore_distance_sound = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+ros_hunter_dead%
+
+
+

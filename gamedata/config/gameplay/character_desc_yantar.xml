@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+
+<specific_character id="x16brain" team_default="1">
+		<name>Мозг</name>
+		<icon>ui_npc_x16_brain</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_stalker_general_bio</bio>
+
+		<class>x16brain</class>
+		<community>pervert</community> 
+		
+		<rank>107</rank>
+		<reputation>38</reputation>
+		<money min="1" max="2" infinitive="0"></money>
+		
+		<snd_config>characters_voice\human_04\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\nevidimka</visual>
+		<!--visual>actors\ucheniy\ucheniy_2</visual-->
+		<supplies>
+			[spawn] \n
+		</supplies>
+		<start_dialog>x16brain_dialog1</start_dialog>	
+		<actor_dialog>x16brain_dialog2</actor_dialog>
+
+</specific_character>
+
+<!--yan_saharov-->
+	<specific_character id="yan_saharov" team_default = "1">
+		<name>Профессор Сахаров</name>
+		<icon>ui_npc_u_ucheniy_2</icon>
+		<map_icon x="7" y="0"></map_icon>
+		<bio>yan_saharov_bio</bio>
+
+		<class>yan_saharov</class>
+		<community>ecolog</community>
+
+		<rank>330</rank>
+		<reputation>50</reputation>
+		<money min="50000" max="100000" infinitive="1"></money>
+
+		<snd_config>characters_voice\human_03\ecolog\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\ucheniy\ucheniy_2</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>yan_saharov_dialog1</actor_dialog>
+		<actor_dialog>yan_saharov_dialog2</actor_dialog>
+		<actor_dialog>yan_saharov_dialog3</actor_dialog>
+		<actor_dialog>yan_saharov_dialog31</actor_dialog>
+		<actor_dialog>yan_saharov_dialog4</actor_dialog>
+		<actor_dialog>yan_saharov_dialog5</actor_dialog>
+		<actor_dialog>yan_saharov_dialog6</actor_dialog>
+		<actor_dialog>yan_saharov_dialog7</actor_dialog>
+		<actor_dialog>yan_saharov_dialog8</actor_dialog>
+
+		<actor_dialog>yan_saharov_dialog9</actor_dialog>
+		<actor_dialog>yan_saharov_dialog10</actor_dialog>
+		<actor_dialog>yan_saharov_dialog11</actor_dialog>
+
+		<actor_dialog>yan_saharov_dialog12</actor_dialog>
+		<actor_dialog>yan_saharov_dialog13</actor_dialog>
+		<actor_dialog>yan_saharov_dialog14</actor_dialog>
+
+		<actor_dialog>yan_saharov_dialog15</actor_dialog>
+		<actor_dialog>yan_saharov_dialog16</actor_dialog>
+
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<specific_character id="yan_vasiliev" team_default = "1">
+		<name>Ассистент Васильев</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<map_icon x="0" y="6"></map_icon>
+		<bio>yan_semenov_bio</bio>
+
+		<class>yan_vasiliev</class>
+		<community>ecolog</community>
+				
+		<rank>132</rank>
+		<reputation>50</reputation>
+
+		<visual>actors\ecolog\stalker_ecolog</visual>
+		<snd_config>characters_voice\human_03\ecolog\</snd_config>
+		<crouch_type>1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+
+		<actor_dialog>yan_vasiliev_dialog1</actor_dialog>
+		
+#include "gameplay\character_criticals.xml"
+
+</specific_character>
+
+
+<specific_character id="yan_semenov" team_default = "1">
+		<name>Ассистент Семёнов</name>
+		<icon>ui_npc_u_stalker_ecolog</icon>
+		<map_icon x="0" y="6"></map_icon>
+		<bio>yan_semenov_bio</bio>
+
+		<class>yan_semenov</class>
+		<community>ecolog</community>
+				
+		<rank>132</rank>
+		<reputation>50</reputation>
+
+		<visual>actors\ecolog\stalker_ecolog_military</visual>
+		<snd_config>characters_voice\human_03\ecolog\</snd_config>
+		<crouch_type>1</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm \n
+		</supplies>
+
+		<actor_dialog>semenov_art_cheat_dialog</actor_dialog>
+		
+#include "gameplay\character_criticals.xml"
+
+</specific_character>
+
+
+<!--yan_sold_comander-->
+	<specific_character id="yan_sold_comander" team_default = "1">
+		<name>Майор Ковальчук</name>
+		<icon>ui_npc_u_soldier_beret_1</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold_comander</class>
+		<community>stalker_army</community>
+
+		<rank>696</rank>
+		<reputation>0</reputation>
+		<money min="300" max="400000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_02\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_beret_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_gsh \n
+			ammo_9x19_fmj \n
+			wpn_binoc \n
+			device_torch \n
+			hand_radio \n
+			amk_metka \n
+			sigarets \n
+			flyaga_full \n
+			equipment_bag \n
+			weapon_remkit \n
+			antirad \n
+			dix \n
+			medkit_army \n
+			bandage \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>yan_sold_comandr_dialog1</actor_dialog>
+		<actor_dialog>yan_sold_comandr_dialog2</actor_dialog>
+		<actor_dialog>yan_sold_comandr_dialog4</actor_dialog>
+
+		<actor_dialog>yan_sold_comandr_dialog5</actor_dialog>
+		<actor_dialog>yan_sold_comandr_dialog6</actor_dialog>
+		<actor_dialog>yan_sold_comandr_dialog7</actor_dialog>
+		<actor_dialog>yan_sold_comandr_dialog8</actor_dialog>
+
+		<actor_dialog>yan_sold_comandr_art_cheat_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold1-->
+	<specific_character id="yan_sold1" team_default = "1">
+		<name>Рядовой Макаров</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold1</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pkm \n
+			ammo_7.62x54_7h1 \n
+			device_torch \n
+			mre \n
+			conserva \n
+			vodka \n
+			matches \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>yan_sold1_dialog1</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold2-->
+	<specific_character id="yan_sold2" team_default = "1">
+		<name>Рядовой Бельский</name>
+		<icon>ui_npc_u_soldier_bandana_3</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold2</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_bandana_3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+			device_torch \n
+			suharik \n
+			sigarets \n
+			kartoshka \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+		
+		<actor_dialog>yan_sold2_dialog1</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold3-->
+	<specific_character id="yan_sold3" team_default = "1">
+		<name>Рядовой Мовсадзе</name>
+		<icon>ui_npc_u_soldier_bandana_4</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold3</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_bandana_4</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+			device_torch \n
+			guitar_a \n
+			irp-b \n
+			bandage \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold4-->
+	<specific_character id="yan_sold4" team_default = "1">
+		<name>Рядовой Карпенко</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold4</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj \n
+			device_torch \n
+			guitar_a \n
+			salo \n
+			soldier_outfit \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold5-->
+	<specific_character id="yan_sold5" team_default = "1">
+		<name>Рядовой Шац</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold5</class>
+		<community>stalker_army</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_ump \n
+			ammo_11.43x23_fmj \n
+			device_torch \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>yan_sold5_dialog1</actor_dialog>
+		<actor_dialog>yan_sold5_dialog2</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold6-->
+	<specific_character id="yan_sold6" team_default = "1">
+		<name>Сержант Егоров</name>
+		<icon>ui_npc_u_soldier_bandana_2</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold6</class>
+		<community>stalker_army</community>
+
+		<rank>296</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_bandana_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_vintorez \n
+			ammo_9x39_pab9 \n
+			device_torch \n
+			hand_radio \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>yan_sold6_dialog1</actor_dialog>
+
+		<actor_dialog>yan_sold6_dialog2</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+<!--yan_sold7-->
+	<specific_character id="yan_sold7" team_default = "1">
+		<name>Рядовой Вербицкий</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold7</class>
+		<community>military</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_svd \n
+			ammo_7.62x54_7h1 \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--yan_sold8-->
+	<specific_character id="yan_sold8" team_default = "1">
+		<name>Рядовой Кравцов</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold8</class>
+		<community>military</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+			ammo_5.45x39_fmj \n
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--yan_sold9-->
+	<specific_character id="yan_sold9" team_default = "1">
+		<name>Рядовой Архипов</name>
+		<icon>ui_npc_u_soldier_obichniy</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>yan_sold9</class>
+		<community>military</community>
+
+		<rank>196</rank>
+		<reputation>0</reputation>
+		<money min="300" max="1000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\soldier\soldier_obichniy</visual>
+		<supplies>
+			[spawn] \n
+
+		</supplies>
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+
+
+<!--faint_npc2-->
+	<specific_character id="faint_npc2" team_default = "1">
+		<name>Башка</name>
+		<icon>ui_npc_u_green_stalker_antigas</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>faint_npc2</class>
+		<community>latchkey</community>
+
+		<rank>121</rank>
+		<reputation>163</reputation>
+		
+		<snd_config>characters_voice\human_01\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\novice\green_stalker_antigas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n
+			ammo_samopal \n
+			harmonica_a \n
+			yan_losthunter_zapiska \n
+		</supplies>
+		<actor_dialog>companion_hire_dialog</actor_dialog>
+		<actor_dialog>companion_management_dialog</actor_dialog>
+		<actor_dialog>companion_release_dialog</actor_dialog>
+
+		<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+		<actor_dialog>faint_npc2_dialog1</actor_dialog>
+		<actor_dialog>faint_npc2_dialog2</actor_dialog>
+		<actor_dialog>faint_npc2_dialog3</actor_dialog>
+
+	</specific_character>
+
+<!--yan_lost_camp_npc2-->
+	<specific_character id="yan_lost_camp_npc2" team_default = "1">
+		<name>Тощий</name>
+		<icon>ui_npc_u_green_stalker_10</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>yan_lost_camp_npc2</class>
+		<community>latchkey</community>
+
+		<rank>121</rank>
+		<reputation>163</reputation>
+		
+		<snd_config>characters_voice\human_01\newbie\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\novice\green_stalker_10</visual>
+		<supplies>
+			[spawn] \n
+			wpn_samopal \n
+			ammo_samopal \n
+		</supplies>
+	</specific_character>
+
+
+
+	
+</xml>

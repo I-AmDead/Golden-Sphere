@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = aes_vagon_door_use
+on_use    = {+aes_body1_info +aes_body2_info +aes_body3_info +aes_body4_info} ph_idle@2 %=run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 4000|nil %+spawn_aes_guard =aes_vagon_door_use =play_snd(device\door_servomotor)%
+
+
+ 

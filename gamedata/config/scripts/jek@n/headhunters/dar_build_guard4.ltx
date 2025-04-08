@@ -1,0 +1,65 @@
+ѕодвал, стоит у окна, смотрит на заправку:
+
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@1
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[walker@start]
+path_walk = dar_build_guard4_walk1
+path_look = dar_build_guard4_look1
+on_timer = 1 | walker@1
+
+[walker@1]
+path_walk = dar_build_guard4_walk1
+path_look = dar_build_guard4_look1
+combat_ignore_cond = always
+danger = danger_condition
+meet = no_meet
+on_info     = {+dar_build_guard_alarm} remark@alarm
+on_info2     = {+dar_cristall_destroyed} remark@psy_pain
+on_actor_dist_le = 15 | remark@alarm %=dar_build_guard_alarm%
+
+
+[remark@alarm]
+snd = reac_see
+anim = specnaz
+target = nil
+danger = danger_condition
+meet = no_meet
+on_info     = {-dar_build_guard_alarm} walker@1
+on_info2     = {+dar_cristall_destroyed} remark@psy_pain
+on_timer = 50000 | walker@1 %-dar_build_guard_alarm%
+
+[remark@psy_pain]
+snd = wounded_psy
+anim = psy_pain
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+;on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) =delme2%
+
+[death]
+on_info = {!actor_armed_knife =killed_by_actor} %=dar_build_guard_alarm%
+

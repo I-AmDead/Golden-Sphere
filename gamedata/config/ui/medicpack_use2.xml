@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<medicpack_use2>	
+	<ramka x="250" y="90" width="812" height="812" stretch="1">
+		<texture x="0" y="0" width="650" height="550">ui\equipmentbag_use_ramka</texture>
+	</ramka>
+
+	<bag_icon x="360" y="160" width="260" height="400" stretch="1">
+		<texture x="0" y="0" width="650" height="550">ui\medic_bag_icon</texture>
+	</bag_icon>
+
+	<text x="280" y="100" width="420" height="500" stretch="1">
+		<text font="graffiti22">Что там у нас?</text>
+	</text>
+
+
+	<btn_1 x="300" y="430" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Аптечки - 5 шт.</text>
+	</btn_1>
+
+	<btn_2 x="300" y="470" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Бинт - 10 шт.</text>
+	</btn_2>
+
+	<btn_3 x="300" y="510" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>D-IX - 5 шт.</text>
+	</btn_3>
+
+	<btn_4 x="300" y="550" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Антирад - 8 шт.</text>
+	</btn_4>
+
+	<btn_5 x="300" y="590" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Бипсизон - 5 шт.</text>
+	</btn_5>
+
+	<btn_6 x="300" y="630" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Б-190 - 10 шт.</text>
+	</btn_6>
+
+	<btn_7 x="500" y="430" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Морфин - 3 шт.</text>
+	</btn_7>
+
+	<btn_8 x="500" y="470" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Медкомплект - 4 шт.</text>
+	</btn_8>
+
+	<btn_9 x="500" y="510" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Ибупрофен - 7 шт.</text>
+	</btn_9>
+
+	<btn_10 x="500" y="550" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Гидроперит - 6 шт.</text>
+	</btn_10>
+
+
+</medicpack_use2>
+

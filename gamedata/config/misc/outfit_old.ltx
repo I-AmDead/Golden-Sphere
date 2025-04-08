@@ -1,0 +1,181 @@
+[sect_serafim_outfit_immunities]
+burn_immunity				= 0.03			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.02
+shock_immunity				= 0.01
+wound_immunity				= 0.02
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity		= 0.06
+explosion_immunity			= 0.02
+fire_wound_immunity			= 0.0095
+
+
+[sect_exo_outfit_immunities]
+burn_immunity				= 0.09			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.01
+shock_immunity				= 0.035
+wound_immunity				= 0.01
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.2
+explosion_immunity			= 0.035
+fire_wound_immunity			= 0.008
+
+
+[sect_broken_exoskeleton_immunities]:sect_exo_outfit_immunities
+burn_immunity				= 0.5
+strike_immunity				= 0.02
+shock_immunity				= 0.05
+wound_immunity				= 0.02
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.4
+explosion_immunity			= 0.09
+fire_wound_immunity			= 0.01
+
+
+[sect_bandit_veteran_outfit_immunities]
+burn_immunity				= 0.1
+strike_immunity				= 0.01
+shock_immunity				= 0.04
+wound_immunity				= 0.025
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity		= 0.15
+explosion_immunity			= 0.04
+fire_wound_immunity			= 0.095
+
+
+[exo_bandit_outfit_repair]
+tech_complication          = 800
+repair_compatibility     = exoskeleton_outfit
+
+
+[sect_dolg_outfit_immunities]:sect_stalker_outfit_immunities
+strike_immunity				= 0.009
+wound_immunity				= 0.009
+
+
+[sect_dolg_scientific_outfit_immunities]:sect_scientific_outfit_immunities
+strike_immunity				= 0.009
+wound_immunity				= 0.03
+explosion_immunity			= 0.02
+fire_wound_immunity			= 0.01
+
+
+[sect_svoboda_light_outfit_immunities]:sect_stalker_outfit_immunities
+explosion_immunity			= 0.02
+
+
+[sect_svoboda_heavy_outfit_immunities]:sect_svoboda_light_outfit_immunities
+strike_immunity				= 0.009
+explosion_immunity			= 0.02
+fire_wound_immunity			= 0.008
+
+
+[sect_freedom_scientific_outfit_immunities]:sect_scientific_outfit_immunities
+burn_immunity				= 0.03
+shock_immunity				= 0.02
+explosion_immunity			= 0.02
+fire_wound_immunity			= 0.01
+
+
+[sect_cs_light_outfit_immunities]
+burn_immunity				= 0.2			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.02
+shock_immunity				= 0.01
+wound_immunity				= 0.03
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.2
+explosion_immunity			= 0.015
+fire_wound_immunity			= 0.0095
+
+
+[sect_cs_heavy_outfit_immunities]
+burn_immunity				= 0.2
+strike_immunity				= 0.015
+shock_immunity				= 0.01
+wound_immunity				= 0.02
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.2
+explosion_immunity			= 0.01
+fire_wound_immunity			= 0.0085
+
+
+[sect_bandit_outfit_immunities]
+burn_immunity				= 0.05			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.01
+shock_immunity				= 0.04
+wound_immunity				= 0.025
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity		= 0.1
+explosion_immunity			= 0.04
+fire_wound_immunity			= 0.01
+
+
+[military_outfit]:outfit_base
+$spawn 			= "outfit\military_outfit"
+visual          = equipments\stalker_military_suit_green
+actor_visual	= actors\soldier\stalker_military_green.ogf
+
+ef_equipment_type	= 4
+
+inv_name			= military_outfit1_name
+inv_name_short		= military_outfit1_name
+description			= military_outfit1_description
+inv_weight			= 9.0
+inv_grid_width		= 2
+inv_grid_height		= 3
+inv_grid_x			= 18
+inv_grid_y			= 24
+full_icon_name		= npc_icon_military_outfit
+
+power_loss      = 1.2
+
+additional_inventory_weight	= 10
+additional_inventory_weight2 = 10 
+
+cost				= 72500
+full_scale_icon		= 10,6		;иконка сталкера в костюме в полный рост
+
+immunities_sect			= sect_military_stalker_outfit_immunities
+; MEDIUM RESISTANCE
+burn_protection 				= 0.8
+shock_protection 				= 0.8
+radiation_protection 			= 0.8
+telepatic_protection 			= 0.3
+chemical_burn_protection 		= 0.8
+strike_protection 				= 0.8
+wound_protection				= 0.8
+explosion_protection 			= 0.8
+fire_wound_protection  			= 0.8
+
+bones_koeff_protection =	armor_helmet_damage
+
+[sect_military_stalker_outfit_immunities]:sect_specops_outfit_immunities
+burn_immunity				= 0.03
+chemical_burn_immunity		= 0.08
+strike_immunity				= 0.007
+telepatic_immunity			= 0.00
+wound_immunity				= 0.01
+explosion_immunity			= 0.01
+fire_wound_immunity			= 0.005
+
+
+[sect_monolit_outfit_immunities]:sect_stalker_outfit_immunities
+chemical_burn_immunity		= 0.05
+
+
+[sect_protection_outfit_immunities]
+burn_immunity				= 0.007			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.01
+shock_immunity				= 0.005
+wound_immunity				= 0.015
+radiation_immunity			= 0.00
+telepatic_immunity			= 0.00
+chemical_burn_immunity		= 0.005
+explosion_immunity			= 0.03
+fire_wound_immunity			= 0.01

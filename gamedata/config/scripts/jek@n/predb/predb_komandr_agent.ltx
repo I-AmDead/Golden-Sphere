@@ -1,0 +1,56 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+threshold = threshold@predb_komandr_agent_threshold
+
+[walker@start]
+path_walk = predb_komandr_agent_walk1
+path_look = predb_komandr_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = predb_komandr_agent_walk1
+path_look = predb_komandr_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_kpp_soldiers_atacked} %=delme2%
+on_actor_dist_le_nvis = 45|walker@2 %=send_tip(predb_komandr_agent_tip:stalker) =add_self_spot(blue_location:predb_komandr_agent_mark_text)%
+
+[walker@2]
+path_walk = predb_komandr_agent_walk1
+path_look = predb_komandr_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+solds_goodbye} walker@3
+
+[walker@3]
+path_walk = predb_komandr_agent_walk1
+path_look = predb_komandr_agent_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_actor_dist_ge_nvis = 48|%=delme2%
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_komandr_agent_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+
+

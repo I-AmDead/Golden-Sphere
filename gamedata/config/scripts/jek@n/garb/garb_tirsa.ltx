@@ -1,0 +1,68 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = garb_tirsa_walk1
+path_look = garb_tirsa_look1
+on_timer = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+[walker@1]
+path_walk = garb_tirsa_walk1
+path_look = garb_tirsa_look1
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+reketirs_zuda_ready_to_use} walker@2 %=play_snd_from_obj(8491:characters_voice\scenario\tirsa_talk1)%
+on_info2 = {+garb_reketirs_fail} walker@5 %=unmake_invulnerable =killactor%
+
+[walker@2]
+path_walk = garb_tirsa_walk1
+path_look = garb_tirsa_look1
+danger = danger_condition
+;combat_ignore_cond = always
+;Игрок протупил и не использовал Зуду:
+on_timer = 8000 | walker@5 %=unmake_invulnerable =killactor =play_snd_from_obj(8491:characters_voice\human_01\bandit\fight\attack\attack_2) +garb_reketirs_fail%
+;Игрок использовал Зуду:
+on_info = {+reketirs_zuda_work} walker@3 %=play_snd_from_obj(8491:characters_voice\human_01\bandit\fight\hit\hit_6)%
+
+;Корчимся от Зуды:
+[walker@3]
+path_walk = garb_tirsa_walk1
+path_look = garb_tirsa_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | %=play_snd_from_obj(8489:weapons\sks) =hit_npc(8491:bip01_spine1:100:1000) =die%
+
+
+
+
+; Игрок засветил свою пукалку и мы на него сагрились:
+[walker@5]
+path_walk = garb_tirsa_walk1
+path_look = garb_tirsa_look1
+danger = danger_condition
+meet = no_meet
+
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = {=killed_by_actor} %+garb_tirsa_killed_by_actor%, %+garb_tirsa_dead%
+

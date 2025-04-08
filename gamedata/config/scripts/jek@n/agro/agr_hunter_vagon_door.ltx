@@ -1,0 +1,107 @@
+[logic]
+active = ph_door@locked1
+
+
+[ph_door@locked1]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+on_info = {+agr_redrik_goto_vagon} ph_door@free1
+on_info2 = {+agr_nii_ecolog_goto_vagon} ph_door@open5
+on_use = {=actor_has_item(agr_vagon_key)} ph_door@open1 %=remove_item(agr_vagon_key)%
+
+[ph_door@open1]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+spawn_redrik} ph_door@locked2
+
+[ph_door@locked2]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+on_info = {+redrik_warning1} ph_door@open2
+
+
+[ph_door@open2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+agr_redrik_in_vagon} ph_door@free1
+
+
+[ph_door@free1]
+locked = false
+closed = true
+no_force = true
+on_use = ph_door@open3
+
+
+
+[ph_door@open3]
+locked = true
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = false
+on_use = ph_door@close3
+on_info = {+agr_nii_ecolog_goto_vagon} ph_door@open4
+
+[ph_door@close3]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+on_use = ph_door@open3
+
+
+
+[ph_door@open4]
+locked = true
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = false
+on_info = {+agr_nii_ecolog_in_vagon} ph_door@close5
+
+
+
+[ph_door@close5]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+on_use = ph_door@open5
+
+[ph_door@open5]
+locked = true
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = false
+on_use = ph_door@close5
+
+
+
+[ph_door@free]
+locked = false
+closed = true
+no_force = true
+on_use = ph_door@open

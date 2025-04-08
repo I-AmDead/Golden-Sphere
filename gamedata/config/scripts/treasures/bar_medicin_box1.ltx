@@ -1,0 +1,20 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer = 1| ph_idle@2 %=add_self_spot(crlc_mdl:bar_medbox_mark_point)%
+
+[ph_idle@2]
+tips      = take_ruck
+on_use    = %=give_items_to_actor(medkit_scientic:medkit_scientic:medkit_scientic:antirad:antirad:antirad:medkomplekt:bandage:bandage:bandage:yod:yod:yod:yod:bipsizon) =send_tip(bar_medicine_box1_tip:habar) =delme%
+
+
+
+
+
+
+
+

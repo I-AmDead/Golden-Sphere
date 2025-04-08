@@ -1,0 +1,14 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_button@1
+
+[ph_button@1]
+anim_blend  = true
+anim        = lab_primary_switcher_idle
+tooltip     = garb_angar_laz_use
+on_press    = ph_idle %=disable_ui =run_postprocess(agr_u_fade)%
+
+[ph_idle]
+on_timer = 3000 | ph_button@1 %=enable_ui =garb_angar_laz2_teleport%

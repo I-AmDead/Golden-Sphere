@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<bowler_intrface>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture x="0" y="0" width="1020" height="626">ui\bowler_intrface</texture>
+</ramka>
+
+<work_process x="280" y="250" width="400" height="380" stretch="1">
+	<texture x="0" y="0" width="320" height="240">ui\showel_work_process</texture>
+</work_process>
+
+
+</bowler_intrface>
+

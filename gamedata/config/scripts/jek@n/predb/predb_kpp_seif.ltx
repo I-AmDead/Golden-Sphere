@@ -1,0 +1,16 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips = predb_kpp_seif_use
+on_use = {=actor_has_item(predb_kpp_seif_key)} ph_idle@open %=remove_item(predb_kpp_seif_key) =play_snd(device\metal_small_close_stop)%
+;on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+[ph_idle@hand]
+tips = safe_use_with_maroders_hand
+on_use = ph_idle %=play_snd(device\metal_small_close_stop) =karma_down%
+on_info = {!actor_has_item_on_belt(af_marouders_hand)} ph_idle
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure

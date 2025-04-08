@@ -1,0 +1,21 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@norm
+
+[mob_walker@norm]
+path_walk = garb_moving_fly_home_angar
+path_look = garb_moving_fly_home_angar
+braindead = true
+on_actor_in_zone = garb_moving_fly_angar_zone | mob_home@agress
+
+[mob_home@agress]
+path_home = garb_moving_fly_home_angar_agress
+home_min_radius = 2
+home_max_radius = 8
+braindead = true
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:0.1:10) =run_postprocess(fire_hit) =garb_flies3steal_artefacts%
+on_timer = 10000 | mob_walker@norm
+
+

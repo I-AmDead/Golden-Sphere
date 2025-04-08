@@ -1,0 +1,19 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = predb_hutor_well_obj_use
+on_use = {=actor_has_item(bucket)} ph_idle@2 %=disable_input =run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 2000|ph_idle@3 %=play_snd(characters_voice\scenario\weel_use)%
+
+[ph_idle@3]
+on_timer = 2000|nil %=give_items_to_actor(old_watch) =enable_input =send_tip(predb_village_weel_tip:default)%
+
+
+
+

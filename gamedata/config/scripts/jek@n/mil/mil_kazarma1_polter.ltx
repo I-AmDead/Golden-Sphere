@@ -1,0 +1,16 @@
+[smart_terrains]
+none = true
+
+
+[logic]
+active = mob_camp
+on_death = mob_death
+
+[mob_camp]
+path_home = mil_kazarma1_polter_point
+path_look = mil_kazarma1_polter_point
+home_min_radius = 2
+home_max_radius = 5
+
+[mob_death]
+on_info = %+mil_kazarma1_polter_dead%

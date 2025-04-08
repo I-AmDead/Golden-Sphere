@@ -1,0 +1,13 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+agr_fabrik_power_box_trap1 +agr_fabrik_power_box_trap2 +agr_fabrik_power_box_trap3} ph_idle@2 %=add_self_spot(green_location:agr_fabr_pumpbtn)%
+
+[ph_idle@2]
+tips = agr_fabr_pumpbtn
+on_use = nil %=play_snd(ambient\switch_1) +agr_fabrik_pumps1_on =remowe_self_spot(green_location:agr_fabr_pumpbtn)%
+

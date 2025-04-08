@@ -1,0 +1,48 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_grass_done} walker@2, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_kontrabander3_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kontrabander3_walk1
+path_look = predb_kontrabander3_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = predb_kontrabander3_walk1
+path_look = predb_kontrabander3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_kpp_kontrab_atacked} %=delme2%
+on_info2 = {+predb_grass_done} walker@2
+
+[walker@2]
+path_walk = predb_kontrabander3_walk2
+path_look = predb_kontrabander3_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_courier_goodbye} %=delme2%
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_kontrabander3_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_kontrabander3_dead%
+

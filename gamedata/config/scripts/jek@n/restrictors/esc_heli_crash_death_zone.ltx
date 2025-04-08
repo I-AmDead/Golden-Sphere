@@ -1,0 +1,22 @@
+[logic]
+active = sr_particle@1
+
+[sr_particle@1]
+name = anomaly2\group_items\electra2_trails
+path = esc_helicrash_stones_point
+mode = 2
+looped = true
+on_actor_inside = %=esc_heli_crash_death%
+on_info = {+esc_helicrash_secret_info} sr_particle@2
+
+
+[sr_particle@2]
+name = anomaly2\group_items\electra2_trails
+path = esc_helicrash_stones_point
+mode = 2
+looped = true
+on_actor_inside = %=esc_heli_crash_death%
+on_info = {=esc_helicrash_zone_rest_time} sr_idle@rest
+
+[sr_idle@rest]
+on_info = {!esc_helicrash_zone_rest_time} sr_particle@2

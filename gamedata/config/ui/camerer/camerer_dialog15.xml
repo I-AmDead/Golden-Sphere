@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<camerer_dialog15>	
+	<face x="420" y="115" width="402" height="212" stretch="1">
+		<texture >ui\camerer_face</texture>
+	</face>
+	<camerer_name x="600" y="525" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="graffiti22">Максим Камеррер</text>
+	</camerer_name>
+	<dialog_table x="250" y="280" width="550" height="900" stretch="1">
+		<texture >ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+	<camerer_talk_text x="280" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">А, снова вы! Как успехи?</text>
+	</camerer_talk_text>
+
+
+
+
+	<btn_1 x="300" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Вроде ничего. Как продвигаются исследования нашего артефакта?</text>
+	</btn_1>
+
+
+
+</camerer_dialog15>
+

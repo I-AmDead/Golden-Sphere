@@ -1,0 +1,18 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+x16_power_on} ph_button@off
+
+[ph_button@off]
+anim_blend  = true
+anim        = lab_primary_switcher_off
+tooltip     = x16_pult_1floor_use
+on_press = ph_button@on %=play_snd(ambient\switch_2)%
+
+[ph_button@on]
+anim = lab_primary_switcher_idle
+on_timer = 500 | nil %=turn_on(8736) +x16_power1%

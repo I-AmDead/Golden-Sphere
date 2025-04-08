@@ -1,0 +1,35 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+predb_village_rogue_finded} nil
+on_timer = 1|ph_sound %=add_self_spot(green_location:predb_village_trap_obj_mark_text)%
+
+[ph_sound]
+snd = predb_village_trap_snd
+min_idle = 1000
+max_idle = 5000
+looped = true
+on_actor_dist_le_nvis = 3|ph_idle@2 %=predb_village_trap_action =remowe_self_spot(green_location:predb_village_trap_obj_mark_text)%
+
+
+[ph_idle@2]
+on_timer = 6000| ph_idle@2_1
+
+[ph_idle@2_1]
+on_info = {+predb_village_rogue_finded} nil
+on_info2 = {-predb_village_trap -predb_village_trap_punish} %=predb_rogue_npc_init_dialog1%
+on_info3 = {+predb_village_trap -predb_village_anomaly} %=predb_rogue_npc_init_dialog2%
+on_info4 = {+predb_village_trap +predb_village_anomaly -predb_village_finditem} %=predb_rogue_npc_init_dialog3%
+
+
+
+
+
+
+
+
+
+
+
+

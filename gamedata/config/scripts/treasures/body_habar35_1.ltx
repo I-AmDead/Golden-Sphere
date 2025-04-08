@@ -1,0 +1,19 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips      = open_carbox
+on_use    = {=actor_has_item_on_belt(af_marouders_hand)} %=play_snd(device\metal_small_close_start) =spawn_garb_roadcar_habar =send_tip(garb_road_car_tip1:default) =delme%, {!actor_has_item_on_belt(af_marouders_hand)} %=play_snd(device\door_locked) =send_tip(garb_road_car_tip2:default)%
+
+
+
+
+
+
+
+
+
+

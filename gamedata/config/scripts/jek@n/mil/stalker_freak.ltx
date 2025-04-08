@@ -1,0 +1,170 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_antenne_activate_task1} walker@13, {+mil_freak_panik1} walker@9, {+mil_freak_alarm} walker@5, walker@1
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = freak_walk1
+path_look = freak_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@2 %=make_invulnerable%
+
+[walker@2]
+path_walk = freak_walk1
+path_look = freak_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_actor_dist_le_nvis = 30|walker@3 %=send_tip(mil_freak_alarm_tip1:stalker:8186)%
+
+[walker@3]
+path_walk = freak_walk1
+path_look = freak_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_actor_dist_ge_nvis = 37|walker@2
+on_actor_dist_le_nvis = 15|walker@4 %=send_tip(mil_freak_alarm_tip2:stalker:8186) +mil_freak_dogs_spawn%
+
+[walker@4]
+path_walk = freak_walk1
+path_look = freak_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+mil_freak_alarm} walker@5
+
+[walker@5]
+path_walk = freak_walk2
+path_look = freak_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@6
+
+[walker@6]
+path_walk = freak_walk2
+path_look = freak_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_freak_panik1} remark@panik1
+
+[remark@panik1]
+snd = mil_freak_panik1
+anim = hands_up
+target = 37
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = action_end | walker@7
+
+
+; Драпаем:
+[walker@7]
+path_walk = freak_walk3
+path_look = freak_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | walker@8
+
+[walker@8]
+path_walk = freak_walk3
+path_look = freak_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_antenne_activate_task1} walker@13
+on_actor_dist_le_nvis = 5|walker@9 %=play_snd_from_obj(8186:characters_voice\human_01\stalker\states\panic_monster\panic_monster_3)%
+
+
+[walker@9]
+path_walk = freak_walk4
+path_look = freak_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | walker@10
+
+[walker@10]
+path_walk = freak_walk4
+path_look = freak_look4
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_antenne_activate_task1} walker@13
+on_actor_dist_le_nvis = 5|walker@11 %=play_snd_from_obj(8186:characters_voice\human_01\stalker\states\panic_monster\panic_monster_4)%
+
+
+[walker@11]
+path_walk = freak_walk5
+path_look = freak_look5
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | walker@12
+
+[walker@12]
+path_walk = freak_walk5
+path_look = freak_look5
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_antenne_activate_task1} walker@13
+on_actor_dist_le_nvis = 5|walker@7 %=play_snd_from_obj(8186:characters_voice\human_01\stalker\states\panic_monster\panic_monster_2)%
+
+
+; Готовы поболтать:
+[walker@13]
+path_walk = freak_walk2
+path_look = freak_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_freak_enemy} walker@14 %=killactor =unmake_invulnerable =give_items(wpn_pm:ammo_9x19_fmj:ammo_9x18_fmj:ammo_9x18_fmj:ammo_9x18_fmj:ammo_9x18_fmj:ammo_9x18_fmj:ammo_9x18_fmj)%
+
+
+; Обиделись:
+[walker@14]
+path_walk = freak_walk2
+path_look = freak_look2
+danger = danger_condition
+meet = no_meet
+
+
+
+[meet]
+meet_state = 1| sit
+meet_state = 1| sit
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_freak_dead =mil_freak_spawn_in%
+
+[hit]
+;on_info = {=hit_by_actor} %+777%
+
+

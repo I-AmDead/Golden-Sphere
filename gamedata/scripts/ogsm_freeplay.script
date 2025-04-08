@@ -1,0 +1,39 @@
+-- Спавним левел-чейнджер
+function create_level_changer(
+	p_story_id,	-- STORY_ID нового level_changer (понадобится нам позже)
+	p_position,	-- вектор, координаты точки, в которой будет располагаться центр нового level_changer
+	p_lvertex_id,	-- level_vertext_id  - идентифицируют уровень, на котором будет создан level_changer
+	p_gvertex_id,	-- game_vertext_id   	
+ 
+	p_dest_lv,	-- level_vertex_id   - идентифицируют уровень, на который level_changer будет перебрасывать игрока 
+	p_dest_gv,	-- game_vertex_id
+	p_dest_pos,	-- координаты точки, в которой на новом уровне окажется игрок
+	p_dest_dir,	-- направрение взгляда игрока
+	p_dest_level,	-- название уровня, например "L11_Pripyat"
+	p_silent	-- следует задать 1, чтобы подавить вопрос о смене уровня (автоматический переход)
+)
+	local sobj = alife():create("level_changer", p_position, p_lvertex_id, p_gvertex_id)
+	local pk = get_netpk(sobj)
+	local data = pk:get()
+	data.dest_level_vertex_id = p_dest_lv
+	data.dest_game_vertex_id = p_dest_gv
+	data.dest_position = p_dest_pos
+	data.dest_direction = p_dest_dir
+	data.dest_level_name = p_dest_level
+	data.silent_mode = p_silent
+	data.shapes:addSphere(5)
+	pk:set(data)
+	alife():assign_story_id(sobj.id, p_story_id)
+end
+
+-- пример:
+function example()
+create_level_changer(40000, -- story_id
+ vector():set( 917.35, 0.419, -316.35 ), 403866, 2401,  -- позиция создаваемого перехода
+2117,  -- lvertex после перехода
+73868, -- gvertex после перехода
+vector():set( 31.3, 3.0, 240.0 ),  -- позиция после перехода
+vector():set(  0.0, 0.0,  -1.0 ),  -- направление взгляда после перехода
+"L11_Pripyat",  -- уровень после перехода
+0)
+end

@@ -1,0 +1,37 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home@start
+on_death = mob_death
+
+[mob_home@start]
+path_home = esc_farm_attak_boars_point
+home_min_radius = 1
+home_max_radius = 3
+on_timer = 10 | mob_home1 %=make_invulnerable%
+
+
+
+[mob_home1]
+path_home = esc_farm_attak_boars_point
+home_min_radius = 1
+home_max_radius = 3
+braindead = true
+on_actor_dist_le_nvis = 9 | mob_home2 %=unmake_invulnerable +esc_farm_boars_attak%
+
+[mob_home2]
+path_home = esc_hunter_walk1
+home_min_radius = 1
+home_max_radius = 7
+actor_friendly = true
+on_info = {+esc_hunter_dead} mob_walker
+
+[mob_walker]
+path_walk = esc_farm_attak_boars_suicide
+path_look = esc_farm_attak_boars_suicide
+braindead = true
+
+
+[mob_death]
+on_info = %+esc_farm_attak_boar3_dead%

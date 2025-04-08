@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+bar_ventil1_open +bar_ventil2_open +bar_ventil3_open} sr_timer
+
+[sr_timer]
+type = dec
+start_value = 25000
+on_value = 0 | nil %+bar_tower_top_art_spawn%
+string = bar_tower_top_countdown
+
+
+
+
+
+

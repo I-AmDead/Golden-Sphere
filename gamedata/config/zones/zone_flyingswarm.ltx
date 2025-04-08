@@ -1,0 +1,191 @@
+[flying_swarm]
+GroupControlSection			= spawn_group_zone
+$spawn						= "zones\mincer"
+;$prefetch 					= 8
+class						= Z_TORRID
+hit_impulse_scale			=   0
+effective_radius			= 2.75 ;размер радиуса в процентах от оригинального, где действует зона
+postprocess					= postprocess_flame
+
+ef_anomaly_type				= 1
+ef_weapon_type				= 13
+
+artefacts		= 
+BirthProbability = 0.0
+
+;----------- Anomaly settings -----------------------
+min_start_power		= 0.99
+max_start_power		= 1.50
+attenuation			= 1
+period				= 1
+min_artefact_count	= 0
+max_artefact_count	= 0
+
+
+
+
+idle_particles				= anomaly2\group_items\pe00
+blowout_particles			= anomaly\a-03-growing-sparks_00
+
+hit_small_particles	    	= anomaly\a-03-expl-sparks_old00
+hit_big_particles			= anomaly\a-03-expl-sparks_old00
+idle_small_particles		= anomaly\a-03-sparks-01-flashy_old00
+idle_big_particles			= anomaly\a-03-sparks-01-flashy_old00
+
+
+
+;idle_particles				= light_fx\light_clear_01---
+;blowout_particles			= light_fx\light_clear_01---
+
+;hit_small_particles	    	= light_fx\light_clear_01---
+;hit_big_particles			= light_fx\light_clear_01---
+;idle_small_particles		= light_fx\light_clear_01---
+;idle_big_particles			= light_fx\light_clear_01---
+
+
+
+
+idle_particles_dont_stop	= true;
+
+idle_sound					= nature\random_flies2	;постоянный звук
+blowout_sound				= ambient\rnd_outdoor\rnd_snake	   	;во время выброса(удара) в центре аномалии	
+hit_sound					= nature\random_flies1				;на персонаже, когда тот получает хит
+entrance_sound				= nature\random_flies1				;при попадании объекта в аномалию
+
+hit_type					= strike
+
+disable_time		= 0	;время игнорирования неживого объекта в зоне (-1 если не нужно)
+disable_time_small	= 0	;время игнорирования маленького неживого объекта в зоне (-1 если не нужно)
+disable_idle_time	= 50000	;время отключения idle партиклов
+
+ignore_nonalive		= true
+ignore_small		= true
+ignore_artefacts	= true
+
+blowout_light		= off
+light_range		    = 30.0
+light_time 		    = 1
+light_height		= 0.75			;подъем источника света на высоту
+
+
+idle_light			= on
+light_color		    = 0.1,0.1,0.1
+idle_light_range	= 2.0
+idle_light_range_delta = 0.2
+idle_light_anim		= koster_01
+idle_light_height	= 0.75			;подъем источника света на высоту
+
+awaking_time		= 100
+blowout_time		= 300	
+accamulate_time		= 100
+
+visible_by_detector = on
+
+blowout_wind		= on
+
+blowout_wind_time_start     = 0
+blowout_wind_time_peak      = 300
+blowout_wind_time_end		= 501; 899
+blowout_wind_power			= 1			;сила поднимаего ветра (от 0 до 1), в момент blowout_wind_time_peak 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;рождение артефактов во время срабатывания
+spawn_blowout_artefacts = off
+
+
+
+
+
+[flying_swarm_big]
+GroupControlSection			= spawn_group_zone
+$spawn						= "zones\mincer"
+;$prefetch 					= 8
+class						= Z_TORRID
+hit_impulse_scale			=   0
+effective_radius			= 2.75 ;размер радиуса в процентах от оригинального, где действует зона
+postprocess					= postprocess_flame
+
+ef_anomaly_type				= 1
+ef_weapon_type				= 13
+
+artefacts		= 
+BirthProbability = 0.0
+
+;----------- Anomaly settings -----------------------
+min_start_power		= 0.99
+max_start_power		= 1.50
+attenuation			= 1
+period				= 1
+min_artefact_count	= 0
+max_artefact_count	= 0
+
+
+
+
+idle_particles				= anomaly2\group_items\pe00
+blowout_particles			= anomaly\a-03-growing-sparks_00
+
+hit_small_particles	    	= anomaly\a-03-expl-sparks_old00
+hit_big_particles			= anomaly\a-03-expl-sparks_old00
+idle_small_particles		= anomaly\a-03-sparks-01-flashy_old00
+idle_big_particles			= anomaly\a-03-sparks-01-flashy_old00
+
+
+
+;idle_particles				= light_fx\light_clear_01---
+;blowout_particles			= light_fx\light_clear_01---
+
+;hit_small_particles	    	= light_fx\light_clear_01---
+;hit_big_particles			= light_fx\light_clear_01---
+;idle_small_particles		= light_fx\light_clear_01---
+;idle_big_particles			= light_fx\light_clear_01---
+
+
+
+
+idle_particles_dont_stop	= true;
+
+idle_sound					= nature\random_flies2	;постоянный звук
+blowout_sound				= ambient\rnd_outdoor\rnd_snake	   	;во время выброса(удара) в центре аномалии	
+hit_sound					= nature\random_flies1				;на персонаже, когда тот получает хит
+entrance_sound				= nature\random_flies1				;при попадании объекта в аномалию
+
+hit_type					= strike
+
+disable_time		= 0	;время игнорирования неживого объекта в зоне (-1 если не нужно)
+disable_time_small	= 0	;время игнорирования маленького неживого объекта в зоне (-1 если не нужно)
+disable_idle_time	= 50000	;время отключения idle партиклов
+
+ignore_nonalive		= true
+ignore_small		= true
+ignore_artefacts	= true
+
+blowout_light		= off
+light_range		    = 30.0
+light_time 		    = 1
+light_height		= 0.75			;подъем источника света на высоту
+
+
+idle_light			= on
+light_color		    = 0.1,0.1,0.1
+idle_light_range	= 2.0
+idle_light_range_delta = 0.2
+idle_light_anim		= koster_01
+idle_light_height	= 0.75			;подъем источника света на высоту
+
+awaking_time		= 100
+blowout_time		= 300	
+accamulate_time		= 100
+
+visible_by_detector = on
+
+blowout_wind		= on
+
+blowout_wind_time_start     = 0
+blowout_wind_time_peak      = 300
+blowout_wind_time_end		= 501; 899
+blowout_wind_power			= 1			;сила поднимаего ветра (от 0 до 1), в момент blowout_wind_time_peak 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;рождение артефактов во время срабатывания
+spawn_blowout_artefacts = off

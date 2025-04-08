@@ -1,0 +1,22 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_use    = %=esc_village_stoned_body_use =delme2%
+tips = esc_village_stoned_body1_use
+on_timer = 29000|ph_idle@2 %=play_snd_from_obj(8278:characters_voice\human_01\stalker\reactions\story\final_tragic_2)%
+
+[ph_idle@2]
+on_use    = %=esc_village_stoned_body_use =delme2%
+tips = esc_village_stoned_body1_use
+on_timer = 25000|ph_idle@3 %=play_snd_from_obj(8278:characters_voice\human_01\stalker\reactions\story\fear_1)%
+
+[ph_idle@3]
+on_use    = %=esc_village_stoned_body_use =delme2%
+tips = esc_village_stoned_body1_use
+on_timer = 27000|ph_idle@1 %=play_snd_from_obj(8278:characters_voice\human_01\stalker\reactions\story\wonder_5)%
+
+

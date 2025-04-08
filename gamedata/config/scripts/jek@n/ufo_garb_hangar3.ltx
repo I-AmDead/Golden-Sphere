@@ -1,0 +1,15 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_force
+
+[ph_idle]
+on_timer = 1|ph_force %+garb_ufo_fly_away%
+ 
+[ph_force]
+force = 4500
+time = 50000
+delay = 0
+point = garb_hangar_ufo_point_away
+point_index = 0

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<mashroom_ekran3>	
+	<ekran_ramka x="290" y="85" width="412" height="512" stretch="1">
+		<texture >ui\old_monitor_device</texture>
+	</ekran_ramka>
+	<ekran_fon x="310" y="110" width="350" height="360" stretch="1">
+		<texture >ui\old_monitor_screen</texture>
+	</ekran_fon>
+	<ekran_name x="430" y="160" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="250" g="105" b="18" a="158" font="graffiti22">Давление</text>
+	</ekran_name>
+
+	<ekran_text1 x="340" y="220" width="300" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Отрегулируйте давление в баках с физраствором:</text>
+	</ekran_text1>
+
+
+
+	<btn_1 x="370" y="380" width="80" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text x="0" y="0" r="225" g="118" b="118" font="letterica16">Повысить</text>
+	</btn_1>
+
+	<btn_2 x="500" y="380" width="80" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text x="0" y="0" r="100" g="225" b="118" font="letterica16">Понизить</text>
+	</btn_2>
+
+	<btn_3 x="430" y="420" width="80" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text x="0" y="0" r="235" g="235" b="118" font="letterica16">^^^</text>
+	</btn_3>
+
+	<btn_quit x="280" y="480" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text x="0" y="0" r="0" g="0" b="0" font="letterica16">Выкл</text>
+	</btn_quit>
+
+</mashroom_ekran3>
+

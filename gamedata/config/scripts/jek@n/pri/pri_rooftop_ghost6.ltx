@@ -1,0 +1,36 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_remark
+on_death = mob_death
+
+[mob_remark]
+anim = $editor
+braindead = true
+on_timer = 4000|mob_camp@1
+
+[mob_camp@1]
+path_home = pri_roof_ghost_point3
+path_look = pri_roof_ghost_point3
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=pri_rooftop_ghost6actors_mind_capture} %=delme2 =pri_actors_mind_dead%
+;on_actor_dist_le_nvis = 2|mob_camp@2 %=run_cam_effector(shell_shock:1984:false) =telepatic_hit_obj(37:bip01_spine:0.9:250) =play_snd(ambient\random\rnd_scr10) =run_postprocess(agr_u_fade)%
+
+[mob_camp@2]
+path_home = pri_roof_ghost_point3
+path_look = pri_roof_ghost_point3
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_timer = 6000|mob_camp@1
+
+
+
+
+
+[mob_death]
+on_info = %+pri_rooftop_ghost6_dead =delme2%
+

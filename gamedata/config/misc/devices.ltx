@@ -1,0 +1,1083 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Devices
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[device_atifact_merger]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\artifact merger"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_merger.ogf
+radius				= 1
+
+inv_name			= ArtefactMerger
+inv_name_short		= AfMerger
+inv_weight			= 3	;0.2
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 31
+cost				= 5000
+
+
+[inventory_box]
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\inventory box"
+class				= O_INVBOX
+cform				= skeleton
+visual				= physics\box\expl_dinamit.ogf
+script_binding      = bind_physic_object.init
+
+[secret_treasure]:inventory_box
+visual = physics\equipment_cache\equipment_rucksack_01_case.ogf
+custom_data = scripts\treasure_inventory_box.ltx
+radius = 2
+
+
+[habar_31]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\expl_dinamit.ogf
+script_binding = bind_physic_object.init
+
+[habar_33]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\expl_dinamit.ogf
+script_binding = bind_physic_object.init
+
+
+
+[house_shron1]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\expl_dinamit.ogf
+script_binding = bind_physic_object.init
+
+
+[crashed_heli]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\mi24_crashed.ogf
+script_binding = bind_physic_object.init
+
+
+[place_sleep]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_instrument_case_01_case.ogf 
+script_binding = bind_physic_object.init
+
+[place_sleep_matras]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\matras.ogf 
+script_binding = bind_physic_object.init
+
+
+[safe_shron1]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\seif_01.ogf
+script_binding = bind_physic_object.init
+
+[btr_toolbox]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = equipments\repbox.ogf
+script_binding = bind_physic_object.init
+
+[post_medkit]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = equipments\item_aptechka.ogf
+script_binding = bind_physic_object.init
+
+[place_vater]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_instrument_case_01_case.ogf
+script_binding = bind_physic_object.init
+
+[vater_kanistra]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\decor\butil_3.ogf
+script_binding = bind_physic_object.init
+
+[place_fuel]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_instrument_case_01_case.ogf
+script_binding = bind_physic_object.init
+
+[village_meshok]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\decor\bag_01.ogf
+script_binding = bind_physic_object.init
+
+[grave_cross]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\decor\tomb_02.ogf
+script_binding = bind_physic_object.init
+
+
+[stranger_bag]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\expl_dinamit.ogf
+script_binding = bind_physic_object.init
+
+[fake_niva]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\vehicles\niva\veh_niva_u_02.ogf
+script_binding = bind_physic_object.init
+
+[fake_zil]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\vehicles\zil_mmz\zil_mmz.ogf
+script_binding = bind_physic_object.init
+
+[fake_zapor]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\vehicles\zaz\veh_zaz_u_01.ogf
+script_binding = bind_physic_object.init
+
+[fake_uaz]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\vehicles\uaz_buhanka\uaz_buhanka.ogf
+script_binding = bind_physic_object.init
+
+
+[habar_body]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\expl_dinamit.ogf
+script_binding = bind_physic_object.init
+
+[habar_body2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\box\expl_dinamit.ogf
+script_binding = bind_physic_object.init
+
+
+[helicrash_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = additions\inv_box_zelen.ogf
+script_binding = bind_physic_object.init
+
+[kamp_seif_shron]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = additions\inv_box_zelen.ogf
+script_binding = bind_physic_object.init
+
+[controler_treasure]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\equipment_cache\equipment_instrument_case_01_case.ogf
+script_binding = bind_physic_object.init
+
+
+
+
+[heli_cargo]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_PHYS_S
+cform = skeleton
+visual = additions\inv_box_zelen.ogf
+script_binding = bind_physic_object.init
+
+[heli_cargo2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_PHYS_S
+cform = skeleton
+visual = physics\box\box_1b.ogf
+script_binding = bind_physic_object.init
+
+
+
+[sphere_dummy]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\sap\sap_art24.ogf  
+script_binding = bind_physic_object.init
+
+
+[case_turret]:turret_mgun
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\box\box_1c.ogf
+script_binding = bind_physic_object.init
+
+
+[object77b_dummy]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+;class = SCRPTOBJ
+class = P_DSTRBL
+cform = skeleton
+visual = physics\sap\sap_art25.ogf  
+script_binding = bind_physic_object.init
+
+[loop_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\sap\others\art4.ogf  
+script_binding = bind_physic_object.init
+
+
+[bone1]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\dead_body\skelet_head.ogf
+script_binding = bind_physic_object.init
+
+[bone2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\dead_body\skelet_foot1.ogf
+script_binding = bind_physic_object.init
+
+[bone3]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\dead_body\skelet_hend1.ogf
+script_binding = bind_physic_object.init
+
+[bone4]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\dead_body\skelet_torso.ogf
+script_binding = bind_physic_object.init
+
+
+[car_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_dipl.ogf 
+script_binding = bind_physic_object.init
+
+
+[grave_treasure]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = additions\kosterok_burn.ogf
+script_binding = bind_physic_object.init
+
+[desroyed_cross]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\decor\tomb_02.ogf
+script_binding = bind_physic_object.init
+
+[habar_bomzh]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\box_lab_01.ogf
+script_binding = bind_physic_object.init
+
+
+[magnitofon_old]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\magnitofon_plenochniy.ogf 
+script_binding = bind_physic_object.init
+
+[radiostaion]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_transiver.ogf 
+script_binding = bind_physic_object.init
+
+
+
+[cristall_reciver]
+GroupControlSection = spawn_group
+discovery_dependency =
+;class = O_BRKBL
+class = P_DSTRBL
+cform = skeleton
+visual = additions\cristall_receiver.ogf
+script_binding = bind_physic_object.init
+
+
+[metal_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = additions\inv_box_zelen.ogf
+script_binding = bind_physic_object.init
+
+[metal_box_small]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\box_lab_01.ogf
+script_binding = bind_physic_object.init
+
+
+[zapiska_dummy]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_zapiska.ogf
+script_binding = bind_physic_object.init
+
+
+[dnevnik_dummy]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_book_03.ogf
+script_binding = bind_physic_object.init
+
+
+[wooden_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\box_1c.ogf
+script_binding = bind_physic_object.init
+
+
+[dead_barrel]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\balon\bomb_01.ogf
+script_binding = bind_physic_object.init
+
+
+[seif_shron2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = additions\seif_code.ogf
+script_binding = bind_physic_object.init
+
+
+[dezintegrator_anomaly]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\skanner_anomaly.ogf
+script_binding = bind_physic_object.init
+
+[jekan_bag]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_rukzak.ogf
+script_binding = bind_physic_object.init
+
+
+[trap_item1]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = O_BRKBL
+cform = skeleton
+visual = physics\balon\bochka_close_1.ogf
+script_binding = bind_physic_object.init
+
+[trap_item2]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = O_BRKBL
+cform = skeleton
+visual = physics\stul\stul_1c.ogf
+script_binding = bind_physic_object.init
+
+[trap_item3]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = O_BRKBL
+cform = skeleton
+visual = physics\box\box_pak_01.ogf
+script_binding = bind_physic_object.init
+
+[trap_item4]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = O_BRKBL
+cform = skeleton
+visual = physics\decor\vedro_01.ogf
+script_binding = bind_physic_object.init
+
+[trap_item5]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = O_BRKBL
+cform = skeleton
+visual = physics\decor\tv_1_br.ogf
+script_binding = bind_physic_object.init
+
+
+[angar_laz]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_box_02_case.ogf
+script_binding = bind_physic_object.init
+
+
+
+[colonna_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = equipments\item_merger.ogf
+script_binding = bind_physic_object.init
+
+
+[reservuars_artefact]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\sap\others\art5.ogf  
+script_binding = bind_physic_object.init
+
+
+[electro_nut_dummy]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\sap\others\art6.ogf
+script_binding = bind_physic_object.init
+
+
+[pump_button]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_pipe_01_case.ogf 
+script_binding = bind_physic_object.init
+
+
+
+[ufo_part]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = P_DSTRBL
+cform = skeleton
+visual = objects\musor\ufo_ussr.ogf
+script_binding = bind_physic_object.init
+
+
+[ufo_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = SCRPTOBJ
+cform = skeleton
+visual = objects\musor\ufo_ussr.ogf
+script_binding = bind_physic_object.init
+
+
+
+[seif_shron3]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = additions\safe_black.ogf
+script_binding = bind_physic_object.init
+
+
+[script_dynamite]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\item_dynamite.ogf
+script_binding = bind_physic_object.init
+
+
+[key_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\klu4_selflight.ogf
+script_binding = bind_physic_object.init
+
+
+
+
+
+[script_niva_bolvanka]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\vehicles\niva\veh_niva_u_02.ogf
+script_binding = bind_physic_object.init
+
+[script_btr_bolvanka]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\vehicles\btr\veh_btr_u_01.ogf
+script_binding = bind_physic_object.init
+
+[chickenblind_zone_art]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\sap\sap_art9.ogf  
+script_binding = bind_physic_object.init
+
+
+[kazarma_pogon_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = equipments\item_dipl.ogf
+script_binding = bind_physic_object.init
+
+[hunter3_box]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\sap\sap_art9.ogf  
+script_binding = bind_physic_object.init
+
+
+[motor_table]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = bilboards\tablichka_clear.ogf  
+script_binding = bind_physic_object.init
+
+[ventilator_motor]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_instrument_case_01_case.ogf  
+script_binding = bind_physic_object.init
+
+
+[redrik_habar]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_rukzak.ogf  
+script_binding = bind_physic_object.init
+
+
+[script_habar]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\equipment_cache\equipment_pipe_01_case.ogf 
+script_binding = bind_physic_object.init
+
+[script_habar2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\equipment_cache\equipment_pipe_01_case.ogf 
+script_binding = bind_physic_object.init
+
+
+[doll_habar]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\box\box_lab_01.ogf 
+script_binding = bind_physic_object.init
+
+[doll_habar_2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\box_lab_01.ogf 
+script_binding = bind_physic_object.init
+
+
+[doll_treeart]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = additions\garb_tree_art.ogf
+script_binding = bind_physic_object.init
+
+
+
+[point_teleportation]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = monster_items\poltergeist_glas.ogf 
+script_binding = bind_physic_object.init
+
+
+[radio_script]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\decor\priemnik_gorizont.ogf 
+script_binding = bind_physic_object.init
+
+
+[habar_headhunters]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\box\box_lab_02.ogf 
+script_binding = bind_physic_object.init
+
+
+[magnitofon_script]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\item_legenda_404.ogf
+script_binding = bind_physic_object.init
+
+
+[script_raciya]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_fmradio.ogf
+script_binding = bind_physic_object.init
+
+
+[top_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\anomaly\artefact_battery.ogf
+script_binding = bind_physic_object.init
+
+
+
+[scull_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\dead_body\skelet_head.ogf
+script_binding = bind_physic_object.init
+
+
+
+[box_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = ogse\item_case_1.ogf
+script_binding = bind_physic_object.init
+
+
+
+[pumice_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = additions\garb_tree_art.ogf
+script_binding = bind_physic_object.init
+
+
+
+[chair_dynamic]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\stul\stul_wood_01.ogf
+script_binding = bind_physic_object.init
+
+
+
+[polter_item1]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\balon\balon_02.ogf
+script_binding = bind_physic_object.init
+
+[polter_item2]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\balon\bochka_close_1.ogf
+script_binding = bind_physic_object.init
+
+[polter_item3]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\decor\mysor_korzina_1.ogf
+script_binding = bind_physic_object.init
+
+[polter_item4]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\decor\ognetushitel.ogf
+script_binding = bind_physic_object.init
+
+[polter_item5]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\large_trash\poddon.ogf
+script_binding = bind_physic_object.init
+
+[polter_item6]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\box\box_wood_tara.ogf
+script_binding = bind_physic_object.init
+
+[polter_item7]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\balon\bidon.ogf
+script_binding = bind_physic_object.init
+
+[polter_item8]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\balon\bochka_fuel.ogf
+script_binding = bind_physic_object.init
+
+[polter_item9]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\box\box_1c.ogf
+script_binding = bind_physic_object.init
+
+[polter_item10]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\stul\stul_wood_01.ogf
+script_binding = bind_physic_object.init
+
+
+
+[faint_body]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn =  "physics\faint_body1"
+class = P_DSTRBL
+cform = skeleton
+visual = physics\test\old\stalker_ragdoll_new.ogf
+script_binding = bind_physic_object.init
+
+
+
+
+[zavod_trap_obj]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_PHYS_S
+cform = skeleton
+visual = physics\balon\bochka_close_1.ogf
+script_binding = bind_physic_object.init
+
+
+
+[lost_camp_scaner]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_amk_gps.ogf
+script_binding = bind_physic_object.init
+
+
+[pda_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = equipments\item_pda.ogf
+script_binding = bind_physic_object.init
+
+
+[habar_minibox]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = O_INVBOX
+cform = skeleton
+visual = physics\box\box_lab_01.ogf
+script_binding = bind_physic_object.init
+
+
+[grob1]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = O_BRKBL
+cform = skeleton
+visual = additions\grob_part1.ogf 
+script_binding = bind_physic_object.init
+
+
+[pepelatz_part]
+GroupControlSection = spawn_group
+discovery_dependency =
+class = P_DSTRBL
+cform = skeleton
+visual = additions\pepelats.ogf
+script_binding = bind_physic_object.init
+
+
+[lamp_static]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = physics\light\lampa_01_on.ogf
+script_binding = bind_physic_object.init
+
+[ball]
+GroupControlSection = spawn_group
+discovery_dependency =
+$spawn = "devices\inventory box"
+class = SCRPTOBJ
+cform = skeleton
+visual = additions\ball.ogf
+script_binding = bind_physic_object.init
+
+
+
+
+
+
+
+

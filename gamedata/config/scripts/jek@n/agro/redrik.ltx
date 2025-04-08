@@ -1,0 +1,54 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+on_death = death
+
+[walker@start]
+path_walk = redrik_walk1
+path_look = redrik_look1
+on_timer      = 1 | walker@1 %=make_invulnerable =disable_trading =play_snd_from_obj(8235:characters_voice\human_01\stalker\threat\drop_weapon\dropweapon_3)%
+
+
+[walker@1]
+path_walk = redrik_walk1
+path_look = redrik_look1
+danger = danger_condition
+combat_ignore_cond = always
+;on_timer      = 9000 | walker@2 %=play_snd_from_obj(8235:characters_voice\human_01\stalker\threat\drop_weapon\dropweapon_4)%
+on_info = {+redrik_warning1} walker@3
+
+[walker@2]
+path_walk = redrik_walk1
+path_look = redrik_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer      = 8000 | walker@1 %=play_snd_from_obj(8235:characters_voice\human_01\stalker\threat\drop_weapon\dropweapon_5)%
+on_info = {+redrik_warning1} walker@3
+
+
+; Предупредили ГГ о нехорошем Юрии и сваливаем:
+[walker@3]
+path_walk = redrik_walk2
+path_look = redrik_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | %=delme2%
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+redrik_dead%

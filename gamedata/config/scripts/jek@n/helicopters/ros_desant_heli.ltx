@@ -1,0 +1,59 @@
+[logic]
+active = heli_move@waiting1
+
+; Висим под локацией и ждем, пока пробъет час:
+[heli_move@waiting1]
+path_move = ros_desant_heli_point1
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+ros_hunter_mayak_finded} heli_move@waiting2
+
+; Начинаем движение:
+[heli_move@waiting2]
+path_move = ros_desant_heli_point1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_actor_not_in_zone = ros_hunter_zone | heli_move@to_place1 %+spawn_ros_desant =play_snd(characters_voice\scenario\aes\aes_third_desant_wave) =send_tip(ros_desant_heli_tip1:heli)%
+
+; Взлетели на 15 метров вверх и ждем, пока ГГ подойдёт:
+[heli_move@to_place1]
+path_move = ros_desant_heli_point2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_actor_in_zone = ros_hunter_desant_zone | heli_move@goodbye %=play_snd(characters_voice\scenario\pri\heli_phrase1) =send_tip(ros_desant_heli_tip2:heli)%
+
+; Улетаем вдаль и пропадаем:
+[heli_move@goodbye]
+path_move = ros_desant_heli_point3
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_signal = arrived | %=delme2%
+
+
+
+
+
+
+
+
+
+
+
+
+

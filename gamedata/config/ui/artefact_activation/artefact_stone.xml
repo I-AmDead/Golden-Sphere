@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<artefact_stone>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture>ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="55" y="7" r="225" g="218" b="118" font="letterica25">Каменная группа</text>
+</name>
+
+<image x="270" y="230" width="150" height="160" stretch="1">
+	<texture>ui\artefact_activation_logo2</texture>
+</image>
+
+<text_general x="270" y="420" width="420" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Каменные артефакты содержат в себе силу и крепость камня. При их распаде образуется защитное поле, нейтрализирующее физический урон обладателя. Бонусы: \nУменьшение урона от пулевых ранений и порезов; \nУменьшение урона от большинства аномалий; \nУменьшение урона при падении с высоты; \nНечувствительность к боли.</text>
+</text_general>
+
+<text1 x="570" y="275" width="370" height="35">
+	<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16"> - 1 минута</text>
+</text1>
+<text2 x="570" y="310" width="370" height="35">
+	<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16"> - 2 минуты</text>
+</text2>
+<text3 x="570" y="350" width="370" height="35">
+	<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16"> - 3 минуты</text>
+</text3>
+
+	<btn_1 x="440" y="270" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>"Щебень"</text>
+	</btn_1>
+
+	<btn_2 x="440" y="310" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>"Клубок"</text>
+	</btn_2>
+
+	<btn_3 x="440" y="350" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>"Куриный Бог"</text>
+	</btn_3>
+
+	<btn_4 x="320" y="633" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+	    <texture_t>ui_button_ordinary_t</texture_t>
+	    <texture_h>ui_button_ordinary_h</texture_h>
+		<text x="0" y="0" r="255" g="85" b="0" font="letterica16">Назад</text>
+	</btn_4>
+
+	<btn_quit x="510" y="633" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+	    <texture_t>ui_button_ordinary_t</texture_t>
+        <texture_h>ui_button_ordinary_h</texture_h>
+    	<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Отмена</text>
+    </btn_quit>
+
+</artefact_stone>
+

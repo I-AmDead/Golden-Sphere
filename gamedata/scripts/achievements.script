@@ -1,0 +1,544 @@
+
+
+
+-- "Оружейник" ------------------------------------------------------------------------------------------------------------
+
+-- если игрок собрал все оружейные инфопоршены, то ему выдается один общий инфопоршн, на который идет проверка в амк.
+function all_weapons_info_collected()
+	if has_alife_info("tutor_sng_scopes") and
+		has_alife_info("tutor_nato_scopes") and
+		has_alife_info("tutor_sng_sil") and
+		has_alife_info("tutor_nato_sil") and
+		has_alife_info("tutor_sng_grenl") and
+		has_alife_info("tutor_nato_grenl") and db.actor:dont_has_info("weapon_powerup") then
+			db.actor:give_info_portion ("weapon_powerup")
+		end
+end
+
+function change_addons()
+	if db.actor:dont_has_info("tutor_sng_grenl") then
+		if db.actor:object("wpn_addon_grenade_launcher") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_grenade_launcher",db.actor)
+		ogse.spawn_item_in_inv("glauncher_vog")
+		end
+	elseif has_alife_info("tutor_sng_grenl") then
+		if db.actor:object("glauncher_vog") then
+		ogse.remove_item_from_inventory_by_name("glauncher_vog",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_grenade_launcher")
+		end
+	end
+	
+	if db.actor:dont_has_info("tutor_nato_grenl") then
+		if db.actor:object("wpn_addon_grenade_launcher_m203") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_grenade_launcher_m203",db.actor)
+		ogse.spawn_item_in_inv("glauncher_m203")
+		end
+	elseif has_alife_info("tutor_nato_grenl") then
+		if db.actor:object("glauncher_m203") then
+		ogse.remove_item_from_inventory_by_name("glauncher_m203",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_grenade_launcher_m203")
+		end
+	end
+	
+	if db.actor:dont_has_info("tutor_nato_sil") then
+		if db.actor:object("wpn_addon_sil_1143_p") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_sil_1143_p",db.actor)
+		ogse.spawn_item_in_inv("silencer_1143")
+		end
+		if db.actor:object("wpn_addon_sil_556_ar") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_sil_556_ar",db.actor)
+		ogse.spawn_item_in_inv("silencer_556")
+		end
+		if db.actor:object("wpn_9mm_nato_silencer") then
+		ogse.remove_item_from_inventory_by_name("wpn_9mm_nato_silencer",db.actor)
+		ogse.spawn_item_in_inv("silencer_9mm")
+		end
+	elseif has_alife_info("tutor_nato_sil") then
+		if db.actor:object("silencer_1143") then
+		ogse.remove_item_from_inventory_by_name("silencer_1143",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_sil_1143_p")
+		end
+		if db.actor:object("silencer_556") then
+		ogse.remove_item_from_inventory_by_name("silencer_556",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_sil_556_ar")
+		end
+		if db.actor:object("silencer_9mm") then
+		ogse.remove_item_from_inventory_by_name("silencer_9mm",db.actor)
+		ogse.spawn_item_in_inv("wpn_9mm_nato_silencer")
+		end
+	end
+	
+	if db.actor:dont_has_info("tutor_sng_sil") then
+		if db.actor:object("wpn_addon_sil_545_ar") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_sil_545_ar",db.actor)
+		ogse.spawn_item_in_inv("silencer_545")
+		end
+		if db.actor:object("wpn_addon_sil_762_ar") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_sil_762_ar",db.actor)
+		ogse.spawn_item_in_inv("silencer_762")
+		end
+		if db.actor:object("wpn_addon_silencer") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_silencer",db.actor)
+		ogse.spawn_item_in_inv("silencer")
+		end
+	elseif has_alife_info("tutor_sng_sil") then
+		if db.actor:object("silencer_545") then
+		ogse.remove_item_from_inventory_by_name("silencer_545",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_sil_545_ar")
+		end
+		if db.actor:object("silencer_762") then
+		ogse.remove_item_from_inventory_by_name("silencer_762",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_sil_762_ar")
+		end
+		if db.actor:object("silencer") then
+		ogse.remove_item_from_inventory_by_name("silencer",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_silencer")
+		end
+	end
+	
+	if db.actor:dont_has_info("tutor_sng_scopes") then
+		if db.actor:object("wpn_addon_scope") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_scope",db.actor)
+		ogse.spawn_item_in_inv("scope_pso")
+		end
+		if db.actor:object("wpn_scope_mosin") then
+		ogse.remove_item_from_inventory_by_name("wpn_scope_mosin",db.actor)
+		ogse.spawn_item_in_inv("scope_mosin")
+		end
+		if db.actor:object("wpn_addon_scope_sks") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_scope_sks",db.actor)
+		ogse.spawn_item_in_inv("scope_sks")
+		end
+		if db.actor:object("wpn_addon_scope_aksu") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_scope_aksu",db.actor)
+		ogse.spawn_item_in_inv("scope_aksu")
+		end
+	elseif has_alife_info("tutor_sng_scopes") then
+		if db.actor:object("scope_pso") then
+		ogse.remove_item_from_inventory_by_name("scope_pso",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_scope")
+		end
+		if db.actor:object("scope_mosin") then
+		ogse.remove_item_from_inventory_by_name("scope_mosin",db.actor)
+		ogse.spawn_item_in_inv("wpn_scope_mosin")
+		end
+		if db.actor:object("scope_sks") then
+		ogse.remove_item_from_inventory_by_name("scope_sks",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_scope_sks")
+		end
+		if db.actor:object("scope_aksu") then
+		ogse.remove_item_from_inventory_by_name("scope_aksu",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_scope_aksu")
+		end
+	end
+	
+	if db.actor:dont_has_info("tutor_nato_scopes") then
+		if db.actor:object("wpn_addon_acog") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_acog",db.actor)
+		ogse.spawn_item_in_inv("scope_acog")
+		end
+		if db.actor:object("wpn_addon_m16_scope") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_m16_scope",db.actor)
+		ogse.spawn_item_in_inv("scope_m16")
+		end
+		if db.actor:object("wpn_addon_scope_susat") then
+		ogse.remove_item_from_inventory_by_name("wpn_addon_scope_susat",db.actor)
+		ogse.spawn_item_in_inv("scope_susat")
+		end
+	elseif has_alife_info("tutor_nato_scopes") then
+		if db.actor:object("scope_acog") then
+		ogse.remove_item_from_inventory_by_name("scope_acog",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_acog")
+		end
+		if db.actor:object("scope_m16") then
+		ogse.remove_item_from_inventory_by_name("scope_m16",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_m16_scope")
+		end
+		if db.actor:object("scope_susat") then
+		ogse.remove_item_from_inventory_by_name("scope_susat",db.actor)
+		ogse.spawn_item_in_inv("wpn_addon_scope_susat")
+		end
+	end
+	
+end
+
+-- выводим на худ значок достижения:
+function achievement1tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_wpn"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-- Коллекционер -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function check_arts() -- за каждый из артов выдаем соответствующий инфопоршн(однократно)
+	if ( db.actor:object("af_coal") and db.actor:dont_has_info("af_1") )  then
+	db.actor:give_info_portion ("af_1")
+	end
+
+	if ( db.actor:object("af_scale") and db.actor:dont_has_info("af_2") )  then
+	db.actor:give_info_portion ("af_2")
+	end
+
+	if ( db.actor:object("af_bitum") and db.actor:dont_has_info("af_3") )  then
+	db.actor:give_info_portion ("af_3")
+	end
+
+	if ( db.actor:object("af_ballast") and db.actor:dont_has_info("af_4") )  then
+	db.actor:give_info_portion ("af_4")
+	end
+
+	if ( db.actor:object("af_roll") and db.actor:dont_has_info("af_5") ) then
+	db.actor:give_info_portion ("af_5")
+	end
+
+	if ( db.actor:object("af_chicken_god") and db.actor:dont_has_info("af_6") ) then
+	db.actor:give_info_portion ("af_6")
+	end
+
+	if ( db.actor:object("af_steel_nut") and db.actor:dont_has_info("af_7") ) then
+	db.actor:give_info_portion ("af_7")
+	end
+
+	if ( db.actor:object("af_bearing") and db.actor:dont_has_info("af_8") ) then
+	db.actor:give_info_portion ("af_8")
+	end
+
+	if ( db.actor:object("af_crown") and db.actor:dont_has_info("af_9") ) then
+	db.actor:give_info_portion ("af_9")
+	end
+
+	if ( db.actor:object("af_frog") and db.actor:dont_has_info("af_10") ) then
+	db.actor:give_info_portion ("af_10")
+	end
+
+	if ( db.actor:object("af_chestnut") and db.actor:dont_has_info("af_11") ) then
+	db.actor:give_info_portion ("af_11")
+	end
+
+	if ( db.actor:object("af_sagebrush") and db.actor:dont_has_info("af_12") ) then
+	db.actor:give_info_portion ("af_12")
+	end
+
+	if ( db.actor:object("af_mushroom") and db.actor:dont_has_info("af_13") ) then
+	db.actor:give_info_portion ("af_13")
+	end
+
+	if ( db.actor:object("af_glass") and db.actor:dont_has_info("af_14") ) then
+	db.actor:give_info_portion ("af_14")
+	end
+
+	if ( db.actor:object("af_teardrop") and db.actor:dont_has_info("af_15") ) then
+	db.actor:give_info_portion ("af_15")
+	end
+
+	if ( db.actor:object("af_lens") and db.actor:dont_has_info("af_16") ) then
+	db.actor:give_info_portion ("af_16")
+	end
+
+	if ( db.actor:object("af_spiral") and db.actor:dont_has_info("af_17") ) then
+	db.actor:give_info_portion ("af_17")
+	end
+
+	if ( db.actor:object("af_cristallic") and db.actor:dont_has_info("af_18") ) then
+	db.actor:give_info_portion ("af_18")
+	end
+
+	if ( db.actor:object("af_snail") and db.actor:dont_has_info("af_19") ) then
+	db.actor:give_info_portion ("af_19")
+	end
+
+	if ( db.actor:object("af_hole") and db.actor:dont_has_info("af_20") ) then
+	db.actor:give_info_portion ("af_20")
+	end
+
+	if ( db.actor:object("af_egg") and db.actor:dont_has_info("af_21") ) then
+	db.actor:give_info_portion ("af_21")
+	end
+
+end
+
+
+-- если игрок собрал все артефактные инфопоршены, то ему выдается один общий инфопоршн, на который идет проверка в амк.
+function all_arts_has_collected()
+	if ( has_alife_info("af_1") and
+		has_alife_info("af_2") and
+		has_alife_info("af_3") and
+		has_alife_info("af_4") and
+		has_alife_info("af_5") and
+		has_alife_info("af_6") and
+		has_alife_info("af_7") and
+		has_alife_info("af_8") and
+		has_alife_info("af_9") and
+		has_alife_info("af_10") and
+		has_alife_info("af_11") and
+		has_alife_info("af_12") and
+		has_alife_info("af_13") and
+		has_alife_info("af_14") and
+		has_alife_info("af_15") and
+		has_alife_info("af_16") and
+		has_alife_info("af_17") and
+		has_alife_info("af_18") and
+		has_alife_info("af_19") and
+		has_alife_info("af_20") and
+		has_alife_info("af_21") and not has_alife_info("arts_powerup") ) then
+			db.actor:give_info_portion ("arts_powerup")
+		end
+end
+
+-- выводим на худ значок достижения:
+function achievement2tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_af"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+
+
+-- За Родину! ---------------------------------------------------------------------------------------------------------------------------------------
+
+function check_items_of_achiev3() -- нужно иметь в инвентаре бюст Ленина
+	if (db.actor:object("lenin_bust") and db.actor:dont_has_info("achievement3")) then
+		db.actor:give_info_portion ("achievement3")
+	end
+	replace_bulignics_to_artefacts()
+end
+
+-- выводим на худ значок достижения:
+function achievement3tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_lenin"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+
+
+function replace_bulignics_to_artefacts()
+	local artefacts = {
+	'af_coal',
+        'af_scale',
+        'af_bitum',
+        'af_ballast',
+        'af_steel_nut',
+        'af_frog',
+        'af_chestnut',
+        'af_glass',
+        'af_spiral',
+        'af_cristallic'
+	}
+	if (db.actor:object("dummy") and has_alife_info("achievement3")) then
+        local randomArtefact = artefacts[math.random(1, #artefacts)]
+		alife():create(randomArtefact, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		ogse.remove_inv_items_by_section("dummy", 1)
+	end
+end
+
+-- Чёрный копатель ------------------------------------------------------------------------------------------------------------------------------
+
+function check_deadmans_head_portions()
+	if ( has_alife_info("grave1") and
+		has_alife_info("grave2") and
+		has_alife_info("grave3") and
+		has_alife_info("grave4") and
+		has_alife_info("grave5") and
+		has_alife_info("grave6") and
+		has_alife_info("grave7") and
+		has_alife_info("grave8") and
+		has_alife_info("grave9") and
+		has_alife_info("grave10") and
+		has_alife_info("grave11") and
+		has_alife_info("grave12") and
+		has_alife_info("grave13") and
+		has_alife_info("grave14") and
+		has_alife_info("grave15") ) and not has_alife_info("deadman_head_powerup") then
+			db.actor:give_info_portion ("deadman_head_powerup")
+		end
+end
+
+-- выводим на худ значок достижения:
+function achievement4tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_grave"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+db.actor:disable_info_portion("grave1")
+db.actor:disable_info_portion("grave2")
+db.actor:disable_info_portion("grave3")
+db.actor:disable_info_portion("grave4")
+db.actor:disable_info_portion("grave5")
+db.actor:disable_info_portion("grave6")
+db.actor:disable_info_portion("grave7")
+db.actor:disable_info_portion("grave8")
+db.actor:disable_info_portion("grave9")
+db.actor:disable_info_portion("grave10")
+db.actor:disable_info_portion("grave11")
+db.actor:disable_info_portion("grave12")
+db.actor:disable_info_portion("grave13")
+db.actor:disable_info_portion("grave14")
+db.actor:disable_info_portion("grave15")
+end
+
+function deadmans_head_exchange()
+	if db.actor:object("deadman_head") then
+	ogse.remove_inv_items_by_section("deadman_head", 1)
+	ogse.spawn_item_in_inv("power_scull")
+	end
+end
+
+
+-- Мастер ножа ---------------------------------------------------------------------------------------------------------------------------
+
+function check_knife_powerup_condition()
+if ( has_alife_info("atp_controler_knifed") and db.actor:dont_has_info("esc_atp_controler_agress") and db.actor:dont_has_info("achievement5") ) then
+	db.actor:give_info_portion ("achievement5")
+end
+end
+
+function achievement5tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_knife"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+
+function change_knifes()
+	if db.actor:object("wpn_knife") then
+	ogse.remove_item_from_inventory_by_name("wpn_knife",db.actor)
+	ogse.spawn_item_in_inv("wpn_knife_up1")
+
+	elseif db.actor:object("wpn_knife2") then
+	ogse.remove_item_from_inventory_by_name("wpn_knife2",db.actor)
+	ogse.spawn_item_in_inv("wpn_knife2_up1")
+
+	elseif db.actor:object("wpn_knife3") then
+	ogse.remove_item_from_inventory_by_name("wpn_knife3",db.actor)
+	ogse.spawn_item_in_inv("wpn_knife3_up1")
+
+	elseif db.actor:object("wpn_knife4") then
+	ogse.remove_item_from_inventory_by_name("wpn_knife4",db.actor)
+	ogse.spawn_item_in_inv("wpn_knife4_up1")
+
+	elseif db.actor:object("wpn_knife5") then
+	ogse.remove_item_from_inventory_by_name("wpn_knife5",db.actor)
+	ogse.spawn_item_in_inv("wpn_knife5_up1")
+
+	elseif db.actor:object("wpn_knife6") then
+	ogse.remove_item_from_inventory_by_name("wpn_knife6",db.actor)
+	ogse.spawn_item_in_inv("wpn_knife6_up1")
+
+	end
+end
+
+
+
+-- Снайпер ----------------------------------------------------------------------------------------------------------------
+
+function check_sniper_condition()
+local sniping = starvation.get_sniping()
+	if ( sniping == 1.0 and db.actor:dont_has_info("achievement6") ) then
+		db.actor:give_info_portion ("achievement6")
+	end
+end
+
+function achievement6tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_sniper"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+
+
+-- Дробью в щщи ----------------------------------------------------------------------------------------------------------------
+
+function check_buck_condition()
+local buckshoot = starvation.get_buckshoot()
+	if buckshoot == 1.0 and db.actor:dont_has_info("achievement7") then
+		db.actor:give_info_portion ("achievement7")
+	end
+end
+
+function achievement7tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_shotgun"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+-----------------------------------------------------------------------------------------------------------------------------------
+
+-- Если прошли Недостройку ни разу не спалившись --------------------------------------------------------------------------------------
+function check_dar_build_guard_violence()
+local karma = starvation.get_karma()
+	if has_alife_info("dar_kristall_task") and db.actor:dont_has_info("dar_build_guard_violence") then
+		db.actor:give_info_portion ("achievement8")
+	end
+end
+
+function achievement8tip()
+		achievement_text = game.translate_string("%c[255,160,160,160]"..game.translate_string("st_tip_achievement").."\\n".."%c[default]"..game.translate_string("st_tip_achievement_stels"))
+		local hud = get_hud()
+		hud:AddCustomStatic("achievement_static", true)
+		hud:GetCustomStatic("achievement_static"):wnd():SetTextST(achievement_text)
+		hud:GetCustomStatic("achievement_static").m_endTime = time_global()/1000 + 10
+soundtrack.achievement()
+end
+
+
+-- Значки --------------------------------------------------------------------------------------------------------------------------
+
+function check_sssr_signs()
+if db.actor:object("signs_albom") then
+	if ( db.actor:object("sssr_sign1") and db.actor:dont_has_info("sssr_sgn1") ) then
+		ogse.remove_inv_items_by_section("sssr_sign1", 1)
+		db.actor:give_info_portion ("sssr_sgn1")
+	elseif ( db.actor:object("sssr_sign2") and db.actor:dont_has_info("sssr_sgn2") ) then
+		ogse.remove_inv_items_by_section("sssr_sign2", 1)
+		db.actor:give_info_portion ("sssr_sgn2")
+	elseif ( db.actor:object("sssr_sign3") and db.actor:dont_has_info("sssr_sgn3") ) then
+		ogse.remove_inv_items_by_section("sssr_sign3", 1)
+		db.actor:give_info_portion ("sssr_sgn3")
+	elseif ( db.actor:object("sssr_sign4") and db.actor:dont_has_info("sssr_sgn4") ) then
+		ogse.remove_inv_items_by_section("sssr_sign4", 1)
+		db.actor:give_info_portion ("sssr_sgn4")
+	elseif ( db.actor:object("sssr_sign5") and db.actor:dont_has_info("sssr_sgn5") ) then
+		ogse.remove_inv_items_by_section("sssr_sign5", 1)
+		db.actor:give_info_portion ("sssr_sgn5")
+	elseif ( db.actor:object("sssr_sign6") and db.actor:dont_has_info("sssr_sgn6") ) then
+		ogse.remove_inv_items_by_section("sssr_sign6", 1)
+		db.actor:give_info_portion ("sssr_sgn6")
+	elseif ( db.actor:object("sssr_sign7") and db.actor:dont_has_info("sssr_sgn7") ) then
+		ogse.remove_inv_items_by_section("sssr_sign7", 1)
+		db.actor:give_info_portion ("sssr_sgn7")
+	elseif ( db.actor:object("sssr_sign8") and db.actor:dont_has_info("sssr_sgn8") ) then
+		ogse.remove_inv_items_by_section("sssr_sign8", 1)
+		db.actor:give_info_portion ("sssr_sgn8")
+	elseif ( db.actor:object("sssr_sign9") and db.actor:dont_has_info("sssr_sgn9") ) then
+		ogse.remove_inv_items_by_section("sssr_sign9", 1)
+		db.actor:give_info_portion ("sssr_sgn9")
+	elseif ( db.actor:object("sssr_sign10") and db.actor:dont_has_info("sssr_sgn10") ) then
+		ogse.remove_inv_items_by_section("sssr_sign10", 1)
+		db.actor:give_info_portion ("sssr_sgn10")
+	end
+	if ( has_alife_info("sssr_sgn1") and has_alife_info("sssr_sgn2") and has_alife_info("sssr_sgn3") and has_alife_info("sssr_sgn4") and has_alife_info("sssr_sgn5") and has_alife_info("sssr_sgn6") and has_alife_info("sssr_sgn7") and has_alife_info("sssr_sgn8") and has_alife_info("sssr_sgn9") and has_alife_info("sssr_sgn10") ) and db.actor:dont_has_info("sssr_sgns_bonus") then
+		db.actor:give_info_portion ("sssr_sgns_bonus")
+	end
+end
+end

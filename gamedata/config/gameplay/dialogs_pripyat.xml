@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+
+<dialog id="pri_abdul_dialog1">
+        <has_info>rad_abdul_delete</has_info>
+        <dont_has_info>pri_abdul_goto_sniper</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_abdul_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_abdul_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>pri_abdul_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>pri_abdul_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>pri_abdul_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>pri_abdul_dialog1_phrase_6</text>
+ 	<give_info>pri_abdul_goto_sniper</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="pri_abdul_dialog1_1">
+        <has_info>rad_abdul_delete</has_info>
+        <dont_has_info>pri_abdul_goto_sniper</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_abdul_dialog1_1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_abdul_dialog1_1_phrase_2</text>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="pri_abdul_dialog2">
+        <has_info>pri_abdul_behind_sniper</has_info>
+        <dont_has_info>pri_abdul_last_talk1</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_abdul_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_abdul_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>pri_abdul_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>pri_abdul_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>pri_abdul_dialog2_phrase_5</text>
+ 	<give_info>pri_abdul_last_talk1</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="pri_abdul_dialog3">
+        <has_info>pri_abdul_sniper_dead</has_info>
+        <dont_has_info>pri_abdul_last_talk2</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_abdul_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_abdul_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>pri_abdul_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>pri_abdul_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>pri_abdul_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>pri_abdul_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>pri_abdul_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>pri_abdul_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>pri_abdul_dialog3_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>pri_abdul_dialog3_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>pri_abdul_dialog3_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>pri_abdul_dialog3_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>pri_abdul_dialog3_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>pri_abdul_dialog3_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>pri_abdul_dialog3_phrase_15</text>
+              <next>15</next>
+              </phrase>
+            <phrase id="15">
+                <text>pri_abdul_dialog3_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>pri_abdul_dialog3_phrase_17</text>
+	<next>17</next>
+     	    </phrase>
+            <phrase id="17">
+                <text>pri_abdul_dialog3_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>pri_abdul_dialog3_phrase_19</text>
+ 	<give_info>pri_abdul_last_talk2</give_info>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="pri_agent_lider_dialog1">
+        <has_info>pri_agents_meet_task</has_info>
+        <dont_has_info>pri_agents_accept</dont_has_info>
+        <dont_has_info>pri_agent_lider_hit_by_actor</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_agent_lider_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_agent_lider_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>pri_agent_lider_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>pri_agent_lider_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>pri_agent_lider_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>pri_agent_lider_dialog1_phrase_6</text>
+              <next>6</next>
+              <next>7</next>
+            </phrase>
+           <phrase id="6">
+                <text>pri_agent_lider_dialog1_phrase_7</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="7">
+                <text>pri_agent_lider_dialog1_phrase_8</text>
+	<action>dialogs.break_dialog</action>
+	<give_info>pri_agent_lider_hit_by_actor</give_info>
+	<give_info>pri_hall_agents_spawn</give_info>
+            </phrase>
+           <phrase id="8">
+                <text>pri_agent_lider_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>pri_agent_lider_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>pri_agent_lider_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>pri_agent_lider_dialog1_phrase_12</text>
+	<give_info>pri_agents_accept</give_info>
+	<give_info>pri_hall_agents_spawn</give_info>
+	<action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="pri_agent_lider_dialog2">
+        <has_info>pri_agent_lider_speech_end</has_info>
+        <dont_has_info>actor_agents_influence</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_agent_lider_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_agent_lider_dialog2_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>pri_agent_lider_dialog2_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>pri_agent_lider_dialog2_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>pri_agent_lider_dialog2_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>pri_agent_lider_dialog2_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>pri_agent_lider_dialog2_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>pri_agent_lider_dialog2_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>pri_agent_lider_dialog2_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>pri_agent_lider_dialog2_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>pri_agent_lider_dialog2_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>pri_agent_lider_dialog2_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>pri_agent_lider_dialog2_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>pri_agent_lider_dialog2_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>pri_agent_lider_dialog2_phrase_15</text>
+	<give_info>actor_agents_influence</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="actor_clone_dialog1">
+        <has_info>actor_agents_influence</has_info>
+        <dont_has_info>actor_mind_fight</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>actor_clone_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>actor_clone_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>actor_clone_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>actor_clone_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>actor_clone_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>actor_clone_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>actor_clone_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>actor_clone_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>actor_clone_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>actor_clone_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>actor_clone_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>actor_clone_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>actor_clone_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>actor_clone_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>actor_clone_dialog1_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>actor_clone_dialog1_phrase_16</text>
+	<give_info>actor_mind_fight</give_info>
+	<action>dialogs.break_dialog</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+<dialog id="pri_agent_lider_dialog3">
+        <has_info>pri_rooftop_battle_end</has_info>
+        <dont_has_info>pri_agent_lider_last_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>pri_agent_lider_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>pri_agent_lider_dialog3_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>pri_agent_lider_dialog3_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>pri_agent_lider_dialog3_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>pri_agent_lider_dialog3_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>pri_agent_lider_dialog3_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>pri_agent_lider_dialog3_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>pri_agent_lider_dialog3_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>pri_agent_lider_dialog3_phrase_9</text>
+	<give_info>pri_agent_lider_last_info</give_info>
+	<action>addon_dialogs.pri_stadion_key_in</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="aes_last_agent_dialog1">
+        <has_info>aes_altar_off</has_info>
+        <dont_has_info>aes_body4_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>aes_last_agent_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>aes_last_agent_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>aes_last_agent_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>aes_last_agent_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>aes_last_agent_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>aes_last_agent_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>aes_last_agent_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>aes_last_agent_dialog1_phrase_8</text>
+	<give_info>aes_body4_info</give_info>
+	<action>addon_dialogs.aes_kristall_out</action>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+<dialog id="general_scientist_dialog1">
+        <has_info>mon_general_komp_on</has_info>
+        <dont_has_info>general_scientist_last_info</dont_has_info>
+                <phrase_list>
+            <phrase id="0">
+                <text>general_scientist_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>general_scientist_dialog1_phrase_2</text>
+	<next>2</next>
+     	    </phrase>
+            <phrase id="2">
+                <text>general_scientist_dialog1_phrase_3</text>
+              <next>3</next>
+            </phrase>
+           <phrase id="3">
+                <text>general_scientist_dialog1_phrase_4</text>
+              <next>4</next>
+            </phrase>
+           <phrase id="4">
+                <text>general_scientist_dialog1_phrase_5</text>
+              <next>5</next>
+            </phrase>
+           <phrase id="5">
+                <text>general_scientist_dialog1_phrase_6</text>
+              <next>6</next>
+            </phrase>
+           <phrase id="6">
+                <text>general_scientist_dialog1_phrase_7</text>
+              <next>7</next>
+            </phrase>
+           <phrase id="7">
+                <text>general_scientist_dialog1_phrase_8</text>
+              <next>8</next>
+            </phrase>
+           <phrase id="8">
+                <text>general_scientist_dialog1_phrase_9</text>
+              <next>9</next>
+            </phrase>
+           <phrase id="9">
+                <text>general_scientist_dialog1_phrase_10</text>
+              <next>10</next>
+            </phrase>
+           <phrase id="10">
+                <text>general_scientist_dialog1_phrase_11</text>
+              <next>11</next>
+            </phrase>
+           <phrase id="11">
+                <text>general_scientist_dialog1_phrase_12</text>
+              <next>12</next>
+            </phrase>
+           <phrase id="12">
+                <text>general_scientist_dialog1_phrase_13</text>
+              <next>13</next>
+            </phrase>
+           <phrase id="13">
+                <text>general_scientist_dialog1_phrase_14</text>
+              <next>14</next>
+            </phrase>
+           <phrase id="14">
+                <text>general_scientist_dialog1_phrase_15</text>
+              <next>15</next>
+            </phrase>
+           <phrase id="15">
+                <text>general_scientist_dialog1_phrase_16</text>
+              <next>16</next>
+            </phrase>
+           <phrase id="16">
+                <text>general_scientist_dialog1_phrase_17</text>
+              <next>17</next>
+            </phrase>
+           <phrase id="17">
+                <text>general_scientist_dialog1_phrase_18</text>
+              <next>18</next>
+            </phrase>
+           <phrase id="18">
+                <text>general_scientist_dialog1_phrase_19</text>
+              <next>19</next>
+            </phrase>
+           <phrase id="19">
+                <text>general_scientist_dialog1_phrase_20</text>
+	<give_info>general_scientist_last_info</give_info>
+              </phrase>
+        </phrase_list>
+  </dialog>
+
+
+
+
+
+
+</game_dialogs>

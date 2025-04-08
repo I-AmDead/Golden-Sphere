@@ -1,0 +1,45 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+-- список явно подключаемых модулей
+-- здесь надо регистрировать модули, которые не будут подключаться автоматически
+-- например те, у которых имя модуля не начинается на ogse
+addons = {
+	"addon_attach",
+	"gs_ogsr",
+	"death_manager",
+	"dsh_hud_fx",
+	"dsh_monster_attack",
+	"dsh_sleep",
+	"dsh_cop_weather",
+	"healing",
+	"laucer_inventory_sorting",
+	"ogse_anomaly",
+	"ogse_autodoc",
+	"ogse_body_states",
+	"ogse_detectors",
+	"ogse_dynamic_hud",
+	"ogse_lights_mgr",
+	"ogse_mental_fix",
+	"ogse_night_vision",
+	"ogse_qt",
+	"ogse_quick_slots",
+	"ogse_sleep_mgr",
+	"ogse_surge_mgr",
+	"ogse_st_mgr",
+	"ogse_torch",
+	"ogse_unist",
+	--"ogse_weather_mgr",
+	"ogsr_items_anims",
+	"ogsr_memory_control",
+	"sound_theme",
+	"sr_light",
+	"ui_body_add",
+	"ui_indicators",
+	"ui_inv_add",
+	"ui_ogse_quicklaunch",
+	"ui_script_hud",
+	"ui_trade_add",
+	"xr_sound",
+
+	"inventory", --РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРѕСЃР»РµРґРЅРёРј!
+
+}

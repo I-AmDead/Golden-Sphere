@@ -1,0 +1,4357 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+
+
+    <dialog id="predb_trader_start_dialog">
+        <has_info>predb_kpp_soldiers_atacked</has_info>
+        <dont_has_info>predb_trader_first_talk</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_trader_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_trader_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_trader_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_trader_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_trader_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_trader_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_trader_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_trader_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_trader_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_trader_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_trader_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_trader_start_dialog_phrase_12</text>
+                <give_info>predb_trader_first_talk</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander1_dialog1">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander1_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander1_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander1_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander1_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander1_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander1_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander1_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander1_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander1_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander1_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander1_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander1_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander1_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander1_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander1_dialog1_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander3_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander3_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander3_start_dialog_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander3_start_dialog_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander3_start_dialog_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander3_start_dialog_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander4_start_dialog">
+        <has_info>predb_cave_task_done</has_info>
+        <dont_has_info>predb_village_grass_info</dont_has_info>
+        <dont_has_info>predb_fabrik_search</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander4_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander4_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander4_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander4_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander4_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander4_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander4_start_dialog_phrase_7</text>
+                <next>7</next>
+                <next>8</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander4_start_dialog_phrase_8</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander4_start_dialog_phrase_9</text>
+                <give_info>kontrabander4_enemy</give_info>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander4_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander4_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander4_start_dialog_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander4_start_dialog_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander4_start_dialog_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander4_start_dialog_phrase_15</text>
+                <give_info>predb_village_grass_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier1_dialog1">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier1_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier1_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier1_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier1_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier1_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier1_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier1_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier1_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier1_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier1_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier1_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier1_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier1_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier1_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier1_dialog1_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier2_dialog1">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier2_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier2_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier2_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier2_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier2_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier2_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier2_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier2_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier2_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier2_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier2_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier2_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier2_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier2_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier2_dialog1_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier4_dialog1">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier4_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier4_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier4_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier4_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier4_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier4_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier4_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier4_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier4_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier4_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier4_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier4_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier4_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier4_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier4_dialog1_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier5_dialog1">
+        <has_info>predb_kpp_fight_start</has_info>
+        <dont_has_info>predb_kontrabander6_dead</dont_has_info>
+        <dont_has_info>predb_kontrabander7_dead</dont_has_info>
+        <dont_has_info>predb_kontrabander8_dead</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog1_phrase_2</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier5_dialog2">
+        <has_info>predb_kontrabander6_dead</has_info>
+        <has_info>predb_kontrabander7_dead</has_info>
+        <has_info>predb_kontrabander8_dead</has_info>
+        <dont_has_info>predb_kpp_komander_task1</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier5_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier5_dialog2_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier5_dialog2_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier5_dialog2_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier5_dialog2_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier5_dialog2_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier5_dialog2_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier5_dialog2_phrase_10</text>
+                <next>10</next>
+                <next>11</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier5_dialog2_phrase_11</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier5_dialog2_phrase_12</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier5_dialog2_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier5_dialog2_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier5_dialog2_phrase_15</text>
+                <next>15</next>
+            </phrase>
+            <phrase id="15">
+                <text>predb_kpp_soldier5_dialog2_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>predb_kpp_soldier5_dialog2_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_kpp_soldier5_dialog2_phrase_18</text>
+                <give_info>predb_kpp_komander_task1</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier6_dialog1">
+        <has_info>predb_kontrabander6_dead</has_info>
+        <has_info>predb_kontrabander7_dead</has_info>
+        <has_info>predb_kontrabander8_dead</has_info>
+        <has_info>predb_kpp_komander_task1</has_info>
+        <dont_has_info>predb_btr_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier6_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier6_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier6_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier6_dialog1_phrase_4</text>
+                <next>4</next>
+                <next>5</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier6_dialog1_phrase_5</text>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier6_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier6_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier6_dialog1_phrase_8</text>
+                <give_info>predb_btr_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier6_dialog2">
+        <dont_has_info>predb_btr_acess</dont_has_info>
+        <precondition>addon_dialogs.have_all_predb_btr_items</precondition>
+        <has_info>predb_btr_info</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier6_dialog2_phrase_1</text>
+                <action>addon_dialogs.predb_btr_items_out</action>
+                <give_info>predb_btr_acess</give_info>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier6_dialog2_phrase_2</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier7_dialog1">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier7_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier7_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier7_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier7_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier7_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier7_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier7_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier7_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier7_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier7_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier7_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier7_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier7_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier7_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier7_dialog1_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander5_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander5_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander5_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander5_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander5_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander5_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander5_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander5_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander5_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander5_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander5_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander5_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander5_start_dialog_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander5_start_dialog_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander5_start_dialog_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander5_start_dialog_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander6_start_dialog">
+        <has_info>predb_kpp_soldier1_dead</has_info>
+        <has_info>predb_kpp_soldier2_dead</has_info>
+        <has_info>predb_kpp_soldier3_dead</has_info>
+        <has_info>predb_kpp_soldier4_dead</has_info>
+        <has_info>predb_kpp_soldier5_dead</has_info>
+        <has_info>predb_kpp_soldier6_dead</has_info>
+        <has_info>predb_kpp_soldier7_dead</has_info>
+        <dont_has_info>kpp_kontrab_goto_hutor</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander6_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander6_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander6_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander6_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander6_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander6_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander6_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander6_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander6_start_dialog_phrase_9</text>
+                <give_info>kpp_kontrab_goto_hutor</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander7_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander7_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander7_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander7_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander7_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander7_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander7_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander7_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander7_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander7_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander7_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander7_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander7_start_dialog_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander7_start_dialog_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander7_start_dialog_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander7_start_dialog_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander8_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander8_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander8_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander8_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander8_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander8_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander8_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander8_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander8_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander8_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander8_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander8_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander8_start_dialog_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander8_start_dialog_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander8_start_dialog_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander8_start_dialog_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_trader_dialog1">
+        <has_info>predb_trader_first_talk</has_info>
+        <dont_has_info>predb_trader_second_talk</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_trader_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_trader_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_trader_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_trader_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_trader_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_trader_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_trader_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_trader_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_trader_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_trader_dialog1_phrase_10</text>
+                <give_info>predb_trader_second_talk</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander3_dialog1">
+        <has_info>predb_trader_second_talk</has_info>
+        <dont_has_info>predb_lost_man_task</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander3_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander3_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander3_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander3_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander3_dialog1_phrase_15</text>
+                <next>15</next>
+            </phrase>
+            <phrase id="15">
+                <text>predb_kontrabander3_dialog1_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>predb_kontrabander3_dialog1_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_kontrabander3_dialog1_phrase_18</text>
+                <next>18</next>
+            </phrase>
+            <phrase id="18">
+                <text>predb_kontrabander3_dialog1_phrase_19</text>
+                <next>19</next>
+            </phrase>
+            <phrase id="19">
+                <text>predb_kontrabander3_dialog1_phrase_20</text>
+                <next>20</next>
+            </phrase>
+            <phrase id="20">
+                <text>predb_kontrabander3_dialog1_phrase_21</text>
+                <next>21</next>
+            </phrase>
+            <phrase id="21">
+                <text>predb_kontrabander3_dialog1_phrase_22</text>
+                <next>22</next>
+                <next>23</next>
+            </phrase>
+            <phrase id="22">
+                <text>predb_kontrabander3_dialog1_phrase_23</text>
+                <give_info>predb_lost_man_task</give_info>
+            </phrase>
+            <phrase id="23">
+                <text>predb_kontrabander3_dialog1_phrase_24</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander3_dialog2">
+        <has_info>predb_lost_man_task</has_info>
+        <dont_has_info>predb_body1_info</dont_has_info>
+        <dont_has_info>predb_cave_task_done</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog2_phrase_4</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander3_dialog3">
+        <has_info>predb_body2_info</has_info>
+        <precondition>addon_dialogs.have_predb_kontrab_fake_capsula</precondition>
+        <dont_has_info>predb_lost_man_task_done</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_dialog3_phrase_5</text>
+                <action>addon_dialogs.predb_kontrab_fake_capsula_out</action>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_dialog3_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_dialog3_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_dialog3_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander3_dialog3_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander3_dialog3_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander3_dialog3_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander3_dialog3_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander3_dialog3_phrase_15</text>
+                <action>addon_dialogs.predb_kontrab_capsula_reward</action>
+                <give_info>predb_lost_man_task_done</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_hermit_start_dialog">
+        <has_info>predb_cave_trap</has_info>
+        <dont_has_info>predb_hermit_execute</dont_has_info>
+        <dont_has_info>predb_hermit_live</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_hermit_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_hermit_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_hermit_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_hermit_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_hermit_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_hermit_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_hermit_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_hermit_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_hermit_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_hermit_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_hermit_start_dialog_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_hermit_start_dialog_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_hermit_start_dialog_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_hermit_start_dialog_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_hermit_start_dialog_phrase_15</text>
+                <action>soundtrack.predb_hermit_stalker_talk</action>
+                <next>15</next>
+            </phrase>
+            <phrase id="15">
+                <text>predb_hermit_start_dialog_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>predb_hermit_start_dialog_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_hermit_start_dialog_phrase_18</text>
+                <next>18</next>
+            </phrase>
+            <phrase id="18">
+                <text>predb_hermit_start_dialog_phrase_19</text>
+                <next>19</next>
+            </phrase>
+            <phrase id="19">
+                <text>predb_hermit_start_dialog_phrase_20</text>
+                <next>20</next>
+            </phrase>
+            <phrase id="20">
+                <text>predb_hermit_start_dialog_phrase_21</text>
+                <next>21</next>
+            </phrase>
+            <phrase id="21">
+                <text>predb_hermit_start_dialog_phrase_22</text>
+                <next>22</next>
+                <next>23</next>
+            </phrase>
+            <phrase id="22">
+                <text>predb_hermit_start_dialog_phrase_23</text>
+                <give_info>predb_hermit_execute</give_info>
+            </phrase>
+            <phrase id="23">
+                <text>predb_hermit_start_dialog_phrase_24</text>
+                <next>24</next>
+            </phrase>
+            <phrase id="24">
+                <text>predb_hermit_start_dialog_phrase_25</text>
+                <action>addon_dialogs.predb_hermit_capsula_reward</action>
+                <give_info>predb_hermit_live</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander3_dialog4">
+        <has_info>predb_cave_trap</has_info>
+        <dont_has_info>predb_cave_task_done</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog4_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_dialog4_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_dialog4_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_dialog4_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_dialog4_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_dialog4_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_dialog4_phrase_10</text>
+                <next>10</next>
+                <next>11</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander3_dialog4_phrase_11</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander3_dialog4_phrase_12</text>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander3_dialog4_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander3_dialog4_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander3_dialog4_phrase_15</text>
+                <next>15</next>
+            </phrase>
+            <phrase id="15">
+                <text>predb_kontrabander3_dialog4_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>predb_kontrabander3_dialog4_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_kontrabander3_dialog4_phrase_18</text>
+                <action>addon_dialogs.predb_kontrab_cave_reward</action>
+                <give_info>predb_cave_task_done</give_info>
+                <give_info>predb_kontrab4</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_hermit_change_dialog1">
+        <!--has_info>predb_cave_task_done</has_info-->
+        <has_info>predb_hermit_call</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_hermit_change_dialog1_phrase_1</text>
+                <action>soundtrack.predb_hermit_morphine_ask</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_hermit_change_dialog1_phrase_2</text>
+                <next>2</next>
+                <next>3</next>
+            </phrase>
+            <phrase id="2">
+                <precondition>addon_dialogs.have_morphine</precondition>
+                <text>predb_hermit_change_dialog1_phrase_3</text>
+                <next>5</next>
+                <next>6</next>
+                <next>7</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_hermit_change_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_hermit_change_dialog1_phrase_5</text>
+            </phrase>
+            <phrase id="5">
+                <has_info>predb_hermit_art1</has_info>
+                <text>predb_hermit_change_dialog1_phrase_6</text>
+                <action>addon_dialogs.hermit_art1exchange</action>
+            </phrase>
+            <phrase id="6">
+                <has_info>predb_hermit_art2</has_info>
+                <text>predb_hermit_change_dialog1_phrase_7</text>
+                <action>addon_dialogs.hermit_art2exchange</action>
+            </phrase>
+            <phrase id="7">
+                <has_info>predb_hermit_art3</has_info>
+                <text>predb_hermit_change_dialog1_phrase_8</text>
+                <action>addon_dialogs.hermit_art3exchange</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_rogue_npc_dialog1">
+        <dont_has_info>predb_village_trap</dont_has_info>
+        <dont_has_info>predb_village_trap_punish</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_rogue_npc_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_rogue_npc_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_rogue_npc_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_rogue_npc_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_rogue_npc_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_rogue_npc_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_rogue_npc_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_rogue_npc_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_rogue_npc_dialog1_phrase_9</text>
+                <next>9</next>
+                <next>9_1</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_rogue_npc_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="9_1">
+                <text>predb_rogue_npc_dialog1_phrase_10_1</text>
+                <give_info>predb_village_trap_punish</give_info>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="10">
+                <text>predb_rogue_npc_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_rogue_npc_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_rogue_npc_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_rogue_npc_dialog1_phrase_14</text>
+                <give_info>predb_village_trap</give_info>
+                <give_info>predb_village_quest_mob_spawn</give_info>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_rogue_npc_dialog2">
+        <has_info>predb_village_quest_mob1_dead</has_info>
+        <has_info>predb_village_quest_mob2_dead</has_info>
+        <has_info>predb_village_quest_mob3_dead</has_info>
+        <has_info>predb_village_quest_mob4_dead</has_info>
+        <has_info>predb_village_quest_mob5_dead</has_info>
+        <dont_has_info>predb_village_anomaly</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_rogue_npc_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_rogue_npc_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_rogue_npc_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_rogue_npc_dialog2_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_rogue_npc_dialog2_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_rogue_npc_dialog2_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_rogue_npc_dialog2_phrase_7</text>
+                <give_info>predb_village_anomaly</give_info>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_rogue_npc_dialog3">
+        <has_info>predb_village_art_have</has_info>
+        <dont_has_info>predb_village_finditem</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_rogue_npc_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_rogue_npc_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_rogue_npc_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_rogue_npc_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_rogue_npc_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_rogue_npc_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_rogue_npc_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_rogue_npc_dialog3_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_rogue_npc_dialog3_phrase_9</text>
+                <give_info>predb_village_finditem</give_info>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_trader_junk_dialog">
+        <has_info>predb_cave_trap</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_trader_junk_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_trader_junk_dialog_phrase_2</text>
+                <next>2</next>
+                <next>4</next>
+                <next>5</next>
+                <next>6</next>
+                <next>7</next>
+                <next>8</next>
+                <next>9</next>
+                <next>10</next>
+                <next>11</next>
+                <next>12</next>
+                <next>13</next>
+                <next>14</next>
+                <next>15</next>
+                <next>16</next>
+                <next>17</next>
+                <next>18</next>
+                <next>19</next>
+                <next>191</next>
+                <next>192</next>
+                <next>193</next>
+                <next>194</next>
+                <next>195</next>
+                <next>196</next>
+                <next>197</next>
+                <next>198</next>
+                <next>199</next>
+                <next>1991</next>
+                <next>1992</next>
+                <next>1993</next>
+                <next>1994</next>
+                <next>1995</next>
+                <next>1996</next>
+                <next>20</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_trader_junk_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_trader_junk_dialog_phrase_4</text>
+            </phrase>
+            <phrase id="4">
+                <precondition>addon_dialogs.have_ponzil_item</precondition>
+                <text>predb_trader_junk_dialog_phrase_5</text>
+                <action>addon_dialogs.ponzil_item_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="5">
+                <precondition>addon_dialogs.have_acid_box</precondition>
+                <text>predb_trader_junk_dialog_phrase_6</text>
+                <action>addon_dialogs.acid_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="6">
+                <precondition>addon_dialogs.have_old_radio</precondition>
+                <text>predb_trader_junk_dialog_phrase_7</text>
+                <action>addon_dialogs.old_radio_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="7">
+                <precondition>addon_dialogs.have_old_watch</precondition>
+                <text>predb_trader_junk_dialog_phrase_8</text>
+                <action>addon_dialogs.old_watch_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="8">
+                <precondition>addon_dialogs.have_old_book</precondition>
+                <text>predb_trader_junk_dialog_phrase_9</text>
+                <action>addon_dialogs.old_book_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="9">
+                <precondition>addon_dialogs.have_old_tv</precondition>
+                <text>predb_trader_junk_dialog_phrase_10</text>
+                <action>addon_dialogs.old_tv_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="10">
+                <precondition>addon_dialogs.have_old_music_box</precondition>
+                <text>predb_trader_junk_dialog_phrase_11</text>
+                <action>addon_dialogs.old_music_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="11">
+                <precondition>addon_dialogs.have_af_manipulator</precondition>
+                <text>predb_trader_junk_dialog_phrase_12</text>
+                <action>addon_dialogs.af_manipulator_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="12">
+                <precondition>addon_dialogs.have_sssr_moneta</precondition>
+                <text>predb_trader_junk_dialog_phrase_13</text>
+                <action>addon_dialogs.sssr_moneta_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="13">
+                <precondition>addon_dialogs.have_collection_box</precondition>
+                <text>predb_trader_junk_dialog_phrase_14</text>
+                <action>addon_dialogs.collection_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="14">
+                <precondition>addon_dialogs.have_anomal_lamp</precondition>
+                <text>predb_trader_junk_dialog_phrase_15</text>
+                <action>addon_dialogs.anomal_lamp_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="15">
+                <precondition>addon_dialogs.have_predb_weapon_box</precondition>
+                <text>predb_trader_junk_dialog_phrase_16</text>
+                <action>addon_dialogs.predb_weapon_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="16">
+                <precondition>addon_dialogs.have_electron_block</precondition>
+                <text>predb_trader_junk_dialog_phrase_17</text>
+                <action>addon_dialogs.electron_block_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="17">
+                <precondition>addon_dialogs.have_broken_radiostation</precondition>
+                <text>predb_trader_junk_dialog_phrase_18</text>
+                <action>addon_dialogs.broken_radiostation_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="18">
+                <precondition>addon_dialogs.have_old_album</precondition>
+                <text>predb_trader_junk_dialog_phrase_19</text>
+                <action>addon_dialogs.old_album_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="19">
+                <precondition>addon_dialogs.have_old_komp_block</precondition>
+                <text>predb_trader_junk_dialog_phrase_20</text>
+                <action>addon_dialogs.old_komp_block_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="191">
+                <precondition>addon_dialogs.have_deadzone_dezintegrator</precondition>
+                <text>predb_trader_junk_dialog_phrase_191</text>
+                <action>addon_dialogs.deadzone_dezintegrator_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="192">
+                <precondition>addon_dialogs.have_wrench1</precondition>
+                <text>predb_trader_junk_dialog_phrase_192</text>
+                <action>addon_dialogs.wrench1_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="193">
+                <precondition>addon_dialogs.have_x18doctors_key</precondition>
+                <text>predb_trader_junk_dialog_phrase_193</text>
+                <action>addon_dialogs.x18doctors_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="194">
+                <precondition>addon_dialogs.have_radiostation_fake</precondition>
+                <text>predb_trader_junk_dialog_phrase_194</text>
+                <action>addon_dialogs.radiostation_fake_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="195">
+                <precondition>addon_dialogs.have_predb_army_maps</precondition>
+                <text>predb_trader_junk_dialog_phrase_195</text>
+                <action>addon_dialogs.predb_army_maps_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="196">
+                <precondition>addon_dialogs.have_bucket</precondition>
+                <text>predb_trader_junk_dialog_phrase_196</text>
+                <action>addon_dialogs.bucket_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="197">
+                <precondition>addon_dialogs.have_btr_engine_kit</precondition>
+                <text>predb_trader_junk_dialog_phrase_197</text>
+                <action>addon_dialogs.btr_engine_kit_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="198">
+                <precondition>addon_dialogs.have_predb_hutor_house1door_key</precondition>
+                <text>predb_trader_junk_dialog_phrase_198</text>
+                <action>addon_dialogs.predb_hutor_house1door_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="199">
+                <precondition>addon_dialogs.have_dar_crash_btr_box_key</precondition>
+                <text>predb_trader_junk_dialog_phrase_199</text>
+                <action>addon_dialogs.dar_crash_btr_box_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1991">
+                <precondition>addon_dialogs.have_agr_fabrik_elshema</precondition>
+                <text>predb_trader_junk_dialog_phrase_1991</text>
+                <action>addon_dialogs.agr_fabrik_electroshema_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1992">
+                <precondition>addon_dialogs.have_suslik_zapiska1</precondition>
+                <text>predb_trader_junk_dialog_phrase_1992</text>
+                <action>addon_dialogs.suslik_zapiska1_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1993">
+                <precondition>addon_dialogs.have_predb_village_dead_friend_door_key</precondition>
+                <text>predb_trader_junk_dialog_phrase_1993</text>
+                <action>addon_dialogs.predb_village_dead_friend_door_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1994">
+                <precondition>addon_dialogs.have_biboran</precondition>
+                <text>predb_trader_junk_dialog_phrase_1994</text>
+                <action>addon_dialogs.biboran_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1995">
+                <precondition>addon_dialogs.have_saper_shovel</precondition>
+                <text>predb_trader_junk_dialog_phrase_1995</text>
+                <action>addon_dialogs.saper_shovel_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1996">
+                <precondition>addon_dialogs.deadman_head_radio</precondition>
+                <text>predb_trader_junk_dialog_phrase_1996</text>
+                <action>addon_dialogs.deadman_head_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="20">
+                <text>predb_trader_junk_dialog_phrase_21</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_soldier_junk_dialog">
+        <has_info>predb_kpp_kontrab_atacked</has_info>
+        <has_info>predb_soldier_junks_job</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_soldier_junk_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_soldier_junk_dialog_phrase_2</text>
+                <next>2</next>
+                <next>4</next>
+                <next>5</next>
+                <next>6</next>
+                <next>7</next>
+                <next>8</next>
+                <next>9</next>
+                <next>10</next>
+                <next>11</next>
+                <next>12</next>
+                <next>13</next>
+                <next>14</next>
+                <next>15</next>
+                <next>16</next>
+                <next>17</next>
+                <next>18</next>
+                <next>19</next>
+                <next>191</next>
+                <next>192</next>
+                <next>193</next>
+                <next>194</next>
+                <next>195</next>
+                <next>196</next>
+                <next>197</next>
+                <next>198</next>
+                <next>199</next>
+                <next>1991</next>
+                <next>1992</next>
+                <next>1993</next>
+                <next>1994</next>
+                <next>1995</next>
+                <next>1996</next>
+
+            </phrase>
+            <phrase id="2">
+                <text>predb_soldier_junk_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_soldier_junk_dialog_phrase_4</text>
+            </phrase>
+            <phrase id="4">
+                <precondition>addon_dialogs.have_ponzil_item</precondition>
+                <text>predb_soldier_junk_dialog_phrase_5</text>
+                <action>addon_dialogs.ponzil_item_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="5">
+                <precondition>addon_dialogs.have_acid_box</precondition>
+                <text>predb_soldier_junk_dialog_phrase_6</text>
+                <action>addon_dialogs.acid_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="6">
+                <precondition>addon_dialogs.have_old_radio</precondition>
+                <text>predb_soldier_junk_dialog_phrase_7</text>
+                <action>addon_dialogs.old_radio_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="7">
+                <precondition>addon_dialogs.have_old_watch</precondition>
+                <text>predb_soldier_junk_dialog_phrase_8</text>
+                <action>addon_dialogs.old_watch_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="8">
+                <precondition>addon_dialogs.have_old_book</precondition>
+                <text>predb_soldier_junk_dialog_phrase_9</text>
+                <action>addon_dialogs.old_book_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="9">
+                <precondition>addon_dialogs.have_old_tv</precondition>
+                <text>predb_soldier_junk_dialog_phrase_10</text>
+                <action>addon_dialogs.old_tv_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="10">
+                <precondition>addon_dialogs.have_old_music_box</precondition>
+                <text>predb_soldier_junk_dialog_phrase_11</text>
+                <action>addon_dialogs.old_music_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="11">
+                <precondition>addon_dialogs.have_af_manipulator</precondition>
+                <text>predb_soldier_junk_dialog_phrase_12</text>
+                <action>addon_dialogs.af_manipulator_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="12">
+                <precondition>addon_dialogs.have_sssr_moneta</precondition>
+                <text>predb_soldier_junk_dialog_phrase_13</text>
+                <action>addon_dialogs.sssr_moneta_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="13">
+                <precondition>addon_dialogs.have_collection_box</precondition>
+                <text>predb_soldier_junk_dialog_phrase_14</text>
+                <action>addon_dialogs.collection_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="14">
+                <precondition>addon_dialogs.have_anomal_lamp</precondition>
+                <text>predb_soldier_junk_dialog_phrase_15</text>
+                <action>addon_dialogs.anomal_lamp_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="15">
+                <precondition>addon_dialogs.have_predb_weapon_box</precondition>
+                <text>predb_soldier_junk_dialog_phrase_16</text>
+                <action>addon_dialogs.predb_weapon_box_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="16">
+                <precondition>addon_dialogs.have_electron_block</precondition>
+                <text>predb_soldier_junk_dialog_phrase_17</text>
+                <action>addon_dialogs.electron_block_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="17">
+                <precondition>addon_dialogs.have_broken_radiostation</precondition>
+                <text>predb_soldier_junk_dialog_phrase_18</text>
+                <action>addon_dialogs.broken_radiostation_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="18">
+                <precondition>addon_dialogs.have_old_album</precondition>
+                <text>predb_soldier_junk_dialog_phrase_19</text>
+                <action>addon_dialogs.old_album_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="19">
+                <precondition>addon_dialogs.have_old_komp_block</precondition>
+                <text>predb_soldier_junk_dialog_phrase_20</text>
+                <action>addon_dialogs.old_komp_block_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="191">
+                <precondition>addon_dialogs.have_deadzone_dezintegrator</precondition>
+                <text>predb_soldier_junk_dialog_phrase_191</text>
+                <action>addon_dialogs.deadzone_dezintegrator_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="192">
+                <precondition>addon_dialogs.have_wrench1</precondition>
+                <text>predb_soldier_junk_dialog_phrase_192</text>
+                <action>addon_dialogs.wrench1_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="193">
+                <precondition>addon_dialogs.have_x18doctors_key</precondition>
+                <text>predb_soldier_junk_dialog_phrase_193</text>
+                <action>addon_dialogs.x18doctors_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="194">
+                <precondition>addon_dialogs.have_radiostation_fake</precondition>
+                <text>predb_soldier_junk_dialog_phrase_194</text>
+                <action>addon_dialogs.radiostation_fake_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="195">
+                <precondition>addon_dialogs.have_predb_army_maps</precondition>
+                <text>predb_soldier_junk_dialog_phrase_195</text>
+                <action>addon_dialogs.predb_army_maps_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="196">
+                <precondition>addon_dialogs.have_bucket</precondition>
+                <text>predb_soldier_junk_dialog_phrase_196</text>
+                <action>addon_dialogs.bucket_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="197">
+                <precondition>addon_dialogs.have_btr_engine_kit</precondition>
+                <text>predb_soldier_junk_dialog_phrase_197</text>
+                <action>addon_dialogs.btr_engine_kit_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="198">
+                <precondition>addon_dialogs.have_predb_hutor_house1door_key</precondition>
+                <text>predb_soldier_junk_dialog_phrase_198</text>
+                <action>addon_dialogs.predb_hutor_house1door_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="199">
+                <precondition>addon_dialogs.have_dar_crash_btr_box_key</precondition>
+                <text>predb_soldier_junk_dialog_phrase_199</text>
+                <action>addon_dialogs.dar_crash_btr_box_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1991">
+                <precondition>addon_dialogs.have_agr_fabrik_elshema</precondition>
+                <text>predb_soldier_junk_dialog_phrase_1991</text>
+                <action>addon_dialogs.agr_fabrik_electroshema_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1992">
+                <precondition>addon_dialogs.have_suslik_zapiska1</precondition>
+                <text>predb_soldier_junk_dialog_phrase_1992</text>
+                <action>addon_dialogs.suslik_zapiska1_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1993">
+                <precondition>addon_dialogs.have_predb_village_dead_friend_door_key</precondition>
+                <text>predb_soldier_junk_dialog_phrase_1993</text>
+                <action>addon_dialogs.predb_village_dead_friend_door_key_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1994">
+                <precondition>addon_dialogs.have_biboran</precondition>
+                <text>predb_soldier_junk_dialog_phrase_1994</text>
+                <action>addon_dialogs.biboran_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1995">
+                <precondition>addon_dialogs.have_saper_shovel</precondition>
+                <text>predb_soldier_junk_dialog_phrase_1995</text>
+                <action>addon_dialogs.saper_shovel_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="1996">
+                <precondition>addon_dialogs.deadman_head_radio</precondition>
+                <text>predb_soldier_junk_dialog_phrase_1996</text>
+                <action>addon_dialogs.deadman_head_reward</action>
+                <next>20</next>
+            </phrase>
+            <phrase id="20">
+                <text>predb_soldier_junk_dialog_phrase_21</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier3_dialog1">
+        <has_info>predb_kpp_kontrab_atacked</has_info>
+        <dont_has_info>predb_soldier_junks_job</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier3_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier3_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier3_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier3_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier3_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier3_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier3_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier3_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier3_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier3_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier3_dialog1_phrase_11</text>
+                <give_info>predb_soldier_junks_job</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_rogue_start_dialog">
+        <has_info>predb_village_rogue_finded</has_info>
+        <dont_has_info>predb_village_rogue_punish</dont_has_info>
+        <dont_has_info>predb_village_rogue_free</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_rogue_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_rogue_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_rogue_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_rogue_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_rogue_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_rogue_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_rogue_start_dialog_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_rogue_start_dialog_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_rogue_start_dialog_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_rogue_start_dialog_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_rogue_start_dialog_phrase_11</text>
+                <next>11</next>
+                <next>12</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_rogue_start_dialog_phrase_12</text>
+                <give_info>predb_village_rogue_punish</give_info>
+                <action>addon_dialogs.predb_rogue_reward</action>
+            </phrase>
+            <phrase id="12">
+                <text>predb_rogue_start_dialog_phrase_13</text>
+                <give_info>predb_village_rogue_free</give_info>
+                <action>addon_dialogs.predb_rogue_reward</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander4_dialog2">
+        <has_info>predb_village_grass_info</has_info>
+        <dont_has_info>predb_grass_done</dont_has_info>
+        <precondition>addon_dialogs.have_predb_grass</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander4_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander4_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander4_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander4_dialog2_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander4_dialog2_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander4_dialog2_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander4_dialog2_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander4_dialog2_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander4_dialog2_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander4_dialog2_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander4_dialog2_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander4_dialog2_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander4_dialog2_phrase_13</text>
+                <give_info>predb_grass_done</give_info>
+                <action>addon_dialogs.predb_grass_reward</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander2_start_dialog">
+        <has_info>predb_grass_done</has_info>
+        <dont_has_info>predb_kontrab_wakeup1</dont_has_info>
+        <precondition>addon_dialogs.have_predb_termos</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander2_start_dialog_phrase_1</text>
+                <action>addon_dialogs.predb_termos_out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander2_start_dialog_phrase_2</text>
+                <give_info>predb_kontrab_wakeup1</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander1_start_dialog">
+        <has_info>predb_kontrab_wakeup2</has_info>
+        <dont_has_info>predb_kontrab_habar_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander1_start_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander1_start_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander1_start_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander1_start_dialog_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander1_start_dialog_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander1_start_dialog_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander1_start_dialog_phrase_7</text>
+                <give_info>predb_kontrab_habar_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander3_dialog5">
+        <has_info>predb_kontrab_habar_info</has_info>
+        <dont_has_info>predb_courier_goto_hutor</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog5_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog5_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog5_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_dialog5_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_dialog5_phrase_6</text>
+                <next>6</next>
+                <next>7</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_dialog5_phrase_7</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_dialog5_phrase_8</text>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_dialog5_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_dialog5_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander3_dialog5_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander3_dialog5_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander3_dialog5_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander3_dialog5_phrase_14</text>
+                <give_info>predb_courier_goto_hutor</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander5_dialog1">
+        <has_info>kpp_kontrab_goto_hutor</has_info>
+        <dont_has_info>kontrab5_story_tell</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander5_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander5_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander5_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander5_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander5_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander5_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander5_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander5_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander5_dialog1_phrase_9</text>
+                <give_info>kontrab5_story_tell</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_courier_dialog1">
+        <has_info>predb_courier_goto_hutor</has_info>
+        <dont_has_info>predb_courier_heli_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_courier_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_courier_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_courier_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_courier_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_courier_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_courier_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_courier_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_courier_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_courier_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_courier_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_courier_dialog1_phrase_11</text>
+                <give_info>predb_courier_heli_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander3_dialog6">
+        <has_info>predb_courier_heli_info</has_info>
+        <dont_has_info>predb_rpg_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog6_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog6_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog6_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_dialog6_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_dialog6_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_dialog6_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_dialog6_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_dialog6_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_dialog6_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander3_dialog6_phrase_11</text>
+                <give_info>predb_rpg_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_marouder1_dialog1">
+        <has_info>predb_firest_maroud_mob1_dead</has_info>
+        <has_info>predb_firest_maroud_mob2_dead</has_info>
+        <has_info>predb_firest_maroud_mob3_dead</has_info>
+        <has_info>predb_firest_maroud_mob4_dead</has_info>
+        <has_info>predb_firest_maroud_mob5_dead</has_info>
+        <has_info>predb_firest_maroud_mob6_dead</has_info>
+        <has_info>predb_firest_maroud_mob7_dead</has_info>
+        <has_info>predb_firest_maroud_mob8_dead</has_info>
+        <has_info>predb_firest_maroud_mob9_dead</has_info>
+        <has_info>predb_firest_maroud_mob10_dead</has_info>
+        <has_info>predb_firest_maroud_mob11_dead</has_info>
+        <has_info>predb_firest_maroud_mob12_dead</has_info>
+        <has_info>predb_firest_maroud_mob13_dead</has_info>
+        <has_info>predb_firest_maroud_mob14_dead</has_info>
+        <has_info>predb_firest_maroud_mob15_dead</has_info>
+        <dont_has_info>predb_marouder_search</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder1_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder1_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder1_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder1_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder1_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_marouder1_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_marouder1_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_marouder1_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_marouder1_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_marouder1_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_marouder1_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_marouder1_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_marouder1_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_marouder1_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_marouder1_dialog1_phrase_15</text>
+                <next>15</next>
+            </phrase>
+            <phrase id="15">
+                <text>predb_marouder1_dialog1_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>predb_marouder1_dialog1_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_marouder1_dialog1_phrase_18</text>
+                <next>18</next>
+            </phrase>
+            <phrase id="18">
+                <text>predb_marouder1_dialog1_phrase_19</text>
+                <next>19</next>
+            </phrase>
+            <phrase id="19">
+                <text>predb_marouder1_dialog1_phrase_20</text>
+                <next>20</next>
+            </phrase>
+            <phrase id="20">
+                <text>predb_marouder1_dialog1_phrase_21</text>
+                <next>21</next>
+            </phrase>
+            <phrase id="21">
+                <text>predb_marouder1_dialog1_phrase_22</text>
+                <next>22</next>
+            </phrase>
+            <phrase id="22">
+                <text>predb_marouder1_dialog1_phrase_23</text>
+                <next>23</next>
+            </phrase>
+            <phrase id="23">
+                <text>predb_marouder1_dialog1_phrase_24</text>
+                <next>24</next>
+            </phrase>
+            <phrase id="24">
+                <text>predb_marouder1_dialog1_phrase_25</text>
+                <next>25</next>
+            </phrase>
+            <phrase id="25">
+                <text>predb_marouder1_dialog1_phrase_26</text>
+                <next>26</next>
+            </phrase>
+            <phrase id="26">
+                <text>predb_marouder1_dialog1_phrase_27</text>
+                <next>27</next>
+            </phrase>
+            <phrase id="27">
+                <text>predb_marouder1_dialog1_phrase_28</text>
+                <give_info>predb_marouder_search</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_marouder1_dialog2">
+        <has_info>predb_firest_undegr_door_finded</has_info>
+        <dont_has_info>predb_marouders_to_door</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder1_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder1_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder1_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder1_dialog2_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder1_dialog2_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_marouder1_dialog2_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_marouder1_dialog2_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_marouder1_dialog2_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_marouder1_dialog2_phrase_9</text>
+                <give_info>predb_marouders_to_door</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_marouder1_dialog3">
+        <has_info>predb_marouder_search</has_info>
+        <dont_has_info>predb_firest_radio_peleng</dont_has_info>
+        <precondition>addon_dialogs.have_predb_radio_part</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder1_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder1_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder1_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder1_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder1_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_marouder1_dialog3_phrase_6</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_marouder1_dialog4">
+        <has_info>predb_firest_weap_seif_open</has_info>
+        <dont_has_info>predb_marouders_to_base</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder1_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder1_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder1_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder1_dialog4_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder1_dialog4_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_marouder1_dialog4_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_marouder1_dialog4_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_marouder1_dialog4_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_marouder1_dialog4_phrase_9</text>
+                <action>addon_dialogs.predb_maroders_infoportions_clear</action>
+                <give_info>predb_marouders_to_base</give_info>
+            </phrase>
+            <phrase id="9">
+                <text>predb_marouder1_dialog4_phrase_10</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_marouder3_dialog3">
+        <precondition>addon_dialogs.dont_have_old_moneta</precondition>
+        <has_info>predb_arsenl_door</has_info>
+        <has_info>predb_marouder_search</has_info>
+        <dont_has_info>predb_firest_moneta</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder3_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder3_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder3_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder3_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder3_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_marouder3_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_marouder3_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_marouder3_dialog3_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <dont_has_info>predb_firest_stairs</dont_has_info>
+                <text>predb_marouder3_dialog3_phrase_9</text>
+            </phrase>
+            <phrase id="9">
+                <has_info>predb_firest_stairs</has_info>
+                <text>predb_marouder3_dialog3_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_marouder3_dialog3_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_marouder3_dialog3_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_marouder3_dialog3_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_marouder3_dialog3_phrase_14</text>
+                <action>addon_dialogs.old_moneta_in</action>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_marouder3_dialog3_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_marouder3_dialog1">
+        <has_info>predb_marouders_to_door</has_info>
+        <dont_has_info>predb_maroder_lager</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder3_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder3_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder3_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder3_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder3_dialog1_phrase_5</text>
+                <give_info>predb_maroder_lager</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_marouder3_dialog2">
+        <has_info>predb_marouders_to_door</has_info>
+        <precondition>addon_dialogs.have_predb_maroder_box</precondition>
+        <dont_has_info>predb_maroder_lager_done</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder3_dialog2_phrase_1</text>
+                <action>addon_dialogs.marouders_box_out</action>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder3_dialog2_phrase_2</text>
+                <give_info>predb_maroder_lager_done</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_courier_dialog2">
+        <!--has_info>predb_heli_dead</has_info-->
+        <precondition>xr_conditions.predb_heli_dead</precondition>
+        <dont_has_info>predb_courier_go</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_courier_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_courier_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_courier_dialog2_phrase_3</text>
+                <give_info>predb_courier_go</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_courier_dialog3">
+        <has_info>predb_courier_on_place</has_info>
+        <dont_has_info>predb_courier_goodbye</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_courier_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_courier_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_courier_dialog3_phrase_3</text>
+                <action>addon_dialogs.predb_courier_reward1</action>
+                <give_info>predb_courier_goodbye</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_marouder1_dialog5">
+        <dont_has_info>predb_marod_base2</dont_has_info>
+        <precondition>xr_conditions.actor_in_predb_base_zone</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder1_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder1_dialog5_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder1_dialog5_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder1_dialog5_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder1_dialog5_phrase_5</text>
+                <give_info>predb_marod_base2</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_marouder1_dialog6">
+        <has_info>predb_base_docks3_info</has_info>
+        <has_info>predb_base_chimera_dead</has_info>
+        <dont_has_info>predb_marod_base_end</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_marouder1_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_marouder1_dialog6_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_marouder1_dialog6_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_marouder1_dialog6_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_marouder1_dialog6_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_marouder1_dialog6_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_marouder1_dialog6_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_marouder1_dialog6_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <precondition>addon_dialogs.have_predb_weapon_box</precondition>
+                <text>predb_marouder1_dialog6_phrase_9</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_marouder1_dialog6_phrase_10</text>
+                <give_info>predb_marod_base_end</give_info>
+            </phrase>
+            <phrase id="10">
+                <text>predb_marouder1_dialog6_phrase_11</text>
+                <next>11</next>
+                <next>12</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_marouder1_dialog6_phrase_12</text>
+                <action>addon_dialogs.predb_weapon_box_out</action>
+            </phrase>
+            <phrase id="12">
+                <text>predb_marouder1_dialog6_phrase_13</text>
+                <give_info>predb_marod_base_end</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_trader_dialog2">
+        <has_info>predb_courier_goodbye</has_info>
+        <dont_has_info>predb_kontrabs_end</dont_has_info>
+        <dont_has_info>predb_kontrabs_bad</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_trader_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_trader_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_trader_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_trader_dialog2_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_trader_dialog2_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_trader_dialog2_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_trader_dialog2_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_trader_dialog2_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_trader_dialog2_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_trader_dialog2_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_trader_dialog2_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_trader_dialog2_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_trader_dialog2_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_trader_dialog2_phrase_14</text>
+                <next>14</next>
+                <next>15</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_trader_dialog2_phrase_15</text>
+                <give_info>predb_kontrabs_end</give_info>
+                <action>addon_dialogs.predb_kontrabs_reward</action>
+            </phrase>
+            <phrase id="15">
+                <text>predb_trader_dialog2_phrase_16</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="16">
+                <text>predb_trader_dialog2_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_trader_dialog2_phrase_18</text>
+                <give_info>predb_kontrabs_bad</give_info>
+                <action>turret_spawn.spawn_predb_trager_turret</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander5_dialog2">
+        <has_info>predb_courier_goodbye</has_info>
+        <has_info>predb_kontrabs_end</has_info>
+        <dont_has_info></dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander5_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander5_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander5_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander5_dialog2_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander5_dialog2_phrase_5</text>
+
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander3_dialog7">
+        <has_info>kpp_kontrab_goto_hutor</has_info>
+        <dont_has_info>predb_heli_dead</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog7_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog7_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog7_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog7_phrase_4</text>
+
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander3_dialog8">
+        <has_info>kpp_kontrab_goto_hutor</has_info>
+        <has_info>predb_king_info</has_info>
+        <dont_has_info>predb_king_info2</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog8_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog8_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog8_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog8_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander3_dialog8_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander3_dialog8_phrase_6</text>
+                <next>6</next>
+                <next>7</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander3_dialog8_phrase_7</text>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander3_dialog8_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander3_dialog8_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander3_dialog8_phrase_10</text>
+                <give_info>predb_king_info2</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier3_dialog2">
+        <has_info>predb_kpp_kontrab_atacked</has_info>
+        <has_info>predb_king_info</has_info>
+        <dont_has_info>predb_king_info2</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier3_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier3_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier3_dialog2_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier3_dialog2_phrase_4</text>
+                <next>4</next>
+                <next>5</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier3_dialog2_phrase_5</text>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier3_dialog2_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier3_dialog2_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier3_dialog2_phrase_8</text>
+                <give_info>predb_king_info2</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_king_dialog1">
+        <dont_has_info>predb_king_info3</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_king_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_king_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_king_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_king_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_king_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_king_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_king_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_king_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_king_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_king_dialog1_phrase_10</text>
+                <give_info>predb_king_info3</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_catwoman_dialog1">
+        <dont_has_info>predb_catwoman_perv</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_catwoman_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_catwoman_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_catwoman_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_catwoman_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_catwoman_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_catwoman_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_catwoman_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_catwoman_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_catwoman_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_catwoman_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_catwoman_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_catwoman_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_catwoman_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_catwoman_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_catwoman_dialog1_phrase_15</text>
+                <give_info>predb_catwoman_perv</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander4_dialog3">
+        <has_info>predb_grass_done</has_info>
+        <dont_has_info>predb_recipes</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander4_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander4_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander4_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander4_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander4_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander4_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander4_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander4_dialog3_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander4_dialog3_phrase_9</text>
+            </phrase>
+            <phrase id="9">
+                <precondition>addon_dialogs.have20ibuprophens</precondition>
+                <text>predb_kontrabander4_dialog3_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander4_dialog3_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander4_dialog3_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander4_dialog3_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander4_dialog3_phrase_14</text>
+                <action>addon_dialogs.predb_kontrab_ibuprophens_out</action>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander4_dialog3_phrase_15</text>
+                <action>addon_dialogs.predb_recipes_message</action>
+                <action>dialogs.break_dialog</action>
+                <give_info>predb_recipes</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_courier_guard_dialog">
+        <dont_has_info>predb_courier_go</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_courier_guard_dialog_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_courier_guard_dialog_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_courier_guard_dialog_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_courier_guard_dialog_phrase_4</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander2_dialog1">
+        <has_info>rad_seek</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander2_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander2_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander2_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander2_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander2_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander2_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander2_dialog1_phrase_7</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander3_dialog9">
+        <has_info>rad_seek</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander3_dialog9_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander3_dialog9_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander3_dialog9_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander3_dialog9_phrase_4</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander5_dialog3">
+        <has_info>rad_seek</has_info>
+        <dont_has_info>predb_liqour_task</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander5_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander5_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander5_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander5_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander5_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander5_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander5_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander5_dialog3_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander5_dialog3_phrase_9</text>
+                <give_info>predb_liqour_task</give_info>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander5_dialog3_phrase_10</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander5_dialog4">
+        <has_info>predb_liqour_task</has_info>
+        <dont_has_info>predb_kontrab_liqour</dont_has_info>
+        <precondition>addon_dialogs.have20vodka</precondition>
+        <precondition>addon_dialogs.have5zomby_hands</precondition>
+        <precondition>addon_dialogs.have_antirad</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander5_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander5_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander5_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander5_dialog4_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander5_dialog4_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander5_dialog4_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander5_dialog4_phrase_7</text>
+                <give_info>predb_kontrab_liqour</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier3_dialog3">
+        <has_info>predb_liqour_task</has_info>
+        <dont_has_info>predb_kontrab_liqour</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier3_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier3_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier3_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier3_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier3_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier3_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier3_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier3_dialog3_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier3_dialog3_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier3_dialog3_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier3_dialog3_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier3_dialog3_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier3_dialog3_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier3_dialog3_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier3_dialog3_phrase_15</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_trader_dialog3">
+        <has_info>predb_trader_second_talk</has_info>
+        <dont_has_info>predb_mega_boar_task</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_trader_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_trader_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_trader_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_trader_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_trader_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_trader_dialog3_phrase_6</text>
+                <next>6</next>
+                <next>7</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_trader_dialog3_phrase_7</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_trader_dialog3_phrase_8</text>
+            </phrase>
+            <phrase id="8">
+                <text>predb_trader_dialog3_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_trader_dialog3_phrase_10</text>
+                <give_info>predb_mega_boar_task</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_trader_dialog4">
+        <has_info>predb_mega_boar_dead</has_info>
+        <dont_has_info>predb_mega_boar_reward</dont_has_info>
+        <dont_has_info>predb_mega_boar_lost</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_trader_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_trader_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_trader_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_trader_dialog4_phrase_4</text>
+                <action>addon_dialogs.predb_megaboar_reward</action>
+                <give_info>predb_mega_boar_reward</give_info>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_trader_dialog4_phrase_5</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier3_dialog4">
+        <has_info>predb_kpp_komander_task1</has_info>
+        <dont_has_info>predb_serg_location</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier3_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier3_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier3_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier3_dialog4_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier3_dialog4_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier3_dialog4_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier3_dialog4_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier3_dialog4_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier3_dialog4_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier3_dialog4_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier3_dialog4_phrase_11</text>
+                <give_info>predb_serg_location</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier5_dialog3">
+        <has_info>kontrab_bloknot_info</has_info>
+        <precondition>addon_dialogs.have_predb_kontrab_radio_list</precondition>
+        <dont_has_info>predb_firest_search</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier5_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier5_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier5_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier5_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier5_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier5_dialog3_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier5_dialog3_phrase_9</text>
+                <action>addon_dialogs.predb_komandr_hutor_reward</action>
+                <give_info>predb_firest_search</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier5_dialog4">
+        <has_info>predb_army_docks_1_info</has_info>
+        <dont_has_info>predb_cave_search</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier5_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier5_dialog4_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier5_dialog4_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier5_dialog4_phrase_6</text>
+                <next>6</next>
+                <next>7</next>
+                <next>7_1</next>
+            </phrase>
+            <phrase id="6">
+                <dont_has_info>predb_firest_radio_peleng</dont_has_info>
+                <text>predb_kpp_soldier5_dialog4_phrase_7</text>
+                <next>16</next>
+            </phrase>
+            <phrase id="7">
+                <has_info>predb_helicr_info</has_info>
+                <text>predb_kpp_soldier5_dialog4_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="7_1">
+                <text>predb_kpp_soldier5_dialog4_phrase_8_1</text>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier5_dialog4_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kpp_soldier5_dialog4_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kpp_soldier5_dialog4_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kpp_soldier5_dialog4_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kpp_soldier5_dialog4_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kpp_soldier5_dialog4_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kpp_soldier5_dialog4_phrase_15</text>
+                <next>15</next>
+            </phrase>
+            <phrase id="15">
+                <text>predb_kpp_soldier5_dialog4_phrase_16</text>
+                <action>addon_dialogs.predb_komandr_firest_reward</action>
+                <give_info>predb_cave_search</give_info>
+            </phrase>
+            <phrase id="16">
+                <text>predb_kpp_soldier5_dialog4_phrase_17</text>
+                <next>17</next>
+            </phrase>
+            <phrase id="17">
+                <text>predb_kpp_soldier5_dialog4_phrase_18</text>
+                <next>18</next>
+            </phrase>
+            <phrase id="18">
+                <text>predb_kpp_soldier5_dialog4_phrase_19</text>
+                <next>19</next>
+            </phrase>
+            <phrase id="19">
+                <text>predb_kpp_soldier5_dialog4_phrase_20</text>
+                <next>20</next>
+            </phrase>
+            <phrase id="20">
+                <text>predb_kpp_soldier5_dialog4_phrase_21</text>
+                <next>21</next>
+            </phrase>
+            <phrase id="21">
+                <text>predb_kpp_soldier5_dialog4_phrase_22</text>
+                <next>10</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kpp_soldier5_dialog5">
+        <has_info>predb_cave_search</has_info>
+        <dont_has_info>predb_fabrik_search</dont_has_info>
+        <precondition>xr_conditions.predb_cave_done_condition</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog5_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier5_dialog5_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier5_dialog5_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier5_dialog5_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier5_dialog5_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier5_dialog5_phrase_7</text>
+                <action>addon_dialogs.predb_komandr_cave_reward</action>
+                <give_info>predb_fabrik_search</give_info>
+                <give_info>predb_kontrab4</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kontrabander4_dialog4">
+        <has_info>predb_fabrik_search</has_info>
+        <dont_has_info>kontrab_lager_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander4_dialog4_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander4_dialog4_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander4_dialog4_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander4_dialog4_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander4_dialog4_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander4_dialog4_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander4_dialog4_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander4_dialog4_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander4_dialog4_phrase_9</text>
+                <give_info>kontrab_lager_info</give_info>
+                <action>addon_dialogs.enemy</action>
+            </phrase>
+            <phrase id="9">
+                <text>predb_kontrabander4_dialog4_phrase_10</text>
+                <give_info>kontrab_lager_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_kontrabander4_dialog5">
+        <has_info>kontrab_lager_info</has_info>
+        <dont_has_info>predb_recipes</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kontrabander4_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kontrabander4_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kontrabander4_dialog3_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kontrabander4_dialog3_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kontrabander4_dialog3_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kontrabander4_dialog3_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kontrabander4_dialog3_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kontrabander4_dialog3_phrase_8</text>
+                <next>8</next>
+                <next>9</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kontrabander4_dialog3_phrase_9</text>
+            </phrase>
+            <phrase id="9">
+                <precondition>addon_dialogs.have20ibuprophens</precondition>
+                <text>predb_kontrabander4_dialog3_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_kontrabander4_dialog3_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_kontrabander4_dialog3_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_kontrabander4_dialog3_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_kontrabander4_dialog3_phrase_14</text>
+                <action>addon_dialogs.predb_kontrab_ibuprophens_out</action>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_kontrabander4_dialog3_phrase_15</text>
+                <action>addon_dialogs.predb_recipes_message</action>
+                <action>dialogs.break_dialog</action>
+                <give_info>predb_recipes</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier5_dialog6">
+        <has_info>kaban_pda_info</has_info>
+        <dont_has_info>courier_spwn</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog6_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog6_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier5_dialog6_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier5_dialog6_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier5_dialog6_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier5_dialog6_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier5_dialog6_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_kpp_soldier5_dialog6_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_kpp_soldier5_dialog6_phrase_9</text>
+                <give_info>courier_spwn</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_komandr_agent_dialog1">
+        <precondition>addon_dialogs.have_courier_gruz</precondition>
+        <has_info>predb_courier1_dead</has_info>
+        <dont_has_info>solds_goodbye</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_komandr_agent_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_komandr_agent_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_komandr_agent_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_komandr_agent_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_komandr_agent_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_komandr_agent_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_komandr_agent_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_komandr_agent_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_komandr_agent_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_komandr_agent_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_komandr_agent_dialog1_phrase_11</text>
+                <give_info>solds_goodbye</give_info>
+                <action>addon_dialogs.predb_gruz_out</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier3_dialog5">
+        <has_info>solds_goodbye</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier3_dialog5_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier3_dialog5_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier3_dialog5_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier3_dialog5_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier3_dialog5_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_kpp_soldier3_dialog5_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_kpp_soldier3_dialog5_phrase_7</text>
+                <action>addon_dialogs.predb_kpp_reward</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_village_sold_dialog1">
+        <dont_has_info>predb_firest_komander_zapiska_info</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_village_sold_dialog1_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_village_sold_dialog1_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_village_sold_dialog1_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_village_sold_dialog1_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_village_sold_dialog1_phrase_5</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>predb_village_sold_dialog1_phrase_6</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>predb_village_sold_dialog1_phrase_7</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>predb_village_sold_dialog1_phrase_8</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>predb_village_sold_dialog1_phrase_9</text>
+                <next>9</next>
+            </phrase>
+            <phrase id="9">
+                <text>predb_village_sold_dialog1_phrase_10</text>
+                <next>10</next>
+            </phrase>
+            <phrase id="10">
+                <text>predb_village_sold_dialog1_phrase_11</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>predb_village_sold_dialog1_phrase_12</text>
+                <next>12</next>
+            </phrase>
+            <phrase id="12">
+                <text>predb_village_sold_dialog1_phrase_13</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>predb_village_sold_dialog1_phrase_14</text>
+                <next>14</next>
+            </phrase>
+            <phrase id="14">
+                <text>predb_village_sold_dialog1_phrase_15</text>
+                <give_info>predb_firest_komander_zapiska_info</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_village_sold_dialog3">
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_village_sold_dialog3_phrase_16</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_village_sold_dialog3_phrase_17</text>
+                <action>addon_dialogs.set_village_sold_companion</action>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+    <dialog id="predb_village_sold_dialog2">
+        <has_info>predb_vilg_sold_end</has_info>
+        <dont_has_info>predb_vilg_sold_rwrd</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_village_sold_dialog2_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_village_sold_dialog2_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_village_sold_dialog2_phrase_3</text>
+                <give_info>predb_vilg_sold_rwrd</give_info>
+                <action>addon_dialogs.village_sold_reward</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier5_dialog7">
+        <has_info>predb_kpp_fight_start</has_info>
+        <has_info>predb_kpp_komander_task1</has_info>
+        <dont_has_info>predb_kontrabander6_dead</dont_has_info>
+        <dont_has_info>predb_kontrabander7_dead</dont_has_info>
+        <dont_has_info>predb_kontrabander8_dead</dont_has_info>
+        <dont_has_info>predb_cave_search</dont_has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier5_dialog7_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier5_dialog7_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier5_dialog7_phrase_3</text>
+                <next>3</next>
+            </phrase>
+            <phrase id="3">
+                <text>predb_kpp_soldier5_dialog7_phrase_4</text>
+                <next>4</next>
+            </phrase>
+            <phrase id="4">
+                <text>predb_kpp_soldier5_dialog7_phrase_5</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+    <dialog id="predb_kpp_soldier6_dialog3">
+        <has_info>predb_kpp_kontrab_atacked</has_info>
+        <has_info>predb_soldier_junks_job</has_info>
+        <phrase_list>
+            <phrase id="0">
+                <text>predb_kpp_soldier6_dialog3_phrase_1</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>predb_kpp_soldier6_dialog3_phrase_2</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>predb_kpp_soldier6_dialog3_phrase_3</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+
+
+</game_dialogs>

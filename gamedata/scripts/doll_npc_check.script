@@ -1,0 +1,149 @@
+-- refactor by 13stalker13 --
+
+local stalkers = {
+    {
+        names = {
+            "^headhunter1",
+            "^headhunter2",
+            "^headhunter3",
+            "^bridge_anomal_killer1",
+            "^bridge_anomal_killer2",
+            "^bridge_anomal_killer3",
+            "^miln_stranger1",
+            "^miln_stranger2",
+            "^miln_stranger3",
+            "^headhunter4"
+        },
+        hint = "doll_target_check_npc2"
+    },
+    { names = { "^faint_npc1" }, hint = "doll_target_check_npc3" },
+    {
+        names = { "^esc_helicrash_survival", "^esc_helicrash_survival2", "^garb_survival", "^garb_ovrah2" },
+        hint = "doll_target_check_npc4"
+    },
+    { names = { "^vagon_stranger1" }, hint = "doll_target_check_npc5" },
+    { names = { "^stalker_volk" }, hint = "doll_target_check_npc6" },
+    { names = { "^post_soldier10", "^post_soldier10_new" }, hint = "doll_target_check_npc7" },
+    { names = { "^stalker_malandrinus" }, hint = "doll_target_check_npc8" },
+    { names = { "^bandit_tirsa", "^garb_tirsa"}, hint = "doll_target_check_npc9" },
+    { names = { "^bandit_shusrtila", "garb_shustriy" }, hint = "doll_target_check_npc10" },
+    { names = { "^bandit_abdul", "^bar_abdul", "^dar_abdul", "^garb_abdul", "^rad_abdul", "mil_abdul", "pri_abdul" }, hint = "doll_target_check_npc11" },
+    { names = { "^stalker_sanya" }, hint = "doll_target_check_npc12" },
+    { names = { "^stalker_skidan" }, hint = "doll_target_check_npc13" },
+    { names = { "^hunter_1", "^garb_hunter_1", "^garb_andrey2" }, hint = "doll_target_check_npc14" },
+    { names = { "^esc_stalker_izgoy" }, hint = "doll_target_check_npc15" },
+    { names = { "^hunter_3", "^hunter_3_scient", "agrund_hunter" }, hint = "doll_target_check_npc16" },
+    { names = { "^redrik", "agrund_redrik" }, hint = "doll_target_check_npc17" },
+    { names = { "^agr_nii_ecolog1" }, hint = "doll_target_check_npc18" },
+    { names = { "^ros_rescuer1" }, hint = "doll_target_check_npc19" },
+    { names = { "^hunter_6" }, hint = "doll_target_check_npc20" },
+    { names = { "^bar_lost_man" }, hint = "doll_target_check_npc21" },
+    { names = { "^bar_scientist" }, hint = "doll_target_check_npc22" },
+    { names = { "^hunter_5" }, hint = "doll_target_check_npc23" },
+    { names = { "^x18_general_doktor" }, "doll_target_check_npc24" },
+    { names = { "^x18_cattle1", "^x18_cattle2" }, hint = "doll_target_check_npc25" },
+    { names = { "^dar_btr_zomb_oficer" }, hint = "doll_target_check_npc26" },
+    { names = { "^dar_suicider_woman" }, hint = "doll_target_check_npc27" },
+    {
+        names = {
+            "^subject_weak_1", "^subject_weak_2", "^subject_weak_3",
+            "^subject_weak_4", "^subject_weak_5", "^subject_weak_6", "^subject_weak_7"
+        },
+        hint = "doll_target_check_npc28"
+    },
+    { names = { "^hunter_4", "^hunter_4_2", "^pervert_zombied2" }, hint = "doll_target_check_npc29" },
+    { names = { "^dar_renegade1", "^dar_renegade2" }, hint = "doll_target_check_npc30" },
+    { names = { "^stalker_freak" }, hint = "doll_target_check_npc31" },
+    { names = { "^hunter_7" }, hint = "doll_target_check_npc32" },
+    { names = { "^mil_vsu_commander" }, hint = "doll_target_check_npc33" },
+    { names = { "^mil_vsu_sold5" }, hint = "doll_target_check_npc34" },
+    { names = { "^mil_separ_commander" }, hint = "doll_target_check_npc35" },
+    { names = { "^mil_dedok" }, hint = "doll_target_check_npc36" },
+    { names = { "^predb_komandr_agent" }, hint = "doll_target_check_npc37" },
+    { names = { "^predb_village_sold" }, hint = "doll_target_check_npc38" },
+    { names = { "^predb_catwoman" }, hint = "doll_target_check_npc39" },
+    { names = { "^predb_king" }, hint = "doll_target_check_npc40" },
+    { names = { "^predb_marouder1", "^predb_marouder1_1" }, hint = "doll_target_check_npc41" },
+    { names = { "^predb_rogue" }, hint = "doll_target_check_npc42" },
+    { names = { "^predb_hermit" }, hint = "doll_target_check_npc43" },
+    { names = { "^predb_trader" }, hint = "doll_target_check_npc44" },
+    { names = { "^predb_kontrabander3" }, hint = "doll_target_check_npc45" },
+    { names = { "^predb_kontrabander4" }, hint = "doll_target_check_npc46" },
+    { names = { "^predb_kontrabander5" }, hint = "doll_target_check_npc47" },
+    { names = { "^predb_courier1" }, hint = "doll_target_check_npc48" },
+    { names = { "^predb_kpp_soldier5" }, hint = "doll_target_check_npc49" },
+    { names = { "^yan_sold_comander" }, hint = "doll_target_check_npc50" },
+    { names = { "^pri_agent_lider" }, hint = "doll_target_check_npc51" },
+    { names = { "^aes_last_agent" }, hint = "doll_target_check_npc52" }
+}
+
+
+local monsters = {
+    { id = { clsid.dog_s },                        hint = "doll_target_check_mob1"  },
+    { id = { clsid.pseudodog_s, clsid.psy_dog_s }, hint = "doll_target_check_mob2"  },
+    { id = { clsid.zombie_s },                     hint = "doll_target_check_mob3"  },
+    { id = { clsid.fracture_s },                   hint = "doll_target_check_mob4"  },
+    { id = { clsid.snork_s },                      hint = "doll_target_check_mob5"  },
+    { id = { clsid.bloodsucker_s },                hint = "doll_target_check_mob6"  },
+    { id = { clsid.chimera_s },                    hint = "doll_target_check_mob7"  },
+    { id = { clsid.gigant_s },                     hint = "doll_target_check_mob8"  },
+    { id = { clsid.controller_s },                 hint = "doll_target_check_mob9"  },
+    { id = { clsid.tushkano_s },                   hint = "doll_target_check_mob10" },
+    { id = { clsid.crow_s },                       hint = "doll_target_check_mob11" },
+    { id = { clsid.boar_s, clsid.flesh_s } ,       hint = "doll_target_check_mob13" },
+    { id = { clsid.burer_s },                      hint = "doll_target_check_mob14" },
+    { id = { clsid.cat_s },                        hint = "doll_target_check_mob15" },
+}
+
+local stalker_hint = function(name)
+    for _, entry in pairs(stalkers) do
+        for _, n in pairs(entry.names) do
+            if string.find(name, n) then return entry.hint end
+        end
+    end
+    return nil
+end
+
+local monster_hint = function(clsid)
+  for _ , entry in pairs(monsters) do
+        for _ , id in pairs(entry.id) do
+            if id == clsid then return entry.hint end
+        end
+    end
+    return nil
+end
+
+local say_hint_about_monster = function(target)
+    if target:section() == "ovcharka" then
+        news_manager.send_tip(db.actor, "doll_target_check_mob12", nil, "doll", 10000)
+        soundtrack.wonderdoll_target_is_npc()
+        return
+    end
+    local hint = monster_hint(get_clsid(target))
+    if hint then
+        news_manager.send_tip(db.actor, hint, nil, "doll", 10000)
+        soundtrack.wonderdoll_target_is_npc()
+    end
+end
+
+local say_hint_about_stalker = function(target)
+    local hint = stalker_hint(target:name())
+    if hint then
+        news_manager.send_tip(db.actor, hint, nil, "doll", 10000, nil)
+        soundtrack.wonderdoll_target_is_npc()
+    else
+        news_manager.send_tip(db.actor, "Ничего не чувствую...", nil, "doll", 10000, nil)
+        soundtrack.wonderdoll_sucess_tip36()
+    end
+end
+
+function hint_for_npc()
+    local target = level.get_target_obj()
+    if target and target:position():distance_to(db.actor:position()) < 100 then
+        if IsStalker(target) then say_hint_about_stalker(target) end
+        if IsMonster(target) then say_hint_about_monster(target) end
+    else
+        news_manager.send_tip(db.actor, "doll_target_check_none", nil, "doll", 10000)
+        soundtrack.wonderdoll_target_too_far()
+    end
+end

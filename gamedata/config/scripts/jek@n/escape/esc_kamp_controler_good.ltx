@@ -1,0 +1,67 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+
+[walker@start]
+path_walk = kamp_controler_walk1
+path_look = kamp_controler_look1
+on_timer = 1|walker@to_kamp %=make_invulnerable =play_snd_from_obj(8221:monsters\controller_act\controller_panic_0) =disable_trading%
+
+[walker@to_kamp]
+path_walk = kamp_controler_walk1
+path_look = kamp_controler_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived|walker@kamp1
+
+[walker@kamp1]
+path_walk = kamp_controler_walk1
+path_look = kamp_controler_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 4000|walker@kamp2 %=play_snd_from_obj(8221:monsters\controller_act\controller_panic_0)%
+
+[walker@kamp2]
+path_walk = kamp_controler_walk1
+path_look = kamp_controler_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+kamp_controler_transformation} nil %=kamp_controler_transformation =delme%
+on_info2 = {+kamp_controler_away} walker@away
+
+[walker@away]
+path_walk = kamp_controler_walk2
+path_look = kamp_controler_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived|%=delme%
+
+
+
+[meet]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+

@@ -1,0 +1,46 @@
+[logic]
+active = ph_door@locked
+
+
+[ph_door@locked]
+closed = true
+locked = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+kazarma_door_open} ph_door@open, {+kazarma_door_broken} ph_door@open
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_info = {+kazarma_door_close} ph_door@locked
+on_info2 = {+skidan_post_stels_task} ph_door@locked2
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@open
+
+
+
+; Когда мы освобождаем солдата из тюрьмы:
+[ph_door@locked2]
+closed = true
+locked = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = {=actor_has_item(kazarma_door_key)} ph_door@open2 %=remove_item(kazarma_door_key) +kazarma_door_key_door_opened_again%
+
+[ph_door@open2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop

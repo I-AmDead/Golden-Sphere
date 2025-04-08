@@ -1,0 +1,67 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = dar_sniper1_walk1
+path_look = dar_sniper1_look1
+on_timer = 10 | camper@idle %=make_invulnerable%
+
+[camper@idle]
+path_walk = dar_sniper1_walk1
+path_look = dar_sniper1_look1
+sniper = true
+def_state_campering = threat
+radius = 3
+;on_actor_dist_le = 100 |  %=dar_sniper1_shoot_actor%
+
+
+
+
+
+
+[walker@shoot1]
+path_walk = dar_sniper1_walk1
+path_look = dar_sniper1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10000 | walker@shoot2 %=dar_sniper1_shoot_actor%
+;on_actor_dist_ge = 50 | walker@idle
+
+[walker@shoot2]
+path_walk = dar_sniper1_walk1
+path_look = dar_sniper1_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10000 | walker@shoot1 %=dar_sniper1_shoot_actor%
+;on_actor_dist_ge = 50 | walker@idle
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} nil %=spawn_zombie_at_pos =send_tip(target_zombied:default) +dar_sniper1_dead =delme2%
+
+[death]
+on_info = %+dar_sniper1_dead%
+

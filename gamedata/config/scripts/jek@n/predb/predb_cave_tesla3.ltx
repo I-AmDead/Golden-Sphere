@@ -1,0 +1,14 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+
+[mob_home]
+path_home = predb_cave_teslas_point
+home_min_radius  = 5
+home_max_radius = 10
+on_info = {+predb_cave_task_done} %=delme%
+on_actor_dist_le_nvis = 2|%=electric_hit_obj(37:bip01_spine:0.5:10) =play_shock_on_actor%
+
+

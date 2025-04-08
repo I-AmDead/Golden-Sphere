@@ -1,0 +1,25 @@
+[collide]
+ignore_static
+
+[logic]
+active = {+agrund_ventilyator_on} ph_button@on, ph_button@idle
+
+[ph_button@idle]
+anim_blend = false
+anim = button_false
+tooltip     = agrund_ventilyator_motor_use1
+on_info = {+agrund_ventilyator_power_on} ph_button@off
+on_press = %=play_snd(ambient\switch_1)%
+
+[ph_button@off]
+anim_blend = false
+anim = button_false
+tooltip     = agrund_ventilyator_motor_use2
+on_press = ph_button@on %=play_snd(ambient\switch_1) +agrund_ventilyator_on =spawn_agrund_snorks_ambush3%
+
+[ph_button@on]
+anim_blend = false
+anim = button_true
+tooltip     = agrund_ventilyator_motor_use2
+on_press = nil
+

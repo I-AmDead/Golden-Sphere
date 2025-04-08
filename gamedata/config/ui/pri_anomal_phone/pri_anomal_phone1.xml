@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<pri_anomal_phone1>	
+	<face x="420" y="115" width="402" height="212" stretch="1">
+		<texture x="0" y="0" width="902" height="250">ui\camerer_face</texture>
+	</face>
+	<pri_anomal_phone_name x="600" y="525" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="graffiti22">Голос из трубки</text>
+	</pri_anomal_phone_name>
+	<dialog_table x="250" y="280" width="550" height="900" stretch="1">
+		<texture >ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+	<pri_anomal_phone_talk_text x="280" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Алло! Это Толик? Алло!!</text>
+	</pri_anomal_phone_talk_text>
+
+
+
+
+	<btn_1 x="320" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Алло, кто это?</text>
+	</btn_1>
+
+
+</pri_anomal_phone1>
+

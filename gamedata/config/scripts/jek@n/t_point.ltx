@@ -1,0 +1,11 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_timer = 1 | ph_idle@2 %=add_self_spot(alife_presentation_smart_ready:t_point_mark_text)%
+
+[ph_idle@2]
+on_timer = 2000 | ph_idle@3 %=play_snd_from_obj(8487:characters_voice\scenario\pilik2) =play_particle_on_t_point%
+
+[ph_idle@3]
+on_timer = 2000 | ph_idle@2 %=play_snd_from_obj(8487:characters_voice\scenario\pilik2) =play_particle_on_t_point%

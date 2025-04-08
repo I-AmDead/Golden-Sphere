@@ -1,0 +1,108 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = miln_stranger1_walk1
+path_look = miln_stranger1_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = miln_stranger1_walk1
+path_look = miln_stranger1_look1
+danger = danger_condition
+on_timer = 5000 | walker@2
+on_actor_dist_le = 5 | camper %=killactor =miln_strangers_enemy%
+on_info = {+volk_hide_zone} walker@to_miln
+
+[walker@2]
+path_walk = miln_stranger1_walk1
+path_look = miln_stranger1_look1
+danger = danger_condition
+on_timer = 5000 | walker@1
+on_actor_dist_le = 5 | camper %=killactor =miln_strangers_enemy%
+on_info = {+volk_hide_zone} walker@to_miln
+
+[kamp]
+center_point = miln_stranger1_look1
+radius = 30
+danger = danger_condition
+on_info = {+volk_hide_zone} walker@to_miln
+
+[camper]
+path_walk = miln_stranger1_walk1
+path_look = miln_stranger1_look1
+radius = 3
+danger = danger_condition
+on_info = {+volk_hide_zone} walker@to_miln
+
+
+
+
+
+[walker@to_miln]
+path_walk = miln_strangers_walk_miln
+path_look = miln_strangers_walk_miln
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_actor_dist_le = 18 | nil %=killactor =miln_strangers_enemy +miln_strangers_alarm%
+on_signal       = arrived | walker@miln
+
+[walker@miln]
+path_walk = miln_strangers_walk_miln1
+path_look = miln_strangers_walk_miln1
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_actor_dist_le = 18 | walker@end2 %=killactor =miln_strangers_enemy +miln_strangers_alarm%
+on_signal       = arrived | walker@end %+miln_stranger1_on_place%
+
+[walker@end]
+path_walk = miln_strangers_walk_miln2
+path_look = miln_strangers_walk_miln2
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+on_actor_dist_le_nvis = 5 | % =play_snd_from_obj(8158:characters_voice\human_03\killer\fight\enemy\enemy_10) =remove_with_teleport +miln_strangers_task_end =miln_strang_flash_spawn%
+
+
+[walker@end2]
+path_walk = miln_strangers_walk_miln2
+path_look = miln_strangers_walk_miln2
+danger = danger_condition
+def_state_moving1 = patrol
+def_state_moving2 = patrol
+def_state_moving3 = patrol
+
+
+
+[meet]
+meet_state = 5| idle
+meet_state = 5| idle
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+miln_stranger1_dead%
+

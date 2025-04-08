@@ -1,0 +1,72 @@
+[logic]
+active = heli_move@waiting1
+on_death = death
+
+; Висим под локацией и ждем, пока актор войдёт на стадион:
+[heli_move@waiting1]
+path_move = pri_heli_point1
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 15
+on_actor_in_zone = pri_stadion_zone|heli_move@waiting2 %=play_snd(helicopter\see_enemy_2)%
+
+; Поднимаемся над домами и немного ждём:
+[heli_move@waiting2]
+path_move = pri_heli_point2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_timer = 18000|heli_move@hunt1 %=play_snd(helicopter\see_enemy_1) =pri_heli_hunt_dollhelp_tip%
+
+
+; Начинаем кружить над стадионом и шмалять:
+[heli_move@hunt1]
+path_move = pri_heli_point3
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 20
+on_info = {=heli_health_le(0.15)} heli_move@crash %+pri_heli_dead =play_snd(helicopter\death_1)%
+on_timer = 11000|heli_move@hunt2
+
+[heli_move@hunt2]
+path_move = pri_heli_point4
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 20
+rocket_delay = 6000
+on_info = {=heli_health_le(0.15)} heli_move@crash %+pri_heli_dead =play_snd(helicopter\death_1)%
+on_timer = 20000|heli_move@hunt1
+
+
+; Подбили:
+[heli_move@crash]
+path_move = pri_heli_point5
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = true
+immortal = true
+default_velocity = 12
+on_signal = arrived|nil %=heli_die%
+
+
+
+[death]
+on_info = %+pri_heli_dead%
+
+
+
+
+

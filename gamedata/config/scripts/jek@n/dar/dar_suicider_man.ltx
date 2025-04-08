@@ -1,0 +1,52 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = dar_suicider_man_walk1
+path_look = dar_suicider_man_look1
+on_timer = 1 | walker@wait %=make_invulnerable =disable_trading%
+
+[walker@wait]
+path_walk = dar_suicider_man_walk1
+path_look = dar_suicider_man_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le = 3 | remark@suicide %=play_snd_from_obj(8333:characters_voice\scenario\val\suicide_die_1)%
+
+[remark@suicide]
+anim = suicide
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end | nil %=unmake_invulnerable =suicide%
+
+
+
+
+[meet]
+meet_state = 2| idle
+meet_state = 2| idle
+victim = 2| nil
+victim_wpn = 2| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+dar_suicider_man_dead%
+

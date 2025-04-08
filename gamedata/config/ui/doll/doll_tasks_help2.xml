@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<doll_tasks_help2>	
+	<face x="435" y="285" width="210" height="212" stretch="1">
+		<texture>ui\doll\doll_face</texture>
+	</face>
+
+	<dialog_table x="150" y="130" width="600" height="600" stretch="1">
+		<texture>ui\doll\doll_dialog_screen_toll</texture>
+	</dialog_table>
+
+	<tasks_list_name x="170" y="131" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="1" y="0" r="225" g="218" b="118" font="graffiti22">У меня задание:</text>
+	</tasks_list_name>
+
+
+	<doll_talk_text x="400" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="255" font="letterica16"></text>
+	</doll_talk_text>
+
+
+
+
+	<btn_1 x="160" y="180" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Минздрав предупреждает</text>
+	</btn_1>
+	<btn_2 x="160" y="200" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Глаз циклопа</text>
+	</btn_2>
+	<btn_3 x="160" y="220" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Тушите свет</text>
+	</btn_3>
+	<btn_4 x="160" y="240" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Охотник за информацией</text>
+	</btn_4>
+	<btn_5 x="160" y="260" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Ни единого разыва</text>
+	</btn_5>
+	<btn_6 x="160" y="280" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Приехали</text>
+	</btn_6>
+	<btn_7 x="160" y="300" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Вечный двигатель</text>
+	</btn_7>
+	<btn_8 x="160" y="320" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Старая песня</text>
+	</btn_8>
+	<btn_9 x="160" y="340" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Код от входа на ЧАЭС</text>
+	</btn_9>
+	<btn_10 x="160" y="360" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Под колпаком</text>
+	</btn_10>
+	<btn_11 x="160" y="380" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>На чистую воду</text>
+	</btn_11>
+	<btn_12 x="160" y="400" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Военная база. Окраина.</text>
+	</btn_12>
+	<btn_13 x="160" y="420" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Нежданный гость</text>
+	</btn_13>
+	<btn_14 x="160" y="440" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Подполье</text>
+	</btn_14>
+	<btn_15 x="160" y="460" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Маленькая страна</text>
+	</btn_15>
+
+
+	<btn_16 x="160" y="500" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text r="255" g="85" b="0" a="200">Назад</text>
+	</btn_16>
+
+
+
+</doll_tasks_help2>
+

@@ -1,0 +1,11 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+
+[mob_home]
+path_home = predb_firest_rust_anomaly_point
+home_min_radius = 2
+home_max_radius = 4
+on_actor_dist_le_nvis = 2|%=predb_firest_rust_anomaly_hit =run_cam_effector(head_shot) =run_postprocess(psychic:1277:false)%

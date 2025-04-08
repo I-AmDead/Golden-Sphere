@@ -1,0 +1,20 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+predb_cave_task_done} ph_idle@2
+on_info2 = {+predb_fabrik_search} ph_idle@2
+
+[ph_idle@2]
+on_info = {+predb_village_grass_info} nil
+on_actor_dist_le_nvis = 2|%=play_snd_on_me(weapons\rpg7_explode) =play_zomby_blow_on_me =predb_fabrik_barrel_hit =delme%
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_outside = sr_idle@2 %=start_addon_intro =disable_ui%
+
+[sr_idle@2]
+on_info = {+game_start} sr_idle@3 %=enable_ui%
+
+[sr_idle@3]
+on_timer = 100|nil %+story_task1 +story_task2 =respawner_spawn(esc_willage_dogs_respawn) =respawner_spawn(esc_road_cats_respawn) =respawner_spawn(esc_willage_rats_respawn) =respawner_spawn(esc_atp_rats_respawn1) =respawner_spawn(esc_atp_rats_respawn2) =respawner_spawn(esc_road_boars_respawn) =respawner_spawn(dar_swamp_snorks_respawn) =respawner_spawn(dar_fabrik_dogs_respawn) =respawner_spawn(garb_road_dogs_respawn) =respawner_spawn(garb_road_tuschano_respawn) =respawner_spawn(garb_lokomotive_pseudodog_respawn) =respawner_spawn(garb_hangaryard_rats_respawn) =respawner_spawn(garb_ravine_fleshes_respawn) =respawner_spawn(agr_nii_rats1_respawn) =respawner_spawn(agr_nii_izloms_respawn) =respawner_spawn(agr_road_boars1_respawn) =respawner_spawn(agr_crossroad_bloodsucker_respawn) =respawner_spawn(agr_fabrik_zombies_respawn) =respawner_spawn(agr_outstrics_snorks_respawn)%

@@ -1,0 +1,14 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = bar_raciya_use
+on_use = {+abdul_goto_benzovoz} nil %=give_items_to_actor(bar_raciya) =delme2%
+on_timer = 8000 | ph_idle@2 %=play_snd_from_obj(8504:characters_voice\scenario\bar_radio_voice_1)%
+
+[ph_idle@2]
+tips      = bar_raciya_use
+on_use = {+abdul_goto_benzovoz} nil %=give_items_to_actor(bar_raciya) =delme2%
+on_timer = 8000 | ph_idle@1 %=play_snd_from_obj(8504:characters_voice\scenario\bar_radio_voice_1)%
+
+

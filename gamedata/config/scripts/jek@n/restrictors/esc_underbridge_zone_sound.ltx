@@ -1,0 +1,16 @@
+[logic]
+active = sr_sound@1
+
+[sr_sound@1]
+snd = ambient\howling_wind_12
+position = underbridge_anomaly_point3_1
+on_signal = sound_end | sr_sound@2
+on_info = {+underbridge_zone_uncharged} sr_idle
+
+[sr_sound@2]
+snd = ambient\howling_wind_11
+position = underbridge_anomaly_point3_1
+on_signal = sound_end | sr_sound@1
+on_info = {+underbridge_zone_uncharged} sr_idle
+
+[sr_idle]

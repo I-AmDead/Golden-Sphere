@@ -1,0 +1,22 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@norm
+
+[mob_walker@norm]
+path_walk = agr_moving_fly_fabrika_home
+path_look = agr_moving_fly_fabrika_home
+braindead = true
+on_actor_dist_le_nvis = 3 | mob_home@agress
+
+[mob_home@agress]
+path_home = agr_moving_fly_fabrika_home_agress
+home_min_radius = 2
+home_max_radius = 8
+braindead = true
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:0.01:10) =run_cam_effector(head_shot) =agr_moving_fly_fabrika_steal_artefacts%
+;on_actor_dist_ge_nvis = 20 | mob_walker@norm
+on_timer = 10000 | mob_walker@norm
+
+

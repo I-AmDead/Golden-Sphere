@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="rad_secret_npc_dialog1_phrase_1">
+		<text>А вот и ты.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_2">
+		<text>Где я? Кто ты такой? Что произошло?</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_3">
+		<text>Сейчас мы с тобой находимся внутри твоего сознания. Перед тобой Главный Учёный. Я вызвал тебя с одной целью - получить информацию.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_4">
+		<text>Какую?</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_5">
+		<text>Я хочу знать о тебе всё. Кто ты такой, чем жил и живешь, зачем пришел в Зону.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_6">
+		<text>С какой стати?</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_7">
+		<text>Чтобы взять тебя под контроль. Я здесь царь и Бог. Контролирую сознания всех людей, находящихся в районе ЧАЭС и Припяти. Однако тебя подчинить мне не удалось и я хочу выяснить, почему. Для этого мне надо видеть твоё прошлое. Кто ты такой? Говори.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_8">
+		<text>Нет, я не скажу тебе ничего.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_9">
+		<text>Зачем ты здесь? Для чего тебе Золотой Шар? Какое желание ведёт тебя к нему?</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_10">
+		<text>Не твоё дело!</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_11">
+		<text>Вот как... Если не хочешь по-хорошему, я остановлю тебя.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_12">
+		<text>Твои люди мне не помеха.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_13">
+		<text>Я активировал протокол "Феникс". Однако у тебя есть шанс спасти свою жизнь - просто уйди из Зоны, откажись от своей цели.</text>
+	</string>
+	<string id="rad_secret_npc_dialog1_phrase_14">
+		<text>Ни за что!</text>
+	</string>
+
+	<string id="rad_abdul_dialog1_phrase_1">
+		<text>Блин... Что только-что произошло?</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_2">
+		<text>Ты упал, потерял сознание. Затем начал что-то бормотать.</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_3">
+		<text>Странное видение! Незнакомое место и призрачный человек...</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_4">
+		<text>Всё ясно. Это Главный Учёный. Он пытался наладить с тобой телепатическую связь. Что он тебе сказал?</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_5">
+		<text>Он разговаривал со мной, пытался выведать что-то обо мне, узнать мою прошлую жизнь...</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_6">
+		<text>Это была попытка взять тебя под контроль. По какой-то причине твой разум не поддаётся влиянию пси-волн Учёного, распространяемых кристаллами Гамма-вещества. И он попытался установить над тобой контроль лично. К счастью, это у него не получилось, иначе твоя песенка была бы спета.</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_7">
+		<text>Плохо помню... Но, кажется, он говорил о каком-то "Фениксе".</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_8">
+		<text>Феникс? Это его лучший агент, профессионал. Он вооружен каким-то уникальным экспериментальным оружием, которое пробивает любую защиту. Если он выпустит Феникса охотится за нами, то нам не сдобровать.</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_9">
+		<text>Что предложишь?</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_10">
+		<text>Дорога в обход леса одна и на ней нам точно устроят засаду. Поэтому нужно идти через лес, так нас сложнее будет засечь.</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_11">
+		<text>Не заблудимся?</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_12">
+		<text>Нет, карта у меня есть. Пошли.</text>
+	</string>
+	<string id="rad_abdul_dialog1_phrase_13">
+		<text>Хорошо, веди.</text>
+	</string>
+
+
+	<string id="rad_abdul_dialog2_phrase_1">
+		<text>Ты цел?</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_2">
+		<text>В ушах звенит... Кажись меня контузило.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_3">
+		<text>Хреново дело.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_4">
+		<text>Да, теперь я уже не боец. Извини, что так получилось.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_5">
+		<text>Это всё Главный Учёный.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_6">
+		<text>Однако я должен довести тебя до Припяти... Чёрт, ноги подкашиваются! Не могу.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_7">
+		<text>Тебе нужно оклематься. Спрячься в этой будке и жди меня здесь. А я проверю, что там дальше, заодно очищу путь от агентов.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_8">
+		<text>Хорошо... Стой. Ты должен устранить Феникса! Пока он на нашем пути, спокойно путешествовать мы не сможем.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_9">
+		<text>Где его найти?</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_10">
+		<text>Дай-ка подумать. В общем, всё, что я помню, это то, что у агентов был тайный лагерь где-то в лесу, у рухнувшего вертолёта. Проверь это место, скорее всего Феникс находится там. Будь осторожен, он отлично пользуется Т-костюмом! Постарайся попасть ему в голову, чтобы оглушить. Да и ещё одно: если вдруг со мной что-то случится и тебе придётся самостоятельно добираться до Припяти, запиши эти координаты. Это мой личный схрон, который я оборудовал в одной из квартир города. Там ты найдёшь немного снаряги и инструкцию, как действовать дальше.</text>
+	</string>
+	<string id="rad_abdul_dialog2_phrase_11">
+		<text>Хорошо.</text>
+	</string>
+
+
+	<string id="rad_fenix_dialog1_phrase_1">
+		<text>Попался, гад. Говори, где находится Главный Учёный!</text>
+	</string>
+	<string id="rad_fenix_dialog1_phrase_2">
+		<text>А ты смешной.</text>
+	</string>
+	<string id="rad_fenix_dialog1_phrase_3">
+		<text>Отвечай, а то пожалеешь!</text>
+	</string>
+	<string id="rad_fenix_dialog1_phrase_4">
+		<text>Золотой Шар, я иду к тебе...</text>
+	</string>
+	<string id="rad_fenix_dialog1_phrase_5">
+		<text>Ты куда это собрался?</text>
+	</string>
+
+
+	<string id="rad_agent_trader_dialog1_phrase_1">
+		<text>Пароль!</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_2">
+		<text>"Исполнитель желаний".</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_3">
+		<text>"Слава Главному Учёному!"</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_4">
+		<text>"Золотой Шар, я иду к тебе".</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_5">
+		<text>"Гитлер капут".</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_6">
+		<text>"... чтобы стать Сверхчеловеком!" Хорошо, теперь скажи, какой у тебя позывной.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_7">
+		<text>Э-э-э... "Топаз".</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_8">
+		<text>Что за дурацкий позывной такой? Не мог ничего лучше придумать?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_9">
+		<text>Почему - дурацкий? Есть такой крепкий благородный камень...</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_10">
+		<text>Ладно, забей. Хотя стоп, надо же тебя по нашей базе данных пробить... Щас посмотрим, чем ты себя успел зарекомендовать, в моём компе вся инфа есть.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_11">
+		<text>Да нету там на меня ничего, я новоприбывший.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_12">
+		<text>Правда? А кто твой куратор?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_13">
+		<text>Куратор... Ну как это кто? Ну, Феникс мой куратор, вот.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_14">
+		<text>Сам Феникс? Нихрена себе, чего ж ты молчишь? А где он щас, не подскажешь? У меня приказ с ним связаться.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_15">
+		<text>Ушёл в Чёрный лес.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_16">
+		<text>Зачем?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_17">
+		<text>Секретная операция.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_18">
+		<text>Понимаю. Ладно, передашь ему, что я его просил зайти, окей?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_19">
+		<text>Конечно. А ты сам чем занимаешься?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_20">
+		<text>Ну как это чем? Я же Пророк! Скажи ещё, что обо мне не слышал.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_21">
+		<text>Ну да, слышал... Но забыл.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_22">
+		<text>Эх, молодёжь! Короче, я главный куратор. Заведую информацией. Если пробить кого в Зоне - это ко мне. Сам Учёный меня на эту должность поставил.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_23">
+		<text>Здесь твой... рабочий кабинет?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_24">
+		<text>Не-а, моё место в Припяти, на Главной Базе, я там шифровки от Учёного принимаю и кому надо отсылаю. А здесь я со своей командой с позавчерашнего дня торчу. Ждём в гости одного штриха, чтоб ему пусто было.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_25">
+		<text>Что ещё за "штрих"?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_26">
+		<text>Да припёрся тут один в Зону. Хочет зачем-то до Золотого Шара добраться и самого Учёного грохнуть. Вот козёл, я бы его лично придушил! И что самое главное - у него башка какая-то неправильная, пси-волны на него не действуют. Наверное, мутант какой-то в своём роде.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_27">
+		<text>Мутант? Сомневаюсь. Кстати, а он сам действует или с кем-то?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_28">
+		<text>Ему один урод из наших помогает, Абдулём кличут. Этого предателя мы недавно выловили и в подземном бункере заныкали, типа как приманку. Ну и ждём главного гада. А ты чего сюда пришёл? Какое у тебя задание?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_29">
+		<text>Феникс поручил мне допросить пленника с целью выведать больше информации. Где его содержат?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_30">
+		<text>Стоп, что ты несешь? С каких это пор Феникс такие распоряжения стал давать? Он же чисто ликвидатор, его дело - мокруха. Да и по радио он со мной не связывался!</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_31">
+		<text>Я не знаю, почему так получилось, но у меня приказ. Не веришь - свяжись с ним и спроси.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_32">
+		<text>Какой-то ты мутный, чувак. Ладно, свяжусь. Так, щас рацию настроим... Вызывает Пророк! Приём, это Пророк! Пророк вызывает Феникса! Приём!.. Молчит.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_33">
+		<text>У человека секретная операция, а ты мешаешь.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_34">
+		<text>Короче, так: я в тебе сомневаюсь, поэтому в бункер не пущу. Сиди и жди, пока Феникс вернётся.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_35">
+		<text>А если я заплачу деньги?</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_36">
+		<text>Ты что, с дуба упал? Нафига мне твои деньги, я скоро к Золотому Шару отправлюсь и стану Сверхчеловеком! Впрочем... Давай так: услуга за услугу.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_37">
+		<text>Слушаю.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_38">
+		<text>Главный Учёный поручил мне собрать как можно больше информации о Большом Излучателе - это антенная установка, которая располагается рядом с нами. Сейчас она не работает, но нам надо выяснить, как её можно использовать на благо нашей идеи... Так вот, я ищу документы, связанные с Излучателем. Кое-что нашел, но мало. Поищи сам, если найдешь что-то интересное и принесешь мне - так и быть, пущу тебя к пленному.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_39">
+		<text>Я согласен.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_40">
+		<text>Нет.</text>
+	</string>
+	<string id="rad_agent_trader_dialog1_phrase_41">
+		<text>Дам совет: осмотри здание администрации, что слева от ворот. Оно заколочено, но внутри что-то осталось.</text>
+	</string>
+
+
+	<string id="rad_agent_trader_dialog2_phrase_1">
+		<text>Я нашел документы.</text>
+	</string>
+	<string id="rad_agent_trader_dialog2_phrase_2">
+		<text>Замечательно! Перейдём к следующему заданию.</text>
+	</string>
+	<string id="rad_agent_trader_dialog2_phrase_3">
+		<text>Какому ещё следующему? Ты же обещал пропустить меня.</text>
+	</string>
+	<string id="rad_agent_trader_dialog2_phrase_4">
+		<text>Пойми, - я здесь главный. Сделаешь для меня ещё одно дельце, не надорвёшься.</text>
+	</string>
+	<string id="rad_agent_trader_dialog2_phrase_5">
+		<text>Ну хорошо, что тебе нужно?</text>
+	</string>
+	<string id="rad_agent_trader_dialog2_phrase_6">
+		<text>На территорию базы забрела какая-то тварюга. По ночам пугает наших патрульных. Пойди и пристрели её.</text>
+	</string>
+	<string id="rad_agent_trader_dialog2_phrase_7">
+		<text>Окей.</text>
+	</string>
+
+	<string id="rad_agent_trader_dialog3_phrase_1">
+		<text>Мутант уничтожен.</text>
+	</string>
+	<string id="rad_agent_trader_dialog3_phrase_2">
+		<text>Теперь я вижу твою преданность, "Топаз". Ладно, чего ты там хотел?</text>
+	</string>
+	<string id="rad_agent_trader_dialog3_phrase_3">
+		<text>Допуск в подземелье.</text>
+	</string>
+	<string id="rad_agent_trader_dialog3_phrase_4">
+		<text>Ладно, только... Где же твой куратор Феникс? Что-то его долго нет. Может, свяжешься с ним?</text>
+	</string>
+	<string id="rad_agent_trader_dialog3_phrase_5">
+		<text>Не имею такой возможности. У нас с ним была чёткая договорённость, что я не буду мешать операции. Он говорил, что противник у него серьезный.</text>
+	</string>
+	<string id="rad_agent_trader_dialog3_phrase_6">
+		<text>Да, этот гад такой, столько наших положил! Лады, вот тебе ключ. Иди по своим делам, потом сдашь его обратно.</text>
+	</string>
+
+
+	<string id="rad_abdul_dialog3_phrase_1">
+		<text>Вот и я.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_2">
+		<text>Снова меня спасаешь... Жекан, я тебе этого не забуду.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_3">
+		<text>Услуга за услугу, забыл?</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_4">
+		<text>Да, я помню о Золотом Шаре и  Припяти...</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_5">
+		<text>Надо выбираться отсюда.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_6">
+		<text>Постой.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_7">
+		<text>Что такое?</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_8">
+		<text>Сейчас у нас есть уникальная возможность и мы не имеем права её упустить! Я видел секретные документы, касающиеся большой антенной установки, расположенной над нами, на поверхности - это наследие военных. Главный Учёный давно интересуется её назначением, но ему не хватает информации. Судя по тому, что я разузнал... В общем, эти антенны - тоже своего рода оружие. Гигантский излучатель, который с помощью пси-волн особой мощности способен буквально "выжигать" человеческие мозги. В данный момент он отключен.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_9">
+		<text>Продолжай.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_10">
+		<text>Я подумал: а что, если попытаться включить его? Радиус его действия - около километра. Поле накроет все пути к Припяти, надёжно закрыв доступ агентам Учёного к остальным районам Зоны. Это станет серьезной преградой для их деятельности. Мы должны попытаться это сделать, если хотим остановить Учёного.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_11">
+		<text>Но у них же есть вертолёт и Т-костюмы.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_12">
+		<text>Вертолёт без поддержки с земли бесполезен, а костюмы телепортируют на небольшие расстояния.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_13">
+		<text>Тогда это неплохая идея, но что будет с нами?</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_14">
+		<text>Этот "Выжигатель мозгов" включается не сразу, сначала системе необходимо выйти на рабочий режим. У нас будет пять-десять минут, чтобы унести ноги. Рискованно, но оно того стоит.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_15">
+		<text>Хорошо, что нужно для его активации?</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_16">
+		<text>Главный рубильник находится в этом зале. Найди его и активируй.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_17">
+		<text>Ясно. Но как только я это сделаю - не мешкая бежим к выходу!</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_18">
+		<text>Само-собой.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_19">
+		<text>Слушай, Абдуль, ты как-то подозрительно много знаешь как для рядового агента.</text>
+	</string>
+	<string id="rad_abdul_dialog3_phrase_20">
+		<text>Жекан, я расскажу тебе всё, клянусь. Главное вырваться из этой задницы.</text>
+	</string>
+
+	<string id="rad_abdul_dialog4_phrase_1">
+		<text>Ну что?</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_2">
+		<text>Мы свободны! Антенна включена, теперь агенты по сути заперты в Припяти, на своей базе.</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_3">
+		<text>Ты обещал рассказать мне кое-что.</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_4">
+		<text>Ладно, слушай: на самом деле я агент СБУ. Вот откуда у меня так много информации о военных разработках в Зоне. Перед отправкой сюда мне дали доступ к многим секретным документам.</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_5">
+		<text>И какова твоя цель?</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_6">
+		<text>Разве не ясно? Такая же, как и у тебя - остановить Главного Учёного и раздобыть техдокументацию на пси-оружие, утерянную после второй аварии.</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_7">
+		<text>У меня другая цель.</text>
+	</string>
+	<string id="rad_abdul_dialog4_phrase_8">
+		<text>Разве? Впрочем, это неважно. Пока что мы будем действовать вместе. Можешь двигать в Припять, путь свободен. Я отдышусь и последую за тобой.</text>
+	</string>
+
+
+	<string id="rad_agent_trader_dialog4_phrase_1">
+		<text>Может, ещё что нужно?</text>
+	</string>
+	<string id="rad_agent_trader_dialog4_phrase_2">
+		<text>Вообще-то есть одно дельце. Тут неподалёку имеется какой-то туннель, нужно его обследовать.</text>
+	</string>
+	<string id="rad_agent_trader_dialog4_phrase_3">
+		<text>Зачем?</text>
+	</string>
+	<string id="rad_agent_trader_dialog4_phrase_4">
+		<text>Возможно, это один из путей в Припять. Если так, то об этом надо доложить Главному Учёному, потому что мы должны контролировать все подходы к городу. В общем, нужно обследовать это место. Двое наших братьев уже ушли туда, но не вернулись. Один из них успел по рации доложить, что видел какую-то дверь, то есть там может быть лазейка. Возьмешься?</text>
+	</string>
+	<string id="rad_agent_trader_dialog4_phrase_5">
+		<text>Возьмусь.</text>
+	</string>
+	<string id="rad_agent_trader_dialog4_phrase_6">
+		<text>Нет, стрёмно.</text>
+	</string>
+
+	<string id="rad_agent_trader_dialog5_phrase_1">
+		<text>Я осмотрел дверь. Она заржавела и пути там нет.</text>
+	</string>
+	<string id="rad_agent_trader_dialog5_phrase_2">
+		<text>Почему не вернулись наши братья?</text>
+	</string>
+	<string id="rad_agent_trader_dialog5_phrase_3">
+		<text>Там было много тварей.</text>
+	</string>
+	<string id="rad_agent_trader_dialog5_phrase_4">
+		<text>Эта информация очень пригодится Главному Учёному!</text>
+	</string>
+
+
+	<string id="x10_agent4_dialog1_phrase_1">
+		<text>Мир тебе, брат!</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_2">
+		<text>И тебе того же. Слушай, брат, а как мне дальше пройти? Та дверь закрыта, код я не знаю.</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_3">
+		<text>И правильно - это приказ Главного Учёного! Мы здесь охраняем пункт управления Большой Антенной и попутно собираем сведения об этой установке. Никто из чужаков или неверных не должен пробраться сюда! Все коды хранятся на моём ПДА.</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_4">
+		<text>Я э-э-э... От Пророка. Он велел пропустить к пленному для допроса.</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_5">
+		<text>Врешь. Пророк не имеет власти над моим отрядом, он заправляет там, наверху. Чего ты здесь ищешь, а? Признавайся!</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_6">
+		<text>Да ничего...</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_7">
+		<text>Подожди! Скажи свой позывной! Из какого ты отряда?</text>
+	</string>
+	<string id="x10_agent4_dialog1_phrase_8">
+		<text>Пионерский наш отряд...</text>
+	</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string_table>

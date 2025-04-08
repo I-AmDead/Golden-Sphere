@@ -1,0 +1,13 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = car_horn
+on_signal = sound_end | ph_idle
+on_info = {+garb_benzovoz_body_info} nil
+
+[ph_idle]
+on_timer = 1000 | ph_sound
+on_info = {+garb_benzovoz_body_info} nil
+
+

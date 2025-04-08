@@ -1,0 +1,42 @@
+[logic]
+active = ph_idle1
+
+[ph_idle1]
+on_timer = 1 |  {~25} ph_code2, {~45} ph_code1, {~75} ph_code3, ph_code4
+ 
+[ph_code1]
+code = 1840
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = agr_seif2_text1
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+[ph_code2]
+code = 1678
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = agr_seif2_text2
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+[ph_code3]
+code = 1809
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = agr_seif2_text3
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+[ph_code4]
+code = 1799
+on_code = ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = agr_seif2_text4
+on_info = {=actor_has_item_on_belt(af_marouders_hand)} ph_idle@hand
+
+
+
+[ph_idle@hand]
+tips = safe_use_with_maroders_hand
+on_use = ph_idle@open %=play_snd(device\metal_small_close_stop) =karma_down%
+on_info = {!actor_has_item_on_belt(af_marouders_hand)} ph_idle1
+
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure
+

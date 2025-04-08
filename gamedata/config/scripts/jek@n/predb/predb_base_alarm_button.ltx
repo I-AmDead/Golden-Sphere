@@ -1,0 +1,17 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_button@off
+
+[ph_button@off]
+anim_blend = true
+anim = button_true
+tooltip     = predb_base_alarm_button_use
+on_press = {+predb_base_gener_on} ph_button@on %=play_snd(ambient\switch_1) +predb_base_btn_switch%
+
+[ph_button@on]
+anim_blend = true
+anim = button_false
+on_press = nil
+

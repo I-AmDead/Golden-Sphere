@@ -1,0 +1,13 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+pri_anomal_ball_off} ph_idle@2
+
+[ph_idle@2]
+tips      = pri_sold_monument_table_use
+on_use = {=actor_has_item(pri_medal)} %=pri_sold_monument_table_use%
+
+
+
+ 

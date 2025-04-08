@@ -1,0 +1,23 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+deadmask_agro_info} nil, {+deadmask_research =actor_wear_helmet(af_deadmask)} sr_idle@2 %=agro_deadmask_trap_zone_goback%
+
+[sr_idle@2]
+on_timer = 2000 | sr_idle@3 %=play_snd(soundtrack\controller\5)%
+on_actor_inside = {=actor_alive} %=run_postprocess(radiation:1877:false) =close_dialog%
+on_actor_outside = %=agro_deadmask_trap_zone_goback%
+
+[sr_idle@3]
+on_timer = 11000 | sr_idle@4 %=play_snd(characters_voice\scenario\deadmask\deadmask_voice_3)%
+on_actor_inside = {=actor_alive} %=run_postprocess(radiation:1877:false) =close_dialog%
+on_actor_outside = %=agro_deadmask_trap_zone_goback%
+
+[sr_idle@4]
+on_timer = 4000 | sr_idle@5 %=play_snd(soundtrack\x18_code2)%
+on_actor_inside = {=actor_alive} %=run_postprocess(radiation:1877:false) =close_dialog%
+on_actor_outside = %=agro_deadmask_trap_zone_goback%
+
+[sr_idle@5]
+on_timer = 4000 | nil %=run_postprocess(deadcity_wake_old:657:false) =agro_deadmask_actor_back +deadmask_agro_info =spawn_agro_deadmask_habar%

@@ -1,0 +1,9 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_info = {+underbridge_zone_uncharged}
+on_actor_inside = {-underbridge_zone_uncharged !actor_has_item_on_belt(af_guider)} %=esc_underbridge_zone_death%, {-underbridge_zone_uncharged =actor_has_item_on_belt(af_guider)} sr_idle@2 %=remove_item(af_guider) =give_items_to_actor(af_guider_uncharge) =af_guider_uncharged_think%
+
+[sr_idle@2]
+on_timer = 10000 | sr_idle@1

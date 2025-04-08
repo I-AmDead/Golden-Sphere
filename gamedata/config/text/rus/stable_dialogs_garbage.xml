@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="hunter2_start_dialog_phrase_1">
+		<text>Здравствуй.</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_2">
+		<text>Привет. Кто ты такой?</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_3">
+		<text>Мне нужно на Север Зоны. Покажешь дорогу?</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_4">
+		<text>Хм... Так. Я смотрю, что ты сумел пробраться сюда почти невредимым - это уже хорошо.</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_5">
+		<text>Ты пробрался сюда сам и еще и Андрея привел - неплохо для начала!</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_6">
+		<text>Не думал, что на Свалке окажется так много аномалий.</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_7">
+		<text>Пошли ко мне в убежище, поговорим о пути на Север. Там безопасно, есть очаг, вода, пища и место для отдыха.</text>
+	</string>
+	<string id="hunter2_start_dialog_phrase_8">
+		<text>Спасибо, пошли.</text>
+	</string>
+
+
+	<string id="hunter2_dialog1_phrase_1">
+		<text>Давно ты здесь?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_2">
+		<text>Полгода. Это считается большим сроком для Зоны Отчуждения.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_3">
+		<text>Зачем пришел сюда?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_4">
+		<text>Охотиться за артефактами, зачем же еще. Здесь есть аномальная зона, артефакты в ней не такие, как на Кордоне. Единственное что - захолустье здесь дикое. Регулярно нападают толпы каких-то тварей, бывает, что по несколько дней меня в моей конуре держат. Хорошо, что у меня здесь запас провизии и воды.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_5">
+		<text>Что за твари? Откуда их так много?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_6">
+		<text>Сам не знаю, но выглядит это необычно. То есть они не выскакивают из соседнего леска, нет. Происходит это так: где-то неподалеку раздается шипение, треск, начинает сиять яркая звезда и прямо из-под земли лезут десятки кабанов, изломов, зомби или другой дряни. Это просто Армагеддон какой-то! Как загонят меня сюда, так и сижу. Потом они, правда, куда-то деваются. Но сам понимаешь, это не есть хорошо.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_7">
+		<text>Что за "изломы"?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_8">
+		<text>Такой вид зомби. Вроде мужика долговязого такого, но с уродливыми руками-оглоблями. Мозгов у него нет, жрет падаль или сырое мясо. Дрянь, короче. Увидишь - стреляй сразу.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_9">
+		<text>Почему бы не обустроить убежище где-нибудь в ином месте?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_10">
+		<text>Была такая мысль, но есть проблема. Подходящих строений поблизости нету, кроме того, отсюда рукой подать до аномальной зоны. Удобное место! Но плохое...</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_11">
+		<text>Мне кажется, что такому внезапному появлению толп нечисти в одном конкретном месте есть некая причина.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_12">
+		<text>Думаешь?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_13">
+		<text>Интуиция подсказывает. Не пробовал искать закономерность в их появлении? Может, они приходят через одинаковые временные промежутки? Может, это как-то связано с твоей деятельностью в этих местах?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_14">
+		<text>Появляются они когда угодно. Кроме сбора артефактов я больше ничем не занимаюсь, кроме... Вообще-то я здесь еще кое-что поделываю, а именно слежу за некоторыми тварями. Затем, чтобы всегда быть начеку. Расставил несколько датчиков движения и тепла, но как это может повлиять? Еще за "Бродягами" наблюдаю, хочу изучить их схему движения.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_15">
+		<text>"Бродягами"?</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_16">
+		<text>Те аномалии, которые ты видел в северной части Свалки. Выглядят как еле заметный смерч с черным облачком наверху. Опасны тем, что могут резко сменить местоположение, "напав" на человека. Я заметил, что они могут перемещаться строго в ограниченном радиусе вокруг определенной точки. Если вычислить ее, то можно понять, как такую аномалию обойти.</text>
+	</string>
+	<string id="hunter2_dialog1_phrase_17">
+		<text>Полезная информация.</text>
+	</string>
+
+
+	<string id="hue_task1_dialog_phrase_1">
+		<text>Я добыл "Чёрные брызги".</text>
+	</string>
+	<string id="hue_task2_dialog_phrase_1">
+		<text>Я добыл "Гремучую салфетку".</text>
+	</string>
+	<string id="hue_task3_dialog_phrase_1">
+		<text>Я добыл "Рачий глаз".</text>
+	</string>
+	<string id="hue_task1_dialog_phrase_2">
+		<text>Неплохо, неплохо... Говорил кому-нибудь еще о нашей сделке?</text>
+	</string>
+	<string id="hue_task1_dialog_phrase_3">
+		<text>Нет, а что?</text>
+	</string>
+	<string id="hue_task1_dialog_phrase_4">
+		<text>И не надо! Давай сюда артефакт.</text>
+	</string>
+	<string id="hue_task1_dialog_phrase_5">
+		<text>Держи.</text>
+	</string>
+	<string id="hue_task1_dialog_phrase_6">
+		<text>Вот твои деньги:</text>
+	</string>
+	<string id="hue_task1_dialog_phrase_7">
+		<text>Всего хорошего. Понадобится еще артефакт - готов помочь.</text>
+	</string>
+
+	<string id="hunter2_dialog2_phrase_1">
+		<text>Я хотел бы узнать на счет пути, на север Зоны.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_2">
+		<text>Север? Куда конкретно ты хочешь попасть?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_3">
+		<text>К "Исполнителю желаний".</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_4">
+		<text>Ты серьезно?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_5">
+		<text>Вполне.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_6">
+		<text>Не буду спрашивать, зачем тебе это... Раз ты смог пробраться сюда, ко мне, значит, понимаешь, что такое Зона и что такое смерть. Поэтому отговаривать тебя смысла нет. Расскажу всё, что успел узнать за время своего здесь пребывания. Во-первых: "Исполнитель желаний" находится в Припяти. Знаешь, где это?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_7">
+		<text>Ну да, заброшенный город.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_8">
+		<text>Заброшенный и начиненный аномалиями вперемешку с мутантами. Во-вторых: дорога в Припять лежит через завод "Росток", Армейские склады и Радар. Завод располагается в километре отсюда. Видел рядом с моим убежищем ворота? Это как раз и есть дорога к "Ростку". Проблема только в том, что она заминирована - это, в-третьих, если быть последовательным.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_9">
+		<text>Кто ее заминировал?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_10">
+		<text>Военные. Я слышал историю, что на "Ростке" перед аварией были какие-то люди. Сразу после второго взрыва солдаты бросились их спасать, но не успели, плюс еще и сами полегли. Уцелевшие драпали с завода в большой панике, минируя за собой дорогу. Чего они так боялись - неизвестно. Так что путь на "Росток" перекрыт.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_11">
+		<text>Как можно преодолеть это минное поле?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_12">
+		<text>Есть у меня одна идея. Дело в том, что мины, которые заложили вояки, по типу своему противопехотные, то есть рассчитанные на поражение живой силы. Видимо, солдаты, таким образом, хотели остановить стада мутантов, гнавшихся за ними. В процессе своего драпа вояки бросили на краю поля сломанный БТР. Так вот на нем как раз и можно было бы через это поле проехать - броня защитит от осколков. Именно таким образом и можно было бы попасть на завод. Беда только в том, что БТР этот в нерабочем состоянии.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_13">
+		<text>Что нужно сделать, чтобы починить его?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_14">
+		<text>Честно сказать, я уже немного поковырялся в нем. Меня ведь "Росток" тоже интересует, по слухам там есть еще одна аномальная зона... В общем, у него накрылся редуктор - полетели шестерни. Нужен новый.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_15">
+		<text>Я видел здесь брошенные БТР-ы, можно ли взять детали с них?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_16">
+		<text>Вряд ли, потому что все они давно стоят под открытым небом и заржавели. Если где можно достать запасной редуктор, так это на фабрике в Темной долине. Тамошний разведчик Серега рассказывал мне, что видел несколько в тех местах. Так что если ты хочешь попасть на завод "Росток", то должен сначала сходить в долину, принести редуктор и починить БТР - я тебе в этом помогу. Стоп, забыл!</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_17">
+		<text>Что такое?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_18">
+		<text>Есть еще одна проблема: путь в Темную долину перекрыт аномалией "Туча".</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_19">
+		<text>Это что еще за аномалия?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_20">
+		<text>Огромное скопление угольно-чёрного дыма, который выходит прямо из-под земли. Запаха почти не имеет, не ядовит, но таит в себе другую опасность: если приблизиться к "Туче", то из нее вылетят несколько шаровых молний и атакуют тебя. А от шаровых молний, приятель, спасения нет, какую защиту не напяль. Они костюм не тронут, зато плоть под ним прожгут насквозь. Страшные штуковины.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_21">
+		<text>Что же мне делать? Все пути перекрыты...</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_22">
+		<text>Есть способ, как эту тучу рассеять. Для этого нужен артефакт "Проводник".</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_23">
+		<text>Как его добыть?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_24">
+		<text>Хороший вопрос. Я видел "Проводник" всего лишь раз в своей жизни. Когда я только пробрался сюда, то попал под опеку к опытному разведчику по кличке Батя. Он меня многому научил... Однажды я стал свидетелем того, как Батя "рассеял" с помощью "Проводника" Тучу, возникшую в опасной близости от нашего убежища. Суть в том, что "Проводник" сам по себе не рождается, его необходимо сложить из трех похожих артефактов: зеленого, желтого и красного шаров. Найти эти шары можно случайно - я недавно сам видел желтый шар, лежащий где-то в районе старого экскаватора. Тогда я его не подобрал, а вот сейчас случай подвернулся.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_25">
+		<text>То есть я должен собрать три "шара" разных цветов?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_26">
+		<text>Да. После этого нужно будет подойти к "Туче" на очень близкое расстояние и тогда "Проводник" сам сгенерируется из троих шаров, а опасная аномалия понемногу рассеется.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_27">
+		<text>Где я могу найти шары?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_28">
+		<text>Здесь, на Свалке. Я точно помню, что видел их все по отдельности в каких-то местах, но не помню в каких. Знаешь что? Дам тебе совет: пойди к могилке Бати и спроси у него сам. Он мне часто подсказывает ответы на трудные вопросы. Как-будто кто-то шепчет... Кстати, если добудешь "Проводник", то сможешь и "Железку" без труда и жертв преодолевать - Батя много раз так делал.</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_29">
+		<text>И где же находится могила?</text>
+	</string>
+	<string id="hunter2_dialog2_phrase_30">
+		<text>Рядом с моим убежищем.</text>
+	</string>
+
+
+	<string id="hunter2_dialog3_phrase_1">
+		<text>Ты живешь здесь сам?</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_2">
+		<text>Ага.</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_3">
+		<text>Но я вижу, что в этом убежище оборудованы места для как минимум пяти человек.</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_4">
+		<text>А ты наблюдательный. Да, когда-то здесь жила целая группа разведчиков.</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_5">
+		<text>Что с ними случилось?</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_6">
+		<text>Это отдельная история. Устраивайся, так сказать, поудобнее и слушай. Когда-то в этом убежище, еще до меня и моего наставника, жили аж семь человек. Да, не удивляйся! Как они сюда пробрались - отдельный вопрос. Значит, тропу нашли. Или "Железка" тогда еще не была такой опасной. В общем, главным у них был Дятлов. Имя его я, к сожалению, запамятовал... Так вот, значит, жили они здесь всемером, промышляли потихоньку, разведывали территорию и намечали безопасные пути для нашего брата. Ветрогенератор, что на крыше - их рук дело. Но в один прекрасный день наткнулись они здесь на что-то такое, что свело в могилу их всех разом.</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_7">
+		<text>Это была аномалия?</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_8">
+		<text>Бес его знает. Лично я так и не разобрался, что же там они нашли. Я, собственно, откуда всё это знаю: после одного из ребят здесь остался дневник. Я нашел его и изучил... Чтоб не трепаться долго, могу передать его тебе. Если разгадаешь загадку группы Дятлова - точно получишь что-то ценное от самой Зоны. Не пустышкой какой-то же она семерым умным парням голову задурила, чтоб её... Ну что, попробуешь? Или кишка тонка?</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_9">
+		<text>Давай дневник, посмотрю.</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_10">
+		<text>Потом.</text>
+	</string>
+	<string id="hunter2_dialog3_phrase_11">
+		<text>Вот, изучай. В двух словах: парни нашли инфу, что в заброшенном ангаре к югу отсюда что-то есть. Но это что-то им мешала взять какая-то фигня... Пошли они туда и не вернулись. Дальше думай сам.</text>
+	</string>
+
+	<string id="hunter2_dialog4_phrase_1">
+		<text>Я на счет группы Дятлова.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_2">
+		<text>Слушаю тебя.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_3">
+		<text>Судя по тому, что я увидел в ангаре, дело обстояло так: парни узнали, что нечто ценное запрятано на крыше ангара. Поскольку внутри оказалось опасно, то несколько из них погибли, но до цели добраться им всё же удалось...</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_4">
+		<text>Продолжай.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_5">
+		<text>Когда цель уже была достигнуты, один из членов группы смухлевал, прихватил с собой добычу и накивал пятками.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_6">
+		<text>Вот это поворот.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_7">
+		<text>Все остальные погнались за ним на машине, но забыли, что Зона - это не шоссе под Берлином и погибли в аномалии.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_8">
+		<text>Ничего себе! Как опытный Дятлов мог так легко погубить себя и товарищей? Не понимаю... Это жадность затмила его сталкерскую "чуйку", не иначе. В аномалии погибли все?</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_9">
+		<text>Да, а вот сейф остался целым и невредимым. Только вот не открывается он.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_10">
+		<text>Ну-ка дай-ка взгляну... Да, заржавел только так, видимо долго пролежал в сыром месте. И замку крышка.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_11">
+		<text>Его нельзя взломать?</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_12">
+		<text>Можно. Я смотрю, что сейф этот - легкий, переносной, такими пользовались, когда нужно было перевезти часть ценностей из одного места в другое. Я не думаю, что в нём очень сложный замок. На руку нам еще и то, что он проржавел, а значит и ослабел. Думаю, что замок на дверце можно взломать и подручным инструментом, например, молотком, отверткой, зубилом... Вот только нет у меня всего этого.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_13">
+		<text>В Зоне вроде были фабрики и заводы. Поискать инструменты там?</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_14">
+		<text>Да. Если конечно хочешь узнать, что лежит в этом сейфе. Могу посоветовать тебе пошарить на фабрике Агропрома. Там, если я не ошибаюсь, были мастерские или цеха, что-то должно было остаться. Мне много не надо: молоток, отвертку, разводной и гаечный ключи, тиски... Всё.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_15">
+		<text>Я найду инструменты.</text>
+	</string>
+	<string id="hunter2_dialog4_phrase_16">
+		<text>К чёрту этот сейф, кроме советских рублей в нём ничего нет. Оставь его себе.</text>
+	</string>
+
+
+
+	<string id="client3_agent_dialog1_phrase_1">
+		<text>Наконец-то! Я от доктора Пильмана и готов купить научные образцы. Что у вас имеется?</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_2">
+		<text>Артефакт огненной группы.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_3">
+		<text>Артефакт каменной группы.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_4">
+		<text>Артефакт железной группы.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_5">
+		<text>Артефакт растительной группы.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_6">
+		<text>Артефакт стеклянной группы</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_7">
+		<text>Артефакт неопределенной группы.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_7_1">
+		<text>Боюсь что ничего подходящего.</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_8">
+		<text>Какой именно артефакт вы хотите нам продать? Наши расценки: за "Уголёк" получите 8000р., за "Окалину" - 11000р., за "Смолу" - 16000р.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_9">
+		<text>"Уголёк"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_10">
+		<text>"Окалина"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_11">
+		<text>"Смола"</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_12">
+		<text>Какой именно артефакт вы хотите нам продать? Наши расценки: за "Щебень" получите 7000р., за "Клубок" - 10000р., за "Куриного Бога" - 12000р.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_13">
+		<text>"Щебень"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_14">
+		<text>"Клубок"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_15">
+		<text>"Куриный Бог"</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_16">
+		<text>Какой именно артефакт вы хотите нам продать?  Наши расценки: за "Железный орех" получите 5000р., за "Кольцо" - 10000р., за "Корону" - 15000р.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_17">
+		<text>"Железный орех"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_18">
+		<text>"Кольцо"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_19">
+		<text>"Корона"</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_20">
+		<text>Какой именно артефакт вы хотите нам продать? Наши расценки: за "Жабу" получите 6000р., за "Каштан" - 9000р., за "Полынь" - 11000р., за "Гриб" - 15000р.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_21">
+		<text>"Жаба"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_22">
+		<text>"Каштан"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_23">
+		<text>"Полынь"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_24">
+		<text>"Гриб"</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_25">
+		<text>Какой именно артефакт вы хотите нам продать? Наши расценки: за "Стекляшку" получите 7000р., за "Слезу" - 11000р., за "Линзу" - 15000р.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_26">
+		<text>"Стекляшка"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_27">
+		<text>"Слеза"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_28">
+		<text>"Линза"</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_29">
+		<text>Какой именно артефакт вы хотите нам продать? Наши расценки: за "Спираль" получите 7000р., за "Хрусталь" - 12000р., за "Улитку" - 16000р., за "Бублик" - 5000р., за "Чертово яйцо" - 14000р.</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_30">
+		<text>"Спираль"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_31">
+		<text>"Хрусталь"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_32">
+		<text>"Улитка"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_33">
+		<text>"Бублик"</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_34">
+		<text>"Чертово яйцо"</text>
+	</string>
+
+	<string id="client3_agent_dialog1_phrase_35">
+		<text>Огромное спасибо за сотрудничество!</text>
+	</string>
+	<string id="client3_agent_dialog1_phrase_36">
+		<text>В таком случае вынужден вас разочаровать: денег вы не получите.</text>
+	</string>
+
+	<string id="client3_guard2_dialog1_phrase_1">
+		<text>Как вы смогли проникнуть сюда?</text>
+	</string>
+	<string id="client3_guard2_dialog1_phrase_2">
+		<text>Я - опытный разведчик, ходил в Зону с самого ее возникновения. Теперь имею статус "проводника" - это высший ранг для разведчиков. У меня есть свой отработанный маршрут, учёные платят мне пятизначные суммы - вот и весь секрет.</text>
+	</string>
+	<string id="client3_guard2_dialog1_phrase_3">
+		<text>Новички, чтобы попасть сюда, продираются через аномалии и стаи мутантов, гибнут пачками, а ты разведал безопасную тропу и стрижешь на этом бабло?</text>
+	</string>
+	<string id="client3_guard2_dialog1_phrase_4">
+		<text>Есть такое изречение: "Кто владеет информацией, тот владеет миром". Учись, студент.</text>
+	</string>
+
+	<string id="client3_guard1_dialog1_phrase_1">
+		<text>Как вы смогли проникнуть сюда?</text>
+	</string>
+	<string id="client3_guard1_dialog1_phrase_2">
+		<text>Это секрет. Я всего лишь охранник, если хочешь узнать что-то конкретное - поговори с Колей, он проводник.</text>
+	</string>
+	<string id="client3_guard1_dialog1_phrase_3">
+		<text>Сколько тебе платят?</text>
+	</string>
+	<string id="client3_guard1_dialog1_phrase_4">
+		<text>Учёные платят не так много, как мафия, но на хлеб с икрой хватает.</text>
+	</string>
+
+	<string id="hunter2_dialog5_phrase_1">
+		<text>Я нашел инструменты на Агропроме.</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_2">
+		<text>Очень хорошо! Показывай, что там у тебя?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_3">
+		<text>Вот, забирай:</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_4">
+		<text>Так, негусто, но для вскрытия сейфа должно хватить.</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_5">
+		<text>Займешься этим?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_6">
+		<text>Да, конечно. Так, закрепим его в тисках... Вот тут вроде щель между корпусом и дверцей, щас мы туда отвертку вставим, и как следует, стукнем... Вот. Немного поддалось, отогнулся краешек! А мы его разводным ключиком зацепим, и как следует, повернем... Поддается! Проржавела дверца, сейчас я ее с петель сниму... Есть!</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_7">
+		<text>Ну, что же там внутри?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_8">
+		<text>Хм, странно... Не пойму нихрена, что за дела.</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_9">
+		<text>Да что ж там такое-то, ёлки-палки?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_10">
+		<text>Какая-то лапа. Или рука... Фу, гадость. Кто ее сюда мог сунуть?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_11">
+		<text>Больше ничего?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_12">
+		<text>Совершенно. Может, это чья-то шутка? Парни из группы Дятлова прикололись над нами?</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_13">
+		<text>Им там точно было не до шуток. Что же, выходит я зря надеялся на хабар и искал инструменты...</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_14">
+		<text>Погоди, Жекан, не расстраивайся. Сдается мне, что это не простая рука. Возьми ее с собой и первое время не выбрасывай, может у нее какие свойства обнаружатся.</text>
+	</string>
+	<string id="hunter2_dialog5_phrase_15">
+		<text>Ну, давай.</text>
+	</string>
+
+	<string id="hunter2_deathlamp_dialog1_phrase_1">
+		<text>Василий, я тут ПДА нашел...</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_2">
+		<text>За эту фигню я дам тебе...</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_3">
+		<text>Погоди, я не собираюсь его тебе продавать. Просто скажи, знаешь ли ты его владельца по кличке Очкарик и сможешь ли вытянуть из карты памяти инфу.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_4">
+		<text>Так это ПДА Очкарика?!</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_5">
+		<text>По крайней мере, на нем так написано.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_6">
+		<text>Тебе крупно повезло, Жекан! Ты хоть знаешь, чем прославился этот разведчик?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_7">
+		<text>Не знаю.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_8">
+		<text>Он ведь "Смерть-лампу" нашёл!</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_9">
+		<text>Что за фигня то такая?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_10">
+		<text>За эту "фигню" Хрипатый Хью обещал заплатить любую сумму, какая  уместится  на листке чековой книжки.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_11">
+		<text>В чём ее ценность?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_12">
+		<text>Слишком много вопросов, Жекан. Наше дело простое, его можно всего двумя словами описать: хабар - навар. Понимаешь?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_13">
+		<text>Хм, ну да. Есть вероятность, что в ПДА Очкарика содержится информация о "Смерть-лампе"?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_14">
+		<text>Вот это мы сейчас и узнаем. Давай сюда его ПДА, я солью с него инфу.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog1_phrase_15">
+		<text>Держи.</text>
+	</string>
+
+	<string id="hunter2_deathlamp_dialog2_phrase_1">
+		<text>Василий, я тут "Смерть-лампу" добыл.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_2">
+		<text>Чего??</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_3">
+		<text>Ту, которую Очкарик нашел. Ты мне о нем рассказывал, помнишь?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_4">
+		<text>Да помню, просто не верится, что тебе так крупно повезло. Слушай, а как ты ее добыл, расскажи. Где Очкарик ее прятал?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_5">
+		<text>На одной из мусорных куч. С виду эта "лампа" - обычный старый прожектор, но имеет свойство убивать всё живое вокруг себя вспышками некой энергии.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_6">
+		<text>Да уж, Зона как всегда в своём репертуаре...</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_7">
+		<text>Я хотел спросить: кому ее можно сбагрить? Вроде кто-то обещал за нее баснословную сумму.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_8">
+		<text>Это Хрипатый Хью обещал, который нам артефакты заказывает. Говорят, что он мафиози, но мне кажется, что это просто человек из оборонного института, работающий под прикрытием. За "Лампу" он отвалит тебе миллион как с куста, можешь не сомневаться. Но есть и второй вариант.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_9">
+		<text>Какой?</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_10">
+		<text>Учёные. Очкарик, в свою бытность торговавший им "Лампу", передумал и это стало для яйцеголовых уроком. Теперь они торговаться не станут. Однако научный институт - это тебе не банк Империал, миллион они тебе точно не наскребут. Но можно договорится, например, о постоянном довольствии. Бесплатные поставки припасов, патронов, оружия, прочего. Заключить, так сказать, контракт.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_11">
+		<text>Знаешь, я лучше поговорю с Хью.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_12">
+		<text>Попробую поработать с учёными.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_13">
+		<text>Ну тогда дождись его прибытия в Зону и свяжись с ним. Удачи, счастливчик.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_14">
+		<text>Тебе надо выйти на доктора Пильмана. Поговори с ним или с его агентом.</text>
+	</string>
+	<string id="hunter2_deathlamp_dialog2_phrase_15">
+		<text>Спасибо.</text>
+	</string>
+
+	<string id="client3_deathlamp_dialog_phrase_1">
+		<text>В моем распоряжении имеется так называемая "Смерть-лампа". Такое вас интересует?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_2">
+		<text>В... Вы серьезно?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_3">
+		<text>Абсолютно.</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_4">
+		<text>Послушайте, я должен вам объяснить, что подобный образец аномального образования не должен попасть в посторонние руки! Только наука имеет право получить в свой доступ этот артефакт, понимаете меня?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_5">
+		<text>Вполне. Сколько вы мне заплатите?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_6">
+		<text>Э-э-э... Как вам сказать... Не хотелось бы вас оскорбить некорректной формулировкой, но много и сразу мы вам дать физически не можем. Государственное финансирование, черт бы его побрал!</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_7">
+		<text>Понимаю. Но кроме денег вы могли бы обеспечить меня необходимым здесь, в Зоне, снаряжением и прочими вещами. Регулярно.</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_8">
+		<text>Это другой вопрос. Полагаю, что доктор Пильман использует все свои связи и сможет обеспечить вас всем необходимым.</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_9">
+		<text>Буду, надеется. Как на счет гарантий?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_10">
+		<text>Да, конечно... Впрочем, что я в самом-то деле? Вот, возьмите эту вещь.</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_11">
+		<text>Что это?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_12">
+		<text>Радиопередатчик повышенной мощности. С помощью него вы сможете вызывать регулярные поставки боеприпасов, снаряжения, медикаментов и прочего в определенную точку Зоны отчуждения. Передатчику присвоен особый пеленг, военным приказано высылать посылки по его сигналу беспромедлительно. Это всё создавалось для нештатных ситуаций, в которые могли бы попасть наши научные экспедиции, но раз уж вы сослужили нам такую неоценимую службу, то...</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_13">
+		<text>Спасибо. Как им пользоваться?</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_14">
+		<text>Радиус действия передатчика ограничен. Вызвать поставку можно только в недалеком расстоянии от армейского блокпоста на Кордоне, я помечу вам это место на карте. Что именно вам пришлют - выберете сами.</text>
+	</string>
+	<string id="client3_deathlamp_dialog_phrase_15">
+		<text>Ясно.</text>
+	</string>
+
+	<string id="hue_deathlamp_dialog_phrase_1">
+		<text>В моем распоряжении имеется так называемая "Смерть-лампа". Такое вас интересует?</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_2">
+		<text>Ты уверен, что это именно она?</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_3">
+		<text>На 100 процентов.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_4">
+		<text>Тогда не будем терять время даром. Даю за нее 300 000 рублей. Сделку оформляем здесь и сейчас.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_5">
+		<text>Всего лишь триста "штук"? Обижаешь, начальник.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_6">
+		<text>Вздумал со мной торговаться? Я сейчас улечу, и что хочешь с этой лампой, то и делай.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_7">
+		<text>Конечно. Продам ее учёным без проблем.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_8">
+		<text>Пойми, ты не сможешь дать мне стопроцентной гарантии, что это именно то, что называется "Смерть-лампой". Вот как ты это докажешь?</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_9">
+		<text>Гм, не знаю. Но эта штука реально опасна, она убивала людей.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_10">
+		<text>Может быть. Но предмет, который я у тебя вижу, больше всего смахивает на старый ржавый прожектор, выкопанный на какой-то свалке. Как я могу дать за него больше 300 рублей, объясни мне?</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_11">
+		<text>Предлагаю просто поверить. Другого такого шанса у тебя не будет.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_12">
+		<text>Я поверю... Но если ты меня надул - я тебе не завидую.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_13">
+		<text>А я предлагаю тебе пососать лапу, парниша. Как медведь в берлоге. Понял меня?</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_14">
+		<text>Вот и хорошо. Миллион и ни копейкой меньше.</text>
+	</string>
+	<string id="hue_deathlamp_dialog_phrase_15">
+		<text>Сосет обычно тот, кто упускает свой шанс. Всего доброго.</text>
+	</string>
+
+	<string id="hunter2_foto_dialog_phrase_1">
+		<text>Я нашел фотоаппарат, взгляни.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_2">
+		<text>Где?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_3">
+		<text>На теле новичка на одной из мусорных куч. В его ПДА была инфа о том, что он получил задание сфоткать какой-то объект над ангаром. Звали его Клим.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_4">
+		<text>Помню этого чудака, он здесь крутился одно время. Артефакты не собирал, но вместо этого фотографировал всё вокруг: аномалии, мутантов, местное население. Однажды даже под выброс полез небо фоткать, я его еле за шкирку в убежище втянул! Любопытный был малый. У него вроде контракт с каким-то журналом был, насколько я помню.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_5">
+		<text>У меня есть подозрение, что его кто-то убил. Что ты можешь сказать об этом?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_6">
+		<text>Ты думаешь? Вряд ли у него были враги - народу здесь обычно мало... С хабаром Клим не ходил, по тайника чужим не лазил. Может, несчастный случай? Правда, помнится мне история одна, довольно мутная.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_7">
+		<text>Я слушаю.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_8">
+		<text>Однажды кто-то попросил Клима показать, что он там наснимал, но он отказался. Его собеседник настаивал, в ответ Клим вдруг резко ему нагрубил и даже послал на три буквы, чего он обычно себе не позволял. До конфликта дело не дошло, но мне показалось странным: чего он так трясется над своими фотками? Кстати, а что там за снимки? Не смотрел?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_9">
+		<text>Там две каких-то фотографии, которые не читаются. Возможно, карта памяти повреждена.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_10">
+		<text>Возможно. А возможно, что и нет... У меня есть одна догадка.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_11">
+		<text>Какая?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_12">
+		<text>Не все сразу. Давай договоримся: ты выполнишь мою просьбу, а я тебе расскажу все, что думаю по этому поводу. Договор?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_13">
+		<text>Договор!</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_14">
+		<text>Не интересно.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_15">
+		<text>Тогда так: пойди на то место, где ты нашел труп Клима, попробуй дождаться появления той самой фигни над ангаром, о которой говорилось в его послании и сфотографируй ее.</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_16">
+		<text>Зачем?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_17">
+		<text>Если моя догадка верна, то после съемки должно кое-что произойти. Действуй по обстоятельствам, короче... Потом доложишь мне, чем все закончилось, окей?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_18">
+		<text>Ты сказал, что должно что-то произойти. Это опасно?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_19">
+		<text>Честно скажу - не знаю. Может, никто и не произойдет, так даже будет лучше. Но если моя теория подтвердится и все прояснится - с тебя пиво, лады?</text>
+	</string>
+	<string id="hunter2_foto_dialog_phrase_20">
+		<text>Ладно, я слажу на кучу.</text>
+	</string>
+
+	<string id="hunter2_foto_dialog2_phrase_1">
+		<text>Я на счет аномалии над ангаром, которую фотографировал Клим.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_2">
+		<text>Рассказывай.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_3">
+		<text>Это просто неимоверно. Когда я пришел на место смерти новичка, над ангаром появилось НЛО!</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_4">
+		<text>Что-что?</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_5">
+		<text>НЛО, самое настоящее. Летающая тарелка. Здоровенная, метров 30 в диаметре.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_6">
+		<text>Ты не пьян?</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_7">
+		<text>Нет. А когда я сфотографировал ее, она попыталась меня притянуть, но я сбежал. Потом она улетела.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_8">
+		<text>Послушай, Жекан... Я реально не пойму о чем ты говоришь. Какая еще тарелка, какое НЛО? Может, ты прикалываешься надо мной?</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_9">
+		<text>Чтоб меня Зона сожрала, если вру!</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_10">
+		<text>Хм... А ты не принимал, случайно, каких-нибудь лекарств перед тем, как туда пойти? А то сейчас много разных экспериментальных таблеток появилось от радиации, но с побочными эффектами...</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_11">
+		<text>Не пил и не ел я ничего. Если ты мне не веришь, то поверь своим глазам. Я успел сфотографировать тарелку перед тем, как она атаковала меня.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_12">
+		<text>Ну, так покажи фотографию.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_13">
+		<text>Вот:</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_14">
+		<text>Та-а-ак. Ага, вроде она. Я так и думал.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_15">
+		<text>Ну что, видишь?</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_16">
+		<text>Нет, погляди сам. Фото есть, но на нем просто ангар и небо. А над ним никаких тарелок.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_17">
+		<text>Как же так?..</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_18">
+		<text>Погляди сам. И подумай, как я должен относится к твоим словам теперь.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_19">
+		<text>Но я же сам видел... Эта штука чуть меня не угробила... Ничего не пойму! А Клим? Он ведь погиб из-за этой тарелки.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_20">
+		<text>Я тут навел справки на счет Клима, пока ты бегал. Дело в том, что до прихода в Зону он работал журналистом-фотографом в одном, скажем так, научно-развлекательном журнале. Снимал то снежного человека, то привидений, то пресловутое НЛО. Гонялся за сенсациями, короче. Не удивительно, что он сюда приперся. Таким как он здесь смерть заранее уготована.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_21">
+		<text>Тогда выходит, что Клим тоже видел НЛО.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_22">
+		<text>Не факт. Я думаю, что где-то там, под кучей или над ангаром есть некая пси-аномалия, вызывающая галлюцинации, которые привлекают к ней жертв. Клим стал такой жертвой, ты - чуть не стал. С чем тебя и поздравляю.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_23">
+		<text>Ты знал о аномалии и не предупредил меня о ней?</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_24">
+		<text>Помнишь, я говорил тебе о том, что у меня есть подозрения на счет того, что именно убило Клима? Скажу честно: я считал, что он стал жертвой своего любопытства или жадности. Дело в том, что есть несколько организаций, занимающихся масштабным и незаконным сбором аномальных материалов из Зоны. Слыхал о Кардигановских лабораториях?</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_25">
+		<text>Немного. Вроде бы они скупали артефакты через разведчиков.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_26">
+		<text>Я считал, что Клим работал на подобную организацию, фотографируя аномалии и секретные тропы в Зону, а убил его агент, посланный к нему якобы для расчета и передачи материалов. Но, как оказалось, виновата аномалия. Кстати! У Клима ведь где-то был схрон. Хабар он почти не собирал но, возможно, там осталось что-то ценное. Вот координаты.</text>
+	</string>
+	<string id="hunter2_foto_dialog2_phrase_27">
+		<text>Окей, проверю.</text>
+	</string>
+
+
+	<string id="dar_abdul_dialog5_phrase_1">
+		<text>Так, БТР вижу, а где же твои знакомые?</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_2">
+		<text>Есть проблема. Помнишь тех рекетиров, которым ты служил на Кордоне?</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_3">
+		<text>Ну.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_4">
+		<text>Эти уроды наведались сюда, пока меня не было, и похитили местного разведчика. Оставили записку, требуют миллион.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_5">
+		<text>Вот же мрази! Я так и думал, что они не простят того оскорбления. Зря вы их тогда не пристрелили.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_6">
+		<text>В записке сказано, чтобы я подошел в указанное место с деньгами и без оружия.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_7">
+		<text>Это подстава, они грохнут тебя. Но у меня есть план.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_8">
+		<text>Говори.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_9">
+		<text>У меня есть один артефакт. Его можно использовать для внезапной атаки на бандитов, они не примут его за оружие. Главное - ударить первым и не подставить заложников. Действуем так: ты идешь на встречу, я тебя прикрываю. После того, как произойдет контакт с рекетирами, я через некоторое время отвлеку их внимание, а ты, воспользовавшись этим, используешь силу моего артефакта. После этого они уже ничего не смогут сделать.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_10">
+		<text>Они говорят, что убьют заложников при малейшей опасности. Это слишком рискованный план.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_11">
+		<text>Доверься мне. Ты знаешь, как пользоваться артефактом "Зуда"?</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_12">
+		<text>Нет, впервые слышу о нем.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_13">
+		<text>Нужно изо всех сил сдавить его в руке. Вокруг тебя образуется волна аномальной энергии, действующая на всех людей в радиусе 20-30 метров. Она сильно долбанет по их мозгам. Ты задействуешь "Зуду", бандиты на некоторое время потеряют сознание, а я из засады пристрелю одного из них. После этого мы схватим второго и допросим. Смерть напарника деморализует его. Будь готов: энергия артефакта подействует и на тебя. Ощущение неприятное.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_14">
+		<text>Потерплю.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_15">
+		<text>Тогда двинули к месту встречи.</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_16">
+		<text>Двинули!</text>
+	</string>
+	<string id="dar_abdul_dialog5_phrase_17">
+		<text>Немного подождем.</text>
+	</string>
+
+	<string id="dar_abdul_dialog6_phrase_1">
+		<text>Что теперь?</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_2">
+		<text>Я вижу этих уродов. Не приближайся к ним с оружием в руках, лучше спрячь его. Эти ребята - отморозки еще те, шуток не понимают.</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_3">
+		<text>Хорошо, я спрячу оружие.</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_4">
+		<text>Я останусь здесь, на этой позиции. Ты подойдешь к ним и начнешь переговоры. О деньгах сразу не говори, сначала заручись гарантией, что заложник жив. Как только ты получишь эту информацию, сразу же задействуй "Зуду". Тебе и бандитам конкретно шарахнет по мозгам аномальной энергией. До меня она не дойдет и я, воспользовавшись моментом, подстрелю одного из них. Как только это произойдет, не мешкая, хватай с его тела ПДА.</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_5">
+		<text>Зачем?</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_6">
+		<text>Я готов поспорить, что у этих гадов есть сообщник, который сидит где-то неподалеку и ждет сигнала от них. Если мы спугнем их раньше времени, то он получит сообщение на свой ПДА о засаде и убьет заложника. Если же он его не получит, то не станет этого делать. Когда ты получишь ПДА Тырсы, которого я застрелю, сразу же проверь его на наличие данных о месте, где спрятан пленник. Получишь координаты – сразу же беги туда и защищай своего товарища. Главное - успей до того, как туда доберется сообщник, не то он его порешит. Все ясно?</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_7">
+		<text>Кажется да.</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_8">
+		<text>Повторю еще раз: разговор - выстрел - ПДА Тырсы - точка на карте - успеть раньше сообщника.</text>
+	</string>
+	<string id="dar_abdul_dialog6_phrase_9">
+		<text>Постараюсь.</text>
+	</string>
+
+	<string id="dar_tirsa_dialog1_phrase_1">
+		<text>Ну, че, фраер? Вот мы с тобой снова встретились.</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_2">
+		<text>Вижу.</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_3">
+		<text>Где бабло?</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_4">
+		<text>Василий жив?</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_5">
+		<text>Ты че, глухой? Я спрашиваю: ты бабло принес, петушара?</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_6">
+		<text>Я хочу убедиться в том, что заложник жив.</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_7">
+		<text>Думаешь, я тебе напиздел? Короче, я спрашиваю в последний раз: бабло принес, сучка ты драная?</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_8">
+		<text>Принес.</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_9">
+		<text>Так давай сюда!</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_10">
+		<text>А как на счет хабара? У меня есть с собой уникальный артефакт, который стоит миллион. Такой вариант пройдет?</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_11">
+		<text>Чего-о-о? Какой нахуй артефакт? Тебе было ясно сказано: неси бабло!</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_12">
+		<text>Ну, ты хоть посмотри. Ты ж специалист, сразу поймешь, что штука ценная. Деньги у меня есть, я просто предлагаю выбор.</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_13">
+		<text>Торговаться вздумал, петух дырявый? Ну покажи, что там у тебя за говно. Если внатуре хороший арт, то возьмем и его и бабки.</text>
+	</string>
+	<string id="dar_tirsa_dialog1_phrase_14">
+		<text>С удовольствием, вот он!</text>
+	</string>
+
+
+	<string id="hunter2_rescue_dialog1_phrase_1">
+		<text>Как ты?</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_2">
+		<text>Хренова-то... Эти уроды излупцевали меня как собаку.</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_3">
+		<text>Идти можешь?</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_4">
+		<text>Могу. Ты-то где пропадал?</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_5">
+		<text>В Темной Долине. Сначала исследовал подземную лабораторию под фабрикой, затем рыскал по окрестностям.</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_6">
+		<text>Нашел редуктор для БТР-а?</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_7">
+		<text>Да, нашел. Сможешь его установить?</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_8">
+		<text>Конечно. Пока тебя не было, я, как мог подрихтовал движок, трансмиссию, смазал и заправил машину.</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_9">
+		<text>Вот спасибо.</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_10">
+		<text>Идем к убежищу?</text>
+	</string>
+	<string id="hunter2_rescue_dialog1_phrase_11">
+		<text>Пошли.</text>
+	</string>
+
+	<string id="hunter2_rescue_dialog2_phrase_1">
+		<text>Все в порядке?</text>
+	</string>
+	<string id="hunter2_rescue_dialog2_phrase_2">
+		<text>Да, сейчас я приступлю к ремонту. Мне понадобится несколько часов. И редуктор, конечно же.</text>
+	</string>
+	<string id="hunter2_rescue_dialog2_phrase_3">
+		<text>Все это у тебя есть.</text>
+	</string>
+
+	<string id="helicrash_survival_provodnik_dialog_phrase_1">
+		<text>Мне кажется, я могу помочь тебе. У меня есть артефакт "Проводник".</text>
+	</string>
+	<string id="helicrash_survival_provodnik_dialog_phrase_2">
+		<text>Значит, теперь ты можешь провести меня через "Железку"?</text>
+	</string>
+	<string id="helicrash_survival_provodnik_dialog_phrase_3">
+		<text>Да. Но боюсь, что действовать тебе придется самому. У меня есть другие дела.</text>
+	</string>
+	<string id="helicrash_survival_provodnik_dialog_phrase_4">
+		<text>Понимаю. Не могу настаивать, но ведь и я тоже не хочу сидеть здесь вечно.</text>
+	</string>
+	<string id="helicrash_survival_provodnik_dialog_phrase_5">
+		<text>Сделаем так: я дам тебе артефакт, а ты уж как-то сам.</text>
+	</string>
+	<string id="helicrash_survival_provodnik_dialog_phrase_6">
+		<text>Хорошо. Дорогу я помню, может и прорвусь... </text>
+	</string>
+	<string id="helicrash_survival_provodnik_dialog_phrase_7">
+		<text>Если ты доберешься до "Железки", то пройдя ее с "Проводником", разрядишь эту аномалию, и путь на север Зоны для обитателей Кордона будет свободен. Удачи тебе.</text>
+	</string>
+
+	<string id="hunter2_shadow_zone_dialog_phrase_1">
+		<text>Андрей рассказал мне об артефакте "Хамеллеон".</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_2">
+		<text>А, помню... Удалось однажды подержать в руках эту штуковину.</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_3">
+		<text>Почему не удержал?</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_4">
+		<text>Дело было так: я отыскал этот артефакт на одной из мусорных куч. Сразу не распознал его свойств, просто бросил машинально в рюкзак, но потом заметил, что он поменял свой цвет. Я покрутил его в руках, и его поверхность медленно окрасилась в светло-зеленый оттенок. На следующий день я вновь осмотрел его, и теперь артефакт в моих руках перекрасился в желтоватый цвет. Я решил назвать его "Хамеллеоном" за характерное сходство. Только спустя длительное время я заметил, что Хамеллеон меняет цвет в зависимости от моей собственной удачливости. То есть, если он с утра был красным или желтым - целый день мне не везло, я не мог найти хабар, удирал от мутантов и прочее. Но стоило ему перекрасится в синий или зеленый...</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_5">
+		<text>Своеобразный индикатор?</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_6">
+		<text>Да, именно так. Прочих свойств я у него не обнаружил.</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_7">
+		<text>Куда он делся?</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_8">
+		<text>Странная история с ним произошла: я запер его в ящик вместе с остальным хабаром и ушел по делам. Вечером вернулся, проверил схрон и вижу: все на месте, за исключением "Хамеллеона". Я сначала подумал, что он растворился или рассыпался, но через день вдруг увидел его спокойно лежащим под кустиком у дороги. Обрадовался, забрал себе и снова спрятал, но вечером все повторилось: арт исчез. С тех пор я его то и дело замечаю, то там, то сям на Свалке. Но не подбираю уже - не идет этот хабар мне в руки. Зона не дает.</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_9">
+		<text>Возможно, мне даст. Где ты его видел в последний раз?</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_10">
+		<text>На кладбище радиоактивной техники.</text>
+	</string>
+	<string id="hunter2_shadow_zone_dialog_phrase_11">
+		<text>Спасибо за инфу.</text>
+	</string>
+
+
+
+
+	<string id="hue_pasport_dialog1_phrase_1">
+		<text>Эй, Хью, мне нужны документы.</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_2">
+		<text>Я тебе не паспортный стол.</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_3">
+		<text>А если серьезно? Сможешь такое дело сделать? Не за так конечно же.</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_4">
+		<text>Нахрена тебе документы здесь, в Зоне? Или ты свалить отсюда собираешься?</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_5">
+		<text>Ну, в общем, да.</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_6">
+		<text>Есть у меня один знакомый человечек... Но дело это недешёвое, стоит 100 000. И деньги вперёд.</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_7">
+		<text>Согласен. Долго ждать?</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_8">
+		<text>Да ну нафиг.</text>
+	</string>
+	<string id="hue_pasport_dialog1_phrase_9">
+		<text>Ровно сутки.</text>
+	</string>
+
+	<string id="hue_pasport_dialog2_phrase_1">
+		<text>Что с заказом?</text>
+	</string>
+	<string id="hue_pasport_dialog2_phrase_2">
+		<text>Вот, документы на имя Щербакова Ивана Петровича, всё как полагается. Рожу вклеишь сам.</text>
+	</string>
+	<string id="hue_pasport_dialog2_phrase_3">
+		<text>Благодарствую.</text>
+	</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string_table>

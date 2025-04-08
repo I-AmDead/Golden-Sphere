@@ -1,0 +1,57 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+;on_death = death
+threshold = threshold@ros_suslik_threshold
+meet = meet
+trade = misc\trade_nothing.ltx
+
+[walker@start]
+path_walk = ros_suslik_walk1
+path_look = ros_suslik_look1
+on_timer      = 1 | walker@1 %=make_invulnerable =disable_trading%
+
+
+[walker@1]
+path_walk = ros_suslik_walk1
+path_look = ros_suslik_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+ros_house_diary1_info} %=delme2%
+on_info2 = {+ros_suslik_info} walker@2 %=run_postprocess(agr_u_fade)%
+
+[walker@2]
+path_walk = ros_suslik_walk1
+path_look = ros_suslik_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer      = 3000 | %=play_snd(script_replics\megafon\music\megafon_music_10) =delme2%
+
+
+
+
+
+[meet]
+meet_state = 6| hello
+meet_state = 5| hello
+victim = 6| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+
+[threshold@ros_suslik_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_sound = 1
+
+[combat_ignore]
+combat_ignore = always
+

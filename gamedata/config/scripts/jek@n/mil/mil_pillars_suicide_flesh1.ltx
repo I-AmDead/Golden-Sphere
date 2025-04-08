@@ -1,0 +1,20 @@
+[smart_terrains]
+none = true
+
+
+[logic]
+active = mob_camp@1
+
+[mob_camp@1]
+path_home = mil_electra_suicide_flash_point1
+path_look = mil_electra_suicide_flash_point1
+home_min_radius = 1
+home_max_radius = 2
+on_timer = 1|mob_camp@2 %=make_invulnerable%
+
+[mob_camp@2]
+path_home = mil_electra_suicide_flash_point1
+path_look = mil_electra_suicide_flash_point1
+home_min_radius = 1
+home_max_radius = 2
+on_npc_in_zone = 8817|mil_to_rad_pillars_zone2|nil %=play_shock_on_me =kill%

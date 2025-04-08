@@ -1,0 +1,47 @@
+[logic]
+active = {=actor_on_level(l07_military)} ph_car@idle_mil, {=actor_on_level(l02_garbage)} ph_car@idle_gar, {=actor_on_level(l03_agroprom)} ph_car@idle_agr, {=actor_on_level(l04_darkvalley)} ph_car@idle_dar
+
+[ph_car@idle_gar]
+path_walk       = client3_car_garbage_walk
+path_fire       = client3_car_garbage_walk
+usable = {+ololo}
+show_tips = false
+invulnerable = true
+headlights = off
+auto_fire = true
+target          =  nil
+on_death_info   = client3_car_dead
+
+[ph_car@idle_agr]
+path_walk       = client3_car_agr_walk
+path_fire       = client3_car_agr_walk
+usable = {+ololo}
+show_tips = false
+invulnerable = true
+headlights = off
+auto_fire = true
+target          =  nil
+on_death_info   = client3_car_dead
+
+[ph_car@idle_dar]
+path_walk       = client3_car_dar_walk
+path_fire       = client3_car_dar_walk
+usable = {+ololo}
+show_tips = false
+invulnerable = true
+headlights = off
+auto_fire = true
+target          =  nil
+on_death_info   = client3_car_dead
+
+[ph_car@idle_mil]
+path_walk       = client3_car_mil_walk
+path_fire       = client3_car_mil_walk
+usable = {+ololo}
+show_tips = false
+invulnerable = true
+headlights = off
+auto_fire = true
+target          =  nil
+on_death_info   = client3_car_dead
+

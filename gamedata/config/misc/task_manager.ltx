@@ -1,0 +1,187 @@
+[list]
+kill_stalker
+eliminate_lager
+defend_lager
+find_item
+
+tm_find_item_1
+tm_find_item_2
+tm_find_item_3
+
+[kill_stalker]
+type = kill_stalker
+community = actor
+init_condition = {=actor_on_level(l02_garbage)}
+text = tm_kill_stalker_1_text
+description = tm_kill_stalker_1_descr
+parent = trader
+target = gar_bandit_leader
+reward_money = 11500
+reward_reputation = +20
+reward_relation = dolg, +15
+;reward_item = ammo_5.45x39_ap, ammo_5.45x39_ap, ammo_5.45x39_ap, ammo_5.45x39_ap, ammo_5.45x39_ap
+reward_rank = 6
+time = 259200
+idle_time = 2592000
+prior = 2
+
+[eliminate_lager]
+type = eliminate_lager
+community = actor
+text = barmen_eliminate_camp_1_text
+description = barmen_eliminate_camp_1_descr
+parent = barman
+target = gar_smart_bandit
+reward_money = 15000
+reward_reputation = +25
+reward_relation = dolg, +10
+reward_rank = 4
+;reward_item = grenade_f1, grenade_f1, grenade_f1
+time = 259200
+idle_time = 2592000
+prior = 1
+
+[defend_lager]
+type = defend_lager
+community = actor
+text = barmen_defend_camp_1_text
+description = barmen_defend_camp_1_descr
+;init_condition = {=actor_on_level(l02_garbage) =gulag_state(gar_smart_bandit_large_lager:1)}
+parent = barman
+target = gar_smart_garage
+reward_money = 16000
+reward_reputation = +45
+reward_relation = dolg, +30
+reward_rank = 10
+;reward_item = af_gravi
+time = 259200
+idle_time = 2592000
+prior = 1
+
+[find_item]
+type = find_item
+community = actor
+text = ecolog_find_item_1_text
+description = ecolog_find_item_2_descr
+parent = ecolog
+target = outfit_stalker_m1
+reward_money = 7500
+reward_reputation = +30
+reward_relation = ecolog, +30
+reward_rank = 8
+reward_item = protection_outfit
+time = 259200
+idle_time = 2592000
+prior = 1
+
+;----квесты Хью--------------------------------------------------------
+[tm_find_item_1]
+type = find_item
+community = actor
+text = ecolog_find_item_1_text
+description = notebook_client1task1
+parent = stalker_skidan
+target = af_black_splash
+reward_money = 50000
+reward_reputation = +1
+reward_relation = quest_stalker, +10
+reward_rank = 1
+reward_item = protection_outfit
+time = 172800
+idle_time = 1728000
+prior = 2
+
+[tm_find_item_2]
+type = find_item
+community = actor
+text = ecolog_find_item_1_text
+description = notebook_client1task2
+parent = stalker_skidan
+target = af_fulminating_napkin
+reward_money = 50000
+reward_reputation = +1
+reward_relation = quest_stalker, +10
+reward_rank = 1
+reward_item = protection_outfit
+time = 172800
+idle_time = 1728000
+prior = 2
+
+[tm_find_item_3]
+type = find_item
+community = actor
+text = ecolog_find_item_1_text
+description = notebook_client1task3
+parent = stalker_skidan
+target = af_cancer_eye
+reward_money = 45000
+reward_reputation = +1
+reward_relation = quest_stalker, +10
+reward_rank = 1
+reward_item = protection_outfit
+time = 172800
+idle_time = 1728000
+prior = 2
+
+;----квесты Нунана--------------------------------------------------------
+[tm_find_item_6]
+type = find_item
+community = actor
+text = notebook_client2task1
+description = notebook_client2task1
+parent = stalker_skidan
+target = af_coal
+reward_money = 0
+reward_reputation = +1
+reward_relation = quest_stalker, +10
+reward_rank = 1
+reward_item = protection_outfit
+time = 1728000
+idle_time = 1728000
+prior = 2
+
+[tm_find_item_7]
+type = find_item
+community = actor
+text = notebook_client2task2
+description = notebook_client2task2
+parent = stalker_skidan
+target = af_bearing
+reward_money = 0
+reward_reputation = +1
+reward_relation = quest_stalker, +10
+reward_rank = 1
+reward_item = protection_outfit
+time = 1728000
+idle_time = 1728000
+prior = 2
+
+[tm_find_item_8]
+type = find_item
+community = actor
+text = notebook_client2task3
+description = notebook_client2task3
+parent = stalker_skidan
+target = af_frog
+reward_money = 0
+reward_reputation = +1
+reward_relation = quest_stalker, +10
+reward_rank = 1
+reward_item = protection_outfit
+time = 1728000
+idle_time = 1728000
+prior = 2
+
+;----Защита убежищ:--------------------------------------------------------
+[defend_lager_1]
+type = defend_lager
+community = actor
+text = barmen_defend_camp_1_text
+description = barmen_defend_camp_1_descr
+parent = barman
+target = garb_stalker_vagon_zone_big
+reward_money = 0
+reward_reputation = +10
+reward_relation = quest_stalker, +30
+reward_rank = 5
+prior = 1

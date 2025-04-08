@@ -1,0 +1,101 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_vsu_end} walker@5, {+mil_vsu_fail2} walker@4, walker@1
+combat_ignore = combat_ignore
+threshold = threshold@mil_vsu_sold5_threshold
+on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = mil_vsu_sold5_walk1
+path_look = mil_vsu_sold5_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@2 %=make_invulnerable%
+
+[walker@2]
+path_walk = mil_vsu_sold5_walk1
+path_look = mil_vsu_sold5_look1
+danger = danger_condition
+combat_ignore_cond = {-separ_war} always
+on_info = {+mil_vsu_fail2} remark@beat_actor1 %=disable_input%
+on_info2 = {+separ_war} %=set_enemies(8791:8793:8794:8795:8796:8797:8798) =unmake_invulnerable =set_enemy%
+on_info3 = {+mil_separ_commander_dead +mil_separ1_dead +mil_separ2_dead +mil_separ3_dead +mil_separ4_dead +mil_separ5_dead} walker@5
+
+
+; На тебе, Жекан, по рылу:
+[remark@beat_actor1]
+snd = mil_vsu_vmordu
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@beat_actor2
+
+[remark@beat_actor2]
+anim = vmordu
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = anim_end | walker@3 %=play_snd(affects\hit_fist) =run_postprocess(deadcity_wake_old:677:false)%
+
+[walker@3]
+path_walk = mil_vsu_sold5_walk1
+path_look = mil_vsu_sold5_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000|walker@4 %=set_actor_to_vsu_saray =enable_input%
+
+[walker@4]
+path_walk = mil_vsu_sold5_walk1
+path_look = mil_vsu_sold5_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_separ_end} %=delme2%
+on_info2 = {+mil_vsu_end} %=delme2%
+on_actor_dist_le = 20| walker@6 %=killactor%
+
+
+
+
+[walker@5]
+path_walk = mil_vsu_sold5_walk1
+path_look = mil_vsu_sold5_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+
+[walker@6]
+path_walk = mil_vsu_sold5_walk1
+path_look = mil_vsu_sold5_look1
+danger = danger_condition
+meet = no_meet
+
+
+
+[threshold@mil_vsu_sold5_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_vsu_sold5_dead%
+
+[hit]
+;on_info = {=hit_by_actor} %+777%
+
+

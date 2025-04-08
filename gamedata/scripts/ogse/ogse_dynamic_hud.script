@@ -1,0 +1,43 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+-----------------------------------------------------------------------
+--- ogse_dynamic_hud.script
+--- Модуль включения Visor Reflection при надевании костюма
+--- Автор: I am dead
+-----------------------------------------------------------------------
+
+function attach(sm)
+  sm:subscribe({ signal = "on_first_update", fun = this.update })
+  sm:subscribe({ signal = "on_drop",        fun = this.update })
+  sm:subscribe({ signal = "on_take",       fun = this.update})
+  sm:subscribe({ signal = "on_item_to_ruck",       fun = this.update})
+  sm:subscribe({ signal = "on_item_to_slot",       fun = this.update})
+  sm:subscribe({ signal = "on_actor_before_use",       fun = this.update})
+end
+
+function update()
+	local outfit = db.actor:get_current_outfit()
+	local outfitname
+	if outfit then
+		outfitname = outfit:section()
+
+		if string.find(outfitname, "neytral_exo_antigas_outfit") 
+		or string.find(outfitname, "cargo_exo_outfit")
+		or string.find(outfitname, "scientific_outfit")
+		or string.find(outfitname, "specops_outfit")
+		or string.find(outfitname, "usas_outfit")
+		or string.find(outfitname, "fireproof_outfit")
+
+		or string.find(outfitname, "outfit_stalker_red")
+		or string.find(outfitname, "outfit_stalker_blue")
+		or string.find(outfitname, "outfit_stalker_green")
+		or string.find(outfitname, "ecolog_outfit")
+		or string.find(outfitname, "licvidator_outfit")
+then
+			cmd("r2_visor_refl", "on")
+			cmd("r2_visor_refl_control", "on")
+		end			
+	else
+		cmd("r2_visor_refl", "off")
+		cmd("r2_visor_refl_control", "off")
+	end
+end

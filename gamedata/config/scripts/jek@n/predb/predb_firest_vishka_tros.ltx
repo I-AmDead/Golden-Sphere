@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = predb_firest_vishka_tros_use
+on_use = ph_idle@2 %+predb_firest_vishka_tros_use =play_snd(ambient\house_wind1)%
+
+[ph_idle@2]
+on_info = {-predb_firest_vishka_tros_use} ph_idle@1
+

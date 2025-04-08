@@ -1,0 +1,24 @@
+[logic]
+active = ph_car@guard1
+
+[ph_car@guard1]
+;usable = {-blokpost_alarm2}
+path_walk       = post_btr_walk
+path_fire       = post_btr_look
+invulnerable = true
+headlights = on
+auto_fire = true
+target          =  8116
+on_death_info   = post_btr_dead
+on_info       = {+blokpost_alarm2} | ph_car@guard2
+
+[ph_car@guard2]
+path_walk       = post_btr_walk
+path_fire       = post_btr_look
+invulnerable = true
+headlights = on
+auto_fire = true
+target          =  actor
+on_death_info   = post_btr_dead
+
+

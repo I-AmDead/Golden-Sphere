@@ -1,0 +1,13 @@
+[logic]
+active = nil
+
+[sr_idle]
+on_info = {-underbridge_zone_uncharged} sr_particle@1
+
+[sr_particle@1]
+name = anomaly2\group_items\gravi_vacuum_idle_leaves
+path = underbridge_anomaly_point2_2
+mode = 2
+looped = true
+on_info = {+underbridge_zone_uncharged} sr_idle
+

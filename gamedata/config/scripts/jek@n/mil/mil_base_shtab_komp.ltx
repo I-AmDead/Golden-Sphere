@@ -1,0 +1,14 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+mil_deadsold1_info} ph_idle@2 %=send_tip(mil_base_shtab_komp_tip:default) =add_self_spot(green_location:mil_base_shtab_komp_mark_text)%
+
+[ph_idle@2]
+tips      = mil_base_shtab_komp_use
+on_use = {+mil_deadsold1_info} nil %+mil_komp =play_snd(scripts\remkit\ui_repairweapon_01) =give_items_to_actor(mil_electron_component) =send_tip(mil_base_shtab_komp_tip2:default) =spawn_mil_base_zombies%
+
+
+
+
+ 

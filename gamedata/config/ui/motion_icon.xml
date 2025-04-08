@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<window x="0" y="0" w="640" h="480" r="227" g="121" b="222" texture="1">
+
+	<background  x="0" y="0" width="0" height="0" stretch="1">
+	</background>
+	
+	<state_normal x="0" y="0" width="0" height="0" stretch="1">
+	</state_normal>
+
+	<state_crouch x="0" y="0" width="0" height="0" stretch="1">
+	</state_crouch>
+
+	<state_creep x="0" y="0" width="0" height="0" stretch="1">
+	</state_creep>
+
+	<state_climb x="0" y="0" width="0" height="0" stretch="1">
+	</state_climb>
+
+	<state_run x="0" y="0" width="0" height="0" stretch="1">
+	</state_run>
+
+	<state_sprint x="0" y="0" width="0" height="0" stretch="1">
+	</state_sprint>
+
+	<power_progress  x="0" y="0" width="0" height="0" horz="1" min="0" max="100" pos="0">
+		<progress>
+		</progress>
+	</power_progress>
+	
+	<luminosity_progress x="0" y="0" width="0" height="0" horz="0" min="0" max="100" pos="0">
+		<progress>
+		</progress>
+	</luminosity_progress>
+	
+	<noise_progress x="0" y="0" width="0" height="0" horz="0" min="0" max="400" pos="100">
+		<progress>
+		</progress>
+	</noise_progress>
+</window>

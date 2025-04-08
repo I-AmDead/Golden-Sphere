@@ -1,0 +1,15 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips     = predb_firest_stairs_box_use
+on_use = {=actor_has_item(old_moneta)} nil %=remove_item(old_moneta) +predb_firest_moneta%
+
+
+
+
+
+

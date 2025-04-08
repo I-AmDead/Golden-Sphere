@@ -1,0 +1,70 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+hunter2_retun_to_hideway} walker@5, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = garb_abdul_walk1
+path_look = garb_abdul_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = garb_abdul_walk1
+path_look = garb_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+on_signal       = arrived | walker@2
+
+[walker@2]
+path_walk = garb_abdul_walk1
+path_look = garb_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info     = {+garb_reketirs_task} walker@3 
+
+[walker@3]
+path_walk = garb_abdul_walk2
+path_look = garb_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@4 %=send_tip(garb_abdul_reketirs_tip1:default) +garb_abdul_on_reketirs_place%
+
+[walker@4]
+path_walk = garb_abdul_walk2
+path_look = garb_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+hunter2_retun_to_hideway} walker@5
+
+[walker@5]
+path_walk = garb_abdul_walk1
+path_look = garb_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+garb_btr_task_done} %=delme2%
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+garb_abdul_dead%
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<pumps_error1>	
+	<ekran_ramka x="290" y="85" width="412" height="512" stretch="1">
+		<texture >ui\old_monitor_device</texture>
+	</ekran_ramka>
+	<ekran_fon x="310" y="110" width="350" height="360" stretch="1">
+		<texture >ui\old_monitor_screen</texture>
+	</ekran_fon>
+	<ekran_name x="450" y="160" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="250" g="105" b="18" a="158" font="graffiti22">Ошибка!</text>
+	</ekran_name>
+
+	<ekran_text1 x="340" y="250" width="300" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Данные отсутствуют. Вставьте дискету №8</text>
+	</ekran_text1>
+
+
+
+	<btn_1 x="450" y="420" width="80" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text x="0" y="0" r="235" g="235" b="118" font="letterica16">^^^</text>
+	</btn_1>
+
+
+	<btn_quit x="280" y="480" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text x="0" y="0" r="0" g="0" b="0" font="letterica16">Выкл</text>
+	</btn_quit>
+
+</pumps_error1>
+

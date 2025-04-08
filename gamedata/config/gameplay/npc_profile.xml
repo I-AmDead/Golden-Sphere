@@ -1,0 +1,1548 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<xml>
+
+
+
+
+
+
+
+<character id="mil_base_zombie">
+<class>mil_base_zombie</class>
+<specific_character>mil_base_zombie</specific_character>
+</character>
+
+<character id="mil_aviator1">
+<class>mil_aviator1</class>
+<specific_character>mil_aviator1</specific_character>
+</character>
+<character id="mil_aviator2">
+<class>mil_aviator2</class>
+<specific_character>mil_aviator2</specific_character>
+</character>
+
+<character id="random_zombied">
+<class>random_zombied</class>
+<specific_character>random_zombied</specific_character>
+</character>
+
+<character id="predb_komandr_agent">
+<class>predb_komandr_agent</class>
+<specific_character>predb_komandr_agent</specific_character>
+</character>
+
+<character id="predb_village_sold">
+<class>predb_village_sold</class>
+<specific_character>predb_village_sold</specific_character>
+</character>
+
+<character id="predb_dead_tourist1">
+<class>predb_dead_tourist1</class>
+<specific_character>predb_dead_tourist1</specific_character>
+</character>
+<character id="predb_dead_tourist2">
+<class>predb_dead_tourist2</class>
+<specific_character>predb_dead_tourist2</specific_character>
+</character>
+<character id="predb_dead_tourist3">
+<class>predb_dead_tourist3</class>
+<specific_character>predb_dead_tourist3</specific_character>
+</character>
+
+<character id="predb_catwoman">
+<class>predb_catwoman</class>
+<specific_character>predb_catwoman</specific_character>
+</character>
+
+<character id="predb_king">
+<class>predb_king</class>
+<specific_character>predb_king</specific_character>
+</character>
+
+<character id="predb_marouder1">
+<class>predb_marouder1</class>
+<specific_character>predb_marouder1</specific_character>
+</character>
+<character id="predb_marouder2">
+<class>predb_marouder2</class>
+<specific_character>predb_marouder2</specific_character>
+</character>
+<character id="predb_marouder3">
+<class>predb_marouder3</class>
+<specific_character>predb_marouder3</specific_character>
+</character>
+
+<character id="predb_marouder1_1">
+<class>predb_marouder1_1</class>
+<specific_character>predb_marouder1_1</specific_character>
+</character>
+<character id="predb_marouder2_1">
+<class>predb_marouder2_1</class>
+<specific_character>predb_marouder2_1</specific_character>
+</character>
+<character id="predb_marouder3_1">
+<class>predb_marouder3_1</class>
+<specific_character>predb_marouder3_1</specific_character>
+</character>
+
+<character id="predb_dead_friend">
+<class>predb_dead_friend</class>
+<specific_character>predb_dead_friend</specific_character>
+</character>
+
+<character id="predb_rogue_npc">
+<class>predb_rogue_npc</class>
+<specific_character>predb_rogue_npc</specific_character>
+</character>
+
+<character id="predb_ponzil">
+<class>predb_ponzil</class>
+<specific_character>predb_ponzil</specific_character>
+</character>
+
+<character id="predb_rogue">
+<class>predb_rogue</class>
+<specific_character>predb_rogue</specific_character>
+</character>
+
+
+<character id="general_scientist">
+<class>general_scientist</class>
+<specific_character>general_scientist</specific_character>
+</character>
+
+<character id="aes_last_agent">
+<class>aes_last_agent</class>
+<specific_character>aes_last_agent</specific_character>
+</character>
+
+<character id="pri_actor_mind">
+<class>pri_actor_mind</class>
+<specific_character>pri_actor_mind</specific_character>
+</character>
+
+<character id="pri_stadion_agent">
+<class>pri_stadion_agent</class>
+<specific_character>pri_stadion_agent</specific_character>
+</character>
+
+<character id="pri_abdul_sniper">
+<class>pri_abdul_sniper</class>
+<specific_character>pri_abdul_sniper</specific_character>
+</character>
+
+<character id="pri_abdul">
+<class>pri_abdul</class>
+<specific_character>pri_abdul</specific_character>
+</character>
+<character id="pri_agent_lider">
+<class>pri_agent_lider</class>
+<specific_character>pri_agent_lider</specific_character>
+</character>
+<character id="pri_agent1">
+<class>pri_agent1</class>
+<specific_character>pri_agent1</specific_character>
+</character>
+<character id="pri_agent2">
+<class>pri_agent2</class>
+<specific_character>pri_agent2</specific_character>
+</character>
+<character id="pri_agent3">
+<class>pri_agent3</class>
+<specific_character>pri_agent3</specific_character>
+</character>
+<character id="pri_agent4">
+<class>pri_agent4</class>
+<specific_character>pri_agent4</specific_character>
+</character>
+<character id="pri_agent5">
+<class>pri_agent5</class>
+<specific_character>pri_agent5</specific_character>
+</character>
+<character id="pri_agent6">
+<class>pri_agent6</class>
+<specific_character>pri_agent6</specific_character>
+</character>
+<character id="pri_agent7">
+<class>pri_agent7</class>
+<specific_character>pri_agent7</specific_character>
+</character>
+<character id="pri_agent8">
+<class>pri_agent8</class>
+<specific_character>pri_agent8</specific_character>
+</character>
+<character id="pri_agent9">
+<class>pri_agent9</class>
+<specific_character>pri_agent9</specific_character>
+</character>
+<character id="pri_agent10">
+<class>pri_agent10</class>
+<specific_character>pri_agent10</specific_character>
+</character>
+
+<character id="x10_agent4">
+<class>x10_agent4</class>
+<specific_character>x10_agent4</specific_character>
+</character>
+
+<character id="rad_agent_trader">
+<class>rad_agent_trader</class>
+<specific_character>rad_agent_trader</specific_character>
+</character>
+
+<character id="rad_fenix">
+<class>rad_fenix</class>
+<specific_character>rad_fenix</specific_character>
+</character>
+
+<character id="rad_abdul">
+<class>rad_abdul</class>
+<specific_character>rad_abdul</specific_character>
+</character>
+
+<character id="rad_secret_npc">
+<class>rad_secret_npc</class>
+<specific_character>rad_secret_npc</specific_character>
+</character>
+
+<character id="mil_deadsold1">
+<class>mil_deadsold1</class>
+<specific_character>mil_deadsold1</specific_character>
+</character>
+<character id="mil_deadsold2">
+<class>mil_deadsold2</class>
+<specific_character>mil_deadsold2</specific_character>
+</character>
+<character id="mil_deadsold3">
+<class>mil_deadsold3</class>
+<specific_character>mil_deadsold3</specific_character>
+</character>
+
+<character id="yan_lost_camp_npc1">
+<class>yan_lost_camp_npc1</class>
+<specific_character>yan_lost_camp_npc1</specific_character>
+</character>
+<character id="yan_lost_camp_npc2">
+<class>yan_lost_camp_npc2</class>
+<specific_character>yan_lost_camp_npc2</specific_character>
+</character>
+
+<character id="x16brain">
+<class>x16brain</class>
+<specific_character>x16brain</specific_character>
+</character>
+
+
+<character id="mil_vsu_commander">
+<class>mil_vsu_commander</class>
+<specific_character>mil_vsu_commander</specific_character>
+</character>
+<character id="mil_vsu_sold1">
+<class>mil_vsu_sold1</class>
+<specific_character>mil_vsu_sold1</specific_character>
+</character>
+<character id="mil_vsu_sold2">
+<class>mil_vsu_sold2</class>
+<specific_character>mil_vsu_sold2</specific_character>
+</character>
+<character id="mil_vsu_sold3">
+<class>mil_vsu_sold3</class>
+<specific_character>mil_vsu_sold3</specific_character>
+</character>
+<character id="mil_vsu_sold4">
+<class>mil_vsu_sold4</class>
+<specific_character>mil_vsu_sold4</specific_character>
+</character>
+<character id="mil_vsu_sold5">
+<class>mil_vsu_sold5</class>
+<specific_character>mil_vsu_sold5</specific_character>
+</character>
+<character id="mil_vsu_sold6">
+<class>mil_vsu_sold6</class>
+<specific_character>mil_vsu_sold6</specific_character>
+</character>
+<character id="mil_separ_commander">
+<class>mil_separ_commander</class>
+<specific_character>mil_separ_commander</specific_character>
+</character>
+<character id="mil_separ1">
+<class>mil_separ1</class>
+<specific_character>mil_separ1</specific_character>
+</character>
+<character id="mil_separ2">
+<class>mil_separ2</class>
+<specific_character>mil_separ2</specific_character>
+</character>
+<character id="mil_separ3">
+<class>mil_separ3</class>
+<specific_character>mil_separ3</specific_character>
+</character>
+<character id="mil_separ4">
+<class>mil_separ4</class>
+<specific_character>mil_separ4</specific_character>
+</character>
+<character id="mil_separ5">
+<class>mil_separ5</class>
+<specific_character>mil_separ5</specific_character>
+</character>
+<character id="mil_separ6">
+<class>mil_separ6</class>
+<specific_character>mil_separ6</specific_character>
+</character>
+<character id="mil_dedok">
+<class>mil_dedok</class>
+<specific_character>mil_dedok</specific_character>
+</character>
+
+
+<character id="yan_saharov">
+<class>yan_saharov</class>
+<specific_character>yan_saharov</specific_character>
+</character>
+<character id="yan_vasiliev">
+<class>yan_vasiliev</class>
+<specific_character>yan_vasiliev</specific_character>
+</character>
+<character id="yan_semenov">
+<class>yan_semenov</class>
+<specific_character>yan_semenov</specific_character>
+</character>
+<character id="yan_sold_comander">
+<class>yan_sold_comander</class>
+<specific_character>yan_sold_comander</specific_character>
+</character>
+<character id="yan_sold1">
+<class>yan_sold1</class>
+<specific_character>yan_sold1</specific_character>
+</character>
+<character id="yan_sold2">
+<class>yan_sold2</class>
+<specific_character>yan_sold2</specific_character>
+</character>
+<character id="yan_sold3">
+<class>yan_sold3</class>
+<specific_character>yan_sold3</specific_character>
+</character>
+<character id="yan_sold4">
+<class>yan_sold4</class>
+<specific_character>yan_sold4</specific_character>
+</character>
+<character id="yan_sold5">
+<class>yan_sold5</class>
+<specific_character>yan_sold5</specific_character>
+</character>
+<character id="yan_sold6">
+<class>yan_sold6</class>
+<specific_character>yan_sold6</specific_character>
+</character>
+<character id="yan_sold7">
+<class>yan_sold7</class>
+<specific_character>yan_sold7</specific_character>
+</character>
+<character id="yan_sold8">
+<class>yan_sold8</class>
+<specific_character>yan_sold8</specific_character>
+</character>
+<character id="yan_sold9">
+<class>yan_sold9</class>
+<specific_character>yan_sold9</specific_character>
+</character>
+
+<character id="faint_npc1">
+<class>faint_npc1</class>
+<specific_character>faint_npc1</specific_character>
+</character>
+<character id="faint_npc2">
+<class>faint_npc2</class>
+<specific_character>faint_npc2</specific_character>
+</character>
+
+<character id="predb_hermit">
+<class>predb_hermit</class>
+<specific_character>predb_hermit</specific_character>
+</character>
+<character id="predb_cave_body1">
+<class>predb_cave_body1</class>
+<specific_character>predb_cave_body1</specific_character>
+</character>
+<character id="predb_cave_body2">
+<class>predb_cave_body2</class>
+<specific_character>predb_cave_body2</specific_character>
+</character>
+<character id="predb_cave_body3">
+<class>predb_cave_body3</class>
+<specific_character>predb_cave_body3</specific_character>
+</character>
+<character id="predb_cave_body4">
+<class>predb_cave_body4</class>
+<specific_character>predb_cave_body4</specific_character>
+</character>
+<character id="predb_cave_body5">
+<class>predb_cave_body5</class>
+<specific_character>predb_cave_body5</specific_character>
+</character>
+
+<character id="predb_dead_body1">
+<class>predb_dead_body1</class>
+<specific_character>predb_dead_body1</specific_character>
+</character>
+<character id="predb_dead_body2">
+<class>predb_dead_body2</class>
+<specific_character>predb_dead_body2</specific_character>
+</character>
+<character id="predb_dead_body3">
+<class>predb_dead_body3</class>
+<specific_character>predb_dead_body3</specific_character>
+</character>
+<character id="predb_dead_body4">
+<class>predb_dead_body4</class>
+<specific_character>predb_dead_body4</specific_character>
+</character>
+<character id="predb_dead_body5">
+<class>predb_dead_body5</class>
+<specific_character>predb_dead_body5</specific_character>
+</character>
+<character id="predb_dead_body6">
+<class>predb_dead_body6</class>
+<specific_character>predb_dead_body6</specific_character>
+</character>
+<character id="predb_dead_body7">
+<class>predb_dead_body7</class>
+<specific_character>predb_dead_body7</specific_character>
+</character>
+<character id="predb_dead_body8">
+<class>predb_dead_body8</class>
+<specific_character>predb_dead_body8</specific_character>
+</character>
+<character id="predb_dead_body9">
+<class>predb_dead_body9</class>
+<specific_character>predb_dead_body9</specific_character>
+</character>
+<character id="predb_dead_body10">
+<class>predb_dead_body10</class>
+<specific_character>predb_dead_body10</specific_character>
+</character>
+<character id="predb_dead_body11">
+<class>predb_dead_body11</class>
+<specific_character>predb_dead_body11</specific_character>
+</character>
+<character id="predb_dead_body12">
+<class>predb_dead_body12</class>
+<specific_character>predb_dead_body12</specific_character>
+</character>
+<character id="predb_dead_body13">
+<class>predb_dead_body13</class>
+<specific_character>predb_dead_body13</specific_character>
+</character>
+<character id="predb_dead_body14">
+<class>predb_dead_body14</class>
+<specific_character>predb_dead_body14</specific_character>
+</character>
+<character id="predb_dead_body15">
+<class>predb_dead_body15</class>
+<specific_character>predb_dead_body15</specific_character>
+</character>
+
+<character id="predb_kpp_soldier1">
+<class>predb_kpp_soldier1</class>
+<specific_character>predb_kpp_soldier1</specific_character>
+</character>
+<character id="predb_kpp_soldier2">
+<class>predb_kpp_soldier2</class>
+<specific_character>predb_kpp_soldier2</specific_character>
+</character>
+<character id="predb_kpp_soldier3">
+<class>predb_kpp_soldier3</class>
+<specific_character>predb_kpp_soldier3</specific_character>
+</character>
+<character id="predb_kpp_soldier4">
+<class>predb_kpp_soldier4</class>
+<specific_character>predb_kpp_soldier4</specific_character>
+</character>
+<character id="predb_kpp_soldier5">
+<class>predb_kpp_soldier5</class>
+<specific_character>predb_kpp_soldier5</specific_character>
+</character>
+<character id="predb_kpp_soldier6">
+<class>predb_kpp_soldier6</class>
+<specific_character>predb_kpp_soldier6</specific_character>
+</character>
+<character id="predb_kpp_soldier7">
+<class>predb_kpp_soldier7</class>
+<specific_character>predb_kpp_soldier7</specific_character>
+</character>
+
+<character id="predb_courier1">
+<class>predb_courier1</class>
+<specific_character>predb_courier1</specific_character>
+</character>
+<character id="predb_courier2">
+<class>predb_courier2</class>
+<specific_character>predb_courier2</specific_character>
+</character>
+<character id="predb_courier3">
+<class>predb_courier3</class>
+<specific_character>predb_courier3</specific_character>
+</character>
+
+<character id="predb_kontrabander1">
+<class>predb_kontrabander1</class>
+<specific_character>predb_kontrabander1</specific_character>
+</character>
+<character id="predb_kontrabander2">
+<class>predb_kontrabander2</class>
+<specific_character>predb_kontrabander2</specific_character>
+</character>
+<character id="predb_kontrabander3">
+<class>predb_kontrabander3</class>
+<specific_character>predb_kontrabander3</specific_character>
+</character>
+<character id="predb_kontrabander4">
+<class>predb_kontrabander4</class>
+<specific_character>predb_kontrabander4</specific_character>
+</character>
+<character id="predb_kontrabander5">
+<class>predb_kontrabander5</class>
+<specific_character>predb_kontrabander5</specific_character>
+</character>
+<character id="predb_kontrabander6">
+<class>predb_kontrabander6</class>
+<specific_character>predb_kontrabander6</specific_character>
+</character>
+<character id="predb_kontrabander7">
+<class>predb_kontrabander7</class>
+<specific_character>predb_kontrabander7</specific_character>
+</character>
+<character id="predb_kontrabander8">
+<class>predb_kontrabander8</class>
+<specific_character>predb_kontrabander8</specific_character>
+</character>
+
+<character id="predb_trader">
+<class>predb_trader</class>
+<specific_character>predb_trader</specific_character>
+</character>
+
+<character id="ros_rescuer1">
+<class>ros_rescuer1</class>
+<specific_character>ros_rescuer1</specific_character>
+</character>
+<character id="ros_rescuer2">
+<class>ros_rescuer2</class>
+<specific_character>ros_rescuer2</specific_character>
+</character>
+<character id="ros_rescuer3">
+<class>ros_rescuer3</class>
+<specific_character>ros_rescuer3</specific_character>
+</character>
+
+<character id="ros_suslik">
+<class>ros_suslik</class>
+<specific_character>ros_suslik</specific_character>
+</character>
+
+<character id="ros_dym">
+<class>ros_dym</class>
+<specific_character>ros_dym</specific_character>
+</character>
+
+<character id="ros_dead_hunter">
+<class>ros_dead_hunter</class>
+<specific_character>ros_dead_hunter</specific_character>
+</character>
+
+<character id="mil_abdul">
+<class>mil_abdul</class>
+<specific_character>mil_abdul</specific_character>
+</character>
+
+<character id="bar_lost_man">
+<class>bar_lost_man</class>
+<specific_character>bar_lost_man</specific_character>
+</character>
+
+<character id="bar_abdul">
+<class>bar_abdul</class>
+<specific_character>bar_abdul</specific_character>
+</character>
+
+<character id="garb_colonna_body">
+<class>garb_colonna_body</class>
+<specific_character>garb_colonna_body</specific_character>
+</character>
+
+<character id="agr_dead_scientist1">
+<class>agr_dead_scientist1</class>
+<specific_character>agr_dead_scientist1</specific_character>
+</character>
+
+<character id="bar_scientist">
+<class>bar_scientist</class>
+<specific_character>bar_scientist</specific_character>
+</character>
+
+<character id="actor_clone1">
+<class>actor_clone1</class>
+<specific_character>actor_clone1</specific_character>
+</character>
+
+<character id="bar_tehnik">
+<class>bar_tehnik</class>
+<specific_character>bar_tehnik</specific_character>
+</character>
+
+<character id="esc_helicrash_survival2">
+<class>esc_helicrash_survival2</class>
+<specific_character>esc_helicrash_survival2</specific_character>
+</character>
+
+<character id="bar_dead_soldier1">
+<class>bar_dead_soldier1</class>
+<specific_character>bar_dead_soldier1</specific_character>
+</character>
+<character id="bar_dead_soldier2">
+<class>bar_dead_soldier2</class>
+<specific_character>bar_dead_soldier2</specific_character>
+</character>
+<character id="bar_dead_soldier3">
+<class>bar_dead_soldier3</class>
+<specific_character>bar_dead_soldier3</specific_character>
+</character>
+<character id="bar_dead_soldier4">
+<class>bar_dead_soldier4</class>
+<specific_character>bar_dead_soldier4</specific_character>
+</character>
+
+<character id="hunter_2_2">
+<class>hunter_2_2</class>
+<specific_character>hunter_2_2</specific_character>
+</character>
+<character id="hunter_1_2">
+<class>hunter_1_2</class>
+<specific_character>hunter_1_2</specific_character>
+</character>
+<character id="garb_ovrah2">
+<class>garb_ovrah2</class>
+<specific_character>garb_ovrah2</specific_character>
+</character>
+
+<character id="reketirs_assistant">
+<class>reketirs_assistant</class>
+<specific_character>reketirs_assistant</specific_character>
+</character>
+<character id="garb_shustriy">
+<class>garb_shustriy</class>
+<specific_character>garb_shustriy</specific_character>
+</character>
+<character id="garb_tirsa">
+<class>garb_tirsa</class>
+<specific_character>garb_tirsa</specific_character>
+</character>
+
+<character id="garb_abdul">
+<class>garb_abdul</class>
+<specific_character>garb_abdul</specific_character>
+</character>
+
+<character id="dar_headhunter_tehnik">
+<class>dar_headhunter_tehnik</class>
+<specific_character>dar_headhunter_tehnik</specific_character>
+</character>
+<character id="dar_headhunter_boss">
+<class>dar_headhunter_boss</class>
+<specific_character>dar_headhunter_boss</specific_character>
+</character>
+
+<character id="dar_build_podval_trup1">
+<class>dar_build_podval_trup1</class>
+<specific_character>dar_build_podval_trup1</specific_character>
+</character>
+<character id="dar_build_podval_trup2">
+<class>dar_build_podval_trup2</class>
+<specific_character>dar_build_podval_trup2</specific_character>
+</character>
+
+<character id="dar_abdul">
+<class>dar_abdul</class>
+<specific_character>dar_abdul</specific_character>
+</character>
+
+<character id="hunter_4_2">
+<class>hunter_4_2</class>
+<specific_character>hunter_4_2</specific_character>
+</character>
+
+<character id="x18_general_doktor">
+<class>x18_general_doktor</class>
+<specific_character>x18_general_doktor</specific_character>
+</character>
+
+<character id="garb_body10">
+<class>garb_body10</class>
+<specific_character>garb_body10</specific_character>
+</character>
+
+<character id="garb_body9">
+<class>garb_body9</class>
+<specific_character>garb_body9</specific_character>
+</character>
+
+<character id="test_stalker">
+<class>test_stalker</class>
+<specific_character>test_stalker</specific_character>
+</character>
+
+
+<character id="subject_strong_1">
+<class>subject_strong_1</class>
+<specific_character>subject_strong_1</specific_character>
+</character>
+<character id="subject_strong_2">
+<class>subject_strong_2</class>
+<specific_character>subject_strong_2</specific_character>
+</character>
+<character id="subject_strong_3">
+<class>subject_strong_3</class>
+<specific_character>subject_strong_3</specific_character>
+</character>
+<character id="subject_strong_4">
+<class>subject_strong_4</class>
+<specific_character>subject_strong_4</specific_character>
+</character>
+<character id="subject_strong_5">
+<class>subject_strong_5</class>
+<specific_character>subject_strong_5</specific_character>
+</character>
+<character id="subject_strong_6">
+<class>subject_strong_6</class>
+<specific_character>subject_strong_6</specific_character>
+</character>
+
+<character id="x18_cattle1">
+<class>x18_cattle1</class>
+<specific_character>x18_cattle1</specific_character>
+</character>
+<character id="x18_cattle2">
+<class>x18_cattle2</class>
+<specific_character>x18_cattle2</specific_character>
+</character>
+
+<character id="agr_nii_ecolog2">
+<class>agr_nii_ecolog2</class>
+<specific_character>agr_nii_ecolog2</specific_character>
+</character>
+<character id="agr_nii_oficer">
+<class>agr_nii_oficer</class>
+<specific_character>agr_nii_oficer</specific_character>
+</character>
+<character id="agr_nii_soldier1">
+<class>agr_nii_soldier1</class>
+<specific_character>agr_nii_soldier1</specific_character>
+</character>
+<character id="agr_nii_soldier2">
+<class>agr_nii_soldier2</class>
+<specific_character>agr_nii_soldier2</specific_character>
+</character>
+
+<character id="agrund_redrik">
+<class>agrund_redrik</class>
+<specific_character>agrund_redrik</specific_character>
+</character>
+<character id="agrund_hunter">
+<class>agrund_hunter</class>
+<specific_character>agrund_hunter</specific_character>
+</character>
+
+<character id="esc_lathkey">
+<class>esc_lathkey</class>
+<specific_character>esc_lathkey</specific_character>
+</character>
+
+<character id="agrund_body1">
+<class>agrund_body1</class>
+<specific_character>agrund_body1</specific_character>
+</character>
+<character id="agrund_body2">
+<class>agrund_body2</class>
+<specific_character>agrund_body2</specific_character>
+</character>
+<character id="agrund_body3">
+<class>agrund_body3</class>
+<specific_character>agrund_body3</specific_character>
+</character>
+
+<character id="client3_guard1">
+<class>client3_guard1</class>
+<specific_character>client3_guard1</specific_character>
+</character>
+<character id="client3_guard2">
+<class>client3_guard2</class>
+<specific_character>client3_guard2</specific_character>
+</character>
+<character id="client3_agent">
+<class>client3_agent</class>
+<specific_character>client3_agent</specific_character>
+</character>
+
+<character id="agr_fabrik_sniper">
+<class>agr_fabrik_sniper</class>
+<specific_character>agr_fabrik_sniper</specific_character>
+</character>
+
+<character id="agr_body1">
+<class>agr_body1</class>
+<specific_character>agr_body1</specific_character>
+</character>
+<character id="agr_body2">
+<class>agr_body2</class>
+<specific_character>agr_body2</specific_character>
+</character>
+<character id="agr_body3">
+<class>agr_body3</class>
+<specific_character>agr_body3</specific_character>
+</character>
+<character id="agr_body4">
+<class>agr_body4</class>
+<specific_character>agr_body4</specific_character>
+</character>
+<character id="agr_body5">
+<class>agr_body5</class>
+<specific_character>agr_body5</specific_character>
+</character>
+<character id="agr_body6">
+<class>agr_body6</class>
+<specific_character>agr_body6</specific_character>
+</character>
+<character id="agr_body7">
+<class>agr_body7</class>
+<specific_character>agr_body7</specific_character>
+</character>
+<character id="agr_body8">
+<class>agr_body8</class>
+<specific_character>agr_body8</specific_character>
+</character>
+<character id="agr_body9">
+<class>agr_body9</class>
+<specific_character>agr_body9</specific_character>
+</character>
+<character id="agr_body10">
+<class>agr_body10</class>
+<specific_character>agr_body10</specific_character>
+</character>
+<character id="agr_body11">
+<class>agr_body11</class>
+<specific_character>agr_body11</specific_character>
+</character>
+<character id="agr_body12">
+<class>agr_body12</class>
+<specific_character>agr_body12</specific_character>
+</character>
+<character id="agr_body13">
+<class>agr_body13</class>
+<specific_character>agr_body13</specific_character>
+</character>
+<character id="agr_body14">
+<class>agr_body14</class>
+<specific_character>agr_body14</specific_character>
+</character>
+<character id="agr_body15">
+<class>agr_body15</class>
+<specific_character>agr_body15</specific_character>
+</character>
+<character id="agr_body16">
+<class>agr_body16</class>
+<specific_character>agr_body16</specific_character>
+</character>
+<character id="agr_body17">
+<class>agr_body17</class>
+<specific_character>agr_body17</specific_character>
+</character>
+
+
+
+<character id="dyatlovs_group_man1">
+<class>dyatlovs_group_man1</class>
+<specific_character>dyatlovs_group_man1</specific_character>
+</character>
+<character id="dyatlovs_group_man2">
+<class>dyatlovs_group_man2</class>
+<specific_character>dyatlovs_group_man2</specific_character>
+</character>
+<character id="dyatlovs_group_man3">
+<class>dyatlovs_group_man3</class>
+<specific_character>dyatlovs_group_man3</specific_character>
+</character>
+
+<character id="dar_btr_zomb_oficer">
+<class>dar_btr_zomb_oficer</class>
+<specific_character>dar_btr_zomb_oficer</specific_character>
+</character>
+<character id="dar_btr_zomb_soldier1">
+<class>dar_btr_zomb_soldier1</class>
+<specific_character>dar_btr_zomb_soldier1</specific_character>
+</character>
+<character id="dar_btr_zomb_soldier2">
+<class>dar_btr_zomb_soldier2</class>
+<specific_character>dar_btr_zomb_soldier2</specific_character>
+</character>
+
+<character id="dar_suicider_man">
+<class>dar_suicider_man</class>
+<specific_character>dar_suicider_man</specific_character>
+</character>
+<character id="dar_suicider_woman">
+<class>dar_suicider_woman</class>
+<specific_character>dar_suicider_woman</specific_character>
+</character>
+
+<character id="esc_mad_hunter">
+<class>esc_mad_hunter</class>
+<specific_character>esc_mad_hunter</specific_character>
+</character>
+
+<character id="subject_weak_1">
+<class>subject_weak_1</class>
+<specific_character>subject_weak_1</specific_character>
+</character>
+
+<character id="subject_weak_2">
+<class>subject_weak_2</class>
+<specific_character>subject_weak_2</specific_character>
+</character>
+
+<character id="subject_weak_3">
+<class>subject_weak_3</class>
+<specific_character>subject_weak_3</specific_character>
+</character>
+
+<character id="subject_weak_4">
+<class>subject_weak_4</class>
+<specific_character>subject_weak_4</specific_character>
+</character>
+
+<character id="subject_weak_5">
+<class>subject_weak_5</class>
+<specific_character>subject_weak_5</specific_character>
+</character>
+<character id="subject_weak_5new">
+<class>subject_weak_5new</class>
+<specific_character>subject_weak_5new</specific_character>
+</character>
+
+<character id="subject_weak_6">
+<class>subject_weak_6</class>
+<specific_character>subject_weak_6</specific_character>
+</character>
+
+<character id="subject_weak_7">
+<class>subject_weak_7</class>
+<specific_character>subject_weak_7</specific_character>
+</character>
+
+
+
+<character id="dar_body1">
+<class>dar_body1</class>
+<specific_character>dar_body1</specific_character>
+</character>
+<character id="dar_body2">
+<class>dar_body2</class>
+<specific_character>dar_body2</specific_character>
+</character>
+<character id="dar_body3">
+<class>dar_body3</class>
+<specific_character>dar_body3</specific_character>
+</character>
+<character id="dar_body4">
+<class>dar_body4</class>
+<specific_character>dar_body4</specific_character>
+</character>
+<character id="dar_body5">
+<class>dar_body5</class>
+<specific_character>dar_body5</specific_character>
+</character>
+<character id="dar_body6">
+<class>dar_body6</class>
+<specific_character>dar_body6</specific_character>
+</character>
+<character id="dar_body7">
+<class>dar_body7</class>
+<specific_character>dar_body7</specific_character>
+</character>
+<character id="dar_body8">
+<class>dar_body8</class>
+<specific_character>dar_body8</specific_character>
+</character>
+<character id="dar_body9">
+<class>dar_body9</class>
+<specific_character>dar_body9</specific_character>
+</character>
+<character id="dar_body10">
+<class>dar_body10</class>
+<specific_character>dar_body10</specific_character>
+</character>
+<character id="dar_body11">
+<class>dar_body11</class>
+<specific_character>dar_body11</specific_character>
+</character>
+<character id="dar_body12">
+<class>dar_body12</class>
+<specific_character>dar_body12</specific_character>
+</character>
+<character id="dar_body13">
+<class>dar_body13</class>
+<specific_character>dar_body13</specific_character>
+</character>
+
+
+<character id="garb_minefield_body1">
+<class>garb_minefield_body1</class>
+<specific_character>garb_minefield_body1</specific_character>
+</character>
+
+<character id="garb_minefield_body2">
+<class>garb_minefield_body2</class>
+<specific_character>garb_minefield_body2</specific_character>
+</character>
+
+<character id="garb_minefield_body3">
+<class>garb_minefield_body3</class>
+<specific_character>garb_minefield_body3</specific_character>
+</character>
+
+<character id="garb_minefield_body4">
+<class>garb_minefield_body4</class>
+<specific_character>garb_minefield_body4</specific_character>
+</character>
+
+
+<character id="esc_btr_body">
+<class>esc_btr_body</class>
+<specific_character>esc_btr_body</specific_character>
+</character>
+
+<character id="stalker_bomzh">
+<class>stalker_bomzh</class>
+<specific_character>stalker_bomzh</specific_character>
+</character>
+
+<character id="post_soldier10_new">
+<class>post_soldier10_new</class>
+<specific_character>post_soldier10_new</specific_character>
+</character>
+
+<character id="client2_guard1">
+<class>client2_guard1</class>
+<specific_character>client2_guard1</specific_character>
+</character>
+
+<character id="client2_guard2">
+<class>client2_guard2</class>
+<specific_character>client2_guard2</specific_character>
+</character>
+
+<character id="client2_guard3">
+<class>client2_guard3</class>
+<specific_character>client2_guard3</specific_character>
+</character>
+
+<character id="client2_agent">
+<class>client2_agent</class>
+<specific_character>client2_agent</specific_character>
+</character>
+
+<character id="agr_nii_ecolog1">
+<class>agr_nii_ecolog1</class>
+<specific_character>agr_nii_ecolog1</specific_character>
+</character>
+
+<character id="client_1">
+<class>client_1</class>
+<specific_character>client_1</specific_character>
+</character>
+<character id="client_1_guard1">
+<class>client_1_guard1</class>
+<specific_character>client_1_guard1</specific_character>
+</character>
+<character id="client_1_guard2">
+<class>client_1_guard2</class>
+<specific_character>client_1_guard2</specific_character>
+</character>
+
+
+
+
+<character id="garb_reservuar_body">
+<class>garb_reservuar_body</class>
+<specific_character>garb_reservuar_body</specific_character>
+</character>
+
+<character id="garb_benzovoz_body">
+<class>garb_benzovoz_body</class>
+<specific_character>garb_benzovoz_body</specific_character>
+</character>
+
+<character id="garb_excavator_body1">
+<class>garb_excavator_body1</class>
+<specific_character>garb_excavator_body1</specific_character>
+</character>
+
+<character id="garb_excavator_body2">
+<class>garb_excavator_body2</class>
+<specific_character>garb_excavator_body2</specific_character>
+</character>
+
+<character id="garb_excavator_body3">
+<class>garb_excavator_body3</class>
+<specific_character>garb_excavator_body3</specific_character>
+</character>
+
+<character id="locomotive_body">
+<class>locomotive_body</class>
+<specific_character>locomotive_body</specific_character>
+</character>
+
+<character id="redrik">
+<class>redrik</class>
+<specific_character>redrik</specific_character>
+</character>
+
+<character id="dar_base_sniper1">
+<class>dar_base_sniper1</class>
+<specific_character>dar_base_sniper1</specific_character>
+</character>
+
+<character id="pervert_zombied">
+<class>pervert_zombied</class>
+<specific_character>pervert_zombied</specific_character>
+</character>
+
+<character id="pervert_zombied2">
+<class>pervert_zombied2</class>
+<specific_character>pervert_zombied2</specific_character>
+</character>
+
+<character id="esc_kamp_controler_good">
+<class>esc_kamp_controler_good</class>
+<specific_character>esc_kamp_controler_good</specific_character>
+</character>
+
+<character id="bar_body1">
+<class>bar_body1</class>
+<specific_character>bar_body1</specific_character>
+</character>
+<character id="bar_body2">
+<class>bar_body2</class>
+<specific_character>bar_body2</specific_character>
+</character>
+
+<character id="esc_dead_scientist">
+<class>esc_dead_scientist</class>
+<specific_character>esc_dead_scientist</specific_character>
+</character>
+
+<character id="bar_bunkerzombie_boss">
+<class>bar_bunkerzombie_boss</class>
+<specific_character>bar_bunkerzombie_boss</specific_character>
+</character>
+<character id="bar_bunkerzombie1">
+<class>bar_bunkerzombie1</class>
+<specific_character>bar_bunkerzombie1</specific_character>
+</character>
+<character id="bar_bunkerzombie2">
+<class>bar_bunkerzombie2</class>
+<specific_character>bar_bunkerzombie2</specific_character>
+</character>
+<character id="bar_bunkerzombie3">
+<class>bar_bunkerzombie3</class>
+<specific_character>bar_bunkerzombie3</specific_character>
+</character>
+<character id="bar_bunkerzombie4">
+<class>bar_bunkerzombie4</class>
+<specific_character>bar_bunkerzombie4</specific_character>
+</character>
+<character id="bar_bunkerzombie5">
+<class>bar_bunkerzombie5</class>
+<specific_character>bar_bunkerzombie5</specific_character>
+</character>
+<character id="bar_bunkerzombie6">
+<class>bar_bunkerzombie6</class>
+<specific_character>bar_bunkerzombie6</specific_character>
+</character>
+<character id="bar_bunkerzombie7">
+<class>bar_bunkerzombie7</class>
+<specific_character>bar_bunkerzombie7</specific_character>
+</character>
+
+<character id="esc_tunnel_body1">
+<class>esc_tunnel_body1</class>
+<specific_character>esc_tunnel_body1</specific_character>
+</character>
+
+<character id="esc_helicrash_body1">
+<class>esc_helicrash_body1</class>
+<specific_character>esc_helicrash_body1</specific_character>
+</character>
+<character id="esc_helicrash_body2">
+<class>esc_helicrash_body2</class>
+<specific_character>esc_helicrash_body2</specific_character>
+</character>
+<character id="esc_helicrash_body3">
+<class>esc_helicrash_body3</class>
+<specific_character>esc_helicrash_body3</specific_character>
+</character>
+
+<character id="esc_kpp_body1">
+<class>esc_kpp_body1</class>
+<specific_character>esc_kpp_body1</specific_character>
+</character>
+<character id="esc_kpp_body2">
+<class>esc_kpp_body2</class>
+<specific_character>esc_kpp_body2</specific_character>
+</character>
+<character id="esc_kpp_body3">
+<class>esc_kpp_body3</class>
+<specific_character>esc_kpp_body3</specific_character>
+</character>
+<character id="esc_kpp_body4">
+<class>esc_kpp_body4</class>
+<specific_character>esc_kpp_body4</specific_character>
+</character>
+
+<character id="esc_helicrash_survival">
+<class>esc_helicrash_survival</class>
+<specific_character>esc_helicrash_survival</specific_character>
+</character>
+
+<character id="dar_renegade1">
+<class>dar_renegade1</class>
+<specific_character>dar_renegade1</specific_character>
+</character>
+<character id="dar_renegade2">
+<class>dar_renegade2</class>
+<specific_character>dar_renegade2</specific_character>
+</character>
+
+<character id="headhunter1">
+<class>headhunter1</class>
+<specific_character>headhunter1</specific_character>
+</character>
+<character id="headhunter2">
+<class>headhunter2</class>
+<specific_character>headhunter2</specific_character>
+</character>
+<character id="headhunter3">
+<class>headhunter3</class>
+<specific_character>headhunter3</specific_character>
+</character>
+<character id="headhunter4">
+<class>headhunter4</class>
+<specific_character>headhunter4</specific_character>
+</character>
+<character id="headhunter5">
+<class>headhunter5</class>
+<specific_character>headhunter5</specific_character>
+</character>
+
+
+<character id="stalker_freak">
+<class>stalker_freak</class>
+<specific_character>stalker_freak</specific_character>
+</character>
+
+
+<character id="bridge_anomal_killer1">
+<class>bridge_anomal_killer1</class>
+<specific_character>bridge_anomal_killer1</specific_character>
+</character>
+<character id="bridge_anomal_killer2">
+<class>bridge_anomal_killer2</class>
+<specific_character>bridge_anomal_killer2</specific_character>
+</character>
+<character id="bridge_anomal_killer3">
+<class>bridge_anomal_killer3</class>
+<specific_character>bridge_anomal_killer3</specific_character>
+</character>
+
+<character id="vagon_stranger1">
+<class>vagon_stranger1</class>
+<specific_character>vagon_stranger1</specific_character>
+</character>
+<character id="vagon_stranger2">
+<class>vagon_stranger2</class>
+<specific_character>vagon_stranger2</specific_character>
+</character>
+<character id="vagon_stranger3">
+<class>vagon_stranger3</class>
+<specific_character>vagon_stranger3</specific_character>
+</character>
+<character id="miln_stranger1">
+<class>miln_stranger1</class>
+<specific_character>miln_stranger1</specific_character>
+</character>
+<character id="miln_stranger2">
+<class>miln_stranger2</class>
+<specific_character>miln_stranger2</specific_character>
+</character>
+<character id="miln_stranger3">
+<class>miln_stranger3</class>
+<specific_character>miln_stranger3</specific_character>
+</character>
+<character id="stalker_volk">
+<class>stalker_volk</class>
+<specific_character>stalker_volk</specific_character>
+</character>
+<character id="dar_sniper1">
+<class>dar_sniper1</class>
+<specific_character>dar_sniper1</specific_character>
+</character>
+<character id="beforepost_body1">
+<class>beforepost_body1</class>
+<specific_character>beforepost_body1</specific_character>
+</character>
+<character id="post_srochnik1">
+<class>post_srochnik1</class>
+<specific_character>post_srochnik1</specific_character>
+</character>
+<character id="post_srochnik2">
+<class>post_srochnik2</class>
+<specific_character>post_srochnik2</specific_character>
+</character>
+<character id="post_srochnik3">
+<class>post_srochnik3</class>
+<specific_character>post_srochnik3</specific_character>
+</character>
+<character id="post_pilot">
+<class>post_pilot</class>
+<specific_character>post_pilot</specific_character>
+</character>
+<character id="post_soldier10">
+<class>post_soldier10</class>
+<specific_character>post_soldier10</specific_character>
+</character>
+<character id="post_soldier9">
+<class>post_soldier9</class>
+<specific_character>post_soldier9</specific_character>
+</character>
+<character id="post_soldier8">
+<class>post_soldier8</class>
+<specific_character>post_soldier8</specific_character>
+</character>
+<character id="post_soldier7">
+<class>post_soldier7</class>
+<specific_character>post_soldier7</specific_character>
+</character>
+<character id="post_soldier6">
+<class>post_soldier6</class>
+<specific_character>post_soldier6</specific_character>
+</character>
+<character id="post_soldier5">
+<class>post_soldier5</class>
+<specific_character>post_soldier5</specific_character>
+</character>
+<character id="post_soldier4">
+<class>post_soldier4</class>
+<specific_character>post_soldier4</specific_character>
+</character>
+<character id="post_soldier3">
+<class>post_soldier3</class>
+<specific_character>post_soldier3</specific_character>
+</character>
+<character id="post_soldier2">
+<class>post_soldier2</class>
+<specific_character>post_soldier2</specific_character>
+</character>
+<character id="post_soldier1">
+<class>post_soldier1</class>
+<specific_character>post_soldier1</specific_character>
+</character>
+<character id="post_oficer2">
+<class>post_oficer2</class>
+<specific_character>post_oficer2</specific_character>
+</character>
+<character id="post_oficer1">
+<class>post_oficer1</class>
+<specific_character>post_oficer1</specific_character>
+</character>
+<character id="post_commander">
+<class>post_commander</class>
+<specific_character>post_commander</specific_character>
+</character>
+<character id="stalker_malandrinus">
+<class>stalker_malandrinus</class>
+<specific_character>stalker_malandrinus</specific_character>
+</character>
+
+<character id="garb_body1">
+<class>garb_body1</class>
+<specific_character>garb_body1</specific_character>
+</character>
+<character id="garb_body2">
+<class>garb_body2</class>
+<specific_character>garb_body2</specific_character>
+</character>
+<character id="garb_body3">
+<class>garb_body3</class>
+<specific_character>garb_body3</specific_character>
+</character>
+<character id="garb_body4">
+<class>garb_body4</class>
+<specific_character>garb_body4</specific_character>
+</character>
+<character id="garb_body5">
+<class>garb_body5</class>
+<specific_character>garb_body5</specific_character>
+</character>
+<character id="garb_body6">
+<class>garb_body6</class>
+<specific_character>garb_body6</specific_character>
+</character>
+<character id="garb_body7">
+<class>garb_body7</class>
+<specific_character>garb_body7</specific_character>
+</character>
+<character id="garb_body8">
+<class>garb_body8</class>
+<specific_character>garb_body8</specific_character>
+</character>
+
+
+<character id="bridge_body1">
+<class>bridge_body1</class>
+<specific_character>bridge_body1</specific_character>
+</character>
+<character id="bridge_body2">
+<class>bridge_body2</class>
+<specific_character>bridge_body2</specific_character>
+</character>
+<character id="bridge_body3">
+<class>bridge_body3</class>
+<specific_character>bridge_body3</specific_character>
+</character>
+<character id="bridge_body4">
+<class>bridge_body4</class>
+<specific_character>bridge_body4</specific_character>
+</character>
+<character id="bridge_body5">
+<class>bridge_body5</class>
+<specific_character>bridge_body5</specific_character>
+</character>
+<character id="bridge_body6">
+<class>bridge_body6</class>
+<specific_character>bridge_body6</specific_character>
+</character>
+<character id="bridge_body7">
+<class>bridge_body7</class>
+<specific_character>bridge_body7</specific_character>
+</character>
+<character id="bridge_body8">
+<class>bridge_body8</class>
+<specific_character>bridge_body8</specific_character>
+</character>
+<character id="bridge_body9">
+<class>bridge_body9</class>
+<specific_character>bridge_body9</specific_character>
+</character>
+
+<character id="atp_body1">
+<class>atp_body1</class>
+<specific_character>atp_body1</specific_character>
+</character>
+<character id="atp_body2">
+<class>atp_body2</class>
+<specific_character>atp_body2</specific_character>
+</character>
+<character id="atp_body3">
+<class>atp_body3</class>
+<specific_character>atp_body3</specific_character>
+</character>
+
+<character id="hunter_1">
+<class>hunter_1</class>
+<specific_character>hunter_1</specific_character>
+</character>
+<character id="hunter_2">
+<class>hunter_2</class>
+<specific_character>hunter_2</specific_character>
+</character>
+<character id="hunter_3">
+<class>hunter_3</class>
+<specific_character>hunter_3</specific_character>
+</character>
+<character id="hunter_3_scient">
+<class>hunter_3_scient</class>
+<specific_character>hunter_3_scient</specific_character>
+</character>
+<character id="hunter_4">
+<class>hunter_4</class>
+<specific_character>hunter_4</specific_character>
+</character>
+<character id="hunter_5">
+<class>hunter_5</class>
+<specific_character>hunter_5</specific_character>
+</character>
+<character id="hunter_6">
+<class>hunter_6</class>
+<specific_character>hunter_6</specific_character>
+</character>
+<character id="hunter_7">
+<class>hunter_7</class>
+<specific_character>hunter_7</specific_character>
+</character>
+
+<character id="bandit_tirsa">
+<class>bandit_tirsa</class>
+<specific_character>bandit_tirsa</specific_character>
+</character>
+<character id="bandit_shusrtila">
+<class>bandit_shusrtila</class>
+<specific_character>bandit_shusrtila</specific_character>
+</character>
+<character id="bandit_abdul">
+<class>bandit_abdul</class>
+<specific_character>bandit_abdul</specific_character>
+</character>
+
+<character id="stalker_sanya">
+<class>stalker_sanya</class>
+<specific_character>stalker_sanya</specific_character>
+</character>
+
+<character id="stalker_smoke">
+<class>stalker_smoke</class>
+<specific_character>stalker_smoke</specific_character>
+</character>
+
+<character id="stalker_skidan">
+<class>stalker_skidan</class>
+<specific_character>stalker_skidan</specific_character>
+</character>
+
+<character id="esc_stalker_izgoy">
+<class>esc_stalker_izgoy</class>
+<specific_character>esc_stalker_izgoy</specific_character>
+</character>
+
+
+
+	<character id="actor">
+		<class>Actor</class>
+		<specific_character>actor</specific_character>
+	</character>
+	<character id="default">
+		<class>Stalker_general</class>
+	</character>
+	<character id="mp_actor">
+		<class>mp_actor</class>
+		<specific_character>mp_actor</specific_character>
+	</character>
+	<character id="osoznanie">
+		<class>osoznanie</class>
+	</character>
+<character id="red_shuhart">
+<class>red_shuhart</class>
+<specific_character>red_shuhart</specific_character>
+</character>
+
+</xml>

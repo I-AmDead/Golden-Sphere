@@ -1,0 +1,36 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = x10_agent1_walk1
+path_look = x10_agent1_look1
+combat_ignore_cond = {-rad_headhunters_actor_alarm =fighting_dist_ge_20}
+danger = danger_condition
+on_actor_dist_le = 40|%=rad_agents_actor_check%
+on_info = {+x10_abdul_punish} %=set_enemies(8861:8860)%
+
+
+[danger_condition]
+ignore_distance_corpse = 1
+ignore_distance_hit = 100
+ignore_distance_sound = 1
+danger_inertion_time_hit = 10000000
+danger_inertion_time_sound = 1
+danger_inertion_time_ricochet = 1
+
+[combat_ignore]
+combat_ignore = always
+
+
+[hit]
+on_info = {=hit_by_actor -rad_headhunters_actor_alarm} %+rad_headhunters_actor_alarm%
+
+[death]
+on_info = %+x10_agent1_dead%
+

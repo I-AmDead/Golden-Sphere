@@ -1,0 +1,20 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+predb_village_anomaly} ph_idle@2
+
+[ph_idle@2]
+tips      = predb_village_art_static_use
+on_use = %+predb_village_art_have =give_items_to_actor(quest_village_art) =delme%
+
+
+
+
+
+
+
+

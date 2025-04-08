@@ -1,0 +1,20 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+mil_separ_acess} nil
+on_info2 = {+mil_vsu_war} ph_idle@3
+on_actor_dist_le_nvis = 40|ph_idle@2 %=send_tip(mil_separ_alarm_tip1:separ) +mil_separ_alarm%
+
+[ph_idle@2]
+on_actor_dist_ge_nvis = 50|ph_idle@1 %=send_tip(mil_separ_alarm_tip2:separ) -mil_separ_alarm%
+on_timer = 8000|nil %=send_tip(mil_separ_alarm_tip3:separ) =mil_separ_snipers_killactor%
+
+[ph_idle@3]
+on_info = {=mil_separ_in_fire} nil %+separ_if_fire%
+
+
+
+
+
+ 

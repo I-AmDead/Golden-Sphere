@@ -1,0 +1,42 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@idle
+on_death = mob_death
+on_hit = mob_hit
+
+
+[mob_walker@idle]
+path_walk = bar_arena_pseudogig_walk1
+path_look = bar_arena_pseudogig_look1
+braindead = true
+on_timer = 1|mob_walker@idle1 %=play_snd_from_obj(8519:monsters\giant\giant_underground_0)%
+
+[mob_walker@idle1]
+path_walk = bar_arena_pseudogig_walk1
+path_look = bar_arena_pseudogig_look1
+braindead = false
+on_timer = 7000 | mob_walker@idle2
+
+
+; Бегаем туда-сюда:
+[mob_walker@idle2]
+path_walk = bar_arena_pseudogig_walk2
+path_look = bar_arena_pseudogig_look2
+braindead = false
+on_timer = 40000 | mob_walker@idle3
+
+[mob_walker@idle3]
+path_walk = bar_arena_pseudogig_walk1
+path_look = bar_arena_pseudogig_look1
+braindead = false
+on_timer = 40000 | mob_walker@idle2
+
+
+
+[mob_hit]
+on_info = {=hit_by_actor !actor_in_bar_sklad_zones} %=bar_arena_pseudogig_bulletproof_think%, {=hit_by_actor =actor_in_bar_sklad_zones} %=hit_obj(8519:bip01_spine:80:100) =play_snd_from_obj(8519:monsters\giant\giant_hurt_2) =delete_bar_arena_gigant_zone =bar_arena_pseudogig_bulletproof_think2%
+
+[mob_death]
+on_info = %+bar_arena_pseudogig_dead%

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<pervert_dialog8>	
+	<face x="420" y="85" width="312" height="212" stretch="1">
+		<texture >ui\izlom_face</texture>
+	</face>
+	<izlom_name x="600" y="525" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="graffiti22">Излом</text>
+	</izlom_name>
+	<dialog_table x="250" y="280" width="550" height="900" stretch="1">
+		<texture >ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+	<izlom_talk_text1 x="280" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Потому что я был не один такой. Эти уроды поставили свои эксперименты на поток: в одной палате со мной лежали другие парни, над которыми ставили такие-же опыты. Все они превратились в таких-же, как я. Мало того, что поменялось тело, но изменились еще и внутренние органы: я стал меньше есть, пить и спать, отвык от спиртного и табака. Очень часто стала болеть голова, я страдаю от жутких приступов. Ненавижу всех, кто отличается от меня. Теперь ты доволен, человек?</text>
+	</izlom_talk_text1>
+
+
+
+
+	<btn_1 x="360" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Я думаю, твои страдания можно облегчить.</text>
+	</btn_1>
+
+
+</pervert_dialog8>
+

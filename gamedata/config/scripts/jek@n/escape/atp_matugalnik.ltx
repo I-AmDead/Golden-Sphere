@@ -1,0 +1,12 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = atp_matugalnik_idle
+looped = true
+on_info = {+esc_atp_controler_dead} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end | nil
+

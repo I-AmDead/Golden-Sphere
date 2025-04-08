@@ -1,0 +1,18 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+x16_power_on} ph_idle@2
+
+[ph_idle@2]
+on_actor_dist_le_nvis = 8 | %=play_snd_from_obj(8740:weapons\rpg7_explode) =play_particle_on_path(explosions\explosion_mine:x16fireball3_point) =spawn_x16fireball3 =delme%
+
+
+
+
+
+
+

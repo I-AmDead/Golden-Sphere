@@ -1,0 +1,14 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = ros_house_door_trigger2_use
+on_use    = ph_idle@2 %=run_postprocess(agr_u_fade) =disable_ui%
+
+[ph_idle@2]
+on_timer = 4000|ph_idle@1 %=ros_house_door_trigger2use1 =enable_ui =play_snd(device\wood_large_open)%
+
+

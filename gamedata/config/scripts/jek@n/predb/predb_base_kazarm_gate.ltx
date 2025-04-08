@@ -1,0 +1,25 @@
+[collide]
+ignore_static
+
+[ph_heavy]
+
+[logic]
+active = {+predb_base_kazarm_open} ph_gate@open, ph_gate@locked
+
+[ph_gate@locked]
+state = closed
+locking = hard
+breakable = false
+on_info = {+predb_base_kazarm_open} ph_gate@open
+
+[ph_gate@unlocked]
+state = closed
+locking = stick
+breakable = false
+
+[ph_gate@open]
+state = open
+locking = stick
+breakable = false
+left_limit = 90
+right_limit = 90

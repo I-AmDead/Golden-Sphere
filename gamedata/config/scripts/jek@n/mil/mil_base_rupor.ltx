@@ -1,0 +1,18 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+mil_komp} ph_sound
+
+[ph_sound]
+snd = rupor_sirena
+looped = true
+on_timer = 30000|ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+
+
+
+ 

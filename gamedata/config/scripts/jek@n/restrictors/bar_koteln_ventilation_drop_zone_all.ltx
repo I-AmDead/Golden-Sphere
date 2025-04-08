@@ -1,0 +1,10 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_actor_in_zone = bar_kotelnya_deadzone | %=hit_obj(37:bip01_spine:0:2600) =play_snd_from_obj(37:ambient\whistling_wind_22)%
+on_info = {+bar_koteln_ventilyator_charge1 +bar_koteln_ventilyator_charge2} nil %=give_items_to_actor(kondensator_anomal) =remove_item(kondensator_big) =delme2%
+
+
+
+

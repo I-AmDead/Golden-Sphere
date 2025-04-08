@@ -1,0 +1,20 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {+predb_village_finditem} ph_idle@2
+
+[ph_idle@2]
+tips      = predb_village_rogue_script_box_use
+on_use = {=actor_has_item(quest_village_art)} ph_idle@3 %+predb_village_art_done =remove_item(quest_village_art) =play_snd(device\metal_small_close_stop)%
+
+[ph_idle@3]
+on_timer = 2000|nil %=play_snd(monsters\controller_act\bet_laugh1)%
+
+
+
+
+

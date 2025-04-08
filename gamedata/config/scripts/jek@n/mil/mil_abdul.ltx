@@ -1,0 +1,66 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_abdul_on_barier} walker@5, walker@start
+combat_ignore = combat_ignore
+threshold = threshold@mil_abdul_threshold
+on_death = death
+
+[walker@start]
+path_walk = mil_abdul_walk1
+path_look = mil_abdul_look1
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = mil_abdul_walk1
+path_look = mil_abdul_look1
+on_info = {+mil_abdul_goto_gravianomaly} walker@to_grav
+
+; Идём к гравианомалии:
+[walker@to_grav]
+path_walk = mil_abdul_walk_to_gravit
+path_look = mil_abdul_look2
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+on_signal = arrived|walker@3 %+mil_abdul_behind_gravit%
+
+; Перед гравианомалией:
+[walker@3]
+path_walk = mil_abdul_walk2
+path_look = mil_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+mil_abdul_goto_barier} walker@to_barier
+
+; Идём к баръеру:
+[walker@to_barier]
+path_walk = mil_abdul_walk_barier
+path_look = mil_abdul_look3
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+on_signal       = arrived|walker@5 %+mil_abdul_on_barier%
+
+[walker@5]
+path_walk = mil_abdul_walk3
+path_look = mil_abdul_look3
+on_info = {+rad_abdul_spawn} %=delme2%
+
+[threshold@mil_abdul_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_abdul_dead%
+

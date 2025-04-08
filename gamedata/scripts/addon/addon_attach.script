@@ -1,0 +1,133 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+
+function attach( sm )
+  sm:subscribe({ signal = "on_spawn",      fun = this.on_spawn})
+  sm:subscribe({ signal = "on_info",      fun = this.on_info})
+  sm:subscribe({ signal = "on_take",      fun = this.on_take})
+  sm:subscribe({ signal = "on_drop",      fun = this.on_drop})
+  sm:subscribe({ signal = "on_update",      fun = this.on_actor_update})
+
+end
+
+-- Колбэк на появление предмета в инвентаре ГГ
+function on_take(obj)
+
+	addon.change_psy_gun()
+
+	achievements.check_sssr_signs()
+		-- Невидимые арты
+	if obj:section():match("fake_art[123]") then addon.fake_arts_delete() end
+	
+	-- Самосъедаемые записки, блокноты, прочее:
+	addon.autoattachable_items(obj)
+end
+
+-- Колбэк на потерю предмета из инвентаря ГГ
+function on_drop(obj)
+	-- GPS-маячок
+	metka.check_beacon_drop(obj)
+end
+
+-- Колбэк на апдейт ГГ
+function on_actor_update()
+
+        xr_effects.garb_static_af_loop_spawn()	
+	addon_2.show_visual_health()
+	show_time()
+
+	if not ( db.actor:is_talking() and inventory.inventory_open and inventory.on_belt( "af_bottle" ) ) then
+		inventory.spoilage_food()
+	end
+
+	metka.check_metka()
+
+	addon.remove_psy_gun_without_suit()
+	addon_2.npc_psy_weapon_fix()
+
+	achievements.change_addons()
+
+	if db.actor:dont_has_info("arts_powerup") then
+		achievements.check_arts()
+	end
+
+	achievements.check_items_of_achiev3()
+
+	achievements.check_knife_powerup_condition()
+
+	if has_alife_info("achievement5") then
+		achievements.change_knifes()
+	end
+
+	achievements.check_sniper_condition()
+
+	achievements.check_buck_condition()
+
+	addon.script_anomals_actor_hit()
+
+	if db.actor:object("wonder_doll") and db.actor:dont_has_info("wonderdoll_founded") then
+		db.actor:give_info_portion ("wonderdoll_founded")
+		soundtrack.wonderdoll_cry1()
+		ogse_st_mgr.start_timer("wonderdoll_meet_action1", 15, "timer_actions.wonderdoll_meet_action1")
+		xr_effects.give_dolltip2()
+	end
+
+	addon.af_controler_scull_effect()
+	addon.deadman_head_effect()
+	addon.af_chamelleon_use()
+	addon.af_emerald_effect()
+	addon.af_flower_effect()
+	addon.af_bur_effect()
+	addon.af_spider_effect()
+	addon.af_pumice_effect()
+	addon.af_lamp_effect()
+	addon.af_fist_effect()
+	addon.af_baton_effect()
+	addon.af_deadmask_effect()
+	addon.af_homefire_effect()
+	addon.af_waste_effect()
+
+	addon.tea_effect()
+
+	addon.outfit_effects()
+
+	addon.artefacts_activation_effects()
+
+	addon.check_spec_gun_aiming()
+
+	addon.camp_zones_indication()
+
+	addon_2.too_much_murders_effect()
+
+	addon_2.rad_seek_effect()
+end
+
+-- Колбэк на выдачу инфопоршена ГГ
+function on_info(info_id)
+	-- Достижения
+	if db.actor:dont_has_info("weapon_powerup") then
+		achievements.all_weapons_info_collected()
+	end
+	if db.actor:dont_has_info("arts_powerup") then
+		achievements.all_arts_has_collected()
+	end
+	if db.actor:dont_has_info("deadman_head_powerup") then
+		achievements.check_deadmans_head_portions()
+	end
+end
+
+-- Загружаем все переменные, которые нужно, вызывается при загрузке игры автоматически
+function on_spawn()
+	-- Первый запуск мода
+	if db.actor:dont_has_info("storyline_actor_start") then
+		db.actor:give_info_portion ("game_start")
+		db.actor:give_info_portion ("storyline_actor_start")
+		level.add_pp_effector("deadcity_wake_old.ppe", 2007, false)
+	end
+end
+
+-- Выводим время на HUD
+function show_time()
+	local hud = get_hud()
+	local cs = (hud:GetCustomStatic("hud_timer_text1") or hud:AddCustomStatic("hud_timer_text1", true)):wnd()
+	cs:SetText(string.format("%02d:%02d", level.get_time_hours(), level.get_time_minutes()))
+end

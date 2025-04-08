@@ -1,0 +1,179 @@
+local head = 0 -- голова;
+local left_hand = 0 -- левая рука;
+local right_hand = 0 -- правая рука;
+local tors = 0 -- торс;
+local left_leg = 0 -- левая нога;
+local right_leg = 0 -- правая нога;
+
+local karma = 0 -- удача;
+local addiction = 0 -- морфиновая зависимость;
+local sniping = 0 -- снайперское мастерство;
+local buckshoot = 0 -- выстрелы в упор дробью;
+local murder = 0 -- убийства людей;
+
+function on_game_load()
+	head       = ogse.load_var( "head_health", 1 ) 
+	left_hand  = ogse.load_var( "left_hand_health", 1 ) 
+	right_hand = ogse.load_var( "right_hand_health", 1 )
+	tors       = ogse.load_var( "tors_health", 1 )  
+	left_leg   = ogse.load_var( "left_leg_health", 1 ) 
+	right_leg  = ogse.load_var( "right_leg_health", 1 ) 
+
+	karma      = ogse.load_var( "karma_cond", 1 ) 
+	addiction  = ogse.load_var( "addiction_cond", 0 ) 
+	sniping    = ogse.load_var( "sniping_cond", 0 ) 
+	buckshoot  = ogse.load_var( "buckshoot_cond", 0 ) 
+	murder	   = ogse.load_var( "murder_cond", 0 ) 
+end
+
+function on_game_save()
+	ogse.save_var( "head_health", head )
+	ogse.save_var( "left_hand_health", left_hand )
+	ogse.save_var( "right_hand_health", right_hand )
+	ogse.save_var( "tors_health", tors )
+	ogse.save_var( "left_leg_health", left_leg )
+	ogse.save_var( "right_leg_health", right_leg )
+
+	ogse.save_var( "karma_cond", karma )
+	ogse.save_var( "addiction_cond", addiction )
+	ogse.save_var( "sniping_cond", sniping )
+	ogse.save_var( "buckshoot_cond", buckshoot )
+	ogse.save_var( "murder_cond", murder )
+end
+
+function get_head() -- читаем из другого скрипта
+	return head
+end
+function set_head(val) -- изменяем
+	head = val
+end
+function add_head(a) -- добавляем(отнимаем) к карме нужную величину
+	head = head + a
+end
+
+
+function get_left_hand() -- читаем из другого скрипта
+	return left_hand
+end
+function set_left_hand(val) -- изменяем
+	left_hand = val
+end
+function add_left_hand(a) -- добавляем(отнимаем) к карме нужную величину
+	left_hand = left_hand + a
+end
+
+
+function get_right_hand() -- читаем из другого скрипта
+	return right_hand
+end
+function set_right_hand(val) -- изменяем
+	right_hand = val
+end
+function add_right_hand(a) -- добавляем(отнимаем) к карме нужную величину
+	right_hand = right_hand + a
+end
+
+
+function get_tors() -- читаем из другого скрипта
+	return tors
+end
+function set_tors(val) -- изменяем
+	tors = val
+end
+function add_tors(a) -- добавляем(отнимаем) к карме нужную величину
+	tors = tors + a
+end
+
+
+function get_left_leg() -- читаем из другого скрипта
+	return left_leg
+end
+function set_left_leg(val) -- изменяем
+	left_leg = val
+end
+function add_left_leg(a) -- добавляем(отнимаем) к карме нужную величину
+	left_leg = left_leg + a
+end
+
+
+function get_right_leg() -- читаем из другого скрипта
+	return right_leg
+end
+function set_right_leg(val) -- изменяем
+	right_leg = val
+end
+function add_right_leg(a) -- добавляем(отнимаем) к карме нужную величину
+	right_leg = right_leg + a
+end
+
+
+function get_karma() -- читаем из другого скрипта
+	return karma
+end
+function set_karma(val) -- изменяем
+	karma = val
+end
+function add_karma(a) -- добавляем(отнимаем) к карме нужную величину
+	karma = karma + a
+end
+
+
+function get_addiction()
+	return addiction
+end
+function set_addiction(val)
+	addiction = val
+end
+function add_addiction(a)
+	addiction = addiction + a
+end
+
+
+function get_sniping()
+	return sniping
+end
+function set_sniping(val)
+	sniping = val
+end
+function add_sniping(a)
+	sniping = sniping + a
+end
+
+
+function get_buckshoot()
+	return buckshoot
+end
+function set_buckshoot(val)
+	buckshoot = val
+end
+function add_buckshoot(a)
+	buckshoot = buckshoot + a
+end
+
+
+function get_murder()
+	return murder
+end
+function set_murder(val)
+	murder = val
+end
+function add_murder(a)
+	murder = murder + a
+end
+
+function on_chahge()
+	-- запускаем эффекты при достижении каких-то значений
+
+	if addiction >0.5 then
+		get_hud():AddCustomStatic("addiction",true) 
+		if db.actor:dont_has_info("narko_addiction") then
+			db.actor:give_info_portion ("narko_addiction")
+		end
+	end
+	if addiction<=0.5 then
+		get_hud():RemoveCustomStatic("addiction",true)
+		if has_alife_info("narko_addiction") then
+			db.actor:disable_info_portion("narko_addiction")
+		end
+	end
+end

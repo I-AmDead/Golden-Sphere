@@ -1,0 +1,22 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = kamp@1
+on_death = death
+
+[kamp@1]
+center_point = predb_kontrab_hutor_kamp
+radius = 2
+on_timer = 1|kamp@2 %=killactor =give_items(wpn_ppsh:ammo_7.62x25_p:ammo_7.62x25_p:ammo_7.62x25_p:ammo_7.62x25_p:ammo_7.62x25_p:ammo_7.62x25_p:ammo_7.62x25_p:ammo_7.62x25_p)%
+
+[kamp@2]
+center_point = predb_kontrab_hutor_kamp
+radius = 2 
+def_state_moving = run
+
+
+[death]
+on_info = %+predb_courier1_dead =give_items(cargo_exo_outfit)%

@@ -1,0 +1,22 @@
+[logic]
+active = ph_idle
+
+[ph_sound]
+snd = bar_ventilyators_sound
+looped = true
+
+[ph_idle]
+tips     = bar_koteln_ventilyator_use
+on_use    = {=actor_has_item(kondensator_big)} ph_sound@stop %=play_shock_on_me =play_snd(anomaly\electra_hit_1) +bar_koteln_ventilyator_charge1%
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=delme%
+
+
+
+
+
+
+
+

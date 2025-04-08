@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips = agr_fabrik_teleport_switcher_use
+on_use    = %+dar_receiver_shield_off% nil
+on_timer = 3000 | ph_idle@2 %=play_snd_from_obj(8321:car\car1)%
+
+[ph_idle@2]
+tips = agr_fabrik_teleport_switcher_use
+on_use    = %+dar_receiver_shield_off% nil
+on_timer = 3000 | ph_idle@1 %=play_snd_from_obj(8321:car\car1)%

@@ -1,0 +1,34 @@
+
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_actor_dist_le_nvis = 15 | ph_idle@2 %=deatlamp_flash%
+on_use    = %=give_items_to_actor(item_deathlamp) =delme%
+
+[ph_idle@2]
+on_timer = 2100 | ph_idle@3
+on_use    = %=give_items_to_actor(item_deathlamp) =delme%
+on_actor_dist_ge_nvis = 15 | ph_idle@1
+
+[ph_idle@3]
+on_actor_dist_le_nvis = 15 | ph_idle@4 %=deatlamp_flash%
+on_use    = %=give_items_to_actor(item_deathlamp) =delme%
+on_actor_dist_ge_nvis = 15 | ph_idle@1
+
+[ph_idle@4]
+on_timer = 2100 | ph_idle@5
+on_use    = %=give_items_to_actor(item_deathlamp) =delme%
+on_actor_dist_ge_nvis = 15 | ph_idle@1
+
+[ph_idle@5]
+on_actor_dist_le_nvis = 15 | {=actor_alive} %=deatlamp_flash =kill_actor%
+on_timer = 2100 | ph_idle@1
+on_use    = %=give_items_to_actor(item_deathlamp) =delme%
+on_actor_dist_ge_nvis = 15 | ph_idle@1
+
+
+

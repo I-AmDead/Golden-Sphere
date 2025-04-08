@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<agrund_motor_table>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture x="0" y="0" width="1020" height="626">ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Инструкция:</text>
+</name>
+
+<text1 x="280" y="280" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Для включения вытяжного насоса необходимо </text>
+</text1>
+<text2 x="280" y="320" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">убедится в наличии напряжения на электро-</text>
+</text2>
+<text3 x="280" y="360" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">двигателе. Напряжение подается рубильником, </text>
+</text3>
+<text4 x="280" y="400" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">расположенным в силовой будке на поверхности.</text>
+</text4>
+<text5 x="280" y="440" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Попасть к рубильнику можно по лестнице </text>
+</text5>
+<text6 x="280" y="480" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">в северной части комплекса.</text>
+</text6>
+
+
+	<btn_quit x="310" y="550" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Выход</text>
+	</btn_quit>
+
+</agrund_motor_table>
+

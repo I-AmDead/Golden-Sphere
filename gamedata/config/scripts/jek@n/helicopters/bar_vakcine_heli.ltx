@@ -1,0 +1,70 @@
+[logic]
+active = heli_move@waiting
+
+; Висим под локацией и ждем, пока позовут
+[heli_move@waiting]
+path_move = bar_vakcine_heli_point_1
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 5
+on_info = {+bar_heli_start} heli_move@to_place1 %=release_bar_heli_static%
+
+; Взлетаем над двором:
+[heli_move@to_place1]
+path_move = bar_vakcine_heli_point_2
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 5
+on_signal       = arrived | heli_move@to_place2
+
+[heli_move@to_place2]
+path_move = bar_vakcine_heli_point_2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 7000 | heli_move@to_place3 %=send_tip(bar_vakcine_heli_tip1:heli) =play_snd(helicopter\hit_5)%
+
+
+; Распыляем вакцину:
+[heli_move@to_place3]
+path_move = bar_vakcine_heli_point_2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 5000 | heli_move@to_place4 %=play_particle_on_bar_vakcine_heli%
+
+[heli_move@to_place4]
+path_move = bar_vakcine_heli_point_2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 4000 | heli_move@to_place5 %-sickness +spawn_bar_alan =send_tip(bar_vakcine_heli_tip2:heli)%
+
+
+; Сваливаем:
+[heli_move@to_place5]
+path_move = bar_vakcine_heli_point_3
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 7
+on_signal       = arrived | %+bar_virus_off =delme2%
+
+

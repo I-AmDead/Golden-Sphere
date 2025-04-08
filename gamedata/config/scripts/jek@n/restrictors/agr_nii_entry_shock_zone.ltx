@@ -1,0 +1,28 @@
+[logic]
+active = nil
+
+[sr_particle@1]
+name = anomaly2\group_items\electra2_trails
+path = agr_nii_entry_shock_zone_point1
+mode = 2
+looped = true
+on_timer = 3000 | sr_particle@2
+on_actor_inside = {!actor_wears_dielectric_outfit} sr_particle@3 %=electric_hit_obj(37:bip01_spine:2.0:0) =play_shock_on_actor%, {=actor_wears_dielectric_outfit} sr_particle@3 %=electric_hit_obj(37:bip01_spine:0.05:0) =play_shock_on_actor%
+
+[sr_particle@2]
+name = anomaly2\group_items\electra2_trails
+path = agr_nii_entry_shock_zone_point2
+mode = 2
+looped = true
+on_timer = 3000 | sr_particle@1
+on_actor_inside = {!actor_wears_dielectric_outfit} sr_particle@3 %=electric_hit_obj(37:bip01_spine:2.0:0) =play_shock_on_actor%, {=actor_wears_dielectric_outfit} sr_particle@3 %=electric_hit_obj(37:bip01_spine:0.05:0) =play_shock_on_actor%
+
+
+
+[sr_particle@3]
+name = anomaly2\electra2_blast_01
+path = agr_nii_entry_shock_zone_point3
+mode = 2
+looped = true
+on_timer = 10000 | sr_particle@1
+

@@ -1,0 +1,21 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+dar_kristall_task} ph_on_death
+
+[ph_on_death]
+on_info = %+val_prisoner_door_unlocked%
+
+
+
+[ph_button@locked]
+anim_blend = false
+anim = button_false
+hit_on_bone = 1 | ph_button@unlocked %+val_prisoner_door_unlocked% | 2 | ph_button@unlocked %+val_prisoner_door_unlocked% | 3 | ph_button@unlocked %+val_prisoner_door_unlocked% | 4 | ph_button@unlocked %+val_prisoner_door_unlocked%
+on_press = ph_button@unlocked %+val_prisoner_door_unlocked%
+
+[ph_button@unlocked]
+anim_blend = false
+anim = button_true
+on_press = ph_button@locked %-val_prisoner_door_unlocked%

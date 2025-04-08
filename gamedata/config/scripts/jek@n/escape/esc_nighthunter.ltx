@@ -1,0 +1,22 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_home
+on_death = mob_death
+
+[mob_home]
+path_home = willage_dog_nighunter_walk_2
+home_min_radius = 1
+home_max_radius = 2
+;on_timer = 1000 | mob_camp
+
+[mob_camp]
+path_home = willage_dog_nighunter_walk_2
+path_look = willage_dog_nighunter_walk_2
+home_min_radius  = 1
+home_max_radius = 4
+
+
+[mob_death]
+on_info = %+esc_nighthunter_dead%

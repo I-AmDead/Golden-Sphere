@@ -1,0 +1,2778 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+
+------Copyright DEXXX-------
+-- стилистическая правка Malandrinus (26/11/2011)
+
+local snd_obj = xr_sound.get_safe_sound_object([[$no_sound]])
+
+function s_stop()
+	if snd_obj:playing() then snd_obj:stop() end
+end
+
+local function s_play(path)
+	s_stop()
+	snd_obj = xr_sound.get_safe_sound_object(path)
+	if snd_obj then
+		snd_obj:play_at_pos(db.actor, vector():set(0, 0, 0), 0, sound_object.s2d)
+	end
+end
+
+function s_play_no_feedback(path, volume)
+	local snd_obj = xr_sound.get_safe_sound_object(path)
+	if snd_obj then
+		local vlm = volume or 1.0
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector():set(0, 0, 0), vlm)
+	end
+end
+-------------------
+function hochesh_ubit()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\trader\trader_script1c_15]])
+	elseif rnd == 2 then 
+		bar_spawn.default( actor, npc )
+	elseif rnd == 3 then 
+		bar_spawn.default( actor, npc )
+	end
+end
+
+function u_shveitsara_doljna_bit()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\trader\trader_script1c_14]])
+	elseif  rnd == 2 then 
+		bar_spawn.default( actor, npc )
+	elseif rnd == 3 then 
+		bar_spawn.default( actor, npc )
+	end
+end
+
+function agroprom_following_krot() 	s_play([[soundtrack\agroprom_following_krot]]) end
+function borov_key() 				s_play([[soundtrack\agroprom_following_krot]]) end
+function agro_u_cache_enter() 		s_play([[soundtrack\agro_u_cache_enter]]) end
+function agro_u_bloodsucker_meet() 	s_play([[soundtrack\agro_u_bloodsucker_meet]]) end
+function agro_u_bloodsucker_meet2() s_play([[soundtrack\agro_u_bloodsucker_meet2]]) end
+function darkvalley_x18_open() 		s_play([[soundtrack\darkvalley_x18_open]]) end
+function x18_laugh() 				s_play([[soundtrack\x18_laugh]]) end
+function x18_code1() 				s_play([[soundtrack\x18_code1]]) end
+function x18_code2()  				s_play([[soundtrack\x18_code2]]) end
+function rostok_gordon() 			s_play([[soundtrack\rostok_gordon]]) end
+function mil_notice()  				s_play([[soundtrack\mil_notice]]) end
+function mil_after_barrier() 		s_play([[soundtrack\agroprom_following_krot]]) end
+------Дополнение к саундтрекам-------
+function duty_warning2() 			s_play([[soundtrack\duty_warning2]]) end
+------Меченый становится зомби------- 
+function set_zombie() 				s_play([[soundtrack\set_zombie_1]]) end
+function ti_zombie() 				s_play([[characters_voice\scenario\trader\trader_tutorial_rejection_4]]) end
+function trader_kakogo() 			s_play([[soundtrack\trader_kakogo]]) end
+
+local function play_random_from_tbl(sounds_tbl)
+	s_play(sounds_tbl[math.random(#sounds_tbl)])
+end
+local function surge_play_random_from_tbl(sounds_tbl)
+	surge_play(sounds_tbl[math.random(#sounds_tbl)])
+end
+
+local otchajanie_snds = {
+	[[soundtrack\otchajanie_1]],
+	[[soundtrack\otchajanie_2]],
+	[[soundtrack\otchajanie_3]],
+	[[soundtrack\otchajanie_4]],
+}
+function otchajanie()
+	play_random_from_tbl(otchajanie_snds)
+end
+
+local tompson_saharov_snds = {
+	[[soundtrack\saharov_1]],
+	[[soundtrack\saharov_2]],
+}
+function tompson_saharov()
+	play_random_from_tbl(tompson_saharov_snds)
+end
+
+local tompson_bbb_snds = {
+	[[soundtrack\uchen_1]],
+	[[soundtrack\uchen_2]],
+	[[soundtrack\uchen_3]],
+	[[soundtrack\uchen_4]],
+}
+function tompson_bbb()
+	play_random_from_tbl(tompson_bbb_snds)
+end
+
+local tompson_da_snds = {
+	[[soundtrack\da_1]],
+	[[soundtrack\da_2]],
+	[[soundtrack\da_3]],
+	[[soundtrack\da_4]],
+	[[soundtrack\da_5]],
+}
+function tompson_da()
+	play_random_from_tbl(tompson_da_snds)
+end
+
+local tompson_nado_snds = {
+	[[soundtrack\nado_je_1]],
+	[[soundtrack\nado_je_2]],
+	[[soundtrack\nado_je_3]],
+	[[soundtrack\nado_je_4]],
+	[[soundtrack\nado_je_5]],
+}
+function tompson_nado()
+	play_random_from_tbl(tompson_nado_snds)
+end
+
+local monolith_die_snds = {
+	[[characters_voice\human_01\monolith\fight\attack\attack_1]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_2]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_3]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_4]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_7]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_8]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_9]],
+	[[characters_voice\human_01\monolith\fight\attack\attack_10]],
+	[[characters_voice\human_01\monolith\fight\enemy_down\enemy_down_9]],
+	[[characters_voice\human_01\monolith\fight\enemy_down\enemy_down_8]],
+	[[characters_voice\human_01\monolith\fight\enemy_down\enemy_down_2]],
+	[[characters_voice\human_01\monolith\fight\enemy_down\enemy_down_1]],
+}
+function monolith_die() 
+	play_random_from_tbl(monolith_die_snds) 
+end
+
+------Рассказ о группировке Долг-------
+function about_dolg_1()        s_play([[soundtrack\dolg\dolg1]]) end
+function about_dolg_2()        s_play([[soundtrack\dolg\dolg2]]) end
+function about_dolg_3()        s_play([[soundtrack\dolg\dolg3]]) end
+function about_dolg_4()        s_play([[soundtrack\dolg\dolg4]]) end
+------Псевдогиганты в тоннеле Янтаря-------
+function pseudogigant() 	   s_play([[soundtrack\pseudogigant]]) end
+------Убийство контроллёра на Военных складах-------
+function mil_controller_dead() s_play([[soundtrack\mil_controller_dead]]) end
+------Круглов просит о помощи-------
+function kruglov_help() 	   s_play([[characters_voice\scenario\rostok\kruglov_help_1]]) end
+function kruglov_help_2() 	   s_play([[characters_voice\scenario\rostok\kruglov_help_2]]) end
+function kruglov_help_3() 	   s_play([[characters_voice\scenario\rostok\kruglov_help_3]]) end
+function kruglov_help_4() 	   s_play([[characters_voice\scenario\rostok\kruglov_help_4]]) end
+------Рассказ Кузнецова о своей службе-------
+function kuznetsov_1() 		   s_play([[soundtrack\kuznetsov\kuznetsov_1]]) end
+function kuznetsov_2() 		   s_play([[soundtrack\kuznetsov\kuznetsov_2]]) end
+function kuznetsov_3() 		   s_play([[soundtrack\kuznetsov\kuznetsov_3]]) end
+function kuznetsov_4() 		   s_play([[soundtrack\kuznetsov\kuznetsov_4]]) end
+function kuznetsov_5() 		   s_play([[soundtrack\kuznetsov\kuznetsov_5]]) end
+function kuznetsov_6() 		   s_play([[soundtrack\kuznetsov\kuznetsov_6]]) end
+function kuznetsov_7() 		   s_play([[soundtrack\kuznetsov\kuznetsov_7]]) end
+------Сидор отправляет за артом------
+function heli_scores() 		   s_play([[characters_voice\scenario\escape\heli_kills_group]]) end
+------Сидор отправляет спасать Толика------
+function sidor_go_help() 	   s_play([[characters_voice\dialogs\trader_tutorial_go_help_tolik_1]]) end
+function sidor_go_help_alt()   s_play([[characters_voice\dialogs\trader_tutorial_go_help_tolik_2]]) end
+function heli_attacks() 	   s_play([[characters_voice\scenario\darkscape\heli_spot]]) end
+function heli_let_it_be() 	   s_play([[characters_voice\scenario\escape\heli_radio_part_1]]) end
+------Волк приглашает в деревню------
+function wolf_to_dialog() 	   s_play([[characters_voice\scenario\escape\wolf_to_dialog]]) end
+------Лис просит о помощи-------
+function dogs_fox() 		   s_play([[soundtrack\dogs_fox]]) end
+
+------Horror time-------
+function rnd_moan()
+rnd = math.random(1, 126)
+if rnd == 1 then 
+s_play([[soundtrack\horror_time\1]])
+elseif rnd == 2 then 
+s_play([[soundtrack\horror_time\2]])
+elseif rnd == 3 then 
+s_play([[soundtrack\horror_time\3]])
+elseif rnd == 4 then 
+s_play([[soundtrack\horror_time\4]])
+elseif rnd == 5 then 
+s_play([[soundtrack\horror_time\5]])
+elseif rnd == 6 then 
+s_play([[soundtrack\horror_time\6]])
+elseif rnd == 7 then 
+s_play([[soundtrack\horror_time\7]])
+elseif rnd == 8 then 
+s_play([[soundtrack\horror_time\8]])
+elseif rnd == 9 then 
+s_play([[soundtrack\horror_time\9]])
+elseif rnd == 10 then 
+s_play([[soundtrack\horror_time\10]])
+elseif rnd == 11 then 
+s_play([[soundtrack\horror_time\11]])
+elseif rnd == 12 then 
+s_play([[soundtrack\horror_time\12]])
+elseif rnd == 13 then 
+s_play([[soundtrack\horror_time\13]])
+elseif rnd == 14 then 
+s_play([[soundtrack\horror_time\14]])
+elseif rnd == 15 then 
+s_play([[soundtrack\horror_time\15]])
+elseif rnd == 16 then 
+s_play([[soundtrack\horror_time\16]])
+elseif rnd == 17 then 
+s_play([[soundtrack\horror_time\17]])
+elseif rnd == 18 then 
+s_play([[soundtrack\horror_time\18]])
+elseif rnd == 19 then 
+s_play([[soundtrack\horror_time\19]])
+elseif rnd == 20 then 
+s_play([[soundtrack\horror_time\20]])
+elseif rnd == 21 then 
+s_play([[soundtrack\horror_time\21]])
+elseif rnd == 22 then 
+s_play([[soundtrack\horror_time\22]])
+elseif rnd == 23 then 
+s_play([[soundtrack\horror_time\23]])
+elseif rnd == 24 then 
+s_play([[soundtrack\horror_time\24]])
+elseif rnd == 25 then 
+s_play([[soundtrack\horror_time\25]])
+elseif rnd == 26 then 
+s_play([[soundtrack\horror_time\26]])
+elseif rnd == 27 then 
+s_play([[soundtrack\horror_time\27]])
+elseif rnd == 28 then 
+s_play([[soundtrack\horror_time\28]])
+elseif rnd == 29 then 
+s_play([[soundtrack\horror_time\29]])
+elseif rnd == 30 then 
+s_play([[soundtrack\horror_time\30]])
+elseif rnd == 31 then 
+s_play([[soundtrack\horror_time\31]])
+elseif rnd == 32 then 
+s_play([[soundtrack\horror_time\32]])
+elseif rnd == 33 then 
+s_play([[soundtrack\horror_time\33]])
+elseif rnd == 34 then 
+s_play([[soundtrack\horror_time\34]])
+elseif rnd == 35 then 
+s_play([[soundtrack\horror_time\35]])
+elseif rnd == 36 then 
+s_play([[soundtrack\horror_time\36]])
+elseif rnd == 37 then 
+s_play([[soundtrack\horror_time\37]])
+elseif rnd == 38 then 
+s_play([[soundtrack\horror_time\38]])
+elseif rnd == 39 then 
+s_play([[soundtrack\horror_time\39]])
+elseif rnd == 40 then 
+s_play([[soundtrack\horror_time\40]])
+elseif rnd == 41 then 
+s_play([[soundtrack\horror_time\41]])
+elseif rnd == 42 then 
+s_play([[soundtrack\horror_time\42]])
+elseif rnd == 43 then 
+s_play([[soundtrack\horror_time\43]])
+elseif rnd == 44 then 
+s_play([[soundtrack\horror_time\44]])
+elseif rnd == 45 then 
+s_play([[soundtrack\horror_time\45]])
+elseif rnd == 46 then 
+s_play([[soundtrack\horror_time\46]])
+elseif rnd == 47 then 
+s_play([[soundtrack\horror_time\47]])
+elseif rnd == 48 then 
+s_play([[soundtrack\horror_time\48]])
+elseif rnd == 49 then 
+s_play([[soundtrack\horror_time\49]])
+elseif rnd == 50 then 
+s_play([[soundtrack\horror_time\50]])
+elseif rnd == 51 then 
+s_play([[soundtrack\horror_time\51]])
+elseif rnd == 52 then 
+s_play([[soundtrack\horror_time\52]])
+elseif rnd == 53 then 
+s_play([[soundtrack\horror_time\53]])
+elseif rnd == 54 then 
+s_play([[soundtrack\horror_time\54]])
+elseif rnd == 55 then 
+s_play([[soundtrack\horror_time\55]])
+elseif rnd == 56 then 
+s_play([[soundtrack\horror_time\56]])
+elseif rnd == 57 then 
+s_play([[soundtrack\horror_time\57]])
+elseif rnd == 58 then 
+s_play([[soundtrack\horror_time\58]])
+elseif rnd == 59 then 
+s_play([[soundtrack\horror_time\59]])
+elseif rnd == 60 then 
+s_play([[soundtrack\horror_time\60]])
+elseif rnd == 61 then 
+s_play([[soundtrack\horror_time\61]])
+elseif rnd == 62 then 
+s_play([[soundtrack\horror_time\62]])
+elseif rnd == 63 then 
+s_play([[soundtrack\horror_time\63]])
+elseif rnd == 64 then 
+s_play([[soundtrack\horror_time\64]])
+elseif rnd == 65 then 
+s_play([[soundtrack\horror_time\65]])
+elseif rnd == 66 then 
+s_play([[soundtrack\horror_time\66]])
+elseif rnd == 67 then 
+s_play([[soundtrack\horror_time\67]])
+elseif rnd == 68 then 
+s_play([[soundtrack\horror_time\68]])
+elseif rnd == 69 then 
+s_play([[soundtrack\horror_time\69]])
+elseif rnd == 70 then 
+s_play([[soundtrack\horror_time\70]])
+elseif rnd == 71 then 
+s_play([[soundtrack\horror_time\71]])
+elseif rnd == 72 then 
+s_play([[soundtrack\horror_time\72]])
+elseif rnd == 73 then 
+s_play([[soundtrack\horror_time\73]])
+elseif rnd == 74 then 
+s_play([[soundtrack\horror_time\74]])
+elseif rnd == 75 then 
+s_play([[soundtrack\horror_time\75]])
+elseif rnd == 76 then 
+s_play([[soundtrack\horror_time\76]])
+elseif rnd == 77 then 
+s_play([[soundtrack\horror_time\77]])
+elseif rnd == 78 then 
+s_play([[soundtrack\horror_time\78]])
+elseif rnd == 79 then 
+s_play([[soundtrack\horror_time\79]])
+elseif rnd == 80 then 
+s_play([[soundtrack\horror_time\80]])
+elseif rnd == 81 then 
+s_play([[soundtrack\horror_time\81]])
+elseif rnd == 82 then 
+s_play([[soundtrack\horror_time\82]])
+elseif rnd == 83 then 
+s_play([[soundtrack\horror_time\83]])
+elseif rnd == 84 then 
+s_play([[soundtrack\horror_time\84]])
+elseif rnd == 85 then 
+s_play([[soundtrack\horror_time\85]])
+elseif rnd == 86 then 
+s_play([[soundtrack\horror_time\86]])
+elseif rnd == 87 then 
+s_play([[soundtrack\horror_time\87]])
+elseif rnd == 88 then 
+s_play([[soundtrack\horror_time\88]])
+elseif rnd == 89 then 
+s_play([[soundtrack\horror_time\89]])
+elseif rnd == 90 then 
+s_play([[soundtrack\horror_time\90]])
+elseif rnd == 91 then 
+s_play([[soundtrack\horror_time\91]])
+elseif rnd == 92 then 
+s_play([[soundtrack\horror_time\92]])
+elseif rnd == 93 then 
+s_play([[soundtrack\horror_time\93]])
+elseif rnd == 94 then 
+s_play([[soundtrack\horror_time\94]])
+elseif rnd == 95 then 
+s_play([[soundtrack\horror_time\95]])
+elseif rnd == 96 then 
+s_play([[soundtrack\horror_time\96]])
+elseif rnd == 97 then 
+s_play([[soundtrack\horror_time\97]])
+elseif rnd == 98 then 
+s_play([[soundtrack\horror_time\98]])
+elseif rnd == 99 then 
+s_play([[soundtrack\horror_time\99]])
+elseif rnd == 100 then 
+s_play([[soundtrack\horror_time\100]])
+elseif rnd == 101 then 
+s_play([[soundtrack\horror_time\101]])
+elseif rnd == 102 then 
+s_play([[soundtrack\horror_time\102]])
+elseif rnd == 103 then 
+s_play([[soundtrack\horror_time\103]])
+elseif rnd == 104 then 
+s_play([[soundtrack\horror_time\104]])
+elseif rnd == 105 then 
+s_play([[soundtrack\horror_time\105]])
+elseif rnd == 106 then 
+s_play([[soundtrack\horror_time\106]])
+elseif rnd == 107 then 
+s_play([[soundtrack\horror_time\107]])
+elseif rnd == 108 then 
+s_play([[soundtrack\horror_time\108]])
+elseif rnd == 109 then 
+s_play([[soundtrack\horror_time\109]])
+elseif rnd == 110 then 
+s_play([[soundtrack\horror_time\110]])
+elseif rnd == 111 then 
+s_play([[soundtrack\horror_time\111]])
+elseif rnd == 112 then 
+s_play([[soundtrack\horror_time\112]])
+elseif rnd == 113 then 
+s_play([[soundtrack\horror_time\113]])
+elseif rnd == 114 then 
+s_play([[soundtrack\horror_time\114]])
+elseif rnd == 115 then 
+s_play([[soundtrack\horror_time\115]])
+elseif rnd == 116 then 
+s_play([[soundtrack\horror_time\116]])
+elseif rnd == 117 then 
+s_play([[soundtrack\horror_time\117]])
+elseif rnd == 118 then 
+s_play([[soundtrack\horror_time\118]])
+elseif rnd == 119 then 
+s_play([[soundtrack\horror_time\119]])
+elseif rnd == 120 then 
+s_play([[soundtrack\horror_time\120]])
+elseif rnd == 121 then 
+s_play([[soundtrack\horror_time\121]])
+elseif rnd == 122 then 
+s_play([[characters_voice\scenario\esc\esc_music_horror_3]])
+elseif rnd == 123 then 
+s_play([[ambient\random\rnd_moan1]])
+elseif rnd == 124 then 
+s_play([[ambient\random\rnd_moan2]])
+elseif rnd == 125 then 
+s_play([[ambient\random\rnd_moan3]])
+elseif rnd == 126 then 
+s_play([[ambient\random\rnd_moan4]])
+elseif rnd == 127 then 
+s_play([[ambient\random\rnd_moan5]])
+elseif rnd == 128 then 
+s_play([[ambient\random\rnd_ratchant]])
+elseif rnd == 129 then 
+s_play([[ambient\random\rnd_respawn]])
+elseif rnd == 130 then 
+s_play([[characters_voice\scenario\esc\esc_music_horror_4]])
+end
+end
+
+------Звуки в подземных локациях, в основном при открывании дверей и при включении (выключении механизмов)-------
+local underground_snds = {
+	[[soundtrack\underground\underground_1]],
+	[[soundtrack\underground\underground_2]],
+	[[soundtrack\underground\underground_3]],
+	[[soundtrack\underground\underground_4]],
+	[[soundtrack\underground\underground_5]],
+	[[soundtrack\underground\underground_6]],
+}
+function underground()
+	play_random_from_tbl(underground_snds)
+end
+------Ненавязчивые амбиентные звуки для сюжета-------
+local occusion_snds = {}
+for i=1,10 do
+	table.insert(occusion_snds, [[soundtrack\occusion\occusion_]]..i)
+end
+function occusion()
+	play_random_from_tbl(occusion_snds)
+end
+------Звуки перед началом выброса-------
+function surge_begin()
+rnd = math.random(1, 19)
+if rnd == 1 then 
+s_play([[soundtrack\surge_begin\1]])
+elseif rnd == 2 then 
+s_play([[soundtrack\surge_begin\2]])
+elseif rnd == 3 then 
+s_play([[soundtrack\surge_begin\3]])
+elseif rnd == 4 then 
+s_play([[soundtrack\surge_begin\4]])
+elseif rnd == 5 then 
+s_play([[soundtrack\surge_begin\5]])
+elseif rnd == 6 then 
+s_play([[soundtrack\surge_begin\6]])
+elseif rnd == 7 then 
+s_play([[soundtrack\surge_begin\7]])
+elseif rnd == 8 then 
+s_play([[soundtrack\surge_begin\8]])
+elseif rnd == 9 then 
+s_play([[soundtrack\surge_begin\9]])
+elseif rnd == 10 then 
+s_play([[soundtrack\surge_begin\10]])
+elseif rnd == 11 then 
+s_play([[soundtrack\surge_begin\11]])
+elseif rnd == 12 then 
+s_play([[soundtrack\surge_begin\12]])
+elseif rnd == 13 then 
+s_play([[soundtrack\surge_begin\13]])
+elseif rnd == 14 then 
+s_play([[soundtrack\surge_begin\14]])
+elseif rnd == 15 then 
+s_play([[soundtrack\surge_begin\15]])
+elseif rnd == 16 then 
+s_play([[soundtrack\surge_begin\6]])
+elseif rnd == 17 then 
+s_play([[soundtrack\surge_begin\17]])
+elseif rnd == 18 then 
+s_play([[soundtrack\surge_begin\18]])
+elseif rnd == 19 then 
+s_play([[soundtrack\surge_begin\19]])
+end
+end
+
+function popalsya()
+s_play([[characters_voice\human_01\bandit\states\idle\idle_20]])
+end
+
+function ne_ubivay()
+s_play([[characters_voice\human_01\bandit\states\panic_human\panic_human_8]])
+end
+
+function krisolov_scare()
+s_play([[characters_voice\scenario\scared_stalker_underground\scared_stalker_underground_3]])
+end
+
+function knop_spasibo()
+s_play([[characters_voice\human_01\newbie\help\wounded_thanx\thanx_4]])
+end
+
+function vistrel_killera()
+s_play([[weapons\svd_shoot]])
+end
+
+function informator_kidalovo()
+s_play([[characters_voice\scenario\val\rob_leader_jeer_1]])
+end
+
+function izgoy_replik_1()
+s_play([[script_replics\stalker_1\newbie\robbered_replic_1_1]])
+end
+
+function izgoy_replik_2()
+s_play([[script_replics\stalker_1\newbie\robbered_replic_1_2]])
+end
+
+function anu_vali()
+s_play([[script_replics\stalker_1\talk\stalker_talk_20]])
+end
+
+function pokumekaem()
+s_play([[script_replics\stalker_1\talk\stalker_talk_9]])
+end
+
+function prines_taki()
+s_play([[addon\esc_trader_greet_habar]])
+end
+
+function sps_viruchil()
+s_play([[script_replics\stalker_1\trade\stalker_trade_16]])
+end
+
+function die_baby()
+s_play([[addon\ai1_attack_0]])
+end
+
+function chto_tebya_interesuet()
+s_play([[addon\chto_tebya_interesuet]])
+end
+
+function zametano()
+s_play([[addon\zametano]])
+end
+
+function opanki()
+s_play([[addon\opanki]])
+end
+
+function zona_svedet()
+s_play([[addon\zona_svedet]])
+end
+
+function chto_opyat()
+s_play([[addon\chto_opyat]])
+end
+
+function ti_kto_takoy()
+s_play([[addon\ti_kto_takoy]])
+end
+
+function razvelos_tut()
+s_play([[addon\razvelos_tut]])
+end
+
+function ploho_vidno()
+s_play([[addon\ploho_vidno]])
+end
+
+function gde()
+s_play([[addon\gde]])
+end
+
+function krujitsya()
+s_play([[addon\krujitsya]])
+end
+
+function temno()
+s_play([[addon\temno]])
+end
+
+function pochemu_temno()
+s_play([[addon\pochemu_temno]])
+end
+
+function ne_ponimayu()
+s_play([[addon\ne_ponimayu]])
+end
+
+function idi()
+s_play([[addon\idi]])
+end
+
+function machi()
+s_play([[monsters\zombie\zombie_attack_5]])
+end
+
+function shelest()
+s_play([[addon\shelest]])
+end
+
+function oy_vey()
+s_play([[addon\oy_vey]])
+end
+
+function est_bazar()
+s_play([[addon\est_bazar]])
+end
+
+function more_solnce()
+s_play([[addon\more_solnce]])
+end
+
+function pogutarim()
+s_play([[addon\pogutarim]])
+end
+
+function pda_sos()
+s_play([[addon\pda_sos]])
+end
+
+function zdorovo_stalker()
+s_play([[addon\zdorovo_stalker]])
+end
+
+function spasibo_chuvak()
+s_play([[addon\spasibo_chuvak]])
+end
+
+function do_vstrechi()
+s_play([[addon\do_vstrechi]])
+end
+
+function chto_delat()
+s_play([[addon\chto_delat]])
+end
+
+function opyat_25()
+s_play([[addon\opyat_25]])
+end
+
+function sudba_takaya()
+s_play([[addon\sudba_takaya]])
+end
+
+function stoyat_nah()
+s_play([[addon\stoyat_nah]])
+end
+
+function lechenie()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[addon\inv_pills]])
+end
+if rnd == 2 then 
+s_play([[addon\inv_bandage]])
+end
+end
+
+function dyadya()
+s_play([[addon\dyadya]])
+end
+
+function vistrel_svu()
+s_play([[weapons\svu\svu_shoot]])
+end
+
+function ha_ha()
+s_play([[addon\ha_ha]])
+end
+
+function izlom_scream()
+s_play([[monsters\zombie\zombie_take_damage_0]])
+end
+
+function oy_ne_shumi()
+s_play([[addon\oy_ne_shumi]])
+end
+
+function chto_delatt()
+s_play([[addon\chto_delatt]])
+end
+
+function hrenovaya_vodka()
+s_play([[addon\hrenovaya_vodka]])
+end
+
+function da_ya_ot()
+s_play([[addon\da_ya_ot]])
+end
+
+function ti_menya()
+s_play([[addon\ti_menya]])
+end
+
+function drink_vodka()
+s_play([[addon\inv_vodka]])
+end
+
+function dokumenti_prigotovil()
+s_play([[addon\dokumenti_prigotovil]])
+end
+
+function brrr()
+s_play([[addon\brrr]])
+end
+
+function kubik()
+s_play([[addon\kubik]])
+end
+
+function hrenovato2()
+s_play([[affects\tinnitus3a]])
+end
+
+function hrenovato()
+s_play([[characters_voice\human_01\bandit\states\health\health_1]])
+end
+
+function eli_pali()
+s_play([[addon\eli_pali]])
+end
+
+function to_the_base()
+s_play([[addon\commander1_4]])
+end
+
+function aaa_kto_eto()
+s_play([[addon\aaa_kto_eto]])
+end
+
+function ne_strelaite()
+s_play([[addon\ne_strelaite]])
+end
+
+function iids_17b_use()
+s_play([[addon\iids_17b_use]])
+end
+
+function invisible_dangers()
+s_play([[addon\Invisible_dangers]])
+end
+
+function nujen_sovet()
+s_play([[addon\nujen_sovet]])
+end
+
+function udachi_tebe()
+s_play([[addon\udachi_tebe]])
+end
+
+function hana()
+s_play([[addon\hana]])
+end
+
+function privet()
+s_play([[addon\privet]])
+end
+
+function svoboden()
+s_play([[addon\svoboden]])
+end
+
+function vibiratsya()
+s_play([[addon\vibiratsya]])
+end
+
+function ne_lezz()
+s_play([[addon\ne_lezz]])
+end
+
+function malo_v_zonu()
+s_play([[addon\malo_v_zonu]])
+end
+
+function zdorovo_brat()
+s_play([[addon\zdorovo_brat]])
+end
+
+function pogovori_s_barmenom()
+s_play([[addon\pogovori_s_barmenom]])
+end
+
+function strannik_klad()
+s_play([[addon\strannik_klad]])
+end
+
+
+
+function sick_1()
+s_play([[characters_voice\human_01\stalker\states\idle\idle_33]])
+end
+
+function sick_2()
+s_play([[characters_voice\human_01\stalker\states\idle\idle_32]])
+end
+
+function sick_3()
+s_play([[characters_voice\human_01\stalker\states\idle\idle_25]])
+end
+
+function sick_4()
+s_play([[characters_voice\human_01\stalker\states\idle\idle_33]])
+end
+
+function sick_5()
+s_play([[actor\die0]])
+end
+
+function drink_miksture()
+s_play([[actor\die0]])
+end
+
+function armor_remkit_use()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[scripts\remkit\ui_repairweapon_06]])
+end
+if rnd == 2 then 
+s_play([[scripts\remkit\ui_repairweapon_07]])
+end
+end
+
+function gg_scream()
+rnd = math.random(1, 8)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_3]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_4]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_8]])
+end
+if rnd == 6 then 
+s_play([[characters_voice\human_01\newbie\fight\death\death_7]])
+end
+if rnd == 7 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_7]])
+end
+if rnd == 8 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_9]])
+end
+end
+
+function gg_scream2()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_5]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\fight\hit\hit_6]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\fight\death\death_6]])
+end
+end
+
+function gg_self_made_food_eat()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_03\newbie\states\starvation\starvation_3]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_03\newbie\states\starvation\starvation_9]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_03\newbie\states\starvation\starvation_9]])
+end
+end
+
+function heli_crash_death()
+s_play([[anomaly\electra_blast]])
+end
+
+function electroshock()
+s_play([[characters_voice\scenario\electroshock]])
+end
+
+function esc_underbridge_death()
+s_play([[anomaly\anomaly_body_tear_1]])
+end
+
+function thirst()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\thirst]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\scenario\thirst]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\scenario\thirst]])
+end
+end
+
+function bone_breaking()
+s_play([[characters_voice\scenario\bone_breaking]])
+end
+
+function lift_up()
+s_play([[anomaly\teleport_work_1]])
+end
+
+function ibuprophen_used()
+s_play([[characters_voice\scenario\hartbeet]])
+end
+
+function lighter()
+s_play([[characters_voice\scenario\lighter]])
+end
+
+function door_close()
+s_play([[device\door_locked]])
+end
+
+function door_broken()
+s_play([[device\wood_small_close_stop]])
+end
+
+function matches()
+s_play([[characters_voice\scenario\matches]])
+end
+
+function flyaga_bul_bul()
+s_play([[ambient\water_stream]])
+end
+
+function boiling_water()
+s_play([[ambient\x16\x16_brain_run]])
+end
+
+function afscanner_click()
+s_play([[detectors\contact_8]])
+end
+
+function afscanner_click2()
+s_play([[device\decoder]])
+end
+
+function afscanner_click3()
+s_play([[device\pda\pda_sos]])
+end
+
+function afscanner_off()
+s_play([[characters_voice\scenario\afscanner_off]])
+end
+
+function new_art_birth()
+s_play([[characters_voice\multiplayer\automatic\artefact_new]])
+end
+
+function reparing()
+s_play([[scripts\remkit\ui_repairweapon_01]])
+end
+
+function water_flow()
+s_play([[characters_voice\scenario\water_flow]])
+end
+
+function star_hit()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[script_replics\megafon\music\megafon_music_14]])
+end
+if rnd == 2 then 
+s_play([[script_replics\megafon\music\megafon_music_11]])
+end
+if rnd == 3 then 
+s_play([[script_replics\megafon\music\megafon_music_5]])
+end
+end
+
+function andrey_help1()
+s_play([[characters_voice\scenario\andrey_help1]])
+end
+
+
+
+function esc_post_heli_landing()
+s_play([[characters_voice\scenario\heli_damaged_1]])
+end
+
+function esc_post_heli_to_fly()
+s_play([[characters_voice\scenario\heli_damaged_2]])
+end
+
+
+function wonderdoll_cry1()
+s_play([[characters_voice\scenario\wonderdoll_cry1]])
+end
+
+function wonderdoll_cry2()
+s_play([[characters_voice\scenario\wonderdoll_cry2]])
+end
+
+function shelest()
+s_play([[characters_voice\scenario\shelest]])
+end
+
+function mine_blow()
+s_play([[weapons\rgd5_explode]])
+end
+
+function click()
+s_play([[detectors\contact_8]])
+end
+
+function achievement()
+s_play([[achievement]])
+end
+
+function achievement2()
+s_play([[characters_voice\multiplayer\automatic\butcher]])
+end
+
+function achievement3()
+s_play([[characters_voice\multiplayer\automatic\headshot]])
+end
+
+function achievement4()
+s_play([[characters_voice\multiplayer\automatic\assassin]])
+end
+
+function gar_mobs_atak()
+s_play([[characters_voice\scenario\gar_mobs_atak_request]])
+end
+
+function pkm_activate()
+s_play([[weapons\pkm\pkm_reload]])
+end
+
+function pkm_deactivate()
+s_play([[scripts\remkit\ui_repairweapon_07]])
+end
+
+function flame_strike()
+s_play([[ambient\zhar]])
+end
+
+function shock_strike()
+s_play([[anomaly\electra_blast]])
+end
+
+function actor_pain()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\fight\death\death_2]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\fight\death\death_3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\fight\death\death_5]])
+end
+end
+
+
+function hue_get_the_hell_out_here()
+s_play([[characters_voice\human_03\killer\fight\detour\detour_1]])
+end
+
+
+function prepare_to_eat()
+rnd = math.random(1, 6)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\killer\states\starvation\starvation_2]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\killer\states\starvation\starvation_4]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\killer\states\starvation\starvation_5]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\killer\states\starvation\starvation_6]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_01\killer\states\starvation\starvation_8]])
+end
+if rnd == 6 then 
+s_play([[characters_voice\human_01\killer\states\starvation\starvation_2]])
+end
+end
+
+
+function scream1()
+s_play([[ambient\random\rnd_fallscream]])
+end
+
+
+function esc_atp_controler_agress()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\esc_atp_controler_agress1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\scenario\esc_atp_controler_agress2]])
+end
+end
+
+function cough()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\stalker\states\idle\idle_25]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\stalker\states\idle\idle_26]])
+end
+end
+
+function test_1()
+s_play([[ambient\x18\x18_hit_5]])
+end
+
+function find_something()
+s_play([[script_sound\reactions\see_something\soldier\soldier_see_2]])
+end
+
+function find_nothing()
+s_play([[script_sound\reactions\nothing\soldier\soldier_nothing_1]])
+end
+
+function deadman_head_scream()
+s_play([[ambient\random\rnd_moan1]])
+end
+
+function acid_atack()
+s_play([[anomaly\buzz_hit]])
+end
+
+
+
+-- КУКЛА ------------------------------------------------------------------------------------------------------------------
+
+-- Окей, всё будет в порядке
+function wonder_doll_talk()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\woman\help\wounded_thanx\thanx_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\help\wounded_thanx\thanx_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\help\wounded_thanx\thanx_4]])
+end
+end
+
+-- О, нет!!
+function wonder_doll_dead()
+s_play([[characters_voice\woman\fight\friend_hitted\hit_friend_3]])
+end
+
+-- Вот так!
+function wonderdoll_sucess_tip()
+s_play([[characters_voice\woman\fight\backup\backup_4]])
+end
+
+-- Ура-а-а!
+function wonderdoll_sucess_tip2()
+s_play([[characters_voice\woman\fight\attack\attack_1]])
+end
+
+-- Сюда!
+function wonderdoll_sucess_tip3()
+s_play([[characters_voice\woman\fight\attack\attack_5]])
+end
+
+-- А вот и они
+function wonderdoll_sucess_tip4()
+s_play([[characters_voice\woman\fight\attack\attack_many_1]])
+end
+
+-- Надо зарядить
+function wonderdoll_sucess_tip5()
+s_play([[characters_voice\woman\fight\attack\attack_many_2]])
+end
+
+-- Они явно идут сюда
+function wonderdoll_sucess_tip6()
+s_play([[characters_voice\woman\fight\attack\attack_many_3]])
+end
+
+-- Пошли, пошли!
+function wonderdoll_sucess_tip7()
+s_play([[characters_voice\woman\fight\attack\attack_many_4]])
+end
+
+-- Вот он!
+function wonderdoll_sucess_tip8()
+s_play([[characters_voice\woman\fight\attack\attack_one_1]])
+end
+
+-- Пошли повеселимся
+function wonderdoll_sucess_tip9()
+s_play([[characters_voice\woman\fight\attack\attack_one_2]])
+end
+
+-- Действуем!
+function wonderdoll_sucess_tip10()
+s_play([[characters_voice\woman\fight\attack\attack_one_3]])
+end
+
+-- Вот!
+function wonderdoll_sucess_tip11()
+s_play([[characters_voice\woman\fight\backup\backup_1]])
+end
+
+-- Возьми это
+function wonderdoll_sucess_tip12()
+s_play([[characters_voice\woman\fight\backup\backup_3]])
+end
+
+-- Давай, быстрее!
+function wonderdoll_sucess_tip13()
+s_play([[characters_voice\woman\fight\cover_fire\cover_fire_4]])
+end
+
+-- Берегись!
+function wonderdoll_sucess_tip14()
+s_play([[characters_voice\woman\fight\enemy\enemy_2]])
+end
+
+-- Сзади!!
+function wonderdoll_sucess_tip15()
+s_play([[characters_voice\woman\fight\enemy\enemy_4]])
+end
+
+-- Спасайся!
+function wonderdoll_sucess_tip16()
+s_play([[characters_voice\woman\fight\enemy\enemy_5]])
+end
+
+-- Что происходит?
+function wonderdoll_sucess_tip17()
+s_play([[characters_voice\woman\fight\enemy\enemy_8]])
+end
+
+-- Ха, готово
+function wonderdoll_sucess_tip18()
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_3]])
+end
+
+-- Какая нелепая смерть
+function wonderdoll_sucess_tip19()
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_6]])
+end
+
+-- Отлично поймал
+function wonderdoll_sucess_tip20()
+s_play([[characters_voice\woman\fight\enemy_hit\enemy_hit_3]])
+end
+
+-- В укрытие
+function wonderdoll_sucess_tip21()
+s_play([[characters_voice\woman\fight\grenade\grenade_2]])
+end
+
+-- Это хреново...
+function wonderdoll_sucess_tip22()
+s_play([[characters_voice\woman\fight\searching_enemy\enemy_lost_4]])
+end
+
+-- Не может быть!
+function wonderdoll_sucess_tip23()
+s_play([[characters_voice\woman\fight\searching_enemy\enemy_lost_5]])
+end
+
+-- Он должен быть здесь
+function wonderdoll_sucess_tip24()
+s_play([[characters_voice\woman\fight\searching_enemy\search_1]])
+end
+
+-- Он там...
+function wonderdoll_sucess_tip25()
+s_play([[characters_voice\woman\fight\searching_enemy\search_5]])
+end
+
+-- Нас обстреливают!
+function wonderdoll_sucess_tip26()
+s_play([[characters_voice\woman\fight\tolls\tolls_1]])
+end
+
+-- Конец последней надежде
+function wonderdoll_sucess_tip27()
+s_play([[characters_voice\woman\help\wounded\kill_wounded_3]])
+end
+
+
+function wonderdoll_sucess_tip28()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+-- Возьми аптечку!
+s_play([[characters_voice\woman\help\wounded\medkit_1]])
+end
+if rnd == 2 then 
+-- Вот, держи аптечку!
+s_play([[characters_voice\woman\help\wounded\medkit_2]])
+end
+if rnd == 3 then 
+-- На вот, подлечись:
+s_play([[characters_voice\woman\help\wounded\medkit_3]])
+end
+end
+
+
+-- Брутально...
+function wonderdoll_sucess_tip29()
+s_play([[characters_voice\woman\reactions\box\box_3]])
+end
+
+-- Хоть раз у тебя были свежие мысли?
+function wonderdoll_sucess_tip30()
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_1]])
+end
+
+-- Дам один совет: никому этого не говори
+function wonderdoll_sucess_tip31()
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_4]])
+end
+
+-- Понятно
+function wonderdoll_sucess_tip32()
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_6]])
+end
+
+-- Потрясающе
+function wonderdoll_sucess_tip33()
+s_play([[characters_voice\woman\reactions\music\reaction_music_4]])
+end
+
+-- Мило!
+function wonderdoll_sucess_tip34()
+s_play([[characters_voice\woman\reactions\music\reaction_music_7]])
+end
+
+-- Смех
+function wonderdoll_sucess_tip35()
+s_play([[characters_voice\woman\reactions\story\laughter_5]])
+end
+
+-- Я сьела что то не то
+function wonderdoll_bad_food_reaction()
+s_play([[characters_voice\woman\states\idle\idle_11]])
+end
+
+-- Я уже ничего не чувствую...
+function wonderdoll_sucess_tip36()
+s_play([[characters_voice\woman\states\idle\idle_1]])
+end
+
+-- Сдается, всё идет хуже и хуже...
+function wonderdoll_sucess_tip37()
+s_play([[characters_voice\woman\states\idle\idle_12]])
+end
+
+-- Брось таращиться на меня
+function wonderdoll_sucess_tip38()
+s_play([[characters_voice\woman\states\idle\idle_17]])
+end
+
+-- Не надо!
+function wonderdoll_sucess_tip39()
+s_play([[characters_voice\woman\states\panic_human\panic_human_2]])
+end
+
+-- Не трогайте меня!
+function wonderdoll_sucess_tip40()
+s_play([[characters_voice\woman\states\panic_human\panic_human_3]])
+end
+
+-- Ну? И что теперь?
+function wonderdoll_sucess_tip41()
+s_play([[characters_voice\woman\talk\use\no_weapon_1]])
+end
+
+-- Эй, поосторожнее!
+function wonderdoll_sucess_tip42()
+s_play([[characters_voice\woman\talk\use\no_weapon_2]])
+end
+
+-- Вон туда и смотри под ноги
+function wonderdoll_sucess_tip43()
+s_play([[characters_voice\woman\threat\back_off\backoff_5]])
+end
+
+-- Да что с тебя ещё возмешь?
+function wonderdoll_sucess_tip44()
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_3]])
+end
+
+-- Это на тебя похоже
+function wonderdoll_sucess_tip45()
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_5]])
+end
+
+-- Ну и ну...
+function wonderdoll_sucess_tip46()
+s_play([[characters_voice\woman\reactions\music\reaction_music_1]])
+end
+
+-- Классно.
+function wonderdoll_sucess_tip47()
+s_play([[characters_voice\woman\reactions\music\reaction_music_5]])
+end
+
+-- Голубей распугаешь.
+function wonderdoll_sucess_tip48()
+s_play([[characters_voice\woman\reactions\music\reaction_music_8]])
+end
+
+-- Класс!!
+function wonderdoll_sucess_tip49()
+s_play([[characters_voice\woman\reactions\story\laughter_6]])
+end
+
+-- Когда всё это кончится, тогда... да зачем мечтать?
+function wonderdoll_sucess_tip50()
+s_play([[characters_voice\woman\states\idle\idle_2]])
+end
+
+-- Никак не пойму, как вам так долго удалось выжить?
+function wonderdoll_sucess_tip51()
+s_play([[characters_voice\woman\states\idle\idle_6]])
+end
+
+-- Что-то, к чему я так и не привыкла.
+function wonderdoll_sucess_tip52()
+s_play([[characters_voice\woman\states\idle\idle_9]])
+end
+
+-- Уф, я съела что-то не то!
+function wonderdoll_sucess_tip53()
+s_play([[characters_voice\woman\states\idle\idle_11]])
+end
+
+-- Я уже не мечтаю...
+function wonderdoll_sucess_tip54()
+s_play([[characters_voice\woman\states\idle\idle_14]])
+end
+
+-- Не могу избавиться от этого мотива(насвистывает)
+function wonderdoll_sucess_tip55()
+s_play([[characters_voice\woman\states\idle\idle_15]])
+end
+
+-- Не стреляйте!
+function wonderdoll_sucess_tip56()
+s_play([[characters_voice\woman\states\panic_human\panic_human_1]])
+end
+
+-- Не надо!
+function wonderdoll_sucess_tip57()
+s_play([[characters_voice\woman\states\panic_human\panic_human_2]])
+end
+
+-- Не трогайте меня!
+function wonderdoll_sucess_tip58()
+s_play([[characters_voice\woman\states\panic_human\panic_human_3]])
+end
+
+-- Хватит!
+function wonderdoll_sucess_tip59()
+s_play([[characters_voice\woman\states\panic_human\panic_human_5]])
+end
+
+-- Нет! Не-е-ет!
+function wonderdoll_sucess_tip60()
+s_play([[characters_voice\woman\states\panic_monster\panic_monster_4]])
+end
+
+-- Это ерунда!
+function wonderdoll_sucess_tip61()
+s_play([[characters_voice\woman\states\panic_monster\panic_monster_4]])
+end
+
+-- Сыта по горло твоим бормотанием
+function wonderdoll_sucess_tip62()
+s_play([[characters_voice\woman\talk\use\no_default_1]])
+end
+
+-- Не поняла... Что-что?
+function wonderdoll_sucess_tip63()
+s_play([[characters_voice\woman\talk\use\no_default_2]])
+end
+
+-- Мне это принять на свой счёт?
+function wonderdoll_sucess_tip64()
+s_play([[characters_voice\woman\talk\use\no_default_3]])
+end
+
+-- Говори понятнее
+function wonderdoll_sucess_tip65()
+s_play([[characters_voice\woman\talk\use\no_default_4]])
+end
+
+-- Зачем продолжать?
+function wonderdoll_sucess_tip66()
+s_play([[characters_voice\woman\talk\use\no_default_5]])
+end
+
+-- Не видишь, я занята.
+function wonderdoll_sucess_tip67()
+s_play([[characters_voice\woman\talk\use\no_fight_1]])
+end
+
+-- Извини.
+function wonderdoll_sucess_tip68()
+s_play([[characters_voice\woman\talk\use\no_fight_2]])
+end
+
+-- С дороги!
+function wonderdoll_sucess_tip69()
+s_play([[characters_voice\woman\talk\use\no_fight_3]])
+end
+
+-- Какой смысл?
+function wonderdoll_sucess_tip70()
+s_play([[characters_voice\woman\talk\use\no_fight_5]])
+end
+
+-- Смотри, что делаешь!
+function wonderdoll_sucess_tip71()
+s_play([[characters_voice\woman\talk\use\no_weapon_3]])
+end
+
+-- Что это? Подожди, опусти это назад.
+function wonderdoll_sucess_tip72()
+s_play([[characters_voice\woman\talk\use\no_weapon_4]])
+end
+
+-- Чем же я это заслужила?
+function wonderdoll_sucess_tip73()
+s_play([[characters_voice\woman\talk\use\no_weapon_5]])
+end
+
+-- Хватит, ты меня убъешь.
+function wonderdoll_sucess_tip74()
+s_play([[characters_voice\woman\talk\use\no_weapon_6]])
+end
+
+-- Прекрати!
+function wonderdoll_sucess_tip75()
+s_play([[characters_voice\woman\talk\use\no_weapon_7]])
+end
+
+-- Кого-нибудь ждём?
+function wonderdoll_sucess_tip76()
+s_play([[characters_voice\woman\threat\back_off\backoff_1]])
+end
+
+-- Проходи.
+function wonderdoll_sucess_tip77()
+s_play([[characters_voice\woman\threat\back_off\backoff_2]])
+end
+
+-- Отойди!
+function wonderdoll_sucess_tip78()
+s_play([[characters_voice\woman\threat\back_off\backoff_4]])
+end
+
+-- Кхм-кхм...
+function wonderdoll_sucess_tip79()
+s_play([[characters_voice\woman\threat\back_off\backoff_6]])
+end
+
+-- Э, аккуратнее.
+function wonderdoll_sucess_tip80()
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_1]])
+end
+
+-- Осторожно.
+function wonderdoll_sucess_tip81()
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_2]])
+end
+
+-- Поаккуратнее.
+function wonderdoll_sucess_tip82()
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_3]])
+end
+
+-- Эй, а ну брось!
+function wonderdoll_sucess_tip83()
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_4]])
+end
+
+-- Последнее желание есть?
+function wonderdoll_sucess_tip84()
+s_play([[characters_voice\woman\help\wounded\kill_wounded_1]])
+end
+
+-- Я даже не скажу тебе заткнуться...
+function wonderdoll_sucess_tip85()
+s_play([[characters_voice\woman\help\wounded\kill_wounded_2]])
+end
+
+-- А вот и остальные пожаловали
+function wonderdoll_sucess_tip86()
+s_play([[characters_voice\woman\fight\attack\attack_many_5]])
+end
+
+-- Давай, быстрее!
+function wonderdoll_sucess_tip87()
+s_play([[characters_voice\woman\fight\cover_fire\cover_fire_4]])
+end
+
+-- Чёрт!
+function wonderdoll_sucess_tip89()
+s_play([[characters_voice\woman\fight\enemy\enemy_7]])
+end
+
+-- Что происходит?
+function wonderdoll_sucess_tip90()
+s_play([[characters_voice\woman\fight\enemy\enemy_8]])
+end
+
+-- Что случилось?
+function wonderdoll_sucess_tip91()
+s_play([[characters_voice\woman\fight\enemy\enemy_9]])
+end
+
+-- Один готов!
+function wonderdoll_sucess_tip92()
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_1]])
+end
+
+-- Он мёртв...
+function wonderdoll_sucess_tip93()
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_5]])
+end
+
+-- Какая нелепая смерть
+function wonderdoll_sucess_tip94()
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_6]])
+end
+
+-- Ложись!
+function wonderdoll_sucess_tip95()
+s_play([[characters_voice\woman\fight\grenade\grenade_4]])
+end
+
+-- Интересно, куда это он
+function wonderdoll_sucess_tip96()
+s_play([[characters_voice\woman\fight\searching_enemy\enemy_lost_6]])
+end
+
+-- Напишу тебе на надгробии: какая нелепая смерть!
+function wonderdoll_sucess_tip97()
+s_play([[characters_voice\woman\fight\threat\threat_distant_3]])
+end
+
+-- Похороним его здесь?
+function wonderdoll_sucess_tip98()
+s_play([[characters_voice\woman\fight\threat\threat_distant_5]])
+end
+
+
+
+
+
+
+
+
+function wonderdoll_target_too_far()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+	wonderdoll_sucess_tip70()
+end
+if rnd == 2 then 
+	wonderdoll_sucess_tip67()
+end
+if rnd == 3 then 
+	wonderdoll_sucess_tip65()
+end
+if rnd == 4 then 
+	wonderdoll_sucess_tip63()
+end
+end
+
+
+function wonderdoll_target_is_npc()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+	wonderdoll_sucess_tip96()
+end
+if rnd == 2 then 
+	wonderdoll_sucess_tip76()
+end
+if rnd == 3 then 
+	wonderdoll_sucess_tip11()
+end
+if rnd == 4 then 
+	wonderdoll_sucess_tip4()
+end
+end
+
+
+function wonderdoll_anomal_ball_replik()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_4]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_1]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\talk\use\no_weapon_4]])
+end
+end
+
+
+function wonderdoll_snipershoot_replik()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+-- s_play([[characters_voice\woman\reactions\box\box_3]])
+s_play([[characters_voice\woman\reactions\music\reaction_music_4]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\fight\enemy_hit\enemy_hit_3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_3]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\woman\fight\attack\attack_many_2]])
+end
+end
+
+function wonderdoll_buckshoot_replik()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\woman\reactions\box\box_3]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\fight\enemy_down\enemy_down_6]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\fight\enemy_hit\enemy_hit_3]])
+end
+end
+
+
+function doll_secret_call()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+s_play([[characters_voice\woman\reactions\story\laughter_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\fight\searching_enemy\search_3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\fight\searching_enemy\search_6]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\woman\fight\searching_enemy\search_5]])
+end
+end
+
+function wonderdoll_hungry_replik()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\woman\states\idle\idle_3]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\states\idle\idle_7]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\states\idle\idle_10]])
+end
+end
+
+
+function wonderdoll_bad_deal_replic()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\woman\help\wounded\kill_wounded_3]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\fight\searching_enemy\enemy_lost_4]])
+end
+end
+
+
+function wonderdoll_storytell_replik()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_4]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\reactions\joke\reaction_joke_1]])
+end
+end
+
+
+function wonderdoll_nightzones_snd()
+rnd = math.random(1, 12)
+if rnd == 1 then 
+wonderdoll_sucess_tip97()
+news_manager.send_tip(db.actor, "doll_nightmobs_tip", nil, "doll", 7000, nil)
+xr_effects.give_dolltip2()
+end
+if rnd == 2 then 
+wonderdoll_sucess_tip84()
+news_manager.send_tip(db.actor, "doll_nightmobs_tip", nil, "doll", 7000, nil)
+xr_effects.give_dolltip2()
+end
+if rnd == 3 then 
+wonderdoll_sucess_tip81()
+news_manager.send_tip(db.actor, "doll_nightmobs_tip", nil, "doll", 7000, nil)
+xr_effects.give_dolltip2()
+end
+if rnd == 4 then 
+wonderdoll_sucess_tip79()
+news_manager.send_tip(db.actor, "doll_nightmobs_tip", nil, "doll", 7000, nil)
+xr_effects.give_dolltip2()
+end
+if rnd == 5 then 
+wonderdoll_sucess_tip9()
+news_manager.send_tip(db.actor, "doll_nightmobs_tip", nil, "doll", 7000, nil)
+xr_effects.give_dolltip2()
+end
+if rnd == 6 then 
+
+end
+if rnd == 7 then 
+
+end
+if rnd == 8 then 
+
+end
+if rnd == 9 then 
+
+end
+if rnd == 10 then 
+
+end
+if rnd == 11 then 
+
+end
+if rnd == 12 then 
+
+end
+end
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+function harmonica_unic_sing()
+s_play([[characters_voice\scenario\harmonica_unic_sing]])
+end
+
+
+function af_guider_birth()
+s_play([[anomaly\electra_blast]])
+end
+
+function hit_fist()
+s_play([[affects\hit_fist]])
+end
+
+function svarka_work()
+s_play([[ambient\radarsparks_1]])
+end
+
+
+function open_box()
+s_play([[device\wood_small_close_stop]])
+end
+
+
+
+
+function actor_lomka()
+s_play([[characters_voice\human_02\newbie\states\sleep\sleep_9]])
+end
+
+
+function anomal_laugh()
+s_play([[soundtrack\x18_laugh]])
+end
+
+
+function zuda_work()
+s_play([[soundtrack\horror_time\61]])
+end
+
+
+function steam_strike()
+s_play([[ambient\underground\steam_2]])
+end
+
+
+
+function actor_coughing()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_19]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_25]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_27]])
+end
+end
+
+
+function equipment_bag_comment1()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_13]]) -- "опять эта сволочь меня с патронами кинула"
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_1]]) -- "Да-а-а..."
+end
+end
+
+function equipment_bag_comment2()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_1]]) -- "да, это в точку!"
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_6]]) -- "очень даже!"
+end
+end
+
+function equipment_bag_comment3()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_6]]) -- "а в чём прикол?..."
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_1]]) -- "Да-а-а..."
+end
+end
+
+
+function inv_operation()
+s_play([[interface\inv_slot]])
+end
+
+function pnv_on()
+s_play([[weapons\nv_start]])
+end
+
+function pnv_off()
+s_play([[weapons\nv_off]])
+end
+
+function first_afscanner_using()
+s_play([[characters_voice\scenario\first_afscanner_using_replic]])
+end
+
+function army_receiver_use()
+s_play([[script_replics\radio\message\radio_voice_1]])
+end
+
+function beep1()
+s_play([[characters_voice\scenario\pilik]])
+end
+
+function rattrap_click()
+s_play([[device\wood_small_close_stop]])
+end
+
+function rat_scream()
+s_play([[monsters\rat\death_0]])
+end
+
+function x18pray_call()
+s_play([[monsters\controller_act\controller_attack_hit_0]])
+end
+
+function switch()
+s_play([[ambient\switch_1]])
+end
+
+function beep1()
+s_play([[characters_voice\scenario\beep1]])
+end
+
+function beep2()
+s_play([[characters_voice\scenario\beep2]])
+end
+
+
+
+
+function jekan_music_track1()
+-- s_play([[characters_voice\scenario\jekan\jekan_soundtrack_1]])
+end
+
+function jekan_music_track2()
+-- s_play([[characters_voice\scenario\jekan\jekan_soundtrack_2]])
+end
+
+function jekan_music_track3()
+-- s_play([[characters_voice\scenario\jekan\jekan_soundtrack_5]])
+end
+
+function jekan_music_track4()
+-- s_play([[characters_voice\scenario\jekan\jekan_soundtrack_6]])
+end
+
+
+function psy_weapon_target_hit()
+s_play([[weapons\psy_gun_target_hit]])
+end
+
+
+function foto_click()
+s_play([[characters_voice\scenario\foto_click]])
+end
+
+
+function dar_build_guard_alarm()
+s_play([[characters_voice\scenario\alarm]])
+end
+
+
+function bar_bus_zone_death()
+s_play([[ambient\random\rnd_fallscream]])
+end
+
+
+function raciya_sound()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+s_play([[detectors\contact_2]])
+end
+if rnd == 2 then 
+s_play([[detectors\contact_3]])
+end
+if rnd == 3 then 
+s_play([[detectors\contact_4]])
+end
+if rnd == 4 then 
+s_play([[detectors\contact_5]])
+end
+end
+
+
+function bar_karlik_meet_sound()
+s_play([[characters_voice\scenario\karlik_talk1]])
+end
+
+function cheburashka_use()
+s_play([[characters_voice\scenario\cheburashka_use]])
+end
+
+function habar_use()
+s_play([[interface\inv_belt]])
+end
+
+
+function montirovka_use()
+s_play([[material\large-weapon\collide\large_metal_trash_1]])
+end
+
+
+function actor_intoxication1()
+s_play([[characters_voice\human_03\stalker\states\health\health_1]])
+end
+
+function actor_intoxication2()
+s_play([[addon\actor_intoxication]])
+end
+
+
+function actor_smoking()
+s_play([[characters_voice\human_01\stalker\states\idle\idle_34]])
+end
+
+
+function guitar_use()
+s_play([[characters_voice\scenario\jekan\jekan_guitar_play_1]])
+end
+
+function miln_strangers_alarm()
+s_play([[characters_voice\human_03\stalker\reactions\box\box_2]])
+end
+
+
+function faint_npc_reanimation_snd()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_02\newbie\help\wounded\medkit_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_02\newbie\help\wounded\medkit_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_02\newbie\help\wounded\medkit_3]])
+end
+end
+
+function faint_npc_finish_snd()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_02\newbie\help\wounded\kill_wounded_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_02\newbie\help\wounded\kill_wounded_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_02\newbie\help\wounded\kill_wounded_3]])
+end
+end
+
+
+function yan_burers_sniper_check()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\pri\followers_btr_phrase2_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\scenario\yan_sold_sniper_target_check]])
+end
+end
+
+function yan_burers_sniper_kill()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\pri\followers_kill2]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\scenario\pri\followers_kill3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\scenario\pri\followers_kill5]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\scenario\pri\followers_kill7]])
+end
+end
+
+
+function burers_talking()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[monsters\burer\burer_idle_0]])
+end
+if rnd == 2 then 
+s_play([[monsters\burer\burer_idle_1]])
+end
+if rnd == 3 then 
+s_play([[monsters\burer\burer_idle_2]])
+end
+end
+
+function burer_king_punish()
+s_play([[characters_voice\scenario\burer_kingdom\burer_talk_7]])
+end
+
+
+function ros_stroyka_mobs_atack_start()
+s_play([[characters_voice\scenario\ros_stroyka_mobs_atack_start]])
+end
+
+
+function x16brain_hello()
+s_play([[characters_voice\scenario\x16_brain_hello]])
+end
+
+
+function saharov_medbox_snd()
+s_play([[device\decoder]])
+end
+
+
+function actor_sleep_place_use_snd()
+rnd = math.random(1, 10)
+if rnd == 1 then 
+s_play([[characters_voice\human_02\newbie\states\idle\idle_18]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_16]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_18]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_03\military\states\fatique\fatique_1]])
+end
+if rnd == 5 then 
+end
+if rnd == 6 then 
+end
+if rnd == 7 then 
+end
+if rnd == 8 then 
+end
+if rnd == 9 then 
+end
+if rnd == 10 then 
+end
+end
+
+
+function sleeping_sounds()
+rnd = math.random(1, 8)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_3]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_4]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_5]])
+end
+if rnd == 6 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_6]])
+end
+if rnd == 7 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_7]])
+end
+if rnd == 8 then 
+s_play([[characters_voice\human_01\newbie\states\sleep\sleep_8]])
+end
+end
+
+
+function mil_doll_freak_key_look_snd()
+s_play([[characters_voice\woman\fight\searching_enemy\search_3]])
+end
+
+function mil_freak_water_action_snd1()
+s_play([[characters_voice\human_03\stalker\states\starvation\starvation_3]])
+end
+
+function mil_freak_water_action_snd2()
+s_play([[soundtrack\agroprom_following_krot]])
+end
+
+
+function mil_village_shkaf_destroy()
+s_play([[material\wood\wood_crash1_hl2]])
+end
+
+function radio_noice()
+s_play([[ambient\x16\x16_hum_2]])
+end
+
+function mil_actor_undream_snd()
+s_play([[characters_voice\human_01\newbie\states\idle\idle_16]])
+end
+
+
+function actor_shock()
+s_play([[affects\hit_fist]])
+end
+
+
+
+
+function af_pult_use()
+s_play([[anomaly\anomaly_gravy_blast00]])
+end
+
+
+function artefacts_fire_sound()
+s_play([[characters_voice\scenario\sound_fire]])
+end
+
+function artefacts_stone_sound()
+s_play([[ambient\rnd_outdoor\rnd_rock4]])
+end
+
+function artefacts_steel_sound()
+s_play([[material\large_metal_trash\collide\large_metal_trash_3]])
+end
+
+function artefacts_veget_sound()
+s_play([[ambient\waterdrop2]])
+end
+
+function artefacts_glass_sound()
+s_play([[material\bottle\collide\hithard01hl]])
+end
+
+function artefacts_neutral_sound()
+rnd = math.random(1, 5)
+if rnd == 1 then 
+s_play([[characters_voice\human_03\military\reactions\story\yes_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_03\military\reactions\story\yes_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_03\military\reactions\story\yes_3]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_03\military\reactions\story\yes_4]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_03\military\reactions\story\yes_5]])
+end
+end
+
+
+function glass_break()
+s_play([[material\bottle\collide\bottle_break_1]])
+end
+
+function actor_blin()
+s_play([[characters_voice\human_03\newbie\reactions\nothing\nothing_6]])
+end
+
+
+function arts_activation_interface_acess()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+s_play([[characters_voice\human_03\military\talk\rejection\rejection_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_03\military\talk\rejection\rejection_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_03\military\talk\rejection\rejection_3]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_03\military\talk\rejection\rejection_4]])
+end
+end
+
+
+function pri_detsad_wonderdoll_secret_port_snd()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\woman\fight\searching_enemy\search_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\talk\use\no_weapon_3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\threat\drop_weapon\dropweapon_3]])
+end
+end
+
+
+
+function geiger()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[detectors\geiger_1]])
+end
+if rnd == 2 then 
+s_play([[detectors\geiger_2]])
+end
+if rnd == 3 then 
+s_play([[detectors\geiger_3]])
+end
+end
+
+
+function tinnitus()
+s_play([[affects\zvon]])
+end
+
+function medkomplekt_use()
+s_play([[addon\inv_bandage]])
+end
+
+
+function thanks_for_medkit()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_02\newbie\help\wounded_thanx\thanx_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_02\newbie\help\wounded_thanx\thanx_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_02\newbie\help\wounded_thanx\thanx_3]])
+end
+end
+
+
+
+function psy_cat_sounds()
+rnd = math.random(1, 12)
+if rnd == 1 then 
+s_play([[monsters\cat\cat_aggressive_5]])
+end
+if rnd == 2 then 
+s_play([[monsters\mew]])
+end
+if rnd == 3 then 
+s_play([[monsters\cat\cat_steal]])
+end
+if rnd == 4 then 
+s_play([[monsters\cat\cat_threaten]])
+end
+if rnd == 5 then 
+s_play([[ambient\rnd_outdoor\rnd_noise]])
+end
+if rnd == 6 then 
+s_play([[affects\zvon]])
+end
+if rnd == 7 then 
+s_play([[ambient\rnd_outdoor\rnd_noise_2]])
+end
+if rnd == 8 then 
+s_play([[ambient\rnd_outdoor\rnd_noise_3]])
+end
+if rnd == 9 then 
+s_play([[ambient\random\rnd_moan1]])
+end
+if rnd == 10 then 
+s_play([[ambient\random\rnd_moan2]])
+end
+if rnd == 11 then 
+s_play([[ambient\random\rnd_moan4]])
+end
+if rnd == 12 then 
+s_play([[ambient\random\rnd_moan5]])
+end
+end
+
+
+function actor_need_sleep()
+s_play([[addon\sleepy]])
+end
+
+
+function actor_deadmask2use_snd()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_02\newbie\fight\enemy_hit\enemy_hit_3]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_02\newbie\fight\enemy_hit\enemy_hit_5]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_02\newbie\fight\enemy_down\enemy_down_6]])
+end
+end
+
+
+
+function polter_voice_alarm()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[monsters\controller_act\controller_attack_3]])
+end
+if rnd == 2 then 
+s_play([[monsters\controller_act\controller_attack_4]])
+end
+if rnd == 3 then 
+s_play([[monsters\controller_act\controller_attack_9]])
+end
+end
+
+
+function polter_voice_kill()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[monsters\controller_act\controller_attack_2]])
+end
+if rnd == 2 then 
+s_play([[monsters\controller_act\controller_attack_5]])
+end
+if rnd == 3 then 
+s_play([[monsters\controller_act\controller_attack_7]])
+end
+end
+
+
+function predb_village_trap_snd1()
+s_play([[monsters\controller_act\controller_attack_8]])
+end
+
+function predb_village_trap_snd2()
+s_play([[monsters\controller_act\bet_laugh1]])
+end
+
+function predb_village_trap_snd3()
+s_play([[monsters\controller_act\controller_attack_6]])
+end
+
+
+function predb_hermit_morphine_ask()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\hermit_talk_3]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\scenario\hermit_talk_4]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\scenario\hermit_talk_6]])
+end
+end
+
+function predb_hermit_stalker_talk()
+s_play([[characters_voice\scenario\hermit_talk_2]])
+end
+
+
+function tutor_book_read_sounds1()
+rnd = math.random(1, 3)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_7]])
+end
+end
+
+function tutor_book_read_sounds2()
+rnd = math.random(1, 5)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_4]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_5]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_6]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\newbie\reactions\story\laughter_1]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_7]])
+end
+end
+
+
+function save_game_replics1()	-- при плохой карме(недовольство);
+rnd = math.random(1, 11)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_12]])	--	ого, кажется я опять мозолю натёр
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_13]])	--	чёрт, опять это сволочь с патронами кинула
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_14]])	--	взять и послать эту Зону к такой-то матери...
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\newbie\talk\use\abuse_1]])	--	ох и достал!
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_01\newbie\talk\use\abuse_2]])	--	слыш, ты задолбал уже!
+end
+if rnd == 6 then 
+s_play([[characters_voice\human_01\newbie\talk\use\no_fight_3]])	--	та потом, всё потом.
+end
+if rnd == 7 then 
+s_play([[characters_voice\human_01\newbie\talk\use\no_fight_4]])	--	ну чё пристал?
+end
+if rnd == 8 then 
+s_play([[characters_voice\human_01\newbie\talk\use\no_fight_5]])	--	не сейчас!
+end
+if rnd == 9 then 
+s_play([[characters_voice\human_01\newbie\talk\use\no_fight_6]])	--	сейчас? Ты чё, очумел, что ли?
+end
+if rnd == 10 then
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_3]])	--	да хорош уже, комик.
+end
+if rnd == 11 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_9]])	--	завязывый, ладно? Надоело.
+end
+end
+
+
+function save_game_replics2()	-- при хорошей карме(доволен);
+rnd = math.random(1, 10)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_5]])	--	молодец.
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_15]])	--	нет, всё-таки обалденное место, нигде больше такого нет.
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\talk\intros\intro_music_6]])	--	нееет, без музыки тут грустно.
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\newbie\help\wounded_thanx\thanx_1]])	--	спасибо огромное.
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_01\newbie\states\idle\idle_3]])	--	эх, сальца бы хорошего сейчас, с чёрным хлебушком свежим да с чесночком.
+end
+if rnd == 6 then 
+s_play([[characters_voice\human_01\newbie\reactions\music\reaction_music_1]])	--	да, это  в точку.
+end
+if rnd == 7 then 
+
+end
+if rnd == 8 then 
+
+end
+if rnd == 9 then 
+
+end
+if rnd == 10 then 
+
+end
+end
+
+
+function actor_af_brain_use_snd()
+rnd = math.random(1, 5)
+if rnd == 1 then 
+s_play([[characters_voice\human_02\newbie\fight\enemy_hit\enemy_hit_2]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_02\newbie\fight\enemy_hit\enemy_hit_3]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_02\newbie\fight\enemy_hit\enemy_hit_5]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_02\newbie\fight\fire\fire_6]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\human_02\newbie\fight\fire\fire_5]])
+end
+end
+
+
+
+function wonderdoll_tree_bags_habar1()
+rnd = math.random(1, 5)
+if rnd == 1 then 
+	wonderdoll_sucess_tip18()
+end
+if rnd == 2 then 
+	wonderdoll_sucess_tip20()
+end
+if rnd == 3 then 
+	wonderdoll_sucess_tip33()
+end
+if rnd == 4 then 
+	wonderdoll_sucess_tip34()
+end
+if rnd == 5 then 
+	wonderdoll_sucess_tip47()
+end
+end
+
+
+function wonderdoll_tree_bags_habar2()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+	wonderdoll_sucess_tip22()
+end
+if rnd == 2 then 
+	wonderdoll_sucess_tip27()
+end
+if rnd == 3 then 
+	wonderdoll_sucess_tip46()
+end
+if rnd == 4 then 
+	wonderdoll_sucess_tip61()
+end
+end
+
+
+function actor_rage_snd()
+rnd = math.random(1, 4)
+if rnd == 1 then 
+s_play([[characters_voice\human_01\newbie\fight\attack\attack_many_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\human_01\newbie\fight\attack\attack_many_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\human_01\newbie\fight\attack\attack_many_3]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\human_01\newbie\fight\attack\attack_many_4]])
+end
+end
+
+
+function actor_anomal_lamp_use()
+s_play([[characters_voice\human_01\newbie\reactions\joke\reaction_joke_6]])
+end
+
+
+function yan_camerer_hello()
+rnd = math.random(1, 2)
+if rnd == 1 then 
+s_play([[characters_voice\scenario\yan_camerer_hello_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\scenario\yan_camerer_hello_2]])
+end
+end
+
+function yan_camerer_hello2()
+s_play([[characters_voice\scenario\yan_camerer_good_work]])
+end
+
+
+function wonderdoll_tasks()
+local rnd = math.random(1, 4)
+if rnd == 1 then 
+s_play([[characters_voice\woman\fight\attack\attack_one_2]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\fight\cover_fire\cover_fire_4]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\help\wounded\kill_wounded_1]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\woman\fight\threat\threat_distant_3]])
+end
+end
+
+function wonderdoll_tasks_end1()
+local rnd = math.random(1, 5)
+if rnd == 1 then 
+s_play([[characters_voice\woman\reactions\music\reaction_music_1]])
+end
+if rnd == 2 then 
+s_play([[characters_voice\woman\states\idle\idle_2]])
+end
+if rnd == 3 then 
+s_play([[characters_voice\woman\states\idle\idle_6]])
+end
+if rnd == 4 then 
+s_play([[characters_voice\woman\states\idle\idle_9]])
+end
+if rnd == 5 then 
+s_play([[characters_voice\woman\talk\use\no_default_5]])
+end
+end
+
+
+function wonderdoll_tasks_end2()
+s_play([[characters_voice\human_01\stalker\reactions\story\yes_2]])
+end

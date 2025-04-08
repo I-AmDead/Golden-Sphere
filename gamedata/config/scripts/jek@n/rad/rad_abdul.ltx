@@ -1,0 +1,140 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+rad_abdul_delete} walker@9, {+x10_button_switch} remark@escape, {+rad_abdul_rest} walker@7, walker@start
+combat_ignore = combat_ignore
+threshold = threshold@rad_abdul_threshold
+on_death = death
+
+[walker@start]
+path_walk = rad_abdul_walk1
+path_look = rad_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 10000 | remark@1 %=make_invulnerable%
+
+[remark@1]
+snd = rad_abdul_actor_check
+anim = hello
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+rad_secret_talk1} walker@1_1 
+
+[walker@1_1]
+path_walk = rad_abdul_walk1
+path_look = rad_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 9000 | walker@1_2 %=play_snd_on_me(characters_voice\scenario\rad_abdul_actor_check_3)%
+
+[walker@1_2]
+path_walk = rad_abdul_walk1
+path_look = rad_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+rad_abdul_goto_forest} walker@2
+
+[walker@2]
+path_walk = rad_abdul_walk2
+path_look = rad_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@3 %=rad_ambush_spawns1%
+
+[walker@3]
+path_walk = rad_abdul_walk2
+path_look = rad_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 1000 | walker@4 %=hit_obj(8843:link:1:0) =hit_obj(8843:link:1:0) =hit_obj(8843:link:1:0)%
+
+[walker@4]
+path_walk = rad_abdul_walk2
+path_look = rad_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 100 | walker@5 %=rad_ambush_spawns2 =health_down%
+
+[walker@5]
+path_walk = rad_abdul_walk2
+path_look = rad_abdul_look2_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+rad_ambush_agent1_dead +rad_ambush_agent2_dead +rad_ambush_agent3_dead +rad_ambush_agent4_dead} walker@6
+
+[walker@6]
+path_walk = rad_abdul_walk2
+path_look = rad_abdul_look2_1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+rad_abdul_rest} walker@7
+
+
+; После взрыва перебрались в будку и отдыхаем:
+[walker@7]
+path_walk = rad_abdul_walk3
+path_look = rad_abdul_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+rad_fenix_dead} %=delme2%
+
+
+; Выбрались на поверхность и готовы сваливать:
+[remark@escape]
+;snd = rad_abdul_actor_check
+anim = threat
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 2000|walker@8 %=make_invulnerable =send_tip(rad_abdul_escape_tip2:stalker) =add_self_spot(green_location:rad_abdul_mark_text) =play_snd_on_me(characters_voice\human_03\stalker\threat\back_off\backoff_3)%
+
+[walker@8]
+path_walk = rad_abdul_walk4
+path_look = rad_abdul_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived|walker@9 %+rad_abdul_free%
+
+[walker@9]
+path_walk = rad_abdul_walk5
+path_look = rad_abdul_look5
+danger = danger_condition
+combat_ignore_cond = always
+on_signal       = arrived|nil %+rad_abdul_goto_pri =delme2%
+on_info = {+rad_abdul_delete} %=delme2%
+on_info2 = {+x10_button_switch} %=delme2%
+
+
+
+
+[threshold@rad_abdul_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+rad_abdul_dead%
+

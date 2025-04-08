@@ -1,0 +1,103 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+musorka_monstr_finish} walker@after_monstr2, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = sanya_walk1
+path_look = sanya_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = sanya_walk1
+path_look = sanya_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+village_nighthunter_task} walker@to_ambush
+on_info2 = {+esc_village_dog_killed_by_actor} walker@enemy1
+
+
+; Идем на кровососа:
+[walker@to_ambush]
+path_walk = sanya_walk2
+path_look = sanya_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@ambush %+village_stalkers_on_pos =play_snd_from_obj(8067:script_sound\reactions\hear_something\soldier\soldier_hear_6)%
+
+[walker@ambush]
+path_walk = sanya_walk2
+path_look = sanya_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+musorka_monstr_spawn} walker@to_monstr
+
+[walker@to_monstr]
+path_walk = esc_musorka_point
+path_look = esc_musorka_point
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+musorka_monstr_dead} walker@after_monstr1 %=play_snd_from_obj(8067:characters_voice\human_03\stalker\reactions\dead_mutant\dead_mutant_3)%
+
+[walker@after_monstr1]
+path_walk = esc_musorka_point
+path_look = esc_musorka_point
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+;on_game_timer = 1000 | walker@after_monstr2
+on_info = {+musorka_monstr_finish} walker@after_monstr2
+
+[walker@after_monstr2]
+path_walk = sanya_walk1
+path_look = sanya_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+esc_village_dog_killed_by_actor} walker@enemy1
+
+
+
+; Обида на ГГ за то, что он убил Бобика:
+[walker@enemy1]
+path_walk = sanya_walk1
+path_look = sanya_look1
+meet = no_meet
+on_actor_dist_le = 5 | walker@enemy2
+
+[walker@enemy2]
+path_walk = sanya_walk1
+path_look = sanya_look1
+meet = no_meet
+combat_ignore_cond = never
+
+
+
+
+
+[meet]
+meet_state = 3| idle
+meet_state = 3| idle
+victim = 3| nil
+victim_wpn = 3| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+sanya_dead%, {=killed_by_actor} %+sanya_dead +sanya_killed_by_actor%
+

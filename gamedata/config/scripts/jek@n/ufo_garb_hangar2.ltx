@@ -1,0 +1,16 @@
+[collide]
+ignore_static
+
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_timer = 1|ph_force
+ 
+[ph_force]
+force = 2500
+time = 50000
+delay = 0
+point = garb_hangar_ufo_point_atack
+point_index = 0
+on_info = {=garb_ufo_on_heap} %=doll_ufo_atack_alarm =spawn_garb_hangar_ufo_static2 =delme%

@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+<!--general_scientist-->
+	<specific_character id="general_scientist" team_default = "1">
+		<name>Главный учёный</name>
+		<icon>ui_npc_secret_npc</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>general_scientist</class>
+		<community>ecolog</community> 
+
+		<rank>821</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_01\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\ucheniy\ucheniy_1_strong</visual>
+		<supplies>
+			[spawn] \n
+
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>general_scientist_dialog1</start_dialog>
+
+	</specific_character>
+
+<!--pri_actor_mind-->
+	<specific_character id="pri_actor_mind" team_default = "1">
+		<name>Жекан</name>
+		<icon>ui_npc_u_actor</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>pri_actor_mind</class>
+		<community>stalker</community>
+
+		<rank>421</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\jekan</visual>
+		<supplies>
+			[spawn] \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>actor_clone_dialog1</start_dialog>
+
+	</specific_character>
+
+<!--pri_abdul-->
+	<specific_character id="pri_abdul" team_default = "1">
+		<name>Абдуль</name>
+		<icon>ui_npc_missing</icon>
+		<bio>esc_killer_specnaz_bio</bio>
+
+		<class>pri_abdul</class>
+		<community>stalker</community>
+
+		<rank>696</rank>
+		<reputation>0</reputation>
+		<money min="1000" max="8000" infinitive="0"></money>
+
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<panic_treshold>0</panic_treshold>
+
+		<visual>actors\pmc3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_sks = 1, scope \n
+			ammo_7.62x39_ap \n
+			wpn_gsh \n
+			ammo_9x19_fmj \n
+			device_torch \n
+			wpn_binoc \n
+		</supplies>
+		<actor_dialog>abdul_anomal_radio_dialog</actor_dialog>
+		<actor_dialog>abdul_wishmaster_dialog</actor_dialog>
+
+		<start_dialog>pri_abdul_dialog1</start_dialog>
+		<actor_dialog>pri_abdul_dialog1_1</actor_dialog>
+		<actor_dialog>pri_abdul_dialog2</actor_dialog>
+		<actor_dialog>pri_abdul_dialog3</actor_dialog>
+
+	</specific_character>
+
+
+<!--pri_abdul_sniper-->
+	<specific_character id="pri_abdul_sniper" team_default = "1">
+		<name>Ангел</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_sniper_bio</bio>
+
+		<class>pri_abdul_sniper</class>
+		<community>headhunter</community>
+
+		<rank>430</rank>
+		<reputation>-83</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>		
+		<visual>actors\ubcs2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_awm \n
+			ammo_7.62x51_fmj \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>headhunters_dialog1</start_dialog>
+
+	</specific_character>
+
+<!--pri_agent_lider-->
+	<specific_character id="pri_agent_lider" team_default = "1">
+		<name>Апостол</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>pri_agent_lider</class>
+		<community>headhunter</community>
+
+		<rank>621</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\pmc4</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+			pri_agents_base_key \n
+			pri_stadion_key \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<actor_dialog>pri_agent_lider_dialog1</actor_dialog>
+		<actor_dialog>pri_agent_lider_dialog2</actor_dialog>
+		<actor_dialog>pri_agent_lider_dialog3</actor_dialog>
+
+	</specific_character>
+
+<!--pri_stadion_agent-->
+	<specific_character id="pri_stadion_agent" team_default = "1">
+		<name>Послушник</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>pri_stadion_agent</class>
+		<community>headhunter</community>
+
+		<rank>321</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\ubcs2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_psy \n
+			ammo_psy \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+
+	</specific_character>
+
+
+<!--aes_last_agent-->
+	<specific_character id="aes_last_agent" team_default = "1">
+		<name>Харон</name>
+		<icon>ui_npc_missing</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>sim_killer_general_bio</bio>
+
+		<class>aes_last_agent</class>
+		<community>headhunter</community>
+
+		<rank>321</rank>
+		<reputation>-63</reputation>
+		
+		<snd_config>characters_voice\human_03\military\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\ecolog\stalker_ecolog</visual>
+		<supplies>
+			[spawn] \n
+			device_torch \n
+			wpn_binoc \n
+		#include "gameplay\character_agents_loot.xml"
+		</supplies>
+		<start_dialog>aes_last_agent_dialog1</start_dialog>
+
+	</specific_character>
+
+</xml>

@@ -1,0 +1,53 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_remark@start
+on_death = mob_death
+
+
+[mob_remark@start]
+anim = stand_threaten_0
+target = nil
+braindead = true
+on_timer = 1 | mob_remark@dialog1 %=dar_chimera_werwolf_release%
+
+
+[mob_remark@dialog1]
+anim = stand_scared_0
+target = nil
+braindead = true
+on_actor_dist_le = 2 | mob_remark@dialog2 %=start_izlom_pervert_dialog =play_snd_from_obj(8360:monsters\zombie\zombie_threaten)%
+on_info = {+dar_izlom_enemy} mob_home@1 %=close_dialog%
+
+[mob_remark@dialog2]
+anim = stand_threaten_0
+target = nil
+braindead = true
+on_actor_dist_ge = 3 | mob_remark@dialog3 %=close_dialog%
+on_info = {+dar_izlom_enemy} mob_home@1 %=close_dialog%
+
+[mob_remark@dialog3]
+anim = stand_threaten_0
+target = nil
+braindead = true
+on_timer = 1000 | mob_remark@dialog1
+on_info = {+dar_izlom_enemy} mob_home@1 %=close_dialog%
+
+
+
+
+
+; Обиделись на игрока:
+[mob_home@1]
+path_home = dar_werwolf_point
+home_min_radius = 5
+home_max_radius = 10
+;braindead = true
+
+
+[mob_death]
+on_info = %=dar_izlom_werwolf_transformation%
+
+
+

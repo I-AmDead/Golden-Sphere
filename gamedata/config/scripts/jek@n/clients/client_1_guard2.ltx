@@ -1,0 +1,131 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {=actor_on_level(l02_garbage)} walker@garbage, {=actor_on_level(l03_agroprom)} walker@agr, {=actor_on_level(l04_darkvalley)} walker@dar
+threshold = threshold
+
+; Свалка:
+[walker@garbage]
+path_walk = client1guard2_garb_walk1
+path_look = client1guard2_garb_look1
+on_timer = 1 | walker@garbage_1 %=make_invulnerable =disable_trading%
+
+[walker@garbage_1]
+path_walk = client1guard2_garb_walk1
+path_look = client1guard2_garb_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@garbage_2
+
+[walker@garbage_2]
+path_walk = client1guard2_garb_walk1
+path_look = client1guard2_garb_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+notebook_client1task1_reward} walker@garbage_3
+on_info2 = {+notebook_client1task2_reward} walker@garbage_3
+on_info3 = {+notebook_client1task3_reward} walker@garbage_3
+
+[walker@garbage_3]
+path_walk = client1_garb_walk2
+path_look = client1_garb_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | %+garb_hue_heli_back3 =delme%
+
+
+; Агро:
+[walker@agr]
+path_walk = client1guard2_agr_walk1
+path_look = client1guard2_agr_look1
+on_timer = 1 | walker@agr_1 %=make_invulnerable =disable_trading%
+
+[walker@agr_1]
+path_walk = client1guard2_agr_walk1
+path_look = client1guard2_agr_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@agr_2
+
+[walker@agr_2]
+path_walk = client1guard2_agr_walk1
+path_look = client1guard2_agr_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+notebook_client1task1_reward} walker@agr_3
+on_info2 = {+notebook_client1task2_reward} walker@agr_3
+on_info3 = {+notebook_client1task3_reward} walker@agr_3
+
+[walker@agr_3]
+path_walk = client1_agr_walk2
+path_look = client1_agr_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | %+agr_hue_heli_back3 =delme%
+
+
+; Долина:
+[walker@dar]
+path_walk = client1guard2_dar_walk1
+path_look = client1guard2_dar_look1
+on_timer = 1 | walker@dar_1 %=make_invulnerable =disable_trading%
+
+[walker@dar_1]
+path_walk = client1guard2_dar_walk1
+path_look = client1guard2_dar_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@dar_2
+
+[walker@dar_2]
+path_walk = client1guard2_dar_walk1
+path_look = client1guard2_dar_look1
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+notebook_client1task1_reward} walker@dar_3
+on_info2 = {+notebook_client1task2_reward} walker@dar_3
+on_info3 = {+notebook_client1task3_reward} walker@dar_3
+
+[walker@dar_3]
+path_walk = client1_dar_walk2
+path_look = client1_dar_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | %+dar_hue_heli_back3 =delme%
+
+
+[threshold]
+max_ignore_distance = 5
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+

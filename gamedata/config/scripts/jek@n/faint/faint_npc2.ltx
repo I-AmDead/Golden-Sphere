@@ -1,0 +1,76 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+yan_faint_on_base} kamp@base, remark@1
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[remark@1]
+anim = polulezha
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000 | remark@2 %=play_snd_from_obj(8748:characters_voice\human_01\newbie\help\wounded_heavy\help_12)%
+
+[remark@2]
+anim = wounded_heavy_3
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 12000 | remark@3 %=play_snd_from_obj(8748:characters_voice\human_01\newbie\help\wounded_heavy\help_10)%
+
+[remark@3]
+anim = wait
+target = actor
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 9000 | remark@4 %=play_snd_from_obj(8748:characters_voice\scenario\newbie_on_garbage\newbie_on_garbage_1)%
+on_info = {+fyan_faint_on_base} kamp@base
+
+[remark@4]
+anim = hello
+target = actor
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+yan_faint_on_base} kamp@base
+
+
+[kamp@base]
+center_point = yan_solds_bunker_koster_point
+radius = 2 
+def_state_moving = walk
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+actor_yan_hunter_habar_trap} %=delme%
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) =delme2%
+
+[death]
+on_info = %+faint_npc2_dead%
+
+
+
+
+
+
+

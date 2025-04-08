@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<script_magnitofon>	
+	<ramka x="220" y="170" width="900" height="700" stretch="1">
+		<texture x="0" y="0" width="1020" height="626">ui\bowler_intrface</texture>
+	</ramka>
+	<name x="280" y="185" width="370" height="35">
+		<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Магнитофон</text>
+	</name>
+	<text1 x="300" y="240" width="380" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Чтобы прослушать кассету, нажмите на соответствующую кнопку.</text>
+	</text1>
+
+
+
+	<btn_1 x="330" y="320" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 1</text>
+	</btn_1>
+	<btn_2 x="330" y="360" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 2</text>
+	</btn_2>
+	<btn_3 x="330" y="400" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 3</text>
+	</btn_3>
+	<btn_4 x="330" y="440" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 4</text>
+	</btn_4>
+	<btn_5 x="330" y="480" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 5</text>
+	</btn_5>
+
+	<btn_6 x="500" y="320" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 6</text>
+	</btn_6>
+	<btn_7 x="500" y="360" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 7</text>
+	</btn_7>
+	<btn_8 x="500" y="400" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 8</text>
+	</btn_8>
+	<btn_9 x="500" y="440" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 9</text>
+	</btn_9>
+	<btn_10 x="500" y="480" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Кассета 10</text>
+	</btn_10>
+
+
+
+	<btn_quit x="310" y="600" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Выход</text>
+	</btn_quit>
+
+
+</script_magnitofon>
+

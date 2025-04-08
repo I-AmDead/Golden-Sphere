@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_use = %+af_pumice_gathered =give_items_to_actor(af_pumice) =delme%
+on_timer = 5000|ph_idle@2 %=play_pumice_particle_on_me%
+
+[ph_idle@2]
+on_use = %+af_pumice_gathered =give_items_to_actor(af_pumice) =delme%
+on_timer = 5000|ph_idle@1 %=play_pumice_particle_on_me%

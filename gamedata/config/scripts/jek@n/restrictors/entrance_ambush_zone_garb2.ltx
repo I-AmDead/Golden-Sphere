@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@1
+ 
+[sr_idle@1]
+on_actor_inside = {=carma_low} sr_idle@2 %=spawn_dar_entrance_ambush%
+
+[sr_idle@2]
+;on_info = {=actor_on_level(l04_darkvalley)} sr_idle@3
+on_actor_dist_ge_nvis = 50 | sr_idle@3
+
+[sr_idle@3]
+on_actor_outside = sr_idle@1

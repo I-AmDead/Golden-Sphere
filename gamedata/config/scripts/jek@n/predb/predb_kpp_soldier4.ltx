@@ -1,0 +1,63 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+threshold = threshold@predb_kpp_soldier4_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kpp_soldier4_walk1
+path_look = predb_kpp_soldier4_look1
+on_info = {+predb_kpp_fight_start} walker@shooting
+
+[walker@shooting]
+path_walk = predb_kpp_soldier4_walk1
+path_look = predb_kpp_soldier4_shoot_kontrab
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+predb_kpp_kontrab_atacked} camper@idle %=set_enemies(8635:8636:8637)%
+on_info2 = {+predb_kpp_soldiers_atacked} camper@idle %=set_enemies(8635:8636:8637) =killactor%
+
+
+
+
+[camper@idle]
+path_walk = predb_kpp_soldier4_walk1
+path_look = predb_kpp_soldier4_look1
+;sniper = true
+def_state_campering = specnaz
+def_state_campering_fire = specnaz
+radius = 4
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+predb_kpp_fight_start} %=set_enemies(8635:8636:8637)%
+
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 80
+ignore_distance_corpse = 0
+
+[threshold@predb_kpp_soldier4_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {-predb_kpp_soldiers_atacked =hit_by_actor} %+predb_kpp_soldiers_atacked%
+
+[death]
+on_info = {=killed_by_actor} %+predb_kpp_soldier4_dead +predb_kpp_soldiers_atacked%, {!killed_by_actor} %+predb_kpp_soldier4_dead%
+

@@ -1,0 +1,141 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_meet = meet
+on_hit = hit
+threshold = threshold@dar_woman_threshold
+trade = misc\trade_nothing.ltx
+
+[walker@start]
+path_walk = dar_suicider_woman_walk5
+path_look = dar_suicider_woman_look5
+on_timer = 1 | walker@idle1 %=make_invulnerable =disable_trading%
+
+
+[walker@idle1]
+path_walk = dar_suicider_woman_walk5
+path_look = dar_suicider_woman_look5
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+on_info = {+dar_woman_goto_ovrag} walker@idle2
+
+[walker@idle2]
+path_walk = dar_suicider_woman_walk6
+path_look = dar_suicider_woman_look6
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+meet = no_meet
+on_signal       = arrived | walker@idle3
+
+
+; В овраге:
+[walker@idle3]
+path_walk = dar_suicider_woman_walk7
+path_look = dar_suicider_woman_look7
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+meet = no_meet
+on_signal       = arrived | walker@idle4 %+dar_woman_see_the_anomaly%
+
+[walker@idle4]
+path_walk = dar_suicider_woman_walk7
+path_look = dar_suicider_woman_look7
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sneak_run_no_wpn
+def_state_moving2 = sneak_run_no_wpn
+def_state_moving3 = sneak_run_no_wpn
+on_info = {+dar_woman_goto_tree} walker@idle5 %=spawn_dar_ovrag_bloodsukers2%
+
+; Выскочило стадо тварей. Орём...
+[walker@idle5]
+path_walk = dar_suicider_woman_walk7
+path_look = dar_suicider_woman_look7
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000 | walker@idle6 %=play_snd_from_obj(8342:characters_voice\woman\states\panic_monster\panic_monster_4) =make_invulnerable%
+
+
+; Вбегаем в телепорт и пропадаем:
+[walker@idle6]
+path_walk = dar_suicider_woman_walk8
+path_look = dar_suicider_woman_look8
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+dar_woman_stolen} walker@end
+
+[walker@end]
+path_walk = dar_suicider_woman_walk8
+path_look = dar_suicider_woman_look8
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@end2 %=remove_with_teleport%
+
+[walker@end2]
+path_walk = dar_suicider_woman_walk8
+path_look = dar_suicider_woman_look8
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 100 | %=delme2%
+
+
+
+
+
+
+
+
+[threshold@dar_woman_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+
+[meet]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) +dar_suicider_woman_dead =delme2%
+
+[death]
+on_info = %+dar_suicider_woman_dead +dar_woman_stolen%
+

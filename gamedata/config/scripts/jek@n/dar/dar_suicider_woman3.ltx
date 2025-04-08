@@ -1,0 +1,203 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+dar_woman_in_vagon} walker@vagon, walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_meet = meet
+on_hit = hit
+trade = misc\trade_nothing.ltx
+threshold = threshold
+
+[walker@start]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9
+on_timer = 1 | walker@idle1 %=make_invulnerable%
+
+
+[walker@idle1]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le_nvis = 10 | walker@idle2 %=play_snd_from_obj(8356:characters_voice\woman\talk\use\no_weapon_2)%
+
+[walker@idle2]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_trap_tuschano_atack} walker@idle3 %=unmake_invulnerable%
+
+
+; Сидим и орём, испугавшись тушканов:
+[walker@idle3]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 6000 | walker@idle4 %=play_snd_from_obj(8356:characters_voice\woman\states\panic_monster\panic_monster_4)%
+on_info = {+dar_trap_tuschano1_dead +dar_trap_tuschano2_dead +dar_trap_tuschano3_dead +dar_trap_tuschano4_dead +dar_trap_tuschano5_dead +dar_trap_tuschano6_dead +dar_trap_tuschano7_dead} walker@idle5 %=make_invulnerable%
+
+[walker@idle4]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 6000 | walker@idle3 %=play_snd_from_obj(8356:characters_voice\woman\help\wounded_heavy\help_5)%
+on_info = {+dar_trap_tuschano1_dead +dar_trap_tuschano2_dead +dar_trap_tuschano3_dead +dar_trap_tuschano4_dead +dar_trap_tuschano5_dead +dar_trap_tuschano6_dead +dar_trap_tuschano7_dead} walker@idle5 %=make_invulnerable%
+
+
+
+; Тушканы убиты:
+[walker@idle5]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_trap_teleports_spawn} walker@idle6 %=play_snd_from_obj(8356:characters_voice\woman\fight\attack\attack_one_1)%
+
+
+
+; Появились живые телепорты
+[walker@idle6]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9_2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | walker@idle7 %=play_snd_from_obj(8356:characters_voice\woman\fight\searching_enemy\search_1)%
+on_info = {-dar_trap_teleports_spawn} walker@idle5
+on_info2 = {+dar_trap_teleport1_dead +dar_trap_teleport2_dead +dar_trap_teleport3_dead} walker@idle8 %=play_snd_from_obj(8356:characters_voice\woman\fight\enemy_down\enemy_down_3)%
+
+[walker@idle7]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9_2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 3000 | walker@idle6 %=play_snd_from_obj(8356:characters_voice\woman\fight\searching_enemy\search_5)%
+on_info = {-dar_trap_teleports_spawn} walker@idle5
+on_info2 = {+dar_trap_teleport1_dead +dar_trap_teleport2_dead +dar_trap_teleport3_dead} walker@idle8 %=play_snd_from_obj(8356:characters_voice\woman\fight\attack\attack_1)%
+
+
+
+; Телепорты уничтожены
+[walker@idle8]
+path_walk = dar_suicider_woman_walk9
+path_look = dar_suicider_woman_look9
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_woman_goto_bridge} walker@idle10 %=atp_controler_health_up%
+
+
+; Начинаем двигаться к убежищу:
+[walker@idle10]
+path_walk = dar_suicider_woman_walk10
+danger = danger_condition
+combat_ignore_cond = always
+;def_state_moving1 = wounded_walk
+;def_state_moving2 = wounded_walk
+;def_state_moving3 = wounded_walk
+meet = no_meet
+on_signal       = arrived | walker@idle11
+
+[walker@idle11]
+path_walk = dar_suicider_woman_walk11
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@bridge %+dar_woman_before_bridge%
+
+[walker@bridge]
+path_walk = dar_suicider_woman_walk11
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+dar_woman_goto_vagon} walker@idle12_1
+
+[walker@idle12_1]
+path_walk = dar_suicider_woman_walk12_1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@idle12
+
+[walker@idle12]
+path_walk = dar_suicider_woman_walk12
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@idle13
+
+[walker@idle13]
+path_walk = dar_suicider_woman_walk13
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@vagon %+dar_woman_in_vagon =make_invulnerable%
+
+
+; И мы в убежище:
+[walker@vagon]
+path_walk = dar_suicider_woman_walk13
+path_look = dar_suicider_woman_look13
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1 | walker@vagon2 %=make_invulnerable%
+
+[walker@vagon2]
+path_walk = dar_suicider_woman_walk13
+path_look = dar_suicider_woman_look13
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[threshold]
+max_ignore_distance = 0
+;ignore_monster = 0
+
+[meet]
+meet_state = 1| idle
+meet_state = 1| idle
+victim = 1| nil
+victim_wpn = 1| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) +dar_suicider_woman_dead =delme2%
+
+[death]
+on_info = %+dar_suicider_woman_dead%
+

@@ -1,0 +1,68 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_camp@1
+on_death = mob_death
+
+
+[mob_camp@1]
+path_home = x16_burer_king_walk1
+path_look = x16_burer_king_look1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {=x16king_on_point6} mob_camp@2_1
+
+[mob_camp@2_1]
+path_home = x16_burer_king_walk1
+path_look = x16_burer_king_look1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_actor_dist_le = 20 | mob_camp@2
+
+
+[mob_camp@2]
+path_home = x16_burer_king_walk1
+path_look = x16_burer_king_look1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_burers_atack} mob_home@5 %=x16burers_hit_from_actor%
+on_actor_dist_le = 2 | mob_camp@3 %=start_burer_king_dialog =play_snd_from_obj(8678:monsters\burer2\burer_attack_3)%
+
+[mob_camp@3]
+path_home = x16_burer_king_walk1
+path_look = x16_burer_king_look1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_burers_atack} mob_home@5 %=x16burers_hit_from_actor%
+on_actor_dist_ge = 3 | mob_camp@4 %=close_dialog%
+
+[mob_camp@4]
+path_home = x16_burer_king_walk1
+path_look = x16_burer_king_look1
+home_min_radius  = 0
+home_max_radius = 0
+braindead = true
+on_info = {+x16_burers_atack} mob_home@5 %=x16burers_hit_from_actor%
+on_timer = 1000 | mob_camp@2
+
+
+; Атакуем ГГ:
+[mob_home@5]
+path_home = x16_burer_king_walk1
+home_min_radius = 1
+home_max_radius = 3
+;braindead = false
+
+
+
+
+
+[mob_death]
+on_info = %+yan_burer_king_dead%
+
+

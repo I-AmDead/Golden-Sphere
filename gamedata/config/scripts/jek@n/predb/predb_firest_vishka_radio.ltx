@@ -1,0 +1,15 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips      = predb_firest_vishka_radio_use
+on_use = {=actor_has_item(predb_radio_part)} ph_idle@2 %=remove_item(predb_radio_part) =play_snd(scripts\remkit\ui_repairweapon_01)%, {!actor_has_item(predb_radio_part)} %=predb_firest_vishka_radio_use_think%
+
+[ph_idle@2]
+on_timer = 1000|ph_idle@3 %=send_tip(predb_firest_vishka_radio_tip1:anomal)%
+
+[ph_idle@3]
+on_timer = 3000|ph_idle@4 %=play_snd_on_me(characters_voice\scenario\radio_noise2)%
+
+[ph_idle@4]
+on_timer = 5000|nil %=send_tip(predb_firest_vishka_radio_tip2:anomal) +predb_firest_radio_peleng%

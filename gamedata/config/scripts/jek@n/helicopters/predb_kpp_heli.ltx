@@ -1,0 +1,244 @@
+[logic]
+active = {+predb_kpp_heli_patrol_start} heli_move@patrol_1, heli_move@waiting
+on_death = death
+
+; Висим за локацией и ждем, пока игрок не вырежет солдат на КПП:
+[heli_move@waiting]
+path_move = predb_kpp_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+kpp_kontrab_goto_hutor} heli_move@kpp1 %=predb_heli_dollhelp%
+
+
+; Охраняем КПП с воздуха:
+[heli_move@kpp1]
+path_move = predb_kpp_heli_point1_1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = false
+immortal = false
+default_velocity = 10
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@kpp2 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {+predb_kpp_heli_patrol_start} heli_move@patrol_1 %=add_self_spot(green_location:predb_kpp_heli_mark_text)%
+
+; Расстреливаем актора на КПП:
+[heli_move@kpp2]
+path_move = predb_kpp_heli_point1_2
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 20
+on_info = {=predb_kpp_heli_actor_lost} heli_move@kpp1
+on_info2 = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+
+
+; Патрулируем локацию:
+[heli_move@patrol_1]
+path_move = predb_kpp_heli_point_patrol1
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 12
+on_info = {=actor_in_firest_tower_zone =actor_has_item(wpn_rpg7) +predb_rpg_info} heli_move@killactor_12 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_1 %=play_snd(helicopter\see_enemy_7)%
+on_info3 = {=predb_heli_zone1} heli_move@patrol_2
+
+
+[heli_move@killactor_1]
+path_move = predb_kpp_heli_point_patrol1kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_1
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+[heli_move@patrol_2]
+path_move = predb_kpp_heli_point_patrol2
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 12
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_2 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_heli_zone2} heli_move@patrol_3
+
+
+[heli_move@killactor_2]
+path_move = predb_kpp_heli_point_patrol2kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_2
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+[heli_move@patrol_3]
+path_move = predb_kpp_heli_point_patrol3
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 12
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_3 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_heli_zone3} heli_move@patrol_4
+
+
+[heli_move@killactor_3]
+path_move = predb_kpp_heli_point_patrol3kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_3
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+[heli_move@patrol_4]
+path_move = predb_kpp_heli_point_patrol4
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 12
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_4 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_heli_zone4} heli_move@patrol_5
+
+
+[heli_move@killactor_4]
+path_move = predb_kpp_heli_point_patrol4kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_4
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+[heli_move@patrol_5]
+path_move = predb_kpp_heli_point_patrol5
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_5 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_heli_zone5} heli_move@patrol_6
+
+
+[heli_move@killactor_5]
+path_move = predb_kpp_heli_point_patrol5kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_5
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+[heli_move@patrol_6]
+path_move = predb_kpp_heli_point_patrol6
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 12
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_6 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_heli_zone6} heli_move@patrol_7
+
+
+[heli_move@killactor_6]
+path_move = predb_kpp_heli_point_patrol6kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_6
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+[heli_move@patrol_7]
+path_move = predb_kpp_heli_point_patrol7
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 12
+on_info = {=predb_kpp_heli_actor_check =heli_see_npc(37)} heli_move@killactor_7 %=play_snd(helicopter\see_enemy_7)%
+on_info2 = {=predb_heli_zone7} heli_move@patrol_1
+
+
+[heli_move@killactor_7]
+path_move = predb_kpp_heli_point_patrol7kill
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 40000|heli_move@patrol_7
+on_info = {=actor_dead} nil %=play_snd(helicopter\atack_2)%
+
+
+
+; Бой на пожарке:
+[heli_move@killactor_12]
+path_move = predb_kpp_heli_point_patrol1kill12
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 10000|heli_move@killactor_13
+
+[heli_move@killactor_13]
+path_move = predb_kpp_heli_point_patrol1kill13
+engine_sound = true
+combat_ignore = false
+combat_enemy = actor
+invulnerable = false
+immortal = false
+default_velocity = 16
+on_timer = 10000|heli_move@killactor_12
+
+
+
+[death]
+on_info = %+predb_heli_dead%
+
+
+
+
+

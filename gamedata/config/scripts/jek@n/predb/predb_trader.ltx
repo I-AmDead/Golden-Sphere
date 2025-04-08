@@ -1,0 +1,63 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = walker@start
+trade = misc\trade_bariga.ltx
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_trader_threshold
+meet = meet@bariga
+
+[walker@start]
+path_walk = predb_trader_walk1
+path_look = predb_trader_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = predb_trader_walk1
+path_look = predb_trader_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@bariga
+on_info = {+predb_kpp_kontrab_atacked} %=delme%
+
+[remark@hello]
+;snd_anim_synñ = true
+snd = moisha_hello
+anim = sit_stul
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_ge_nvis = 3|walker@1
+
+
+[meet@bariga]
+meet_state = 3|sit_stul@moisha_hello
+meet_state_wpn = 3|sit_stul@moisha_hello
+victim = 3|actor
+victim_wpn = 3|actor
+use = true
+use_wpn = true
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[threshold@predb_trader_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_trader_dead%
+

@@ -1,0 +1,43 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = camper
+combat_ignore = combat_ignore
+on_death = death
+
+[camper]
+path_walk = vagon_strangers_kamp
+path_look = vagon_strangers_kamp
+radius = 3
+def_state_moving = sprint_p
+danger = danger_condition
+on_timer = 1|kamp %=killactor%
+
+[kamp]
+center_point = vagon_strangers_kamp
+radius = 3 
+def_state_moving = sprint_p
+danger = danger_condition
+on_info = {+vagon_stranger1_go_avay} %=remove_with_teleport%
+
+
+[meet]
+meet_state = 5| wounded_heavy_3
+victim = 5| nil
+victim_wpn = 5| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+vagon_stranger3_dead%
+

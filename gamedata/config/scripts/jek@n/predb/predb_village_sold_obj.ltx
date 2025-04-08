@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = predb_village_sold_obj_use
+on_info = {+predb_kpp_soldiers_atacked} %=delme2%
+on_use    = {=actor_has_item(vint)} ph_idle@2 %=remove_item(vint) =disable_input =run_postprocess(agr_u_fade)%
+
+[ph_idle@2]
+on_timer = 3000|nil %+vill_sold_spwn =play_snd_on_me(human_01\military\help\wounded_heavy\help_3) =enable_input =delme2%

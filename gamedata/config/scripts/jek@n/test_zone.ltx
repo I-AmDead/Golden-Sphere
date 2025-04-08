@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_timer = 1000 | sr_idle@2 %=headhunters_birth =send_tip(headhunters_spawned:default)%
+
+[sr_idle@2]
+on_timer = 1000 | sr_idle@3 %=headhunters_fas =headhunters_marking =send_tip(headhunters_start_hunt:default)%
+
+[sr_idle@3]
+
+
+
+
+
+
+

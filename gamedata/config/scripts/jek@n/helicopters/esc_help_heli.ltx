@@ -1,0 +1,119 @@
+[logic]
+active = heli_move@waiting
+
+
+; Висим за локацией и ждем, пока позовут
+[heli_move@waiting]
+path_move = esc_help_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+army_drop_heli_go} heli_move@to_place1
+
+
+; Поднимаемся выше:
+[heli_move@to_place1]
+path_move = esc_help_heli_point_way1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 20
+on_signal = arrived | heli_move@to_place2
+
+
+; Промежуточная точка:
+[heli_move@to_place2]
+path_move = esc_help_heli_point_way2
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 40
+on_signal = arrived | heli_move@on_place1
+
+
+; Прилетели на точку:
+[heli_move@on_place1]
+path_move = esc_help_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 4
+on_signal = arrived | heli_move@on_place2
+
+
+; Бросаем груз:
+[heli_move@on_place2]
+path_move = esc_help_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 9000 | heli_move@on_place3 %=esc_help_heli_cargo_spawn =send_tip(esc_help_heli_outload:heli:8064)%
+
+
+; Даем пинка ящику, чтоб он упал:
+[heli_move@on_place3]
+path_move = esc_help_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 500 | heli_move@on_place4 %=hit_obj(8441:link:0.01:10)%
+
+
+[heli_move@on_place4]
+path_move = esc_help_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 1000 | heli_move@back_1 %=mark_esc_heli_cargo%
+
+
+; Улетаем обратно
+[heli_move@back_1]
+path_move = esc_help_heli_point_way1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 20
+on_signal = arrived | heli_move@back_2 
+
+
+[heli_move@back_2]
+path_move = esc_help_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_signal = arrived | heli_move@waiting2 %=army_drop_heli_timer_start =send_tip(esc_help_heli_waiting:heli:8064)%
+
+[heli_move@waiting2]
+path_move = esc_help_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {-army_drop_heli_go} heli_move@waiting
+

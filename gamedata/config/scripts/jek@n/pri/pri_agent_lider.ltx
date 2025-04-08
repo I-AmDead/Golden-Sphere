@@ -1,0 +1,236 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+pri_timecapsula_zone4_info} walker@9, {+actor_teleport_to_pri_hotel_roofzone} walker@9, {+pri_agents_accept} walker@2, walker@start
+combat_ignore = combat_ignore
+threshold = threshold@pri_agent_lider_threshold
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = pri_agent_lider_walk1
+path_look = pri_agent_lider_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 1|walker@1 %=set_neutral =disable_trading%
+
+[walker@1]
+path_walk = pri_agent_lider_walk1
+path_look = pri_agent_lider_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+pri_agent_lider_hit_by_actor} walker@killactor %=killactor%
+on_info2 = {+pri_agents_accept} walker@1_1 %=make_invulnerable =run_postprocess(agr_u_fade) =disable_ui%
+
+[walker@killactor]
+path_walk = pri_agent_lider_walk1
+path_look = pri_agent_lider_look1
+
+[walker@1_1]
+path_walk = pri_agent_lider_walk1
+path_look = pri_agent_lider_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000|nil %=delme2 =teleport_actor(pri_hall_agents_tribe_point:pri_agent_lider_walk2)%
+
+
+
+; На сцене:
+[walker@2]
+path_walk = pri_agent_lider_walk2
+path_look = pri_agent_lider_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 10000|remark@speech1 %=set_neutral =make_invulnerable =disable_trading%
+
+; Начинаем толкать речь:
+[remark@speech1]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+snd = pri_agent_lider_speech1
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@speech1_1 %=play_snd_from_obj(8888:characters_voice\scenario\pri_agent_lider_speech1_1) =play_snd_from_obj(8889:characters_voice\scenario\pri_agent_lider_speech1_2) =play_snd_from_obj(8890:characters_voice\scenario\pri_agent_lider_speech1_1) =play_snd_from_obj(8891:characters_voice\scenario\pri_agent_lider_speech1_2) =play_snd_from_obj(8892:characters_voice\scenario\pri_agent_lider_speech1_1) =play_snd_from_obj(8893:characters_voice\scenario\pri_agent_lider_speech1_2) =play_snd_from_obj(8894:characters_voice\scenario\pri_agent_lider_speech1_1) =play_snd_from_obj(8895:characters_voice\scenario\pri_agent_lider_speech1_2) =play_snd_from_obj(8896:characters_voice\scenario\pri_agent_lider_speech1_1) =play_snd_from_obj(8897:characters_voice\scenario\pri_agent_lider_speech1_2)%
+
+[remark@speech1_1]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|remark@speech2
+
+
+[remark@speech2]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+snd = pri_agent_lider_speech2
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@speech2_1 %=play_snd_from_obj(8888:characters_voice\scenario\pri_agent_lider_speech2_1) =play_snd_from_obj(8889:characters_voice\scenario\pri_agent_lider_speech2_2) =play_snd_from_obj(8890:characters_voice\scenario\pri_agent_lider_speech2_1) =play_snd_from_obj(8891:characters_voice\scenario\pri_agent_lider_speech2_2) =play_snd_from_obj(8892:characters_voice\scenario\pri_agent_lider_speech2_1) =play_snd_from_obj(8893:characters_voice\scenario\pri_agent_lider_speech2_2) =play_snd_from_obj(8894:characters_voice\scenario\pri_agent_lider_speech2_1) =play_snd_from_obj(8895:characters_voice\scenario\pri_agent_lider_speech2_2) =play_snd_from_obj(8896:characters_voice\scenario\pri_agent_lider_speech2_1) =play_snd_from_obj(8897:characters_voice\scenario\pri_agent_lider_speech2_2)%
+
+[remark@speech2_1]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|remark@speech3
+
+
+[remark@speech3]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+snd = pri_agent_lider_speech3
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@speech3_1 %=play_snd_from_obj(8888:characters_voice\scenario\pri_agent_lider_speech3_1) =play_snd_from_obj(8889:characters_voice\scenario\pri_agent_lider_speech3_2) =play_snd_from_obj(8890:characters_voice\scenario\pri_agent_lider_speech3_1) =play_snd_from_obj(8891:characters_voice\scenario\pri_agent_lider_speech3_2) =play_snd_from_obj(8892:characters_voice\scenario\pri_agent_lider_speech3_1) =play_snd_from_obj(8893:characters_voice\scenario\pri_agent_lider_speech3_2) =play_snd_from_obj(8894:characters_voice\scenario\pri_agent_lider_speech3_1) =play_snd_from_obj(8895:characters_voice\scenario\pri_agent_lider_speech3_2) =play_snd_from_obj(8896:characters_voice\scenario\pri_agent_lider_speech3_1) =play_snd_from_obj(8897:characters_voice\scenario\pri_agent_lider_speech3_2)%
+
+[remark@speech3_1]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|remark@speech4
+
+
+[remark@speech4]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+snd = pri_agent_lider_speech4
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@speech4_1 %=play_snd_from_obj(8888:characters_voice\scenario\pri_agent_lider_speech4_1) =play_snd_from_obj(8889:characters_voice\scenario\pri_agent_lider_speech4_2) =play_snd_from_obj(8890:characters_voice\scenario\pri_agent_lider_speech4_1) =play_snd_from_obj(8891:characters_voice\scenario\pri_agent_lider_speech4_2) =play_snd_from_obj(8892:characters_voice\scenario\pri_agent_lider_speech4_1) =play_snd_from_obj(8893:characters_voice\scenario\pri_agent_lider_speech4_2) =play_snd_from_obj(8894:characters_voice\scenario\pri_agent_lider_speech4_1) =play_snd_from_obj(8895:characters_voice\scenario\pri_agent_lider_speech4_2) =play_snd_from_obj(8896:characters_voice\scenario\pri_agent_lider_speech4_1) =play_snd_from_obj(8897:characters_voice\scenario\pri_agent_lider_speech4_2)%
+
+[remark@speech4_1]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|remark@speech5
+
+
+[remark@speech5]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+snd = pri_agent_lider_speech5
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@speech5_1
+
+[remark@speech5_1]
+;anim = caution
+;anim = choose
+anim = stoya_boltaet
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000|walker@6 %+pri_agent_lider_speech_end =enable_ui%
+
+
+; Закончили толкать речь и ждём, когда ГГ к нам подойдёт:
+[walker@6]
+path_walk = pri_agent_lider_walk2
+path_look = pri_agent_lider_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+actor_agents_influence} walker@7 %=play_snd(soundtrack\dog_phantom\2) =disable_ui%
+
+[walker@7]
+path_walk = pri_agent_lider_walk2
+path_look = pri_agent_lider_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 6000|walker@8 %=run_postprocess(agr_u_fade) =run_cam_effector(fatigue) =play_snd(characters_voice\human_02\newbie\fight\death\death_1) =hide_indicators%
+
+[walker@8]
+path_walk = pri_agent_lider_walk2
+path_look = pri_agent_lider_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000|walker@9 %=actor_teleport_to_pri_hotel_roofzone +actor_teleport_to_pri_hotel_roofzone =play_snd(soundtrack\x18_laugh) =show_indicators =enable_ui%
+
+
+; После того, как мы защитили свой разум:
+[walker@9]
+path_walk = pri_agent_lider_walk2
+path_look = pri_agents_base_pray_point2
+danger = danger_condition
+combat_ignore_cond = always
+meet = meet@arter_rooftop
+on_info = {+pri_timecapsula_zone4_info} nil %=delme2%
+
+
+
+
+
+
+[meet@arter_rooftop]
+meet_state = 2|trans_0@abdul_pray|1|trans_0@abdul_pray
+meet_state_wpn = 2|trans_0@abdul_pray|1|trans_0@abdul_pray
+victim = 1|nil
+victim_wpn = 1|nil
+use = true
+use_wpn = false
+abuse = false
+
+[threshold@pri_agent_lider_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=hit_by_actor} %+pri_agent_lider_hit_by_actor +pri_hall_agents_spawn%
+
+[death]
+on_info = %+pri_agent_lider_dead%
+

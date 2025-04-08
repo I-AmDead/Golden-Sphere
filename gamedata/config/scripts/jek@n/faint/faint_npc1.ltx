@@ -1,0 +1,95 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = {+faint_man1_goodbye} remark@goodbye1, {+faint_man1_rest} walker@kamp, {+faint_man1_companion} nil, remark@1
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[remark@1]
+anim = polulezha
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000 | remark@2 %=play_snd_from_obj(8666:characters_voice\human_01\newbie\help\wounded_heavy\help_12)%
+
+[remark@2]
+anim = wounded_heavy_3
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 12000 | remark@3 %=play_snd_from_obj(8666:characters_voice\human_01\newbie\help\wounded_heavy\help_10)%
+
+[remark@3]
+anim = wait
+target = actor
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 9000 | remark@4 %=play_snd_from_obj(8666:characters_voice\scenario\newbie_on_garbage\newbie_on_garbage_1)%
+on_info = {+faint_man1_companion} nil
+
+[remark@4]
+anim = hello
+target = actor
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+faint_man1_companion} nil
+on_actor_dist_ge_nvis = 30 | walker@kamp
+
+[walker@kamp]
+path_walk = esc_faint_man_walk1
+path_look = esc_faint_man_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+on_info = {+faint_man1_goodbye} remark@goodbye1
+
+
+; Прощаемся:
+[remark@goodbye1]
+anim = hello
+target = actor
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 5000|remark@goodbye2 %=play_snd_from_obj(8666:characters_voice\human_03\stalker\talk\leave\leave_3)%
+
+[remark@goodbye2]
+anim = guard
+target = nil
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_actor_dist_le_nvis = 45|nil %=delme%
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+ignore_distance_grenade = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+danger_inertion_time_hit = 0
+danger_inertion_time_sound = 0
+danger_inertion_time_ricochet = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=actor_armed_psy =hit_by_actor} %=spawn_zombie_at_pos =send_tip(target_zombied:default) =delme2%
+
+[death]
+on_info = %+faint_npc1_dead%
+
+
+
+
+
+
+

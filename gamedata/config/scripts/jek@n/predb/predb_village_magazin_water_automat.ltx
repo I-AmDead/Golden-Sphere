@@ -1,0 +1,16 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+tips     = predb_village_magazin_water_automat_use
+on_use    = {=actor_has_item(sssr_moneta_1)} ph_idle@2 %=remove_item(sssr_moneta_1) =play_snd_on_me(ambient\switch_1)%
+
+[ph_idle@2]
+on_timer = 3000|ph_idle@3 %=play_snd_on_me(ambient\dropinpool1)%
+
+[ph_idle@3]
+on_timer = 3000|ph_idle@4 %=play_snd_on_me(ambient\dropinpool2)%
+
+[ph_idle@4]
+on_timer = 3000|nil %=sawn_predb_village_magazine_art%
+ 

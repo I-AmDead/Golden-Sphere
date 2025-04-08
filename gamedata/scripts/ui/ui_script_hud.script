@@ -1,0 +1,132 @@
+-- -*- mode: lua; encoding: windows-1251 -*-
+
+function attach( sm )
+	sm:subscribe({signal = "on_spawn", fun = this.add}) 
+	sm:subscribe({signal = "on_destroy", fun = this.destroy})
+	sm:subscribe({signal = "on_actor_weapon_zoom_out", fun = this.hud_on}) 
+	sm:subscribe({signal = "on_actor_weapon_zoom_in", fun = this.hud_off})	
+end
+
+local wnd = nil
+local hud
+
+class "UIScriptHUD" (CUIWindow)
+
+function UIScriptHUD:__init() super()
+	self:Init(0, 0, 1024, 768)
+	self:InitControls()
+end
+
+function UIScriptHUD:InitControls()
+
+	local xml = CScriptXmlInit()
+	xml:ParseFile("ui_script_hud.xml")
+
+	stat_head = xml:InitStatic("static_head", self)
+	self.progress_head = xml:InitProgressBar("head_progress", stat_head)
+	stat_l_hand = xml:InitStatic("static_l_hand", self)
+	self.progress_l_hand = xml:InitProgressBar("l_hand_progress", stat_l_hand)
+	stat_r_hand = xml:InitStatic("static_r_hand", self)
+	self.progress_r_hand = xml:InitProgressBar("r_hand_progress", stat_r_hand)
+	stat_tors = xml:InitStatic("static_tors", self)
+	self.progress_tors = xml:InitProgressBar("tors_progress", stat_tors)
+	stat_l_leg = xml:InitStatic("static_l_leg", self)
+	self.progress_l_leg = xml:InitProgressBar("l_leg_progress", stat_l_leg)
+	stat_r_leg = xml:InitStatic("static_r_leg", self)
+	self.progress_r_leg = xml:InitProgressBar("r_leg_progress", stat_r_leg)
+	self.background_body_state = xml:InitStatic("background_body_state", self)
+	self.body_state = xml:InitStatic("body_state", self)	
+	stat_power = xml:InitStatic("static_power", self)
+	self.progress_power = xml:InitProgressBar("power_progress", stat_power)
+
+	stat_health = xml:InitStatic("static_health", self)
+	self.progress_health = xml:InitProgressBar("health_progress", stat_health)
+	stat_armor = xml:InitStatic("static_armor", self)
+	self.progress_armor = xml:InitProgressBar("armor_progress", stat_armor)
+	stat_radiation = xml:InitStatic("static_radiation", self)
+	self.progress_radiation = xml:InitProgressBar("radiation_progress", stat_radiation)
+	stat_psy = xml:InitStatic("static_psy", self)
+	self.progress_psy = xml:InitProgressBar("psy_progress", stat_psy)	
+
+	ogse_signals.get_mgr():subscribe( { signal = "on_update", fun = self.Update, self = self } )
+end
+
+function UIScriptHUD:__finalize() end
+
+function UIScriptHUD:Update(delta)
+	if level.main_input_receiver() or hud then
+		self:Show(false)
+	else
+		self:Show(true)
+		self:UpdateIndicators()
+end
+end
+
+function UIScriptHUD:UpdateIndicators()
+
+	local head = starvation.get_head()
+	local tors = starvation.get_tors()	
+	local l_hand = starvation.get_left_hand()
+	local r_hand = starvation.get_right_hand()
+	local l_leg = starvation.get_left_leg()
+	local r_leg = starvation.get_right_leg()
+
+	local actor_outfit = db.actor:get_current_outfit()
+
+	self.progress_head:SetProgressPos( head * 100 )
+	self.progress_tors:SetProgressPos( tors * 100 )
+	self.progress_l_hand:SetProgressPos( l_hand * 100 )
+	self.progress_r_hand:SetProgressPos( r_hand * 100 )
+	self.progress_l_leg:SetProgressPos( l_leg * 100 )
+	self.progress_r_leg:SetProgressPos( r_leg * 100 )
+
+	self.background_body_state:InitTexture("ui_hud_bhs_bg")
+	self.body_state:InitTexture("ui_hud_bhs_health")
+
+
+	self.progress_power:SetProgressPos( db.actor.power * 100 )
+	self.progress_health:SetProgressPos( db.actor.health * 100 )
+	self.progress_radiation:SetProgressPos( db.actor.radiation * 100 )
+	self.progress_psy:SetProgressPos( db.actor.psy_health * 100 )	
+
+	local outfit_id = -1
+	if actor_outfit then
+		if not self.progress_armor:IsShown() then
+			self.progress_armor:Show(true)
+		end
+		self.progress_armor:SetProgressPos( actor_outfit:condition() * 100 )
+		outfit_id = actor_outfit:id()
+	elseif self.last_outfit_id ~= -1 and self.progress_armor:IsShown() then
+		self.progress_armor:Show(false)
+	end
+
+end
+
+
+function add()
+    level.show_indicators()
+    hud = false
+    wnd = UIScriptHUD()
+    get_hud():AddDialogToRender(wnd)
+    wnd:Show(true)
+end
+
+function destroy()
+    level.hide_indicators()
+	if wnd ~= nil then
+		wnd:Show(false)
+		get_hud():RemoveDialogToRender(wnd)
+		wnd = nil
+	end
+end
+
+
+function hud_on()
+    level.show_indicators()
+    hud = false
+end
+
+function hud_off()
+    level.hide_indicators()
+    hud = true
+end

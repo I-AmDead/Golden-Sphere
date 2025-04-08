@@ -1,0 +1,173 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+predb_courier_goodbye} walker@5, {+kontrab5_story_tell} walker@4, {+kpp_kontrab_goto_hutor} walker@3, walker@start
+combat_ignore = combat_ignore
+on_death = death
+threshold = threshold@predb_kontrabander5_threshold
+meet = meet
+
+[walker@start]
+path_walk = predb_kontrabander5_walk1
+path_look = predb_kontrabander5_look1
+on_timer = 1 | walker@1 %=make_invulnerable%
+
+
+[walker@1]
+path_walk = predb_kontrabander5_walk1
+path_look = predb_kontrabander5_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+kpp_kontrab_goto_hutor} walker@2
+on_info2 = {+kaban_pda_info} %=delme2%
+
+[walker@2]
+path_walk = predb_kontrabander5_walk3
+path_look = predb_kontrabander5_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived | walker@3 %=predb_kpp_heli_patrol_start%
+
+[walker@3]
+path_walk = predb_kontrabander5_walk3
+path_look = predb_kontrabander5_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+kontrab5_story_tell} remark@storytell1
+on_info2 = {+predb_courier_goodbye} walker@5
+
+
+; Пиздим про свои приключения:
+[remark@storytell1]
+snd = kontrab5_storytell1
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell2
+
+[remark@storytell2]
+snd = kontrab5_storytell2
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell3
+
+[remark@storytell3]
+snd = kontrab5_storytell3
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell4
+
+[remark@storytell4]
+snd = kontrab5_storytell4
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell5
+
+[remark@storytell5]
+snd = kontrab5_storytell5
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell6
+
+[remark@storytell6]
+snd = kontrab5_storytell6
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell7
+
+[remark@storytell7]
+snd = kontrab5_storytell7
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell8
+
+[remark@storytell8]
+snd = kontrab5_storytell8
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|remark@storytell9
+
+[remark@storytell9]
+snd = kontrab5_storytell9
+anim = wait
+target = actor
+no_move = true
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal = sound_end|walker@4
+
+
+; Отпизделись:
+[walker@4]
+path_walk = predb_kontrabander5_walk3
+path_look = predb_kontrabander5_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+predb_courier_goodbye} walker@5
+
+[walker@5]
+path_walk = predb_kontrabander5_walk3
+path_look = predb_kontrabander5_look3_1
+danger = danger_condition
+combat_ignore_cond = always
+
+
+
+
+
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_hit = 0
+ignore_distance_sound = 0
+
+[threshold@predb_kontrabander5_threshold]
+max_ignore_distance = 0
+ignore_monster = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+predb_kontrabander5_dead%
+

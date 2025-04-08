@@ -1,0 +1,34 @@
+[logic]
+active = nil
+
+[mob_walker]
+path_walk = esc_hunter_look_kpp_tirsa
+path_look = esc_hunter_look_kpp_tirsa
+braindead = true
+def_state_moving1 = stand_steal_0
+def_state_moving2 = stand_steal_0
+def_state_moving3 = stand_steal_0
+
+
+
+[mob_home@1]
+path_home = test_1
+path_look = test_1
+home_min_radius = 0
+home_max_radius = 0
+braindead = true
+def_state_moving1 = stand_steal_0
+def_state_moving2 = stand_steal_0
+def_state_moving3 = stand_steal_0
+on_signal       = arrived | mob_home@2
+
+[mob_home@2]
+path_home = test_2
+path_look = test_2
+home_min_radius = 0
+home_max_radius = 0
+braindead = true
+def_state_moving1 = stand_steal_0
+def_state_moving2 = stand_steal_0
+def_state_moving3 = stand_steal_0
+on_signal       = arrived | mob_home@1

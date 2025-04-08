@@ -1,0 +1,68 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_separ_vsu_rwrd} walker@4, walker@1
+combat_ignore = combat_ignore
+threshold = threshold@mil_separ_commander_threshold
+on_death = death
+on_hit = hit
+
+[walker@1]
+path_walk = mil_separ_commander_walk1
+path_look = mil_separ_commander_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 1|walker@2 %=make_invulnerable%
+
+[walker@2]
+path_walk = mil_separ_commander_walk1
+path_look = mil_separ_commander_look1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+separ_war} walker@3 %=play_snd_on_me(characters_voice\human_01\freedom\fight\searching_enemy\enemy_lost_3) =set_enemies(8793:8787:8788:8789:8790:8791:8792)%
+on_info2 = {+mil_vsu_war} %=delme2%
+
+
+; Атака на военных:
+[walker@3]
+path_walk = mil_separ_commander_walk2
+path_look = mil_vsu_commander_walk1
+danger = danger_condition
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+on_signal       = arrived|walker@4
+
+[walker@4]
+path_walk = mil_separ_commander_walk2
+path_look = mil_vsu_commander_walk1
+danger = danger_condition
+on_info = {+mil_separ_end} %=make_invulnerable%
+
+
+
+
+
+
+
+[threshold@mil_separ_commander_threshold]
+max_ignore_distance = 5
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+mil_separ_commander_dead%
+
+[hit]
+;on_info = {=hit_by_actor} %+777%
+
+

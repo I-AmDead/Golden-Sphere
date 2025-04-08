@@ -1,0 +1,20 @@
+[logic]
+active = ph_sound
+
+[ph_sound]
+snd = silence
+looped = true
+on_info = {+predb_kpp_fight_start} ph_sound@alarm
+
+[ph_sound@alarm]
+snd = rupor_alarm
+looped = true
+on_info = {+predb_kpp_soldier1_dead +predb_kpp_soldier2_dead +predb_kpp_soldier3_dead +predb_kpp_soldier4_dead +predb_kpp_soldier5_dead +predb_kpp_soldier6_dead +predb_kpp_soldier7_dead} ph_sound@stop
+on_info2 = {+predb_kontrabander6_dead +predb_kontrabander7_dead +predb_kontrabander8_dead} ph_sound@stop
+
+
+[ph_sound@stop]
+snd = silence
+;looped = true
+on_signal = sound_end | nil
+

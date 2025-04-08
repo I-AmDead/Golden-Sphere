@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle
+ 
+[sr_idle]
+on_actor_inside = sr_cutscene
+ 
+[sr_cutscene]
+point = esc_kpp_point1
+look = esc_kpp_point1
+cam_effector = abdul_around
+on_signal = cameff_end | nil

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<car_intrface>
+
+<ramka x="220" y="170" width="900" height="700" stretch="1">
+	<texture>ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Установить:</text>
+</name>
+
+	<btn_1 x="330" y="270" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Аккумулятор</text>
+	</btn_1>
+	<btn_2 x="330" y="310" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Колесо 1</text>
+	</btn_2>
+	<btn_3 x="330" y="350" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Колесо 2</text>
+	</btn_3>
+	<btn_4 x="330" y="390" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Колесо 3</text>
+	</btn_4>
+	<btn_5 x="510" y="270" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Колесо 4</text>
+	</btn_5>
+	<btn_6 x="510" y="310" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Подшипники</text>
+	</btn_6>
+	<btn_7 x="510" y="350" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Бензобак</text>
+	</btn_7>
+
+</car_intrface>
+

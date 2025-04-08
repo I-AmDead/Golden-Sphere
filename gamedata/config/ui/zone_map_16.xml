@@ -1,0 +1,23 @@
+<window>
+	<minimap>
+		<level_frame x="5" y="5" width="130" height="175"/>
+		
+		<background x="5" y="-19" width="131" height="201" stretch="1"> 
+
+			<texture>ui_ingame_radar_main_window</texture>
+			
+			<dist_text x="23" y="3" width="113" height="20">
+				<text align="l" font="letterica16" color="ui_clr_1"/>
+			</dist_text>
+		</background>
+		
+		<compass x="70" y="90" width="160" height="160" alignment="c" heading="1" stretch="1">
+			<texture>ui_ingame_radar_compass</texture>
+		</compass>
+		
+		<center width="10" height="10" alignment="c" stretch="1"> 
+			<texture>ui_ingame_minimap_player_pointer</texture>
+		</center>
+	
+	</minimap>
+</window>

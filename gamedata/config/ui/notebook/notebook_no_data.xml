@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<notebook_no_data>
+
+<corpus x="250" y="250" width="550" height="550" stretch="1">
+	<texture>ui\notebook\notebook_corpus</texture>
+</corpus>
+<system_logo x="480" y="305" width="370" height="35">
+	<text x="0" y="0" r="225" g="118" b="118" font="letterica18">Ошибка:</text>
+</system_logo>
+<description x="330" y="360" width="380" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="225" g="218" b="118" font="arial_14">Данные недоступны. Возможное повреждение файлов.</text>
+</description>
+
+
+	<btn_1 x="580" y="590" width="70" height="20">
+		<texture_e>ui\notebook\notebook_file</texture_e>
+		<text x="0" y="0" r="125" g="218" b="218" font="letterica16">Назад</text>
+	</btn_1>
+
+
+
+
+	<btn_quit x="690" y="610" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">OFF</text>
+	</btn_quit>
+
+</notebook_no_data>
+

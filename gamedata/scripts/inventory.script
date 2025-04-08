@@ -1,0 +1,141 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+
+function attach(sm)
+  sm:subscribe({ signal = "on_first_update", fun = this.on_first_update })
+end
+
+
+function on_first_update()
+  rescan_belt()
+  local sm = ogse_signals.get_mgr()
+  sm:subscribe({ signal = "on_drop_before_all", fun = this.on_belt_drop })
+  sm:subscribe({ signal = "on_item_to_belt", fun = this.on_item_to_belt })
+  sm:subscribe({ signal = "on_item_to_ruck", fun = this.on_belt_drop    })
+  sm:subscribe({ signal = "on_item_to_slot", fun = this.on_belt_drop    })
+end
+
+
+function on_item_to_belt( obj )
+  rescan_belt()
+  ogse_signals.get_mgr():call( "on_belt_change" )
+end
+
+local belt = {}
+local belt_id  = {}
+local af_restore_speeds = {
+  [ "additional_inventory_weight"  ] = 0,
+  [ "additional_inventory_weight2" ] = 0,
+  [ "bleeding_restore_speed"       ] = 0,
+  [ "health_restore_speed"         ] = 0,
+  [ "power_restore_speed"          ] = 0,
+  [ "psy_health_restore_speed"     ] = 0,
+  [ "radiation_restore_speed"      ] = 0,
+  [ "satiety_restore_speed"        ] = 0,
+}
+
+
+function on_belt_drop( item )
+  if belt_id[ item:id() ] then
+    rescan_belt()
+    ogse_signals.get_mgr():call( "on_belt_change" )
+  end
+end
+
+function rescan_belt()
+  for k, _ in pairs( af_restore_speeds ) do
+    af_restore_speeds[ k ] = 0
+  end
+  belt     = {}
+  belt_id  = {}
+  for i = 0, db.actor:belt_count() - 1 do
+    local item = db.actor:item_on_belt( i )
+    local sect = item:section()
+    belt[ sect ] = ( belt[ sect ] or 0 ) + 1
+    belt_id[ item:id() ] = true
+    local props = get_af_props( sect )
+    for k, total in pairs( af_restore_speeds ) do
+      af_restore_speeds[ k ] = total + props[ k ]
+    end
+  end
+end
+
+
+local cached_props = {}
+function get_af_props( sect )
+  if not cached_props[ sect ] then
+    local t = {}
+    local imm_sect = get_string( sect, "hit_absorbation_sect" )
+    for k, _ in pairs( af_restore_speeds ) do
+      t[ k ] = get_float( sect, k, 0 )
+    end
+    cached_props[ sect ] = t
+  end
+  return cached_props[ sect ]
+end
+
+
+function on_belt_restore_speed( k )
+  --log3("~~af_restore_speeds tbl: %s", af_restore_speeds)
+  return af_restore_speeds[ k ] or 0
+end
+
+function on_belt( sect )
+  return belt[ sect ]
+end
+
+function spoilage_food()
+	if db.actor.radiation>0.7 and (db.actor:object("salo") or db.actor:object("kolbasa") or db.actor:object("kefir")) then
+       db.actor:iterate_inventory(function (dummy,item)  
+                                if item:section()=="salo" then
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("salo_bad")
+                                elseif item:section()=="kolbasa" then 
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("kolbasa_bad")
+								elseif item:section()=="kefir" then 
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("kefir_bad")
+                                end 
+                                end, nil)
+    end
+
+    if db.actor.radiation>0.75 and (db.actor:object("bread") or db.actor:object("kartoshka") or db.actor:object("conserva2")) then
+       db.actor:iterate_inventory(function (dummy,item)  
+                                if item:section()=="bread" then
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("bread_bad")
+                                elseif item:section()=="kartoshka" then 
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("kartoshka_bad")
+							    elseif item:section()=="conserva2" then 
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("conserva2_bad")
+                                end 
+                                end, nil)
+    end
+	
+	if db.actor.radiation>0.77 and (db.actor:object("syrok") or db.actor:object("conserva")) then
+       db.actor:iterate_inventory(function (dummy,item)  
+                                if item:section()=="syrok" then
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("syrok_bad")
+                                elseif item:section()=="conserva" then 
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("conserva_bad")
+                                end 
+                                end, nil)
+    end
+	
+	if db.actor.radiation>0.8 and (db.actor:object("mre") or db.actor:object("irp-b")) then
+       db.actor:iterate_inventory(function (dummy,item)  
+                                if item:section()=="mre" then
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("mre_bad")
+                                elseif item:section()=="irp-b" then 
+                                      ogse.remove_item(item)  
+                                      ogse.spawn_item_in_inv("irp-b_bad")
+                                end 
+                                end, nil)
+    end
+end
+

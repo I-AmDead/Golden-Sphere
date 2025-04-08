@@ -1,0 +1,14 @@
+[logic]
+active = nil
+
+[sr_idle@1]
+on_actor_inside = sr_idle@2 %=play_snd(weapons\generic_close)%
+
+[sr_idle@2]
+on_timer = 300 | sr_idle@3 %=play_snd(weapons\f1_explode2) =run_cam_effector(fusker)%
+
+[sr_idle@3]
+on_timer = 300 | nil %=actor_on_mine_blow%
+
+
+

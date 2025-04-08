@@ -1,0 +1,14 @@
+[logic]
+active = sr_sound@1
+
+[sr_sound@1]
+snd = ambient\fire1
+position = esc_car_crash1
+on_signal = sound_end | sr_sound@2
+
+[sr_sound@2]
+snd = ambient\fire2
+position = esc_car_crash1
+on_signal = sound_end | sr_sound@1
+
+

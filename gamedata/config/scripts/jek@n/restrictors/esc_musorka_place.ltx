@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle1
+
+[sr_idle1]
+on_actor_inside = {+village_stalkers_on_pos2} sr_idle2 %+musorka_monstr_spawn =musorka_monstr_spawn%
+
+[sr_idle2]
+on_timer = 2000|nil %=play_snd_from_obj(8139:monsters\bloodsucker\bloodsucker_script_attack_0)%

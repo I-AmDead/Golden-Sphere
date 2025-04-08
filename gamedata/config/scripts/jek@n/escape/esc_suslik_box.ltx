@@ -1,0 +1,10 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+tips = esc_suslik_box_use
+on_use = {=actor_has_item(village_house2_door_key)} ph_idle@open %=remove_item(village_house2_door_key) =play_snd(device\metal_small_close_stop) =esc_obelisk_deadmans_head_zone_randomspawn%
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure

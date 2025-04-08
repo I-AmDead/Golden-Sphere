@@ -1,0 +1,117 @@
+[logic]
+active = heli_move@waiting
+
+; Висим за локацией и ждем, пока позовут
+[heli_move@waiting]
+path_move = mil_cargo_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_info = {+garb_cargo_heli_goto_place} heli_move@to_place_timer
+
+; Нас позвали, но все еще висим в начальной точке, изображая длительный полет
+[heli_move@to_place_timer]
+path_move = mil_cargo_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 3000 | heli_move@to_place1
+
+
+; Летим к точке сброса груза
+[heli_move@to_place1]
+path_move = mil_cargo_heli_point_way1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 25
+on_signal = arrived | heli_move@to_place2
+
+[heli_move@to_place2]
+path_move = mil_cargo_heli_point_way4
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 25
+on_signal = arrived | heli_move@on_place1
+
+
+
+
+; Прилетели на точку и бросаем груз:
+[heli_move@on_place1]
+path_move = mil_cargo_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 4
+on_signal = arrived | heli_move@on_place2
+
+[heli_move@on_place2]
+path_move = mil_cargo_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 9000 | heli_move@on_place3 %=mil_cargo_heli_cargo_spawn =send_tip(garb_cargo_heli_outload:mimino:8064)%
+
+; Даем пинка ящику, чтоб он упал:
+[heli_move@on_place3]
+path_move = mil_cargo_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 500 | heli_move@on_place4 %=hit_obj(8229:link:0.01:10)%
+
+[heli_move@on_place4]
+path_move = mil_cargo_heli_point_way_on_place
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 0
+on_timer = 1000 | heli_move@back_1 %=mark_heli_cargo%
+
+
+
+; Улетаем обратно
+[heli_move@back_1]
+path_move = mil_cargo_heli_point_way1
+engine_sound = true
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 30
+on_signal = arrived | heli_move@back_2 
+
+[heli_move@back_2]
+path_move = mil_cargo_heli_point_wait
+engine_sound = false
+combat_ignore = true
+combat_enemy = nil
+invulnerable = true
+immortal = true
+default_velocity = 10
+on_signal = arrived | heli_move@waiting %-garb_cargo_heli_goto_place%
+
+
+

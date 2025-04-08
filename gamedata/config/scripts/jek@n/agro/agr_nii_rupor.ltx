@@ -1,0 +1,12 @@
+[logic]
+active = ph_sound@music
+
+[ph_sound@music]
+snd = agr_nii_rupor_music
+on_info = {+agr_nii_rupor_stop} ph_sound@idle
+
+[ph_sound@idle]
+snd = quit
+looped = true
+on_info = {-agr_nii_rupor_stop} ph_sound@music
+

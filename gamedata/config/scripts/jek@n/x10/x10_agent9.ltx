@@ -1,0 +1,24 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = walker@start
+combat_ignore = combat_ignore
+on_death = death
+on_hit = hit
+
+[walker@start]
+path_walk = x10_agent9_walk1
+path_look = x10_agent9_look1
+combat_ignore_cond = {-rad_headhunters_actor_alarm}
+on_actor_dist_le = 40|%=rad_agents_actor_check%
+
+[combat_ignore]
+combat_ignore = always
+
+[hit]
+on_info = {=hit_by_actor -rad_headhunters_actor_alarm} %+rad_headhunters_actor_alarm%
+
+[death]
+on_info = %+x10_agent9_dead%
+

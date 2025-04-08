@@ -1,0 +1,390 @@
+local ammo = "visible"
+local weapons = "visible"
+local outfits = "visible"
+local artefacts = "visible"
+local items = "visible"
+local other = "visible"
+
+local btn_hud
+local btn_all, btn_ammo, btn_outfit, btn_wpn, btn_arts, btn_items, btn_other
+
+local xvars = get_stored_vars()
+
+function attach(sm)
+	sm:subscribe({ signal = "on_item_to_ruck", fun = this.on_item_to_ruck })
+	sm:subscribe({ signal = "on_death",        fun = this.inventory_close       })
+	sm:subscribe({ signal = "on_spawn",          fun = this.on_spawn          })
+	sm:subscribe({ signal = "on_save",          fun = this.on_save          })
+	sm:subscribe({ signal = "on_inventory_open", fun = this.inventory_open}) 
+	sm:subscribe({ signal = "on_inventory_hide", fun = this.inventory_close}) 
+end
+
+
+function on_item_to_ruck( item )
+	local item_group = get_class_group( item )
+	if ( item_group == "ammo" and ammo == "hidden") or
+		(item_group == "weapons" and weapons == "hidden") or
+		(item_group == "outfits" and outfits == "hidden") or
+		(item_group == "artefacts" and artefacts == "hidden") or
+		(item_group == "items" and items == "hidden") or
+		(item_group == "other" and other == "hidden") then 
+		
+		set_item_inv_hidden( item )
+		db.actor:invalidate_inventory()
+		update_inventory_window()
+	end
+end
+
+function on_spawn()
+	if xvars.invSort_ammo ~= nil then
+		ammo = xvars.invSort_ammo
+		weapons = xvars.invSort_weapons
+		outfits = xvars.invSort_outfits
+		artefacts = xvars.invSort_artefacts
+		items = xvars.invSort_items
+		other = xvars.invSort_other
+	end
+end
+
+function on_save()
+	xvars.invSort_ammo = ammo
+	xvars.invSort_weapons = weapons
+	xvars.invSort_outfits = outfits
+	xvars.invSort_artefacts = artefacts
+	xvars.invSort_items = items
+	xvars.invSort_other = other
+end
+
+function btn_all_pressed()
+	ammo = "visible"
+	weapons = "visible" 
+	outfits = "visible"
+	artefacts = "visible"
+	items = "visible"
+	other = "visible"
+
+	btn_all.btn:SetOriginalRect( 1090, 797, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 797, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 797, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 797, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 797, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 797, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 797, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+function btn_ammo_pressed()
+	ammo = "visible"
+	weapons = "hidden" 
+	outfits = "hidden"
+	artefacts = "hidden"
+	items = "hidden"
+	other = "hidden"
+
+	btn_all.btn:SetOriginalRect( 1090, 847, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 797, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 847, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 847, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 847, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 847, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 847, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+
+function btn_wpn_pressed()
+	ammo = "hidden"
+	weapons = "visible" 
+	outfits = "hidden"
+	artefacts = "hidden"
+	items = "hidden"
+	other = "hidden"
+
+	btn_all.btn:SetOriginalRect( 1090, 847, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 847, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 797, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 847, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 847, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 847, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 847, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+function btn_outfit_pressed()
+	ammo = "hidden"
+	weapons = "hidden" 
+	outfits = "visible"
+	artefacts = "hidden"
+	items = "hidden"
+	other = "hidden"
+
+	btn_all.btn:SetOriginalRect( 1090, 847, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 847, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 847, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 797, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 847, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 847, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 847, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+function btn_arts_pressed()
+	ammo = "hidden"
+	weapons = "hidden" 
+	outfits = "hidden"
+	artefacts = "visible"
+	items = "hidden"
+	other = "hidden"
+
+	btn_all.btn:SetOriginalRect( 1090, 847, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 847, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 847, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 847, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 797, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 847, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 847, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+function btn_items_pressed()
+	ammo = "hidden"
+	weapons = "hidden" 
+	outfits = "hidden"
+	artefacts = "hidden"
+	items = "visible"
+	other = "hidden"
+
+	btn_all.btn:SetOriginalRect( 1090, 847, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 847, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 847, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 847, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 847, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 797, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 847, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+function btn_other_pressed()
+	ammo = "hidden"
+	weapons = "hidden" 
+	outfits = "hidden"
+	artefacts = "hidden"
+	items = "hidden"
+	other = "visible"
+
+	btn_all.btn:SetOriginalRect( 1090, 847, 44, 44 )
+	btn_ammo.btn:SetOriginalRect( 1140, 847, 44, 44 )
+	btn_wpn.btn:SetOriginalRect( 1190, 847, 44, 44 )
+	btn_outfit.btn:SetOriginalRect( 1240, 847, 44, 44 )
+	btn_arts.btn:SetOriginalRect( 1290, 847, 44, 44 )
+	btn_items.btn:SetOriginalRect( 1340, 847, 44, 44 )
+	btn_other.btn:SetOriginalRect( 1390, 797, 44, 44 )
+
+	change_visibility("ammo", ammo)
+	change_visibility("weapons", weapons)
+	change_visibility("outfits", outfits)
+	change_visibility("artefacts", artefacts)
+	change_visibility("items", items)
+	change_visibility("other", other)
+
+	db.actor:invalidate_inventory()
+	update_inventory_window()
+end
+
+class "CUI_InvButton" ( CUIScriptWnd )
+
+function CUI_InvButton:__init( id, f, pos, texture ) super()
+	local btn = CUIButton()
+	self.btn = btn
+	btn:SetWindowName(  )
+	btn:SetAutoDelete( true )
+	btn:InitTexture( "ui\\ui_common" )	-- ui\\ui_inventory ui_button_main02
+	btn:SetOriginalRect( texture[1], texture[2], texture[3], texture[4] )	-- 75, 960, 104, 30
+	btn:SetStretchTexture(true)
+	btn:Init( pos[1], pos[2], pos[3], pos[4] )			-- 592, 960, 113, 64
+	self:Register( btn, id )
+	self:AddCallback( id, ui_events.BUTTON_CLICKED, f, self )
+end
+
+function CUI_InvButton:__finalize()
+end
+
+
+function inventory_open( )
+
+	if ammo == "visible" and weapons == "visible" and outfits == "visible" and artefacts == "visible" and items == "visible" and other == "visible" then 
+			btn_all = CUI_InvButton( "btn_all", btn_all_pressed, { 741, 665, 33, 42 }, { 1090, 797, 44, 44 } )
+	else
+			btn_all = CUI_InvButton( "btn_all", btn_all_pressed, { 741, 665, 33, 42 }, { 1090, 847, 44, 44 } )
+	end
+
+	if ammo == "visible" then 
+			btn_ammo = CUI_InvButton( "btn_ammo", btn_ammo_pressed, { 774, 665, 33, 42 }, { 1140, 797, 44, 44 } )
+	else
+			btn_ammo = CUI_InvButton( "btn_ammo", btn_ammo_pressed, { 774, 665, 33, 42 }, { 1140, 847, 44, 44 } )
+	end
+	
+	if weapons == "visible" then 
+			btn_wpn = CUI_InvButton( "btn_wpn", btn_wpn_pressed, { 807, 665, 33, 42 }, { 1190, 797, 44, 44 } )
+	else
+			btn_wpn = CUI_InvButton( "btn_wpn", btn_wpn_pressed, { 807, 665, 33, 42 }, { 1190, 847, 44, 44 } )
+	end
+	
+	if outfits == "visible" then 
+			btn_outfit = CUI_InvButton( "btn_outfit", btn_outfit_pressed, { 840, 665, 33, 42 }, { 1240, 797, 44, 44 } )
+		
+	else
+			btn_outfit = CUI_InvButton( "btn_outfit", btn_outfit_pressed, { 840, 665, 33, 42 }, { 1240, 847, 44, 44 } )
+	end
+	
+	if artefacts == "visible" then 
+			btn_arts = CUI_InvButton( "btn_arts", btn_arts_pressed, { 873, 665, 33, 42 }, { 1290, 797, 44, 44 } )
+	else
+			btn_arts = CUI_InvButton( "btn_arts", btn_arts_pressed, { 873, 665, 33, 42 }, { 1290, 847, 44, 44 } )
+	end
+	
+	if items == "visible" then 
+			btn_items = CUI_InvButton( "btn_items", btn_items_pressed, { 906, 665, 33, 42 }, { 1340, 797, 44, 44 } )
+	else
+			btn_items = CUI_InvButton( "btn_items", btn_items_pressed, { 906, 665, 33, 42 }, { 1340, 847, 44, 44 } )
+	end
+	
+	if other == "visible" then 
+			btn_other = CUI_InvButton( "btn_other", btn_other_pressed, { 939, 665, 33, 42 }, { 1390, 797, 44, 44 } )
+	else
+			btn_other = CUI_InvButton( "btn_other", btn_other_pressed, { 939, 665, 33, 42 }, { 1390, 847, 44, 44 } )
+	end
+	
+	btn_hud = level.main_input_receiver()
+	btn_hud:AttachChild( btn_all.btn )
+	btn_hud:AttachChild( btn_ammo.btn )
+	btn_hud:AttachChild( btn_outfit.btn )
+	btn_hud:AttachChild( btn_wpn.btn )
+	btn_hud:AttachChild( btn_arts.btn )
+	btn_hud:AttachChild( btn_items.btn )
+	btn_hud:AttachChild( btn_other.btn )
+end
+
+function inventory_close()
+	if btn_all then
+		btn_hud:DetachChild( btn_all.btn )
+		btn_all.btn = nil
+		btn_all = nil
+	end
+	if btn_ammo then
+		btn_hud:DetachChild( btn_ammo.btn )
+		btn_ammo.btn = nil
+		btn_ammo = nil
+	end
+	if btn_outfit then
+		btn_hud:DetachChild( btn_outfit.btn )
+		btn_outfit.btn = nil
+		btn_outfit = nil
+	end
+	if btn_wpn then
+		btn_hud:DetachChild( btn_wpn.btn )
+		btn_wpn.btn = nil
+		btn_wpn = nil
+	end
+	if btn_arts then
+		btn_hud:DetachChild( btn_arts.btn )
+		btn_arts.btn = nil
+		btn_arts = nil
+	end
+	if btn_items then
+		btn_hud:DetachChild( btn_items.btn )
+		btn_items.btn = nil
+		btn_items = nil
+	end
+	if btn_other then
+		btn_hud:DetachChild( btn_other.btn )
+		btn_other.btn = nil
+		btn_other = nil
+		btn_hud = nil
+	end
+end
+
+function change_visibility( class, status )
+	db.actor:iterate_ruck(function (dummy, obj)
+		if get_class_group( obj ) == class then
+			if status == "visible" then
+				set_item_inv_visible( obj )
+			elseif status == "hidden" then
+				set_item_inv_hidden( obj )
+			end
+		end
+	end, nil)
+end
+
+function get_class_group( obj )
+	local game_type
+	if sys_ini:line_exist( obj:section(), "quest_item" ) and sys_ini:r_bool( obj:section(), "quest_item" ) == true then
+		return "other"
+	end
+	if obj:is_ammo() or obj:is_grenade() then
+		game_type = "ammo"
+	elseif obj:is_weapon() then
+		game_type = "weapons"
+	elseif obj:is_outfit() then
+		game_type = "outfits"
+	elseif obj:is_artefact() then
+		game_type = "artefacts"
+	elseif obj:is_medkit() or obj:is_antirad() or obj:is_food_item() or obj:is_bottle_item() or obj:is_eatable_item() then
+		game_type = "items"
+	else 
+		game_type = "other"
+	end
+	return game_type
+end

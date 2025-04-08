@@ -1,0 +1,338 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+mil_abdul_spawn} walker@33, {+bar_abdul_to_alan_talk} walker@22, {+actor_goto_bar_tower} walker@17, {+bar_road_bus_off} walker@6, walker@start
+combat_ignore = combat_ignore
+threshold = threshold@bar_abdul_threshold
+on_death = death
+
+
+[walker@start]
+path_walk = bar_abdul_walk1
+path_look = bar_abdul_look1
+on_timer = 1|walker@1 %=make_invulnerable%
+
+[walker@1]
+path_walk = bar_abdul_walk1
+path_look = bar_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_signal       = arrived|walker@2 %=send_tip(bar_abdul_btr_out_tip:default)% 
+
+[walker@2]
+path_walk = bar_abdul_walk1
+path_look = bar_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+meet = no_meet
+on_timer = 5000 | walker@3 %=play_snd_from_obj(8496:characters_voice\human_03\stalker\states\panic_human\panic_human_2)%
+
+[walker@3]
+path_walk = bar_abdul_walk1
+path_look = bar_abdul_look1
+danger = danger_condition
+combat_ignore_cond = always
+def_state_moving1 = sprint_p
+def_state_moving2 = sprint_p
+def_state_moving3 = sprint_p
+on_info = {+abdul_goto_roadbus} walker@4
+on_info2 = {+bar_road_bus_off} %=delme2%
+
+[walker@4]
+path_walk = bar_abdul_walk2
+path_look = bar_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@5 %=play_snd_from_obj(8496:characters_voice\human_03\stalker\reactions\hear_something\hear_3)%
+
+[walker@5]
+path_walk = bar_abdul_walk2
+path_look = bar_abdul_look2
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bar_road_bus_off} %=delme2%
+
+
+
+; После преодоления автобуса на дороге:
+[walker@6]
+path_walk = bar_abdul_walk3
+path_look = bar_abdul_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_timer = 5000 | walker@7 %=play_snd_from_obj(8503:characters_voice\human_01\stalker\help\wounded\kill_wounded_2) =make_invulnerable%
+
+[walker@7]
+path_walk = bar_abdul_walk3
+path_look = bar_abdul_look3
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+abdul_goto_benzovoz} walker@8
+
+
+; Стали напротив бензовоза и ждём снорков:
+[walker@8]
+path_walk = bar_abdul_walk4
+path_look = bar_abdul_look4
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+on_signal       = arrived | walker@9 %=play_snd_from_obj(8503:characters_voice\human_03\stalker\reactions\hear_something\hear_6) =spawn_bar_benzovoz_mobs%
+
+
+;Дерёмся со снорками:
+[walker@9]
+path_walk = bar_abdul_walk4
+path_look = bar_abdul_look4
+danger = danger_condition
+meet = no_meet
+;combat_ignore_cond = always
+on_timer = 20000 | walker@10
+
+
+;Стали на дороге и смотрим в бинокль на Бар:
+[walker@10]
+path_walk = bar_abdul_walk5
+path_look = bar_abdul_look5
+danger = danger_condition
+;combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@12 %+bar_abdul_see_zombies%
+on_info = {+bar_abdul_goto_raciya} walker@12
+
+[walker@11]
+path_walk = bar_abdul_walk5
+path_look = bar_abdul_look5
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+bar_abdul_goto_raciya} walker@12
+
+
+;Подошли к трупу военного и осматриваем его:
+[walker@12]
+path_walk = bar_abdul_walk6
+path_look = bar_abdul_look6
+danger = danger_condition
+;combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@13 %=play_snd_from_obj(8503:characters_voice\human_03\stalker\reactions\see_something\see_1)%
+
+[walker@13]
+path_walk = bar_abdul_walk6
+path_look = bar_abdul_look6
+danger = danger_condition
+;combat_ignore_cond = always
+meet = no_meet
+on_info = {+bar_infection_info} walker@14 %=play_snd_from_obj(8503:characters_voice\human_03\stalker\reactions\hear_something\hear_1)%
+
+[walker@14]
+path_walk = bar_abdul_walk6
+path_look = bar_abdul_look6
+danger = danger_condition
+;combat_ignore_cond = always
+on_info = {+bar_abdul_assault_start} walker@15_1
+;on_info2 = {+bar_kamaz_teleport_spawn} walker@16
+
+
+;Начинаем валить зомбей:
+[walker@15_1]
+path_walk = bar_abdul_walk6
+path_look = bar_abdul_look6
+danger = danger_condition
+;combat_ignore_cond = always
+on_timer = 40000 | walker@15_2 %=play_snd_from_obj(8503:characters_voice\human_03\stalker\talk\raid\init\loner_1) =send_tip(bar_abdul_start_assault_tip:default)%
+
+
+[walker@15_2]
+path_walk = bar_abdul_walk9
+path_look = bar_abdul_look9
+danger = danger_condition
+meet = no_meet
+def_state_moving1 = run
+def_state_moving2 = run
+def_state_moving3 = run
+;on_signal       = arrived | walker@17 %=spawn_bar_tower_nopass_zone%
+on_signal       = arrived | walker@17
+
+
+;Остаемся ждать пока ГГ найдет телепорт:
+[walker@16]
+path_walk = bar_abdul_walk8
+path_look = bar_abdul_look8
+danger = danger_condition
+on_info = {+actor_goto_bar_tower} %=delme2%
+
+
+;В башне:
+[walker@17]
+path_walk = bar_abdul_walk9
+path_look = bar_abdul_look9
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_timer = 4000 | walker@18 %=play_snd_from_obj(8503:characters_voice\human_03\stalker\reactions\see_something\see_2)%
+
+[walker@18]
+path_walk = bar_abdul_walk9
+path_look = bar_abdul_look9
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bar_hunter_info1} walker@19 %=play_snd_from_obj(8503:characters_voice\human_03\stalker\states\health\health_1)%
+
+
+; Заболели:
+[walker@19]
+path_walk = bar_abdul_walk10
+path_look = bar_abdul_look10
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+bar_abdul_sick} walker@20
+
+
+[walker@20]
+path_walk = bar_abdul_walk10
+path_look = bar_abdul_look10
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+bar_virus_off} walker@22
+on_timer = 12000 | walker@21 %=play_snd_from_obj(8503:characters_voice\human_01\stalker\states\idle\idle_32)%
+
+[walker@21]
+path_walk = bar_abdul_walk10
+path_look = bar_abdul_look10
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_info = {+bar_virus_off} walker@22
+on_timer = 9000 | walker@20 %=play_snd_from_obj(8503:characters_voice\human_01\stalker\states\idle\idle_33)%
+
+
+; Выздоровели:
+[walker@22]
+path_walk = bar_abdul_walk10
+path_look = bar_hunter_walk1
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+abdul_goto_military} walker@23 %=make_invulnerable%
+
+
+
+
+; Идём к переходу на Склады:
+[walker@23]
+path_walk = bar_abdul_walk11
+path_look = bar_abdul_look11
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@24 %=play_snd_from_obj(8503:characters_voice\scenario\military\khutor_attack\mil_freedom_ambush_1) =make_invulnerable%
+
+[walker@24]
+path_walk = bar_abdul_walk12
+path_look = bar_abdul_look12
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@25
+
+[walker@25]
+path_walk = bar_abdul_walk13
+path_look = bar_abdul_look13
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@26
+
+[walker@26]
+path_walk = bar_abdul_walk14
+path_look = bar_abdul_look14
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@27
+
+[walker@27]
+path_walk = bar_abdul_walk15
+path_look = bar_abdul_look15
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@28
+
+[walker@28]
+path_walk = bar_abdul_walk16
+path_look = bar_abdul_look16
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@29
+
+[walker@29]
+path_walk = bar_abdul_walk17
+path_look = bar_abdul_look17
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@30
+
+[walker@30]
+path_walk = bar_abdul_walk18
+path_look = bar_abdul_look18
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@31
+
+[walker@31]
+path_walk = bar_abdul_walk19
+path_look = bar_abdul_look19
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@32
+
+[walker@32]
+path_walk = bar_abdul_walk20
+path_look = bar_abdul_look20
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived|walker@33 %=spawn_bar_to_mil_lchanger%
+
+[walker@33]
+path_walk = bar_abdul_walk20
+path_look = bar_abdul_look20
+danger = danger_condition
+combat_ignore_cond = always
+;meet = no_meet
+on_info = {+mil_abdul_spawn} nil %=delme2%
+
+[threshold@bar_abdul_threshold]
+max_ignore_distance = 10
+ignore_monster = 0
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+bar_abdul_dead%
+

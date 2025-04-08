@@ -1,0 +1,65 @@
+[smart_terrains]
+none = true
+
+[dont_spawn_loot]
+
+[logic]
+active = {+post_dopros} walker@tower, walker@start
+combat_ignore = combat_ignore
+on_death = death
+
+[walker@start]
+path_walk = post_comander_walk_room
+path_look = post_comander_look_room
+on_timer = 1 | walker@room1 %=make_invulnerable =disable_trading%
+
+[walker@room1]
+path_walk = post_comander_walk_room
+path_look = post_comander_look_room
+danger = danger_condition
+combat_ignore_cond = always
+on_actor_dist_le = 3 | walker@room2 %=post_comander_init_dialod%
+
+[walker@room2]
+path_walk = post_comander_walk_room
+path_look = post_comander_look_room
+danger = danger_condition
+combat_ignore_cond = always
+on_info = {+post_dopros} walker@before_room
+
+[walker@before_room]
+path_walk = post_soldier10_walk3
+path_look = post_soldier10_look3
+danger = danger_condition
+combat_ignore_cond = always
+meet = no_meet
+on_signal       = arrived | walker@tower %=enable_input +kazarma_door_close%
+
+[walker@tower]
+path_walk = post_commander_walk1
+path_look = post_commander_look1
+danger = danger_condition
+meet = no_meet
+combat_ignore_cond = always
+
+
+
+
+[meet]
+meet_state = 3| idle
+meet_state = 3| idle
+victim = 3| nil
+victim_wpn = 3| nil
+use = true
+use_wpn = true
+
+[danger_condition]
+ignore_distance = 0
+ignore_distance_corpse = 0
+
+[combat_ignore]
+combat_ignore = always
+
+[death]
+on_info = %+post_commander_dead%
+

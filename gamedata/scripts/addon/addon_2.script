@@ -1,0 +1,249 @@
+-- Функции с постоянной проверкой и прочее -----------------------------------------------------------------------------------------------------------------------------
+-- Created by Jek@n-limon & Charsi
+
+
+-----------------------------------------------------------------------------------
+-- Некоторый функционал из SGM(thanks, GeJorge) --------------------------------------------------------------
+
+function get_side_stick_value(string,value_num)
+   local s_string
+   if string~=nil then
+      s_string=utils.parse_params(string)
+   else
+      s_string=nil
+   end
+   if value_num==nil or s_string==nil then
+      return s_string
+   else
+      return s_string[to_number(value_num)]
+   end
+end
+
+function check_section_stick(ini,section,line,def_val)
+   local d_value=""
+   if def_val==nil then d_value=nil else d_value=def_val end
+   if ini==nil then
+      return get_side_stick_value(section)
+   end
+   return get_side_stick_value(addon_2.cfg_get_string(ini,section,line,d_value))
+end
+
+-- 'Чтение параметров из секций.
+function cfg_get_string(ini,section,line,def_val)
+   return utils.cfg_get_string(ini,section,line,nil,false,"",def_val)
+end
+function cfg_get_number(ini,section,line,def_val)
+   return utils.cfg_get_number(ini,section,line,nil,false,def_val)
+end
+
+-- 'Проверка и выполнение действий {=-!}%+-=%
+function check_section_condlist(ini,section,line,def_val,value_type)
+   local d_value=""
+   if def_val==nil then d_value="" else d_value=def_val end
+   if value_type==nil or value_type=="string" then
+      return xr_logic.pick_section_from_condlist(db.actor,db.actor,xr_logic.parse_condlist(nil,section,"condlist",addon_2.cfg_get_string(ini,section,line,d_value)))
+   elseif value_type=="number" then
+      return xr_logic.pick_section_from_condlist(db.actor,db.actor,xr_logic.parse_condlist(nil,section,"condlist",addon_2.cfg_get_number(ini,section,line,d_value)))
+   end
+end
+
+function check_string_condlist(target_value,npc)
+   if npc==nil then npc=db.actor end
+   return xr_logic.pick_section_from_condlist(db.actor,npc,xr_logic.parse_condlist(nil,"check_section","condlist",target_value))
+end
+
+function execute_condlist(npc,section,value)
+   if npc==nil then npc=db.actor end
+   xr_logic.pick_section_from_condlist(db.actor,npc,xr_logic.parse_condlist(nil,section,"condlist",value))
+end
+
+
+
+-- 'Перевод мутанта под схему поведения.
+function mob_recapture(mob_obj)
+   if not xr_logic.mob_captured(mob_obj) then
+      xr_logic.mob_capture(mob_obj,true)
+   end
+end
+
+-- 'Отправить мутанта на левел вертекс.
+function mob_send_to(mob_obj,target)
+   action(mob_obj,move(move.run_fwd,level.vertex_position(target)))
+end
+
+-- 'Заставить мутанта, смотреть на левел вертекс.
+function mob_look_to(mob_obj,target)
+   action(mob_obj,anim(anim.look_around),look(look.point,level.vertex_position(target)))
+end
+
+-- 'Телепортация мутанта к ГГ, если мутант слишком отдалился.
+function mob_teleport_to_actor(mob_obj)
+  if db.actor~=nil then
+	 if distance_between_safe(db.actor,mob_obj)>60 then
+		 alife():teleport_object( mob_obj:id(), db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id())
+     end
+  end
+end
+
+-- 'Телепортация мутанта на левел вертекс.
+function mob_teleport_to_home_position(mob_obj,home_pos,bool)
+  if home_pos~=nil and (bool==nil or bool=="true") then
+	 local pos=level.vertex_position(home_pos)
+	 alife():teleport_object( mob_obj:id(), pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+  end
+end
+
+
+-- Лучевая болезнь: ----------------------------------------------------------------------
+
+function rad_seek_effect()
+if has_alife_info("rad_seek") then
+local rad = db.actor.radiation
+	if rad < 0.3 then
+		db.actor.radiation = 0.1
+	end
+end
+if has_alife_info("rad_immunity") then
+local rad = db.actor.radiation
+	if rad > 0 then
+		db.actor.radiation = -rad
+	end
+end
+end
+
+-------------------------------------------------------------------------------------------
+
+function special_arts_effects()
+deadmask_target_effect()
+addon_dialogs.af_brain_effect()
+end
+
+
+function small_add_karma()
+	local karma = starvation.get_karma()
+	if karma<0.96 then starvation.add_karma(0.02)
+	end
+end
+
+-- Накладываем постэффект, если критическая совесть: ---------------------------------------------
+
+function too_much_murders_effect()
+local murder = starvation.get_murder()
+	if murder>0.7 then 
+		level.add_pp_effector("radiation.ppe", 2111, false)
+	end
+end
+
+function use_doll()
+	local doll = db.actor:object("wonder_doll")
+	if doll and has_alife_info("wonderdoll_first_talk") and db.actor:alive() then
+		db.actor:eat(doll)
+	end
+end
+
+function use_teleport_in_T_outfit()
+	local akumulator = db.actor:object("t_akumulator2")
+	if akumulator then
+		db.actor:eat(akumulator)
+	end
+end
+
+
+-- Маска порчи: ------------------------------------------------------------------------------------------------------------
+
+function deadmask_target_effect()
+	if ( inventory.on_belt( "af_deadmask_2" ) and db.actor:dont_has_info("deadmask_target") ) then 
+		local target = level.get_target_obj()
+		if ( target and IsStalker(target) and target:alive() 
+			and ogse.get_npc_relation(target,db.actor)=="enemy" 
+			and not string.find(target:section(), "^rad_fenix") 
+			and target:position():distance_to(db.actor:position()) < 100 ) then
+				local hit = hit()
+				hit.direction = vector():set(0, 0, 0)
+				hit.impulse = 0
+				hit.draftsman = db.actor
+				hit.power = 10.0
+				hit.type = hit.burn
+				target:hit(hit)
+					local karma = starvation.get_karma()
+					if karma>0.3 then starvation.add_karma(-0.3)
+					end
+				soundtrack.actor_deadmask2use_snd()
+				db.actor:give_info_portion ("deadmask_target")
+				ogse_st_mgr.start_timer("deadmask2timer_action",240*60, "timer_actions.deadmask2timer_action")
+		end
+	end
+end
+
+
+-- Напарник не берёт в руки пси-оружие: -----------------------------------------------------------------------------------
+
+function npc_psy_weapon_fix()
+ local npc = level_object_by_sid(8666)
+ if npc and npc:alive() and npc:active_item() then
+  local gun = npc:active_item()
+  local type = gun:section()
+  if (type == "wpn_psy" or type == "wpn_psy_npc" or type == "wpn_laser") then
+   local serverObject = alife():object(gun:id())
+   if serverObject then alife():release(serverObject) end
+  end
+ end
+end
+
+
+-- Кукла сообщает нам информацию о цели: ----------------------------------------------------------------------------------
+function wonderdoll_target_check()
+	if db.actor:object("wonder_doll") then doll_npc_check.hint_for_npc() end
+end
+
+
+-- Отображение уровня здоровья цели на худе: ---------------------------------------------------------------------
+
+function show_visual_health()
+	local target = level.get_target_obj()
+	local hud = get_hud()
+	if not (target and IsMonster(target)) then	
+		for i=1, 5 do
+	if hud:GetCustomStatic("mob_health"..i) then
+		hud:RemoveCustomStatic("mob_health"..i) 
+		end	
+	end
+end
+	if not (target and IsStalker(target)) then
+		for i=1, 5 do	
+	if hud:GetCustomStatic("stalker_health"..i) then
+		hud:RemoveCustomStatic("stalker_health"..i) 
+		end	
+	end	
+end
+	if target and IsStalker(target) then
+		local stalker_health = target.health
+		if stalker_health <= 1 and stalker_health > 0.6 then -- здоров
+			hud:AddCustomStatic("stalker_health1",true)
+		elseif stalker_health <= 0.6 and stalker_health > 0.3 then -- напуган
+			hud:AddCustomStatic("stalker_health2",true)
+		elseif stalker_health <= 0.3 and stalker_health > 0.1 then -- ранен
+			hud:AddCustomStatic("stalker_health3",true)
+		elseif stalker_health <= 0.1 and stalker_health > 0 then -- умирает
+			hud:AddCustomStatic("stalker_health4",true)
+		else --if stalker_health == 0 then	--сдох
+			hud:AddCustomStatic("stalker_health5",true)
+		end
+	elseif target and IsMonster(target) 
+		and target:position():distance_to(db.actor:position()) < 110 
+		and get_clsid(target) ~= clsid.poltergeist_s	--	проверка на полтергейста;
+		then
+		local mob_health = target.health
+		if mob_health <= 1 and mob_health > 0.6 then -- здоров
+			hud:AddCustomStatic("mob_health1",true)
+		elseif mob_health <= 0.6 and mob_health > 0.3 then -- испуган
+			hud:AddCustomStatic("mob_health2",true)
+		elseif mob_health <= 0.3 and mob_health > 0.1 then --ранен
+			hud:AddCustomStatic("mob_health3",true)
+		elseif mob_health <= 0.1 and mob_health > 0 then --умирает
+			hud:AddCustomStatic("mob_health4",true)
+		else --if mob_health == 0 then -- сдох
+			hud:AddCustomStatic("mob_health5",true) 
+		end
+	end
+end

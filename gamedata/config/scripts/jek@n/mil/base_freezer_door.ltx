@@ -1,0 +1,42 @@
+[logic]
+active = ph_door@close
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+;tip_open = mil_base_freezer_door_use
+on_use = ph_door@open1
+
+[ph_door@open1]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_timer = 3000|ph_door@open2 %+mil_freak_alarm =play_snd_from_obj(8186:characters_voice\human_01\stalker\states\panic_human\panic_human_4)%
+
+[ph_door@open2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

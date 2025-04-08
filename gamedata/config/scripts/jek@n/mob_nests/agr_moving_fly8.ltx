@@ -1,0 +1,21 @@
+[smart_terrains]
+none = true
+
+[logic]
+active = mob_walker@norm
+
+[mob_walker@norm]
+path_walk = agr_moving_fly_budka_home
+path_look = agr_moving_fly_budka_home
+braindead = true
+on_actor_in_zone = agr_fabrika_budka_zone | mob_home@agress
+
+[mob_home@agress]
+path_home = agr_moving_fly_budka_agress
+home_min_radius = 2
+home_max_radius = 8
+braindead = true
+on_actor_dist_le_nvis = 2 | %=hit_obj(37:bip01_spine:0.01:10) =run_cam_effector(head_shot) =agr_flies_budka_steal_artefacts%
+on_timer = 10000 | mob_walker@norm
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<main>
+	<!-- Ячейки быстрого доступа в инвентаре -->
+	<slot1 x="692" y="115" width="77" height="65"/>
+	<slot2 x="773" y="115" width="77" height="65"/>
+	<slot3 x="854" y="115" width="77" height="65"/>
+	<slot4 x="935" y="115" width="77" height="65"/>
+	<slot_icon x="15" y="14" width="45" height="45" />
+	<slot_key x="56" y="2" width="16" height="16" >
+		<text align="c" />
+	</slot_key>
+
+	<wpn_slot_1 x="116" y="12" width="240" height="80" />
+	<wpn_slot_2 x="375" y="12" width="240" height="80" />
+
+	<radiation_progress  x="707" y="291" width="11" height="176" horz="0" min="0" max="100" pos="0">
+		<progress>
+			<texture>ui_amk_yellow</texture>
+		</progress>
+	</radiation_progress>
+
+	<accumm_slot x="904" y="423" width="40" height="40">
+		<auto_static x="0" y="0" width="40" height="40" stretch="1">
+			<texture>intro\intro_back</texture>
+		</auto_static>
+		<auto_static x="0" y="0" width="40" height="40" stretch="1">
+			<texture x="0" y="0" width="64" height="64">ui\ui_grid</texture>
+		</auto_static>
+	</accumm_slot>
+</main>

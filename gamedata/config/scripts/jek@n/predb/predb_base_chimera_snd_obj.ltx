@@ -1,0 +1,17 @@
+[logic]
+active = ph_idle
+
+[ph_idle]
+on_info = {+predb_base_btn_switch} ph_sound
+
+[ph_sound]
+snd = predb_base_chimera_snd
+min_idle = 1000
+max_idle = 5000
+looped = true
+on_actor_in_zone = predb_base_chimera_zone|ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil
+

@@ -1,0 +1,248 @@
+; Винтовка гравитационно-импульсная "Gauss"
+;-(TrickSR, Ga2z)-----------------------------------------
+; калибр 				<засекречено>
+; длина ствола 				<засекречено>
+; магазин				<засекречено>
+; вес без магазина			<засекречено>
+; оптический прицел			<засекречено>
+; эффективная дальность стрельбы	<засекречено>
+; прицельная дальность			<засекречено>
+; дульная скорость пули			<засекречено>
+; темп стрельбы				<засекречено>
+;---------------------------------------------------
+[wpn_psy]:wpn_defines
+GroupControlSection			= spawn_group
+discovery_dependency 			=
+$spawn                  = "weapons\wpn_psy"					; option for Level Editor
+$npc				 	= on
+$prefetch 		 		= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_LR300
+description				= wpn_psy_descr 
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+
+
+inv_name				= wpn_psy_name
+inv_name_short			= wpn_psy_name
+
+inv_grid_width			= 5
+inv_grid_height			= 2
+inv_grid_x				= 25
+inv_grid_y				= 25
+
+kill_msg_x			= 72
+kill_msg_y			= 82
+kill_msg_width		= 56
+kill_msg_height		= 23
+
+cost					= 1000
+weapon_class				= assault_rifle
+inv_weight				= 5.5
+hud                     = wpn_psy_hud
+visual					= dynamics\weapons\wpn_gauss\wpn_gauss.ogf
+;базовая дисперсия
+fire_dispersion_base		= 0.1 ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.7f
+disp_rate 			= 0.95
+
+;отдача
+cam_relax_speed         = 2.5	;скорость возврата в исходное положение
+cam_relax_speed_ai			= 360.00
+cam_dispersion          = 0.05	;увеличения угла (в градусах) с каждым выстрелом
+cam_max_angle			= 4.0	;максимальный угол отдачи
+cam_max_angle_horz		= 5.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.5	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 1	;увеличение дисперсии в процентах при максимальном износе 
+condition_shot_dec 			= 0.00001 ;увеличение износа при каждом выстреле
+
+
+ph_mass			 		= 6
+
+ammo_class				= ammo_psy
+
+startup_ammo				= 90
+ammo_current				= 60
+ammo_elapsed				= 10
+ammo_limit				= 70
+ammo_mag_size				= 10
+
+fire_modes				= 1, -1
+launch_speed				= 0
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power          = 0.05
+hit_impulse		 	= 0
+hit_type 			= fire_wound
+fire_distance       = 300
+bullet_speed		= 1000	;начальная скорость пули
+rpm                 = 400
+rpm_empty_click 		= 120
+hit_rate			= 1.85
+
+use_aim_bullet		= true
+time_to_aim			= 1.0
+
+misfire_probability 		= 0.2 ;вероятность осечки при максимальном износе 
+misfire_condition_k			= 0.25
+fire_dispersion_base			= 0.001
+fire_dispersion_condition_factor	= 5
+control_inertion_factor			= 2.0f
+crosshair_inertion 			= 7
+
+cam_return 				= 1
+cam_relax_speed				= 3
+cam_relax_speed_ai			= 360
+cam_dispersion				= 0.01
+cam_dispersion_inc			= 0.01
+cam_dispersion_frac			= 1
+cam_max_angle				= 0.01
+cam_max_angle_horz			= 0.01
+cam_step_angle_horz			= 0.01
+
+zoom_cam_relax_speed			= 3
+zoom_cam_relax_speed_ai			= 360
+zoom_cam_dispersion			= 0.01
+zoom_cam_dispersion_inc			= 0.01
+zoom_cam_dispersion_frac		= 1
+zoom_cam_max_angle			= 0.01
+zoom_cam_max_angle_horz			= 0.01
+zoom_cam_step_angle_horz		= 0.01
+
+PDM_disp_base 				= 1
+PDM_disp_vel_factor 			= 1.5
+PDM_disp_accel_factor 			= 1.5
+PDM_disp_crouch	 			= 0.8
+PDM_disp_crouch_no_acc 			= 0.6
+
+min_radius				= 30
+max_radius				= 200
+
+holder_range_modifier			= 2
+holder_fov_modifier			= 0.75
+
+slot					= 2
+animation_slot				= 2
+
+position				= -0.026,-0.070,0
+orientation				= 0,0,0
+
+fire_point				= 0,0.12,0.69
+fire_point2				= 0,0.12,0.69
+
+flame_particles         = weapons\generic_weapon_controler				; position (3rd person view) for shell to throw out
+smoke_particles	 		= weapons\group_items\shot_matrix_controller_02_dark	; name of the particles for shells
+
+shell_point		 		= 0,0.129,0.192
+shell_dir		 		= 0,0,0.4
+
+strap_position 				= -0.26,-0.11,0.15
+strap_orientation			= -15,-9,110
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+light_disabled				= false
+light_color		 		= 1.3,1.5,2
+light_range		 		= 4.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 		= 0.5
+
+scope_status				= 1
+silencer_status				= 0
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.3
+scope_dynamic_zoom 				= true
+scope_texture			= wpn\wpn_crosshair_gauss
+
+scope_lense_fov_factor 				= 18
+scope_inertion_factor   			= 8
+scope_zoom_factor	    			= 12
+scope_lense_hud_fov             		= 0.4
+
+scope_name 				= wpn_addon_scope
+scope_x 				= 60
+scope_y 				= -2
+
+snd_draw				= weapons\gauss\gauss_draw
+snd_empty				= weapons\gauss\gauss_empty
+snd_holster				= weapons\gauss\gauss_holster
+snd_reload				= weapons\gauss\gauss_reload
+snd_reload_empty			= weapons\gauss\gauss_reload_empty
+snd_shoot			        = weapons\psy_gun_shoot
+
+snd_gyro			        = weapons\binoculars_gyro
+snd_zoomin			        = weapons\binoculars_zoomin
+snd_zoomout			        = weapons\binoculars_zoomout
+snd_close			        = weapons\generic_close
+
+ 
+[wpn_psy_hud]
+zoom_hide_crosshair			= true
+attach_place_idx			= 0
+item_visual             		= dynamics\weapons\wpn_gauss\wpn_gauss_hud.ogf
+
+hands_position				= 0.091000,-0.027000,0.074500
+hands_orientation			= -2.998030,-0.889520,0
+
+hands_position_16x9			= 0.091000,-0.027000,0.074500
+hands_orientation_16x9			= -2.998030,-0.889520,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos			= -0.089125,0.030750,-0.200501
+aim_hud_offset_rot			= 0.041900,-0.043875,-0.000125
+
+aim_hud_offset_pos_16x9			= -0.089125,0.030750,-0.200501
+aim_hud_offset_rot_16x9			= 0.041900,-0.043875,-0.000125
+
+shell_point				= 0,0,0
+shell_dir              			= 0,1,0
+shell_bone				= wpn_body
+
+fire_point				= 0,0,0
+fire_bone               		= muzzle
+
+gl_hud_offset_pos			= 0,0,0
+gl_hud_offset_rot			= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+
+anm_show				= gauss_draw
+anm_hide             			= gauss_holster
+anm_shots				= gauss_shoot
+anm_shots_when_aim			= gauss_shoot_scope
+anm_reload				= gauss_reload_not_empty, gauss_reload
+anm_reload_empty			= gauss_reload
+anm_bore				= gauss_idle_bore
+anm_idle             			= gauss_idle
+anm_idle_aim				= gauss_idle_aim
+anm_idle_moving 			= gauss_idle_moving
+anm_idle_sprint				= gauss_idle_sprint
+
+[wpn_psy_npc]:wpn_psy
+description	= wpn_psy_npc_descr
+inv_name		= wpn_psy_npc_name
+inv_name_short	= wpn_psy_npc_name
+;hit_power           = 50.0
+ammo_mag_size	= 20
+rpm                 = 400
+
+
+[wpn_psy_m1]:wpn_psy
+description	= wpn_psy_m1_descr
+inv_name		= wpn_psy_m1_name
+inv_name_short	= wpn_psy_m1_name
+ammo_mag_size	= 40
+rpm                 = 400
+inv_grid_x				= 33
+inv_grid_y				= 22

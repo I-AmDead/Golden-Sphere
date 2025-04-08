@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<doll_talking1>	
+	<face x="380" y="88" width="210" height="212" stretch="1">
+		<texture>ui\doll\doll_face</texture>
+	</face>
+
+	<dialog_table x="150" y="277" width="530" height="900" stretch="1">
+		<texture>ui\doll\doll_dialog_screen</texture>
+	</dialog_table>
+
+
+
+	<doll_talk_text x="180" y="310" width="480" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="255" font="letterica16">Если тебя ранили и ты испытываешь сильную боль, а под рукой нет обезбаливающих препаратов, то советую тебе успокоится и подумать о чем-то приятном. Присядь, закури, если есть такая возможность. Курение конечно вредная штука, но посторонние мысли помогут тебе легче перенести боль.</text>
+	</doll_talk_text>
+
+
+
+
+	<btn_1 x="300" y="580" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Спасибо.</text>
+	</btn_1>
+
+
+</doll_talking1>
+

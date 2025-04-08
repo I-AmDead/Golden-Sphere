@@ -1,0 +1,15 @@
+[logic]
+active = ph_idle@1
+
+[ph_idle@1]
+on_info = {=nightmobs_spawn_time} ph_sound@1
+
+[ph_sound@1]
+snd = predb_well_sound
+looped = false
+on_info = {!nightmobs_spawn_time} ph_idle@1
+on_info2 = {+hutor_weel_ghost} ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil

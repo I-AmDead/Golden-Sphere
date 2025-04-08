@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_actor_inside = {+agrund_virus_konteyner_finded +hunter3_kontainer_wait} nil %=remove_item(agrund_virus_konteyner) +agrund_virus_konteyner_lost%
+on_info = {+agrund_virus_konteyner_opened} nil
+
+
+
+
+

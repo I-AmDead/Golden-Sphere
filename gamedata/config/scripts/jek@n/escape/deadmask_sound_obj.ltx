@@ -1,0 +1,18 @@
+[logic]
+active = ph_sound@1
+
+[ph_sound@1]
+snd = deadmask_scary_sound
+looped = false
+on_actor_in_zone = esc_deadmask_trap_zone|nil %=delme%
+on_signal = sound_end|ph_sound@stop
+
+[ph_sound@stop]
+snd = silence
+on_signal = sound_end|nil %=deadmask_soundobj_respawn =delme%
+
+
+
+
+
+

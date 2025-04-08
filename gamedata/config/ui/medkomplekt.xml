@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<medkomplekt>
+
+<ramka x="220" y="170" width="900" height="600" stretch="1">
+	<texture x="0" y="0" width="1020" height="626">ui\bowler_intrface</texture>
+</ramka>
+
+<name x="280" y="185" width="370" height="35">
+	<text x="0" y="0" r="225" g="218" b="118" font="graffiti22">Медкомплект</text>
+</name>
+
+<image x="270" y="230" width="180" height="160" stretch="1">
+	<texture>ui\medkomplekt_logo</texture>
+</image>
+
+<text_general x="270" y="430" width="220" height="500" stretch="1" complex_mode="1">
+		<text x="0" y="0" r="235" g="235" b="118" a="158" font="letterica16">Одноразовый портативный медкомплект позволяет оказывать самостоятельную медицинскую помощь при травмах тела и конечностей.</text>
+</text_general>
+
+
+	<btn_1 x="500" y="270" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Голова</text>
+	</btn_1>
+
+	<btn_2 x="500" y="310" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Грудь</text>
+	</btn_2>
+
+	<btn_3 x="500" y="350" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Руки</text>
+	</btn_3>
+
+	<btn_4 x="500" y="390" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Ноги</text>
+	</btn_4>
+
+	<btn_5 x="500" y="430" width="110" height="25">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>Остановить кровь</text>
+	</btn_5>
+
+
+	<btn_quit x="480" y="540" width="18" height="18">
+		<text x="0" y="0" r="225" g="58" b="58" font="letterica16">Отмена</text>
+	</btn_quit>
+
+
+
+</medkomplekt>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<international>	
+	<book_text x="270" y="25" width="440" height="700" stretch="1">
+		<texture>ui\books\international</texture>
+	</book_text>
+
+	<btn_quit x="500" y="730" width="200" height="20">
+		<texture_e>ui\doll\button_invisible</texture_e>
+		<texture_t>ui\doll\button_invisible</texture_t>
+		<texture_h>ui\doll\button_invisible</texture_h>
+		<text>Закрыть</text>
+	</btn_quit>
+
+
+</international>
+

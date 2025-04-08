@@ -1,0 +1,18 @@
+[logic]
+active = sr_particle
+
+[sr_particle]
+name = monsters\group\polter_trail_01
+;name = static\wave_distort01
+;name = anomaly2\artefact\artefact_electra_idle_01
+path = dar_farm_trap_zone_left1_point
+mode = 2
+looped = true
+on_actor_inside = {-dar_farm_trap_teleport_stage1} sr_idle %+dar_farm_trap_teleport_stage1 =play_snd(ambient\underground\rnd_drop_2)%
+
+
+[sr_idle]
+on_info = {-dar_farm_trap_teleport_stage1 -dar_farm_trap_teleport_stage2 -dar_farm_trap_teleport_stage3 -dar_farm_trap_teleport_stage4} sr_particle
+
+
+

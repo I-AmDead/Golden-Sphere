@@ -1,0 +1,46 @@
+[logic]
+active = {+garb_hunters_door_unlocked} ph_door@open2, {+spawn_garbage_companions} ph_door@close2, ph_door@close1
+
+
+[ph_door@close1]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = {=actor_has_item(garbage_key)} ph_door@open %=remove_item(garbage_key) +garbage_door_opened%, {!actor_has_item(garbage_key)} %=send_tip(door_locked_tip:default)%
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+;on_use = ph_door@free
+;on_info = {+spawn_garbage_companions} ph_door@close2
+
+
+[ph_door@close2]
+locked = true
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+show_tips = true
+tip_open = esc_door_to_garbage_locked_again
+on_info = {+garb_hunters_door_unlocked} ph_door@open2
+
+
+[ph_door@open2]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+
+
+[ph_door@free]
+locked = false
+closed = true
+no_force = true
+on_use = ph_door@open

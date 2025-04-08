@@ -1,0 +1,19 @@
+[logic]
+active = ph_code
+ 
+[ph_code]
+code = 458872
+on_code = {+pri_avtostation_mob_dead} ph_idle@open %=play_snd(device\metal_small_close_stop)%
+tips = pri_avtostation_seif_use
+on_info = {=actor_has_item(bloodsucker_nail)} ph_idle@nail
+
+
+[ph_idle@nail]
+tips = safe_use_with_bloodsucker_nail
+on_use = ph_idle@open %=play_snd(device\metal_small_close_stop) =remove_item(bloodsucker_nail)%
+on_info = {!actor_has_item(bloodsucker_nail)} ph_code
+
+
+[ph_idle@open]
+nonscript_usable = true
+tips = st_search_treasure
